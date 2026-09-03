@@ -41,13 +41,15 @@ def main():
         path = os.path.join(folder, item["file"])
         mime = "image/png" if path.endswith(".png") else "image/jpeg"
         body, ctype = multipart(
-            {"hosted": "true", "name": item["file"]},
+            {"name": item["file"]},
             "file", item["file"], open(path, "rb").read(), mime,
         )
         req = urllib.request.Request(API, data=body, method="POST", headers={
             "Authorization": f"Bearer {pit}",
             "Version": "2021-07-28",
             "Content-Type": ctype,
+            # Cloudflare in front of GHL rejects the default urllib UA with error 1010.
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36",
         })
         try:
             with urllib.request.urlopen(req, timeout=60) as r:

@@ -1,0 +1,170 @@
+[
+  {
+    "file": "portrait-01-sunrise-acreage.jpg",
+    "original": "demo-site/img/portrait1.jpg",
+    "group": "Home Portrait story photo",
+    "description": "Golden sunrise over rolling green hills and open land. Used for 'Eleven acres, waking up' and 'The view you already own'.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ac0892d8-cb2c-4e05-97e9-c5b7fb4af130.jpg",
+    "ghl_response": {
+      "fileId": "6a99eeb9f8c3a55cc2726c6e",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ac0892d8-cb2c-4e05-97e9-c5b7fb4af130.jpg",
+      "traceId": "62efa3a7-da4a-4ac9-b0ce-09ccea61a9c5"
+    }
+  },
+  {
+    "file": "portrait-02-framing-blueprint.jpg",
+    "original": "demo-site/img/portrait2.jpg",
+    "group": "Home Portrait story photo",
+    "description": "New-home lumber framing against a deep blue sky with a white blueprint outline of the finished house. Used for 'From blueprint to bones'.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3e3cf633-0e4a-4d5f-ab20-e2bc43d85f01.jpg",
+    "ghl_response": {
+      "fileId": "6a99eeb9f20cf78ef1189ea6",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3e3cf633-0e4a-4d5f-ab20-e2bc43d85f01.jpg",
+      "traceId": "7f428bcf-296a-446f-a812-4b5284c660ec"
+    }
+  },
+  {
+    "file": "portrait-03-firepit-family.jpg",
+    "original": "demo-site/img/portrait3.jpg",
+    "group": "Home Portrait story photo",
+    "description": "Family and friends gathered around a stone fire pit on a patio at sunset, American flags in the yard. Used for 'The ridge holds the last of the light' and 'Where the evenings gather'.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8b734af0-1dcb-4458-a68c-41a332a62ff5.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebaf20cf78ef1189eb8",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8b734af0-1dcb-4458-a68c-41a332a62ff5.jpg",
+      "traceId": "767481fa-d7e7-4149-a958-3a5c3fced771"
+    }
+  },
+  {
+    "file": "portrait-04-stage-crowd.jpg",
+    "original": "demo-site/img/portrait4.jpg",
+    "group": "Home Portrait story photo (spare)",
+    "description": "Musician with acoustic guitar on stage facing a packed theater crowd. Not referenced by any current portrait page; spare lifestyle image.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/875e6073-d9bb-4a0b-b4a9-d91c3773c3d9.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebbd9a153ac43f8b98e",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/875e6073-d9bb-4a0b-b4a9-d91c3773c3d9.jpg",
+      "traceId": "5f3d4a89-6e4f-4917-8e02-47427364279c"
+    }
+  },
+  {
+    "file": "portrait-05-builder-roof-trusses.jpg",
+    "original": "demo-site/img/portrait5.jpg",
+    "group": "Home Portrait story photo",
+    "description": "Builder working inside sunlit roof trusses of a house under construction. Used for 'Built right, built to last'.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8548e51a-f643-44d2-803e-53367bee913b.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebbd9a153ac43f8b9a4",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8548e51a-f643-44d2-803e-53367bee913b.jpg",
+      "traceId": "9def2276-36d6-44b2-8e57-7503e6fb61d0"
+    }
+  },
+  {
+    "file": "portrait-06-aerial-farmhouse-acreage.jpg",
+    "original": "demo-site/img/portrait6.jpg",
+    "group": "Home Portrait story photo",
+    "description": "Aerial photo of a blue two-story farmhouse with wraparound porch standing alone on wide green acreage. Used for 'Built on ground you already own' and the wide closing pin.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/28fbc768-2609-4fe7-bb20-8d00fc86ec0f.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebcfac7854efe52cb5f",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/28fbc768-2609-4fe7-bb20-8d00fc86ec0f.jpg",
+      "traceId": "5ab7410b-ad9c-43dc-9db9-7c7c50c27678"
+    }
+  },
+  {
+    "file": "cover-fredericksburg.jpg",
+    "original": "demo-site/img/covers/coverfredericksburg.jpg",
+    "group": "Portrait cover painting (by market)",
+    "description": "Watercolor of a white board-and-batten modern farmhouse with black roof, timber porch posts and autumn trees. Fredericksburg market cover.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebcf20cf78ef1189ef9",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg",
+      "traceId": "1bdcb907-47d3-498e-ab3e-43d1257eb88f"
+    }
+  },
+  {
+    "file": "cover-richmond.jpg",
+    "original": "demo-site/img/covers/coverrichmond.jpg",
+    "group": "Portrait cover painting (by market)",
+    "description": "Watercolor aerial of a blue two-story farmhouse on open pasture with a farm and silos in the distance (painted version of portrait 06). Richmond market cover and the default cover.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a579f035-57a0-4942-be79-a20750ce1402.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebda289659c083544dc",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a579f035-57a0-4942-be79-a20750ce1402.jpg",
+      "traceId": "eb684d97-d507-478f-b7c3-a320dfe1c79e"
+    }
+  },
+  {
+    "file": "cover-raleigh.jpg",
+    "original": "demo-site/img/covers/coverraleigh.jpg",
+    "group": "Portrait cover painting (by market)",
+    "description": "Watercolor of a dark-stained craftsman lodge with timber gables and covered porch among tall pines. Raleigh market cover.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a7ff568-766d-4aad-bf94-2428d6c775e0.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebe0e3d7a2f06e65da9",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a7ff568-766d-4aad-bf94-2428d6c775e0.jpg",
+      "traceId": "819af12a-8d02-4f96-a90e-0eed44b6eaa9"
+    }
+  },
+  {
+    "file": "cover-wilmington.jpg",
+    "original": "demo-site/img/covers/coverwilmington.jpg",
+    "group": "Portrait cover painting (by market)",
+    "description": "Watercolor of a three-story white coastal home with double porches and a backyard pool at sunset. Wilmington market cover.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebea612b72e8fa0a9bd",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg",
+      "traceId": "c5199439-e89b-44d5-ace8-bb20153547ea"
+    }
+  },
+  {
+    "file": "cover-newport-news.jpg",
+    "original": "demo-site/img/covers/covernewportnews.jpg",
+    "group": "Portrait cover painting (by market)",
+    "description": "Watercolor of a blue-gray colonial with red shutters and a columned front porch on the waterfront at golden hour. Newport News market cover.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/32da2899-c18d-49e6-a1f8-6d398238da40.jpg",
+    "ghl_response": {
+      "fileId": "6a99eebfa289659c0835450d",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/32da2899-c18d-49e6-a1f8-6d398238da40.jpg",
+      "traceId": "02ce80f8-ba8a-4e75-b4de-5dcce2e4fb42"
+    }
+  },
+  {
+    "file": "cover-gallery-family.jpg",
+    "original": "demo-site/img/covers/covergallery.jpg",
+    "group": "Portrait cover painting (gallery)",
+    "description": "Watercolor of a family of four holding hands, seen from behind, facing a craftsman-style home at golden hour. Gallery / generic cover.",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9258a2b9-0359-4bb8-9eda-59d96d9a91d3.jpg",
+    "ghl_response": {
+      "fileId": "6a99eec0f8c3a55cc2726d02",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9258a2b9-0359-4bb8-9eda-59d96d9a91d3.jpg",
+      "traceId": "acb84fd2-355a-4aaa-8c83-8241d389f4e9"
+    }
+  },
+  {
+    "file": "mitchell-logo-color.png",
+    "original": "demo-site/img/logocolor.png",
+    "group": "Brand",
+    "description": "Mitchell Homes logo, full color on transparent background (706x598 PNG).",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png",
+    "ghl_response": {
+      "fileId": "6a99eec0f20cf78ef1189f7e",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png",
+      "traceId": "bef7bf3a-a274-4e93-a278-cf521466c7f2"
+    }
+  },
+  {
+    "file": "mitchell-logo-white.png",
+    "original": "demo-site/img/logowhite.png",
+    "group": "Brand",
+    "description": "Mitchell Homes logo, white knockout on transparent background for dark backgrounds (706x598 PNG).",
+    "ghl_url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png",
+    "ghl_response": {
+      "fileId": "6a99eec1d9a153ac43f8ba14",
+      "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png",
+      "traceId": "dd862184-b5c3-4362-ae86-97e1c87ec6d2"
+    }
+  }
+]
