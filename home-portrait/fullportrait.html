@@ -123,6 +123,7 @@ h2.slide-t .script{font-size:1.2em;}
 
 /* Simply math */
 .s-label{font-family:'Caveat',cursive;color:var(--yellow);font-size:34px;line-height:1;margin-bottom:10px;}
+.s-logo{display:block;height:38px;width:auto;margin-bottom:14px;}
 .mathtable{width:100%;border-collapse:collapse;margin:14px 0 8px;}
 .mathtable td{padding:11px 6px;font-size:clamp(13px,3.6vw,14.5px);border-bottom:1px solid rgba(255,255,255,.18);color:#e7efe9;}
 .mathtable td:last-child{text-align:right;font-weight:600;color:#fff;white-space:nowrap;}
@@ -528,7 +529,7 @@ function simplySlide(){
   const landRow = owns ? '<tr class="s7"><td>Your land equity working for you</td><td>Yes</td></tr>' : '<tr class="s7"><td>Lot evaluation before you buy</td><td>Included</td></tr>';
   return `<section class="slide dark"><div class="inner">
     <div class="eyebrow s1">${owns ? 'Your Land, Your Leverage' : 'Your Path to Land'}</div>
-    <div class="s-label s2">Simply Mitchell</div>
+    <div class="s2"><img class="s-logo" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f689b758-0925-487c-9f04-fc6562214b2d.png" alt="Simply Mitchell"></div>
     <h2 class="slide-t s3" style="color:#fff;">${h3}</h2>
     <p class="body s4">${p}</p>
     <table class="mathtable">
