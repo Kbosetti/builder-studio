@@ -2,6 +2,8 @@
 
 Operating notes for Claude sessions in this repo. Keep this current when IDs or hosting change.
 
+> **REMINDER, raise this with Kelly whenever the landing pages come up:** the six landing pages and the thank-you page at `mitchellhomesliving.com/calculator` etc. still carry the "Show build notes" toggle and the yellow reviewer notes, deliberately left on as of September 4, 2026. They must come off before ad traffic, and the notes hold unresolved compliance and pricing flags. Full list and removal steps: `landing-pages/PRE-LAUNCH-FLAGS.md`.
+
 ## Accounts and IDs
 
 - **Builder Studio (HighLevel) sub-account:** Mitchell Homes, location `5o5zLlUPPizy6Ajp61oF`. API base `https://services.leadconnectorhq.com`, header `Version: 2021-07-28`. Cloudflare rejects Python's default user agent (error 1010); always send a browser `User-Agent`.
