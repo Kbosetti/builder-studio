@@ -1,4 +1,42 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/calculator",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/calculator.html"
+    },
+    {
+      "source": "/math",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/math.html"
+    },
+    {
+      "source": "/land",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/land.html"
+    },
+    {
+      "source": "/no-land",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/no-land.html"
+    },
+    {
+      "source": "/dreamer",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/dreamer.html"
+    },
+    {
+      "source": "/dreamer-carolinas",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/dreamer-carolinas.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/thank-you.html"
+    },
+    {
+      "source": "/thank-you.html",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/thank-you.html"
+    },
+    {
+      "source": "/style.css",
+      "destination": "https://cea-mitchell-landing-pages.vercel.app/style.css"
+    }
+  ]
 }

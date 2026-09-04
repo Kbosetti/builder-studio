@@ -31,6 +31,8 @@ const OPP_FIELDS = {
 const ILLUSTRATIVE_VALUE = 389000;
 const SITE = process.env.SITE_URL || "https://mitchell-home-portrait-quiz-cea-marketing.vercel.app";
 const LOGO = "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png";
+// Sender for platform email. The domain send.mitchellhomesliving.com is verified in the Mitchell sub-account.
+const EMAIL_FROM = process.env.EMAIL_FROM || "info@send.mitchellhomesliving.com";
 
 // Persona and land status -> the matching portrait document (sample shells).
 // The Gathering Place has one document regardless of land status.
@@ -248,7 +250,7 @@ module.exports = async (req, res) => {
           out.emailQueued = true; out.emailProvider = "gmail";
           try { await api("POST", `/contacts/${contactId}/notes`, { body: "Home Portrait email sent to " + email + " with the presentation link" + (pdfUrl ? " and the matching portrait document attached." : ".") }); } catch (e) {}
         } else {
-          const body = { type: "Email", contactId, subject, html };
+          const body = { type: "Email", contactId, subject, html, emailFrom: EMAIL_FROM };
           if (pdfUrl) body.attachments = [pdfUrl];
           const mail = await api("POST", "/conversations/messages", body, "2021-04-15");
           out.emailQueued = mail.ok; out.emailProvider = "platform";

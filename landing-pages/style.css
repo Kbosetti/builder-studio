@@ -113,3 +113,8 @@ footer{background:#f4f4f2;padding:38px 0;font-size:13px;color:#6a6a6a}
 @media(max-width:1000px){.studios{grid-template-columns:repeat(2,1fr)}.offergrid,.pillars,.steps3,.split{grid-template-columns:1fr}.split img{height:300px}}
 @media(max-width:900px){.gallery{grid-template-columns:1fr}.gallery img{height:240px}}
 @media(max-width:620px){.facts,.studios,.quotes,.row{grid-template-columns:1fr}.hdr .tel{display:none}.telbar{display:block;background:var(--green);color:var(--white);text-align:center;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:15px;padding:15px;text-decoration:none}}
+
+/* lead capture */
+.hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.lead-error{margin:10px 0 0;color:#b3261e;font-size:.9rem;font-weight:600}
+.lead-error:empty{display:none}
