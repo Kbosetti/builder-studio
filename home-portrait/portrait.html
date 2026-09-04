@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Home Portrait | Mitchell Homes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+
+
+:root{
+  --green:#2b6d47;
+  --green-deep:#1e4f33;
+  --yellow:#f5d053;
+  --cream:#faf8f3;
+  --ink:#1c2420;
+  --grey:#6d746f;
+  --line:#e3ded2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Montserrat',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  min-height:100vh;
+}
+.frame{max-width:680px;margin:0 auto;padding:34px 22px 70px;}
+.brandbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:34px;
+}
+.wordmark{font-weight:800;font-size:15px;letter-spacing:2px;color:var(--green-deep);text-transform:uppercase;}
+.wordmark span{color:var(--grey);font-weight:400;}
+.demo-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);border:1px solid var(--line);padding:4px 10px;border-radius:20px;}
+.script{font-family:'Caveat',cursive;color:var(--green);}
+
+/* Screens */
+.screen{display:none;animation:rise .45s ease;}
+.screen.active{display:block;}
+@keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+
+/* Welcome */
+.hero-art{margin:8px auto 26px;display:block;}
+h1.welcome{
+  font-weight:300;font-size:clamp(30px,6vw,44px);line-height:1.15;
+  text-align:center;letter-spacing:-0.5px;
+}
+h1.welcome .script{font-size:1.35em;}
+.manifesto{
+  text-align:center;font-size:16px;color:var(--grey);font-weight:400;
+  max-width:460px;margin:18px auto 8px;line-height:1.6;font-style:italic;
+}
+.manifesto b{color:var(--green-deep);font-style:normal;}
+.dd-badge{max-width:430px;margin:22px auto 0;text-align:center;font-size:13px;color:var(--green-deep);border:1.5px solid var(--yellow);background:#fdf8e8;border-radius:6px;padding:10px 16px;line-height:1.5;font-weight:500;}
+.start-note{text-align:center;font-size:12.5px;color:var(--grey);margin-top:10px;}
+
+/* Buttons */
+.btn{
+  display:block;width:100%;max-width:340px;margin:30px auto 0;
+  background:var(--green);color:#fff;border:none;cursor:pointer;
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:15px;letter-spacing:1px;
+  padding:16px 20px;border-radius:4px;transition:background .2s, transform .15s;
+  text-transform:uppercase;
+}
+.btn:hover{background:var(--green-deep);transform:translateY(-1px);}
+.btn.ghost{background:transparent;color:var(--green-deep);border:1.5px solid var(--green);text-transform:none;letter-spacing:0;font-weight:500;}
+.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;}
+
+/* Progress */
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:26px;}
+.progress .bar{flex:1;height:5px;background:var(--line);border-radius:3px;overflow:hidden;}
+.progress .fill{height:100%;background:var(--yellow);width:0%;transition:width .35s ease;}
+.progress .count{font-size:12px;font-weight:600;color:var(--grey);letter-spacing:1px;white-space:nowrap;}
+
+/* Questions */
+.q-eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:10px;}
+h2.q{font-weight:500;font-size:clamp(21px,4.4vw,27px);line-height:1.3;margin-bottom:6px;}
+.q-sub{font-size:14px;color:var(--grey);margin-bottom:22px;}
+.opts{display:grid;gap:12px;}
+.opt{
+  background:#fff;border:1.5px solid var(--line);border-radius:6px;
+  padding:16px 18px;cursor:pointer;text-align:left;width:100%;
+  font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink);
+  transition:border-color .15s, box-shadow .15s, transform .12s;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.opt:hover{border-color:var(--green);transform:translateY(-1px);box-shadow:0 4px 14px rgba(30,79,51,.08);}
+.opt:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;}
+.opt.selected{border-color:var(--green);background:#f2f7f3;box-shadow:inset 0 0 0 1px var(--green);}
+.opt .mark{
+  flex:0 0 22px;height:22px;border:1.5px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;margin-top:1px;
+}
+.opt.selected .mark{background:var(--green);border-color:var(--green);}
+.opt .t{font-weight:600;display:block;margin-bottom:2px;}
+.opt .d{font-size:13px;color:var(--grey);font-weight:400;display:block;}
+.multi-note{font-size:12px;color:var(--grey);margin-top:14px;text-align:center;}
+.next-row{margin-top:22px;display:flex;gap:12px;justify-content:center;}
+.next-row .btn{margin:0;max-width:220px;}
+
+/* Capture */
+.cap-box{max-width:420px;margin:0 auto;}
+.cap-box h2{font-weight:500;font-size:clamp(21px,4.4vw,26px);line-height:1.3;text-align:center;margin-bottom:8px;}
+.cap-box .cap-sub{font-size:13.5px;color:var(--grey);text-align:center;margin-bottom:22px;line-height:1.6;}
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:6px;}
+.field input{
+  width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:6px;
+  font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink);background:#fff;
+}
+.field input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(43,109,71,.12);}
+.skip-link{display:block;text-align:center;font-size:12px;color:var(--grey);margin-top:14px;background:none;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;text-decoration:underline;}
+
+/* Portrait result */
+.frame-art{display:flex;flex-direction:column;align-items:center;margin:6px 0 20px;}
+.wc-frame{
+  padding:9px;background:#fdfbf5;border:6px solid #b8860b;
+  box-shadow:inset 0 0 0 1.5px #b8860b, 0 10px 28px rgba(30,79,51,.22);
+  max-width:340px;
+}
+.wc-frame img{display:block;width:100%;height:auto;}
+.wc-frame svg{display:block;width:100%;height:auto;}
+.frame-cap{font-family:'Caveat',cursive;font-size:22px;color:var(--green);margin-top:10px;}
+.portrait-head{text-align:center;margin-bottom:8px;}
+.portrait-head .eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--grey);margin-bottom:14px;}
+.portrait-title{font-weight:300;font-size:clamp(28px,5.6vw,40px);line-height:1.15;}
+.portrait-title .script{font-size:1.4em;}
+.portrait-card{
+  background:#fff;border:1px solid var(--line);border-radius:8px;
+  padding:30px 28px;margin:26px 0 18px;
+  box-shadow:0 10px 34px rgba(30,79,51,.07);
+}
+.portrait-card .persona{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:12px;}
+.portrait-card p{font-size:15.5px;line-height:1.65;color:#333b36;margin-bottom:14px;font-weight:400;}
+.portrait-card p b{color:var(--green-deep);}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px;}
+.chip{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:12.5px;font-weight:500;color:var(--green-deep);}
+.simply{
+  background:var(--green-deep);color:#fff;border-radius:8px;
+  padding:26px 26px 28px;margin:0 0 18px;
+}
+.simply .s-label{font-family:'Caveat',cursive;color:var(--yellow);font-size:30px;line-height:1;margin-bottom:8px;}
+.simply h3{font-weight:600;font-size:18px;margin-bottom:10px;}
+.simply p{font-size:14px;line-height:1.6;color:#e7efe9;margin-bottom:10px;font-weight:300;}
+.simply .dd-line{font-size:14px;line-height:1.6;color:#e7efe9;font-weight:300;margin:4px 0 12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.18);}
+.simply .dd-line b{color:var(--yellow);font-weight:600;}
+.simply .facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;}
+.simply .facts span{font-size:13px;font-weight:600;color:var(--yellow);}
+.cta-stack .btn{margin-top:12px;}
+.disclaim{font-size:11px;color:var(--grey);text-align:center;margin-top:18px;line-height:1.5;}
+
+/* Behind the curtain */
+.curtain{
+  margin-top:34px;border-top:2px dashed var(--line);padding-top:22px;
+}
+.curtain-toggle{
+  background:none;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;
+  font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);
+  display:block;margin:0 auto;font-weight:600;
+}
+.curtain-toggle:hover{color:var(--green);}
+.curtain-body{display:none;margin-top:18px;}
+.curtain-body.open{display:block;animation:rise .3s ease;}
+.curtain-body h4{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green-deep);margin-bottom:10px;}
+.payload{
+  background:#14201a;color:#bfe3cc;border-radius:6px;padding:18px;
+  font-family:'Courier New',monospace;font-size:12.5px;line-height:1.7;
+  white-space:pre-wrap;word-break:break-word;
+}
+.curtain-note{font-size:12.5px;color:var(--grey);margin-top:12px;line-height:1.6;}
+.curtain-note b{color:var(--green-deep);}
+
+footer{
+  margin-top:60px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:10.5px;color:var(--grey);text-align:center;line-height:1.6;letter-spacing:.3px;
+}
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="brandbar">
+    <div class="wordmark" style="display:flex;align-items:center;gap:10px;"><img src="data:image/png;base64,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" alt="Mitchell Homes" style="height:58px;width:auto;display:block;"><span>The Home Portrait</span></div>
+    
+  </div>
+
+  <!-- WELCOME -->
+  <section class="screen active" id="s-welcome">
+    <svg class="hero-art" width="230" height="150" viewBox="0 0 230 150" role="img" aria-label="A simple line drawing of a custom home rising from open land">
+      <path d="M8 128 C 60 116, 170 116, 222 128" fill="none" stroke="#2b6d47" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M30 134 C 75 126, 155 126, 200 134" fill="none" stroke="#e3ded2" stroke-width="2" stroke-linecap="round"/>
+      <path d="M70 118 L70 74 L115 42 L160 74 L160 118" fill="none" stroke="#1e4f33" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M60 80 L115 40 L170 80" fill="none" stroke="#1e4f33" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      <rect x="104" y="90" width="22" height="28" fill="none" stroke="#2b6d47" stroke-width="2.5"/>
+      <rect x="80" y="86" width="14" height="14" fill="none" stroke="#2b6d47" stroke-width="2.5"/>
+      <rect x="136" y="86" width="14" height="14" fill="none" stroke="#2b6d47" stroke-width="2.5"/>
+      <circle cx="196" cy="34" r="13" fill="#f5d053"/>
+      <path d="M40 112 q 4 -12 10 0 M46 112 l0 8" fill="none" stroke="#2b6d47" stroke-width="2" stroke-linecap="round"/>
+      <path d="M186 108 q 5 -16 12 0 M192 108 l0 12" fill="none" stroke="#2b6d47" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <h1 class="welcome">Discover <span class="script">Yours</span></h1>
+    <p class="manifesto">Every home we build is a portrait of its owner. <b>What will yours look like?</b></p>
+    <p class="manifesto" style="font-style:normal;font-size:14.5px;">Answer eight quick questions about the home you are dreaming of and the land it belongs on, whether you own that land yet or not, and we will paint your Home Portrait: the custom home only you would build, and the clearest path to building it.</p>
+    <p class="dd-badge">Every Mitchell home now includes $5,000 to $25,000 in Mitchell Design Dollars toward your design selections.</p>
+    <button class="btn" onclick="start()">Begin My Portrait</button>
+    <p class="start-note">Takes about 90 seconds. No pressure, just possibility.</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="screen" id="s-quiz">
+    <div class="progress">
+      <div class="bar"><div class="fill" id="fill"></div></div>
+      <div class="count" id="count">1 of 8</div>
+    </div>
+    <div id="q-mount"></div>
+  </section>
+
+  <!-- CAPTURE -->
+  <section class="screen" id="s-capture">
+    <div class="cap-box">
+      <svg width="120" height="80" viewBox="0 0 230 150" style="display:block;margin:0 auto 14px;" aria-hidden="true">
+        <path d="M8 128 C 60 116, 170 116, 222 128" fill="none" stroke="#2b6d47" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M70 118 L70 74 L115 42 L160 74 L160 118" fill="none" stroke="#1e4f33" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M60 80 L115 40 L170 80" fill="none" stroke="#1e4f33" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="196" cy="34" r="13" fill="#f5d053"/>
+      </svg>
+      <h2>Your portrait is ready.</h2>
+      <p class="cap-sub">Tell us who it belongs to, and we will send you the full version: your spaces, your plan matches, your Simply Mitchell numbers, and your Design Dollars.</p>
+      <div class="field"><label for="cap-name">First name</label><input type="text" id="cap-name" placeholder="Your first name" autocomplete="given-name"></div>
+      <div class="field"><label for="cap-email">Email</label><input type="email" id="cap-email" placeholder="you@example.com" autocomplete="email"></div>
+      <button class="btn" onclick="submitCapture()">Reveal My Portrait</button>
+      <button class="skip-link" onclick="skipCapture()">Skip for now, just show my portrait</button>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="screen" id="s-result">
+    <div class="portrait-head">
+      <div class="eyebrow">Your Home Portrait</div>
+      <div class="frame-art" id="r-art"></div>
+      <div class="portrait-title" id="r-title"></div>
+    </div>
+    <div class="portrait-card">
+      <div class="persona" id="r-persona"></div>
+      <div id="r-body"></div>
+      <div class="chips" id="r-chips"></div>
+    </div>
+    <div class="simply" id="r-simply"></div>
+    <div class="cta-stack">
+      <button class="btn" onclick="openFull()">See My Full Portrait</button>
+      <button class="btn ghost" id="emailbtn" onclick="emailPortrait()">Email Me My Full Portrait</button>
+      <button class="btn ghost" onclick="scheduleVisit()">Visit a Design Studio</button>
+    </div>
+    <p class="sent-note" id="r-sent" style="text-align:center;font-size:13px;color:var(--green);margin-top:14px;"></p>
+    <p class="disclaim">Every Mitchell home is a portrait of its owner. Pricing from the $250s to $500 plus. Zero down, zero closing costs, no construction loan, on approved terms. Design Dollars apply to Design Center selections only, not to base price, structural options, or site work, and are not redeemable for cash; tier determined at selections. Program effective September 1, 2026.</p>
+
+  </section>
+
+  <footer>
+    Mitchell Homes builds on your land across Virginia, North Carolina, South Carolina, and Southern Maryland. Our legacy is building Yours simply. Watercolor scenes are artist concepts of homes in each division.
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// DEMO CONFIG (for Trevor)
+// /api/lead is the serverless intake on this domain. It upserts the
+// contact in Builder Studio, adds the quiz note, creates or updates the
+// opportunity, and sends the portrait email. Leave it as is. If the API
+// is ever unavailable, completions still save locally and appear on the
+// companion dashboard page on the same domain.
+const WEBHOOK_URL = "/api/lead";
+// ============================================================
+
+// P = Planner, T = Transitioner, V = Value Unlocker, D = Grounded Dreamer
+const QUESTIONS = [
+  {
+    eyebrow: "Start with the dream",
+    q: "Who will call this home?",
+    sub: "Every portrait starts with the people in it.",
+    opts: [
+      { t: "Just us, finally built our way", d: "A home that fits exactly two.", w: { D: 1 } },
+      { t: "A growing family", d: "Room to grow into, not out of.", w: { T: 2 } },
+      { t: "Multiple generations under one roof", d: "Parents, kids, or both.", w: { T: 3 } },
+      { t: "Me, and everyone I love who visits", d: "Quiet most days, full on the best ones.", w: { D: 1, P: 1 } }
+    ]
+  },
+  {
+    eyebrow: "A Saturday at home",
+    q: "It's Saturday morning at your finished home. Where are you?",
+    sub: "",
+    opts: [
+      { t: "On the porch with coffee, watching the morning arrive", d: "", tag: { space: "a wraparound porch" }, w: { D: 1 } },
+      { t: "In the kitchen with the whole crew underfoot", d: "", tag: { space: "a gathering kitchen with a big island" }, w: { T: 1 } },
+      { t: "In my own quiet corner, door closed, book open", d: "", tag: { space: "a study of your own" }, w: { P: 1 } },
+      { t: "Outside working on a project", d: "", tag: { space: "a workshop and real outdoor living" }, w: { V: 1 } }
+    ]
+  },
+  {
+    eyebrow: "The must haves",
+    q: "Pick the spaces your home cannot live without.",
+    sub: "Choose up to three.",
+    multi: 3,
+    opts: [
+      { t: "First floor primary suite", tag: { pick: "first floor primary suite" } },
+      { t: "Chef's kitchen with a working island", tag: { pick: "chef's kitchen" } },
+      { t: "Covered porch or outdoor living room", tag: { pick: "covered outdoor living" } },
+      { t: "Flex room that can become anything", tag: { pick: "flex room" } },
+      { t: "In law or multigenerational suite", tag: { pick: "multigenerational suite" }, w: { T: 1 } },
+      { t: "Dedicated home office", tag: { pick: "home office" }, w: { P: 1 } }
+    ]
+  },
+  {
+    eyebrow: "The feeling",
+    q: "When someone pulls up the driveway, what should your home say?",
+    sub: "",
+    opts: [
+      { t: "Timeless. It looks like it has always belonged here.", d: "", tag: { style: "timeless and rooted" }, w: { P: 1 } },
+      { t: "Warm. Come in, stay a while.", d: "", tag: { style: "warm and welcoming" }, w: { T: 1 } },
+      { t: "Fresh. Classic bones, current soul.", d: "", tag: { style: "fresh and current" }, w: { D: 1 } },
+      { t: "Solid. Built right, built to last.", d: "", tag: { style: "solid and enduring" }, w: { V: 1 } }
+    ]
+  },
+  {
+    eyebrow: "Now, about the land",
+    q: "Every dream home needs ground to stand on. Where are you on that part?",
+    sub: "No land yet is a great answer too. Helping you find it is part of what we do.",
+    opts: [
+      { t: "I already own my land", d: "It's mine, and it's been waiting.", tag: { land: "owned" }, w: { V: 3 } },
+      { t: "There's family land in the picture", d: "Inherited, shared, or promised.", tag: { land: "family" }, w: { V: 3, T: 1 } },
+      { t: "I'm looking for the right piece of land", d: "The search is on, and we can help.", tag: { land: "searching" }, w: { D: 1, P: 1 } },
+      { t: "Still dreaming, land comes later", d: "Home first. Land together.", tag: { land: "dreaming" }, w: { D: 2 } }
+    ]
+  },
+  {
+    eyebrow: "Your place on the map",
+    q: "Where would your home rise?",
+    sub: "We build across Virginia, North Carolina, South Carolina, and Southern Maryland.",
+    opts: [
+      { t: "Richmond and Central Virginia", d: "The river city and the counties around it.", tag: { division: "Richmond, VA", regionName: "Central Virginia" } },
+      { t: "Fredericksburg and Southern Maryland", d: "Room to breathe within reach of everything.", tag: { division: "Fredericksburg, VA", regionName: "the Fredericksburg region" } },
+      { t: "Hampton Roads and Newport News", d: "Where the rivers meet the bay.", tag: { division: "Newport News, VA", regionName: "Hampton Roads" } },
+      { t: "Raleigh and central North Carolina", d: "The Triangle and beyond.", tag: { division: "Raleigh, NC", regionName: "central North Carolina" } },
+      { t: "Wilmington and coastal Carolina", d: "The beaches and northeast South Carolina.", tag: { division: "Wilmington, NC", regionName: "the coastal Carolinas" } },
+      { t: "Shenandoah Valley and the Virginia mountains", d: "High country, big views.", retreat: true, tag: { division: "Fredericksburg, VA", regionName: "the Shenandoah Valley", rset: "mountain", rcap: "Painted above the valleys of the Shenandoah" } },
+      { t: "Southwest Virginia and Smith Mountain Lake", d: "Lynchburg, Roanoke, and the lake.", retreat: true, tag: { division: "Richmond, VA", regionName: "Smith Mountain Lake country", rset: "lake", rcap: "Painted where the lake holds the evening light" } },
+      { t: "Southern Virginia lakes", d: "Lake Gaston and the counties around it.", retreat: true, tag: { division: "Richmond, VA", regionName: "Lake Gaston country", rset: "lake", rcap: "Painted where the lake holds the evening light" } },
+      { t: "Eastern Shore and the Outer Banks", d: "Salt air, both sides of the line.", retreat: true, tag: { division: "Newport News, VA", regionName: "the Eastern Shore and Outer Banks", rset: "coastal", rcap: "Painted where the salt air starts the morning" } },
+      { t: "Somewhere else, or still deciding", d: "We will help you find the right ground.", tag: { division: "Richmond, VA", regionName: "your part of our footprint" } }
+    ]
+  },
+  {
+    eyebrow: "How you decide",
+    q: "A big decision is in front of you. What's your first move?",
+    sub: "Be honest. There's no wrong answer, only your answer.",
+    opts: [
+      { t: "Map every step before I take one", d: "I read the fine print twice.", w: { P: 3 } },
+      { t: "Run the numbers until they make sense", d: "Show me the math and I'm in.", w: { V: 3 } },
+      { t: "Picture the end result, then work backward", d: "The vision comes first.", w: { D: 3 } },
+      { t: "Break it into small steps I can actually take", d: "One thing at a time, life is full.", w: { T: 3 } }
+    ]
+  },
+  {
+    eyebrow: "The horizon",
+    q: "When do you want to be turning the key?",
+    sub: "Our build runs about 150 days once we break ground.",
+    opts: [
+      { t: "As soon as possible", d: "I've waited long enough.", tag: { timeline: "0 to 6 months" }, w: { V: 1 } },
+      { t: "Within the year", d: "Planning now, building soon.", tag: { timeline: "6 to 12 months" }, w: { P: 1 } },
+      { t: "One to two years out", d: "Getting our ducks in a row.", tag: { timeline: "12 to 24 months" }, w: { T: 1 } },
+      { t: "Someday, and I want to be ready", d: "Learning everything first.", tag: { timeline: "exploring" }, w: { D: 1 } }
+    ]
+  }
+];
+
+const PERSONAS = {
+  P: {
+    name: "The Planner's Portrait",
+    label: "Modern Homesteader | The Planner",
+    body: (a) => `You don't want a leap of faith. You want a path you can see, and that is exactly how we build. Your home in <b>${a.division}</b> starts with the Homebuyer Roadmap to Success: every step named, every cost on the table, every decision made in daylight. A <b>${a.style}</b> home with ${listPicks(a)}, built in about 150 days once we break ground, with nothing left to guess.`,
+    close: "You stay in control. We make the path predictable."
+  },
+  T: {
+    name: "The Family Portrait",
+    label: "Modern Homesteader | The Transitioner",
+    body: (a) => `Life is moving, and your home should move with it. This portrait is a <b>${a.style}</b> home in <b>${a.division}</b> designed around the people in it: ${listPicks(a)}, rooms that grow and change as your family does. We break the big decisions into small steps you can build on, so the season you're in stays joyful instead of overwhelming.`,
+    close: "Big decisions become small steps. We carry the heavy ones."
+  },
+  V: {
+    name: "The Landowner's Portrait",
+    label: "Modern Homesteader | The Value Unlocker",
+    body: (a) => `Here is what most landowners never get told: you are already holding the key. Your land in <b>${a.division}</b> is not just a place to build, it is leverage. This portrait is a <b>${a.style}</b> home with ${listPicks(a)}, built on ground you already own, financed in a way that most banks simply cannot match. The math is real, and we will show you every line of it.`,
+    close: "Your land is worth more than you think. Here is the math."
+  },
+  D: {
+    name: "The Dreamer's Portrait",
+    label: "Modern Homesteader | The Grounded Dreamer",
+    body: (a) => `You can see it already: a <b>${a.style}</b> home in <b>${a.division}</b> with ${listPicks(a)}, standing on land that finally has its voice. Here is the part that makes the dream safe: 40 plus plans, 40,000 plus selections, and a transparent process with guardrails at every turn. Your vision stays yours. We just keep it standing on solid ground.`,
+    close: "Your vision becomes doable when the path is clear."
+  },
+  G: {
+    name: "The Gathering Place Portrait",
+    label: "Modern Homesteader | The Gathering Place",
+    body: (a) => {
+      const scenes = {
+        lake: "coffee on the dock while the water is still glass, and evenings when the grill is going and the sun puts on a show over the far bank",
+        coastal: "salt air on the porch while the light comes up, and long dinners that drift outside because nobody wants to call it a night",
+        mountain: "coffee above the morning fog while the valley wakes up below you, and firepit sparks against a sky with actual stars in it"
+      };
+      const intents = {
+        retreat: "This is the address every generation will know by heart: the long table, the full house weekends, the fourth of July with a permanent home.",
+        retire: "This is the long game, built now, loved on weekends, and ready for you the day the alarm clock finally loses its job.",
+        everyday: "This is the place the whole calendar bends toward, and you get to live there."
+      };
+      const scene = scenes[a.rset] || scenes.lake;
+      const intent = intents[a.intent] || intents.retreat;
+      return `Some homes are where life happens every day. This one is the place everyone is always trying to get to. Picture it in <b>${a.regionName || a.division}</b>: ${scene}. A <b>${a.style}</b> home with ${listPicks(a)}, built for the people who will fill it. ${intent}`;
+    },
+    close: "The place you keep promising yourselves. Here is how it becomes real."
+  }
+};
+
+let step = 0;
+let scores = { P: 0, T: 0, V: 0, D: 0 };
+let answers = { picks: [] };
+let multiSel = [];
+let lastPayload = null;
+
+function show(id){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function start(){ step = 0; scores = {P:0,T:0,V:0,D:0}; answers = {picks:[]}; show('s-quiz'); render(); }
+
+function render(){
+  const q = QUESTIONS[step];
+  multiSel = [];
+  document.getElementById('fill').style.width = ((step)/QUESTIONS.length*100) + '%';
+  document.getElementById('count').textContent = (step+1) + ' of ' + QUESTIONS.length;
+  const m = document.getElementById('q-mount');
+  let html = `<div class="q-eyebrow">${q.eyebrow}</div><h2 class="q">${q.q}</h2>`;
+  if(q.sub) html += `<p class="q-sub">${q.sub}</p>`;
+  html += `<div class="opts">`;
+  q.opts.forEach((o,i)=>{
+    html += `<button class="opt" data-i="${i}" onclick="pick(${i})">
+      <span class="mark">&#10003;</span>
+      <span><span class="t">${o.t}</span>${o.d?`<span class="d">${o.d}</span>`:''}</span>
+    </button>`;
+  });
+  html += `</div>`;
+  if(q.multi){
+    html += `<p class="multi-note">Choose up to ${q.multi}, then continue.</p>
+    <div class="next-row"><button class="btn" onclick="nextMulti()">Continue</button></div>`;
+  }
+  m.innerHTML = html;
+}
+
+function pick(i){
+  const q = QUESTIONS[step];
+  if(q.multi){
+    const btn = document.querySelector(`.opt[data-i="${i}"]`);
+    const idx = multiSel.indexOf(i);
+    if(idx > -1){ multiSel.splice(idx,1); btn.classList.remove('selected'); }
+    else if(multiSel.length < q.multi){ multiSel.push(i); btn.classList.add('selected'); }
+    return;
+  }
+  apply(q.opts[i]);
+  if(q.opts[i].retreat){ renderIntent(); return; }
+  advance();
+}
+function renderIntent(){
+  const m = document.getElementById('q-mount');
+  m.innerHTML = `<div class="q-eyebrow">One more thing about this place</div>
+    <h2 class="q">Will this home be your every day address, or the place you get away to?</h2>
+    <div class="opts">
+      <button class="opt" onclick="pickIntent('everyday')"><span class="mark">&#10003;</span><span><span class="t">Our every day home</span></span></button>
+      <button class="opt" onclick="pickIntent('retreat')"><span class="mark">&#10003;</span><span><span class="t">A getaway or family retreat</span><span class="d">The place everyone gathers.</span></span></button>
+      <button class="opt" onclick="pickIntent('retire')"><span class="mark">&#10003;</span><span><span class="t">The place we plan to retire</span><span class="d">Built now, ready when you are.</span></span></button>
+    </div>`;
+}
+function pickIntent(v){
+  answers.intent = v;
+  advance();
+}
+function nextMulti(){
+  const q = QUESTIONS[step];
+  if(multiSel.length === 0){ multiSel.push(0); }
+  multiSel.forEach(i => apply(q.opts[i]));
+  advance();
+}
+function apply(o){
+  if(o.w) for(const k in o.w) scores[k] += o.w[k];
+  if(o.tag){
+    for(const k in o.tag){
+      if(k === 'pick') answers.picks.push(o.tag[k]);
+      else answers[k] = o.tag[k];
+    }
+  }
+}
+function advance(){
+  step++;
+  if(step < QUESTIONS.length){ render(); }
+  else {
+    document.getElementById('fill').style.width = '100%';
+    show('s-capture');
+  }
+}
+function submitCapture(){
+  answers.first_name = (document.getElementById('cap-name').value || '').trim();
+  answers.email = (document.getElementById('cap-email').value || '').trim();
+  reveal();
+}
+function skipCapture(){
+  answers.first_name = '';
+  answers.email = '';
+  reveal();
+}
+function persistLead(payload){
+  try {
+    const key = 'hp_leads';
+    const leads = JSON.parse(localStorage.getItem(key) || '[]');
+    leads.unshift(payload);
+    localStorage.setItem(key, JSON.stringify(leads.slice(0, 50)));
+  } catch(e) { /* demo never breaks */ }
+  if (WEBHOOK_URL) {
+    try {
+      fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(()=>{});
+    } catch(e) { /* demo never breaks */ }
+  }
+}
+function listPicks(a){
+  const p = a.picks.length ? a.picks : [a.space || 'spaces shaped entirely around you'];
+  if(p.length === 1) return `<b>${p[0]}</b>`;
+  if(p.length === 2) return `<b>${p[0]}</b> and <b>${p[1]}</b>`;
+  return `<b>${p[0]}</b>, <b>${p[1]}</b>, and <b>${p[2]}</b>`;
+}
+function topPersona(){
+  const order = ['V','T','P','D'];
+  let best = 'D', bestScore = -1;
+  order.forEach(k => { if(scores[k] > bestScore){ bestScore = scores[k]; best = k; } });
+  return best;
+}
+function sceneFor(division){
+  const caps = {
+    "Richmond, VA": "Painted in the rolling hills of Central Virginia",
+    "Fredericksburg, VA": "Painted in the open countryside near Fredericksburg",
+    "Newport News, VA": "Painted where the rivers meet the bay, Hampton Roads",
+    "Raleigh, NC": "Painted among the Carolina pines, the Triangle",
+    "Wilmington, NC": "Painted by the sea, the coastal Carolinas"
+  };
+  if(answers.rcap) return { cap: answers.rcap };
+  return { cap: caps[division] || "Painted on the land that is waiting for you" };
+}
+const WC_ART = {
+  "Richmond, VA": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a579f035-57a0-4942-be79-a20750ce1402.jpg",
+  "Fredericksburg, VA": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg",
+  "Newport News, VA": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/32da2899-c18d-49e6-a1f8-6d398238da40.jpg",
+  "Raleigh, NC": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a7ff568-766d-4aad-bf94-2428d6c775e0.jpg",
+  "Wilmington, NC": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg"
+};
+const WC_ART_RSET = {
+  lake: "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/666b6807-d99e-4cf5-9b4d-70d76e36e4fa.jpg",
+  coastal: "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg",
+  mountain: "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg"
+};
+function framedPortrait(division){
+  const s = sceneFor(division);
+  const src = (answers.rset && WC_ART_RSET[answers.rset]) || WC_ART[division] || WC_ART["Richmond, VA"];
+  return '<div class="wc-frame"><img src="' + src + '" alt="A watercolor portrait of your custom home"></div>' +
+         '<div class="frame-cap">' + s.cap + '</div>';
+}
+function reveal(){
+  const key = (answers.intent === 'retreat' || answers.intent === 'retire') ? 'G' : topPersona();
+  const P = PERSONAS[key];
+  const a = answers;
+  a.division = a.division || 'your part of our footprint';
+  a.style = a.style || 'one of a kind';
+
+  document.getElementById('r-art').innerHTML = framedPortrait(answers.division);
+  document.getElementById('r-title').innerHTML = P.name.replace('Portrait','<span class="script">Portrait</span>');
+  document.getElementById('r-persona').textContent = P.label;
+  document.getElementById('r-body').innerHTML = `<p>${P.body(a)}</p><p style="font-style:italic;color:#4b5a51;">${P.close}</p>`;
+
+  const chips = [];
+  if(a.division) chips.push(a.division);
+  if(a.style) chips.push(a.style + ' style');
+  a.picks.slice(0,3).forEach(p => chips.push(p));
+  if(a.timeline) chips.push('timeline: ' + a.timeline);
+  document.getElementById('r-chips').innerHTML = chips.map(c=>`<span class="chip">${c}</span>`).join('');
+
+  const owns = (a.land === 'owned' || a.land === 'family');
+  let simply = `<div class="s-label">Simply Mitchell</div>`;
+  if(key === 'G'){
+    simply += `<h3>The second home banks make hard, Mitchell makes simple.</h3>
+    <p>Here is something most people discover the hard way: banks get strict when the home is not your primary address. Bigger down payments, tougher construction loan terms, more hoops right when you were dreaming about fewer. Because Mitchell self funds every build, the construction loan simply never exists${owns ? ', and the land you already hold works as your equity' : ''}. The math that usually stops a gathering place is the math that never happens here.</p>`;
+  } else if(owns){
+    simply += `<h3>Your land can be your down payment.</h3>
+    <p>Because you ${a.land === 'family' ? 'have family land in the picture' : 'already own your land'}, the hardest part of building may already be behind you. With Simply Mitchell, your land works as your equity, and because we self fund construction, there is no construction loan standing between you and breaking ground.</p>`;
+  } else {
+    simply += `<h3>No land yet? You are closer than you think.</h3>
+    <p>Most people assume building custom means a mountain of cash up front. Simply Mitchell was built to remove that mountain. And you do not have to find your land alone: our team helps you evaluate every lot before you buy, from what the county allows to what well and septic will cost, so the right piece of ground becomes a confident decision instead of a leap.</p>`;
+  }
+  const ddPick = a.picks.length ? a.picks[0] : 'the spaces you described';
+  simply += `<div class="dd-line"><b>And the finish is funded too.</b> Every Mitchell home comes with $5,000 in Design Dollars for the Design Center, and the more you personalize, the more we add, up to $25,000. The ${ddPick} you chose is exactly where Design Dollars work. Sign now and the incentive is locked; your tier is decided when you make your selections.</div>`;
+  simply += `<div class="facts"><span>Zero down</span><span>Zero closing costs</span><span>No construction loan</span><span>$5,000 to $25,000 in Design Dollars</span><span>About 150 days to keys</span></div>`;
+  document.getElementById('r-simply').innerHTML = simply;
+
+  const payload = {
+    source: "home_portrait_quiz",
+    first_name: a.first_name || "(not provided)",
+    email: a.email || "(not provided)",
+    submitted_at: new Date().toISOString(),
+    persona_segment: P.label.split('| ')[1],
+    persona_scores: scores,
+    land_status: a.land || "unknown",
+    division: a.division,
+    region: a.regionName || a.division,
+    home_intent: a.intent || "everyday",
+    style_preference: a.style,
+    must_have_spaces: a.picks,
+    selection_appetite: a.picks.length >= 3 ? "high" : (a.picks.length === 2 ? "medium" : "starter"),
+    timeline: a.timeline || "unknown",
+    qualified_lead_signal: owns && (a.timeline === '0 to 6 months' || a.timeline === '6 to 12 months'),
+    nurture_track: P.label.split('| ')[1].toLowerCase().replace(/\s/g,'_') + "_sequence",
+    ad_platform_event: owns ? "qualified_lead_landowner" : "lead_engaged",
+    portrait_key: key,
+    portrait_name: P.name,
+    rset: a.rset || "",
+    design_dollars_focus: a.picks.length ? a.picks[0] : ""
+  };
+  lastPayload = payload;
+  persistLead(payload);
+  document.getElementById('r-sent').textContent = (a.email && a.email !== '(not provided)') ? 'Your full portrait is on its way to ' + a.email + '.' : 'Want it in your inbox? Tap Email Me My Full Portrait.';
+
+  document.getElementById('fill').style.width = '100%';
+  show('s-result');
+}
+function fullUrl(){
+  const p = lastPayload || {};
+  const q = new URLSearchParams({ n: p.first_name === "(not provided)" ? "" : (p.first_name || ""), p: p.persona_segment || "", d: p.division || "", l: p.land_status || "", s: p.style_preference || "", k: (p.must_have_spaces || []).join("|"), t: p.timeline || "", r: p.region || "", i: p.home_intent || "", x: p.rset || "" });
+  return "/fullportrait?" + q.toString();
+}
+const BOOKING = {
+  "Richmond, VA":       { land:"lefHeBcANsbjZf5IhZGw", noland:"LSDaGxShOPqb9J1t4SCO" },
+  "Fredericksburg, VA": { land:"46oGCWfZJoFwbuub1wtV", noland:"fkAfa07N4rovoVR0iZMt" },
+  "Newport News, VA":   { land:"4bOw8XC3FS9aBi1lxCaJ", noland:"yHaSZPNP24gcGJkY6MoP" },
+  "Raleigh, NC":        { land:"e7IJYU4ZVbxtsf3RZpbP", noland:"ET1aeQY6CmEOXUEZEMZa" },
+  "Wilmington, NC":     { land:"dEtDNPpoKNnBTY7Sw2Y9", noland:"nf3cLjxsG069HUeNCWkU" }
+};
+function bookingUrl(division, land){
+  const b = BOOKING[division] || BOOKING["Richmond, VA"];
+  const owns = land === "owned" || land === "family";
+  return "https://api.leadconnectorhq.com/widget/booking/" + (owns ? b.land : b.noland);
+}
+function scheduleVisit(){ const p = lastPayload || {}; window.open(bookingUrl(p.division, p.land_status), "_blank"); }
+function openFull(){ window.open(fullUrl(), "_blank"); }
+function emailPortrait(){
+  const p = lastPayload || {};
+  if(p.email && p.email !== "(not provided)"){
+    document.getElementById("r-sent").textContent = "Your full portrait is on its way to " + p.email + ".";
+    return;
+  }
+  show("s-capture");
+}
+</script>
+</body>
+</html>

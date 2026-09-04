@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Your Home Portrait | Mitchell Homes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2b6d47;
+  --green-deep:#1e4f33;
+  --yellow:#f5d053;
+  --cream:#faf8f3;
+  --ink:#1c2420;
+  --grey:#6d746f;
+  --line:#e3ded2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{
+  font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);
+  overflow:hidden;
+}
+.script{font-family:'Caveat',cursive;color:var(--green);}
+
+/* Top chrome */
+.chrome{
+  position:fixed;top:0;left:0;right:0;z-index:30;
+  padding:calc(10px + env(safe-area-inset-top)) 18px 0;
+}
+.segs{display:flex;gap:5px;margin-bottom:10px;}
+.seg{flex:1;height:3.5px;border-radius:2px;background:rgba(109,116,111,.28);overflow:hidden;}
+.segfill{height:100%;width:0;background:var(--yellow);border-radius:2px;}
+.chromerow{display:flex;justify-content:space-between;align-items:center;}
+.logo{height:44px;width:auto;display:block;}
+.logodark{display:none;}
+body.ondark .logodark{display:block;}
+body.ondark .logolight{display:none;}
+.doc-tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);transition:color .4s;}
+body.ondark .doc-tag{color:#b9ccc0;}
+
+/* Deck */
+.deck{position:fixed;inset:0;}
+.slide{
+  position:absolute;inset:0;display:none;
+  padding:calc(58px + env(safe-area-inset-top)) 22px calc(74px + env(safe-area-inset-bottom));
+  background:var(--cream);
+}
+.slide.active{display:flex;flex-direction:column;justify-content:center;}
+.slide.dark{background:var(--green-deep);color:#fff;}
+.inner{
+  width:100%;max-width:620px;margin:0 auto;
+  max-height:100%;overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:none;
+}
+.inner::-webkit-scrollbar{display:none;}
+.inner > :last-child{margin-bottom:0;}
+
+/* Stagger entrances */
+@keyframes rise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+.slide.active .s1{animation:rise .55s ease backwards .1s;}
+.slide.active .s2{animation:rise .55s ease backwards .3s;}
+.slide.active .s3{animation:rise .55s ease backwards .5s;}
+.slide.active .s4{animation:rise .55s ease backwards .7s;}
+.slide.active .s5{animation:rise .55s ease backwards .9s;}
+.slide.active .s6{animation:rise .55s ease backwards 1.1s;}
+.slide.active .s7{animation:rise .55s ease backwards 1.3s;}
+.slide.active .s8{animation:rise .55s ease backwards 1.5s;}
+
+/* Type */
+.eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:12px;}
+.slide.dark .eyebrow{color:var(--yellow);}
+h1.cover-t{font-weight:300;font-size:clamp(36px,9vw,58px);line-height:1.08;letter-spacing:-0.5px;}
+h1.cover-t .script{font-size:1.3em;}
+h2.slide-t{font-weight:300;font-size:clamp(26px,6.6vw,40px);line-height:1.18;margin-bottom:14px;}
+h2.slide-t .script{font-size:1.2em;}
+.slide p.body{font-size:clamp(15px,4.2vw,17.5px);line-height:1.75;color:#333b36;margin-bottom:14px;font-weight:400;}
+.slide.dark p.body{color:#e7efe9;font-weight:300;}
+.slide p.body b{color:var(--green-deep);}
+.slide.dark p.body b{color:var(--yellow);}
+.hl{background:linear-gradient(transparent 58%, rgba(245,208,83,.55) 58%);font-weight:600;color:var(--green-deep);}
+.slide.dark .hl{background:linear-gradient(transparent 58%, rgba(245,208,83,.28) 58%);color:#fff;}
+.prep{font-size:13.5px;color:var(--grey);line-height:1.7;margin-top:18px;}
+.prep b{color:var(--green-deep);font-weight:600;}
+.rule{height:2px;background:var(--yellow);width:64px;margin:22px 0;}
+.center{text-align:center;}
+.center .rule{margin:22px auto;}
+.pull{
+  font-family:'Caveat',cursive;font-size:clamp(26px,7vw,36px);color:var(--green);line-height:1.25;
+  border-left:3px solid var(--yellow);padding-left:18px;margin:24px 0 8px;
+}
+
+/* Photos */
+.photo{border-radius:10px;overflow:hidden;box-shadow:0 12px 34px rgba(30,79,51,.16);margin-bottom:18px;background:#fff;}
+.photo img{width:100%;display:block;max-height:36dvh;object-fit:cover;}
+.photo .cap{font-family:'Caveat',cursive;font-size:20px;color:var(--green-deep);padding:10px 16px 12px;line-height:1.2;}
+
+/* Spaces cards */
+.spaces{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px;}
+@media (max-width:560px){.spaces{grid-template-columns:1fr;}}
+.space{background:#fff;border:1px solid var(--line);border-radius:8px;padding:13px 16px;}
+.space .s-t{font-weight:600;font-size:14.5px;color:var(--green-deep);margin-bottom:5px;}
+.space .s-d{font-size:12.5px;color:var(--grey);line-height:1.55;}
+.plans-note{font-size:12.5px;color:var(--grey);font-style:italic;margin-top:14px;line-height:1.6;}
+
+/* Board */
+.board{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;}
+@media (max-width:420px){.board{gap:8px;}}
+.pin{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 3px 12px rgba(30,79,51,.06);}
+.pin img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;}
+.pin .cap{font-family:'Caveat',cursive;font-size:16px;color:var(--green-deep);padding:7px 10px 9px;line-height:1.15;}
+.pin.wide{grid-column:1/-1;}
+.pin.wide img{aspect-ratio:21/9;}
+@media (min-width:700px){
+  .board{grid-template-columns:1fr 1fr 1fr;}
+  .pin img{aspect-ratio:16/10;}
+  .pin.wide{grid-column:span 2;}
+  .pin.wide img{aspect-ratio:33/10;}
+  .board-note{margin-top:8px;}
+}
+.board-note{font-size:11.5px;color:var(--grey);font-style:italic;margin-top:12px;line-height:1.6;}
+
+/* Simply math */
+.s-label{font-family:'Caveat',cursive;color:var(--yellow);font-size:34px;line-height:1;margin-bottom:10px;}
+.mathtable{width:100%;border-collapse:collapse;margin:14px 0 8px;}
+.mathtable td{padding:11px 6px;font-size:clamp(13px,3.6vw,14.5px);border-bottom:1px solid rgba(255,255,255,.18);color:#e7efe9;}
+.mathtable td:last-child{text-align:right;font-weight:600;color:#fff;white-space:nowrap;}
+.mathtable tr.total td{border-bottom:none;border-top:2px solid var(--yellow);color:var(--yellow);font-weight:700;font-size:clamp(14px,4vw,16px);}
+.fine{font-size:10.5px;color:#b9ccc0;margin-top:12px;line-height:1.55;}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px;}
+@media (max-width:520px){.stats{grid-template-columns:1fr;}}
+.stat{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 14px;text-align:center;}
+.stat .n{font-weight:800;font-size:34px;color:var(--green-deep);}
+.stat .n::after{content:"";display:block;width:34px;height:3px;background:var(--yellow);margin:7px auto 0;border-radius:2px;}
+.stat .l{font-size:11.5px;color:var(--grey);margin-top:6px;line-height:1.45;}
+
+/* Roadmap */
+.step{display:flex;gap:16px;margin-bottom:15px;align-items:flex-start;}
+.step .num{
+  flex:0 0 34px;height:34px;border-radius:50%;background:var(--yellow);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--green-deep);
+}
+.step .t{font-weight:600;font-size:15px;color:var(--green-deep);}
+.step .d{font-size:13px;color:var(--grey);line-height:1.55;margin-top:2px;}
+
+/* Listen */
+.listen{list-style:none;margin-top:4px;}
+.listen li{font-size:14.5px;padding:13px 0;border-bottom:1px solid var(--line);color:#333b36;}
+.listen li b{color:var(--green-deep);}
+.listen li span{color:var(--grey);font-size:12.5px;display:block;margin-top:3px;line-height:1.5;}
+
+/* CTA */
+.cta-box{
+  border:1.5px solid var(--green);border-radius:10px;padding:26px 26px;margin-top:18px;
+  background:#f2f7f3;text-align:center;
+}
+.cta-box .script{font-size:30px;display:block;margin-bottom:10px;}
+.cta-box p{font-size:14px;margin-bottom:6px;line-height:1.6;}
+.cta-box .addr{font-size:12.5px;color:var(--grey);margin-top:8px;line-height:1.6;}
+.endnote{font-size:10px;color:var(--grey);text-align:center;line-height:1.7;margin-top:22px;}
+
+.btn-book{display:inline-block;background:#2b6d47;color:#fff;text-decoration:none;padding:14px 30px;border-radius:4px;font-family:Arial,sans-serif;font-size:14px;letter-spacing:1px;font-weight:bold;}
+.btn-book:hover{background:#1e4f33;}
+/* Cover painting */
+.painting{
+  display:inline-block;background:#fdfbf5;padding:9px;
+  border:7px solid #c9a03a;outline:2px solid #7c5f16;
+  box-shadow:0 14px 34px rgba(30,79,51,.22);margin:16px auto 0;
+}
+.painting img{display:block;max-height:26dvh;max-width:100%;width:auto;margin:0 auto;}
+.cover-cap{font-family:'Caveat',cursive;font-size:clamp(20px,4.6vw,27px);color:var(--green);margin-top:14px;line-height:1.2;}
+@media (min-width:900px){.painting img{max-height:36dvh;}}
+
+/* Hint + controls */
+.hint{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);margin-top:26px;animation:pulse 2.2s ease infinite;}
+@keyframes pulse{0%,100%{opacity:.45;}50%{opacity:1;}}
+.controls{
+  position:fixed;bottom:0;left:0;right:0;z-index:30;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 16px calc(14px + env(safe-area-inset-bottom));
+}
+.navbtn{
+  width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line);background:#fff;
+  color:var(--green-deep);font-size:20px;cursor:pointer;font-family:'Montserrat',sans-serif;
+  display:flex;align-items:center;justify-content:center;transition:border-color .2s, opacity .3s;
+  box-shadow:0 4px 14px rgba(30,79,51,.1);
+}
+.navbtn:hover{border-color:var(--green);}
+.navbtn:disabled{opacity:.25;cursor:default;}
+.cnt{font-size:11px;letter-spacing:1.5px;color:var(--grey);text-transform:uppercase;transition:color .4s;}
+body.ondark .cnt{color:#b9ccc0;}
+body.ondark .navbtn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:#fff;box-shadow:none;}
+
+/* Desktop layout */
+@media (min-width:900px){
+  .inner{max-width:780px;}
+  .slide.wide .inner{max-width:980px;}
+  h2.slide-t{font-size:clamp(30px,3.4vw,46px);}
+  .slide p.body{font-size:18px;line-height:1.8;}
+  .eyebrow{font-size:12px;}
+  .slide.split .inner{
+    display:grid;grid-template-columns:1.05fr 1fr;gap:8px 56px;
+    align-items:center;max-width:1060px;
+  }
+  .slide.split .txt{grid-column:1;align-self:end;}
+  .slide.split .txt2{grid-column:1;align-self:start;}
+  .slide.split .photo{grid-column:2;grid-row:1/3;margin:0;}
+  .slide.split .photo img{max-height:56dvh;aspect-ratio:4/3.4;object-fit:cover;}
+  .roadgrid{display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:row;gap:6px 48px;margin-top:8px;}
+  .step{margin-bottom:18px;}
+  .stat{padding:28px 18px;}
+  .stat .n{font-size:40px;}
+  .stat .l{font-size:12.5px;}
+  .mathtable td{padding:13px 8px;}
+  .cta-box{padding:34px 40px;}
+  .chrome{padding-left:28px;padding-right:28px;}
+  .controls{position:fixed;inset:0;padding:0;pointer-events:none;display:block;}
+  .navbtn{pointer-events:auto;position:fixed;top:50%;transform:translateY(-50%);width:54px;height:54px;font-size:24px;}
+  #prev{left:72px;}
+  #next{right:72px;}
+  .cnt{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);}
+}
+@media (min-width:900px) and (max-height:760px){
+  .slide.split .photo img{max-height:48dvh;}
+  h2.slide-t{font-size:clamp(26px,3vw,38px);}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .slide.active .s1,.slide.active .s2,.slide.active .s3,.slide.active .s4,
+  .slide.active .s5,.slide.active .s6,.slide.active .s7,.slide.active .s8,
+  .hint{animation:none;}
+  .pf .st{animation:none;stroke-dashoffset:0;}
+  .pf .fl{animation:none;opacity:1;}
+}
+
+.ddtable{width:100%;border-collapse:collapse;margin:12px 0 10px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.ddtable th{text-align:left;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grey);padding:10px 14px;border-bottom:1px solid var(--line);}
+.ddtable td{padding:9px 14px;font-size:14px;border-bottom:1px solid #f0ece2;color:var(--ink);}
+.ddtable td:last-child,.ddtable th:last-child{text-align:right;font-weight:600;color:var(--green-deep);}
+.ddtable tr.hi td{color:#b8860b;font-weight:700;}
+.ddlabel{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b8860b;font-weight:700;margin-bottom:8px;}
+.listen li a{color:var(--green-deep);text-decoration:none;border-bottom:1px solid rgba(43,109,71,.35);}
+.listen li .yt{font-size:11px;color:var(--green);display:block;margin-top:3px;}
+</style>
+</head>
+<body>
+<div class="chrome">
+  <div class="segs" id="segs"></div>
+  <div class="chromerow">
+    <img class="logo logolight" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png" alt="Mitchell Homes">
+    <img class="logo logodark" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png" alt="Mitchell Homes">
+    <div class="doc-tag">Your Home Portrait</div>
+  </div>
+</div>
+<div class="deck" id="deck"></div>
+<div class="controls">
+  <button class="navbtn" id="prev" aria-label="Back" onclick="step(-1)">&#8249;</button>
+  <div class="cnt" id="cnt"></div>
+  <button class="navbtn" id="next" aria-label="Next" onclick="step(1)">&#8250;</button>
+</div>
+
+<script>
+// ============================================================
+// THE HOME PORTRAIT | full presentation, assembled from the quiz answers
+// Reads the lead from URL params (emailed link) or from this browser's
+// own quiz (localStorage, same domain). No dashes in any copy.
+// ============================================================
+const U = {
+  "portrait1": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ac0892d8-cb2c-4e05-97e9-c5b7fb4af130.jpg",
+  "portrait2": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3e3cf633-0e4a-4d5f-ab20-e2bc43d85f01.jpg",
+  "portrait3": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8b734af0-1dcb-4458-a68c-41a332a62ff5.jpg",
+  "portrait4": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/875e6073-d9bb-4a0b-b4a9-d91c3773c3d9.jpg",
+  "portrait5": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8548e51a-f643-44d2-803e-53367bee913b.jpg",
+  "portrait6": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/28fbc768-2609-4fe7-bb20-8d00fc86ec0f.jpg",
+  "coverfredericksburg": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg",
+  "coverrichmond": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a579f035-57a0-4942-be79-a20750ce1402.jpg",
+  "coverraleigh": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a7ff568-766d-4aad-bf94-2428d6c775e0.jpg",
+  "coverwilmington": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg",
+  "covernewportnews": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/32da2899-c18d-49e6-a1f8-6d398238da40.jpg",
+  "coverlake": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/666b6807-d99e-4cf5-9b4d-70d76e36e4fa.jpg",
+  "aerialfarmland": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e2c2740e-e537-4a40-9a40-6de9bd29939f.jpg",
+  "aerialfield": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f9084730-345e-4f59-9069-a26adf5cb554.jpg",
+  "brightliving": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/94971fe9-8a31-4def-ae1e-20b8d683f079.jpg",
+  "coupleland": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/22e45927-85ce-4ea2-a33b-426140dc0f83.jpg",
+  "familydusk": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/254db93b-66a4-400f-a708-ba25bb2f8258.jpg",
+  "familyhomedusk": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2d798c5a-d84c-4c11-bd84-d2304394c874.jpg",
+  "farmhousefall": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c74ca5b7-e794-4832-a694-35cd3fd049ea.jpg",
+  "firepit": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/93f32748-cf1c-44c0-b67d-fe287c831451.jpg",
+  "framing": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bac5e0c8-f4ea-44da-9055-d708dbc1cc55.jpg",
+  "handsfield": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ab8306a-1b87-4903-bf41-164eece3aba3.jpg",
+  "islandfamily": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e002afd7-c87d-4c71-8d0b-57b5f2138a7f.jpg",
+  "keys": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/466c5236-51a4-4462-9f75-b94cd1bfeb26.jpg",
+  "kidsfield": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b4a930e0-a127-49e5-b603-c0033eeba12d.jpg",
+  "lakecove": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c61843ad-c412-4618-8f00-a8eb168002d1.jpg",
+  "livingroomdance": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/51b699b3-63b2-4579-b8ab-7969f795a4ff.jpg",
+  "navykitchen": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b1ec0293-5794-4e8b-816f-0625db68949c.jpg",
+  "pinescraftsman": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8d160584-341d-40bf-8a4a-6ddc18d55ecd.jpg",
+  "pineshome": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/75d94682-147d-4e4b-be69-6c5b96ea7f3a.jpg",
+  "puppy": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b48ec5ee-b941-476e-979e-9f4782a580f7.jpg",
+  "ranchdusk": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/7303184b-ca30-49c1-b751-c989db2290ad.jpg",
+  "shoreline": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bd6de9b1-5429-4d72-ad9d-671e35de5168.jpg",
+  "timbersky": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3d92c78d-556d-428c-b6ec-7d3982180a4d.jpg",
+  "valley": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/39ef50db-c2c5-438a-8aca-ac7a0f43b87c.jpg",
+  "logocolor": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png",
+  "logowhite": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png"
+};
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+const DIVISIONS = {
+  "Richmond, VA":       { cover:"coverrichmond",       cap:"Painted in the rolling hills of Central Virginia",  studio:"Richmond Design Studio",       region:"Central Virginia",
+    regionCopy:"Out where Richmond opens up, Powhatan, Goochland, New Kent and the counties around them, buyers are choosing to build exactly what they want on land they already hold rather than settle for the resale market's leftovers. Building on your own ground is not just the personal choice here. Right now it is the smart one." },
+  "Fredericksburg, VA": { cover:"coverfredericksburg", cap:"Painted in the open countryside near Fredericksburg", studio:"Fredericksburg Design Studio", region:"the Fredericksburg region",
+    regionCopy:"The corridor keeps trying to reach the counties around Fredericksburg and cannot, which is exactly why landowners here are building. Quiet acreage within reach of everything is the rarest thing on the market, and you already have it, or you are about to." },
+  "Newport News, VA":   { cover:"covernewportnews",    cap:"Painted where the rivers meet the bay, Hampton Roads", studio:"Newport News Design Studio", region:"Hampton Roads",
+    regionCopy:"Across Hampton Roads the good lots face water or trees, and both are worth building on. Families here are choosing a home shaped around their life over a resale shaped around someone else's, and the land makes the math work." },
+  "Raleigh, NC":        { cover:"coverraleigh",        cap:"Painted among the Carolina pines, the Triangle",    studio:"Raleigh Design Studio",        region:"central North Carolina",
+    regionCopy:"The Triangle keeps growing outward, and the counties around it, Johnston, Franklin, Harnett and their neighbors, are where families with land are building homes that fit three generations at once. Pines at the property line and room to run are hard to find in a subdivision. On your own land they come standard." },
+  "Wilmington, NC":     { cover:"coverwilmington",     cap:"Painted by the sea, the coastal Carolinas",         studio:"Wilmington Design Studio",     region:"the coastal Carolinas",
+    regionCopy:"Along this coast the smartest money is a piece of ground with your name on it and a home built once, built right, built yours. Brunswick, Pender, and the counties inland are where buyers who have done the math are building." }
+};
+const RSET = {
+  lake:     { cover:"coverlake",           cap:"Painted where the lake holds the evening light", regionCopy:"Waterfront land is the one thing they are not making more of, and families who hold it are choosing to build exactly what they want rather than settle for the resale market's leftovers. Lake country rewards the people who build once and build right." },
+  coastal:  { cover:"coverwilmington",     cap:"Painted where the salt air starts the morning", regionCopy:"Along the shore the good ground goes to the families who plan ahead. Building on land with your name on it, close enough to smell the salt, is the choice buyers here keep making, and the math is what makes it possible." },
+  mountain: { cover:"coverfredericksburg", cap:"Painted above the valleys of the Shenandoah", regionCopy:"High country with big views does not come up often, and when it does the families who build on it keep it for generations. A home above the valley is a long game, and it starts with the ground you choose." }
+};
+
+// Every must have pick becomes a named space with a line on how life happens there
+const SPACES = {
+  "first floor primary suite": ["A first floor primary on the quiet side", "One level living away from the traffic of the house, with the long view out your own window."],
+  "chef's kitchen":            ["A chef's kitchen that earns its name", "A working island long enough for two cooks and the whole conversation, pantry pulled close."],
+  "covered outdoor living":    ["The porch, pointed at the good side", "Covered, deep enough for the chairs you will actually sit in, aimed at the light you like best."],
+  "flex room":                 ["A room that changes its mind", "Nursery, study, guest room, homework room. Drawn to become whatever the next decade asks of it."],
+  "multigenerational suite":   ["A suite with its own door", "Her own light, her own mornings, a short walk down the hall when she wants company and a closed door when she does not."],
+  "home office":               ["An office with a real door", "On the quiet side of the plan, even light, a door that closes for the calls that matter."]
+};
+const SPACE_FILL = {
+  V: ["Built solid, built to last", "Stick built, quality checked at every stage, every included feature in writing."],
+  P: ["Every step visible before you take one", "A written schedule, a written features list, and a mudroom because you asked for one."],
+  T: ["A mudroom that saves the kitchen", "Garage to kitchen, with a bench and hooks, so backpacks and cleats stop at the door."],
+  D: ["One honest living space", "Kitchen, island, and living room in a single line, with the big window on the best side."],
+  G: ["Room for everyone", "Bedrooms and bunk space planned for full house weekends, so the whole crew has a landing spot and nobody draws the couch."]
+};
+
+const EP = {
+  selffund:  { t:"SimplyMitchell Savings", id:"8e8mkV1rdzM" },
+  well:      { t:"Well & Septic", id:"zWwtw8qgp4w" },
+  roadmap:   { t:"Homebuyer Roadmap to Success", id:"HEqg3pcNJkk" },
+  land:      { t:"Purchasing Land 101", id:"trgJ8maymOA" },
+  contract:  { t:"Contract to Keys", id:"sfnU69Gdqcs" },
+  design:    { t:"From Showroom to Dream Home: Ferguson's Expert Selection Tips", id:"xOWIqiEFkFM" },
+  myths:     { t:"Common Misconceptions", id:"d7AZtCxOLro" }
+};
+
+// The nine portraits. Story slides are written to the buyer, second person, and take merge fields.
+const PORTRAITS = {
+  V: {
+    name:"The Landowner's Portrait", persona:"The Value Unlocker", pull:"Your land is worth more than you think. Here is the math.",
+    photos:["aerialfarmland","ranchdusk","aerialfield"],
+    board:[["aerialfarmland","The view you already own"],["ranchdusk","Where the evenings gather"],["keys","Your land, your down payment"],["timbersky","From blueprint to bones"],["aerialfield","A home that could only be yours, on land that already is"]],
+    has:{
+      s1:(a)=>`Your land in ${a.regionName} has been quietly doing you a favor. While you were living your life, it was becoming the strongest financial asset in your future home's story, and most landowners never get told what that actually means. <span class="hl">The ground you already own can work as your down payment.</span>`,
+      s2:(a)=>`Now walk it with us. It is a Saturday in October. The porch faces the field you can see from the road but never really stood in until now, and the first coffee of the day happens out here, with the fog still sitting in the low spot by the fence line. Inside, the kitchen island holds the middle of everything: the grocery bags, the survey, the pie at Thanksgiving because there is finally a surface long enough for it.`,
+      s3:(a)=>`Supper drifts outside. The tree line holds the last of the light while the first fireflies find the field. And the part most people never get: no construction loan, no down payment check, no betting the farm. <span class="hl">The land is the reason it exists.</span>`,
+      s4:(a)=>`${a.nameOr('You')} make decisions with the numbers in front of you. This is the rare decision where the numbers return the favor. Your land becomes your equity. The construction loan never exists. Keys ${a.horizon}. That is not a dream. That is a schedule.`
+    },
+    needs:{
+      s1:(a)=>`You have already done the math, and the math is why you are here. You have watched what rent buys you, watched what resale asks of you, and reached the conclusion sharp buyers in ${a.regionName} keep reaching: <span class="hl">the smartest money is a piece of ground with your name on it</span> and a home built once, built right, built yours.`,
+      s2:(a)=>`So paint the picture properly. A few good acres off the beaten side of the county, the porch aimed at the evening light, the kitchen doing the daily work with counters you chose off the spec sheet because you read it first. The primary on the back corner with the windows that catch the morning without catching the road.`,
+      s3:(a)=>`Out past the porch, on the acre you have not found yet but will, there is the flat spot where the fire pit goes, the one your friends will start calling your place before the first summer is out. <span class="hl">That is what the math buys.</span> Not a house. A Tuesday like that, on ground with your name on it.`,
+      s4:(a)=>`The land is the easy part when you are not doing it alone. Our team walks every lot with you before you buy, so the right ground becomes a confident decision instead of a leap. You said ${a.timelineText}. That is not ambitious. That is a schedule.`
+    },
+    listen:{ has:["selffund","well","roadmap"], needs:["land","well","selffund"] }
+  },
+  P: {
+    name:"The Planner's Portrait", persona:"The Planner", pull:"You stay in control. We make the path predictable.",
+    photos:["farmhousefall","valley","brightliving"],
+    board:[["farmhousefall","Timeless and rooted"],["valley","Quiet acres the corridor cannot reach"],["timbersky","Every step visible before you take one"],["framing","Quality checked at every stage"],["brightliving","Room to breathe, on paper first"]],
+    has:{
+      s1:(a)=>`You read the fine print twice. Good. So do we, and this portrait was painted the way you make decisions: <span class="hl">every step visible before you take one.</span> Start with what is already settled. The land is yours.`,
+      s2:(a)=>`So read the house the same way. A weekday in early fall in ${a.regionName}. The office by seven thirty, the one with the door that actually closes, on the front of the house where the light is even and the noise is not. The island is where the mail gets sorted and the budget gets reviewed on the first of the month, and the pantry is deep enough that the warehouse run finally has a home.`,
+      s3:(a)=>`The primary is on the back side, away from the driveway and the garage door, with a window on the tree line. There is a mudroom between the garage and the kitchen because you asked for one, and a laundry room on the same floor as the bedroom because you noticed the plans that did not have one. <span class="hl">Every one of those decisions gets made in daylight, on paper, before the first shovel.</span>`,
+      s4:(a)=>`Before you sign anything, you will hold the Homebuyer Roadmap with every stage named, every cost on the table, and every selection made with your consultant beside you. The plan is the product, and you will see all of it first. You said ${a.timelineText}. The Roadmap paces every step in writing so nothing surprises you.`
+    },
+    needs:{
+      s1:(a)=>`A year of research is not hesitation. It is preparation, and it shows: you already know more about building on your own land than most people who have done it. <span class="hl">This portrait simply organizes what you have been gathering into a plan with your name on it.</span>`,
+      s2:(a)=>`Walk through it. It is a Sunday, the one day the calendar does not own, and the house on the lot you have not chosen yet is already doing what you designed it to do. Light comes in from two sides because you asked for it, and the plan listened. The dining runs off the kitchen in one long line so a table for four becomes a table for twelve without moving furniture.`,
+      s3:(a)=>`Down the hall there is a room that is a guest room this year, a study the year after, and whatever the next decade asks of it. And out back, on whichever lot wins the evaluation, there is a covered porch that faces water or trees, because across ${a.regionName} it will be one or the other, and <span class="hl">both are worth waiting for.</span>`,
+      s4:(a)=>`The land is where planners want a process, so here is ours. You bring us candidate lots, and before you spend a dollar we evaluate each one together. Every lot gets a yes, a no, or a here is what it would take, in writing. The purchase happens when the plan says it should, not when the pressure does.`
+    },
+    listen:{ has:["roadmap","contract","selffund"], needs:["land","roadmap","contract"] }
+  },
+  T: {
+    name:"The Family Portrait", persona:"The Transitioner", pull:"Big decisions become small steps. We carry the heavy ones.",
+    photos:["kidsfield","puppy","familydusk"],
+    board:[["kidsfield","Room to run"],["islandfamily","Three generations of opinions"],["familydusk","Built to hand down"],["navykitchen","The plan that fits the whole family"],["familyhomedusk","Everyone home"]],
+    has:{
+      s1:(a)=>`Life is moving fast at your house, a family growing in one direction, a floor plan that stopped fitting the life inside it a while ago. Here is the good news this portrait carries: <span class="hl">the answer has been in the family the whole time.</span> That land is not just acreage. It is the place where all of this fits.`,
+      s2:(a)=>`Picture a Thursday evening about a year from now in ${a.regionName}. The bus stops at the end of the drive, the kids come in through the mudroom, the room that exists precisely so backpacks and cleats never reach the kitchen. The island holds homework on one end and the cutting board on the other, and the pantry holds enough for the week because you are done shopping twice.`,
+      s3:(a)=>`Out back, the covered porch looks at the same trees you grew up under, and on Sunday the whole family is sitting on it. Because your season of life is full, the process bends to you. <span class="hl">Big decisions become small steps, and a team carries the heavy ones.</span>`,
+      s4:(a)=>`About 150 days after we break ground, everyone is home. You said ${a.timelineText}. Start now and the first full house Sunday is closer than it looks.`
+    },
+    needs:{
+      s1:(a)=>`Somewhere between the last car seat and the next piece of news, your current place quietly changed jobs. It stopped being the home and became the waiting room. <span class="hl">This portrait is what comes after the wait.</span>`,
+      s2:(a)=>`Picture a Saturday two years from now, out where ${a.regionName} opens up. Breakfast is at the island, and the island was sized for the whole crew because you told us it would need to be. The pantry is walk in. The fridge is not the townhome fridge. These are small things until you have lived without them.`,
+      s3:(a)=>`The flex room off the kitchen starts as whatever this year needs, with a door you can see from the island. The primary sits at the far end, away from the kids' rooms, with a real laundry room on the same floor, because carrying everything down two flights was never going to be the plan. Then the covered porch, for the evening shift, with a yard that runs to the tree line instead of a fence you can touch from the window.`,
+      s4:(a)=>`The land search sounds like one more thing on a very full plate, so we carry it with you. One confident decision at a time until the right acre says yes. <span class="hl">The next big change arrives first. The home arrives right behind it.</span>`
+    },
+    listen:{ has:["selffund","roadmap","well"], needs:["land","myths","roadmap"] }
+  },
+  D: {
+    name:"The Dreamer's Portrait", persona:"The Grounded Dreamer", pull:"Your vision becomes doable when the path is clear.",
+    photos:["coupleland","livingroomdance","pineshome"],
+    board:[["coupleland","The light you paint by"],["timbersky","Someday, drafted"],["livingroomdance","Where the evenings gather"],["framing","Built right, built to last"],["pineshome","The canvas, already standing"]],
+    has:{
+      s1:(a)=>`You can already see it, and honestly, so can we. That land of yours has been holding its breath for years, waiting for someone to give it a voice. <span class="hl">Yours.</span>`,
+      s2:(a)=>`So let us paint the day you are already picturing. It starts before the alarm would have, because the primary faces east and you told us you wanted the light to do the waking. Coffee happens on the porch, and the porch turns gold about the same time ${a.regionName} does. Then the room that is entirely yours, windows on two walls, north light for the work and a view for the thinking.`,
+      s3:(a)=>`Every one of the 40,000 selections is a brushstroke, and <span class="hl">the canvas is already standing under your trees.</span> You are a dreamer with guardrails, so the vision stays yours while it stands on a fixed, transparent process.`,
+      s4:(a)=>`Land like yours does not expire. When the vision says now, the path will already be clear. You said ${a.timelineText}. Step one costs nothing but an afternoon, and the path stays yours the whole way.`
+    },
+    needs:{
+      s1:(a)=>`Someday is not a vague word to us. It is a direction, and people who point themselves at it early, like you just did, <span class="hl">tend to arrive years before everyone else.</span>`,
+      s2:(a)=>`So let the portrait dream properly. A few quiet acres somewhere in ${a.regionName}, a Sunday, the slow kind. The kitchen island built for exactly this: a griddle going, the crossword out, the dog waiting for whatever falls. The porch is where the first coffee happens, on your own land, looking at a tree line you own instead of a parking lot you share.`,
+      s3:(a)=>`The rooms are one hundred percent chosen, zero percent settled for. Two rooms upstairs that are a guest room and an office now and something else later, because later is the whole point. <span class="hl">Not a starter home. The home you start everything else from.</span>`,
+      s4:(a)=>`Between now and someday, we will teach you the whole path while you save. When you find the ground, we walk it with you before you buy. Keep this portrait. It is not a maybe. It is a preview.`
+    },
+    listen:{ has:["design","selffund","roadmap"], needs:["land","myths","selffund"] }
+  },
+  G: {
+    name:"The Gathering Place Portrait", persona:"The Gathering Place", pull:"The place you keep promising yourselves. Here is how it becomes real.",
+    photos:["lakecove","firepit","shoreline"],
+    board:[["lakecove","The light you keep driving toward"],["firepit","Where the porch season never ends"],["shoreline","The place you keep promising yourselves"],["pinescraftsman","Room for everyone"],["handsfield","Built once, built right, built together"]],
+    has:{
+      s1:(a)=>`Some homes are where life happens every day. This one is different. This is the place the whole calendar bends toward: the weekend that starts the moment the tires leave the pavement, the porch where the same stories get better every summer. <span class="hl">You are building the place your people will point to when they say, remember when.</span>`,
+      s2:(a)=>`Morning here starts outside. ${a.scene}. Inside, the long table kitchen is already doing its work: holding breakfast, the crossword, the middle of everything, with room for every hand that wants to help.`,
+      s3:(a)=>`By evening the grill is going while the sun puts on a show. Slow time is the point, and this home is built to keep it that way: a covered porch pointed straight at the view, built for the hour when everyone drifts outside and stays. <span class="hl">Houses like this do a quiet kind of work.</span> They keep a family close long after the kids have zip codes of their own.`,
+      s4:(a)=>`${a.intentLine} And the part banks make hard, Mitchell makes simple: because you own the land and we self fund every build, the construction loan never exists.`
+    },
+    listen:{ has:["selffund","well","roadmap"], needs:["land","selffund","roadmap"] }
+  }
+};
+PORTRAITS.G.needs = PORTRAITS.G.has;
+
+const SCENES = {
+  lake:"Coffee on the dock while the water is still glass, the first boat wake an hour away, herons working the shoreline like they own it",
+  coastal:"Coffee on the porch while the salt air comes up with the light, the tide doing its slow work at the end of the path",
+  mountain:"Coffee above the morning fog while the valley wakes up below you, the ridge line sharpening as the light climbs"
+};
+const INTENTS = {
+  retreat:"You told us this is the family gathering place, the address every generation will know by heart: the long table, the bunk room, the fourth of July with a permanent home.",
+  retire:"You told us about the long game too: this is where you plan to wake up when the alarm clock finally loses its job. It is ready for you the day you are ready for it.",
+  everyday:"You told us this is home, every day. The place everyone is always trying to get to is the place you get to live."
+};
+const TIMELINES = {
+  "0 to 6 months":"as soon as possible", "6 to 12 months":"within the year", "12 to 24 months":"one to two years out", "exploring":"someday, and you want to be ready"
+};
+const HORIZON = { "0 to 6 months":"within months", "6 to 12 months":"within the year", "12 to 24 months":"on your timeline", "exploring":"when you say the word" };
+
+// ---------- Read the lead ----------
+function readLead(){
+  const q = new URLSearchParams(location.search);
+  if(q.get('p') || q.get('d')){
+    return {
+      first_name: q.get('n') || '', persona_segment: q.get('p') || '', division: q.get('d') || 'Richmond, VA',
+      land_status: q.get('l') || 'unknown', style_preference: q.get('s') || 'one of a kind',
+      must_have_spaces: (q.get('k') || '').split('|').filter(Boolean), timeline: q.get('t') || 'unknown',
+      region: q.get('r') || '', home_intent: q.get('i') || 'everyday', rset: q.get('x') || ''
+    };
+  }
+  try { return JSON.parse(localStorage.getItem('hp_leads') || '[]')[0] || null; } catch(e){ return null; }
+}
+const lead = readLead() || { first_name:'', persona_segment:'The Value Unlocker', division:'Richmond, VA', land_status:'owned', style_preference:'solid and enduring', must_have_spaces:['first floor primary suite','chef\'s kitchen','covered outdoor living'], timeline:'6 to 12 months', region:'Central Virginia', home_intent:'everyday', rset:'' };
+
+const BOOKING = {
+  "Richmond, VA":       { land:"lefHeBcANsbjZf5IhZGw", noland:"LSDaGxShOPqb9J1t4SCO" },
+  "Fredericksburg, VA": { land:"46oGCWfZJoFwbuub1wtV", noland:"fkAfa07N4rovoVR0iZMt" },
+  "Newport News, VA":   { land:"4bOw8XC3FS9aBi1lxCaJ", noland:"yHaSZPNP24gcGJkY6MoP" },
+  "Raleigh, NC":        { land:"e7IJYU4ZVbxtsf3RZpbP", noland:"ET1aeQY6CmEOXUEZEMZa" },
+  "Wilmington, NC":     { land:"dEtDNPpoKNnBTY7Sw2Y9", noland:"nf3cLjxsG069HUeNCWkU" }
+};
+function bookingUrl(division, land){
+  const b = BOOKING[division] || BOOKING["Richmond, VA"];
+  const owns = land === "owned" || land === "family";
+  return "https://api.leadconnectorhq.com/widget/booking/" + (owns ? b.land : b.noland);
+}
+const KEY = { "The Value Unlocker":"V", "The Planner":"P", "The Transitioner":"T", "The Grounded Dreamer":"D", "The Gathering Place":"G" };
+const key = KEY[lead.persona_segment] || 'V';
+const P = PORTRAITS[key];
+const div = DIVISIONS[lead.division] || DIVISIONS["Richmond, VA"];
+const owns = lead.land_status === 'owned' || lead.land_status === 'family';
+const variant = owns ? P.has : P.needs;
+const rset = lead.rset || (lead.region && /lake/i.test(lead.region) ? 'lake' : (/shore|outer banks/i.test(lead.region||'') ? 'coastal' : (/shenandoah|mountain/i.test(lead.region||'') ? 'mountain' : '')));
+const cover = (rset && RSET[rset]) ? RSET[rset] : { cover: div.cover, cap: div.cap };
+const name = (lead.first_name && lead.first_name !== '(not provided)') ? lead.first_name.trim() : '';
+const picks = (lead.must_have_spaces || []).filter(p => SPACES[p]);
+const a = {
+  regionName: lead.region && lead.region !== lead.division ? lead.region : div.region,
+  nameOr:(fallback)=> name ? esc(name) + ', you' : fallback,
+  timelineText: TIMELINES[lead.timeline] || 'when the time is right',
+  horizon: HORIZON[lead.timeline] || 'on your timeline',
+  scene: SCENES[rset] || SCENES.lake,
+  intentLine: INTENTS[lead.home_intent] || INTENTS.retreat
+};
+const dateLabel = new Date().toLocaleDateString('en-US', { month:'long', year:'numeric' });
+const ddPick = picks.length ? SPACES[picks[0]][0].toLowerCase() : 'the spaces you described';
+
+// ---------- Build the spaces list: picks first, then persona fills to four ----------
+let spaces = picks.map(p => SPACES[p]);
+const fills = [SPACE_FILL[key], SPACE_FILL.V, SPACE_FILL.T, SPACE_FILL.D];
+for(const f of fills){ if(spaces.length >= 4) break; if(!spaces.find(s => s[0] === f[0])) spaces.push(f); }
+spaces = spaces.slice(0,4);
+
+// ---------- Simply Mitchell block ----------
+function simplySlide(){
+  let h3, p;
+  if(key === 'G'){
+    h3 = 'The second home banks make hard, <span class="script" style="color:var(--yellow);">Mitchell makes simple.</span>';
+    p = `Banks get strict when the home is not your primary address. Bigger down payments, tougher construction loan terms, more hoops right when you were dreaming about fewer. Because Mitchell self funds every build, <span class="hl">the construction loan simply never exists</span>${owns ? ', and the land you already hold works as your equity' : ''}.`;
+  } else if(owns){
+    h3 = 'Your land can be <span class="script" style="color:var(--yellow);">your down payment.</span>';
+    p = `You ${lead.land_status === 'family' ? 'have family land in the picture' : 'own your land'}, so the hardest part may already be behind you. Mitchell self funds construction: <span class="hl">no construction loan, ever.</span>`;
+  } else {
+    h3 = 'No land yet? <span class="script" style="color:var(--yellow);">You are closer than you think.</span>';
+    p = `Most people assume building custom means a mountain of cash up front. Simply Mitchell was built to remove that mountain, and <span class="hl">our team helps you evaluate every lot before you buy.</span>`;
+  }
+  const landRow = owns ? '<tr class="s7"><td>Your land equity working for you</td><td>Yes</td></tr>' : '<tr class="s7"><td>Lot evaluation before you buy</td><td>Included</td></tr>';
+  return `<section class="slide dark"><div class="inner">
+    <div class="eyebrow s1">${owns ? 'Your Land, Your Leverage' : 'Your Path to Land'}</div>
+    <div class="s-label s2">Simply Mitchell</div>
+    <h2 class="slide-t s3" style="color:#fff;">${h3}</h2>
+    <p class="body s4">${p}</p>
+    <table class="mathtable">
+      <tr class="s5"><td>Illustrative home price, personalized plan</td><td>$389,000</td></tr>
+      <tr class="s5"><td>Cash down payment required</td><td>$0</td></tr>
+      <tr class="s6"><td>Closing costs paid by you</td><td>$0</td></tr>
+      <tr class="s6"><td>Construction loan required</td><td>None</td></tr>
+      ${landRow}
+      <tr class="total s8"><td>Out of pocket to break ground</td><td>$0</td></tr>
+    </table>
+    <p class="fine s8">Illustrative example for discussion only, not an offer, quote, or commitment. Final pricing depends on plan, selections, site conditions, and approved terms. Your New Home Consultant will put your real numbers in writing before you make any decision.</p>
+  </div></section>`;
+}
+
+// ---------- Assemble the deck ----------
+const listenKeys = owns ? P.listen.has : P.listen.needs;
+const steps = owns ? [
+  ["Design consultation", `Bring this portrait to the ${div.studio}. We walk plans, selections, and your real numbers, in writing.`],
+  ["Site evaluation", "We walk your land together: access, well and septic, soil, and the right placement for light and views."],
+  ["Personalization", "Every selection, foundation to finish, chosen by you with your design consultant beside you, and your Design Dollars at work."],
+  ["The build, about 150 days", "Self funded by Mitchell, quality checked at every stage, proactive updates at every milestone."],
+  ["Keys", "Walkthrough, orientation, warranty in hand, and a home that could only belong to you."]
+] : [
+  ["Design consultation", `Bring this portrait to the ${div.studio}. We start from it, not from zero.`],
+  ["The land search", "We hunt with you and evaluate every candidate lot in writing before you spend a dollar: what the county allows, what well and septic cost, what the ground is really worth."],
+  ["The real numbers", "Your price in writing: zero down, zero closing costs, no construction loan, because Mitchell self funds every build."],
+  ["Personalization", "Your selections from 40,000 choices, guided, with your Design Dollars at work."],
+  ["The build, about 150 days", "Ground breaks, the Roadmap tracks every stage, and about 150 days later the keys are yours."]
+];
+
+const slides = [];
+slides.push(`<section class="slide"><div class="inner center">
+  <div class="eyebrow s1">${esc(P.name)}</div>
+  <h1 class="cover-t s2">Your Home <span class="script">Portrait</span></h1>
+  <div class="painting s3"><img src="${U[cover.cover] || U.coverrichmond}" alt="A watercolor painting of your future home"></div>
+  <div class="cover-cap s4">${esc(cover.cap)}</div>
+  <div class="prep s5">${name ? 'Prepared for <b>' + esc(name) + '</b>' : 'Prepared from <b>your answers</b>'}<br>${esc(a.regionName)} | ${esc(lead.division)} division | ${esc(dateLabel)}</div>
+  <div class="rule s6"></div>
+  <div class="hint s7">Tap anywhere to begin</div>
+</div></section>`);
+
+slides.push(`<section class="slide split"><div class="inner">
+  <div class="txt"><div class="eyebrow s1">Your Portrait</div><h2 class="slide-t s2">Come stand where your porch will be, <span class="script">right here.</span></h2></div>
+  <div class="photo s3"><img src="${U[P.photos[0]]}" alt="Your land, waking up"><div class="cap">${esc(a.regionName)}, waking up</div></div>
+  <div class="txt2"><p class="body s4">${variant.s1(a)}</p></div>
+</div></section>`);
+
+slides.push(`<section class="slide"><div class="inner">
+  <div class="eyebrow s1">Your Portrait</div>
+  <h2 class="slide-t s2">The middle of <span class="script">everything</span></h2>
+  <p class="body s3">${variant.s2(a)}</p>
+</div></section>`);
+
+slides.push(`<section class="slide split"><div class="inner">
+  <div class="txt"><div class="eyebrow s1">Your Portrait</div><h2 class="slide-t s2">By evening, the porch turns <span class="script">golden</span></h2></div>
+  <div class="photo s3"><img src="${U[P.photos[1]]}" alt="Evening on your land"><div class="cap">The last of the light</div></div>
+  <div class="txt2"><p class="body s4">${variant.s3(a)}</p></div>
+</div></section>`);
+
+slides.push(`<section class="slide split"><div class="inner">
+  <div class="txt"><div class="eyebrow s1">Your Portrait</div></div>
+  <div class="photo s2"><img src="${U[P.photos[2]]}" alt="A home built on your land"><div class="cap">${owns ? 'Built on ground you already own' : 'Built on ground with your name on it'}</div></div>
+  <div class="txt2"><p class="body s3">${variant.s4(a)}</p><div class="pull s4">${esc(P.pull)}</div></div>
+</div></section>`);
+
+slides.push(`<section class="slide wide"><div class="inner">
+  <div class="eyebrow s1">Your Spaces</div>
+  <h2 class="slide-t s2">A home shaped around <span class="script">your answers</span></h2>
+  <div class="spaces">${spaces.map((s,i)=>`<div class="space s${i+3}"><div class="s-t">${esc(s[0])}</div><div class="s-d">${esc(s[1])}</div></div>`).join('')}</div>
+  <p class="plans-note s7">A <b>${esc(lead.style_preference)}</b> home. At your consultation we will walk plans that match this portrait and personalize every detail from our 40,000 plus selections.</p>
+</div></section>`);
+
+slides.push(`<section class="slide wide"><div class="inner">
+  <div class="eyebrow s1">Your Inspiration Board</div>
+  <h2 class="slide-t s2">Start pinning <span class="script">the feeling</span></h2>
+  <div class="board">${P.board.map((b,i)=>`<div class="pin${i===4?' wide':''} s${Math.min(3+Math.floor(i/2),5)}"><img src="${U[b[0]]}" alt="${esc(b[1])}"><div class="cap">${esc(b[1])}</div></div>`).join('')}</div>
+  <p class="board-note s6">Pinned from Mitchell's photo library: real homes, real design studio selections, real land.</p>
+</div></section>`);
+
+slides.push(simplySlide());
+
+slides.push(`<section class="slide wide"><div class="inner">
+  <div class="ddlabel s1">Your Design Dollars</div>
+  <h2 class="slide-t s2">The more of you goes in, <span class="script">the more Mitchell puts in.</span></h2>
+  <p class="body s3">Simply Mitchell removes the barrier to start. Design Dollars reward the finish. Every Mitchell home comes with $5,000 in Design Dollars to spend in the Design Center, and the more you personalize, the more we add, up to $25,000. <span class="hl">${esc(ddPick.charAt(0).toUpperCase() + ddPick.slice(1))}</span> lives in the Design Center: cabinets, countertops, appliances, lighting, tile. That is exactly where Design Dollars work.</p>
+  <table class="ddtable s4">
+    <tr><th>Selections you choose</th><th>Design Dollars we add</th></tr>
+    <tr><td>Any Mitchell home</td><td>$5,000</td></tr>
+    <tr><td>$25,000</td><td>$7,500</td></tr>
+    <tr><td>$40,000</td><td>$11,000</td></tr>
+    <tr class="hi"><td>$60,000</td><td>$15,000</td></tr>
+    <tr><td>$80,000</td><td>$20,000</td></tr>
+    <tr><td>$100,000 and up</td><td>$25,000</td></tr>
+  </table>
+  <p class="body s5">Read it like this: choose $60,000 in selections and take home $75,000 worth. Sign now and your incentive is locked. Your tier is decided when you make your selections, so nothing has to be chosen before you are ready.</p>
+  <p class="plans-note s6">Design Dollars apply to Design Center selections including cabinets, countertops, flooring, tile, trim, doors, lighting, plumbing fixtures, appliances, paint, and hardware. Not applicable to structural options, decks, garages, basements, well, septic, site work, or contract category options. Not applied to base price and not redeemable for cash. Tier determined at the time selections are made. Program effective September 1, 2026.</p>
+</div></section>`);
+
+slides.push(`<section class="slide"><div class="inner">
+  <div class="eyebrow s1">Your Region</div>
+  <h2 class="slide-t s2">${esc(a.regionName.charAt(0).toUpperCase() + a.regionName.slice(1))} is worth <span class="script">building on</span></h2>
+  <p class="body s3">${esc((rset && RSET[rset] && RSET[rset].regionCopy) || div.regionCopy)}</p>
+  <p class="body s4">${owns ? 'Land is the one thing they are not making more of, and you already hold yours.' : 'Land is the one thing they are not making more of, and our team helps you find the right piece before you spend a dollar.'}</p>
+</div></section>`);
+
+slides.push(`<section class="slide wide"><div class="inner">
+  <div class="eyebrow s1">Your Roadmap</div>
+  <h2 class="slide-t s2">From this portrait <span class="script">to your keys</span></h2>
+  <div class="roadgrid">${steps.map((s,i)=>`<div class="step s${i+3}"><div class="num">${i+1}</div><div><div class="t">${esc(s[0])}</div><div class="d">${esc(s[1])}</div></div></div>`).join('')}</div>
+</div></section>`);
+
+slides.push(`<section class="slide"><div class="inner">
+  <div class="eyebrow s1">Listen Before You Build</div>
+  <h2 class="slide-t s2">Three episodes chosen <span class="script">for your portrait</span></h2>
+  <p class="body s3">Scott and Deven answer the questions landowners ask most on the Behind the Build podcast. Tap a title to watch.</p>
+  <ul class="listen">${listenKeys.map((k,i)=>{const e=EP[k];return `<li class="s${i+4}"><b><a href="https://www.youtube.com/watch?v=${e.id}" target="_blank" rel="noopener">${esc(e.t)}</a></b><span class="yt">youtu.be/${e.id}</span></li>`;}).join('')}</ul>
+</div></section>`);
+
+slides.push(`<section class="slide"><div class="inner center">
+  <div class="eyebrow s1">Your Next Step</div>
+  <div class="cta-box s2">
+    <span class="script">Come see it in person.</span>
+    <p>Bring this portrait to your design consultation. We will bring it to life: plan by plan, selection by selection, number by number.</p>
+    <p class="addr">Mitchell Homes ${esc(div.studio)} | mitchellhomesinc.com | Ask for your New Home Consultant</p>
+    <p style="margin-top:18px;"><a class="btn-book" href="${bookingUrl(lead.division, lead.land_status)}" target="_blank" rel="noopener">Schedule my ${esc(div.studio)} visit</a></p>
+  </div>
+  <p class="endnote s3">Our legacy is building Yours simply. | Mitchell Homes builds on your land across Virginia, North Carolina, South Carolina, and Southern Maryland. Zero down, zero closing costs, no construction loan, on approved terms. Design Dollars apply to Design Center selections only, tier determined at selections, program effective September 1, 2026. Watercolor scenes are concept art; final paintings to be commissioned per division.</p>
+</div></section>`);
+
+document.getElementById('deck').innerHTML = slides.join('');
+
+// ---------- Deck engine ----------
+const slideEls = Array.from(document.querySelectorAll('.slide'));
+let cur = 0;
+const segs = document.getElementById('segs');
+slideEls.forEach(() => { const s = document.createElement('div'); s.className = 'seg'; const f = document.createElement('div'); f.className = 'segfill'; s.appendChild(f); segs.appendChild(s); });
+const segEls = Array.from(segs.children);
+let autoT = null;
+function slideDur(){
+  const s = slideEls[cur];
+  if(!s.dataset.calcdur){
+    const inner = s.querySelector('.inner');
+    const words = inner ? inner.innerText.trim().split(/\s+/).length : 30;
+    const imgs = s.querySelectorAll('img').length;
+    s.dataset.calcdur = Math.min(14000, Math.max(7500, 4200 + words * 100 + imgs * 600));
+  }
+  return +s.dataset.calcdur;
+}
+function armAuto(){ clearTimeout(autoT); if(cur < slideEls.length - 1) autoT = setTimeout(() => go(cur + 1), slideDur()); }
+function go(i){
+  if(i < 0 || i >= slideEls.length) return;
+  cur = i;
+  slideEls.forEach((s, j) => s.classList.toggle('active', j === cur));
+  const last = cur === slideEls.length - 1;
+  segEls.forEach((s, j) => {
+    const f = s.firstChild; f.style.transition = 'none';
+    if(j < cur || (last && j === cur)){ f.style.width = '100%'; }
+    else if(j === cur){ f.style.width = '0'; void f.offsetWidth; f.style.transition = 'width ' + slideDur() + 'ms linear'; f.style.width = '100%'; }
+    else { f.style.width = '0'; }
+  });
+  document.getElementById('cnt').textContent = (cur + 1) + ' of ' + slideEls.length;
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === slideEls.length - 1;
+  document.body.classList.toggle('ondark', slideEls[cur].classList.contains('dark'));
+  const inner = slideEls[cur].querySelector('.inner'); if(inner) inner.scrollTop = 0;
+  armAuto();
+}
+function step(d){ go(cur + d); }
+document.addEventListener('visibilitychange', () => { if(document.hidden) clearTimeout(autoT); else go(cur); });
+document.getElementById('deck').addEventListener('click', (e) => { if(e.target.closest('button, a')) return; const x = e.clientX / window.innerWidth; if(x < 0.25) step(-1); else step(1); });
+document.addEventListener('keydown', (e) => { if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') { e.preventDefault(); step(1); } if(e.key === 'ArrowLeft') { e.preventDefault(); step(-1); } });
+let tx = null, ty = null;
+document.addEventListener('touchstart', (e) => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive: true});
+document.addEventListener('touchend', (e) => { if(tx === null) return; const dx = e.changedTouches[0].clientX - tx; const dy = e.changedTouches[0].clientY - ty; if(Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.4){ if(dx < 0) step(1); else step(-1); } tx = null; ty = null; }, {passive: true});
+go(0);
+</script>
+</body>
+</html>

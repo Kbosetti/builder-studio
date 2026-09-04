@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builder Studio | Lead Engine | Mitchell Homes Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1613; --panel:#17211c; --panel2:#1d2a23; --line:#2a3a31;
+  --green:#3ddc84; --mgreen:#2b6d47; --yellow:#f5d053; --text:#e8efe9;
+  --dim:#8fa397; --dim2:#5f7268; --pink:#ff5c9a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+
+/* Top bar */
+.top{
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:14px 28px;border-bottom:1px solid var(--line);background:var(--panel);
+  position:sticky;top:0;z-index:10;
+}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand img{height:40px;width:auto;display:block;}
+.brand .t1{font-weight:800;font-size:15px;letter-spacing:1px;}
+.brand .t2{font-size:10.5px;color:var(--dim);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+.topright{display:flex;align-items:center;gap:22px;}
+.acct{font-size:11.5px;color:var(--dim);text-align:right;line-height:1.5;}
+.acct b{color:var(--text);}
+.live{display:flex;align-items:center;gap:8px;font-size:10.5px;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;font-weight:600;white-space:nowrap;}
+.pulse{width:9px;height:9px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.5);}70%{box-shadow:0 0 0 9px rgba(61,220,132,0);}100%{box-shadow:0 0 0 0 rgba(61,220,132,0);}}
+
+.wrap{max-width:1280px;margin:0 auto;padding:22px 28px 60px;}
+
+/* KPI row */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px;}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;}
+.kpi .n{font-weight:800;font-size:30px;color:var(--text);line-height:1;letter-spacing:-.5px;}
+.kpi .n span{color:var(--green);}
+.kpi.gold .n span{color:var(--yellow);}
+.kpi .l{font-size:10.5px;color:var(--dim);letter-spacing:1.2px;text-transform:uppercase;margin-top:8px;}
+.kpi .sub{font-size:10px;color:var(--dim2);margin-top:4px;}
+
+/* Layout */
+.cols{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start;}
+
+/* Feed */
+.feedhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.feedhead h2{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);font-weight:700;}
+.filters{display:flex;gap:8px;}
+.fbtn{
+  background:var(--panel);border:1px solid var(--line);color:var(--dim);cursor:pointer;
+  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:.5px;
+  padding:7px 14px;border-radius:20px;transition:all .15s;
+}
+.fbtn:hover{border-color:var(--green);color:var(--text);}
+.fbtn.on{background:rgba(61,220,132,.12);border-color:rgba(61,220,132,.5);color:var(--green);}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.lead{
+  background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+}
+.lead.drop{animation:drop .5s ease;}
+@keyframes drop{from{opacity:0;transform:translateY(-12px);}to{opacity:1;transform:none;}}
+.lead.fresh{border-color:var(--green);box-shadow:0 0 24px rgba(61,220,132,.14);}
+.lead .head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px;}
+.lead .who{font-weight:700;font-size:15px;}
+.lead .who span{display:block;font-weight:400;font-size:11px;color:var(--dim);margin-top:3px;}
+.badge{
+  font-size:9px;letter-spacing:1.2px;text-transform:uppercase;font-weight:700;
+  padding:5px 10px;border-radius:20px;white-space:nowrap;flex:none;
+}
+.badge.q{background:rgba(61,220,132,.14);color:var(--green);border:1px solid rgba(61,220,132,.35);}
+.badge.e{background:rgba(245,208,83,.1);color:var(--yellow);border:1px solid rgba(245,208,83,.28);}
+.persona{font-size:11px;font-weight:600;color:var(--green);margin-bottom:9px;letter-spacing:.4px;}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.chip{
+  font-size:10.5px;color:var(--text);background:var(--panel2);border:1px solid var(--line);
+  border-radius:14px;padding:4px 10px;
+}
+.chip b{color:var(--dim);font-weight:600;}
+.lead .detail{font-size:11px;color:var(--dim);line-height:1.55;}
+.lead .detail b{color:var(--text);font-weight:600;}
+.lead .foot{
+  margin-top:11px;padding-top:9px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:8px;font-size:9.5px;color:var(--dim2);letter-spacing:.3px;
+}
+.lead .foot .track{color:var(--green);}
+.empty{
+  grid-column:1/-1;background:var(--panel);border:1px dashed var(--line);border-radius:12px;
+  padding:34px;text-align:center;color:var(--dim);font-size:13px;
+}
+
+/* Side panels */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:16px;}
+.panel h3{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);font-weight:700;margin-bottom:14px;}
+.brow{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.brow .bl{flex:0 0 118px;font-size:11.5px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.brow .bt{flex:1;height:6px;background:var(--panel2);border-radius:3px;overflow:hidden;}
+.brow .bf{height:100%;background:var(--green);border-radius:3px;transition:width .5s ease;}
+.brow.gold .bf{background:var(--yellow);}
+.brow .bn{flex:0 0 18px;text-align:right;font-size:11.5px;font-weight:700;color:var(--text);}
+.panel .note{font-size:10px;color:var(--dim2);line-height:1.6;margin-top:10px;}
+.controls{display:flex;flex-direction:column;gap:10px;}
+.clear{
+  background:none;border:1px solid var(--line);color:var(--dim);font-family:'Montserrat',sans-serif;
+  font-size:10.5px;letter-spacing:1px;text-transform:uppercase;padding:10px 16px;border-radius:6px;cursor:pointer;
+}
+.clear:hover{border-color:var(--pink);color:var(--pink);}
+
+@media (max-width:1020px){
+  .cols{grid-template-columns:1fr;}
+  .kpis{grid-template-columns:1fr 1fr;}
+  .grid{grid-template-columns:1fr;}
+  .wrap{padding:18px 16px 50px;}
+  .top{padding:12px 16px;}
+  .acct{display:none;}
+}
+@media (max-width:600px){
+  .livetext{display:none;}
+  .brand img{height:34px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .lead.drop{animation:none;}
+  .pulse{animation:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="brand">
+    <img src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png" alt="Mitchell Homes">
+    <div>
+      <div class="t1">Builder Studio</div>
+      <div class="t2">Lead Engine</div>
+    </div>
+  </div>
+  <div class="topright">
+    <div class="acct"><b>Mitchell Homes</b> | All Divisions<br>Home Portrait Campaign</div>
+    <div class="live"><div class="pulse"></div><span class="livetext">Listening for new portraits</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="kpis">
+    <div class="kpi"><div class="n"><span id="st-total">0</span></div><div class="l">Portraits completed</div><div class="sub" id="st-latest">&nbsp;</div></div>
+    <div class="kpi"><div class="n"><span id="st-qual">0</span></div><div class="l">Qualified leads</div><div class="sub" id="st-qualrate">&nbsp;</div></div>
+    <div class="kpi gold"><div class="n"><span id="st-land">0</span></div><div class="l">Own or have family land</div><div class="sub">The buyers who build</div></div>
+    <div class="kpi gold"><div class="n"><span id="st-value">$0</span></div><div class="l">Illustrative pipeline value</div><div class="sub">At $389K per portrait</div></div>
+  </div>
+
+  <div class="cols">
+    <div>
+      <div class="feedhead">
+        <h2>Live lead feed</h2>
+        <div class="filters">
+          <button class="fbtn on" data-f="all" onclick="setFilter('all')">All</button>
+          <button class="fbtn" data-f="qualified" onclick="setFilter('qualified')">Qualified</button>
+          <button class="fbtn" data-f="land" onclick="setFilter('land')">Landowners</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h3>Portraits by division</h3>
+        <div id="p-division"></div>
+      </div>
+      <div class="panel">
+        <h3>Portraits by persona</h3>
+        <div id="p-persona"></div>
+      </div>
+      <div class="panel">
+        <h3>Demo controls</h3>
+        <div class="controls">
+          <button class="clear" onclick="clearDemo()">Clear demo submissions</button>
+        </div>
+        <p class="note">Demonstration interface. In production this is the Builder Studio CRM: every Home Portrait creates a contact and a division pipeline opportunity, routes into its persona nurture sequence, and fires its qualified lead event to Meta and Google automatically. Five sample leads stay seeded so the board never sits empty.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SEEDED = [
+  { first_name:"Dana", email:"dana.m@example.com", submitted_at: offsetMin(9), persona_segment:"The Value Unlocker", land_status:"owned", division:"Fredericksburg, VA", style_preference:"solid and enduring", must_have_spaces:["first floor primary suite","covered outdoor living"], timeline:"0 to 6 months", qualified_lead_signal:true, nurture_track:"the_value_unlocker_sequence", ad_platform_event:"qualified_lead_landowner", seeded:true },
+  { first_name:"Marcus & Tia", email:"mtwilliams@example.com", submitted_at: offsetMin(24), persona_segment:"The Transitioner", land_status:"family", division:"Raleigh, NC", style_preference:"warm and welcoming", must_have_spaces:["multigenerational suite","chef's kitchen"], timeline:"6 to 12 months", qualified_lead_signal:true, nurture_track:"the_transitioner_sequence", ad_platform_event:"qualified_lead_landowner", seeded:true },
+  { first_name:"Priya", email:"priya.k@example.com", submitted_at: offsetMin(41), persona_segment:"The Grounded Dreamer", land_status:"searching", division:"Wilmington, NC", style_preference:"fresh and current", must_have_spaces:["covered outdoor living","home office"], timeline:"12 to 24 months", qualified_lead_signal:false, nurture_track:"the_grounded_dreamer_sequence", ad_platform_event:"lead_engaged", seeded:true },
+  { first_name:"David & Karen", email:"brooks.lake@example.com", submitted_at: offsetMin(33), persona_segment:"The Gathering Place", land_status:"owned", division:"Richmond, VA", region:"Smith Mountain Lake country", home_intent:"retreat", style_preference:"warm and welcoming", must_have_spaces:["chef's kitchen","covered outdoor living"], timeline:"6 to 12 months", qualified_lead_signal:true, nurture_track:"the_gathering_place_sequence", ad_platform_event:"qualified_lead_landowner", selection_appetite:"medium", seeded:true },
+  { first_name:"Earl", email:"(not provided)", submitted_at: offsetMin(58), persona_segment:"The Planner", land_status:"owned", division:"Richmond, VA", style_preference:"timeless and rooted", must_have_spaces:["home office","flex room"], timeline:"6 to 12 months", qualified_lead_signal:true, nurture_track:"the_planner_sequence", ad_platform_event:"qualified_lead_landowner", seeded:true },
+];
+const DIVISIONS = ["Richmond, VA","Fredericksburg, VA","Newport News, VA","Raleigh, NC","Wilmington, NC"];
+const PERSONAS = ["The Value Unlocker","The Planner","The Transitioner","The Grounded Dreamer","The Gathering Place"];
+
+function offsetMin(m){ return new Date(Date.now() - m*60000).toISOString(); }
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function landLabel(s){ return { owned:"Owns their land", family:"Family land", searching:"Looking for land", dreaming:"No land yet" }[s] || s; }
+function timeAgo(iso){
+  const m = Math.max(0, Math.round((Date.now() - new Date(iso).getTime())/60000));
+  if(m < 1) return "just now";
+  if(m === 1) return "1 min ago";
+  if(m < 60) return m + " mins ago";
+  const h = Math.round(m/60);
+  return h + (h === 1 ? " hour ago" : " hours ago");
+}
+function money(n){
+  if(n >= 1e6) return "$" + (n/1e6).toFixed(1).replace(/\.0$/,"") + "M";
+  if(n >= 1e3) return "$" + Math.round(n/1e3) + "K";
+  return "$" + n;
+}
+
+function getLive(){
+  try { return JSON.parse(localStorage.getItem('hp_leads') || '[]'); } catch(e){ return []; }
+}
+function leadKey(l){ return (l.email || '') + '|' + (l.submitted_at || '') + '|' + (l.first_name || ''); }
+
+let filter = 'all';
+let lastSig = null;
+const seen = new Set();
+let firstRender = true;
+
+function setFilter(f){
+  filter = f;
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.toggle('on', b.dataset.f === f));
+  lastSig = null;
+  refresh();
+}
+
+function bars(mount, labels, counts, gold){
+  const max = Math.max(1, ...counts);
+  mount.innerHTML = labels.map((lb, i) =>
+    '<div class="brow' + (gold ? ' gold' : '') + '">' +
+    '<div class="bl">' + esc(lb.replace('The ','')) + '</div>' +
+    '<div class="bt"><div class="bf" style="width:' + (counts[i]/max*100) + '%"></div></div>' +
+    '<div class="bn">' + counts[i] + '</div></div>'
+  ).join('');
+}
+
+function card(l, isNew){
+  const name = l.first_name && l.first_name !== "(not provided)" ? l.first_name : "New Portrait Lead";
+  const picks = (l.must_have_spaces || []).join(", ") || "spaces pending";
+  const q = !!l.qualified_lead_signal;
+  return '<div class="lead' + (isNew ? ' drop fresh' : '') + '">' +
+    '<div class="head"><div class="who">' + esc(name) +
+    '<span>' + esc(l.email || '') + ' &middot; <span class="ago" data-iso="' + esc(l.submitted_at) + '">' + timeAgo(l.submitted_at) + '</span></span></div>' +
+    '<span class="badge ' + (q ? 'q' : 'e') + '">' + (q ? 'Qualified lead' : 'Nurturing') + '</span></div>' +
+    '<div class="persona">' + esc(l.persona_segment || '') + '</div>' +
+    '<div class="chips">' +
+    '<span class="chip">' + esc(l.division || '') + '</span>' +
+    '<span class="chip">' + esc(landLabel(l.land_status)) + '</span>' +
+    '<span class="chip"><b>keys:</b> ' + esc(l.timeline || '') + '</span>' +
+    (l.region && l.region !== l.division ? '<span class="chip"><b>region:</b> ' + esc(l.region) + '</span>' : '') +
+    (l.home_intent && l.home_intent !== 'everyday' ? '<span class="chip"><b>intent:</b> ' + esc(l.home_intent) + '</span>' : '') +
+    (l.selection_appetite ? '<span class="chip"><b>Design Dollars:</b> ' + esc(l.selection_appetite) + '</span>' : '') +
+    '</div>' +
+    '<div class="detail"><b>Must haves:</b> ' + esc(picks) + ' &nbsp;&middot;&nbsp; <b>Style:</b> ' + esc(l.style_preference || '') + '</div>' +
+    '<div class="foot"><span class="track">&#8594; ' + esc(l.nurture_track || '') + '</span><span>' + esc(l.ad_platform_event || '') + ' &#8594; Meta / Google</span></div>' +
+    '</div>';
+}
+
+function refresh(){
+  const live = getLive();
+  const sig = JSON.stringify(live) + '|' + filter;
+  if(sig === lastSig) return;      // nothing changed: leave the DOM alone
+  lastSig = sig;
+
+  const leads = live.concat(SEEDED).slice().sort((a, b) => new Date(b.submitted_at) - new Date(a.submitted_at));
+
+  // KPIs always reflect all leads regardless of filter
+  const qual = leads.filter(l => l.qualified_lead_signal).length;
+  const land = leads.filter(l => l.land_status === 'owned' || l.land_status === 'family').length;
+  document.getElementById('st-total').textContent = leads.length;
+  document.getElementById('st-qual').textContent = qual;
+  document.getElementById('st-land').textContent = land;
+  document.getElementById('st-value').textContent = money(leads.length * 389000);
+  document.getElementById('st-qualrate').textContent = Math.round(qual/leads.length*100) + "% of all portraits";
+  document.getElementById('st-latest').textContent = "Latest " + timeAgo(leads[0].submitted_at);
+
+  bars(document.getElementById('p-division'), DIVISIONS, DIVISIONS.map(d => leads.filter(l => l.division === d).length), false);
+  bars(document.getElementById('p-persona'), PERSONAS, PERSONAS.map(p => leads.filter(l => l.persona_segment === p).length), true);
+
+  const shown = leads.filter(l =>
+    filter === 'qualified' ? l.qualified_lead_signal :
+    filter === 'land' ? (l.land_status === 'owned' || l.land_status === 'family') : true);
+
+  const grid = document.getElementById('grid');
+  if(!shown.length){
+    grid.innerHTML = '<div class="empty">No leads match this filter yet. New portraits appear here in real time.</div>';
+  } else {
+    grid.innerHTML = shown.map(l => card(l, !firstRender && !seen.has(leadKey(l)))).join('');
+  }
+  leads.forEach(l => seen.add(leadKey(l)));
+  firstRender = false;
+}
+
+function clearDemo(){
+  try { localStorage.removeItem('hp_leads'); } catch(e){}
+  lastSig = null;
+  refresh();
+}
+
+// Cheap clocks: poll only re-renders when the data actually changed;
+// relative timestamps update in place without touching the DOM tree.
+window.addEventListener('storage', e => { if(e.key === 'hp_leads'){ lastSig = null; refresh(); } });
+setInterval(refresh, 2500);
+setInterval(() => {
+  document.querySelectorAll('.ago').forEach(el => { el.textContent = timeAgo(el.dataset.iso); });
+  const latest = document.getElementById('st-latest');
+  const newest = getLive().concat(SEEDED).sort((a, b) => new Date(b.submitted_at) - new Date(a.submitted_at))[0];
+  if(newest) latest.textContent = "Latest " + timeAgo(newest.submitted_at);
+}, 30000);
+refresh();
+</script>
+</body>
+</html>
