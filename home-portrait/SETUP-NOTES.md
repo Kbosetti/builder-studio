@@ -35,30 +35,21 @@ Booking URL pattern: `https://api.leadconnectorhq.com/widget/booking/<calendarId
 | Raleigh, NC | e7IJYU4ZVbxtsf3RZpbP | ET1aeQY6CmEOXUEZEMZa |
 | Wilmington, NC | dEtDNPpoKNnBTY7Sw2Y9 | nf3cLjxsG069HUeNCWkU |
 
-## How the September 4 deploy was made
+## Deploying
 
-The Claude session could not push files straight to Vercel, so the production deployment used a small build step: `package.json` runs `node build.js`, which downloads `portrait.html`, `fullportrait.html`, and `dashboard.html` from the Mitchell media library, verifies each MD5 against the committed source, and writes them to `public/` for Vercel to serve. `api/lead.js`, `vercel.json`, and `index.html` were sent inline.
+`vercel deploy --prod --yes --no-wait` from this folder, with `VERCEL_TOKEN` set. `.vercel/project.json` (gitignored) must point at project `prj_TC3OD5qViQK3BPO6pn9lEPvUNre0`; write it by hand if missing. Verify by comparing the MD5 of each served page with the source.
 
-To redeploy from a machine the normal way, run `vercel --prod` from this folder. The clean source here (no `build.js`) is the right thing to deploy; Vercel will serve the files from the root as before.
+## Done later on September 4
+
+- `HBS_PIT`, `HBS_LOCATION_ID`, and `SITE_URL` are set on the Vercel project. Leads flow into Builder Studio and the portrait email sends through the platform (verified: contact, note, opportunity, delivered email with the PDF attached).
+- All nine portrait PDFs are hosted at `/pdf/<shell>.pdf` on the site. `PDF_URLS` in `api/lead.js` stays empty; the fallback path serves them.
+- Simply Mitchell wordmark replaces the script label on the quiz card and portrait slide; PDFs carry it inline.
+- Montserrat and Charlotte are self-hosted under `/fonts/`; PDF script lines were reset in Charlotte.
+- Custom domain `mitchellhomesliving.com` assigned (www redirects to apex).
 
 ## Still manual
 
-### 1. Vercel environment variables (needed before any lead lands)
-
-Vercel dashboard, project `mitchell-home-portrait-quiz`, Settings, Environment Variables, Production:
-
-- `HBS_PIT` = the Mitchell Homes private integration token
-- `HBS_LOCATION_ID` = `5o5zLlUPPizy6Ajp61oF`
-- optional `EMAIL_PROVIDER=gmail`, `GMAIL_USER`, `GMAIL_APP_PASSWORD` to send from Gmail instead of the platform
-
-Redeploy after saving (Deployments, latest, Redeploy). Until then `api/lead.js` returns `skipped: integration not configured`.
-
-### 2. Portrait PDFs
-
-`api/lead.js` expects nine shells: `landownerhasland`, `landownerneedsland`, `plannerhasland`, `plannerneedsland`, `familyhasland`, `familyneedsland`, `dreamerhasland`, `dreamerneedsland`, `gatheringplace`.
-Host each in the Mitchell media library and paste the CDN URL into `PDF_URLS` in `api/lead.js`. The email links and attaches the document only when the URL answers a HEAD request.
-
-### 3. Workflows (no API for these, build in Automation)
+### Workflows (no API for these, build in Automation)
 
 Every quiz contact arrives with tag `home portrait quiz`, a persona tag, and `contact.nurture_track` set to one of:
 
@@ -73,3 +64,7 @@ Build one workflow per value, trigger: Contact Tag Added `home portrait quiz` wi
 Qualified lead fast track: trigger on tag `qualified lead` (set when the buyer owns or has family land and the timeline is 0 to 12 months). `contact.qualified_lead_signal` is also `true`. Route to the division pipeline owner, SMS the OSC, and move the opportunity to Contacted once the call is logged.
 
 Useful fields for merge and filters: `contact.portrait_name`, `contact.division`, `contact.region`, `contact.home_intent`, `contact.design_dollars_focus`, `contact.selection_appetite`.
+
+### Sending domain
+
+Portrait emails currently go out from HighLevel's default `reply@ec1.msgsndr.org`. Add a dedicated sending domain under Settings, Email Services in the Mitchell sub-account so they come from a Mitchell address.
