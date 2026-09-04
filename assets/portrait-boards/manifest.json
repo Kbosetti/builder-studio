@@ -1,0 +1,146 @@
+[
+  {
+    "file": "coverlake.jpg",
+    "original": "paintings/coverlake.jpg",
+    "group": "Lake cover painting",
+    "description": "Watercolor of a blue-gray colonial with red shutters on a lakeshore at golden hour. New cover for the Smith Mountain Lake and Lake Gaston region set."
+  },
+  {
+    "file": "aerial-farmland.jpg",
+    "original": "board/aerial-farmland.jpg",
+    "group": "Board photo",
+    "description": "Aerial of patchwork green farmland and tree lines, no house."
+  },
+  {
+    "file": "aerial-field.jpg",
+    "original": "board/aerial-field.jpg",
+    "group": "Board photo",
+    "description": "Aerial of a blue two-story farmhouse alone in an open field, wide crop."
+  },
+  {
+    "file": "bright-living.jpg",
+    "original": "board/bright-living.jpg",
+    "group": "Board photo",
+    "description": "Bright open-plan living room with neutral sofas and the kitchen beyond."
+  },
+  {
+    "file": "couple-land.jpg",
+    "original": "board/couple-land.jpg",
+    "group": "Board photo",
+    "description": "Couple walking hand in hand through a tall-grass field at sunset, seen from behind."
+  },
+  {
+    "file": "family-dusk.jpg",
+    "original": "board/family-dusk.jpg",
+    "group": "Board photo",
+    "description": "Family of four holding hands facing a modern farmhouse at dusk. 700px version."
+  },
+  {
+    "file": "family-home-dusk.jpg",
+    "original": "board/family-home-dusk.jpg",
+    "group": "Board photo",
+    "description": "Same family-at-dusk scene, 900px version for wide slots."
+  },
+  {
+    "file": "farmhouse-fall.jpg",
+    "original": "board/farmhouse-fall.jpg",
+    "group": "Board photo",
+    "description": "White board-and-batten farmhouse with metal porch roof and autumn trees. Photo counterpart to the Fredericksburg painting."
+  },
+  {
+    "file": "firepit.jpg",
+    "original": "board/firepit.jpg",
+    "group": "Board photo",
+    "description": "Friends around a stone fire pit at sunset with flags in the yard. Tight crop of portrait 3."
+  },
+  {
+    "file": "framing.jpg",
+    "original": "board/framing.jpg",
+    "group": "Board photo",
+    "description": "Builder inside sunlit roof trusses. Tight crop of portrait 5."
+  },
+  {
+    "file": "hands-field.jpg",
+    "original": "board/hands-field.jpg",
+    "group": "Board photo",
+    "description": "Close-up of two clasped hands over a green field."
+  },
+  {
+    "file": "island-family.jpg",
+    "original": "board/island-family.jpg",
+    "group": "Board photo",
+    "description": "Navy kitchen with patterned backsplash and white countertops. 900px version."
+  },
+  {
+    "file": "keys.jpg",
+    "original": "board/keys.jpg",
+    "group": "Board photo",
+    "description": "Hand holding a house-shaped keychain with new keys."
+  },
+  {
+    "file": "kids-field.jpg",
+    "original": "board/kids-field.jpg",
+    "group": "Board photo",
+    "description": "Girl running through a golden field at sunset with family behind her."
+  },
+  {
+    "file": "lake-cove.jpg",
+    "original": "board/lake-cove.jpg",
+    "group": "Board photo",
+    "description": "Sunrise over rolling green hills, 940px. Same scene as portrait 1; no water visible despite the name."
+  },
+  {
+    "file": "living-room-dance.jpg",
+    "original": "board/living-room-dance.jpg",
+    "group": "Board photo",
+    "description": "Couple dancing in a blue-toned living room."
+  },
+  {
+    "file": "navy-kitchen.jpg",
+    "original": "board/navy-kitchen.jpg",
+    "group": "Board photo",
+    "description": "Navy kitchen, same scene as island-family. 700px version."
+  },
+  {
+    "file": "pines-craftsman.jpg",
+    "original": "board/pines-craftsman.jpg",
+    "group": "Board photo",
+    "description": "Dark craftsman home with timber gables among pines. Photo counterpart to the Raleigh painting. 700px."
+  },
+  {
+    "file": "pines-home.jpg",
+    "original": "board/pines-home.jpg",
+    "group": "Board photo",
+    "description": "Same pines craftsman scene, 900px version."
+  },
+  {
+    "file": "puppy.jpg",
+    "original": "board/puppy.jpg",
+    "group": "Board photo",
+    "description": "Golden retriever puppy running on a lawn in front of a white farmhouse."
+  },
+  {
+    "file": "ranch-dusk.jpg",
+    "original": "board/ranch-dusk.jpg",
+    "group": "Board photo",
+    "description": "Single-story white ranch home lit at dusk under a pink sky."
+  },
+  {
+    "file": "shoreline.jpg",
+    "original": "board/shoreline.jpg",
+    "group": "Board photo",
+    "description": "Older couple holding hands on the beach at sunset."
+  },
+  {
+    "file": "timber-sky.jpg",
+    "original": "board/timber-sky.jpg",
+    "group": "Board photo",
+    "description": "Framing lumber against blue sky with blueprint overlay. Crop of portrait 2."
+  },
+  {
+    "file": "valley.jpg",
+    "original": "board/valley.jpg",
+    "group": "Board photo",
+    "description": "Sunrise over rolling green hills, 700px. Same scene as portrait 1 and lake-cove."
+  }
+]
