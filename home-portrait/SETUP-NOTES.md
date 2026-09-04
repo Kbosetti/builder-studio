@@ -35,6 +35,12 @@ Booking URL pattern: `https://api.leadconnectorhq.com/widget/booking/<calendarId
 | Raleigh, NC | e7IJYU4ZVbxtsf3RZpbP | ET1aeQY6CmEOXUEZEMZa |
 | Wilmington, NC | dEtDNPpoKNnBTY7Sw2Y9 | nf3cLjxsG069HUeNCWkU |
 
+## How the September 4 deploy was made
+
+The Claude session could not push files straight to Vercel, so the production deployment used a small build step: `package.json` runs `node build.js`, which downloads `portrait.html`, `fullportrait.html`, and `dashboard.html` from the Mitchell media library, verifies each MD5 against the committed source, and writes them to `public/` for Vercel to serve. `api/lead.js`, `vercel.json`, and `index.html` were sent inline.
+
+To redeploy from a machine the normal way, run `vercel --prod` from this folder. The clean source here (no `build.js`) is the right thing to deploy; Vercel will serve the files from the root as before.
+
 ## Still manual
 
 ### 1. Vercel environment variables (needed before any lead lands)
