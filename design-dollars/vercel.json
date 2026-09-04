@@ -1,0 +1,1 @@
+{"cleanUrls":true,"trailingSlash":false,"rewrites":[{"source":"/nhi-index","destination":"/index.html"},{"source":"/nhi","destination":"/index.html"}]}

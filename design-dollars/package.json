@@ -1,0 +1,7 @@
+{
+  "name": "mitchell-design-dollars",
+  "private": true,
+  "type": "module",
+  "description": "Mitchell Homes Design Dollars landing page + GoHighLevel lead integration",
+  "engines": { "node": "22.x" }
+}
