@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>See What Your Land Saves You | Mitchell Homes</title>
+<meta name="description" content="Build a custom home on land you own in Virginia and Southern Maryland. Zero down, zero closing costs, no construction loan.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.script{font-style:italic;font-weight:500;text-transform:none;letter-spacing:0}
+.hero{min-height:clamp(420px,58vh,540px)}
+.calc{background:var(--green);color:var(--white)}
+.calc .eyebrow{color:var(--yellow)}
+.calc h2{max-width:18ch}
+.calc h2 .script{color:var(--yellow)}
+.calc .lede{color:rgba(255,255,255,.9)}
+.calcbox{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(36px,4.5vw,56px);background:rgba(255,255,255,.16)}
+.calcin{background:var(--green);padding:clamp(26px,3vw,40px)}
+.calcout{background:var(--black);padding:clamp(26px,3vw,40px)}
+.slabel{font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.entry{display:flex;align-items:baseline;gap:4px;margin-top:8px;border-bottom:3px solid var(--yellow);padding-bottom:6px}
+.entry .cur{font-size:clamp(28px,3.4vw,42px);font-weight:900;color:var(--yellow);line-height:1}
+.entry input{width:100%;background:transparent;border:none;color:var(--white);font-family:'Montserrat',sans-serif;font-size:clamp(34px,4.6vw,56px);font-weight:900;letter-spacing:-.03em;line-height:1;padding:0}
+.entry input:focus{outline:none}
+.hint{font-size:12px;color:rgba(255,255,255,.6);margin-top:12px;letter-spacing:.04em}
+input[type=range]{width:100%;margin-top:26px;accent-color:var(--yellow);height:34px}
+.srange{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.06em}
+.plans{margin-top:30px;font-size:13px;color:rgba(255,255,255,.78);line-height:1.6;border-top:1px solid rgba(255,255,255,.25);padding-top:20px}
+.outline{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15px;color:rgba(255,255,255,.86)}
+.outline b{font-weight:900;color:var(--white);white-space:nowrap}
+.outline.zero b{color:var(--yellow)}
+.bigout{margin-top:26px;border-top:2px solid var(--yellow);padding-top:24px}
+.bigout .slabel{color:var(--yellow)}
+.bigout .num{font-size:clamp(40px,5.6vw,68px);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--white);margin-top:8px}
+.bigout .note{font-size:13px;color:rgba(255,255,255,.66);margin-top:14px;line-height:1.6}
+.calcout .btn{width:100%;text-align:center;margin-top:26px}
+.fineprint{font-size:12px;color:rgba(255,255,255,.68);margin-top:22px;line-height:1.6}
+.offer{background:#f4f4f2;color:var(--ink)}
+.offer h2{color:var(--ink);font-size:clamp(30px,4.2vw,52px)}
+.offer h2 em{color:var(--green)}
+.offer .eyebrow{color:var(--green)}
+.deadline{border-color:var(--green);color:var(--green)}
+.offer .body{color:#4a4a4a}
+form{border:1px solid var(--rule)}
+.offerimg{width:100%;height:320px;object-fit:cover;display:block;margin-top:36px}
+@media(max-width:900px){.offerimg{height:220px}}
+@media(max-width:900px){.calcbox{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hdr">
+    <div class="logo"><img src="https://static.mitchellhomesinc.com/mitchellhomes/images/mitchellhomes-logo-black.png?v=d0b0aa0" alt="Mitchell Homes"></div>
+    <a class="tel" href="tel:5407012759">(540) 701-2759</a>
+  </div>
+  <a class="telbar" href="tel:5407012759">Tap to call (540) 701-2759</a>
+</header>
+<section class="hero" style="padding:0">
+  <img class="heroimg" src="https://media.mitchellhomesinc.com/276/2024/1/18/10.jpg?width=1920&height=1080&fit=bounds&ois=0f99b6a" alt="">
+  <div class="wrap">
+    <h1>Your land can be your down payment</h1>
+    <p class="sub">Most builders send you to a bank for a construction loan before anyone turns a shovel. We do not. Move the slider and see what that is worth.</p>
+    <a class="btn" href="#calc">See the Math</a>
+  </div>
+</section>
+<section class="calc" id="calc">
+  <div class="wrap">
+    <p class="eyebrow">The Math</p>
+    <h2>What you do <span class="script">not</span> pay</h2>
+    <p class="lede">Pick the price of the home you want to build. The number on the right is what you keep by building on land you already own.</p>
+    <div class="calcbox">
+      <div class="calcin">
+        <label class="slabel" for="priceNum">Total new home price</label>
+        <div class="entry"><span class="cur">$</span><input type="text" inputmode="numeric" id="priceNum" value="450,000" aria-label="Enter your total new home price"></div>
+        <input type="range" id="price" min="200000" max="800000" step="5000" value="450000" aria-label="Total new home price slider">
+        <div class="srange"><span>$200,000</span><span>$800,000</span></div>
+        <p class="hint">Type a number or drag the slider.</p>
+        <p class="plans">Mitchell builds more than 40 floor plans, from 1,000 to 3,000 square feet, on land you already own or are buying. Pricing varies by locality.</p>
+      </div>
+      <div class="calcout">
+        <div class="outline zero"><span>Down payment</span><b>$0</b></div>
+        <div class="outline zero"><span>Closing costs</span><b>$0</b></div>
+        <div class="outline zero"><span>Construction loan interest</span><b>$0</b></div>
+        <div class="outline"><span>Cash needed to start building</span><b>$0</b></div>
+        <div class="bigout"><span class="slabel">Your estimated <img class="smlogo" src="https://static.mitchellhomesinc.com/mitchellhomes/images/SimplyMitchell_Logo_Color.png?v=2735bf2" alt="SimplyMitchell"> savings</span><div class="num" id="saveOut">$36,000</div><p class="note">Mitchell Design Dollars come on top of this. See the details below.</p></div>
+        <a class="btn" href="#offer">Get My Plan Guide</a>
+        <p class="fineprint">Estimate only. Your figure depends on your land, your plan and your county. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</p>
+      </div>
+    </div>
+    <p class="verify">Savings rate is 8 percent, supplied by the client. Conflict to resolve: Mitchell's published blog states $29,250 on a $450,000 home, which is 6.5 percent, returning $36,000 here instead. Both cannot be right. Flag to Scott. The SimplyMitchell locked disclaimer replaces the fine print above, in whole. Hero image: the retouched Deborah Classic supplied by the client will be swapped in before campaign launch.</p>
+    <p class="verify">Held from market until the 8 percent versus 6.5 percent savings formula is resolved.</p>
+  </div>
+</section>
+<section class="offer" id="offer">
+  <div class="wrap offergrid">
+    <div>
+      <p class="eyebrow">Mitchell Design Dollars</p>
+      <h2>Up to <em>$25,000</em> in Mitchell Design Dollars</h2>
+      <p class="body">Every Mitchell home starts with $5,000 in Design Dollars, and the credit grows the more you personalize.</p>
+      <p class="body act">Sign now and your incentive is locked. Your tier is set later, when you choose what goes in the home.</p>
+      <p class="deadline">Reserve by October 31, 2026</p>
+      <p class="ddfine">Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</p>
+      <img class="offerimg" src="https://media.mitchellhomesinc.com/276/2023/7/3/5-print-005.jpg?width=1920&height=1280&fit=bounds&ois=6844ea3" alt="">
+      <p class="verify">Offer updated to Mitchell Design Dollars. Tier sheet, four state coverage, honor window, and naming rule are approved. October 31 is the first rolling reserve by date; only the date changes month to month.</p>
+    </div>
+    <form id="leadform" novalidate>
+      <h3>Run your numbers</h3>
+      <div class="row"><div class="field"><label for="fn">First name</label><input id="fn" type="text" autocomplete="given-name" required></div><div class="field"><label for="ln">Last name</label><input id="ln" type="text" autocomplete="family-name" required></div></div>
+      <div class="field"><label for="em">Email</label><input id="em" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="tl">Phone</label><input id="tl" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="co">County</label><input id="co" type="text" required></div>
+      <div class="field"><label for="ld">Do you own the land</label><select id="ld" required><option value="">Select one</option><option>Yes, I own it</option><option>It is under contract</option><option>Still looking for land</option></select></div>
+      <div class="consent"><input id="sms" type="checkbox"><p><label for="sms" style="all:unset;cursor:pointer">By checking this box I agree to receive marketing text messages from Mitchell Homes at the number provided, including messages sent by automated means. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply STOP to opt out or HELP for help.</label></p></div>
+      <button class="btn" type="submit">Get My Plan Guide</button>
+      <p class="legal"><a href="https://mitchellhomesinc.com/privacy-policy/">Privacy Policy</a> and <a href="https://mitchellhomesinc.com/terms/">Terms of Service</a></p>
+      <p class="verify">Verify: TCPA language requires legal sign off. The slider value should pass into the lead record as a hidden field. Exterior photo added under the offer copy August 20 to fill the open space beside the form, per Kelly.</p>
+    </form>
+  </div>
+</section>
+<section class="proof">
+  <div class="wrap">
+    <p class="eyebrow">Homeowner Stories</p>
+    <h2>Hear it from Mitchell homeowners</h2>
+    <div class="quotes">
+      <div class="quote"><p>&ldquo;Talk about no closing costs, no down payment, no construction loan. That&rsquo;s a big deal. I don&rsquo;t think we appreciated what that meant initially. Now looking back, we&rsquo;re like wow, that&rsquo;s the best choice we could&rsquo;ve made to go with Mitchell. For that alone.&rdquo;</p><span class="who">Lavonnia &amp; Rick Downey<em>Homeowners, Mitchell Homes</em></span><a class="story" href="https://www.youtube.com/watch?v=9vmi-miQzKU&amp;t=1s" target="_blank" rel="noopener">Hear Their Full Story</a></div>
+      <div class="quote"><p>&ldquo;If you go with a traditional construction loan, that builder could prolong your build and make a lot of money off you. Mitchell takes all the risk. They want you in your home as fast as possible&hellip; You want the bones of the home and the materials that they use to be good. Mitchell spares no expense on premium materials when you build a house.&rdquo;</p><span class="who">Rob &amp; Kat Cuomo<em>Homeowners, Mitchell Homes</em></span><a class="story" href="https://www.youtube.com/watch?v=jMSBzlcQ4uU&amp;t=7s" target="_blank" rel="noopener">Hear Their Full Story</a></div>
+    </div>
+    <p class="verify">Quotes added from the Downey and Cuomo homeowner video stories, verbatim with light punctuation cleanup. Links open the full videos on YouTube.</p>
+  </div>
+</section>
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Where We Build</p>
+    <h2>Three design studios. One way of working.</h2>
+    <p class="lede">We build in Virginia, North Carolina, South Carolina and Maryland. Would rather talk it through? Call the studio nearest your land.</p>
+    <div class="studios">
+      <div class="studio"><img src="https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=400&height=266&fit=bounds&ois=348fb6b" alt=""><span class="city">Fredericksburg</span><span class="state">Virginia</span><span class="addr">621 Warrenton Road, Fredericksburg, VA 22406</span><a href="tel:5407012759">(540) 701-2759</a></div>
+      <div class="studio"><img src="https://media.mitchellhomesinc.com/276/2024/6/24/Mathews_1_Aerial.jpg?width=400&height=224&fit=bounds&ois=6e61650" alt=""><span class="city">Richmond</span><span class="state">Virginia</span><span class="addr">14300 Sommerville Court, Midlothian, VA 23113</span><a href="tel:8045383912">(804) 538-3912</a></div>
+      <div class="studio"><img src="https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=400&height=299&fit=bounds&ois=2677755" alt=""><span class="city">Newport News</span><span class="state">Virginia</span><span class="addr">663 Turnberry Boulevard, Newport News, VA 23602</span><a href="tel:7572103482">(757) 210-3482</a></div>
+    </div>
+    <p class="verify">Studio card images match the Design Centers section of the live Mitchell site, shown whole rather than center cropped. These are the Virginia and Southern Maryland pages, so they show the local studios for relevance. One offer runs in all four states. All five Design Centers are in Virginia and North Carolina. Mitchell builds in Virginia, North Carolina, South Carolina and Maryland.</p>
+  </div>
+</section>
+<footer><div class="wrap">Mitchell Homes. Building on your land across Virginia and Southern Maryland.</div></footer>
+<button class="modebar" id="modebtn" type="button">Show build notes</button>
+<script>
+var SAVINGS_RATE = 0.08;
+var price=document.getElementById('price'),priceNum=document.getElementById('priceNum'),saveOut=document.getElementById('saveOut');
+var MIN=100000,MAX=1500000;
+function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
+function commas(n){return Math.round(n).toLocaleString('en-US');}
+function render(p){saveOut.textContent=money(p*SAVINGS_RATE);}
+price.addEventListener('input',function(){var p=Number(price.value);priceNum.value=commas(p);render(p);});
+priceNum.addEventListener('input',function(){var r=priceNum.value.replace(/[^0-9]/g,'');var p=Number(r||0);if(p>=Number(price.min)&&p<=Number(price.max)){price.value=p;}render(p);});
+priceNum.addEventListener('blur',function(){var r=priceNum.value.replace(/[^0-9]/g,'');var p=Number(r||0);if(!p){p=450000;}if(p<MIN){p=MIN;}if(p>MAX){p=MAX;}priceNum.value=commas(p);if(p>=Number(price.min)&&p<=Number(price.max)){price.value=p;}render(p);});
+render(450000);
+var mb=document.getElementById('modebtn');
+mb.addEventListener('click',function(){document.body.classList.toggle('review');mb.textContent=document.body.classList.contains('review')?'Hide build notes':'Show build notes';});
+document.getElementById('leadform').addEventListener('submit',function(e){e.preventDefault();window.location.href='thank-you.html';});
+</script>
+</body>
+</html>
