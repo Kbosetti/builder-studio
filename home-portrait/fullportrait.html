@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Your Home Portrait | Mitchell Homes</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Montserrat';src:url(/fonts/montserrat.woff2) format('woff2');font-weight:100 900;font-style:normal;font-display:swap;}
+@font-face{font-family:'Montserrat';src:url(/fonts/montserrat-italic.woff2) format('woff2');font-weight:100 900;font-style:italic;font-display:swap;}
+@font-face{font-family:'Charlotte';src:url(/fonts/charlotte.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+</style>
 <style>
 :root{
   --green:#2b6d47;
@@ -22,7 +25,7 @@ body{
   font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);
   overflow:hidden;
 }
-.script{font-family:'Caveat',cursive;color:var(--green);}
+.script{font-family:'Charlotte',cursive;color:var(--green);}
 
 /* Top chrome */
 .chrome{
@@ -72,9 +75,9 @@ body.ondark .doc-tag{color:#b9ccc0;}
 .eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:12px;}
 .slide.dark .eyebrow{color:var(--yellow);}
 h1.cover-t{font-weight:300;font-size:clamp(36px,9vw,58px);line-height:1.08;letter-spacing:-0.5px;}
-h1.cover-t .script{font-size:1.3em;}
+h1.cover-t .script{font-size:.98em;margin-left:.08em;}
 h2.slide-t{font-weight:300;font-size:clamp(26px,6.6vw,40px);line-height:1.18;margin-bottom:14px;}
-h2.slide-t .script{font-size:1.2em;}
+h2.slide-t .script{font-size:.95em;margin-left:.06em;}
 .slide p.body{font-size:clamp(15px,4.2vw,17.5px);line-height:1.75;color:#333b36;margin-bottom:14px;font-weight:400;}
 .slide.dark p.body{color:#e7efe9;font-weight:300;}
 .slide p.body b{color:var(--green-deep);}
@@ -87,14 +90,14 @@ h2.slide-t .script{font-size:1.2em;}
 .center{text-align:center;}
 .center .rule{margin:22px auto;}
 .pull{
-  font-family:'Caveat',cursive;font-size:clamp(26px,7vw,36px);color:var(--green);line-height:1.25;
+  font-family:'Charlotte',cursive;font-size:clamp(22px,6vw,30px);color:var(--green);line-height:1.25;
   border-left:3px solid var(--yellow);padding-left:18px;margin:24px 0 8px;
 }
 
 /* Photos */
 .photo{border-radius:10px;overflow:hidden;box-shadow:0 12px 34px rgba(30,79,51,.16);margin-bottom:18px;background:#fff;}
 .photo img{width:100%;display:block;max-height:36dvh;object-fit:cover;}
-.photo .cap{font-family:'Caveat',cursive;font-size:20px;color:var(--green-deep);padding:10px 16px 12px;line-height:1.2;}
+.photo .cap{font-family:'Charlotte',cursive;font-size:17px;color:var(--green-deep);padding:10px 16px 12px;line-height:1.2;}
 
 /* Spaces cards */
 .spaces{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px;}
@@ -109,7 +112,7 @@ h2.slide-t .script{font-size:1.2em;}
 @media (max-width:420px){.board{gap:8px;}}
 .pin{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 3px 12px rgba(30,79,51,.06);}
 .pin img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;}
-.pin .cap{font-family:'Caveat',cursive;font-size:16px;color:var(--green-deep);padding:7px 10px 9px;line-height:1.15;}
+.pin .cap{font-family:'Charlotte',cursive;font-size:14px;color:var(--green-deep);padding:7px 10px 9px;line-height:1.15;}
 .pin.wide{grid-column:1/-1;}
 .pin.wide img{aspect-ratio:21/9;}
 @media (min-width:700px){
@@ -122,7 +125,7 @@ h2.slide-t .script{font-size:1.2em;}
 .board-note{font-size:11.5px;color:var(--grey);font-style:italic;margin-top:12px;line-height:1.6;}
 
 /* Simply math */
-.s-label{font-family:'Caveat',cursive;color:var(--yellow);font-size:34px;line-height:1;margin-bottom:10px;}
+.s-label{font-family:'Charlotte',cursive;color:var(--yellow);font-size:34px;line-height:1;margin-bottom:10px;}
 .s-logo{display:block;height:38px;width:auto;margin-bottom:14px;}
 .mathtable{width:100%;border-collapse:collapse;margin:14px 0 8px;}
 .mathtable td{padding:11px 6px;font-size:clamp(13px,3.6vw,14.5px);border-bottom:1px solid rgba(255,255,255,.18);color:#e7efe9;}
@@ -158,7 +161,7 @@ h2.slide-t .script{font-size:1.2em;}
   border:1.5px solid var(--green);border-radius:10px;padding:26px 26px;margin-top:18px;
   background:#f2f7f3;text-align:center;
 }
-.cta-box .script{font-size:30px;display:block;margin-bottom:10px;}
+.cta-box .script{font-size:26px;display:block;margin-bottom:10px;}
 .cta-box p{font-size:14px;margin-bottom:6px;line-height:1.6;}
 .cta-box .addr{font-size:12.5px;color:var(--grey);margin-top:8px;line-height:1.6;}
 .endnote{font-size:10px;color:var(--grey);text-align:center;line-height:1.7;margin-top:22px;}
@@ -172,7 +175,7 @@ h2.slide-t .script{font-size:1.2em;}
   box-shadow:0 14px 34px rgba(30,79,51,.22);margin:16px auto 0;
 }
 .painting img{display:block;max-height:26dvh;max-width:100%;width:auto;margin:0 auto;}
-.cover-cap{font-family:'Caveat',cursive;font-size:clamp(20px,4.6vw,27px);color:var(--green);margin-top:14px;line-height:1.2;}
+.cover-cap{font-family:'Charlotte',cursive;font-size:clamp(17px,4vw,23px);color:var(--green);margin-top:14px;line-height:1.2;}
 @media (min-width:900px){.painting img{max-height:36dvh;}}
 
 /* Hint + controls */
