@@ -37,6 +37,14 @@
     {
       "source": "/style.css",
       "destination": "https://cea-mitchell-landing-pages.vercel.app/style.css"
+    },
+    {
+      "source": "/design-dollars",
+      "destination": "https://mitchell-design-dollars.vercel.app/"
+    },
+    {
+      "source": "/design-dollars-nhi",
+      "destination": "https://mitchell-design-dollars.vercel.app/nhi-index"
     }
   ]
 }
