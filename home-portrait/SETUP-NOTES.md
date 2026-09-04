@@ -1,7 +1,7 @@
 # Mitchell Home Portrait, September 2026 deploy notes
 
 Source of the production deployment on Vercel, project `mitchell-home-portrait-quiz`, team `cea-marketing`.
-Live at https://mitchell-home-portrait-quiz-cea-marketing.vercel.app
+Live at https://mitchellhomesliving.com (custom domain assigned September 4, 2026; www redirects to the apex; `SITE_URL` env var points emails there). Vercel address https://mitchell-home-portrait-quiz-cea-marketing.vercel.app still works.
 
 ## Done on September 4, 2026
 
