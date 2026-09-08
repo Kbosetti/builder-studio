@@ -254,7 +254,7 @@ footer{
     <div class="cta-stack">
       <button class="btn" onclick="openFull()">See My Full Portrait</button>
       <button class="btn ghost" id="emailbtn" onclick="emailPortrait()">Email Me My Full Portrait</button>
-      <button class="btn ghost" onclick="scheduleVisit()">Visit a Design Studio</button>
+      <button class="btn ghost" id="visitbtn" onclick="scheduleVisit()">Visit a Design Studio</button>
     </div>
     <p class="sent-note" id="r-sent" style="text-align:center;font-size:13px;color:var(--green);margin-top:14px;"></p>
     <p class="disclaim">Every Mitchell home is a portrait of its owner. Pricing from the $250s to $500 plus. Zero down, zero closing costs, no construction loan, on approved terms. Design Dollars apply to Design Center selections only, not to base price, structural options, or site work, and are not redeemable for cash; tier determined at selections. Program effective September 1, 2026.</p>
@@ -351,7 +351,7 @@ const QUESTIONS = [
       { t: "Southwest Virginia and Smith Mountain Lake", d: "Lynchburg, Roanoke, and the lake.", retreat: true, tag: { division: "Richmond, VA", regionName: "Smith Mountain Lake country", rset: "lake", rcap: "Painted where the lake holds the evening light" } },
       { t: "Southern Virginia lakes", d: "Lake Gaston and the counties around it.", retreat: true, tag: { division: "Richmond, VA", regionName: "Lake Gaston country", rset: "lake", rcap: "Painted where the lake holds the evening light" } },
       { t: "Eastern Shore and the Outer Banks", d: "Salt air, both sides of the line.", retreat: true, tag: { division: "Newport News, VA", regionName: "the Eastern Shore and Outer Banks", rset: "coastal", rcap: "Painted where the salt air starts the morning" } },
-      { t: "Somewhere else, or still deciding", d: "We will help you find the right ground.", tag: { division: "Richmond, VA", regionName: "your part of our footprint" } }
+      { t: "Somewhere else, or still deciding", d: "We will help you find the right ground.", tag: { division: "", regionName: "your part of our footprint", undecided: true } }
     ]
   },
   {
@@ -382,25 +382,25 @@ const PERSONAS = {
   P: {
     name: "The Planner's Portrait",
     label: "Modern Homesteader | The Planner",
-    body: (a) => `You don't want a leap of faith. You want a path you can see, and that is exactly how we build. Your home in <b>${a.division}</b> starts with the Homebuyer Roadmap to Success: every step named, every cost on the table, every decision made in daylight. A <b>${a.style}</b> home with ${listPicks(a)}, built in about 150 days once we break ground, with nothing left to guess.`,
+    body: (a) => `You don't want a leap of faith. You want a path you can see, and that is exactly how we build. Your home in <b>${a.where}</b> starts with the Homebuyer Roadmap to Success: every step named, every cost on the table, every decision made in daylight. A <b>${a.style}</b> home with ${listPicks(a)}, built in about 150 days once we break ground, with nothing left to guess.`,
     close: "You stay in control. We make the path predictable."
   },
   T: {
     name: "The Family Portrait",
     label: "Modern Homesteader | The Transitioner",
-    body: (a) => `Life is moving, and your home should move with it. This portrait is a <b>${a.style}</b> home in <b>${a.division}</b> designed around the people in it: ${listPicks(a)}, rooms that grow and change as your family does. We break the big decisions into small steps you can build on, so the season you're in stays joyful instead of overwhelming.`,
+    body: (a) => `Life is moving, and your home should move with it. This portrait is a <b>${a.style}</b> home in <b>${a.where}</b> designed around the people in it: ${listPicks(a)}, rooms that grow and change as your family does. We break the big decisions into small steps you can build on, so the season you're in stays joyful instead of overwhelming.`,
     close: "Big decisions become small steps. We carry the heavy ones."
   },
   V: {
     name: "The Landowner's Portrait",
     label: "Modern Homesteader | The Value Unlocker",
-    body: (a) => `Here is what most landowners never get told: you are already holding the key. Your land in <b>${a.division}</b> is not just a place to build, it is leverage. This portrait is a <b>${a.style}</b> home with ${listPicks(a)}, built on ground you already own, financed in a way that most banks simply cannot match. The math is real, and we will show you every line of it.`,
+    body: (a) => `Here is what most landowners never get told: you are already holding the key. Your land in <b>${a.where}</b> is not just a place to build, it is leverage. This portrait is a <b>${a.style}</b> home with ${listPicks(a)}, built on ground you already own, financed in a way that most banks simply cannot match. The math is real, and we will show you every line of it.`,
     close: "Your land is worth more than you think. Here is the math."
   },
   D: {
     name: "The Dreamer's Portrait",
     label: "Modern Homesteader | The Grounded Dreamer",
-    body: (a) => `You can see it already: a <b>${a.style}</b> home in <b>${a.division}</b> with ${listPicks(a)}, standing on land that finally has its voice. Here is the part that makes the dream safe: 40 plus plans, 40,000 plus selections, and a transparent process with guardrails at every turn. Your vision stays yours. We just keep it standing on solid ground.`,
+    body: (a) => `You can see it already: a <b>${a.style}</b> home in <b>${a.where}</b> with ${listPicks(a)}, standing on land that finally has its voice. Here is the part that makes the dream safe: 40 plus plans, 40,000 plus selections, and a transparent process with guardrails at every turn. Your vision stays yours. We just keep it standing on solid ground.`,
     close: "Your vision becomes doable when the path is clear."
   },
   G: {
@@ -419,7 +419,7 @@ const PERSONAS = {
       };
       const scene = scenes[a.rset] || scenes.lake;
       const intent = intents[a.intent] || intents.retreat;
-      return `Some homes are where life happens every day. This one is the place everyone is always trying to get to. Picture it in <b>${a.regionName || a.division}</b>: ${scene}. A <b>${a.style}</b> home with ${listPicks(a)}, built for the people who will fill it. ${intent}`;
+      return `Some homes are where life happens every day. This one is the place everyone is always trying to get to. Picture it in <b>${a.regionName || a.where}</b>: ${scene}. A <b>${a.style}</b> home with ${listPicks(a)}, built for the people who will fill it. ${intent}`;
     },
     close: "The place you keep promising yourselves. Here is how it becomes real."
   }
@@ -573,9 +573,12 @@ const WC_ART_RSET = {
   coastal: "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg",
   mountain: "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg"
 };
+const WC_ART_UNDECIDED = "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9258a2b9-0359-4bb8-9eda-59d96d9a91d3.jpg";
+/* Undecided region: a phone consultation instead of a division studio visit. */
+const PHONE_CONSULT = "https://api.leadconnectorhq.com/widget/booking/izsSdkJpFJbCdMsOdFcf";
 function framedPortrait(division){
   const s = sceneFor(division);
-  const src = (answers.rset && WC_ART_RSET[answers.rset]) || WC_ART[division] || WC_ART["Richmond, VA"];
+  const src = (answers.rset && WC_ART_RSET[answers.rset]) || WC_ART[division] || WC_ART_UNDECIDED;
   return '<div class="wc-frame"><img src="' + src + '" alt="A watercolor portrait of your custom home"></div>' +
          '<div class="frame-cap">' + s.cap + '</div>';
 }
@@ -583,7 +586,7 @@ function reveal(){
   const key = (answers.intent === 'retreat' || answers.intent === 'retire') ? 'G' : topPersona();
   const P = PERSONAS[key];
   const a = answers;
-  a.division = a.division || 'your part of our footprint';
+  a.where = a.division || 'your part of our footprint';
   a.style = a.style || 'one of a kind';
 
   document.getElementById('r-art').innerHTML = framedPortrait(answers.division);
@@ -623,8 +626,8 @@ function reveal(){
     persona_segment: P.label.split('| ')[1],
     persona_scores: scores,
     land_status: a.land || "unknown",
-    division: a.division,
-    region: a.regionName || a.division,
+    division: a.division || "",
+    region: a.regionName || a.division || "",
     home_intent: a.intent || "everyday",
     style_preference: a.style,
     must_have_spaces: a.picks,
@@ -642,6 +645,7 @@ function reveal(){
   persistLead(payload);
   document.getElementById('r-sent').textContent = (a.email && a.email !== '(not provided)') ? 'Your full portrait is on its way to ' + a.email + '.' : 'Want it in your inbox? Tap Email Me My Full Portrait.';
 
+  document.getElementById('visitbtn').textContent = a.division ? 'Visit a Design Studio' : 'Talk to a New Home Consultant';
   document.getElementById('fill').style.width = '100%';
   show('s-result');
 }
@@ -658,7 +662,8 @@ const BOOKING = {
   "Wilmington, NC":     { land:"dEtDNPpoKNnBTY7Sw2Y9", noland:"nf3cLjxsG069HUeNCWkU" }
 };
 function bookingUrl(division, land){
-  const b = BOOKING[division] || BOOKING["Richmond, VA"];
+  const b = BOOKING[division];
+  if(!b) return PHONE_CONSULT;
   const owns = land === "owned" || land === "family";
   return "https://api.leadconnectorhq.com/widget/booking/" + (owns ? b.land : b.noland);
 }

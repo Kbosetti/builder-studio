@@ -308,6 +308,7 @@ const U = {
   "shoreline": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bd6de9b1-5429-4d72-ad9d-671e35de5168.jpg",
   "timbersky": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3d92c78d-556d-428c-b6ec-7d3982180a4d.jpg",
   "valley": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/39ef50db-c2c5-438a-8aca-ac7a0f43b87c.jpg",
+  "covergallery": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9258a2b9-0359-4bb8-9eda-59d96d9a91d3.jpg",
   "logocolor": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png",
   "logowhite": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png"
 };
@@ -467,7 +468,7 @@ function readLead(){
   const q = new URLSearchParams(location.search);
   if(q.get('p') || q.get('d')){
     return {
-      first_name: q.get('n') || '', persona_segment: q.get('p') || '', division: q.get('d') || 'Richmond, VA',
+      first_name: q.get('n') || '', persona_segment: q.get('p') || '', division: q.get('d') || '',
       land_status: q.get('l') || 'unknown', style_preference: q.get('s') || 'one of a kind',
       must_have_spaces: (q.get('k') || '').split('|').filter(Boolean), timeline: q.get('t') || 'unknown',
       region: q.get('r') || '', home_intent: q.get('i') || 'everyday', rset: q.get('x') || ''
@@ -485,14 +486,17 @@ const BOOKING = {
   "Wilmington, NC":     { land:"dEtDNPpoKNnBTY7Sw2Y9", noland:"nf3cLjxsG069HUeNCWkU" }
 };
 function bookingUrl(division, land){
-  const b = BOOKING[division] || BOOKING["Richmond, VA"];
+  const b = BOOKING[division];
+  if(!b) return "https://api.leadconnectorhq.com/widget/booking/izsSdkJpFJbCdMsOdFcf";
   const owns = land === "owned" || land === "family";
   return "https://api.leadconnectorhq.com/widget/booking/" + (owns ? b.land : b.noland);
 }
 const KEY = { "The Value Unlocker":"V", "The Planner":"P", "The Transitioner":"T", "The Grounded Dreamer":"D", "The Gathering Place":"G" };
 const key = KEY[lead.persona_segment] || 'V';
 const P = PORTRAITS[key];
-const div = DIVISIONS[lead.division] || DIVISIONS["Richmond, VA"];
+const UNDECIDED = { undecided:true, cover:"covergallery", cap:"Painted on the land that is waiting for you", studio:"Design Studio", region:"your part of our footprint",
+  regionCopy:"Mitchell builds on your land across Virginia, North Carolina, South Carolina, and Southern Maryland. When you know where you are headed, tell your New Home Consultant and this portrait moves with you: the painting, the studio, and the local team all follow the land." };
+const div = DIVISIONS[lead.division] || UNDECIDED;
 const owns = lead.land_status === 'owned' || lead.land_status === 'family';
 const variant = owns ? P.has : P.needs;
 const rset = lead.rset || (lead.region && /lake/i.test(lead.region) ? 'lake' : (/shore|outer banks/i.test(lead.region||'') ? 'coastal' : (/shenandoah|mountain/i.test(lead.region||'') ? 'mountain' : '')));
@@ -569,7 +573,7 @@ slides.push(`<section class="slide"><div class="inner center">
   <h1 class="cover-t s2">Your Home <span class="script">Portrait</span></h1>
   <div class="painting s3"><img src="${U[cover.cover] || U.coverrichmond}" alt="A watercolor painting of your future home"></div>
   <div class="cover-cap s4">${esc(cover.cap)}</div>
-  <div class="prep s5">${name ? 'Prepared for <b>' + esc(name) + '</b>' : 'Prepared from <b>your answers</b>'}<br>${esc(a.regionName)} | ${esc(lead.division)} division | ${esc(dateLabel)}</div>
+  <div class="prep s5">${name ? 'Prepared for <b>' + esc(name) + '</b>' : 'Prepared from <b>your answers</b>'}<br>${div.undecided ? 'Wherever you build' : esc(a.regionName) + ' | ' + esc(lead.division) + ' division'} | ${esc(dateLabel)}</div>
   <div class="rule s6"></div>
   <div class="hint s7">Tap anywhere to begin</div>
 </div></section>`);
@@ -633,7 +637,7 @@ slides.push(`<section class="slide wide"><div class="inner">
 
 slides.push(`<section class="slide"><div class="inner">
   <div class="eyebrow s1">Your Region</div>
-  <h2 class="slide-t s2">${esc(a.regionName.charAt(0).toUpperCase() + a.regionName.slice(1))} is worth <span class="script">building on</span></h2>
+  <h2 class="slide-t s2">${div.undecided ? 'Wherever you build, it is worth' : esc(a.regionName.charAt(0).toUpperCase() + a.regionName.slice(1)) + ' is worth'} <span class="script">building on</span></h2>
   <p class="body s3">${esc((rset && RSET[rset] && RSET[rset].regionCopy) || div.regionCopy)}</p>
   <p class="body s4">${owns ? 'Land is the one thing they are not making more of, and you already hold yours.' : 'Land is the one thing they are not making more of, and our team helps you find the right piece before you spend a dollar.'}</p>
 </div></section>`);
@@ -656,8 +660,8 @@ slides.push(`<section class="slide"><div class="inner center">
   <div class="cta-box s2">
     <span class="script">Come see it in person.</span>
     <p>Bring this portrait to your design consultation. We will bring it to life: plan by plan, selection by selection, number by number.</p>
-    <p class="addr">Mitchell Homes ${esc(div.studio)} | mitchellhomesinc.com | Ask for your New Home Consultant</p>
-    <p style="margin-top:18px;"><a class="btn-book" href="${bookingUrl(lead.division, lead.land_status)}" target="_blank" rel="noopener">Schedule my ${esc(div.studio)} visit</a></p>
+    <p class="addr">${div.undecided ? 'Mitchell Homes | mitchellhomesinc.com | We will match you with the right Design Studio' : 'Mitchell Homes ' + esc(div.studio) + ' | mitchellhomesinc.com | Ask for your New Home Consultant'}</p>
+    <p style="margin-top:18px;"><a class="btn-book" href="${bookingUrl(lead.division, lead.land_status)}" target="_blank" rel="noopener">${div.undecided ? 'Schedule a call with a New Home Consultant' : 'Schedule my ' + esc(div.studio) + ' visit'}</a></p>
   </div>
   <p class="endnote s3">Our legacy is building Yours simply. | Mitchell Homes builds on your land across Virginia, North Carolina, South Carolina, and Southern Maryland. Zero down, zero closing costs, no construction loan, on approved terms. Design Dollars apply to Design Center selections only, tier determined at selections, program effective September 1, 2026. Watercolor scenes are concept art; final paintings to be commissioned per division.</p>
 </div></section>`);

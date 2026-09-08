@@ -121,8 +121,9 @@ async function api(method, path, body, version) {
 }
 
 let pipelineCache = null;
+// An undecided region (no division) routes to the OSC pipeline so the lead still gets an opportunity.
 async function resolvePipeline(division) {
-  if (!division) return null;
+  if (!division) division = "OSC";
   if (!pipelineCache) {
     const r = await api("GET", `/opportunities/pipelines?locationId=${process.env.HBS_LOCATION_ID}`);
     if (!r.ok) return null;
