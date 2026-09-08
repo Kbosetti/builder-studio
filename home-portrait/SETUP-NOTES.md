@@ -62,6 +62,8 @@ The quiz and portrait already link to these HighLevel calendars by ID; they exis
 | Wilmington, NC | Design Studio Visit With Land / No Land | dEtDNPpoKNnBTY7Sw2Y9 / nf3cLjxsG069HUeNCWkU |
 | Undecided region | Phone Consultation (currently Fredericksburg's) | izsSdkJpFJbCdMsOdFcf |
 
+**Open question for Scott and Brittany (Kelly, Sept 8):** should quiz bookings go to the OSCs first rather than straight to a Design Studio visit? Kelly's expectation is OSC first. If so, the buttons should point at the OSC phone or virtual consultation calendars instead of the Design Studio Visit calendars; that is a calendar ID swap in `portrait.html` and `fullportrait.html`.
+
 For each: assign the team members who take the appointment, set availability and buffers, set the meeting location (studio address or phone), turn on confirmation and reminder email/SMS, and set the appointment title and custom form fields if any. Test one booking per calendar from the live quiz. If the undecided path should book somewhere other than the Fredericksburg phone consultation, change `PHONE_CONSULT` in `portrait.html` and the matching URL in `fullportrait.html`, then redeploy.
 
 ### Workflows (no API for these, build in Automation)
