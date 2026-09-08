@@ -49,6 +49,21 @@ Booking URL pattern: `https://api.leadconnectorhq.com/widget/booking/<calendarId
 
 ## Still manual
 
+### Calendars (Trevor, after approval)
+
+The quiz and portrait already link to these HighLevel calendars by ID; they exist but need to be made bookable:
+
+| Used for | Calendar | ID |
+|---|---|---|
+| Richmond, VA | Design Studio Visit With Land / No Land | lefHeBcANsbjZf5IhZGw / LSDaGxShOPqb9J1t4SCO |
+| Fredericksburg, VA | Design Studio Visit With Land / No Land | 46oGCWfZJoFwbuub1wtV / fkAfa07N4rovoVR0iZMt |
+| Newport News, VA | Design Studio Visit With Land / No Land | 4bOw8XC3FS9aBi1lxCaJ / yHaSZPNP24gcGJkY6MoP |
+| Raleigh, NC | Design Studio Visit With Land / No Land | e7IJYU4ZVbxtsf3RZpbP / ET1aeQY6CmEOXUEZEMZa |
+| Wilmington, NC | Design Studio Visit With Land / No Land | dEtDNPpoKNnBTY7Sw2Y9 / nf3cLjxsG069HUeNCWkU |
+| Undecided region | Phone Consultation (currently Fredericksburg's) | izsSdkJpFJbCdMsOdFcf |
+
+For each: assign the team members who take the appointment, set availability and buffers, set the meeting location (studio address or phone), turn on confirmation and reminder email/SMS, and set the appointment title and custom form fields if any. Test one booking per calendar from the live quiz. If the undecided path should book somewhere other than the Fredericksburg phone consultation, change `PHONE_CONSULT` in `portrait.html` and the matching URL in `fullportrait.html`, then redeploy.
+
 ### Workflows (no API for these, build in Automation)
 
 Every quiz contact arrives with tag `home portrait quiz`, a persona tag, and `contact.nurture_track` set to one of:
