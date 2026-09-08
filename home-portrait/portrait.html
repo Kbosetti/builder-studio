@@ -586,7 +586,7 @@ function reveal(){
   const key = (answers.intent === 'retreat' || answers.intent === 'retire') ? 'G' : topPersona();
   const P = PERSONAS[key];
   const a = answers;
-  a.where = a.division || 'your part of our footprint';
+  a.where = (a.regionName && a.regionName !== 'your part of our footprint') ? a.regionName : (a.division || 'your part of our footprint');
   a.style = a.style || 'one of a kind';
 
   document.getElementById('r-art').innerHTML = framedPortrait(answers.division);
@@ -595,7 +595,8 @@ function reveal(){
   document.getElementById('r-body').innerHTML = `<p>${P.body(a)}</p><p style="font-style:italic;color:#4b5a51;">${P.close}</p>`;
 
   const chips = [];
-  if(a.division) chips.push(a.division);
+  if(a.regionName && a.regionName !== 'your part of our footprint') chips.push(a.regionName.charAt(0).toUpperCase() + a.regionName.slice(1));
+  else if(a.division) chips.push(a.division);
   if(a.style) chips.push(a.style + ' style');
   a.picks.slice(0,3).forEach(p => chips.push(p));
   if(a.timeline) chips.push('timeline: ' + a.timeline);
