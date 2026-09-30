@@ -145,6 +145,7 @@ h2.q{font-weight:500;font-size:clamp(21px,4.4vw,27px);line-height:1.3;margin-bot
 }
 .simply .s-label{font-family:'Charlotte',cursive;color:var(--yellow);font-size:26px;line-height:1;margin-bottom:8px;}
 .simply .s-logo{display:block;height:32px;width:auto;margin:0 0 14px;}
+.sm-inline{height:1.05em;width:auto;vertical-align:-.18em;display:inline-block}
 .simply h3{font-weight:600;font-size:18px;margin-bottom:10px;}
 .simply p{font-size:14px;line-height:1.6;color:#e7efe9;margin-bottom:10px;font-weight:300;}
 .simply .dd-line{font-size:14px;line-height:1.6;color:#e7efe9;font-weight:300;margin:4px 0 12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.18);}
@@ -230,7 +231,7 @@ footer{
         <circle cx="196" cy="34" r="13" fill="#f5d053"/>
       </svg>
       <h2>Your portrait is ready.</h2>
-      <p class="cap-sub">Tell us who it belongs to, and we will send you the full version: your spaces, your plan matches, your Simply Mitchell numbers, and your Design Dollars.</p>
+      <p class="cap-sub">Tell us who it belongs to, and we will send you the full version: your spaces, your plan matches, your <img class="sm-inline" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/41c487e2-7f2d-42a5-b9eb-527d61eb9a8d.png" alt="Simply Mitchell"> numbers, and your Design Dollars.</p>
       <div class="field"><label for="cap-name">First name</label><input type="text" id="cap-name" placeholder="Your first name" autocomplete="given-name"></div>
       <div class="field"><label for="cap-email">Email</label><input type="email" id="cap-email" placeholder="you@example.com" autocomplete="email"></div>
       <button class="btn" onclick="submitCapture()">Reveal My Portrait</button>
@@ -609,10 +610,10 @@ function reveal(){
     <p>Here is something most people discover the hard way: banks get strict when the home is not your primary address. Bigger down payments, tougher construction loan terms, more hoops right when you were dreaming about fewer. Because Mitchell self funds every build, the construction loan simply never exists${owns ? ', and the land you already hold works as your equity' : ''}. The math that usually stops a gathering place is the math that never happens here.</p>`;
   } else if(owns){
     simply += `<h3>Your land can be your down payment.</h3>
-    <p>Because you ${a.land === 'family' ? 'have family land in the picture' : 'already own your land'}, the hardest part of building may already be behind you. With Simply Mitchell, your land works as your equity, and because we self fund construction, there is no construction loan standing between you and breaking ground.</p>`;
+    <p>Because you ${a.land === 'family' ? 'have family land in the picture' : 'already own your land'}, the hardest part of building may already be behind you. With <img class="sm-inline" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f689b758-0925-487c-9f04-fc6562214b2d.png" alt="Simply Mitchell">, your land works as your equity, and because we self fund construction, there is no construction loan standing between you and breaking ground.</p>`;
   } else {
     simply += `<h3>No land yet? You are closer than you think.</h3>
-    <p>Most people assume building custom means a mountain of cash up front. Simply Mitchell was built to remove that mountain. And you do not have to find your land alone: our team helps you evaluate every lot before you buy, from what the county allows to what well and septic will cost, so the right piece of ground becomes a confident decision instead of a leap.</p>`;
+    <p>Most people assume building custom means a mountain of cash up front. <img class="sm-inline" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f689b758-0925-487c-9f04-fc6562214b2d.png" alt="Simply Mitchell"> was built to remove that mountain. And you do not have to find your land alone: our team helps you evaluate every lot before you buy, from what the county allows to what well and septic will cost, so the right piece of ground becomes a confident decision instead of a leap.</p>`;
   }
   const ddPick = a.picks.length ? a.picks[0] : 'the spaces you described';
   simply += `<div class="dd-line"><b>And the finish is funded too.</b> Every Mitchell home comes with $5,000 in Design Dollars for the Design Center, and the more you personalize, the more we add, up to $25,000. The ${ddPick} you chose is exactly where Design Dollars work. Sign now and the incentive is locked; your tier is decided when you make your selections.</div>`;

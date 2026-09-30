@@ -127,6 +127,7 @@ h2.slide-t .script{font-size:.95em;margin-left:.06em;}
 /* Simply math */
 .s-label{font-family:'Charlotte',cursive;color:var(--yellow);font-size:34px;line-height:1;margin-bottom:10px;}
 .s-logo{display:block;height:38px;width:auto;margin-bottom:14px;}
+.sm-inline{height:1.05em;width:auto;vertical-align:-.18em;display:inline-block}
 .mathtable{width:100%;border-collapse:collapse;margin:14px 0 8px;}
 .mathtable td{padding:11px 6px;font-size:clamp(13px,3.6vw,14.5px);border-bottom:1px solid rgba(255,255,255,.18);color:#e7efe9;}
 .mathtable td:last-child{text-align:right;font-weight:600;color:#fff;white-space:nowrap;}
@@ -531,7 +532,7 @@ function simplySlide(){
     p = `You ${lead.land_status === 'family' ? 'have family land in the picture' : 'own your land'}, so the hardest part may already be behind you. Mitchell self funds construction: <span class="hl">no construction loan, ever.</span>`;
   } else {
     h3 = 'No land yet? <span class="script" style="color:var(--yellow);">You are closer than you think.</span>';
-    p = `Most people assume building custom means a mountain of cash up front. Simply Mitchell was built to remove that mountain, and <span class="hl">our team helps you evaluate every lot before you buy.</span>`;
+    p = `Most people assume building custom means a mountain of cash up front. <img class="sm-inline" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f689b758-0925-487c-9f04-fc6562214b2d.png" alt="Simply Mitchell"> was built to remove that mountain, and <span class="hl">our team helps you evaluate every lot before you buy.</span>`;
   }
   const landRow = owns ? '<tr class="s7"><td>Your land equity working for you</td><td>Yes</td></tr>' : '<tr class="s7"><td>Lot evaluation before you buy</td><td>Included</td></tr>';
   return `<section class="slide dark"><div class="inner">
@@ -621,7 +622,7 @@ slides.push(simplySlide());
 slides.push(`<section class="slide wide"><div class="inner">
   <div class="ddlabel s1">Your Design Dollars</div>
   <h2 class="slide-t s2">The more of you goes in, <span class="script">the more Mitchell puts in.</span></h2>
-  <p class="body s3">Simply Mitchell removes the barrier to start. Design Dollars reward the finish. Every Mitchell home comes with $5,000 in Design Dollars to spend in the Design Center, and the more you personalize, the more we add, up to $25,000. <span class="hl">${esc(ddPick.charAt(0).toUpperCase() + ddPick.slice(1))}</span> lives in the Design Center: cabinets, countertops, appliances, lighting, tile. That is exactly where Design Dollars work.</p>
+  <p class="body s3"><img class="sm-inline" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/41c487e2-7f2d-42a5-b9eb-527d61eb9a8d.png" alt="Simply Mitchell"> removes the barrier to start. Design Dollars reward the finish. Every Mitchell home comes with $5,000 in Design Dollars to spend in the Design Center, and the more you personalize, the more we add, up to $25,000. <span class="hl">${esc(ddPick.charAt(0).toUpperCase() + ddPick.slice(1))}</span> lives in the Design Center: cabinets, countertops, appliances, lighting, tile. That is exactly where Design Dollars work.</p>
   <table class="ddtable s4">
     <tr><th>Selections you choose</th><th>Design Dollars we add</th></tr>
     <tr><td>Any Mitchell home</td><td>$5,000</td></tr>
