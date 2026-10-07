@@ -156,6 +156,7 @@ module.exports = async (req, res) => {
   const email = (p.email || "").trim();
   if (!email || email === "(not provided)") { res.status(200).json({ ok: true, skipped: "no email" }); return; }
   const firstName = (p.first_name && p.first_name !== "(not provided)") ? p.first_name : undefined;
+  const lastName = (p.last_name || "").trim() || undefined;
   const phoneDigits = String(p.phone || "").replace(/\D/g, "");
   const phone = phoneDigits.length === 10 ? "+1" + phoneDigits : (phoneDigits.length === 11 && phoneDigits[0] === "1" ? "+" + phoneDigits : undefined);
   const qualified = p.qualified_lead_signal === true || p.qualified_lead_signal === "true";
@@ -199,7 +200,7 @@ module.exports = async (req, res) => {
   const out = { ok: true };
   try {
     const up = await api("POST", "/contacts/upsert", {
-      locationId: process.env.HBS_LOCATION_ID, email, firstName, phone,
+      locationId: process.env.HBS_LOCATION_ID, email, firstName, lastName, phone,
       source: p.source || "home_portrait_quiz", tags, customFields: contactFields
     });
     if (!up.ok) { res.status(200).json({ ok: false, step: "contact", status: up.status, error: up.data }); return; }
