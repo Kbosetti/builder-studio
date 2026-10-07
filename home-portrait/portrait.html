@@ -576,8 +576,6 @@ const WC_ART_RSET = {
   mountain: "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg"
 };
 const WC_ART_UNDECIDED = "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9258a2b9-0359-4bb8-9eda-59d96d9a91d3.jpg";
-/* Undecided region: a phone consultation instead of a division studio visit. */
-const PHONE_CONSULT = "https://api.leadconnectorhq.com/widget/booking/izsSdkJpFJbCdMsOdFcf";
 function framedPortrait(division){
   const s = sceneFor(division);
   const src = (answers.rset && WC_ART_RSET[answers.rset]) || WC_ART[division] || WC_ART_UNDECIDED;
@@ -657,18 +655,9 @@ function fullUrl(){
   const q = new URLSearchParams({ n: p.first_name === "(not provided)" ? "" : (p.first_name || ""), p: p.persona_segment || "", d: p.division || "", l: p.land_status || "", s: p.style_preference || "", k: (p.must_have_spaces || []).join("|"), t: p.timeline || "", r: p.region || "", i: p.home_intent || "", x: p.rset || "" });
   return "/fullportrait?" + q.toString();
 }
-const BOOKING = {
-  "Richmond, VA":       { land:"lefHeBcANsbjZf5IhZGw", noland:"LSDaGxShOPqb9J1t4SCO" },
-  "Fredericksburg, VA": { land:"46oGCWfZJoFwbuub1wtV", noland:"fkAfa07N4rovoVR0iZMt" },
-  "Newport News, VA":   { land:"4bOw8XC3FS9aBi1lxCaJ", noland:"yHaSZPNP24gcGJkY6MoP" },
-  "Raleigh, NC":        { land:"e7IJYU4ZVbxtsf3RZpbP", noland:"ET1aeQY6CmEOXUEZEMZa" },
-  "Wilmington, NC":     { land:"dEtDNPpoKNnBTY7Sw2Y9", noland:"nf3cLjxsG069HUeNCWkU" }
-};
+/* /api/book picks the division's calendar and falls back to that studio's page on mitchellhomesinc.com when it is not bookable. */
 function bookingUrl(division, land){
-  const b = BOOKING[division];
-  if(!b) return PHONE_CONSULT;
-  const owns = land === "owned" || land === "family";
-  return "https://api.leadconnectorhq.com/widget/booking/" + (owns ? b.land : b.noland);
+  return "/api/book?" + new URLSearchParams({ d: division || "", l: land || "" }).toString();
 }
 function scheduleVisit(){ const p = lastPayload || {}; window.open(bookingUrl(p.division, p.land_status), "_blank"); }
 function openFull(){ window.open(fullUrl(), "_blank"); }

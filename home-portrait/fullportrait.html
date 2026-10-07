@@ -480,18 +480,9 @@ function readLead(){
 }
 const lead = readLead() || { first_name:'', persona_segment:'The Value Unlocker', division:'Richmond, VA', land_status:'owned', style_preference:'solid and enduring', must_have_spaces:['first floor primary suite','chef\'s kitchen','covered outdoor living'], timeline:'6 to 12 months', region:'Central Virginia', home_intent:'everyday', rset:'' };
 
-const BOOKING = {
-  "Richmond, VA":       { land:"lefHeBcANsbjZf5IhZGw", noland:"LSDaGxShOPqb9J1t4SCO" },
-  "Fredericksburg, VA": { land:"46oGCWfZJoFwbuub1wtV", noland:"fkAfa07N4rovoVR0iZMt" },
-  "Newport News, VA":   { land:"4bOw8XC3FS9aBi1lxCaJ", noland:"yHaSZPNP24gcGJkY6MoP" },
-  "Raleigh, NC":        { land:"e7IJYU4ZVbxtsf3RZpbP", noland:"ET1aeQY6CmEOXUEZEMZa" },
-  "Wilmington, NC":     { land:"dEtDNPpoKNnBTY7Sw2Y9", noland:"nf3cLjxsG069HUeNCWkU" }
-};
+/* /api/book picks the division's calendar and falls back to that studio's page on mitchellhomesinc.com when it is not bookable. */
 function bookingUrl(division, land){
-  const b = BOOKING[division];
-  if(!b) return "https://api.leadconnectorhq.com/widget/booking/izsSdkJpFJbCdMsOdFcf";
-  const owns = land === "owned" || land === "family";
-  return "https://api.leadconnectorhq.com/widget/booking/" + (owns ? b.land : b.noland);
+  return "/api/book?" + new URLSearchParams({ d: division || "", l: land || "" }).toString();
 }
 const KEY = { "The Value Unlocker":"V", "The Planner":"P", "The Transitioner":"T", "The Grounded Dreamer":"D", "The Gathering Place":"G" };
 const key = KEY[lead.persona_segment] || 'V';

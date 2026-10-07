@@ -51,7 +51,11 @@ Booking URL pattern: `https://api.leadconnectorhq.com/widget/booking/<calendarId
 
 ### Calendars (Trevor, after approval)
 
-The quiz and portrait already link to these HighLevel calendars by ID; they exist but need to be made bookable:
+**Current state (October 7, 2026):** all of these calendars are switched off in the account, along with every other team calendar except five personal ones. A switched-off calendar's booking page returns a 404, which is what buyers were hitting from the quiz.
+
+**How the buttons work now:** "Visit a Design Studio" on the quiz and "Schedule my visit" on the full portrait go to `/api/book` on the quiz site. It checks the division's calendar in Builder Studio on every click. If the calendar is on and has open times in the next 30 days, the buyer goes straight to its booking page. Otherwise they land on that studio's page on mitchellhomesinc.com (`/design-center/<city>-<state>/`, which has Mitchell's own contact and scheduling form), or `/contact/` for undecided buyers. Turning a calendar on with availability is all it takes; no redeploy.
+
+The calendar IDs live only in `api/book.js`:
 
 | Used for | Calendar | ID |
 |---|---|---|
@@ -62,9 +66,9 @@ The quiz and portrait already link to these HighLevel calendars by ID; they exis
 | Wilmington, NC | Design Studio Visit With Land / No Land | dEtDNPpoKNnBTY7Sw2Y9 / nf3cLjxsG069HUeNCWkU |
 | Undecided region | Phone Consultation (currently Fredericksburg's) | izsSdkJpFJbCdMsOdFcf |
 
-**Open question for Scott and Brittany (Kelly, Sept 8):** should quiz bookings go to the OSCs first rather than straight to a Design Studio visit? Kelly's expectation is OSC first. If so, the buttons should point at the OSC phone or virtual consultation calendars instead of the Design Studio Visit calendars; that is a calendar ID swap in `portrait.html` and `fullportrait.html`.
+**Open question for Scott and Brittany (Kelly, Sept 8):** should quiz bookings go to the OSCs first rather than straight to a Design Studio visit? Kelly's expectation is OSC first. If so, the buttons should point at the OSC phone or virtual consultation calendars instead of the Design Studio Visit calendars; that is a calendar ID swap in `api/book.js`.
 
-For each: assign the team members who take the appointment, set availability and buffers, set the meeting location (studio address or phone), turn on confirmation and reminder email/SMS, and set the appointment title and custom form fields if any. Test one booking per calendar from the live quiz. If the undecided path should book somewhere other than the Fredericksburg phone consultation, change `PHONE_CONSULT` in `portrait.html` and the matching URL in `fullportrait.html`, then redeploy.
+For each: turn it on, assign the team members who take the appointment, set availability and buffers, set the meeting location (studio address or phone), turn on confirmation and reminder email/SMS, and set the appointment title and custom form fields if any. Test one booking per calendar from the live quiz; the button switches from the studio page to the booking page as soon as the calendar has open times. If the undecided path should book somewhere other than the Fredericksburg phone consultation, change `UNDECIDED` in `api/book.js` and redeploy.
 
 ### Workflows (no API for these, build in Automation)
 
