@@ -109,11 +109,14 @@ h2.q{font-weight:500;font-size:clamp(21px,4.4vw,27px);line-height:1.3;margin-bot
 .cap-box .cap-sub{font-size:13.5px;color:var(--grey);text-align:center;margin-bottom:22px;line-height:1.6;}
 .field{margin-bottom:14px;}
 .field label{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:6px;}
-.field input{
+.field input,.field select{
   width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:6px;
   font-family:'Montserrat',sans-serif;font-size:15px;color:var(--ink);background:#fff;
 }
-.field input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(43,109,71,.12);}
+.field select{appearance:auto;}
+.field label .optional{text-transform:none;letter-spacing:0;color:var(--grey);font-weight:400;font-size:11px;}
+.cap-err{color:#b3261e;font-size:13px;font-weight:600;text-align:center;margin:4px 0 0;min-height:1em;}
+.field input:focus,.field select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(43,109,71,.12);}
 .skip-link{display:block;text-align:center;font-size:12px;color:var(--grey);margin-top:14px;background:none;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;text-decoration:underline;}
 
 /* Portrait result */
@@ -234,7 +237,10 @@ footer{
       <h2>Your portrait is ready.</h2>
       <p class="cap-sub">Tell us who it belongs to, and we will send you the full version: your spaces, your plan matches, your <img class="sm-inline" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ce104221-b97e-40d0-90a2-7e52159fe2fb.png" alt="Simply Mitchell"> numbers, and your Design Dollars.</p>
       <div class="field"><label for="cap-name">First name</label><input type="text" id="cap-name" placeholder="Your first name" autocomplete="given-name"></div>
-      <div class="field"><label for="cap-email">Email</label><input type="email" id="cap-email" placeholder="you@example.com" autocomplete="email"></div>
+      <div class="field"><label for="cap-email">Email</label><input type="email" id="cap-email" placeholder="you@example.com" autocomplete="email" required></div>
+      <div class="field"><label for="cap-phone">Phone <span class="optional">(optional)</span></label><input type="tel" id="cap-phone" placeholder="(555) 555-5555" autocomplete="tel" inputmode="tel"></div>
+      <div class="field"><label for="cap-county">County or city <span class="optional">(optional)</span></label><select id="cap-county" autocomplete="off"><option value="">Where you plan to build</option><optgroup label="Virginia"><option value="Accomack County - VA">Accomack County, VA</option><option value="Albemarle County - VA">Albemarle County, VA</option><option value="City of Alexandria - VA">City of Alexandria, VA</option><option value="Amelia County - VA">Amelia County, VA</option><option value="Amherst County - VA">Amherst County, VA</option><option value="Appomattox County - VA">Appomattox County, VA</option><option value="Arlington County - VA">Arlington County, VA</option><option value="Augusta County - VA">Augusta County, VA</option><option value="Bedford County - VA">Bedford County, VA</option><option value="Brunswick County - VA">Brunswick County, VA</option><option value="Buckingham County - VA">Buckingham County, VA</option><option value="Campbell County - VA">Campbell County, VA</option><option value="Caroline County - VA">Caroline County, VA</option><option value="Charles City County - VA">Charles City County, VA</option><option value="Charlotte County - VA">Charlotte County, VA</option><option value="City of Chesapeake - VA">City of Chesapeake, VA</option><option value="Chesterfield County - VA">Chesterfield County, VA</option><option value="Clarke County - VA">Clarke County, VA</option><option value="Culpeper County - VA">Culpeper County, VA</option><option value="Cumberland County - VA">Cumberland County, VA</option><option value="Dinwiddie County - VA">Dinwiddie County, VA</option><option value="Essex County - VA">Essex County, VA</option><option value="City of Fairfax - VA">City of Fairfax, VA</option><option value="Fairfax County - VA">Fairfax County, VA</option><option value="Falls Church - VA">Falls Church, VA</option><option value="Fauquier County - VA">Fauquier County, VA</option><option value="Fluvanna County - VA">Fluvanna County, VA</option><option value="City of Franklin - VA">City of Franklin, VA</option><option value="Franklin County - VA">Franklin County, VA</option><option value="Frederick County - VA">Frederick County, VA</option><option value="Fredericksburg - VA">Fredericksburg, VA</option><option value="Gloucester County - VA">Gloucester County, VA</option><option value="Goochland County - VA">Goochland County, VA</option><option value="Greene County - VA">Greene County, VA</option><option value="Greensville County - VA">Greensville County, VA</option><option value="Halifax County - VA">Halifax County, VA</option><option value="Hampton - VA">Hampton, VA</option><option value="Hanover County - VA">Hanover County, VA</option><option value="Harrisonburg - VA">Harrisonburg, VA</option><option value="Henrico County - VA">Henrico County, VA</option><option value="Hopewell - VA">Hopewell, VA</option><option value="Isle of Wight County - VA">Isle of Wight County, VA</option><option value="James City County - VA">James City County, VA</option><option value="King and Queen County - VA">King and Queen County, VA</option><option value="King George County - VA">King George County, VA</option><option value="King William County - VA">King William County, VA</option><option value="Lancaster County - VA">Lancaster County, VA</option><option value="Loudoun County - VA">Loudoun County, VA</option><option value="Louisa County - VA">Louisa County, VA</option><option value="Lunenburg County - VA">Lunenburg County, VA</option><option value="Lynchburg - VA">Lynchburg, VA</option><option value="Madison County - VA">Madison County, VA</option><option value="Manassas - VA">Manassas, VA</option><option value="Manassas Park - VA">Manassas Park, VA</option><option value="Mathews County - VA">Mathews County, VA</option><option value="Mecklenburg County - VA">Mecklenburg County, VA</option><option value="Middlesex County - VA">Middlesex County, VA</option><option value="Nelson County - VA">Nelson County, VA</option><option value="New Kent County - VA">New Kent County, VA</option><option value="Newport News - VA">Newport News, VA</option><option value="Norfolk - VA">Norfolk, VA</option><option value="Northampton County - VA">Northampton County, VA</option><option value="Northumberland County - VA">Northumberland County, VA</option><option value="Nottoway County - VA">Nottoway County, VA</option><option value="Orange County - VA">Orange County, VA</option><option value="Page County - VA">Page County, VA</option><option value="Petersburg - VA">Petersburg, VA</option><option value="Pittsylvania County - VA">Pittsylvania County, VA</option><option value="Poquoson - VA">Poquoson, VA</option><option value="Portsmouth - VA">Portsmouth, VA</option><option value="Powhatan County - VA">Powhatan County, VA</option><option value="Prince Edward County - VA">Prince Edward County, VA</option><option value="Prince George County - VA">Prince George County, VA</option><option value="Prince William County - VA">Prince William County, VA</option><option value="Rappahannock County - VA">Rappahannock County, VA</option><option value="City of Richmond - VA">City of Richmond, VA</option><option value="Richmond County - VA">Richmond County, VA</option><option value="Rockingham County - VA">Rockingham County, VA</option><option value="Shenandoah County - VA">Shenandoah County, VA</option><option value="Southampton County - VA">Southampton County, VA</option><option value="Spotsylvania County - VA">Spotsylvania County, VA</option><option value="Stafford County - VA">Stafford County, VA</option><option value="Staunton - VA">Staunton, VA</option><option value="Suffolk - VA">Suffolk, VA</option><option value="Surry County - VA">Surry County, VA</option><option value="Sussex County - VA">Sussex County, VA</option><option value="Virginia Beach - VA">Virginia Beach, VA</option><option value="Warren County - VA">Warren County, VA</option><option value="Waynesboro - VA">Waynesboro, VA</option><option value="Westmoreland County - VA">Westmoreland County, VA</option><option value="Williamsburg - VA">Williamsburg, VA</option><option value="York County - VA">York County, VA</option></optgroup><optgroup label="Maryland"><option value="Calvert County - MD">Calvert County, MD</option><option value="Charles County - MD">Charles County, MD</option><option value="St. Mary&#x27;s County - MD">St. Mary&#x27;s County, MD</option></optgroup><optgroup label="North Carolina"><option value="Alamance County - NC">Alamance County, NC</option><option value="Beaufort County - NC">Beaufort County, NC</option><option value="Bertie County - NC">Bertie County, NC</option><option value="Bladen County - NC">Bladen County, NC</option><option value="Brunswick County - NC">Brunswick County, NC</option><option value="Camden County - NC">Camden County, NC</option><option value="Carteret County - NC">Carteret County, NC</option><option value="Caswell County - NC">Caswell County, NC</option><option value="Chatham County - NC">Chatham County, NC</option><option value="Chowan County - NC">Chowan County, NC</option><option value="Columbus County - NC">Columbus County, NC</option><option value="Craven County - NC">Craven County, NC</option><option value="Cumberland County - NC">Cumberland County, NC</option><option value="Currituck County - NC">Currituck County, NC</option><option value="Dare County - NC">Dare County, NC</option><option value="Duplin County - NC">Duplin County, NC</option><option value="Durham County - NC">Durham County, NC</option><option value="Edgecombe County - NC">Edgecombe County, NC</option><option value="Franklin County - NC">Franklin County, NC</option><option value="Gates County - NC">Gates County, NC</option><option value="Granville County - NC">Granville County, NC</option><option value="Greene County - NC">Greene County, NC</option><option value="Guilford County - NC">Guilford County, NC</option><option value="Halifax County - NC">Halifax County, NC</option><option value="Harnett County - NC">Harnett County, NC</option><option value="Hertford County - NC">Hertford County, NC</option><option value="Hoke County - NC">Hoke County, NC</option><option value="Hyde County - NC">Hyde County, NC</option><option value="Johnston County - NC">Johnston County, NC</option><option value="Jones County - NC">Jones County, NC</option><option value="Lee County - NC">Lee County, NC</option><option value="Lenoir County - NC">Lenoir County, NC</option><option value="Martin County - NC">Martin County, NC</option><option value="Moore County - NC">Moore County, NC</option><option value="Nash County - NC">Nash County, NC</option><option value="New Hanover County - NC">New Hanover County, NC</option><option value="Northampton County - NC">Northampton County, NC</option><option value="Onslow County - NC">Onslow County, NC</option><option value="Orange County - NC">Orange County, NC</option><option value="Pamlico County - NC">Pamlico County, NC</option><option value="Pasquotank County - NC">Pasquotank County, NC</option><option value="Pender County - NC">Pender County, NC</option><option value="Perquimans County - NC">Perquimans County, NC</option><option value="Person County - NC">Person County, NC</option><option value="Pitt County - NC">Pitt County, NC</option><option value="Randolph County - NC">Randolph County, NC</option><option value="Robeson County - NC">Robeson County, NC</option><option value="Sampson County - NC">Sampson County, NC</option><option value="Scotland County - NC">Scotland County, NC</option><option value="Tyrrell County - NC">Tyrrell County, NC</option><option value="Vance County - NC">Vance County, NC</option><option value="Wake County - NC">Wake County, NC</option><option value="Warren County - NC">Warren County, NC</option><option value="Washington County - NC">Washington County, NC</option><option value="Wayne County - NC">Wayne County, NC</option><option value="Wilson County - NC">Wilson County, NC</option></optgroup><optgroup label="South Carolina"><option value="Dillon County - SC">Dillon County, SC</option><option value="Horry County - SC">Horry County, SC</option><option value="Marion County - SC">Marion County, SC</option><option value="Marlboro County - SC">Marlboro County, SC</option></optgroup><option value="">Not listed, or not sure yet</option></select></div>
+      <p class="cap-err" id="cap-err" role="alert"></p>
       <button class="btn" onclick="submitCapture()">Reveal My Portrait</button>
       <button class="skip-link" onclick="skipCapture()">Skip for now, just show my portrait</button>
     </div>
@@ -513,14 +519,183 @@ function advance(){
     show('s-capture');
   }
 }
+/* County or city -> Design Studio, from the client's Counties/Cities by Design Studio list (October 2026).
+   Values match the County of Interest picklist in Builder Studio. A chosen county decides routing. */
+const COUNTY_DIVISION = {
+"Albemarle County - VA": "Richmond, VA",
+"Amelia County - VA": "Richmond, VA",
+"Amherst County - VA": "Richmond, VA",
+"Appomattox County - VA": "Richmond, VA",
+"Bedford County - VA": "Richmond, VA",
+"Brunswick County - VA": "Richmond, VA",
+"Buckingham County - VA": "Richmond, VA",
+"Campbell County - VA": "Richmond, VA",
+"Charles City County - VA": "Richmond, VA",
+"Charlotte County - VA": "Richmond, VA",
+"Chesterfield County - VA": "Richmond, VA",
+"City of Richmond - VA": "Richmond, VA",
+"Cumberland County - VA": "Richmond, VA",
+"Dinwiddie County - VA": "Richmond, VA",
+"Fluvanna County - VA": "Richmond, VA",
+"Franklin County - VA": "Richmond, VA",
+"Greensville County - VA": "Richmond, VA",
+"Gloucester County - VA": "Richmond, VA",
+"Goochland County - VA": "Richmond, VA",
+"Halifax County - VA": "Richmond, VA",
+"Hampton - VA": "Richmond, VA",
+"Hanover County - VA": "Richmond, VA",
+"Henrico County - VA": "Richmond, VA",
+"Hopewell - VA": "Richmond, VA",
+"James City County - VA": "Richmond, VA",
+"King and Queen County - VA": "Richmond, VA",
+"King William County - VA": "Richmond, VA",
+"Louisa County - VA": "Richmond, VA",
+"Lunenburg County - VA": "Richmond, VA",
+"Lynchburg - VA": "Richmond, VA",
+"Mathews County - VA": "Richmond, VA",
+"Mecklenburg County - VA": "Richmond, VA",
+"Nelson County - VA": "Richmond, VA",
+"New Kent County - VA": "Richmond, VA",
+"Nottoway County - VA": "Richmond, VA",
+"Petersburg - VA": "Richmond, VA",
+"Pittsylvania County - VA": "Richmond, VA",
+"Poquoson - VA": "Richmond, VA",
+"Powhatan County - VA": "Richmond, VA",
+"Prince Edward County - VA": "Richmond, VA",
+"Prince George County - VA": "Richmond, VA",
+"City of Alexandria - VA": "Fredericksburg, VA",
+"Arlington County - VA": "Fredericksburg, VA",
+"Augusta County - VA": "Fredericksburg, VA",
+"Calvert County - MD": "Fredericksburg, VA",
+"Caroline County - VA": "Fredericksburg, VA",
+"Charles County - MD": "Fredericksburg, VA",
+"City of Fairfax - VA": "Fredericksburg, VA",
+"Clarke County - VA": "Fredericksburg, VA",
+"Culpeper County - VA": "Fredericksburg, VA",
+"Essex County - VA": "Fredericksburg, VA",
+"Fairfax County - VA": "Fredericksburg, VA",
+"Falls Church - VA": "Fredericksburg, VA",
+"Fauquier County - VA": "Fredericksburg, VA",
+"Frederick County - VA": "Fredericksburg, VA",
+"Fredericksburg - VA": "Fredericksburg, VA",
+"Greene County - VA": "Fredericksburg, VA",
+"Harrisonburg - VA": "Fredericksburg, VA",
+"King George County - VA": "Fredericksburg, VA",
+"Lancaster County - VA": "Fredericksburg, VA",
+"Loudoun County - VA": "Fredericksburg, VA",
+"Madison County - VA": "Fredericksburg, VA",
+"Manassas - VA": "Fredericksburg, VA",
+"Manassas Park - VA": "Fredericksburg, VA",
+"Middlesex County - VA": "Fredericksburg, VA",
+"Northumberland County - VA": "Fredericksburg, VA",
+"Orange County - VA": "Fredericksburg, VA",
+"Page County - VA": "Fredericksburg, VA",
+"Prince William County - VA": "Fredericksburg, VA",
+"Rappahannock County - VA": "Fredericksburg, VA",
+"Richmond County - VA": "Fredericksburg, VA",
+"Rockingham County - VA": "Fredericksburg, VA",
+"Shenandoah County - VA": "Fredericksburg, VA",
+"Spotsylvania County - VA": "Fredericksburg, VA",
+"St. Mary's County - MD": "Fredericksburg, VA",
+"Stafford County - VA": "Fredericksburg, VA",
+"Staunton - VA": "Fredericksburg, VA",
+"Warren County - VA": "Fredericksburg, VA",
+"Waynesboro - VA": "Fredericksburg, VA",
+"Westmoreland County - VA": "Fredericksburg, VA",
+"Accomack County - VA": "Newport News, VA",
+"City of Chesapeake - VA": "Newport News, VA",
+"City of Franklin - VA": "Newport News, VA",
+"Isle of Wight County - VA": "Newport News, VA",
+"Newport News - VA": "Newport News, VA",
+"Norfolk - VA": "Newport News, VA",
+"Northampton County - VA": "Newport News, VA",
+"Portsmouth - VA": "Newport News, VA",
+"Southampton County - VA": "Newport News, VA",
+"Suffolk - VA": "Newport News, VA",
+"Surry County - VA": "Newport News, VA",
+"Sussex County - VA": "Newport News, VA",
+"Virginia Beach - VA": "Newport News, VA",
+"Williamsburg - VA": "Newport News, VA",
+"York County - VA": "Newport News, VA",
+"Camden County - NC": "Newport News, VA",
+"Chowan County - NC": "Newport News, VA",
+"Currituck County - NC": "Newport News, VA",
+"Gates County - NC": "Newport News, VA",
+"Perquimans County - NC": "Newport News, VA",
+"Pasquotank County - NC": "Newport News, VA",
+"Beaufort County - NC": "Raleigh, NC",
+"Bertie County - NC": "Raleigh, NC",
+"Chatham County - NC": "Raleigh, NC",
+"Craven County - NC": "Raleigh, NC",
+"Dare County - NC": "Raleigh, NC",
+"Durham County - NC": "Raleigh, NC",
+"Edgecombe County - NC": "Raleigh, NC",
+"Franklin County - NC": "Raleigh, NC",
+"Granville County - NC": "Raleigh, NC",
+"Greene County - NC": "Raleigh, NC",
+"Halifax County - NC": "Raleigh, NC",
+"Hertford County - NC": "Raleigh, NC",
+"Hyde County - NC": "Raleigh, NC",
+"Johnston County - NC": "Raleigh, NC",
+"Lenoir County - NC": "Raleigh, NC",
+"Martin County - NC": "Raleigh, NC",
+"Nash County - NC": "Raleigh, NC",
+"Northampton County - NC": "Raleigh, NC",
+"Pamlico County - NC": "Raleigh, NC",
+"Person County - NC": "Raleigh, NC",
+"Pitt County - NC": "Raleigh, NC",
+"Tyrrell County - NC": "Raleigh, NC",
+"Vance County - NC": "Raleigh, NC",
+"Wake County - NC": "Raleigh, NC",
+"Warren County - NC": "Raleigh, NC",
+"Washington County - NC": "Raleigh, NC",
+"Wayne County - NC": "Raleigh, NC",
+"Wilson County - NC": "Raleigh, NC",
+"Alamance County - NC": "Raleigh, NC",
+"Caswell County - NC": "Raleigh, NC",
+"Cumberland County - NC": "Raleigh, NC",
+"Guilford County - NC": "Raleigh, NC",
+"Harnett County - NC": "Raleigh, NC",
+"Hoke County - NC": "Raleigh, NC",
+"Lee County - NC": "Raleigh, NC",
+"Moore County - NC": "Raleigh, NC",
+"Orange County - NC": "Raleigh, NC",
+"Randolph County - NC": "Raleigh, NC",
+"Sampson County - NC": "Raleigh, NC",
+"Bladen County - NC": "Wilmington, NC",
+"Brunswick County - NC": "Wilmington, NC",
+"Carteret County - NC": "Wilmington, NC",
+"Columbus County - NC": "Wilmington, NC",
+"Duplin County - NC": "Wilmington, NC",
+"Jones County - NC": "Wilmington, NC",
+"New Hanover County - NC": "Wilmington, NC",
+"Onslow County - NC": "Wilmington, NC",
+"Pender County - NC": "Wilmington, NC",
+"Robeson County - NC": "Wilmington, NC",
+"Scotland County - NC": "Wilmington, NC",
+"Dillon County - SC": "Wilmington, NC",
+"Horry County - SC": "Wilmington, NC",
+"Marion County - SC": "Wilmington, NC",
+"Marlboro County - SC": "Wilmington, NC"
+};
 function submitCapture(){
+  const err = document.getElementById('cap-err'); err.textContent = '';
+  const email = (document.getElementById('cap-email').value || '').trim();
+  const phone = (document.getElementById('cap-phone').value || '').trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent = 'Please enter your email so we can send your full portrait.'; document.getElementById('cap-email').focus(); return; }
+  if(phone && phone.replace(/\D/g,'').length < 10){ err.textContent = 'Please check your phone number, or leave it blank.'; document.getElementById('cap-phone').focus(); return; }
   answers.first_name = (document.getElementById('cap-name').value || '').trim();
-  answers.email = (document.getElementById('cap-email').value || '').trim();
+  answers.email = email;
+  answers.phone = phone;
+  answers.county = document.getElementById('cap-county').value || '';
   reveal();
 }
 function skipCapture(){
+  document.getElementById('cap-err').textContent = '';
   answers.first_name = '';
   answers.email = '';
+  answers.phone = '';
+  answers.county = '';
   reveal();
 }
 function persistLead(payload){
@@ -619,15 +794,18 @@ function reveal(){
   simply += `<div class="facts"><span>Zero down</span><span>Zero closing costs</span><span>No construction loan</span><span>$5,000 to $25,000 in Design Dollars</span><span>About 150 days to keys</span></div>`;
   document.getElementById('r-simply').innerHTML = simply;
 
+  const routeDivision = (a.county && COUNTY_DIVISION[a.county]) || a.division || "";
   const payload = {
     source: "home_portrait_quiz",
     first_name: a.first_name || "(not provided)",
     email: a.email || "(not provided)",
+    phone: a.phone || "",
+    county: a.county || "",
     submitted_at: new Date().toISOString(),
     persona_segment: P.label.split('| ')[1],
     persona_scores: scores,
     land_status: a.land || "unknown",
-    division: a.division || "",
+    division: routeDivision,
     region: a.regionName || a.division || "",
     home_intent: a.intent || "everyday",
     style_preference: a.style,
@@ -646,7 +824,7 @@ function reveal(){
   persistLead(payload);
   document.getElementById('r-sent').textContent = (a.email && a.email !== '(not provided)') ? 'Your full portrait is on its way to ' + a.email + '.' : 'Want it in your inbox? Tap Email Me My Full Portrait.';
 
-  document.getElementById('visitbtn').textContent = a.division ? 'Visit a Design Studio' : 'Talk to a New Home Consultant';
+  document.getElementById('visitbtn').textContent = routeDivision ? 'Visit a Design Studio' : 'Talk to a New Home Consultant';
   document.getElementById('fill').style.width = '100%';
   show('s-result');
 }

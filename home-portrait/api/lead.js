@@ -156,6 +156,8 @@ module.exports = async (req, res) => {
   const email = (p.email || "").trim();
   if (!email || email === "(not provided)") { res.status(200).json({ ok: true, skipped: "no email" }); return; }
   const firstName = (p.first_name && p.first_name !== "(not provided)") ? p.first_name : undefined;
+  const phoneDigits = String(p.phone || "").replace(/\D/g, "");
+  const phone = phoneDigits.length === 10 ? "+1" + phoneDigits : (phoneDigits.length === 11 && phoneDigits[0] === "1" ? "+" + phoneDigits : undefined);
   const qualified = p.qualified_lead_signal === true || p.qualified_lead_signal === "true";
   const hasLand = p.land_status === "owned" || p.land_status === "family";
   const portraitName = PORTRAIT_NAMES[p.persona_segment] || "";
@@ -180,6 +182,7 @@ module.exports = async (req, res) => {
   if (p.persona_scores) addC("persona_scores", JSON.stringify(p.persona_scores));
   addC("quiz_submitted_at", p.submitted_at);
   addC("quiz_source", p.source);
+  addC("county_of_interest", p.county);
 
   const tags = [
     p.persona_segment,
@@ -196,7 +199,7 @@ module.exports = async (req, res) => {
   const out = { ok: true };
   try {
     const up = await api("POST", "/contacts/upsert", {
-      locationId: process.env.HBS_LOCATION_ID, email, firstName,
+      locationId: process.env.HBS_LOCATION_ID, email, firstName, phone,
       source: p.source || "home_portrait_quiz", tags, customFields: contactFields
     });
     if (!up.ok) { res.status(200).json({ ok: false, step: "contact", status: up.status, error: up.data }); return; }
@@ -213,7 +216,9 @@ module.exports = async (req, res) => {
           "Portrait: " + (portraitName || "unknown"),
           "Persona: " + (p.persona_segment || "unknown"),
           "Land status: " + (p.land_status || "unknown"),
-          "Division: " + (p.division || "unknown"),
+          "Division: " + (p.division || "unknown") + (p.county ? " (from county)" : ""),
+          "County or city: " + (p.county || "not provided"),
+          "Phone: " + (phone || "not provided"),
           "Region: " + (p.region || "unknown"),
           "Home intent: " + (p.home_intent || "everyday"),
           "Timeline to keys: " + (p.timeline || "unknown"),
