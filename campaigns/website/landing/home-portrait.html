@@ -212,8 +212,8 @@ body{margin:0;background:#faf8f3}
 .mhl .foot .base{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:12.5px;color:#9fb3a6;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 
 /* Phone sticky button */
-.mhl .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:50;display:none;transform:translateY(140%);transition:transform .3s ease}
-.mhl .sticky.show{transform:none}
+.mhl .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:50;display:none;transform:translateY(140%);visibility:hidden;transition:transform .3s ease}
+.mhl .sticky.show{transform:none;visibility:visible}
 .mhl .sticky .btn{width:100%;box-shadow:0 12px 30px rgba(0,0,0,.28)}
 
 /* Responsive */
