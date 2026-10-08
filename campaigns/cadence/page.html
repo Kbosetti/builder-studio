@@ -1,0 +1,258 @@
+<title>Mitchell Fall Cadence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: green cover, the weekly rhythm as seven day columns, the rules, touches per week, then the six week calendar (day columns on desktop, a day list on phones) and the sales team playbook. */
+:root{
+  --bg:#faf8f3; --paper:#ffffff; --ink:#1e4f33; --text:#26352c; --muted:#5d6f63; --line:#e2e5da; --wash:#f2f0e8;
+  --accent:#2b6d47; --on-accent:#ffffff; --sun:#f5d053; --on-sun:#1e4f33; --band:#1e4f33; --on-band:#ffffff; --band-muted:#cfe0d4;
+  --c-dd:#e5b922; --c-hp:#2b6d47; --c-fb:#26352c; --c-ref:#929292; --c-all:#b9c4bc; --hold-bg:#fff1c2; --hold:#7a5a00;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --on-accent:#0f1a13; --band:#163a26; --band-muted:#b9cfc0; --c-fb:#d5dfd8; --c-all:#4b5a50; --hold-bg:#3a3010; --hold:#f5d98a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --on-accent:#0f1a13; --band:#163a26; --band-muted:#b9cfc0; --c-fb:#d5dfd8; --c-all:#4b5a50; --hold-bg:#3a3010; --hold:#f5d98a; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance;color:var(--ink)}
+h2{font-size:clamp(23px,3.4vw,31px);font-weight:800;line-height:1.15}
+h3{font-size:16px;font-weight:700}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:16px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.lede{max-width:66ch;color:var(--muted);font-size:16px}
+
+.cover{background:var(--band);color:var(--on-band)}
+.cover .wrap{padding-block:32px 34px;display:flex;flex-direction:column;gap:12px}
+.cover .eyebrow{color:var(--sun)}
+.cover h1{color:#fff;font-size:clamp(32px,5.4vw,52px);font-weight:800;line-height:1.05}
+.cover p{color:var(--band-muted);font-size:16px;max-width:60ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:#e8efe9;margin-top:4px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block;flex:none}
+
+.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:9px;scrollbar-width:none}
+.jump .wrap::-webkit-scrollbar{display:none}
+.jump a{flex:none;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper)}
+
+main.wrap{padding-block:36px 60px;display:flex;flex-direction:column;gap:52px}
+section{display:flex;flex-direction:column;gap:16px;min-width:0}
+.head{display:flex;flex-direction:column;gap:6px}
+
+.rhythm{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.rd{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.rd b{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rd ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.4}
+.rd li{padding-left:10px;border-left:3px solid var(--line)}
+.rd li.e{border-color:var(--accent)} .rd li.t{border-color:var(--sun)} .rd li.s{border-color:var(--ink)}
+
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rule{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px}
+.rule b{display:block;color:var(--ink);margin-bottom:2px}
+
+.loadwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table.load{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;font-variant-numeric:tabular-nums}
+.load th,.load td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:center}
+.load th:first-child,.load td:first-child{text-align:left}
+.load thead th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.load td:first-child{font-weight:600;color:var(--ink)}
+.load tr.tot td{font-weight:800;color:var(--ink);background:var(--wash)}
+.load .z{color:var(--line)}
+
+.filters{display:flex;flex-direction:column;gap:8px}
+.frow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.frow > span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:76px}
+.chip{font:inherit;font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+
+.week{display:flex;flex-direction:column;gap:10px}
+.wh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.wh h3{font-size:18px}
+.wh .theme{color:var(--muted);font-size:14px}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:6px;min-width:0;min-height:90px}
+.day .dl{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.day.empty .dl{opacity:.6}
+.ev{font:inherit;text-align:left;cursor:pointer;background:var(--wash);border:0;border-left:4px solid var(--c-all);border-radius:6px;padding:6px 8px;display:flex;flex-direction:column;gap:2px;width:100%;color:var(--text)}
+.ev:hover{background:var(--line)}
+.ev .c{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ev .n{font-size:12.5px;font-weight:600;line-height:1.3;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ev .h{align-self:flex-start;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:var(--hold-bg);color:var(--hold);border-radius:999px;padding:1px 7px;margin-top:2px}
+.ev.dd{border-left-color:var(--c-dd)} .ev.hp{border-left-color:var(--c-hp)} .ev.fb{border-left-color:var(--c-fb)} .ev.ref{border-left-color:var(--c-ref)}
+.none{font-size:14px;color:var(--muted)}
+
+.plays{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.play{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.play .m{font-size:12.5px;color:var(--muted)}
+.play .copy{white-space:pre-line;background:var(--wash);border-radius:8px;padding:10px 12px;font-size:13.5px;overflow-wrap:anywhere;max-height:280px;overflow:auto}
+.play .nt{font-size:12.5px;color:var(--muted)}
+.b{font:inherit;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;cursor:pointer;border:1.5px solid var(--accent);background:transparent;color:var(--accent);align-self:flex-start}
+
+dialog{border:0;border-radius:16px;padding:0;width:min(640px,calc(100% - 24px));max-height:calc(100% - 24px);background:var(--paper);color:var(--text)}
+dialog::backdrop{background:rgba(8,20,13,.6)}
+.dg{display:flex;flex-direction:column;gap:12px;padding:20px 22px}
+.dg .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.dg .x{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--wash);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;font-size:13.5px}
+.facts dt{font-weight:700;color:var(--muted)}
+.facts dd{margin:0;color:var(--ink);overflow-wrap:anywhere}
+.dg .copy{white-space:pre-line;background:var(--wash);border-radius:8px;padding:10px 12px;font-size:13.5px;overflow-wrap:anywhere}
+.dg img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);max-height:420px;object-fit:cover;object-position:top}
+.dg .nt{font-size:12.5px;color:var(--muted)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
+@media (max-width:980px){
+  .rhythm{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rules{grid-template-columns:minmax(0,1fr)}
+  .days{grid-template-columns:minmax(0,1fr)}
+  .day.empty{display:none}
+  .day{min-height:0}
+}
+</style>
+
+<header class="cover"><div class="wrap">
+  <span class="eyebrow">Mitchell Homes · Fall 2026 · October 12 to November 22</span>
+  <h1>The fall cadence</h1>
+  <p>Every email, text, post and sales follow up for Design Dollars, the Home Portrait and the Four Buyers on one calendar, so it all lands in order and nobody hears from us too often.</p>
+  <div class="legend" id="legend"></div>
+</div></header>
+
+<nav class="jump" aria-label="Sections"><div class="wrap">
+  <a href="#rhythm">Weekly rhythm</a><a href="#rules">Rules</a><a href="#load">Touches per week</a><a href="#calendar">Calendar</a><a href="#playbook">Sales team playbook</a>
+</div></nav>
+
+<main class="wrap">
+  <section id="rhythm">
+    <div class="head"><span class="eyebrow">The weekly rhythm</span><h2>Same shape every week</h2>
+      <p class="lede">Each week has one main email, one text, a personal touch from the sales team, and posts that echo the same theme. The pattern makes it easy to run and easy for buyers to follow.</p></div>
+    <div class="rhythm">
+      <div class="rd"><b>Monday</b><ul><li class="s">Land post on social</li><li>Google profile posts refresh</li></ul></div>
+      <div class="rd"><b>Tuesday</b><ul><li class="e">The week's main email, full list</li><li class="s">Social echoes the email</li></ul></div>
+      <div class="rd"><b>Wednesday</b><ul><li class="t">One text, to people who did not open Tuesday's email</li><li class="e">Realtor or homeowner email</li></ul></div>
+      <div class="rd"><b>Thursday</b><ul><li class="e">Second email, engaged contacts only</li><li class="s">Consultants send their personal touch</li></ul></div>
+      <div class="rd"><b>Friday</b><ul><li class="s">Call list: everyone who clicked this week</li><li>Social</li></ul></div>
+      <div class="rd"><b>Saturday</b><ul><li>Stories and event days</li></ul></div>
+      <div class="rd"><b>Every day</b><ul><li class="s">Quiz takers hear from a person within 15 minutes</li></ul></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="head"><span class="eyebrow">The rules</span><h2>What keeps it from feeling like too much</h2></div>
+    <div class="rules">
+      <div class="rule"><b>Two emails a week at most.</b>Tuesday goes to the full list. Thursday goes only to contacts who opened or clicked in the last 90 days, plus every lead since September 1. Everyone else hears from us once a week.</div>
+      <div class="rule"><b>One text a week at most.</b>Only to contacts with text consent, never on the same day as their email, and only to people who did not open Tuesday's email.</div>
+      <div class="rule"><b>A person follows every signal.</b>Quiz takers and form fills hear from someone within 15 minutes. Anyone who clicks hears from a consultant within one business day, and skips that week's marketing text.</div>
+      <div class="rule"><b>Conversations come first.</b>Anyone booked, under contract, or talking with a consultant comes off the campaign emails and texts, so they only hear from their consultant.</div>
+      <div class="rule"><b>Deadline week is the one heavy week.</b>October 26 to 31 carries two Design Dollars emails, a text, a personal email and a personal text before the October 31 reserve by date. If Mitchell approves a November date, the same pattern repeats the week of November 23.</div>
+      <div class="rule"><b>Holds slide, nothing else moves.</b>A piece marked Hold goes out in the next open slot of its kind once its question is answered. The rest of the calendar stays as it is.</div>
+    </div>
+  </section>
+
+  <section id="load">
+    <div class="head"><span class="eyebrow">Touches per week</span><h2>Balanced from launch to November</h2>
+      <p class="lede">How many pieces go out each week, by channel. Most people receive only a few of these, because each one goes to its own audience.</p></div>
+    <div class="loadwrap"><table class="load" id="loadtable"></table></div>
+  </section>
+
+  <section id="calendar">
+    <div class="head"><span class="eyebrow">The calendar</span><h2>Six weeks, day by day</h2>
+      <p class="lede">Tap anything to see the exact words, who it goes to and who sends it. Filter to one campaign or one channel, or choose Sales team to see only the consultants' part.</p></div>
+    <div class="filters"><div class="frow" id="fcamp"><span>Campaign</span></div><div class="frow" id="fchan"><span>Channel</span></div></div>
+    <div id="weeks" style="display:flex;flex-direction:column;gap:26px"></div>
+  </section>
+
+  <section id="playbook">
+    <div class="head"><span class="eyebrow">Sales team playbook</span><h2>Personal texts and emails, and when to send them</h2>
+      <p class="lede">Marketing starts the conversation; a person finishes it. Each of these fires on what the buyer just did, in the consultant's own voice, from their own phone or email.</p></div>
+    <div class="plays" id="plays"></div>
+  </section>
+</main>
+<footer><div class="wrap">Prepared by CEA Marketing for Mitchell Homes. Dates follow the approved launch order: Design Dollars, then the Home Portrait, then the Four Buyers by division.</div></footer>
+
+<dialog id="dlg" aria-labelledby="dgTitle"><div class="dg">
+  <div class="top"><div><span class="eyebrow" id="dgEyebrow"></span><h3 id="dgTitle" style="font-size:19px;margin-top:4px"></h3></div><button type="button" class="x" id="dgClose">Close</button></div>
+  <dl class="facts" id="dgFacts"></dl>
+  <div id="dgBody"></div>
+</div></dialog>
+
+<script>
+(function(){
+  var D=/*DATA*/null;
+  var CAMPS={dd:'Design Dollars',hp:'Home Portrait',fb:'Four Buyers',ref:'Realtors and homeowners',all:'All campaigns'};
+  var CHANS=['Email','Text','Sales team','Social','Google','Nextdoor','YouTube','Setup'];
+  var THEMES=['Launch: Design Dollars to the database, the Home Portrait to engaged contacts','Spend and add, and the land question','Deadline week: reserve by October 31, and the Four Buyers ads begin','Landowners: your land can be your down payment','Without the unknowns, and the getaway portrait','No construction loan, and one appointment'];
+  function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(a[k]==null)continue;if(k==='text')e.textContent=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c!=null&&c!==false)e.appendChild(typeof c==='string'?document.createTextNode(c):c);});return e;}
+  function day(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+  var fmtD=new Intl.DateTimeFormat('en-US',{weekday:'short',month:'short',day:'numeric'}),fmtL=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric'}),fmtM=new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric'});
+  var start=day(D.start);
+
+  // legend
+  var lg=document.getElementById('legend');
+  [['dd','var(--c-dd)'],['hp','#7cc39a'],['fb','#ffffff'],['ref','var(--c-ref)']].forEach(function(c){lg.appendChild(el('span',{},[el('span',{class:'sw',style:'background:'+c[1]}),CAMPS[c[0]]]));});
+
+  // load table
+  var weeks=[];for(var w=0;w<D.weeks;w++){var s=new Date(start);s.setDate(start.getDate()+7*w);weeks.push(s);}
+  function wk(iso){return Math.floor((day(iso)-start)/(7*864e5));}
+  var lt=document.getElementById('loadtable'),head=el('tr',{},[el('th',{text:'Channel'})].concat(weeks.map(function(s){return el('th',{text:'Week of '+fmtM.format(s)});})));
+  lt.appendChild(el('thead',{},[head]));var tb=el('tbody');var tot=weeks.map(function(){return 0;});
+  CHANS.forEach(function(ch){var row=weeks.map(function(){return 0;});D.events.forEach(function(e){if(e.ch===ch){var i=wk(e.d);if(i>=0&&i<weeks.length)row[i]++;}});
+    if(!row.some(Boolean))return;row.forEach(function(v,i){tot[i]+=v;});
+    tb.appendChild(el('tr',{},[el('td',{text:ch})].concat(row.map(function(v){return el('td',{class:v?'':'z',text:String(v)});}))));});
+  tb.appendChild(el('tr',{class:'tot'},[el('td',{text:'Total'})].concat(tot.map(function(v){return el('td',{text:String(v)});}))));lt.appendChild(tb);
+
+  // filters
+  var fc='all',fh='all';
+  function chips(host,list,get,set){list.forEach(function(o){var b=el('button',{class:'chip',type:'button','aria-pressed':String(o[0]==='all')},[o[2]?el('span',{class:'sw',style:'background:'+o[2]}):null,o[1]]);
+    b.onclick=function(){set(o[0]);[].forEach.call(host.querySelectorAll('.chip'),function(x){x.setAttribute('aria-pressed',String(x===b));});draw();};host.appendChild(b);});}
+  chips(document.getElementById('fcamp'),[['all','All'],['dd','Design Dollars','var(--c-dd)'],['hp','Home Portrait','var(--c-hp)'],['fb','Four Buyers','var(--c-fb)'],['ref','Realtors and homeowners','var(--c-ref)']],null,function(v){fc=v;});
+  chips(document.getElementById('fchan'),[['all','All']].concat(CHANS.map(function(c){return [c,c];})),null,function(v){fh=v;});
+
+  // dialog
+  var dlg=document.getElementById('dlg'),opener=null;
+  function open(e,from){opener=from;document.getElementById('dgEyebrow').textContent=e.ch+(e.tag?' · '+e.tag:'')+' · '+CAMPS[e.camp];document.getElementById('dgTitle').textContent=e.title;
+    var f=document.getElementById('dgFacts');f.textContent='';
+    [['When',fmtL.format(day(e.d))],['Goes to',e.aud],['Sent by',e.who],['Status',e.hold?(/question/.test(e.hold)?e.hold:'On hold until its question is answered'):'Ready']].forEach(function(r){if(r[1]){f.appendChild(el('dt',{text:r[0]}));f.appendChild(el('dd',{text:r[1]}));}});
+    var b=document.getElementById('dgBody');b.textContent='';
+    if(e.img){var im=el('img',{alt:'Preview of the email'});fetch(e.img).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(x){im.src=URL.createObjectURL(x);}).catch(function(){im.src=e.img;});b.appendChild(im);}
+    if(e.body)b.appendChild(el('div',{class:'copy',text:e.body}));
+    if(e.link)b.appendChild(el('p',{class:'nt',text:'Link: '+e.link}));
+    if(e.notes)b.appendChild(el('p',{class:'nt',text:e.notes}));
+    if(dlg.showModal){try{dlg.showModal();}catch(x){dlg.setAttribute('open','');}}else dlg.setAttribute('open','');}
+  document.getElementById('dgClose').onclick=function(){dlg.close?dlg.close():dlg.removeAttribute('open');};
+  dlg.addEventListener('close',function(){if(opener)opener.focus();});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close();});
+
+  // calendar
+  var host=document.getElementById('weeks');
+  function draw(){host.textContent='';var any=false;
+    weeks.forEach(function(s,wi){var grid=el('div',{class:'days'}),count=0;
+      for(var d=0;d<7;d++){var dt=new Date(s);dt.setDate(s.getDate()+d);var iso=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
+        var list=D.events.filter(function(e){return e.d===iso&&(fc==='all'||e.camp===fc)&&(fh==='all'||e.ch===fh);});count+=list.length;
+        var cell=el('div',{class:'day'+(list.length?'':' empty')},[el('div',{class:'dl',text:fmtD.format(dt)})]);
+        list.forEach(function(e){var b=el('button',{type:'button',class:'ev '+e.camp,'aria-label':e.ch+': '+e.title},[el('span',{class:'c',text:e.ch}),el('span',{class:'n',text:e.title}),e.hold?el('span',{class:'h',text:'Hold'}):null]);
+          b.onclick=function(){open(e,b);};cell.appendChild(b);});
+        grid.appendChild(cell);}
+      if(!count)return;any=true;
+      var end=new Date(s);end.setDate(s.getDate()+6);
+      host.appendChild(el('div',{class:'week'},[el('div',{class:'wh'},[el('h3',{text:'Week '+(wi+1)+' · '+fmtM.format(s)+' to '+fmtM.format(end)}),el('span',{class:'theme',text:THEMES[wi]||''})]),grid]));});
+    if(!any)host.appendChild(el('p',{class:'none',text:'Nothing matches these filters. Choose All to see everything.'}));}
+  draw();
+
+  // playbook
+  var pl=document.getElementById('plays');
+  D.playbook.forEach(function(p){var c=el('div',{class:'copy',text:p.body}),b=el('button',{class:'b',type:'button',text:'Copy'});
+    b.onclick=function(){var done=function(t){b.textContent=t;setTimeout(function(){b.textContent='Copy';},1500);};
+      try{navigator.clipboard.writeText(p.body).then(function(){done('Copied');},function(){var r=document.createRange();r.selectNodeContents(c);var s=window.getSelection();s.removeAllRanges();s.addRange(r);done('Selected');});}catch(x){done('Select and copy');}};
+    pl.appendChild(el('div',{class:'play'},[el('h3',{text:p.title}),el('div',{class:'m',text:p.meta}),c,b,p.notes?el('div',{class:'nt',text:p.notes}):null]));});
+})();
+</script>

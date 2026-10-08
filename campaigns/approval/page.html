@@ -195,7 +195,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 
 <div class="bar"><div class="wrap">
   <div class="meter"><span id="meterText">0 of 16 reviewed</span><div class="track" aria-hidden="true"><i class="a" id="mA" style="width:0%"></i><i class="c" id="mC" style="width:0%"></i></div></div>
-  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign off</a></nav>
+  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign off</a></nav>
 </div></div>
 
 <main class="wrap">
@@ -228,6 +228,10 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 
   <section id="print"><div class="head"><span class="eyebrow">Print and events</span><h2>For the Design Centers and the community</h2></div>
     <div id="items-print" style="display:flex;flex-direction:column;gap:18px"></div></section>
+
+  <section id="cadence"><div class="head"><span class="eyebrow">Schedule and follow ups</span><h2>How it all fits together</h2>
+    <p class="lede">One main email, one text and one personal touch from the sales team each week, with posts that echo the same theme, and clear limits so nobody hears from Mitchell too often.</p></div>
+    <div id="items-cadence" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
   <section id="questions"><div class="head"><span class="eyebrow">Questions for Mitchell</span><h2>Sixteen answers that unlock the rest</h2>
     <p class="lede">Items marked Waiting on a question go out as soon as it is answered. Type your answer under each one; it is included in your summary.</p></div>
@@ -368,6 +372,18 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   var PR=document.getElementById('items-print');
   item(PR,'A15','Print pieces ('+D.prints.length+')','Print ready files at 300 dpi','Each QR code is tracked, so every scan is counted.',shots(D.prints.map(function(p){return [p.img,p.title,p.size];})));
   item(PR,'A16','Event ideas ('+L.events.length+')','Proposals for you to choose from','Ways to bring both campaigns into the Design Centers and the events you already run.',posts(L.events));
+
+  var CA=document.getElementById('items-cadence'),K=D.cadence;
+  var rules=el('ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
+    'Two emails a week at most. Tuesday goes to the full list; Thursday only to contacts who opened or clicked in the last 90 days, plus every new lead.',
+    'One text a week at most, never on the same day as an email, and only to people who did not open that week\'s email.',
+    'A person follows every signal: quiz takers hear from someone within 15 minutes, and anyone who clicks hears from a consultant within one business day.',
+    'Anyone booked, under contract or talking with a consultant comes off the campaign emails and texts.',
+    'Deadline week, October 26 to 31, is the one heavy week. Pieces on hold go out in the next open slot once their question is answered.'].map(function(t){return el('li',{text:t});}));
+  var calLink=el('p',{},[el('a',{href:K.url,target:'_blank',rel:'noopener',style:'font-weight:700',text:'Open the full calendar: '+K.url.replace('https://','')})]);
+  item(CA,'A17','The fall schedule','October 12 to November 22 · every email, text, post and sales touch on one calendar','The weekly rhythm, the limits that keep it from feeling like too much, and the full day by day calendar.',
+    el('div',{style:'display:flex;flex-direction:column;gap:14px'},[shots([[K.rhythm,'The weekly rhythm'],[K.week,'Week 1, day by day','Tap to see it larger']]),rules,calLink]));
+  item(CA,'A18','Sales team follow ups ('+L.followups.length+')','Fired by what each buyer does, from the consultant\'s own phone or email','Personal texts and emails for quiz takers, Design Dollars and landowner interest, deadline week, Design Center visits, old leads and realtors.',posts(L.followups,6));
 
   // at a glance
   var M=[['Email',1,1,1],['Website pop-up and landing page',0,1,0],['Website bar and thank you pages',1,1,0],['Social posts',1,1,1],['Google Business Profiles',1,1,1],['YouTube',1,1,0],['Listing portals',1,0,0],['Nextdoor and local groups',1,1,1],['Text messages',1,1,1],['Sales team',1,1,0],['Print',1,1,0],['Events',1,1,0]];

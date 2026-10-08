@@ -61,14 +61,19 @@ for e in em["emails"]:
     e["q"] = qref(e["hold"]) if e["hold"] else 0
 lists = {k: clean(v["items"], skip=("How to post",)) for k, v in
          {"social": org["social"], "gbp": org["gbp"], "youtube": org["youtube"], "portals": org["portals"], "community": org["community"]}.items()}
-lists.update({k: clean(dr[k]["items"]) for k in ("sms", "sales", "website", "events")})
+lists.update({k: clean(dr[k]["items"]) for k in ("sms", "sales", "followups", "website", "events")})
 for k, items in lists.items():
     for it in items:
         it["q"] = qref(it["notes"]) if it["hold"] else 0
         del it["notes"]
 ranking = [{"title": it["title"], "meta": it.get("meta", ""), "body": it["body"]} for it in org["summary"]["items"]]
 
-DATA = {"emails": em, "lists": lists, "prints": prints, "web": web, "ranking": ranking}
+os.makedirs(f"{OUT}/cadence", exist_ok=True)
+for n in ("rhythm", "week1"):
+    shutil.copy(f"{C}/cadence/shots/{n}.jpg", f"{OUT}/cadence/{n}.jpg")
+    files.append(f"cadence/{n}.jpg")
+cadence = {"rhythm": "cadence/rhythm.jpg", "week": "cadence/week1.jpg", "url": "https://mitchell-fall-cadence.vercel.app"}
+DATA = {"emails": em, "lists": lists, "prints": prints, "web": web, "ranking": ranking, "cadence": cadence}
 font = base64.b64encode(open(f"{C}/../home-portrait/fonts/charlotte.woff2", "rb").read()).decode()
 page = (open(f"{HERE}/page.html").read()
         .replace("/*DATA*/null", json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/"))

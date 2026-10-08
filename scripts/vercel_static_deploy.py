@@ -42,6 +42,10 @@ def deploy(site, name):
         if s.get("readyState") in ("READY", "ERROR", "CANCELED"):
             break
         time.sleep(3)
+    for _ in range(20):  # the vercel.app alias can take a few seconds to answer
+        if subprocess.run(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", f"https://{name}.vercel.app/"], capture_output=True, text=True).stdout == "200":
+            break
+        time.sleep(3)
     print(s.get("readyState"), f"https://{name}.vercel.app", f"({len(files)} files)", s.get("projectId", ""))
 
 
