@@ -442,7 +442,7 @@
    "notes": "For leads already in the pipeline, add fall26 quiet in bulk to anyone with no reply in 7 or more days and no appointment."
   },
   {
-   "name": "Fall26 | 05 Quiet lead nurture",
+   "name": "Fall26 | 05 Quiet-lead nurture",
    "purpose": "Sixty days of personal notes, designed emails and texts, until the lead replies or books.",
    "trigger": "Contact Tag added: fall26 quiet",
    "settings": "Texts only with consent, between 10 am and 7 pm local time",

@@ -51,7 +51,7 @@ def clean(items, skip=()):
 def qref(text):
     t = text or ""
     for pat, q in [(r"dreamer|price locked|locked from day one", 5), (r"legal", 7), (r"/math|calculator|comparison", 6), (r"plan guide", 8),
-                   (r"realtor incentive", 11), (r"referral|thank you exists", 12), (r"November|reserve by", 1)]:
+                   (r"realtor incentive", 11), (r"referral|thank.you exists", 12), (r"November|reserve.by", 1)]:
         if re.search(pat, t, re.I):
             return q
     return 0

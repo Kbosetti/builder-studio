@@ -27,7 +27,7 @@ def when(text):
 
 def campaign(*texts):
     t = " ".join(x or "" for x in texts)
-    if re.search(r"Design Dollars|reserve by|ladder", t, re.I) and not re.search(r"Home Portrait|Four Buyers", t):
+    if re.search(r"Design Dollars|reserve.by|ladder", t, re.I) and not re.search(r"Home Portrait|Four Buyers", t):
         return "dd"
     if re.search(r"Home Portrait|portrait|quiz", t, re.I) and not re.search(r"Four Buyers", t):
         return "hp"
@@ -68,7 +68,7 @@ for i in dr["followups"]["items"]:
     d = when(i["meta"])
     if d:
         meta = i["meta"].split(" · ")
-        camp = {"Bring your photos: text": "fb", "Old lead check in: text and email": "hp", "Realtor follow up email": "ref"}.get(i["title"]) or campaign(i["title"], i["body"])
+        camp = {"Bring your photos: text": "fb", "Old-lead check-in: text and email": "hp", "Realtor follow-up email": "ref"}.get(i["title"]) or campaign(i["title"], i["body"])
         ev.append({"d": d, "ch": "Sales team", "camp": camp, "title": i["title"], "aud": meta[1] if len(meta) > 1 else "",
                    "who": "New Home Consultants", "body": i["body"], "notes": clean(i.get("notes", "")), "hold": "Waits on question 11" if "question 11" in i.get("notes", "") else ""})
 # the weekly Friday call list and the Thursday first touch for the quiz launch

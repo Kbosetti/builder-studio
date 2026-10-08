@@ -72,7 +72,7 @@ workflows = [
      "trigger": "Opportunity Created, in any division pipeline", "settings": "Allow re-entry: off",
      "steps": ["Wait: until the contact replies, or an appointment is booked, or 7 days pass", "If 7 days passed with no reply and no appointment, and the opportunity is still in New Lead or Contacted: Add tag fall26 quiet"],
      "exits": [], "notes": "For leads already in the pipeline, add fall26 quiet in bulk to anyone with no reply in 7 or more days and no appointment."},
-    {"name": "Fall26 | 05 Quiet lead nurture", "purpose": "Sixty days of personal notes, designed emails and texts, until the lead replies or books.",
+    {"name": "Fall26 | 05 Quiet-lead nurture", "purpose": "Sixty days of personal notes, designed emails and texts, until the lead replies or books.",
      "trigger": "Contact Tag added: fall26 quiet", "settings": "Texts only with consent, between 10 am and 7 pm local time",
      "steps": ["Day 0: Send email from the assigned user, template " + T("nu1"),
                "Wait 2 days. If text consent: Send SMS, Nurture text, Day 2",

@@ -363,7 +363,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
   // nurture
   lib('lib-nurture',dir.nurture);
   var SU=D.setup||{},nf=document.getElementById('nurtureFlow');
-  var nwf=(SU.workflows||[]).filter(function(w){return /Quiet lead nurture/.test(w.name);})[0];
+  var nwf=(SU.workflows||[]).filter(function(w){return /Quiet.lead nurture/.test(w.name);})[0];
   if(nwf)nwf.steps.concat(nwf.exits.map(function(x){return 'Exit: '+x;})).forEach(function(t){nf.appendChild(el('li',{text:t}));});
 
   // events

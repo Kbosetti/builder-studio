@@ -7,7 +7,7 @@ Compiled October 8, 2026 from the Mitchell Current Incentives doc (updated Septe
 - Rule Zero: sell the home first, the incentive second. Never lead with the offer.
 - Voice: the handshake you trust. Firm, warm, plain. No hype, nothing folksy, flowery, trendy or arrogant. Mitchell is the guide, the buyer is the hero.
 - The program is SimplyMitchell, one word, capital M. It is the program; Mitchell Homes is the brand.
-- Customer facing title: New Home Consultant. The central team that calls new leads: online sales counselors.
+- Customer-facing title: New Home Consultant. The central team that calls new leads: online sales counselors.
 - Geography is always two separate claims: Mitchell builds in Virginia, North Carolina, South Carolina and Maryland. The five Design Centers are in Virginia and North Carolina (Fredericksburg, Richmond, Newport News, Raleigh, Wilmington; Wilmington is open).
 - Never claim a build duration (no "150 days" in campaign assets). Never "price locked" or "the price never changes". The approved Planner claim is "Every choice priced before we build", supported by "You choose in daylight, with the number in front of you, before construction begins."
 - Avoid "Mitchell funds your build, not a bank" (waiting on legal's exact wording). Use the live page wording: "Mitchell self-funds every build" / "No construction loan, because Mitchell self-funds every build."
@@ -37,10 +37,10 @@ Compiled October 8, 2026 from the Mitchell Current Incentives doc (updated Septe
 - Savings rate is 8 percent (never 6.5). Do not quote savings math outside the calculator page.
 
 ## Product facts safe to use
-- Building on your land since 1992. Family owned.
+- Building on your land since 1992. Family-owned.
 - More than 40 floor plans, 1,000 to 3,000 square feet. More than 40,000 selections.
 - $150 reservation deposit is all Mitchell receives until closing.
-- Weekly communication from groundbreaking to move in. Selections made in person at a Design Center.
+- Weekly communication from groundbreaking to move-in. Selections made in person at a Design Center.
 - Online sales counselors usually call back within fifteen minutes (on the Design Dollars page).
 
 ## Links (add UTMs: utm_source, utm_medium, utm_campaign=fall26_portrait | fall26_designdollars | fall26_fourbuyers, utm_content=asset id)
