@@ -1,2 +1,4 @@
 .vercel/
 credentials.env
+__pycache__/
+*.pyc
