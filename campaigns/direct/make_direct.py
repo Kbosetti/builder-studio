@@ -48,8 +48,8 @@ followups = [
  {"title": "Quiz taker: first text", "meta": "Within 15 minutes of the quiz · online sales counselor · text",
   "body": "Hi [first name], this is [your name] with Mitchell Homes. Your [portrait name] just came through, and I love the [first must have] you picked. Would you like to see what it would take to build it? I can set up a quick call or a Design Studio visit.",
   "notes": "Merge fields: contact.portrait_name and contact.design_dollars_focus. Only when the buyer gave text consent on the quiz. This replaces the generic first touch for quiz leads."},
- {"title": "Quiz taker: next day email", "meta": "Next day, if no reply · online sales counselor or New Home Consultant · personal email",
-  "body": "Subject: Your [portrait name]\n\nHi [first name],\n\nI had a chance to look at your Home Portrait. [Region] is a beautiful place to build, and the [first must have] you picked tells me a lot about how you want to live.\n\nTwo things worth knowing as you think it over. Mitchell self funds every build, so on land you own there is zero down and no construction loan. And every Mitchell home now starts with $5,000 in Design Dollars, up to $25,000 the more you personalize.\n\nWould you like to see the Design Studio, or start with a 15 minute call? Reply with a time that works and I will hold it for you." + SIG + FINE,
+ {"title": "Quiz taker: next-day email", "meta": "Next day, if no reply · online sales counselor or New Home Consultant · personal email",
+  "body": "Subject: Your [portrait name]\n\nHi [first name],\n\nI had a chance to look at your Home Portrait. [Region] is a beautiful place to build, and the [first must have] you picked tells me a lot about how you want to live.\n\nTwo things worth knowing as you think it over. Mitchell self-funds every build, so on land you own there is zero down and no construction loan. And every Mitchell home now starts with $5,000 in Design Dollars, up to $25,000 the more you personalize.\n\nWould you like to see the Design Studio, or start with a 15-minute call? Reply with a time that works and I will hold it for you." + SIG + FINE,
   "notes": "Plain text, sent from the consultant's own address so it reads like a person, because it is one."},
  {"title": "Clicked a Design Dollars email: text", "meta": "Within one business day of the click · online sales counselor · text",
   "body": "Hi [first name], [your name] with Mitchell Homes. Every home now starts with $5,000 in Design Dollars for your Design Center selections, up to $25,000 the more you personalize. Happy to show you where your plan would land. Would a quick call this week work?",
@@ -61,12 +61,12 @@ followups = [
   "body": "Subject: Before October 31\n\nHi [first name],\n\nIf building on your land is on your list for next year, this is a good week to lock it in. Reserve by Saturday, October 31, and your Design Dollars are locked: $5,000 to start, up to $25,000 the more you personalize. Your tier is set later, when you choose your finishes.\n\nThe reservation deposit is $150, and that is all Mitchell receives until closing.\n\nWant to talk it through this week? Reply with a time, or call me at the number below." + SIG + FINE,
   "notes": "If Mitchell approves a November date, the same email runs the week of November 23 with the new date."},
  {"title": "Deadline week: text", "meta": "Thursday, October 29 · every New Home Consultant to active leads with text consent · text",
-  "body": "Hi [first name], a quick heads up from [your name] at Mitchell. Reserve by Saturday, Oct 31 and your Design Dollars are locked. You choose your finishes later, and the deposit is $150. Want me to walk you through it before Saturday?",
+  "body": "Hi [first name], a quick heads-up from [your name] at Mitchell. Reserve by Saturday, Oct 31 and your Design Dollars are locked. You choose your finishes later, and the deposit is $150. Want me to walk you through it before Saturday?",
   "notes": "Send only to leads who have not reserved and did not reply to Tuesday's email."},
  {"title": "Clicked a Four Buyers email or page: text", "meta": "Within one business day · New Home Consultant for that division · text",
-  "body": "Hi [first name], [your name] with Mitchell Homes. If you own land, it can count toward your home: zero down, zero closing costs and no construction loan, because Mitchell self funds every build. Would you like me to run the numbers for your land?",
+  "body": "Hi [first name], [your name] with Mitchell Homes. If you own land, it can count toward your home: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. Would you like me to run the numbers for your land?",
   "notes": "Financing terms are illustrative only and subject to credit approval; say so if they ask about numbers."},
- {"title": "Landowner: follow up email", "meta": "Two days after the text, if no reply · New Home Consultant · personal email",
+ {"title": "Landowner: follow-up email", "meta": "Two days after the text, if no reply · New Home Consultant · personal email",
   "body": "Subject: Your land, in numbers\n\nHi [first name],\n\nMost landowners do not realize how far along they already are. With Mitchell, the land you own counts toward the home, there is no construction loan, and there is one closing instead of two.\n\nTell me the county and roughly how many acres, and I will put together what building on it could look like, including the plans that fit.\n\nFinancing terms are illustrative only and subject to credit approval. Not a commitment to lend." + SIG,
   "notes": "Plain text. Attach nothing; the conversation is the point."},
  {"title": "Looking for land: text", "meta": "Within one business day of a No Land click or a quiz answer of still looking · New Home Consultant · text",
@@ -75,13 +75,13 @@ followups = [
  {"title": "After a Design Center visit: text", "meta": "Same day · Design Consultant or New Home Consultant · text",
   "body": "Thank you for coming in today, [first name]. You are [amount] away from the next Design Dollars tier, which adds [amount] more for your selections. Anything you want me to price before we talk next?",
   "notes": "Scott's rule at the design table: tell them the gap. Fill the amounts from the ladder."},
- {"title": "Old lead check in: text and email", "meta": "Once this fall, Thursday, November 12 · New Home Consultant to leads quiet for six months or more",
+ {"title": "Old-lead check-in: text and email", "meta": "Once this fall, Thursday, November 12 · New Home Consultant to leads quiet for six months or more",
   "body": "Text: Hi [first name], [your name] with Mitchell Homes. It has been a while. We built a 90-second quiz that paints a portrait of the home you have in mind: mitchellhomesliving.com/portrait. If building is still on your list, I am here.\n\nEmail subject: Still thinking about building?\nHi [first name], it has been a while since we talked, so I wanted to share something new. Answer eight questions about the home you have in mind, and we paint your Home Portrait, along with what it would take to build it on your land. It takes about 90 seconds: mitchellhomesliving.com/portrait. If the timing is right, I would love to help." + SIG,
   "notes": "Text only to leads with text consent; everyone else gets the email."},
  {"title": "Bring your photos: text", "meta": "Thursday, November 19 · New Home Consultants to active leads with text consent · text",
   "body": "Hi [first name], [your name] with Mitchell Homes. If you have been saving photos of the home you want, bring them in. We will sit down with the plans and price what is in them. Would [day] work for a Design Studio visit?",
   "notes": "The personal side of the Dreamer email the same day. Fine to send even while that email waits on question 5, because this text makes no pricing claim."},
- {"title": "Realtor follow up email", "meta": "Two days after the realtor email, to agents who opened it · New Home Consultant · personal email",
+ {"title": "Realtor follow-up email", "meta": "Two days after the realtor email, to agents who opened it · New Home Consultant · personal email",
   "body": "Subject: Clients with land\n\nHi [first name],\n\nFollowing up on Mitchell's note this week. If you have a client who owns land, or is about to buy some, we would love to help them build on it: zero down, zero closing costs and no construction loan, and every home starts with $5,000 in Design Dollars, up to $25,000.\n\nHappy to meet for coffee or set up a call with your client. [Realtor incentive terms, once Mitchell confirms them.]" + SIG + FINE,
   "notes": "Waits on the realtor incentive terms (question 11)."},
 ]
@@ -100,8 +100,8 @@ for when_, text, url in nurture_texts:
     nitems.append({"title": "Nurture text, " + when_.split(" · ")[0], "meta": when_ + f" · Builder Studio workflow text · about {len(full)} of 160 characters with a typical name",
                    "body": text + " Reply STOP to opt out", "link": u(url, "sms", "sms", "fall26_nurture", "nurture_" + when_.split(" ")[1]) if url.startswith("https://mitchell") else url,
                    "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."})
-sections.append({"id": "nurture", "title": "Quiet lead nurture texts", "why": "Short texts with a question to answer get replies that emails do not; any reply hands the lead straight back to a person.", "items": nitems})
-sections.append({"id": "followups", "title": "Sales team follow ups", "why": "Marketing starts the conversation; a person finishes it. Each follow up fires on what the buyer just did, in the consultant's own voice.", "items": followups})
+sections.append({"id": "nurture", "title": "Quiet-lead nurture texts", "why": "Short texts with a question to answer get replies that emails do not; any reply hands the lead straight back to a person.", "items": nitems})
+sections.append({"id": "followups", "title": "Sales team follow-ups", "why": "Marketing starts the conversation; a person finishes it. Each follow-up fires on what the buyer just did, in the consultant's own voice.", "items": followups})
 
 web = [
  {"title": "Website announcement bar, Design Dollars", "meta": "mitchellhomesinc.com, top of every page, through October 31",
@@ -109,10 +109,10 @@ web = [
   "notes": "The words See how it works are the link. The Design Dollars page carries the fine print."},
  {"title": "Website announcement bar, Home Portrait", "meta": "mitchellhomesinc.com, alternate weeks or after October 31",
   "body": "Every home is a portrait. Discover yours in about 90 seconds. Take the quiz", "link": u(QUIZ, "mitchellhomesinc", "announcement_bar", "fall26_portrait", "bar"), "notes": "Pair with the website pop-up, which never shows on pages that already link the quiz."},
- {"title": "Missed call text back", "meta": "Builder Studio automation, every division number",
+ {"title": "Missed call text-back", "meta": "Builder Studio automation, every division number",
   "body": "Sorry we missed you. This is Mitchell Homes. A New Home Consultant will call you back shortly. While you wait, see what your home could look like: mitchellhomesliving.com/portrait",
   "link": u(QUIZ, "missed_call", "sms", "fall26_portrait", "text_back"), "notes": "Only where the account already sends a missed call text and the caller can receive texts. Keep the callback promise as written; it does not name a time."},
- {"title": "Every form thank you page", "meta": "All Builder Studio and older campaign forms",
+ {"title": "Every form thank-you page", "meta": "All Builder Studio and older campaign forms",
   "body": "Thank you. A New Home Consultant will be in touch soon. While you wait, take 90 seconds to see what your home could look like.\n[Take the Quiz]", "link": u(QUIZ, "thank_you_page", "website", "fall26_portrait", "thank_you"),
   "notes": "Adds the quiz to the busiest moment of intent on the site. The answers then reach the consultant before the first call."},
 ]
@@ -125,14 +125,14 @@ events = [
  {"title": "Fold both campaigns into the next Sip and See", "meta": "Proposal · existing event · needs Mitchell approval",
   "body": "At the next Sip and See, put the Home Portrait counter card on every table and the Design Dollars card at the design table. Guests take the quiz on their phones and walk out with their portrait in their inbox.", "link": "", "notes": "Uses an event Mitchell already runs; adds no cost beyond printing."},
  {"title": "Behind the Build live: your Design Dollars questions", "meta": "Proposal · Facebook and YouTube live · needs Scott and Deven",
-  "body": "A 20 minute live session where Scott and Deven answer Design Dollars and SimplyMitchell questions from viewers. Collect questions beforehand with a social post and a line in the Design Dollars email.", "link": "", "notes": "The recording becomes three or four Shorts, one question each."},
+  "body": "A 20-minute live session where Scott and Deven answer Design Dollars and SimplyMitchell questions from viewers. Collect questions beforehand with a social post and a line in the Design Dollars email.", "link": "", "notes": "The recording becomes three or four Shorts, one question each."},
 ]
 sections.append({"id": "events", "title": "Events", "why": "Mitchell already has five studios and an event format; they can carry both campaigns without paid media.", "items": events})
 
 printp = [
  {"title": "Home Portrait counter card (5 x 7 in)", "meta": "Design Center counters, event tables, closing packets", "body": "Every home is a portrait. Discover Yours. QR code to the quiz.", "link": u(QUIZ, "designcenter", "print", "fall26_portrait", "counter_card"), "notes": "Files: portrait-counter-card.pdf and .png. Print on heavy card stock; fold a second copy into a tent if needed."},
- {"title": "Design Dollars counter card (5 x 7 in)", "meta": "The design table at every Design Center", "body": "The ladder, the sign now line, and a QR code to the Design Dollars page, with fine print.", "link": u(DD, "designcenter", "print", "fall26_designdollars", "counter_card"), "notes": "Files: design-dollars-counter-card.pdf and .png. Lets a consultant point at the gap to the next tier, as Scott asked."},
- {"title": "Landowner community board flyer (8.5 x 11 in)", "meta": "Feed and farm supply stores, hardware stores, county extension offices, libraries, in the counties Mitchell serves", "body": "Own land? See what it could Become. Zero down, zero closing costs, no construction loan. QR code and tear off tabs to the quiz.", "link": u(QUIZ, "community_board", "print", "fall26_portrait", "flyer"), "notes": "Files: landowner-community-flyer.pdf and .png. Ask before posting; many stores keep a community board for exactly this. Replace monthly."},
+ {"title": "Design Dollars counter card (5 x 7 in)", "meta": "The design table at every Design Center", "body": "The ladder, the sign-now line, and a QR code to the Design Dollars page, with fine print.", "link": u(DD, "designcenter", "print", "fall26_designdollars", "counter_card"), "notes": "Files: design-dollars-counter-card.pdf and .png. Lets a consultant point at the gap to the next tier, as Scott asked."},
+ {"title": "Landowner community board flyer (8.5 x 11 in)", "meta": "Feed and farm supply stores, hardware stores, county extension offices, libraries, in the counties Mitchell serves", "body": "Own land? See what it could Become. Zero down, zero closing costs, no construction loan. QR code and tear-off tabs to the quiz.", "link": u(QUIZ, "community_board", "print", "fall26_portrait", "flyer"), "notes": "Files: landowner-community-flyer.pdf and .png. Ask before posting; many stores keep a community board for exactly this. Replace monthly."},
 ]
 sections.append({"id": "print", "title": "Print", "why": "Landowners in rural counties still read the board at the feed store; the QR code makes every flyer measurable.", "items": printp})
 

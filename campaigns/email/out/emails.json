@@ -14,14 +14,14 @@
    "stage": "Decide",
    "campaign": "fall26_designdollars",
    "audience": "Warm audiences and the database only, per the approved rollout. Full marketing list, minus anyone already under contract.",
-   "goal": "Design Center conversations and reservations before the October 31 reserve by date."
+   "goal": "Design Center conversations and reservations before the October 31 reserve-by date."
   },
   {
    "key": "fourbuyers",
    "name": "The Four Buyers",
    "stage": "Believe",
    "campaign": "fall26_fourbuyers",
-   "audience": "Landowner segment (registered as owns land, or quiz contacts tagged with land) for the first four; the looking for land segment gets the fifth. Send to Virginia and Maryland contacts first; the Dreamer and No Land emails have Carolinas versions.",
+   "audience": "Landowner segment (registered as owns land, or quiz contacts tagged with land) for the first four; the looking-for-land segment gets the fifth. Send to Virginia and Maryland contacts first; the Dreamer and No Land emails have Carolinas versions.",
    "goal": "Visits to the matching page and calls to a New Home Consultant. Each email carries one argument and one page."
   },
   {
@@ -34,7 +34,7 @@
   },
   {
    "key": "nurture",
-   "name": "Quiet lead nurture",
+   "name": "Quiet-lead nurture",
    "stage": "Nurture",
    "campaign": "fall26_nurture",
    "audience": "Any lead with no reply, no booked appointment and no stage change seven days after first contact. Leaves the moment they reply, book, reserve or opt out.",
@@ -291,12 +291,12 @@
    "segment": "Past Mitchell homeowners",
    "subject": "Know someone with land and a dream?",
    "preview": "The best Mitchell homes start with a homeowner's introduction.",
-   "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer.",
+   "hold": "Confirm with Mitchell whether a homeowner referral thank-you exists before adding one. This version makes no offer.",
    "subject_len": 35
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu1",
    "send": "Day 0 of the nurture \u00b7 personal email from the consultant",
@@ -308,7 +308,7 @@
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu3",
    "send": "Day 5 \u00b7 designed email",
@@ -320,7 +320,7 @@
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu3n",
    "send": "Day 5 \u00b7 designed email",
@@ -332,7 +332,7 @@
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu4",
    "send": "Day 12 \u00b7 personal email from the consultant",
@@ -344,7 +344,7 @@
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu6",
    "send": "Day 26 \u00b7 designed email",
@@ -356,7 +356,7 @@
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu7",
    "send": "Day 35 \u00b7 personal email from the consultant",
@@ -368,7 +368,7 @@
   },
   {
    "series": "nurture",
-   "series_name": "Quiet lead nurture",
+   "series_name": "Quiet-lead nurture",
    "stage": "Nurture",
    "id": "nu9",
    "send": "Day 60 \u00b7 designed email, then the monthly newsletter",

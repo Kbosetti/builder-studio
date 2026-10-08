@@ -75,7 +75,7 @@
     "Phone is not empty",
     "SMS DND is off and the contact gave text consent",
     "Tags do not include fall26 clicked, fall26 skip text this week, fall26 quiet",
-    "If the campaign report can export non openers of that week's Tuesday email, send to that export instead"
+    "If the campaign report can export non-openers of that week's Tuesday email, send to that export instead"
    ],
    "used_by": "The weekly text"
   },
@@ -325,7 +325,7 @@
    "preview": "The best Mitchell homes start with a homeowner's introduction.",
    "to": "Past Mitchell homeowners",
    "from": "Mitchell Homes",
-   "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer."
+   "hold": "Confirm with Mitchell whether a homeowner referral thank-you exists before adding one. This version makes no offer."
   },
   {
    "when": "Wednesday, October 14",
@@ -404,13 +404,13 @@
    "settings": "Allow re-entry: on",
    "steps": [
     "Add tags: fall26 clicked, fall26 skip text this week",
-    "Create task for the assigned user: Follow up within one business day. Use the follow up script for what they clicked. Due in 1 business day",
+    "Create task for the assigned user: Follow up within one business day. Use the follow-up script for what they clicked. Due in 1 business day",
     "Send internal notification to the assigned user",
     "Wait: 7 days",
     "Remove tags: fall26 clicked, fall26 skip text this week"
    ],
    "exits": [],
-   "notes": "Scripts: Clicked a Design Dollars email: text; Clicked a Four Buyers email or page: text; Landowner: follow up email."
+   "notes": "Scripts: Clicked a Design Dollars email: text; Clicked a Four Buyers email or page: text; Landowner: follow-up email."
   },
   {
    "name": "Fall26 | 03 Quiz taker first touch",
@@ -421,7 +421,7 @@
     "If the contact has a phone and text consent: Send SMS from the assigned user: Hi [first name], this is [your name] with Mitchell Homes. Your [portrait name] just came through, and I love the [first must have] you picked. Would you like to see what it would take to build it? I can set up a quick call or a Design Studio visit.",
     "Otherwise: Create task for the assigned user: Call within 15 minutes",
     "Wait: until the contact replies, or 1 day",
-    "If no reply: Send email from the assigned user, template Fall26 · SALES01 · Your {{contact.portrait_name}} (Quiz taker: next day email)"
+    "If no reply: Send email from the assigned user, template Fall26 · SALES01 · Your {{contact.portrait_name}} (Quiz taker: next-day email)"
    ],
    "exits": [
     "Contact replied",
@@ -430,7 +430,7 @@
    "notes": "Check Mitchell | 01 Inquiry routing first. If it already sends a first text, add this text there instead, so nobody gets two."
   },
   {
-   "name": "Fall26 | 04 Quiet lead detector",
+   "name": "Fall26 | 04 Quiet-lead detector",
    "purpose": "Finds leads who have gone quiet, so the nurture starts on its own.",
    "trigger": "Opportunity Created, in any division pipeline",
    "settings": "Allow re-entry: off",
@@ -475,11 +475,11 @@
     "Add the event tag, for example event bring your photos oct24",
     "Send confirmation email and, with consent, a confirmation text",
     "Wait until the day before the event at 9 am: Send the RSVP reminder text",
-    "Wait until the event day at 4 pm: Send the thank you text from the assigned user",
-    "Wait 1 day: Send the follow up email from the assigned user, and create a task to call"
+    "Wait until the event day at 4 pm: Send the thank-you text from the assigned user",
+    "Wait 1 day: Send the follow-up email from the assigned user, and create a task to call"
    ],
    "exits": [],
-   "notes": "The event invitations, reminders and follow ups are in the Events tab. Create the RSVP form first; its link replaces [RSVP link] in every invitation."
+   "notes": "The event invitations, reminders and follow-ups are in the Events tab. Create the RSVP form first; its link replaces [RSVP link] in every invitation."
   },
   {
    "name": "Fall26 | 07 Realtor replies",
@@ -495,7 +495,7 @@
   },
   {
    "name": "Fall26 | 08 After a Design Center visit",
-   "purpose": "Same day text that tells the buyer how close they are to the next Design Dollars tier.",
+   "purpose": "Same-day text that tells the buyer how close they are to the next Design Dollars tier.",
    "trigger": "Appointment Status: Showed, on the Design Studio Visit calendars",
    "settings": "Or add these steps to Mitchell | NHC 04 Appointment Completed tasks",
    "steps": [
@@ -507,10 +507,10 @@
  ],
  "checklist": [
   "Mitchell signs off in the approval document.",
-  "Sending domain: add a dedicated Mitchell sending domain under Settings, Email Services. Today the platform sends from its default address, which will hurt a 30,000 contact send.",
+  "Sending domain: add a dedicated Mitchell sending domain under Settings, Email Services. Today the platform sends from its default address, which will hurt a 30,000-contact send.",
   "Unsubscribe: send one test. If the account's automatic footer link is on, remove the {{unsubscribe}} line from the templates so there is only one.",
   "Texting: confirm the A2P 10DLC registration for Mitchell's numbers is approved before any bulk text.",
-  "Calendars: the Design Studio Visit calendars are switched off. Turn them on with availability before the events and the quiz follow ups.",
+  "Calendars: the Design Studio Visit calendars are switched off. Turn them on with availability before the events and the quiz follow-ups.",
   "The Home Portrait Quiz trigger link and the Home Portrait Quiz URL custom value point to mitchellhomeportrait.vercel.app, an older copy of the quiz outside CEA's Vercel account. Point both to https://mitchellhomesliving.com/portrait once confirmed.",
   "Routing: check Mitchell | 01 Inquiry routing so quiz leads do not get two first texts.",
   "Past homeowners: tag them homeowner so the referral email has a list.",
