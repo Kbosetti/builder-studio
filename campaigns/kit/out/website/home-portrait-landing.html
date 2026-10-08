@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Home Portrait | Mitchell Homes</title>
+<meta name="description" content="Answer eight questions about the home you dream of and the land it belongs on, and Mitchell Homes paints your Home Portrait. About 90 seconds. No land yet is a good answer too.">
+<link rel="canonical" href="https://www.mitchellhomesinc.com/home-portrait/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Home Portrait | Mitchell Homes">
+<meta property="og:description" content="Answer eight questions. We paint your Home Portrait.">
+<meta property="og:url" content="https://www.mitchellhomesinc.com/home-portrait/">
+<meta property="og:image" content="https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&amp;height=630&amp;mode=crop">
+<meta name="theme-color" content="#1e4f33">
+<link rel="preconnect" href="https://media.mitchellhomesinc.com">
+<link rel="preload" href="https://mitchellhomesliving.com/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<!--
+  DRAFT for review, October 8, 2026, CEA Marketing. Not deployed.
+  Self contained: inline CSS, a few lines of JS for the phone sticky button. All styles are scoped under .mhl
+  so the page can sit inside a vendor template. Fonts load from https://mitchellhomesliving.com/fonts/ (CORS open).
+  Every quiz link carries utm_source=mitchellhomesinc, utm_medium=landing, utm_campaign=fall26_portrait and a
+  utm_content naming the section it sits in. See README.md in this folder.
+-->
+<style>
+@font-face{font-family:'MHP Montserrat';src:url(https://mitchellhomesliving.com/fonts/montserrat.woff2) format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'MHP Charlotte';src:url(https://mitchellhomesliving.com/fonts/charlotte.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+
+/* Standalone page only */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#faf8f3}
+
+.mhl{
+  --green:#2b6d47;--deep:#1e4f33;--yellow:#f5d053;--cream:#faf8f3;--grey:#929292;
+  --ink:#1c2420;--body:#3a433d;--muted:#5c645e;--line:#e6e0d3;--paper:#fffdf8;
+  font-family:'MHP Montserrat','Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--cream);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip;
+}
+.mhl *,.mhl *::before,.mhl *::after{box-sizing:border-box}
+.mhl img{max-width:100%;height:auto;display:block}
+.mhl a{color:inherit}
+.mhl h1,.mhl h2,.mhl h3,.mhl p,.mhl ul,.mhl ol,.mhl figure,.mhl blockquote,.mhl dl,.mhl dd{margin:0;padding:0}
+.mhl ul,.mhl ol{list-style:none}
+.mhl .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.mhl .sec{padding:104px 0}
+.mhl .eyebrow{display:flex;align-items:center;gap:12px;color:var(--green);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;line-height:1.2;margin-bottom:18px}
+.mhl .eyebrow::before{content:"";width:28px;height:3px;border-radius:2px;background:var(--yellow);flex:0 0 28px}
+.mhl h2{font-size:clamp(28px,3.3vw,42px);line-height:1.15;font-weight:600;letter-spacing:-.01em;color:var(--deep);text-wrap:balance}
+.mhl .lede{font-size:18px;line-height:1.65;color:var(--body);max-width:40em;margin-top:18px;text-wrap:pretty}
+.mhl .script{font-family:'MHP Charlotte','Brush Script MT',cursive;font-weight:400;font-style:oblique 10deg;-webkit-text-stroke:.035em currentColor;paint-order:stroke fill;letter-spacing:0}
+.mhl .fine{font-size:12px;line-height:1.6;color:var(--muted);max-width:62em;text-wrap:pretty}
+
+/* Buttons */
+.mhl .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 32px;border-radius:6px;background:var(--green);color:#fff;text-decoration:none;font-size:14.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1;box-shadow:0 8px 20px rgba(30,79,51,.22);transition:background .2s ease,transform .15s ease,box-shadow .2s ease}
+.mhl .btn:hover{background:var(--deep);transform:translateY(-1px);box-shadow:0 12px 26px rgba(30,79,51,.28)}
+.mhl .btn svg{width:16px;height:16px;flex:0 0 16px}
+.mhl .btn.on-dark{background:var(--yellow);color:var(--deep);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.mhl .btn.on-dark:hover{background:#fbe08a}
+.mhl .btn.small{min-height:44px;padding:0 20px;font-size:12.5px;box-shadow:none}
+.mhl .textlink{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--green);text-decoration:none;border-bottom:2px solid var(--yellow);padding-bottom:3px;font-size:15px}
+.mhl .textlink:hover{color:var(--deep)}
+.mhl .textlink svg{width:14px;height:14px}
+.mhl a:focus-visible,.mhl summary:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:4px}
+.mhl .note{font-size:13.5px;font-weight:500;color:var(--muted);margin-top:14px;text-wrap:balance}
+
+/* Header */
+.mhl .top{background:var(--paper);border-bottom:1px solid var(--line)}
+.mhl .top .wrap{display:flex;align-items:center;gap:18px;min-height:96px}
+.mhl .top .logo{height:66px;width:auto}
+.mhl .top .label{font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding-left:18px;border-left:1px solid var(--line);line-height:1.3}
+.mhl .top .btn{margin-left:auto}
+
+/* Hero */
+.mhl .hero{position:relative;min-height:clamp(600px,60vw,1200px);color:#fff;background:#2d2026;overflow:hidden}
+.mhl .hero picture,.mhl .hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 37%}
+.mhl .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(24,16,20,.62) 0%,rgba(24,16,20,.38) 30%,rgba(24,16,20,.05) 52%,rgba(24,16,20,0) 100%)}
+.mhl .hero .wrap{position:relative;z-index:2;width:100%;padding-top:48px;text-align:center}
+.mhl .hero .eyebrow{justify-content:center;color:#fff;margin-bottom:14px;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.mhl .hero h1{font-weight:300;line-height:1.02;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.mhl .hero h1 .a{display:block;font-size:24px;font-weight:600;letter-spacing:.02em;margin-bottom:4px}
+.mhl .hero h1 .b{display:block;font-size:clamp(56px,6.6vw,92px);letter-spacing:-.02em}
+.mhl .hero h1 .script{color:var(--yellow);font-size:1.12em;margin-left:.04em}
+.mhl .hero .lede{color:#fff;margin:16px auto 0;max-width:33em;font-size:18px;font-weight:500;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.mhl .hero .btn{margin-top:24px}
+.mhl .hero .note{color:#fff;margin-top:10px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+
+/* How it works */
+.mhl .how .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:72px;align-items:center}
+.mhl .steps{margin-top:40px;counter-reset:step}
+.mhl .steps li{display:grid;grid-template-columns:76px 1fr;gap:4px 18px;padding:26px 0;border-top:1px solid var(--line)}
+.mhl .steps li:last-child{border-bottom:1px solid var(--line)}
+.mhl .steps .num{font-size:44px;font-weight:200;line-height:1;color:var(--green);grid-row:span 2;letter-spacing:-.02em}
+.mhl .steps h3{font-size:20px;font-weight:700;color:var(--ink);line-height:1.3}
+.mhl .steps p{color:var(--body);font-size:16px;max-width:32em}
+.mhl .how .centers{margin-top:26px;font-size:14.5px;color:var(--muted);display:flex;gap:10px;align-items:flex-start;max-width:34em}
+.mhl .how .centers svg{flex:0 0 18px;width:18px;height:18px;margin-top:2px;color:var(--green)}
+.mhl .how .cta-row{margin-top:30px}
+.mhl .photo{position:relative;border-radius:10px;overflow:hidden;box-shadow:0 24px 60px rgba(30,79,51,.16)}
+.mhl .photo img{width:100%;height:100%;object-fit:cover}
+.mhl .photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 16px;background:linear-gradient(to top,rgba(14,32,21,.7),rgba(14,32,21,0));color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.mhl .how .photo{aspect-ratio:4/5}
+
+/* Inside your portrait */
+.mhl .inside{background:var(--paper)}
+.mhl .inside .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:72px;align-items:start}
+.mhl .items{margin-top:38px;display:grid;grid-template-columns:1fr 1fr;gap:26px 34px}
+.mhl .items li{position:relative;padding-left:38px}
+.mhl .items li::before{content:"";position:absolute;left:0;top:2px;width:24px;height:24px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 12.5l3.2 3.2L17 9' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat}
+.mhl .items h3{font-size:16.5px;font-weight:700;line-height:1.35;color:var(--ink)}
+.mhl .items p{font-size:15px;color:var(--body);margin-top:4px}
+.mhl .inside .fine{margin-top:30px}
+.mhl .inside .cta-row{margin-top:34px}
+.mhl .sample{position:sticky;top:32px;margin-top:8px}
+.mhl .frame{position:relative;background:#fff;padding:18px 18px 22px;border-radius:4px;box-shadow:0 1px 0 var(--line),0 28px 60px rgba(30,79,51,.18);transform:rotate(-1.2deg)}
+.mhl .frame img{width:100%;height:auto;border:1px solid #eee7d8}
+.mhl .frame .tag{position:absolute;top:-14px;left:22px;background:var(--yellow);color:var(--deep);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:7px 12px;border-radius:3px;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+.mhl .frame .sig{display:block;margin-top:12px;text-align:right;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.mhl .sample figcaption{margin-top:22px;font-size:13.5px;line-height:1.6;color:var(--muted);max-width:30em}
+.mhl .sample figcaption b{color:var(--deep)}
+
+/* Five portraits */
+.mhl .cards{margin-top:44px;display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.mhl .card{grid-column:span 2;background:var(--paper);border-radius:10px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.mhl .card:nth-child(4){grid-column:2 / span 2}
+.mhl .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(30,79,51,.12)}
+.mhl .card img{aspect-ratio:16/10;width:100%;object-fit:cover}
+.mhl .card .txt{padding:22px 24px 26px;border-top:4px solid var(--yellow)}
+.mhl .card .k{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+.mhl .card h3{font-size:21px;font-weight:700;line-height:1.25;color:var(--deep);margin-top:6px}
+.mhl .card p{font-size:15px;color:var(--body);margin-top:8px}
+.mhl .portraits .cta-row{margin-top:40px;text-align:center}
+
+/* SimplyMitchell */
+.mhl .simply{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.mhl .simply .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:center}
+.mhl .simply .smlogo{height:40px;width:auto;margin-bottom:26px}
+.mhl .simply h2{color:#fff}
+.mhl .simply .three{display:flex;flex-direction:column;margin-top:28px;border-top:1px solid rgba(255,255,255,.16)}
+.mhl .simply .three span{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:clamp(20px,2vw,25px);font-weight:700;color:var(--yellow);line-height:1.25}
+.mhl .simply .three span::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--yellow)}
+.mhl .simply .lede{color:#e3ece6}
+.mhl .simply .textlink{color:#fff;margin-top:26px}
+.mhl .simply .textlink:hover{color:var(--yellow)}
+.mhl .simply .fine{color:#b9cbbf;margin-top:30px}
+.mhl .simply .photo{aspect-ratio:4/5;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.mhl .simply .photo img{object-position:50% 72%}
+
+/* Design Dollars */
+.mhl .dd .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+.mhl .dd .pics{display:grid;gap:22px}
+.mhl .dd .pics .photo:first-child{aspect-ratio:4/5}
+.mhl .dd .pics .photo:last-child{aspect-ratio:4/3}
+.mhl .dd .big{font-size:20px;font-weight:600;color:var(--ink);line-height:1.5;margin-top:20px;max-width:30em}
+.mhl .dd .big b{color:var(--green)}
+.mhl .ladder{margin-top:30px;width:100%;border-collapse:collapse;background:var(--paper);border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.mhl .ladder caption{caption-side:top;text-align:left;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding-bottom:12px}
+.mhl .ladder th,.mhl .ladder td{padding:13px 20px;text-align:left;font-size:15.5px;border-bottom:1px solid var(--line)}
+.mhl .ladder thead th{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--green);border-bottom:0}
+.mhl .ladder td:last-child,.mhl .ladder th:last-child{text-align:right}
+.mhl .ladder tbody td:last-child{font-weight:700;color:var(--deep)}
+.mhl .ladder tbody tr:last-child td{border-bottom:0;background:#fdf6dc}
+.mhl .dd .read{margin-top:16px;font-size:15px;color:var(--body)}
+.mhl .dd .covers{margin-top:22px;font-size:15px;color:var(--body);max-width:40em}
+.mhl .dd .frameline{margin-top:28px;padding:20px 24px;border-left:4px solid var(--yellow);background:var(--paper);font-size:16px;color:var(--ink);border-radius:0 8px 8px 0}
+.mhl .dd .frameline b{display:block;color:var(--deep);margin-top:4px}
+.mhl .dd .fine{margin-top:24px}
+
+/* Quote */
+.mhl .quote{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mhl .quote .wrap{max-width:940px;text-align:center}
+.mhl .quote .eyebrow{justify-content:center}
+.mhl .quote .mark{font-size:120px;line-height:.6;height:52px;color:var(--yellow);font-weight:700;font-family:Georgia,serif}
+.mhl .quote blockquote p{font-size:clamp(21px,2.3vw,28px);line-height:1.5;font-weight:400;color:var(--ink);text-wrap:balance}
+.mhl .quote cite{display:block;margin-top:24px;font-style:normal;font-weight:700;letter-spacing:.06em;color:var(--deep);font-size:15px}
+.mhl .quote cite span{display:block;font-weight:500;color:var(--muted);letter-spacing:0;margin-top:2px}
+.mhl .quote .textlink{margin-top:22px}
+
+/* FAQ */
+.mhl .faq .wrap{max-width:900px}
+.mhl .faq .list{margin-top:36px;border-top:1px solid var(--line)}
+.mhl .faq details{border-bottom:1px solid var(--line)}
+.mhl .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;font-size:19px;font-weight:700;color:var(--ink)}
+.mhl .faq summary::-webkit-details-marker{display:none}
+.mhl .faq summary::after{content:"";flex:0 0 30px;height:30px;border-radius:50%;background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 6v12M6 12h12' fill='none' stroke='%232b6d47' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center/16px no-repeat;border:1px solid var(--line);transition:transform .2s ease}
+.mhl .faq details[open] summary::after{transform:rotate(45deg)}
+.mhl .faq .ans{padding:0 4px 26px;color:var(--body);font-size:16.5px;max-width:42em}
+.mhl .faq .ans p+p{margin-top:10px}
+.mhl .faq .ans .fine{margin-top:12px}
+
+/* Closing */
+.mhl .closing{position:relative;color:#fff;text-align:center;overflow:hidden;background:#24372b}
+.mhl .closing img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mhl .closing::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(18,40,27,.7),rgba(18,40,27,.5))}
+.mhl .closing .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:120px}
+.mhl .closing h2{color:#fff;font-weight:300;font-size:clamp(30px,4vw,52px);max-width:18em;margin:0 auto}
+.mhl .closing .q{font-size:clamp(20px,2.2vw,26px);font-weight:600;margin-top:16px;color:var(--yellow)}
+.mhl .closing .btn{margin-top:34px}
+.mhl .closing .note{color:#e7efe9}
+
+/* Footer */
+.mhl .foot{background:#15291d;color:#cddad1;font-size:14.5px}
+.mhl .foot .wrap{padding-top:64px;padding-bottom:40px}
+.mhl .foot .cols{display:grid;grid-template-columns:auto 1fr 1fr;gap:40px 56px;align-items:start}
+.mhl .foot .flogo{height:84px;width:auto}
+.mhl .foot h3{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.mhl .foot p{line-height:1.7}
+.mhl .foot a{text-decoration:none;color:#fff}
+.mhl .foot a:hover{color:var(--yellow)}
+.mhl .foot .since{font-weight:700;color:var(--yellow);margin-top:12px}
+.mhl .foot .links{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:14px}
+.mhl .foot .base{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:12.5px;color:#9fb3a6;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+/* Phone sticky button */
+.mhl .sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:50;display:none;transform:translateY(140%);transition:transform .3s ease}
+.mhl .sticky.show{transform:none}
+.mhl .sticky .btn{width:100%;box-shadow:0 12px 30px rgba(0,0,0,.28)}
+
+/* Responsive */
+@media (max-width:1099px){
+  .mhl .hero{min-height:0;display:flex;flex-direction:column}
+  .mhl .hero::before{display:none}
+  .mhl .hero .wrap{padding-top:52px;padding-bottom:0}
+  .mhl .hero picture{position:relative;display:block;inset:auto;margin-top:-6vw;z-index:1;order:2}
+  .mhl .hero picture img{position:static;width:100%;height:auto}
+  .mhl .hero picture::after{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:linear-gradient(#2d2026,rgba(45,32,38,0))}
+  .mhl .hero h1 .b{font-size:clamp(52px,9vw,84px)}
+}
+@media (max-width:1020px){
+  .mhl .how .grid,.mhl .inside .grid,.mhl .simply .grid,.mhl .dd .grid{grid-template-columns:1fr;gap:48px}
+  .mhl .sample{position:relative;top:auto;max-width:520px}
+  .mhl .how .photo{aspect-ratio:16/10}
+  .mhl .dd .pics{order:2;grid-template-columns:1fr 1fr;gap:16px}
+  .mhl .dd .pics .photo:first-child,.mhl .dd .pics .photo:last-child{aspect-ratio:4/5}
+  .mhl .dd .pics figcaption{display:none}
+  .mhl .simply .photo{aspect-ratio:16/10}
+  .mhl .cards{grid-template-columns:1fr 1fr}
+  .mhl .card,.mhl .card:nth-child(4){grid-column:auto}
+  .mhl .card:nth-child(5){grid-column:1 / -1}
+  .mhl .card:nth-child(5) img{aspect-ratio:21/9}
+}
+@media (max-width:719px){
+  .mhl .wrap{padding:0 20px}
+  .mhl .sec{padding:72px 0}
+  .mhl .top .wrap{min-height:84px;gap:14px}
+  .mhl .top .logo{height:64px}
+  .mhl .top .btn{display:none}
+  .mhl .top .label{font-size:11px;letter-spacing:.18em;padding-left:14px}
+  .mhl .hero .wrap{padding-top:40px}
+  .mhl .hero .eyebrow{font-size:11px;letter-spacing:.16em}
+  .mhl .hero h1 .a{font-size:19px}
+  .mhl .hero h1 .b{font-size:58px}
+  .mhl .hero .lede{font-size:17px}
+  .mhl .hero picture{margin-top:-4px}
+  .mhl .btn{width:100%;max-width:420px}
+  .mhl .items{grid-template-columns:1fr;gap:22px}
+  .mhl .steps li{grid-template-columns:56px 1fr;padding:22px 0}
+  .mhl .steps .num{font-size:36px}
+  .mhl .cards{grid-template-columns:1fr;gap:18px}
+  .mhl .card:nth-child(5){grid-column:auto}
+  .mhl .card:nth-child(5) img{aspect-ratio:16/10}
+  .mhl .ladder th,.mhl .ladder td{padding:12px 14px;font-size:14.5px}
+  .mhl .quote .mark{font-size:96px;height:40px}
+  .mhl .faq summary{font-size:17px;padding:20px 2px}
+  .mhl .closing .wrap{padding-top:84px;padding-bottom:84px}
+  .mhl .foot .cols{grid-template-columns:1fr;gap:28px}
+  .mhl .sticky{display:block}
+  .mhl .foot .wrap{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){
+  .mhl .btn,.mhl .card,.mhl .sticky,.mhl .faq summary::after{transition:none}
+  .mhl .btn:hover,.mhl .card:hover{transform:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Do I need to own land?", "acceptedAnswer": {"@type": "Answer", "text": "No. Buyers who own land, share family land, or have no land yet are all welcome, and no land yet is a good answer on the quiz. Your portrait starts from where you are."}},
+    {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "About 90 seconds. There are eight questions: the home first, the land in the middle, and your timing last. Your portrait is ready the moment you finish."}},
+    {"@type": "Question", "name": "What happens after?", "acceptedAnswer": {"@type": "Answer", "text": "Your portrait ends with one next step: a Design Studio visit with a New Home Consultant. You decide if and when. You can also have the full portrait sent to your email to read at your own pace."}},
+    {"@type": "Question", "name": "Is there any cost?", "acceptedAnswer": {"@type": "Answer", "text": "No. The quiz and your Home Portrait cost nothing. If you decide to build, SimplyMitchell means zero down and zero closing costs, and the $150 reservation deposit is all Mitchell receives until closing. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend."}}
+  ]
+}
+</script>
+</head>
+<body>
+<div class="mhl">
+
+  <header class="top">
+    <div class="wrap">
+      <a href="https://www.mitchellhomesinc.com/" aria-label="Mitchell Homes home page"><img class="logo" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png" alt="Mitchell Homes" width="78" height="66"></a>
+      <span class="label">The Home Portrait</span>
+      <a class="btn small" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=header">Begin My Portrait</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <picture>
+        <img src="https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1920" srcset="https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=800 800w, https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1280 1280w, https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1920 1920w, https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=2560 2560w" sizes="100vw" alt="A Mitchell farmhouse with a deep front porch and cedar posts, standing on open lawn under an evening sky" width="1920" height="1699" fetchpriority="high">
+      </picture>
+      <div class="wrap">
+        <p class="eyebrow">Building on your land since 1992</p>
+        <h1 id="hero-title"><span class="a">Every home is a portrait.</span> <span class="b">Discover <span class="script">Yours</span></span></h1>
+        <p class="lede">Answer eight questions about the home you dream of and the land it belongs on. We paint your Home Portrait.</p>
+        <a class="btn on-dark" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=hero">Begin My Portrait <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="note">About 90 seconds. No land yet is a good answer too.</p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="sec how" id="how-it-works" aria-labelledby="how-title">
+      <div class="wrap grid">
+        <div>
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Three steps. The first one takes about 90 seconds.</h2>
+          <ol class="steps">
+            <li><span class="num" aria-hidden="true">01</span><h3>Answer eight questions.</h3><p>The home first, the land in the middle, your timing last. Land of your own, family land or no land yet, every answer has a place.</p></li>
+            <li><span class="num" aria-hidden="true">02</span><h3>See your Home Portrait.</h3><p>A painting of a home in your region, named for the way you live, with your spaces, your style and your path to building it.</p></li>
+            <li><span class="num" aria-hidden="true">03</span><h3>Talk to a New Home Consultant when you are ready.</h3><p>Your portrait ends with one next step: a Design Studio visit. You choose if and when.</p></li>
+          </ol>
+          <p class="centers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>The five Mitchell Design Centers are in Virginia and North Carolina: Fredericksburg, Richmond, Newport News, Raleigh and Wilmington.</span></p>
+          <p class="cta-row"><a class="textlink" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=howitworks">Begin My Portrait <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        </div>
+        <figure class="photo">
+          <img src="https://media.mitchellhomesinc.com/276/2023/3/24/Richmond_Design_Studio.jpg?width=960&amp;height=1200&amp;mode=crop" alt="A Mitchell Design Center with cabinet and countertop samples, a long island and pendant lights" loading="lazy" width="960" height="1200">
+          <figcaption>Inside a Mitchell Design Center</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- WHAT IS INSIDE YOUR PORTRAIT -->
+    <section class="sec inside" id="inside" aria-labelledby="inside-title">
+      <div class="wrap grid">
+        <div>
+          <p class="eyebrow">Inside your portrait</p>
+          <h2 id="inside-title">Eight answers become one portrait of your home.</h2>
+          <p class="lede">Your Home Portrait is built from what you tell us. Here is everything it holds.</p>
+          <ul class="items">
+            <li><h3>A painting of a home in your region</h3><p>A watercolor home, set in the region you choose.</p></li>
+            <li><h3>Your portrait name</h3><p>One of five, matched to how you live and how you decide.</p></li>
+            <li><h3>Your spaces and style</h3><p>The rooms you cannot live without and the feeling your home should give, in your own words.</p></li>
+            <li><h3>The SimplyMitchell answer for your land</h3><p>What zero down, zero closing costs and no construction loan mean for where you stand.</p></li>
+            <li><h3>Your Mitchell Design Dollars</h3><p>Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize.</p></li>
+            <li><h3>The roadmap to keys</h3><p>Every step from your first conversation to the day you get your keys, in order.</p></li>
+            <li><h3>Behind the Build episodes</h3><p>Episodes of the Mitchell podcast, picked for the questions in front of you.</p></li>
+            <li><h3>One next step</h3><p>A Design Studio visit with a New Home Consultant, when you are ready.</p></li>
+          </ul>
+          <p class="fine">Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</p>
+          <p class="cta-row"><a class="btn" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=inside">Begin My Portrait <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        </div>
+        <!--
+          FLAG FOR KELLY: this is the ONLY place a Home Portrait painting appears on this page, shown once and labeled
+          as a sample (the Fredericksburg cover from the Builder Studio media library). The painting is the reward, so
+          paid ads and the website pop-up never show one. If you would rather keep the painting fully unseen until the
+          quiz, delete this <figure> and the page still reads correctly. If this page will receive paid traffic,
+          decide this before launch.
+        -->
+        <figure class="sample">
+          <div class="frame">
+            <span class="tag">Sample</span>
+            <img src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg" alt="Sample Home Portrait painting: a watercolor of a white board and batten farmhouse with a timber porch among autumn trees" loading="lazy" width="560" height="448">
+            <span class="sig">Sample Home Portrait</span>
+          </div>
+          <figcaption><b>A sample painting from the Fredericksburg set.</b> Your portrait paints a home in your region, with your name on it. Paintings are artist concepts.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FIVE PORTRAITS -->
+    <section class="sec portraits" id="portraits" aria-labelledby="portraits-title">
+      <div class="wrap">
+        <p class="eyebrow">Five portraits</p>
+        <h2 id="portraits-title">Which portrait is yours?</h2>
+        <p class="lede">Your answers point to one of five portraits, each one filled in with your own spaces, style and region.</p>
+        <ul class="cards">
+          <li class="card"><img src="https://media.mitchellhomesinc.com/276/2024/7/5/1_GuQrrFW.jpg?width=720&amp;height=450&amp;mode=crop" alt="Aerial view of a Mitchell home with a long drive on open farmland, mountains on the horizon" loading="lazy" width="720" height="450"><div class="txt"><p class="k">Portrait</p><h3>The Landowner's Portrait</h3><p>For the landowner who wants to see the home their ground can hold, and the math behind it.</p></div></li>
+          <li class="card"><img src="https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=720&amp;height=450&amp;mode=crop" alt="A white Mitchell farmhouse with a curved drive, set among tall pines" loading="lazy" width="720" height="450"><div class="txt"><p class="k">Portrait</p><h3>The Dreamer's Portrait</h3><p>For the buyer who can already picture the home and wants a clear path to it.</p></div></li>
+          <li class="card"><img src="https://media.mitchellhomesinc.com/276/2026/3/24/59-DSC06144.jpg?width=720&amp;height=450&amp;mode=crop" alt="A Mitchell kitchen with a long white island, wood cabinets and woven pendant lights" loading="lazy" width="720" height="450"><div class="txt"><p class="k">Portrait</p><h3>The Family Portrait</h3><p>For a household in motion, with a home designed around the people in it.</p></div></li>
+          <li class="card"><img src="https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_20_kAJkdka.jpg?width=720&amp;height=450&amp;mode=crop" alt="A Mitchell Design Center showroom with full kitchen displays and finish samples" loading="lazy" width="720" height="450"><div class="txt"><p class="k">Portrait</p><h3>The Planner's Portrait</h3><p>For the buyer who wants every step named, with every choice priced before we build.</p></div></li>
+          <li class="card"><img src="https://media.mitchellhomesinc.com/276/2026/3/24/10_mwFjkrl.jpg?width=720&amp;height=450&amp;mode=crop" alt="Aerial view of a Mitchell home among pines beside open water and marsh" loading="lazy" width="720" height="450"><div class="txt"><p class="k">Portrait</p><h3>The Gathering Place Portrait</h3><p>For a getaway or a place to retire, by a lake, on the coast or in the mountains.</p></div></li>
+        </ul>
+        <p class="cta-row"><a class="btn" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=portraits">Find My Portrait <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- SIMPLYMITCHELL -->
+    <section class="sec simply" id="simplymitchell" aria-labelledby="simply-title">
+      <div class="wrap grid">
+        <div>
+          <img class="smlogo" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f689b758-0925-487c-9f04-fc6562214b2d.png" alt="SimplyMitchell" width="291" height="40" loading="lazy">
+          <h2 id="simply-title">The simplest way to build your dream home on your land.</h2>
+          <p class="three"><span>Zero down.</span><span>Zero closing costs.</span><span>No construction loan.</span></p>
+          <p class="lede">Mitchell self funds every build, so there is no second closing, no draw period interest and no bank deciding whether your land counts. Your Home Portrait shows what SimplyMitchell means for your land.</p>
+          <a class="textlink" href="https://www.youtube.com/watch?v=8e8mkV1rdzM" target="_blank" rel="noopener">Watch SimplyMitchell Savings on Behind the Build <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <p class="fine">Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</p>
+        </div>
+        <figure class="photo">
+          <img src="https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=960&amp;height=960&amp;mode=crop" alt="Aerial view of a Mitchell home in a green clearing, surrounded by forest" loading="lazy" width="960" height="960">
+        </figure>
+      </div>
+    </section>
+
+    <!-- DESIGN DOLLARS -->
+    <section class="sec dd" id="design-dollars" aria-labelledby="dd-title">
+      <div class="wrap grid">
+        <div class="pics">
+          <figure class="photo">
+            <img src="https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_13_IfaBRgj.jpg?width=960&amp;height=1200&amp;mode=crop" alt="A kitchen display in a Mitchell Design Center with white cabinets, a copper range hood and brass lanterns" loading="lazy" width="960" height="1200">
+            <figcaption>Selections, in person, at a Mitchell Design Center</figcaption>
+          </figure>
+          <figure class="photo">
+            <img src="https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_25_kLtFCYX.jpg?width=960&amp;height=720&amp;mode=crop" alt="Cabinet, countertop and patterned tile backsplash samples in a Mitchell Design Center" loading="lazy" width="960" height="720">
+          </figure>
+        </div>
+        <div>
+          <p class="eyebrow">Mitchell Design Dollars</p>
+          <h2 id="dd-title">The more of you goes into the home, the more Mitchell puts in.</h2>
+          <p class="big">Your home comes with <b>$5,000 in Design Dollars</b>, and it goes up to <b>$25,000</b> the more you personalize.</p>
+          <table class="ladder">
+            <caption>How Design Dollars grow</caption>
+            <thead><tr><th scope="col">Selections you buy</th><th scope="col">Design Dollars Mitchell adds</th></tr></thead>
+            <tbody>
+              <tr><td>Any Mitchell home</td><td>$5,000</td></tr>
+              <tr><td>$25,000</td><td>$7,500</td></tr>
+              <tr><td>$40,000</td><td>$11,000</td></tr>
+              <tr><td>$60,000</td><td>$15,000</td></tr>
+              <tr><td>$80,000</td><td>$20,000</td></tr>
+              <tr><td>$100,000 or more</td><td>$25,000</td></tr>
+            </tbody>
+          </table>
+          <p class="read">Read it this way: buy $60,000 in selections, pay $60,000, and take home $75,000 worth.</p>
+          <p class="covers">Design Dollars go toward anything in the Design Center: cabinets, countertops, flooring, tile, trim and millwork, doors, lighting and electrical, plumbing fixtures, appliances, paint and hardware.</p>
+          <p class="frameline">SimplyMitchell removes the barrier to start. Design Dollars reward the finish. <b>Nothing to start, more to finish.</b></p>
+          <p class="fine">Design Dollars apply to Design Center selections including cabinets, countertops, flooring, tile, trim and millwork, doors, lighting and electrical, plumbing fixtures, appliances, paint, and hardware. Not applicable to structural options, decks, garages, basements, well, septic, site work, or contract category options. Not applied to base price and not redeemable for cash. Tier determined at the time selections are made. One offer per contract. Program effective September 1, 2026. Full terms available from your New Home Consultant.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOMEOWNER QUOTE -->
+    <section class="sec quote" id="homeowners" aria-labelledby="quote-title">
+      <div class="wrap">
+        <p class="eyebrow" id="quote-title">From Mitchell homeowners</p>
+        <div class="mark" aria-hidden="true">&ldquo;</div>
+        <figure>
+          <blockquote><p>Talk about no closing costs, no down payment, no construction loan. That's a big deal. I don't think we appreciated what that meant initially. Now looking back, we're like wow, that's the best choice we could've made to go with Mitchell.</p></blockquote>
+          <figcaption><cite>Lavonnia and Rick Downey<span>Henrico, VA</span></cite></figcaption>
+        </figure>
+        <a class="textlink" href="https://www.youtube.com/watch?v=9vmi-miQzKU" target="_blank" rel="noopener">Watch the Downey family's story <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec faq" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-title">Before you begin.</h2>
+        <div class="list">
+          <details open>
+            <summary>Do I need to own land?</summary>
+            <div class="ans"><p>No. Buyers who own land, share family land, or have no land yet are all welcome, and no land yet is a good answer on the quiz. Your portrait starts from where you are.</p></div>
+          </details>
+          <details>
+            <summary>How long does it take?</summary>
+            <div class="ans"><p>About 90 seconds. There are eight questions: the home first, the land in the middle, and your timing last. Your portrait is ready the moment you finish.</p></div>
+          </details>
+          <details>
+            <summary>What happens after?</summary>
+            <div class="ans"><p>Your portrait ends with one next step: a Design Studio visit with a New Home Consultant. You decide if and when.</p><p>You can also have the full portrait sent to your email to read at your own pace.</p></div>
+          </details>
+          <details>
+            <summary>Is there any cost?</summary>
+            <div class="ans"><p>No. The quiz and your Home Portrait cost nothing. If you decide to build, SimplyMitchell means zero down and zero closing costs, and the $150 reservation deposit is all Mitchell receives until closing.</p><p class="fine">Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="closing" id="begin" aria-labelledby="closing-title">
+      <img src="https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1920&amp;height=1000&amp;mode=crop" alt="" loading="lazy" width="1920" height="1000">
+      <div class="wrap">
+        <h2 id="closing-title">Every home we build is a portrait of its owner.</h2>
+        <p class="q">What will yours look like?</p>
+        <a class="btn on-dark" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=closing">Begin My Portrait <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="note">About 90 seconds. No land yet is a good answer too.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <div class="cols">
+        <img class="flogo" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png" alt="Mitchell Homes" width="99" height="84" loading="lazy">
+        <div>
+          <h3>Mitchell Homes, Inc.</h3>
+          <p>14300 Sommerville Court<br>Midlothian, VA 23113</p>
+          <p class="since">Building on your land since 1992</p>
+          <p style="margin-top:8px">Mitchell builds in Virginia, North Carolina, South Carolina and Maryland.</p>
+        </div>
+        <div>
+          <h3>Talk to a New Home Consultant</h3>
+          <p>Virginia and Maryland<br><a href="tel:+15407012759">(540) 701-2759</a></p>
+          <p style="margin-top:10px">North and South Carolina<br><a href="tel:+19843315468">(984) 331-5468</a></p>
+          <p class="links"><a href="https://www.mitchellhomesinc.com/new-homes/floorplans/">Floor plans</a><a href="https://www.mitchellhomesinc.com/contact/">Contact</a><a href="https://www.mitchellhomesinc.com/">mitchellhomesinc.com</a></p>
+        </div>
+      </div>
+      <div class="base"><span>&copy; 2026 Mitchell Homes, Inc.</span><span>Home Portrait paintings are artist concepts.</span></div>
+    </div>
+  </footer>
+
+  <div class="sticky" id="mhl-sticky" aria-hidden="true">
+    <a class="btn" tabindex="-1" href="https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&amp;utm_medium=landing&amp;utm_campaign=fall26_portrait&amp;utm_content=sticky">Begin My Portrait <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</div>
+
+<script>
+/* Phone sticky button: shows after the hero scrolls away, hides again over the closing call to action. */
+(function () {
+  var bar = document.getElementById('mhl-sticky');
+  var hero = document.querySelector('.mhl .hero');
+  var closing = document.querySelector('.mhl .closing');
+  if (!bar || !hero || !closing || !('IntersectionObserver' in window)) return;
+  var heroVisible = true, closingVisible = false;
+  function update() { bar.classList.toggle('show', !heroVisible && !closingVisible); }
+  new IntersectionObserver(function (e) { heroVisible = e[e.length - 1].isIntersecting; update(); }).observe(hero);
+  new IntersectionObserver(function (e) { closingVisible = e[e.length - 1].isIntersecting; update(); }).observe(closing);
+})();
+</script>
+</body>
+</html>

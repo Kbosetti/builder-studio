@@ -1,0 +1,172 @@
+{
+ "sections": [
+  {
+   "id": "sms",
+   "title": "Text messages",
+   "why": "Texts get read within minutes, and every contact who opted in to texts already raised a hand.",
+   "items": [
+    {
+     "title": "SMS 1 · Design Dollars",
+     "meta": "Wednesday, October 14 · Builder Studio bulk SMS · 155 of 160 characters with a short trigger link",
+     "body": "Mitchell Homes: Every home now starts with $5,000 in Design Dollars, up to $25,000 as you personalize. Terms apply. [trigger link] Reply STOP to opt out",
+     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=sms&utm_medium=sms&utm_campaign=fall26_designdollars&utm_content=sms1",
+     "notes": "Only contacts with SMS consent on file. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
+    },
+    {
+     "title": "SMS 2 · Home Portrait",
+     "meta": "Friday, October 16 · Builder Studio bulk SMS · 148 of 160 characters with a short trigger link",
+     "body": "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: [trigger link] Reply STOP to opt out",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=sms&utm_medium=sms&utm_campaign=fall26_portrait&utm_content=sms2",
+     "notes": "Only contacts with SMS consent on file. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
+    },
+    {
+     "title": "SMS 3 · Design Dollars reserve by",
+     "meta": "Wednesday, October 28 · Builder Studio bulk SMS · 144 of 160 characters with a short trigger link",
+     "body": "Mitchell Homes: Reserve by Oct 31 and your Design Dollars are locked. Choose finishes later. Terms apply. Questions? Just reply. STOP to opt out",
+     "link": "",
+     "notes": "Only contacts with SMS consent on file. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
+    },
+    {
+     "title": "SMS 4 · Landowners",
+     "meta": "Wednesday, November 4 · Builder Studio bulk SMS · 151 of 160 characters with a short trigger link",
+     "body": "Mitchell Homes: Your land can be your down payment. Zero down, zero closing costs, no construction loan. Terms apply. [trigger link] STOP to opt out",
+     "link": "https://simplymitchellhomes.com/land?utm_source=sms&utm_medium=sms&utm_campaign=fall26_fourbuyers&utm_content=sms4",
+     "notes": "Only contacts with SMS consent on file. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
+    }
+   ]
+  },
+  {
+   "id": "sales",
+   "title": "Sales team kit",
+   "why": "Every conversation the team already has can carry the quiz or the offer, at no cost.",
+   "items": [
+    {
+     "title": "Text to a cold or stalled lead (Home Portrait)",
+     "meta": "New Home Consultants and online sales counselors · 1 to 1 texts",
+     "body": "Hi [first name], it is [your name] with Mitchell Homes. We just launched something I think you will like. Answer eight quick questions about the home you have in mind, and we paint a portrait of it. About 90 seconds: mitchellhomesliving.com/portrait. Happy to walk through it with you after.",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=sales_text&utm_medium=sms&utm_campaign=fall26_portrait&utm_content=nhc_text",
+     "notes": "Use the tracked link when texting from Builder Studio; the plain address is fine from a phone."
+    },
+    {
+     "title": "Text to an in market lead (Design Dollars)",
+     "meta": "New Home Consultants · 1 to 1 texts",
+     "body": "Hi [first name], quick update from Mitchell. Every home now starts with $5,000 in Design Dollars for your Design Center selections, and it goes up to $25,000 the more you personalize. Sign now and it is locked; your tier is set later, when you make your selections. Want me to show you where your plan would land on the ladder?",
+     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=sales_text&utm_medium=sms&utm_campaign=fall26_designdollars&utm_content=nhc_text",
+     "notes": "Design Dollars never come off the base price and are never cash. If asked, say so plainly."
+    },
+    {
+     "title": "Voicemail",
+     "meta": "New Home Consultants · about 25 seconds",
+     "body": "Hi [first name], this is [your name], a New Home Consultant with Mitchell Homes. I am calling with two things. Every Mitchell home now comes with $5,000 in Design Dollars, and it grows to $25,000 the more you personalize. And if you want to see what your home could look like first, we built a 90 second quiz at mitchellhomesliving.com slash portrait. Call or text me back at [number]. Thanks, [first name].",
+     "link": "",
+     "notes": ""
+    },
+    {
+     "title": "Opening the first call with a Home Portrait lead",
+     "meta": "From the Home Portrait sales deck",
+     "body": "1. Open with their portrait. Say the portrait name and the region. They will recognize it.\n2. Ask about one thing they picked: a must have, the land, or the people who will live there.\n3. Offer the next step their portrait named: a Design Studio visit, or a land walk if they have land.\nSkip: So, what are you looking for? They already told you.",
+     "link": "",
+     "notes": "The full scripts per portrait are in the Home Portrait deck inside the Fall Campaign Guide."
+    },
+    {
+     "title": "Email signature line",
+     "meta": "Everyone at Mitchell who emails buyers",
+     "body": "See what your home could look like. Take the Home Portrait quiz: mitchellhomesliving.com/portrait",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=email_signature&utm_medium=email&utm_campaign=fall26_portrait&utm_content=signature_line",
+     "notes": "Or use the signature banner image in the print section. Host it in the Builder Studio media library and link it with this URL."
+    }
+   ]
+  },
+  {
+   "id": "website",
+   "title": "Website and automations",
+   "why": "People already on the site or already in the CRM are the cheapest clicks there are.",
+   "items": [
+    {
+     "title": "Website announcement bar, Design Dollars",
+     "meta": "mitchellhomesinc.com, top of every page, through October 31",
+     "body": "Every Mitchell home now starts with $5,000 in Design Dollars, up to $25,000. See how it works",
+     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=mitchellhomesinc&utm_medium=announcement_bar&utm_campaign=fall26_designdollars&utm_content=bar",
+     "notes": "The words See how it works are the link. The Design Dollars page carries the fine print."
+    },
+    {
+     "title": "Website announcement bar, Home Portrait",
+     "meta": "mitchellhomesinc.com, alternate weeks or after October 31",
+     "body": "Every home is a portrait. Discover yours in about 90 seconds. Take the quiz",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&utm_medium=announcement_bar&utm_campaign=fall26_portrait&utm_content=bar",
+     "notes": "Pair with the website pop-up, which never shows on pages that already link the quiz."
+    },
+    {
+     "title": "Missed call text back",
+     "meta": "Builder Studio automation, every division number",
+     "body": "Sorry we missed you. This is Mitchell Homes. A New Home Consultant will call you back shortly. While you wait, see what your home could look like: mitchellhomesliving.com/portrait",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=missed_call&utm_medium=sms&utm_campaign=fall26_portrait&utm_content=text_back",
+     "notes": "Only where the account already sends a missed call text and the caller can receive texts. Keep the callback promise as written; it does not name a time."
+    },
+    {
+     "title": "Every form thank you page",
+     "meta": "All Builder Studio and older campaign forms",
+     "body": "Thank you. A New Home Consultant will be in touch soon. While you wait, take 90 seconds to see what your home could look like.\n[Take the Quiz]",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=thank_you_page&utm_medium=website&utm_campaign=fall26_portrait&utm_content=thank_you",
+     "notes": "Adds the quiz to the busiest moment of intent on the site. The answers then reach the consultant before the first call."
+    }
+   ]
+  },
+  {
+   "id": "events",
+   "title": "Events",
+   "why": "Mitchell already has five studios and an event format; they can carry both campaigns without paid media.",
+   "items": [
+    {
+     "title": "Bring Your Photos Saturdays",
+     "meta": "Proposal · all five Design Centers · needs Mitchell approval and staffing",
+     "body": "Open studio hours on two Saturdays this fall. Buyers bring the photos they have been saving, sit with a Design Consultant, and see what their favorites cost and which Design Dollars tier they would reach. Promote it in the Design Dollars emails, a text, the Google Business Profile event post for each studio, and Facebook events.",
+     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=event&utm_medium=event&utm_campaign=fall26_designdollars&utm_content=photos_saturday",
+     "notes": "Ties the Design Dollars offer to the Grounded Dreamer argument: one appointment, bring the photos."
+    },
+    {
+     "title": "Fold both campaigns into the next Sip and See",
+     "meta": "Proposal · existing event · needs Mitchell approval",
+     "body": "At the next Sip and See, put the Home Portrait counter card on every table and the Design Dollars card at the design table. Guests take the quiz on their phones and walk out with their portrait in their inbox.",
+     "link": "",
+     "notes": "Uses an event Mitchell already runs; adds no cost beyond printing."
+    },
+    {
+     "title": "Behind the Build live: your Design Dollars questions",
+     "meta": "Proposal · Facebook and YouTube live · needs Scott and Deven",
+     "body": "A 20 minute live session where Scott and Deven answer Design Dollars and SimplyMitchell questions from viewers. Collect questions beforehand with a social post and a line in the Design Dollars email.",
+     "link": "",
+     "notes": "The recording becomes three or four Shorts, one question each."
+    }
+   ]
+  },
+  {
+   "id": "print",
+   "title": "Print",
+   "why": "Landowners in rural counties still read the board at the feed store; the QR code makes every flyer measurable.",
+   "items": [
+    {
+     "title": "Home Portrait counter card (5 x 7 in)",
+     "meta": "Design Center counters, event tables, closing packets",
+     "body": "Every home is a portrait. Discover Yours. QR code to the quiz.",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=designcenter&utm_medium=print&utm_campaign=fall26_portrait&utm_content=counter_card",
+     "notes": "Files: portrait-counter-card.pdf and .png. Print on heavy card stock; fold a second copy into a tent if needed."
+    },
+    {
+     "title": "Design Dollars counter card (5 x 7 in)",
+     "meta": "The design table at every Design Center",
+     "body": "The ladder, the sign now line, and a QR code to the Design Dollars page, with fine print.",
+     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=designcenter&utm_medium=print&utm_campaign=fall26_designdollars&utm_content=counter_card",
+     "notes": "Files: design-dollars-counter-card.pdf and .png. Lets a consultant point at the gap to the next tier, as Scott asked."
+    },
+    {
+     "title": "Landowner community board flyer (8.5 x 11 in)",
+     "meta": "Feed and farm supply stores, hardware stores, county extension offices, libraries, in the counties Mitchell serves",
+     "body": "Own land? See what it could Become. Zero down, zero closing costs, no construction loan. QR code and tear off tabs to the quiz.",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=community_board&utm_medium=print&utm_campaign=fall26_portrait&utm_content=flyer",
+     "notes": "Files: landowner-community-flyer.pdf and .png. Ask before posting; many stores keep a community board for exactly this. Replace monthly."
+    }
+   ]
+  }
+ ]
+}

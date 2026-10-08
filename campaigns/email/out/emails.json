@@ -163,7 +163,7 @@
    "segment": "Owns land or family land, Virginia and Maryland",
    "subject": "No construction loan to build on your land",
    "preview": "If a bank is the reason you stopped, read this.",
-   "hold": "Hold until legal approves the financing wording, to match the Transitioner ad and reel.",
+   "hold": "Hold until legal approves the financing wording (to match the Transitioner ad and reel) and the comparison figures on the /calculator page are confirmed.",
    "subject_len": 42
   },
   {
@@ -175,7 +175,7 @@
    "segment": "Owns land or family land, Virginia and Maryland (fb4c for the Carolinas)",
    "subject": "Your dream home has a folder, not a date",
    "preview": "One appointment. Bring the photos you have been saving.",
-   "hold": "",
+   "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim.",
    "subject_len": 40
   },
   {
@@ -187,7 +187,7 @@
    "segment": "Owns land or family land, North and South Carolina",
    "subject": "Your dream home has a folder, not a date",
    "preview": "One appointment. Bring the photos you have been saving.",
-   "hold": "",
+   "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim.",
    "subject_len": 40
   },
   {
@@ -199,7 +199,7 @@
    "segment": "Looking for land, Virginia and Maryland (fb5c for the Carolinas)",
    "subject": "You do not have to own land yet",
    "preview": "Start designing now. Bring us the lot when you find it.",
-   "hold": "",
+   "hold": "Check first that the plan guide email is built: the /no-land form promises one, and nothing sends it yet.",
    "subject_len": 31
   },
   {
@@ -211,7 +211,7 @@
    "segment": "Looking for land, North and South Carolina",
    "subject": "You do not have to own land yet",
    "preview": "Start designing now. Bring us the lot when you find it.",
-   "hold": "",
+   "hold": "Check first that the plan guide email is built: the /no-land form promises one, and nothing sends it yet.",
    "subject_len": 31
   },
   {

@@ -89,10 +89,12 @@ def block(b, link):
                 f'<p style="margin:0 0 10px;font-size:16px;line-height:1.6;font-style:italic;color:{DEEP}">&#8220;{E(b["text"])}&#8221;</p>'
                 f'<p style="margin:0;font-size:13px;color:{MUTED}">{E(b["by"])}. <a href="{E(b["link"])}" style="color:{GREEN};font-weight:700">{E(b["linktext"])}</a></p></td></tr></table>')
     if t == "grid":
-        cells = [f'<td class="col" width="50%" valign="top" style="padding:0 6px 12px"><img src="{E(src)}" width="262" alt="A watercolor Home Portrait painting for {E(name)}" '
-                 f'style="display:block;width:100%;max-width:262px;height:auto;border-radius:8px;border:0">'
+        n = b.get("cols", 2)
+        w = (520 - 12 * (n - 1)) // n
+        cells = [f'<td class="col" width="{100 // n}%" valign="top" style="padding:0 6px 12px"><img src="{E(src)}" width="{w}" alt="A watercolor Home Portrait painting for {E(name)}" '
+                 f'style="display:block;width:100%;max-width:{w}px;height:auto;border-radius:8px;border:0">'
                  f'<p style="margin:6px 0 0;font-family:{FONT};font-size:12px;font-weight:700;color:{MUTED}">{E(name)}</p></td>' for name, src in b["items"]]
-        rows = "".join("<tr>" + "".join(cells[i:i + 2]) + "</tr>" for i in range(0, len(cells), 2))
+        rows = "".join("<tr>" + "".join(cells[i:i + n]) + "</tr>" for i in range(0, len(cells), n))
         cap = f'<p style="margin:0 0 18px;font-family:{FONT};font-size:13px;color:{MUTED};text-align:center">{E(b["caption"])}</p>'
         return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 -6px 4px">{rows}</table>{cap}'
     if t == "offer":
