@@ -1,0 +1,242 @@
+{
+ "series": [
+  {
+   "key": "portrait",
+   "name": "The Home Portrait",
+   "stage": "Discover",
+   "campaign": "fall26_portrait",
+   "audience": "Full marketing list, minus contacts already tagged home portrait quiz (they have their portrait) and anyone under contract.",
+   "goal": "Quiz starts. Every email has one job: send the reader to the quiz."
+  },
+  {
+   "key": "designdollars",
+   "name": "Mitchell Design Dollars",
+   "stage": "Decide",
+   "campaign": "fall26_designdollars",
+   "audience": "Warm audiences and the database only, per the approved rollout. Full marketing list, minus anyone already under contract.",
+   "goal": "Design Center conversations and reservations before the October 31 reserve by date."
+  },
+  {
+   "key": "fourbuyers",
+   "name": "The Four Buyers",
+   "stage": "Believe",
+   "campaign": "fall26_fourbuyers",
+   "audience": "Landowner segment (registered as owns land, or quiz contacts tagged with land) for the first four; the looking for land segment gets the fifth. Send to Virginia and Maryland contacts first; the Dreamer and No Land emails have Carolinas versions.",
+   "goal": "Visits to the matching page and calls to a New Home Consultant. Each email carries one argument and one page."
+  },
+  {
+   "key": "partners",
+   "name": "Realtors and homeowners",
+   "stage": "Refer",
+   "campaign": "fall26_referral",
+   "audience": "Realtor and broker contacts (land listing agents first), and past Mitchell homeowners.",
+   "goal": "Referrals into the quiz and the Design Dollars page from people who already know buyers."
+  }
+ ],
+ "emails": [
+  {
+   "series": "portrait",
+   "series_name": "The Home Portrait",
+   "stage": "Discover",
+   "id": "hp1",
+   "send": "Thursday, October 15",
+   "segment": "Full list",
+   "subject": "What would your home look like?",
+   "preview": "Answer eight questions. We paint your Home Portrait.",
+   "hold": "",
+   "subject_len": 31
+  },
+  {
+   "series": "portrait",
+   "series_name": "The Home Portrait",
+   "stage": "Discover",
+   "id": "hp2",
+   "send": "Thursday, October 22",
+   "segment": "Full list (written for landowners, welcoming to everyone)",
+   "subject": "Your land is part of the portrait",
+   "preview": "The question we ask fifth changes everything we paint.",
+   "hold": "",
+   "subject_len": 33
+  },
+  {
+   "series": "portrait",
+   "series_name": "The Home Portrait",
+   "stage": "Discover",
+   "id": "hp3",
+   "send": "Thursday, November 5",
+   "segment": "Contacts who have not taken the quiz yet",
+   "subject": "Nine portraits. Which one is yours?",
+   "preview": "The Landowner's, the Dreamer's, the Family, the Planner's, and one for the getaway.",
+   "hold": "",
+   "subject_len": 35
+  },
+  {
+   "series": "portrait",
+   "series_name": "The Home Portrait",
+   "stage": "Discover",
+   "id": "hp4",
+   "send": "Thursday, November 12",
+   "segment": "Full list, or contacts interested in lake, coastal or mountain areas if that field exists",
+   "subject": "The getaway you keep promising yourselves",
+   "preview": "Lake, coast or mountains. Your portrait paints it.",
+   "hold": "",
+   "subject_len": 41
+  },
+  {
+   "series": "designdollars",
+   "series_name": "Mitchell Design Dollars",
+   "stage": "Decide",
+   "id": "dd1",
+   "send": "Tuesday, October 13",
+   "segment": "Full list",
+   "subject": "It is your land. Make it your home.",
+   "preview": "Every Mitchell home now comes with $5,000 in Design Dollars. Personalize more, and we add more.",
+   "hold": "",
+   "subject_len": 35
+  },
+  {
+   "series": "designdollars",
+   "series_name": "Mitchell Design Dollars",
+   "stage": "Decide",
+   "id": "dd2",
+   "send": "Tuesday, October 20",
+   "segment": "Full list",
+   "subject": "Choose $60,000 in selections. Take home $75,000 worth.",
+   "preview": "Here is how Mitchell Design Dollars grow with the choices you make.",
+   "hold": "",
+   "subject_len": 54
+  },
+  {
+   "series": "designdollars",
+   "series_name": "Mitchell Design Dollars",
+   "stage": "Decide",
+   "id": "dd3",
+   "send": "Tuesday, October 27",
+   "segment": "Full list, minus anyone who booked a Design Center visit",
+   "subject": "You do not have to pick the tile today",
+   "preview": "Sign now and your Design Dollars are locked. Your tier is set later.",
+   "hold": "",
+   "subject_len": 38
+  },
+  {
+   "series": "designdollars",
+   "series_name": "Mitchell Design Dollars",
+   "stage": "Decide",
+   "id": "dd4",
+   "send": "Thursday, October 29",
+   "segment": "Full list, minus anyone who booked or reserved",
+   "subject": "Where your Design Dollars go",
+   "preview": "Cabinets, counters, tile and more. Reserve by October 31, 2026.",
+   "hold": "",
+   "subject_len": 28
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb1",
+   "send": "Tuesday, November 3",
+   "segment": "Owns land or family land, Virginia and Maryland",
+   "subject": "Your land is worth more than you think",
+   "preview": "You already own the hardest part of building. Here is the math.",
+   "hold": "",
+   "subject_len": 38
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb2",
+   "send": "Tuesday, November 10",
+   "segment": "Owns land or family land, Virginia and Maryland",
+   "subject": "A custom home on your land, without the unknowns",
+   "preview": "Start with a plan that already works. Every choice priced before we build.",
+   "hold": "",
+   "subject_len": 48
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb3",
+   "send": "Tuesday, November 17",
+   "segment": "Owns land or family land, Virginia and Maryland",
+   "subject": "No construction loan to build on your land",
+   "preview": "If a bank is the reason you stopped, read this.",
+   "hold": "Hold until legal approves the financing wording, to match the Transitioner ad and reel.",
+   "subject_len": 42
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb4",
+   "send": "Thursday, November 19",
+   "segment": "Owns land or family land, Virginia and Maryland (fb4c for the Carolinas)",
+   "subject": "Your dream home has a folder, not a date",
+   "preview": "One appointment. Bring the photos you have been saving.",
+   "hold": "",
+   "subject_len": 40
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb4c",
+   "send": "Thursday, November 19",
+   "segment": "Owns land or family land, North and South Carolina",
+   "subject": "Your dream home has a folder, not a date",
+   "preview": "One appointment. Bring the photos you have been saving.",
+   "hold": "",
+   "subject_len": 40
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb5",
+   "send": "Wednesday, November 4",
+   "segment": "Looking for land, Virginia and Maryland (fb5c for the Carolinas)",
+   "subject": "You do not have to own land yet",
+   "preview": "Start designing now. Bring us the lot when you find it.",
+   "hold": "",
+   "subject_len": 31
+  },
+  {
+   "series": "fourbuyers",
+   "series_name": "The Four Buyers",
+   "stage": "Believe",
+   "id": "fb5c",
+   "send": "Wednesday, November 4",
+   "segment": "Looking for land, North and South Carolina",
+   "subject": "You do not have to own land yet",
+   "preview": "Start designing now. Bring us the lot when you find it.",
+   "hold": "",
+   "subject_len": 31
+  },
+  {
+   "series": "partners",
+   "series_name": "Realtors and homeowners",
+   "stage": "Refer",
+   "id": "re1",
+   "send": "Wednesday, October 14",
+   "segment": "Realtors and brokers, land listing agents first",
+   "subject": "Your buyer owns land. We build on it.",
+   "preview": "Zero down, no construction loan, and up to $25,000 in Design Dollars for your clients.",
+   "hold": "Confirm the current realtor incentive terms with Mitchell before sending.",
+   "subject_len": 37
+  },
+  {
+   "series": "partners",
+   "series_name": "Realtors and homeowners",
+   "stage": "Refer",
+   "id": "ho1",
+   "send": "Wednesday, October 21",
+   "segment": "Past Mitchell homeowners",
+   "subject": "Know someone with land and a dream?",
+   "preview": "The best Mitchell homes start with a homeowner's introduction.",
+   "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer.",
+   "subject_len": 35
+  }
+ ]
+}
