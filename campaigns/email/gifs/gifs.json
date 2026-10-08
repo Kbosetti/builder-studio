@@ -1,332 +1,362 @@
 {
  "hp1": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
    "porch_farmhouse",
    "living_open",
    "kitchen_brass"
   ],
   "file": "gifs/hp1.gif",
-  "kb": 423,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/488d5f9a-e0dd-49f6-aa57-f2fdd7219986.gif"
+  "kb": 1103,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/12abc8f2-aefa-4212-9a73-5608015c36a1.gif"
  },
  "hp2": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=1200&height=640&mode=crop",
    "aerial_farmland",
    "drive_trees",
    "farmhouse_field"
   ],
   "file": "gifs/hp2.gif",
-  "kb": 558,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c68fbf12-3417-4aff-85ed-13702346e01e.gif"
+  "kb": 1569,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/95167b53-3aad-4240-aca4-a2f80091f219.gif"
  },
  "hp3": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/6/24/Mathews_1_Aerial.jpg?width=1200&height=640&mode=crop",
    "cape_cod",
    "blue_dusk",
    "blue_ranch"
   ],
   "file": "gifs/hp3.gif",
-  "kb": 490,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/40f0b4d1-084c-45d3-84c6-51d325af50a5.gif"
+  "kb": 1324,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/be3b44e1-3542-4c2f-b589-93b097d3e50b.gif"
  },
  "hp4": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/10_mwFjkrl.jpg?width=1200&height=640&mode=crop",
    "aerial_lake",
    "coastal_dusk",
    "living_water"
   ],
   "file": "gifs/hp4.gif",
-  "kb": 415,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/75d083be-b9ac-4e30-9434-b4d804c8e087.gif"
+  "kb": 1147,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/109a132e-8bbd-48c9-8066-2f2620b50fb8.gif"
  },
  "dd1": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_13_IfaBRgj.jpg?width=1200&height=640&mode=crop",
    "dc_showroom",
    "kitchen_brass",
    "dc_hood"
   ],
   "file": "gifs/dd1.gif",
-  "kb": 430,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2a1e5e1b-1b9e-4214-952e-6d4404b222f8.gif"
+  "kb": 1037,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/506f980a-f605-45ea-9fba-4e613ca02170.gif"
  },
  "dd2": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/59-DSC06144.jpg?width=1200&height=640&mode=crop",
    "dc_tile",
    "dc_island",
    "kitchen_quartz"
   ],
   "file": "gifs/dd2.gif",
-  "kb": 404,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bb8ab8b4-21eb-4bbd-b8bc-eaf3cca7b073.gif"
+  "kb": 974,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6860a961-e9a5-4154-b9ba-7ffcc25a4108.gif"
  },
  "dd3": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2023/3/24/Richmond_Design_Studio.jpg?width=1200&height=640&mode=crop",
    "dc_hands",
    "dc_samples",
    "dc_kitchen"
   ],
   "file": "gifs/dd3.gif",
-  "kb": 429,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/aab3e4b0-f041-4ec9-a0c7-3d57819f07f6.gif"
+  "kb": 1077,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/521efb6b-202f-4a6e-8e3e-0a266738f4d9.gif"
  },
  "dd4": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_15_WcldBUt.jpg?width=1200&height=640&mode=crop",
    "dc_hood",
    "bath",
    "kitchen_island"
   ],
   "file": "gifs/dd4.gif",
-  "kb": 385,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/83a96d8c-4a0d-4750-b09b-e886e02c873a.gif"
+  "kb": 951,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/aff90cf8-8223-47df-b8df-462dcf053566.gif"
  },
  "fb1": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/7/5/1_GuQrrFW.jpg?width=1200&height=640&mode=crop",
    "aerial_hills",
    "aerial_house_woods",
    "farmhouse_field"
   ],
   "file": "gifs/fb1.gif",
-  "kb": 476,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/7724bcf6-b73d-418a-a7fe-cfbe1f114893.gif"
+  "kb": 1325,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/671cb81d-b0fd-43dd-a07f-f15ec8f72f9e.gif"
  },
  "fb2": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/38-DSC06023.jpg?width=1200&height=640&mode=crop",
    "porch_farmhouse",
    "kitchen_wood",
    "living_open"
   ],
   "file": "gifs/fb2.gif",
-  "kb": 428,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/58386c12-1384-4f36-a154-d5182212148c.gif"
+  "kb": 1040,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cb05a1d8-ecb8-435c-bbcb-2b0b822b03fd.gif"
  },
  "fb3": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg?width=1200&height=640&mode=crop",
    "drive_trees",
    "cape_cod",
    "kitchen_living"
   ],
   "file": "gifs/fb3.gif",
-  "kb": 493,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/95ea0db4-66be-426a-94d8-631511fd881a.gif"
+  "kb": 1290,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/af217a17-4a20-4968-83a7-48411e3f229c.gif"
  },
  "fb4": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
    "blue_dusk",
    "screen_porch",
    "bedroom"
   ],
   "file": "gifs/fb4.gif",
-  "kb": 434,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/528dfabb-b47c-4038-8ac7-37bef038cf35.gif"
+  "kb": 1129,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cd08fb3d-b7be-4d66-b7c4-cc9de234b896.gif"
  },
  "fb4c": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
    "blue_dusk",
    "screen_porch",
    "bedroom"
   ],
-  "file": "gifs/fb4c.gif",
-  "kb": 434,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e2389b5c-ec91-4539-8628-aff7b085336f.gif"
+  "file": "gifs/fb4.gif",
+  "kb": 1129,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cd08fb3d-b7be-4d66-b7c4-cc9de234b896.gif"
  },
  "fb5": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
    "aerial_farmland",
    "two_story",
    "dining"
   ],
   "file": "gifs/fb5.gif",
-  "kb": 475,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/738aa8db-53ea-42b6-a597-1e3362a295db.gif"
+  "kb": 1356,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0ff758ca-0c1e-4134-aacb-5d4dc6dcd8e3.gif"
  },
  "fb5c": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
    "aerial_farmland",
    "two_story",
    "dining"
   ],
-  "file": "gifs/fb5c.gif",
-  "kb": 475,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/4150b727-ef31-4e08-93aa-e4130c6f9157.gif"
+  "file": "gifs/fb5.gif",
+  "kb": 1356,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0ff758ca-0c1e-4134-aacb-5d4dc6dcd8e3.gif"
  },
  "re1": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/7/5/1_GuQrrFW.jpg?width=1200&height=640&mode=crop",
    "aerial_pond",
    "farmhouse_field",
    "blue_ranch"
   ],
   "file": "gifs/re1.gif",
-  "kb": 488,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ad0bb036-a888-49e6-9895-0eb760edf692.gif"
+  "kb": 1336,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/18ecdeda-1584-406d-835c-796c302c660f.gif"
  },
  "ra1": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
    "aerial_hills",
    "aerial_farmland",
    "aerial_woods"
   ],
   "file": "gifs/ra1.gif",
-  "kb": 600,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1c379a6f-7496-4287-8c2b-2807aa9e0bc8.gif"
+  "kb": 1669,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a1e9581-a201-4ffd-8674-fb35a3699c88.gif"
  },
  "rb2": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=1200&height=640&mode=crop",
    "aerial_house_woods",
    "cape_cod",
    "porch_farmhouse"
   ],
   "file": "gifs/rb2.gif",
-  "kb": 450,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a637ec24-b65b-4ad2-806a-f4dc02c32ae4.gif"
+  "kb": 1310,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0a3fed67-c100-4bfe-9f6e-211eccbc34f3.gif"
  },
  "rb3": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/10_mwFjkrl.jpg?width=1200&height=640&mode=crop",
    "aerial_lake",
    "farmhouse_drive",
    "kitchen_island"
   ],
   "file": "gifs/rb3.gif",
-  "kb": 403,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/abd5c6a1-7da2-472b-b685-62e2933c5383.gif"
+  "kb": 1104,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b2a90894-4f80-4804-ac33-6014e0d0ebcb.gif"
  },
  "ra2": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
    "aerial_woods",
    "drive_trees",
    "aerial_pond"
   ],
   "file": "gifs/ra2.gif",
-  "kb": 558,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2d4cf470-6419-4f64-b4f6-c051cf325923.gif"
+  "kb": 1527,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/d75a8b4f-996a-43ec-a5b2-61169ad98f93.gif"
  },
  "ho1": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
    "porch_farmhouse",
    "breakfast_nook",
    "porch_view"
   ],
   "file": "gifs/ho1.gif",
-  "kb": 417,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/01c78137-bb14-469d-98d5-d4d8b33344ac.gif"
+  "kb": 1101,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b2149e8f-6be7-429c-98e2-5148703ba56d.gif"
  },
  "nu3": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=1200&height=640&mode=crop",
    "aerial_farmland",
    "farmhouse_field",
    "kitchen_white"
   ],
   "file": "gifs/nu3.gif",
-  "kb": 489,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0f9b6d27-8a0c-4e18-a589-2a3da4223d8c.gif"
+  "kb": 1380,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8808e3dd-68f4-4b23-a427-a019cedab7b6.gif"
  },
  "nu3n": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
    "aerial_hills",
    "two_story",
    "living_open"
   ],
   "file": "gifs/nu3n.gif",
-  "kb": 484,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e6410fc7-9045-4c9c-b189-d0a9df769cda.gif"
+  "kb": 1329,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3c2499f8-7581-4fcf-bede-30be5bf49072.gif"
  },
  "nu6": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_13_IfaBRgj.jpg?width=1200&height=640&mode=crop",
    "dc_showroom",
    "kitchen_quartz",
    "kitchen_brass"
   ],
   "file": "gifs/nu6.gif",
-  "kb": 420,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3eeb0f90-9fe9-4289-bba5-7eab66c9dd0b.gif"
+  "kb": 1027,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/d7d0dcc7-3c69-416f-91ad-fb0ad82a2bb4.gif"
  },
  "nu9": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
    "blue_dusk",
    "living_water",
    "kitchen_wood"
   ],
   "file": "gifs/nu9.gif",
-  "kb": 384,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e9e29fbe-4966-42a4-b90c-50ec2d2e5767.gif"
+  "kb": 1018,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0b1e83a7-05b6-4672-9340-93d6c2f99b16.gif"
  },
  "ho2": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
    "dc_showroom",
    "porch_view",
    "dining"
   ],
   "file": "gifs/ho2.gif",
-  "kb": 428,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3a386e41-ad72-489d-b4d1-059fa5c7782e.gif"
+  "kb": 1137,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c713610d-e9e4-4060-96b7-d300a4f7b446.gif"
  },
  "ho3": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg?width=1200&height=640&mode=crop",
    "porch_view",
    "breakfast_nook",
    "living_open"
   ],
   "file": "gifs/ho3.gif",
-  "kb": 467,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9da7be36-c421-4443-ae37-f3b00601ee66.gif"
+  "kb": 1188,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c8a854dd-a6eb-4bf6-b091-c7414be88ec3.gif"
  },
  "ho4": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/24/38-DSC06023.jpg?width=1200&height=640&mode=crop",
    "kitchen_living",
    "screen_porch",
    "porch_farmhouse"
   ],
   "file": "gifs/ho4.gif",
-  "kb": 430,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a7e8eff7-0a45-4215-a8d2-b92f7b4eeaa1.gif"
+  "kb": 1076,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/4e7ca0e1-7518-46f2-b10c-2c1fdfdee847.gif"
  },
  "ho5": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
    "dining",
    "porch_planks",
    "bedroom"
   ],
   "file": "gifs/ho5.gif",
-  "kb": 424,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1b0bf4a7-6ab3-4deb-b1fc-cc14bc08c511.gif"
+  "kb": 1021,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/27b35572-a81a-424d-9672-3137f796a6b6.gif"
  },
  "ho6": {
   "sig": [
+   "900px-per-frame-palette",
    "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
    "farmhouse_field",
    "living_water",
    "porch_view"
   ],
   "file": "gifs/ho6.gif",
-  "kb": 392,
-  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/23519558-6d27-4d1d-9be4-4b81ab4ab552.gif"
+  "kb": 1073,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a127360e-c9a3-416a-bf1b-2127d3957df9.gif"
  }
 }

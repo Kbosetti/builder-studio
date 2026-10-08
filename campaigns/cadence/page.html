@@ -225,7 +225,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
     var b=document.getElementById('dgBody');b.textContent='';
     if(e.img){var im=el('img',{alt:'Preview of the email'});fetch(e.img).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(x){im.src=URL.createObjectURL(x);}).catch(function(){im.src=e.img;});b.appendChild(im);}
     if(e.body)b.appendChild(el('div',{class:'copy',text:e.body}));
-    if(e.link)b.appendChild(el('p',{class:'nt',text:'Link: '+e.link}));
+    if(e.link)b.appendChild(/^https?:\/\/[^\s\[\]{}]+$/.test(e.link)?el('p',{class:'nt'},[el('a',{href:e.link,target:'_blank',rel:'noopener',text:'Open the link'}),' '+e.link.split('?')[0].replace('https://','')]):el('p',{class:'nt',text:'Link: added in Builder Studio once the form or page is built'}));
     if(e.notes)b.appendChild(el('p',{class:'nt',text:e.notes}));
     if(dlg.showModal){try{dlg.showModal();}catch(x){dlg.setAttribute('open','');}}else dlg.setAttribute('open','');}
   document.getElementById('dgClose').onclick=function(){dlg.close?dlg.close():dlg.removeAttribute('open');};

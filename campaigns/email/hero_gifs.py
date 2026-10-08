@@ -3,8 +3,9 @@
 
 usage: GHL_PIT=... python3 campaigns/email/hero_gifs.py      then build.py
 Each GIF opens on the email's own hero photo (Outlook on Windows shows only the first frame, so it still reads
-right there), then cuts to three more photos chosen for that email, 2.4 seconds each, looping. 600 x 320,
-clean cuts rather than fades, which keeps every file under about 450 KB. The GIFs go into the Builder Studio
+right there), then cuts to three more photos chosen for that email, 2.4 seconds each, looping. 900 x 480
+(1.5 times the 600 pixel email width, so it stays sharp on phones and retina screens) with its own color palette
+per photo, clean cuts rather than fades, about 1 MB each. The GIFs go into the Builder Studio
 media library and gifs.json records each URL; build.py uses the GIF wherever one exists. Photos come only from
 Mitchell's own site (media.mitchellhomesinc.com): real homes, porches, kitchens and Design Centers, never a
 painted portrait.
@@ -20,6 +21,8 @@ FF = "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-lin
 M = "https://media.mitchellhomesinc.com/276/"
 SRC, OUT = f"{HERE}/gifs/src", f"{HERE}/gifs"
 HOLD = 2.4
+W, H = 900, 480
+VERSION = "900px-per-frame-palette"
 
 P = {  # the photo pool, by what is in the picture
     "farmhouse_field": "2022/10/7/Exterior_1.jpg", "farmhouse_drive": "2022/6/3/Exterior_SideView_copy.jpg",
@@ -55,6 +58,7 @@ MAP = {  # email id: the three photos after its own hero
     "ho5": ["dining", "porch_planks", "bedroom"], "ho6": ["farmhouse_field", "living_water", "porch_view"],
 }
 MAP["fb4c"], MAP["fb5c"] = MAP["fb4"], MAP["fb5"]
+VARIANTS = {"fb4c": "fb4", "fb5c": "fb5"}
 
 
 def fetch(url, name):
@@ -70,8 +74,8 @@ def gif(eid, hero_src, extras):
     for f in frames:
         args += ["-loop", "1", "-t", str(HOLD), "-i", f]
     n = len(frames)
-    chain = "".join(f"[{i}]scale=600:320:force_original_aspect_ratio=increase,crop=600:320,setsar=1[s{i}];" for i in range(n))
-    chain += "".join(f"[s{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0,fps={1 / HOLD},split[a][b];[a]palettegen=max_colors=192:stats_mode=full[p];[b][p]paletteuse=dither=sierra2_4a[o]"
+    chain = "".join(f"[{i}]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1[s{i}];" for i in range(n))
+    chain += "".join(f"[s{i}]" for i in range(n)) + f"concat=n={n}:v=1:a=0,fps={1 / HOLD},split[a][b];[a]palettegen=max_colors=256:stats_mode=single[p];[b][p]paletteuse=dither=sierra2_4a:new=1[o]"
     out = f"{OUT}/{eid}.gif"
     subprocess.run(args + ["-filter_complex", chain, "-map", "[o]", "-loop", "0", out], check=True)
     return out
@@ -101,7 +105,11 @@ def main():
                 eid = em["id"]
                 if eid not in MAP or not em.get("hero"):
                     continue
-                sig = [em["hero"]["src"]] + MAP[eid]
+                if eid in VARIANTS:  # same photos as the main version, so it shares that GIF
+                    if VARIANTS[eid] in rec:
+                        rec[eid] = dict(rec[VARIANTS[eid]])
+                    continue
+                sig = [VERSION, em["hero"]["src"]] + MAP[eid]
                 if rec.get(eid, {}).get("sig") == sig and rec[eid].get("cdn"):
                     continue
                 out = gif(eid, em["hero"]["src"], MAP[eid])
@@ -111,6 +119,7 @@ def main():
                 rec[eid] = entry
                 print(eid, entry["kb"], "KB", entry.get("cdn", ""))
                 json.dump(rec, open(rec_path, "w"), indent=1)
+    json.dump(rec, open(rec_path, "w"), indent=1)
     print(len(rec), "hero GIFs;", sum(1 for v in rec.values() if v.get("cdn")), "in the media library")
 
 

@@ -178,6 +178,19 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   .ihead{grid-template-columns:auto minmax(0,1fr)}
   .ihead .state{grid-column:2;justify-self:start}
 }
+/* live email viewer: the real email in a frame, its photos copied alongside the page so the slideshow moves */
+dialog.live{margin:auto;width:min(720px,calc(100vw - 24px));height:min(94vh,1200px);max-width:none;max-height:none;padding:0;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);overflow:hidden}
+dialog.live[open]{display:flex;flex-direction:column}
+dialog.live::backdrop{background:rgba(10,20,14,.6)}
+.lvbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.lvbar div{min-width:0}
+.lvbar b{display:block;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+.lvbar span{display:block;font-size:12px;color:var(--muted)}
+.lvbar button{flex:none;font:inherit;font-weight:700;font-size:14px;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:999px;padding:7px 16px;cursor:pointer}
+.lvbar button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+#lvFrame{flex:1;width:100%;border:0;background:#faf8f3}
+.lvnote{margin:0;padding:8px 16px;font-size:12px;line-height:1.45;color:var(--muted);border-top:1px solid var(--line)}
+.livebtn{font:inherit;font-weight:700;font-size:13px;border:0;background:var(--accent);color:var(--on-accent);border-radius:999px;padding:7px 14px;cursor:pointer}
 </style>
 
 <header class="cover"><div class="wrap">
@@ -273,6 +286,10 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   <div class="bar2"><span id="lbCap"></span><div class="ctl"><button type="button" id="lbPrev">Previous</button><button type="button" id="lbNext">Next</button><button type="button" class="x" id="lbClose">Close</button></div></div>
   <img id="lbImg" alt="">
 </div></dialog>
+<dialog id="liveDlg" class="live" aria-label="The email, live"><div class="lvbar"><div><b id="lvSub"></b><span id="lvMeta"></span></div><button type="button" id="lvClose">Close</button></div>
+  <iframe id="lvFrame" title="The email, live"></iframe>
+  <p class="lvnote">This is the real email. The photos at the top move as they will in the inbox (Outlook on Windows shows the first photo), and every button opens its page in a new tab. Buttons that wait on Builder Studio, like an RSVP or entry form, say so when tapped.</p></dialog>
+
 
 <script>
 (function(){
@@ -284,6 +301,26 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   var blobs={};
   function src(p){if(!blobs[p])blobs[p]=fetch(p).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(b){return URL.createObjectURL(b);}).catch(function(){return p;});return blobs[p];}
   function img(p,alt){var i=el('img',{alt:alt||''});src(p).then(function(u){i.src=u;});return i;}
+  var LIVEBLOB=src;
+  // live email viewer
+  var LIVE_MERGE={'contact.first_name':'Jordan','user.name':'Your New Home Consultant','user.phone':'(540) 701-2759','contact.portrait_name':'The Landowner’s Portrait','contact.region':'Fredericksburg','contact.design_dollars_focus':'the kitchen'};
+  function prepLive(h){
+    h=h.replace(/\{\{\s*trigger_link\.(\w+)\s*\}\}/g,function(m,id){return (D.links&&D.links[id])||'#not-live';});
+    h=h.replace(/href="\[[^"\]]*\][^"]*"/g,'href="#not-live"');
+    h=h.replace(/\{\{\s*unsubscribe\s*\}\}/g,'<u>Unsubscribe</u>');
+    h=h.replace(/\{\{\s*([\w.]+)\s*\}\}/g,function(m,k){return LIVE_MERGE[k]||m;});
+    var head='<base target="_blank"><style>a[href="#not-live"]{cursor:help}#nl{position:fixed;left:12px;right:12px;top:12px;padding:12px 14px;border-radius:10px;background:#1e4f33;color:#fff;font:14px/1.45 Arial,sans-serif;display:none;z-index:9}</style>';
+    var tail='<div id="nl"></div><script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.getAttribute("href")==="#not-live"){e.preventDefault();var n=document.getElementById("nl");n.textContent="This button goes live in Builder Studio once its RSVP form, entry form or booking calendar is built.";n.style.display="block";setTimeout(function(){n.style.display="none";},4000);}});<\/script>';
+    return h.replace(/<head>/i,'<head>'+head).replace(/<\/body>/i,tail+'</body>');}
+  var lvDlg=document.getElementById('liveDlg'),lvFrame=document.getElementById('lvFrame');
+  document.getElementById('lvClose').addEventListener('click',function(){lvDlg.close();});
+  function openLive(e){
+    document.getElementById('lvSub').textContent=e.subject;document.getElementById('lvMeta').textContent=e.id.toUpperCase()+' · '+e.send;
+    lvFrame.srcdoc='<p style="font:14px Arial,sans-serif;padding:24px;color:#5b6f62">Loading the email…</p>';
+    try{lvDlg.showModal();}catch(x){lvDlg.setAttribute('open','');}
+    var h=e.html,urls=Object.keys(D.live||{}).filter(function(u){return h.indexOf(u)>=0;});
+    Promise.all(urls.map(function(u){return LIVEBLOB(D.live[u]).then(function(b){return [u,b];});})).then(function(ps){
+      ps.forEach(function(p){h=h.split(p[0]).join(p[1]);});lvFrame.srcdoc=prepLive(h);});}
 
   // full size viewer
   var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),group=[],at=0,opener=null;
@@ -339,18 +376,20 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     var list=D.emails.emails.filter(function(e){return e.series===key;});
     var g=list.map(function(e){return {p:e.img,c:e.id.toUpperCase()+'  '+e.subject};});
     var grid=el('div',{class:'emails'});
-    list.forEach(function(e,i){var b=el('button',{type:'button',class:'thumb','aria-label':'See the full email: '+e.subject},[img(e.img,'Email '+e.subject)]);
-      b.onclick=function(){openLb(g,i,b);};
+    list.forEach(function(e,i){var b=el('button',{type:'button',class:'thumb','aria-label':'Open the email live: '+e.subject},[img(e.img,'Email '+e.subject)]);
+      b.onclick=function(){openLive(e);};
       grid.appendChild(el('div',{class:'em'},[b,el('div',{class:'sub',text:e.subject}),el('div',{class:'pre',text:e.preview}),
         el('div',{class:'info'},[el('b',{text:e.id.toUpperCase()}),el('span',{text:e.send}),el('span',{text:e.segment})]),e.hold?waitBadge(e.q):null]));});
     return grid;}
   function shots(list){var g=list.map(function(s){return {p:s[0],c:s[1]};});var w=el('div',{class:'shots'});
     list.forEach(function(s,i){var b=el('button',{type:'button','aria-label':'See full size: '+s[1]},[img(s[0],s[1])]);b.onclick=function(){openLb(g,i,b);};
       w.appendChild(el('div',{class:'shot'},[b,el('span',{text:s[1]}),s[2]?el('small',{text:s[2]}):null]));});return w;}
+  function linkEl(u){if(/^https?:\/\/[^\s\[\]{}]+$/.test(u))return el('div',{class:'lk'},[el('a',{href:u,target:'_blank',rel:'noopener',text:'Open the link'}),el('span',{text:' '+u.split('?')[0].replace('https://','')})]);
+    return el('div',{class:'lk',text:'Link: added in Builder Studio once the '+(/entry form/.test(u)?'entry form':/RSVP/i.test(u)?'RSVP form':'page')+' is built'});}
   function posts(list,limit){var box=el('div',{class:'posts'}),more=null;
     list.forEach(function(it,i){var d=el('details',{class:'post'});if(limit&&i>=limit)d.hidden=true;
       d.appendChild(el('summary',{},[el('span',{class:'pt',text:it.title}),el('span',{class:'pm',text:it.meta}),el('span',{class:'pr'},[it.hold?waitBadge(it.q):null,el('span',{class:'chev',text:'›'})])]));
-      d.appendChild(el('div',{class:'pb'},[el('div',{class:'copy',text:it.body}),it.link?el('div',{class:'lk',text:'Link: '+it.link}):null]));box.appendChild(d);});
+      d.appendChild(el('div',{class:'pb'},[el('div',{class:'copy',text:it.body}),it.link?linkEl(it.link):null]));box.appendChild(d);});
     if(!limit||list.length<=limit)return box;
     more=el('button',{type:'button',class:'expand',text:'Show all '+list.length});
     more.onclick=function(){[].forEach.call(box.children,function(d){d.hidden=false;});more.remove();};

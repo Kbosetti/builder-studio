@@ -28,6 +28,9 @@ def take(rel):
 em = json.load(open(f"{C}/email/out/emails.json"))
 for e in em["emails"]:
     e["img"] = take(f"email/{e['id']}.jpg")
+    e["html"] = open(f"{C}/email/out/{e['id']}.html").read()
+kitdata = json.load(open(f"{KIT}/live.json"))
+live = {u: take(rel) for u, rel in kitdata["live"].items()}
 org = {s["id"]: s for s in json.load(open(f"{C}/traffic/organic.json"))["sections"]}
 dr = {s["id"]: s for s in json.load(open(f"{C}/direct/direct.json"))["sections"]}
 prints = [{"title": t, "size": z, "img": take(f"print/{n}.jpg")} for n, t, z in [
@@ -82,8 +85,9 @@ if os.path.exists(fg_path):
         meta = " · ".join(x for x in (g.get("area"), {1: "First choice", 2: "Second wave", 3: "If time allows"}.get(g.get("priority") or 3)) if x)
         body = "\n\n".join(x for x in (g.get("why"), ("Members: " + g["members"]) if g.get("members") and not g["members"].startswith("Not shown") else "",
                                         ("What we know of the rules: " + g["rules"]) if g.get("rules") else "", "How we ask: " + g["ask"] if g.get("ask") else "",
-                                        "" if g.get("url") else "Link not found yet: search Facebook for the group name while logged in.") if x)
-        lists["groups"].append({"title": g["name"], "meta": meta, "body": body, "link": g.get("url", ""), "hold": False})
+                                        "" if g.get("url") else "The direct link was not public, so this one searches Facebook for the group name.") if x)
+        lists["groups"].append({"title": g["name"], "meta": meta, "body": body, "hold": False,
+                                "link": g.get("url") or "https://www.facebook.com/search/groups/?q=" + g["name"].replace(" ", "%20").replace("&", "%26")})
     for o in fg.get("outreach", []) + fg.get("posts", []):
         lists["groupMsgs"].append({"title": o["title"], "meta": o.get("fits", ""), "body": o["body"], "link": o.get("link", ""), "hold": False})
 for k, items in lists.items():
@@ -125,7 +129,7 @@ for n in ("rhythm", "week1"):
     shutil.copy(f"{C}/cadence/shots/{n}.jpg", f"{OUT}/cadence/{n}.jpg")
     files.append(f"cadence/{n}.jpg")
 cadence = {"rhythm": "cadence/rhythm.jpg", "week": "cadence/week1.jpg", "url": "https://mitchell-fall-cadence.vercel.app"}
-DATA = {"emails": em, "lists": lists, "prints": prints, "web": web, "ranking": ranking, "cadence": cadence, "contest": contest}
+DATA = {"emails": em, "lists": lists, "prints": prints, "web": web, "ranking": ranking, "cadence": cadence, "contest": contest, "live": live, "links": kitdata["links"]}
 font = base64.b64encode(open(f"{C}/../home-portrait/fonts/charlotte.woff2", "rb").read()).decode()
 page = (open(f"{HERE}/page.html").read()
         .replace("/*DATA*/null", json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/"))

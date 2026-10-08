@@ -139,6 +139,19 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
   .eprev{height:420px}
   .items{grid-template-columns:minmax(0,1fr)}
 }
+/* live email viewer: the real email in a frame, its photos copied alongside the page so the slideshow moves */
+dialog.live{margin:auto;width:min(720px,calc(100vw - 24px));height:min(94vh,1200px);max-width:none;max-height:none;padding:0;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);overflow:hidden}
+dialog.live[open]{display:flex;flex-direction:column}
+dialog.live::backdrop{background:rgba(10,20,14,.6)}
+.lvbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.lvbar div{min-width:0}
+.lvbar b{display:block;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+.lvbar span{display:block;font-size:12px;color:var(--muted)}
+.lvbar button{flex:none;font:inherit;font-weight:700;font-size:14px;border:1px solid var(--accent);color:var(--accent);background:transparent;border-radius:999px;padding:7px 16px;cursor:pointer}
+.lvbar button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+#lvFrame{flex:1;width:100%;border:0;background:#faf8f3}
+.lvnote{margin:0;padding:8px 16px;font-size:12px;line-height:1.45;color:var(--muted);border-top:1px solid var(--line)}
+.livebtn{font:inherit;font-weight:700;font-size:13px;border:0;background:var(--accent);color:var(--on-accent);border-radius:999px;padding:7px 14px;cursor:pointer}
 </style>
 
 <header class="mast"><div class="wrap">
@@ -261,6 +274,10 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
 </main>
 <footer><div class="wrap">Prepared by CEA Marketing for Mitchell Homes. Drafts for review, October 8, 2026.</div></footer>
 
+<dialog id="liveDlg" class="live" aria-label="The email, live"><div class="lvbar"><div><b id="lvSub"></b><span id="lvMeta"></span></div><button type="button" id="lvClose">Close</button></div>
+  <iframe id="lvFrame" title="The email, live"></iframe>
+  <p class="lvnote">This is the real email. The photos at the top move as they will in the inbox (Outlook on Windows shows the first photo), and every button opens its page in a new tab. Buttons that wait on Builder Studio, like an RSVP or entry form, say so when tapped.</p></dialog>
+
 <script>
 (function(){
   var D=/*DATA*/null;
@@ -275,6 +292,26 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
   var blobs={};
   function blobUrl(p){if(!blobs[p])blobs[p]=fetch(p).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(b){return URL.createObjectURL(b);}).catch(function(){return p;});return blobs[p];}
   function img(p,alt){var i=el('img',{alt:alt||'',loading:'eager'});blobUrl(p).then(function(u){i.src=u;});return i;}
+  var LIVEBLOB=blobUrl;
+  // live email viewer
+  var LIVE_MERGE={'contact.first_name':'Jordan','user.name':'Your New Home Consultant','user.phone':'(540) 701-2759','contact.portrait_name':'The Landowner’s Portrait','contact.region':'Fredericksburg','contact.design_dollars_focus':'the kitchen'};
+  function prepLive(h){
+    h=h.replace(/\{\{\s*trigger_link\.(\w+)\s*\}\}/g,function(m,id){return (D.links&&D.links[id])||'#not-live';});
+    h=h.replace(/href="\[[^"\]]*\][^"]*"/g,'href="#not-live"');
+    h=h.replace(/\{\{\s*unsubscribe\s*\}\}/g,'<u>Unsubscribe</u>');
+    h=h.replace(/\{\{\s*([\w.]+)\s*\}\}/g,function(m,k){return LIVE_MERGE[k]||m;});
+    var head='<base target="_blank"><style>a[href="#not-live"]{cursor:help}#nl{position:fixed;left:12px;right:12px;top:12px;padding:12px 14px;border-radius:10px;background:#1e4f33;color:#fff;font:14px/1.45 Arial,sans-serif;display:none;z-index:9}</style>';
+    var tail='<div id="nl"></div><script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(a&&a.getAttribute("href")==="#not-live"){e.preventDefault();var n=document.getElementById("nl");n.textContent="This button goes live in Builder Studio once its RSVP form, entry form or booking calendar is built.";n.style.display="block";setTimeout(function(){n.style.display="none";},4000);}});<\/script>';
+    return h.replace(/<head>/i,'<head>'+head).replace(/<\/body>/i,tail+'</body>');}
+  var lvDlg=document.getElementById('liveDlg'),lvFrame=document.getElementById('lvFrame');
+  document.getElementById('lvClose').addEventListener('click',function(){lvDlg.close();});
+  function openLive(e){
+    document.getElementById('lvSub').textContent=e.subject;document.getElementById('lvMeta').textContent=e.id.toUpperCase()+' · '+e.send;
+    lvFrame.srcdoc='<p style="font:14px Arial,sans-serif;padding:24px;color:#5b6f62">Loading the email…</p>';
+    try{lvDlg.showModal();}catch(x){lvDlg.setAttribute('open','');}
+    var h=e.html,urls=Object.keys(D.live||{}).filter(function(u){return h.indexOf(u)>=0;});
+    Promise.all(urls.map(function(u){return LIVEBLOB(D.live[u]).then(function(b){return [u,b];});})).then(function(ps){
+      ps.forEach(function(p){h=h.split(p[0]).join(p[1]);});lvFrame.srcdoc=prepLive(h);});}
   var dlBtns=[];
   var dl=null,dlReady=(window.claude&&window.claude.use)?window.claude.use('downloads').then(function(d){dl=d;},function(){}):Promise.resolve();
   function dlBtn(label,path,name,primary){var b=el('button',{class:'b sm'+(primary?' primary':''),type:'button','data-file':path,'data-name':name,text:label});dlBtns.push(b);return b;}
@@ -330,8 +367,11 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
         el('div',{class:'erow'},[el('span',{class:'pill '+(e.hold?'hold':'ok'),text:e.hold?'Hold':'Ready'}),el('span',{html:'<b>'+e.id.toUpperCase()+'</b>'}),el('span',{text:e.send}),el('span',{text:e.segment})]),
         field('Subject line ('+e.subject.length+' characters)',e.subject),field('Preview text',e.preview)]);
       if(e.hold)info.appendChild(el('div',{class:'holdnote',text:e.hold}));
-      info.appendChild(el('div',{class:'btns'},[copyBtn('Copy HTML',function(){return e.html;}),copyBtn('Copy plain text',function(){return e.text;}),dlBtn('Download HTML',e.file,'mitchell-email-'+e.id+'.html',true)]));
-      elist.appendChild(el('div',{class:'ecard'},[el('div',{class:'eprev',tabindex:'0','aria-label':'Preview of email '+e.id},[img(e.preview_img,'Preview of the email '+e.subject)]),info]));});
+      var lb=el('button',{type:'button',class:'livebtn',text:'See it live'});lb.addEventListener('click',function(){openLive(e);});
+      info.appendChild(el('div',{class:'btns'},[lb,copyBtn('Copy HTML',function(){return e.html;}),copyBtn('Copy plain text',function(){return e.text;}),dlBtn('Download HTML',e.file,'mitchell-email-'+e.id+'.html',true)]));
+      var pv=el('div',{class:'eprev',tabindex:'0',role:'button','aria-label':'Open email '+e.id+' live',style:'cursor:pointer'},[img(e.preview_img,'Preview of the email '+e.subject)]);
+      pv.addEventListener('click',function(){openLive(e);});pv.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' '){k.preventDefault();openLive(e);}});
+      elist.appendChild(el('div',{class:'ecard'},[pv,info]));});
     wireDownloads();}
   series.forEach(function(s,i){var b=el('button',{class:'tab',type:'button',role:'tab','aria-selected':String(i===0),text:s.name+' ('+D.emails.emails.filter(function(e){return e.series===s.key;}).length+')'});
     b.addEventListener('click',function(){[].forEach.call(etabs.children,function(x){x.setAttribute('aria-selected',String(x===b));});drawSeries(s.key);});etabs.appendChild(b);});
@@ -344,7 +384,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
     sec.items.forEach(function(it){var body=el('div',{class:'body',text:it.body});
       var kids=[el('h3',{text:it.title}),it.meta?el('div',{class:'meta',text:it.meta}):null,body];
       var btns=[copyBtn('Copy text',function(){return it.body;},body)];
-      if(it.link){var l=el('div',{class:'lnk',text:it.link});kids.push(l);btns.push(copyBtn('Copy link',function(){return it.link;},l));btns.push(el('a',{class:'b sm',href:it.link,target:'_blank',rel:'noopener',html:'Open '+EXT}));}
+      if(it.link){var l=el('div',{class:'lnk',text:it.link});kids.push(l);btns.push(copyBtn('Copy link',function(){return it.link;},l));if(/^https?:\/\/[^\s\[\]{}]+$/.test(it.link))btns.push(el('a',{class:'b sm',href:it.link,target:'_blank',rel:'noopener',html:'Open '+EXT}));else kids.push(el('div',{class:'notes',text:'This link is added in Builder Studio once its form or page is built.'}));}
       kids.push(el('div',{class:'btns'},btns));
       if(it.notes)kids.push(el('div',{class:'notes'+(isHold(it.notes)?' hold':''),text:it.notes}));
       grid.appendChild(el('div',{class:'item'},kids));});
@@ -418,7 +458,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
   // facebook groups
   var FG=D.groups||{},gs=FG.groups||[],gt=document.querySelector('#gtable tbody'),gstate='All';
   function drawG(){gt.textContent='';gs.filter(function(g){return gstate==='All'||g.state===gstate;}).sort(function(a,b){return (a.priority||3)-(b.priority||3);}).forEach(function(g){
-    gt.appendChild(el('tr',{},[el('td',{},[el('a',{href:g.url,target:'_blank',rel:'noopener',text:g.name}),el('div',{class:'muted',style:'font-size:12px',text:(g.why||'')})]),
+    gt.appendChild(el('tr',{},[el('td',{},[el('a',{href:g.url||('https://www.facebook.com/search/groups/?q='+encodeURIComponent(g.name)),target:'_blank',rel:'noopener',text:g.name+(g.url?'':' (search)')}),el('div',{class:'muted',style:'font-size:12px',text:(g.why||'')})]),
       el('td',{text:g.area||''}),el('td',{text:g.category||''}),el('td',{text:(g.members||'')+(g.privacy?' · '+g.privacy:'')}),el('td',{text:g.rules||''}),
       el('td',{},[el('span',{class:'pill '+((g.priority||3)===1?'ok':'hold'),text:'Priority '+(g.priority||3)}),el('div',{class:'muted',style:'font-size:12px',text:'Confidence '+(g.confidence||'')})])]));});}
   if(gs.length){var states=['All'].concat(gs.map(function(g){return g.state;}).filter(function(v,i,a){return v&&a.indexOf(v)===i;}));
