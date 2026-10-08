@@ -26,9 +26,9 @@ On phones a Begin My Portrait button stays pinned to the bottom of the screen be
 2. Paste the `<style>` block and the FAQ `<script type="application/ld+json">` into the page head, and everything inside `<body>` into the page body. Every style is scoped under the `.mhl` wrapper, so it will not restyle the rest of the site. If the page uses the site template, drop the three lines marked "Standalone page only".
 3. Keep the small script at the bottom (it only runs the phone sticky button).
 4. Make sure the site's analytics and Meta pixel load on the page, as they do sitewide.
-5. The website popup snippet already skips any URL containing `/home-portrait` and `/portrait`, so the popup will not appear on this page.
+5. The website pop-up snippet already skips any URL containing `/home-portrait` and `/portrait`, so the pop-up will not appear on this page.
 
-**Option B: a Builder Studio funnel page.** Create a one step funnel, add a full width custom code element, and paste the whole file. Connect it to a Mitchell domain path or subdomain. This keeps the page in the same account as the quiz leads, but it sits outside the main site's navigation and search history.
+**Option B: a Builder Studio funnel page.** Create a one-step funnel, add a full-width custom code element, and paste the whole file. Connect it to a Mitchell domain path or subdomain. This keeps the page in the same account as the quiz leads, but it sits outside the main site's navigation and search history.
 
 Either way, the quiz itself stays where it is at https://mitchellhomesliving.com/portrait. Every button on this page links there with UTMs.
 
@@ -45,7 +45,7 @@ All quiz links use `utm_source=mitchellhomesinc`, `utm_medium=landing`, `utm_cam
 
 ## Things the vendor should know
 
-* Fonts load from mitchellhomesliving.com, which allows cross site loading. If the vendor would rather self host, copy `home-portrait/fonts/montserrat.woff2` and `charlotte.woff2` to the site and change the two `@font-face` URLs plus the preload link.
+* Fonts load from mitchellhomesliving.com, which allows cross-site loading. If the vendor would rather self-host, copy `home-portrait/fonts/montserrat.woff2` and `charlotte.woff2` to the site and change the two `@font-face` URLs plus the preload link.
 * Photos use Mitchell's media CDN size and crop parameters (`?width=...&height=...&mode=crop`). If the vendor swaps a photo, keep the parameters.
 * The Design Dollars fine print is the working draft from the Current Incentives doc and must be swapped for Mitchell's official terms sheet when it arrives. If the offer changes, the Design Dollars band and the one line in "Inside your portrait" are the only places to edit.
 
@@ -57,7 +57,7 @@ All quiz links use `utm_source=mitchellhomesinc`, `utm_medium=landing`, `utm_cam
 4. **Design Studio or Design Center.** FACTS names the portrait's next step "a Design Studio visit" and the locations "Design Centers". The page uses both that way. Confirm Mitchell is happy with that, or pick one.
 5. **Buyers without land.** The page welcomes them but does not say SimplyMitchell works the same when the land is still being bought, because that is an open question from the no land page. Confirm with Mitchell.
 6. **"The quiz and your Home Portrait cost nothing."** Plainly true, but not written in FACTS. Confirm it is fine to say.
-7. **Reserve by date.** The October 31, 2026 rolling date is left off on purpose so the page does not need a monthly edit. Add it if Mitchell wants the urgency.
+7. **Reserve-by date.** The October 31, 2026 rolling date is left off on purpose so the page does not need a monthly edit. Add it if Mitchell wants the urgency.
 8. **License numbers.** Contractor license numbers by state have not been supplied. Add them to the footer if required.
 9. **Hero photo.** The farmhouse sunset sky looks enhanced. It is Mitchell's own photo, but confirm Kelly is comfortable leading with it.
-10. **Things in the live quiz a visitor will hit next** (not changed here): question eight's subline and the Planner portrait text say "about 150 days", which conflicts with the no build duration rule; the capture screen's SimplyMitchell logo alt text reads "Simply Mitchell" as two words; and question five says "Helping you find it is part of what we do", which is still an open flag on the no land page.
+10. **Things in the live quiz a visitor will hit next** (not changed here): question eight's subline and the Planner portrait text say "about 150 days", which conflicts with the no-build-duration rule; the capture screen's SimplyMitchell logo alt text reads "Simply Mitchell" as two words; and question five says "Helping you find it is part of what we do", which is still an open flag on the no land page.

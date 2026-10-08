@@ -1,6 +1,8 @@
 # Approval page spec
 
-`build_approval.py` reads one JSON file. Paths to images are relative to the spec file (or absolute). Every string is shown to the client as written, so write it as client facing copy.
+`build_approval.py` reads one JSON file. Paths to images are relative to the spec file (or absolute). Every string is shown to the client as written, so write it as client-facing copy.
+
+Copy rules: use grammatical hyphens in compound modifiers (a 90-second quiz, a follow-up email); em and en dashes stay banned, and the build stops on them.
 
 ## Top level
 
@@ -26,7 +28,7 @@
 {"primary": "#2b6d47", "deep": "#1e4f33", "accent": "#f5d053", "paper": "#faf8f3",
  "font": "Montserrat", "script_font": "fonts/charlotte.woff2", "logo_white": "img/logo-white.png"}
 ```
-`primary` drives buttons and labels, `deep` the cover and sign off band, `accent` the highlight (numbers, progress, the script word), `paper` the page ground. `font` must be a Google Fonts family. `script_font` (a local .woff2) is optional and styles only `cover.script_word`. Dark mode colors are derived automatically.
+`primary` drives buttons and labels, `deep` the cover and sign-off band, `accent` the highlight (numbers, progress, the script word), `paper` the page ground. `font` must be a Google Fonts family. `script_font` (a local .woff2) is optional and styles only `cover.script_word`. Dark mode colors are derived automatically.
 
 ## glance
 
@@ -53,12 +55,12 @@
     ]}
  ]}
 ```
-Items are numbered A1, A2 ... across the whole page in order. `gallery` shows clickable images (`tall` crops the thumbnail to the top 300 px, right for emails and long pages). `posts` shows collapsible rows with the exact words; `show_first` hides the rest behind a Show all button. `waiting` is a question number (1 based) or 0.
+Items are numbered A1, A2 ... across the whole page in order. `gallery` shows clickable images (`tall` crops the thumbnail to the top 300 px, right for emails and long pages). `posts` shows collapsible rows with the exact words; `show_first` hides the rest behind a Show all button. `waiting` is a question number (1-based) or 0.
 
 ## questions
 
 ```json
-[{"title": "November reserve by date", "text": "The reserve by date rolls monthly. Which date should November pieces use? We suggest November 30, 2026."}]
+[{"title": "November reserve-by date", "text": "The reserve-by date rolls monthly. Which date should November pieces use? We suggest November 30, 2026."}]
 ```
 
 ## Example

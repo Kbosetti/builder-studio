@@ -56,7 +56,7 @@ SERIES = [
             {"t": "p", "text": "Most builders ask about your land first. We ask fifth."},
             {"t": "p", "text": "By the time you reach that question in the Home Portrait, you have already pictured the porch, the kitchen and the people under the roof. Then we ask about the ground it stands on, because that one answer changes everything we paint for you."},
             {"t": "list", "items": [
-                "If you own land, your portrait shows how it can carry the build: zero down, zero closing costs and no construction loan, because Mitchell self funds every build.",
+                "If you own land, your portrait shows how it can carry the build: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.",
                 "If there is family land in the picture, it shows the same path.",
                 "If you are still looking, it shows what you can start on now, before you hold a deed."]},
             {"t": "cta", "text": "Take the Quiz", "href": QUIZ},
@@ -83,9 +83,9 @@ SERIES = [
          "hero": hero("2026/3/24/10_mwFjkrl.jpg", "Aerial view of a Mitchell home among the trees beside the water"),
          "eyebrow": "The Home Portrait", "headline": "The place everyone comes home to",
          "blocks": [
-            {"t": "p", "text": "Some homes are built for every day. Some are built for the long table, the full house weekend and the place you plan to retire."},
+            {"t": "p", "text": "Some homes are built for every day. Some are built for the long table, the full-house weekend and the place you plan to retire."},
             {"t": "p", "text": "If that is the home you keep talking about, there is a portrait for it. Choose Smith Mountain Lake, Lake Gaston, the Shenandoah Valley or the Eastern Shore and Outer Banks, tell us it is a getaway, a family retreat or the place you will retire, and we paint The Gathering Place Portrait: lake, coast or mountains."},
-            {"t": "p", "text": "Second homes are where banks get strict. Mitchell self funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple."},
+            {"t": "p", "text": "Second homes are where banks get strict. Mitchell self-funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple."},
             {"t": "cta", "text": "Take the Quiz", "href": QUIZ},
             {"t": "small", "text": "Eight questions. About 90 seconds."}],
          "financing": True},
@@ -93,7 +93,7 @@ SERIES = [
 
     {"key": "designdollars", "name": "Mitchell Design Dollars", "stage": "Decide", "campaign": "fall26_designdollars",
      "audience": "Warm audiences and the database only, per the approved rollout. Full marketing list, minus anyone already under contract.",
-     "goal": "Design Center conversations and reservations before the October 31 reserve by date.",
+     "goal": "Design Center conversations and reservations before the October 31 reserve-by date.",
      "emails": [
         {"id": "dd1", "send": "Tuesday, October 13", "segment": "Full list",
          "subject": "It is your land. Make it your home.",
@@ -147,7 +147,7 @@ SERIES = [
      ]},
 
     {"key": "fourbuyers", "name": "The Four Buyers", "stage": "Believe", "campaign": "fall26_fourbuyers",
-     "audience": "Landowner segment (registered as owns land, or quiz contacts tagged with land) for the first four; the looking for land segment gets the fifth. Send to Virginia and Maryland contacts first; the Dreamer and No Land emails have Carolinas versions.",
+     "audience": "Landowner segment (registered as owns land, or quiz contacts tagged with land) for the first four; the looking-for-land segment gets the fifth. Send to Virginia and Maryland contacts first; the Dreamer and No Land emails have Carolinas versions.",
      "goal": "Visits to the matching page and calls to a New Home Consultant. Each email carries one argument and one page.",
      "emails": [
         {"id": "fb1", "send": "Tuesday, November 3", "segment": "Owns land or family land, Virginia and Maryland",
@@ -157,7 +157,7 @@ SERIES = [
          "eyebrow": "Building on your land", "headline": "Your land can be your down payment",
          "blocks": [
             {"t": "p", "text": "You already own the hardest part of building a custom home. Most landowners do not realize how far along that puts them."},
-            {"t": "p", "text": "Most builders send you to a bank for a construction loan before anyone turns a shovel. We do not. Mitchell self funds every build, so the land you hold counts toward the home, with zero down, zero closing costs and no construction loan."},
+            {"t": "p", "text": "Most builders send you to a bank for a construction loan before anyone turns a shovel. We do not. Mitchell self-funds every build, so the land you hold counts toward the home, with zero down, zero closing costs and no construction loan."},
             {"t": "p", "text": "That means one closing instead of two, no draw period interest while the house goes up, and no bank deciding whether your land counts."},
             {"t": "cta", "text": "See What Your Land Can Build", "href": SMH + "/land"},
             DOWNEY,
@@ -166,14 +166,14 @@ SERIES = [
         {"id": "fb2", "send": "Tuesday, November 10", "segment": "Owns land or family land, Virginia and Maryland",
          "subject": "A custom home on your land, without the unknowns",
          "preview": "Start with a plan that already works. Every choice priced before we build.",
-         "hero": hero("2026/3/24/38-DSC06023.jpg", "A bright Mitchell living room with a fireplace, built in shelves and tall windows"),
+         "hero": hero("2026/3/24/38-DSC06023.jpg", "A bright Mitchell living room with a fireplace, built-in shelves and tall windows"),
          "eyebrow": "Building on your land", "headline": "Custom does not have to mean unpredictable",
          "blocks": [
             {"t": "p", "text": "Everyone has heard a build story that did not end well. The number moved after signing, and nobody explained why. That is the part our process is built to remove."},
             {"t": "steps", "items": [
                 ["Start with a plan that works", "More than 40 floor plans from 1,000 to 3,000 square feet. You are editing a plan that already works, not inventing one and hoping."],
-                ["Every choice priced before we build", "You choose in daylight, with the number in front of you, before construction begins. Your selections are reviewed and signed off at the pre construction meeting, and then ground breaks."],
-                ["You hear from us every week", "From groundbreaking to move in, so you never have to wonder where things stand."]]},
+                ["Every choice priced before we build", "You choose in daylight, with the number in front of you, before construction begins. Your selections are reviewed and signed off at the pre-construction meeting, and then ground breaks."],
+                ["You hear from us every week", "From groundbreaking to move-in, so you never have to wonder where things stand."]]},
             {"t": "cta", "text": "See How We Build", "href": SMH + "/land"},
             DD_BAND],
          "dd": True},
@@ -186,7 +186,7 @@ SERIES = [
          "blocks": [
             {"t": "p", "text": "A lot of people who want to build on their land called a bank once, heard what a construction loan involves, and quietly put the plan away."},
             {"t": "p", "text": "A construction loan usually means a down payment before work starts, two closings, interest while the house goes up, and inspections before every draw. It is the obstacle that ends most builds before they begin."},
-            {"t": "p", "text": "With Mitchell there is no construction loan. Mitchell self funds every build, so there is zero down, zero closing costs and one closing. The land you already own counts toward the home."},
+            {"t": "p", "text": "With Mitchell there is no construction loan. Mitchell self-funds every build, so there is zero down, zero closing costs and one closing. The land you already own counts toward the home."},
             {"t": "p", "text": "Then comes the part you wanted all along: a finished home on the land you already own."},
             {"t": "cta", "text": "See the Math", "href": SMH + "/calculator"},
             DD_BAND],
@@ -239,7 +239,7 @@ SERIES = [
          "eyebrow": "For real estate professionals", "headline": "The easiest yes for a client with land",
          "blocks": [
             {"t": "p", "text": "When a client buys land, or already owns it, the next question is usually the hard one: how do we build on it without a construction loan and a second closing?"},
-            {"t": "p", "text": "That is the question Mitchell answers. We build custom homes on land the buyer owns, and Mitchell self funds every build: zero down, zero closing costs and no construction loan."},
+            {"t": "p", "text": "That is the question Mitchell answers. We build custom homes on land the buyer owns, and Mitchell self-funds every build: zero down, zero closing costs and no construction loan."},
             {"t": "list", "items": [
                 "More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections.",
                 "Every Mitchell home starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more your client personalizes.",
@@ -269,7 +269,7 @@ SERIES = [
          "blocks": [
             {"t": "p", "text": "Raw land is hard to fall in love with. Most buyers walking a lot are trying to picture the house, and most cannot."},
             {"t": "p", "text": "That is what the Home Portrait does. Your buyer answers eight questions about the home they want and the land it belongs on, and in about 90 seconds they see a portrait of it, with a clear path to building."},
-            {"t": "p", "text": "When they are ready, Mitchell builds custom homes on land the buyer owns and self funds every build: zero down, zero closing costs and no construction loan."},
+            {"t": "p", "text": "When they are ready, Mitchell builds custom homes on land the buyer owns and self-funds every build: zero down, zero closing costs and no construction loan."},
             {"t": "cta", "text": "Send Your Buyer the Home Portrait", "href": QUIZ},
             {"t": "small", "text": "Mitchell has a realtor incentive program for referred buyers. Ask us for the current terms."}],
          "financing": True},
@@ -281,7 +281,7 @@ SERIES = [
          "eyebrow": "For real estate professionals", "headline": "The land your client owns can count toward the home",
          "blocks": [
             {"t": "p", "text": "Some of your clients own land they have never thought of as a down payment: a parcel they inherited, family acreage, a lot they bought years ago."},
-            {"t": "p", "text": "With Mitchell, that land can count toward a custom home. Mitchell self funds every build, so there is zero down, zero closing costs, no construction loan and one closing instead of two."},
+            {"t": "p", "text": "With Mitchell, that land can count toward a custom home. Mitchell self-funds every build, so there is zero down, zero closing costs, no construction loan and one closing instead of two."},
             {"t": "p", "text": "Every Mitchell home also starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more your client personalizes."},
             {"t": "list", "items": [
                 "Refer a client: reply with their name and county, or have them call a New Home Consultant.",
@@ -306,7 +306,7 @@ SERIES = [
             {"t": "small", "text": "Behind the Build: Well and Septic", "href": "https://www.youtube.com/watch?v=zWwtw8qgp4w"},
             {"t": "cta", "text": "Share the Home Portrait", "href": QUIZ}]},
         {"id": "ho1", "send": "Wednesday, October 21", "segment": "Past Mitchell homeowners",
-         "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer.",
+         "hold": "Confirm with Mitchell whether a homeowner referral thank-you exists before adding one. This version makes no offer.",
          "subject": "Know someone with land and a dream?",
          "preview": "The best Mitchell homes start with a homeowner's introduction.",
          "hero": hero("2026/3/3/ava_farmhouse-extended_sky.jpg", "A Mitchell farmhouse with a long front porch under an evening sky"),
@@ -318,7 +318,7 @@ SERIES = [
             {"t": "p", "text": "And when they are ready to talk, they can call a New Home Consultant directly. Thank you for building with us, and for every introduction."}]},
      ]},
 
-    {"key": "nurture", "name": "Quiet lead nurture", "stage": "Nurture", "campaign": "fall26_nurture",
+    {"key": "nurture", "name": "Quiet-lead nurture", "stage": "Nurture", "campaign": "fall26_nurture",
      "audience": "Any lead with no reply, no booked appointment and no stage change seven days after first contact. Leaves the moment they reply, book, reserve or opt out.",
      "goal": "A reply or a booked call. Personal notes from the consultant alternate with designed emails and texts over 60 days, then the lead moves to the monthly newsletter.",
      "emails": [
@@ -330,8 +330,8 @@ SERIES = [
             {"t": "p", "text": "In case it helps, here are the three questions people ask me first:"},
             {"t": "list", "items": [
                 "Can my land be my down payment? If you own land, it can count toward the home.",
-                "Do I need a construction loan? Not with Mitchell. We self fund every build.",
-                "Where do I start? Usually with a 15 minute call, at a time that works for you."]},
+                "Do I need a construction loan? Not with Mitchell. We self-fund every build.",
+                "Where do I start? Usually with a 15-minute call, at a time that works for you."]},
             {"t": "p", "text": "Just reply with a good time and I will call you then."}],
          "financing": True},
         {"id": "nu3", "send": "Day 5 · designed email", "segment": "Quiet leads who own land or have family land (nu3n for everyone else)",
@@ -342,7 +342,7 @@ SERIES = [
          "blocks": [
             {"t": "covers", "items": [
                 ["Can my land be my down payment?", "It can. With SimplyMitchell, the land you own counts toward the home, so there is zero down and zero closing costs."],
-                ["Do I need a construction loan?", "No. Mitchell self funds every build, so there is one closing, no draw period interest and no bank deciding whether your land counts."],
+                ["Do I need a construction loan?", "No. Mitchell self-funds every build, so there is one closing, no draw period interest and no bank deciding whether your land counts."],
                 ["What will it cost to build on my land?", "It depends on your plan, your selections and your site, including well, septic and clearing. A New Home Consultant can walk your land with you and put real numbers on it."]]},
             {"t": "cta", "text": "See What Your Land Can Build", "href": SMH + "/land"},
             {"t": "small", "text": "Want to go deeper? Watch Well and Septic on Behind the Build.", "href": "https://www.youtube.com/watch?v=zWwtw8qgp4w"}],

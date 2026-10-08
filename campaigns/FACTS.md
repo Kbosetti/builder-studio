@@ -3,14 +3,14 @@
 Compiled October 8, 2026 from the Mitchell Current Incentives doc (updated September 1, 2026), the brand skill, the live campaign pages on simplymitchellhomes.com, and `landing-pages/PRE-LAUNCH-FLAGS.md`. If a fact is not here, do not invent it.
 
 ## Copy rules
-- No dashes as punctuation, ever (no em or en dashes). Kelly approved grammatical hyphens in compound modifiers, e.g. "90-second quiz", "eight-question quiz". URLs are exempt.
+- No dashes as punctuation, ever: em and en dashes stay banned. Hyphens are required wherever grammar calls for them: in compound modifiers before a noun (e.g. "90-second quiz", "eight-question quiz", "family-owned builder") and in words like follow-up, sign-up, family-owned and self-funds. Verbs stay open ("follow up with", "sign up"). URLs are exempt.
 - Rule Zero: sell the home first, the incentive second. Never lead with the offer.
 - Voice: the handshake you trust. Firm, warm, plain. No hype, nothing folksy, flowery, trendy or arrogant. Mitchell is the guide, the buyer is the hero.
 - The program is SimplyMitchell, one word, capital M. It is the program; Mitchell Homes is the brand.
 - Customer facing title: New Home Consultant. The central team that calls new leads: online sales counselors.
 - Geography is always two separate claims: Mitchell builds in Virginia, North Carolina, South Carolina and Maryland. The five Design Centers are in Virginia and North Carolina (Fredericksburg, Richmond, Newport News, Raleigh, Wilmington; Wilmington is open).
 - Never claim a build duration (no "150 days" in campaign assets). Never "price locked" or "the price never changes". The approved Planner claim is "Every choice priced before we build", supported by "You choose in daylight, with the number in front of you, before construction begins."
-- Avoid "Mitchell funds your build, not a bank" (waiting on legal's exact wording). Use the live page wording: "Mitchell self funds every build" / "No construction loan, because Mitchell self funds every build."
+- Avoid "Mitchell funds your build, not a bank" (waiting on legal's exact wording). Use the live page wording: "Mitchell self-funds every build" / "No construction loan, because Mitchell self-funds every build."
 - Never name the platform vendor; it is Builder Studio. Write CEA Marketing, never CEA Marketing Group.
 - Write "since 1992", never a year count.
 - Persona labels (Value Unlocker, Planner, Transitioner, Grounded Dreamer) are internal. Never in consumer copy. Portrait names are consumer facing: The Landowner's Portrait, The Dreamer's Portrait, The Family Portrait, The Planner's Portrait, The Gathering Place Portrait.
@@ -32,7 +32,7 @@ Compiled October 8, 2026 from the Mitchell Current Incentives doc (updated Septe
 - Long fine print (email footers, landing pages): "Design Dollars apply to Design Center selections including cabinets, countertops, flooring, tile, trim and millwork, doors, lighting and electrical, plumbing fixtures, appliances, paint, and hardware. Not applicable to structural options, decks, garages, basements, well, septic, site work, or contract category options. Not applied to base price and not redeemable for cash. Tier determined at the time selections are made. One offer per contract. Program effective September 1, 2026. Full terms available from your New Home Consultant." (Working draft pending Mitchell's official terms sheet. The Incentives doc says "New Home Specialist"; the brand rule is New Home Consultant.)
 
 ## SimplyMitchell (live page wording)
-- Zero down. Zero closing costs. No construction loan. Mitchell self funds every build, so there is no second closing, no draw period interest and no bank deciding whether your land counts.
+- Zero down. Zero closing costs. No construction loan. Mitchell self-funds every build, so there is no second closing, no draw period interest and no bank deciding whether your land counts.
 - Any financing example carries: "Financing terms are illustrative only and subject to credit approval. Not a commitment to lend."
 - Savings rate is 8 percent (never 6.5). Do not quote savings math outside the calculator page.
 

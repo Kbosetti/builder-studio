@@ -120,7 +120,7 @@ p{{font-size:16px;line-height:1.55;color:#24332a;margin-bottom:12px}}
 <h1>Own land? See what it could <span class="s">Become</span></h1>
 <p>Mitchell Homes builds custom homes on land you already own, and has since 1992.</p>
 <div class="pts"><span>Zero down</span><span>Zero closing costs</span><span>No construction loan</span></div>
-<p>Mitchell self funds every build. Answer eight questions about the home you dream of, and we paint your Home Portrait.</p>
+<p>Mitchell self-funds every build. Answer eight questions about the home you dream of, and we paint your Home Portrait.</p>
 </div><div class="side"><div class="qr">{qr(q3)}</div><b class="go">Scan to begin</b><div class="u">About 90 seconds<br>mitchellhomesliving.com/portrait</div></div></div>
 <div class="fine">{FINE_FIN} Virginia and Maryland (540) 701-2759. North and South Carolina (984) 331-5468.</div>
 <div class="tabs">{tabs}</div>

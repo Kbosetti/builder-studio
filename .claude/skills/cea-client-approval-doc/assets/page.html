@@ -156,7 +156,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 }
 </style>
 <div id="app"></div>
-<dialog id="lb" aria-label="Full size view"><div class="lb">
+<dialog id="lb" aria-label="Full-size view"><div class="lb">
   <div class="bar2"><span id="lbCap"></span><div class="ctl"><button type="button" id="lbPrev">Previous</button><button type="button" id="lbNext">Next</button><button type="button" class="x" id="lbClose">Close</button></div></div>
   <img id="lbImg" alt="">
 </div></dialog>
@@ -196,7 +196,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   if(D.glance)nav.appendChild(el('a',{href:'#glance',text:D.glance.nav||'At a glance'}));
   D.sections.forEach(function(s){nav.appendChild(el('a',{href:'#'+s.id,text:s.nav||s.eyebrow||s.title}));});
   if(Q.length)nav.appendChild(el('a',{href:'#questions',text:'Questions'}));
-  nav.appendChild(el('a',{class:'go',href:'#signoff',text:'Sign off'}));
+  nav.appendChild(el('a',{class:'go',href:'#signoff',text:'Sign-off'}));
   var meterText=el('span'),mA=el('i',{class:'a'}),mC=el('i',{class:'c'});
   app.appendChild(el('div',{class:'bar'},[el('div',{class:'wrap'},[el('div',{class:'meter'},[meterText,el('div',{class:'track','aria-hidden':'true'},[mA,mC])]),nav])]));
   var main=el('main',{class:'wrap'});app.appendChild(main);
@@ -255,7 +255,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     i.addEventListener('input',function(){S.sign[f[0]]=i.value;save();});return el('label',{for:f[0]},[f[1],i]);});
   var copyBtn=el('button',{class:'btn',type:'button',text:'Copy summary'}),mail=el('a',{class:'btn ghost',href:'#',text:'Open in email'}),rest=el('button',{class:'btn ghost',type:'button',text:'Approve everything not marked'});
   var toastEl=el('div',{class:'toast',role:'status'}),sumbox=el('pre',{class:'sumbox'});
-  main.appendChild(el('section',{id:'signoff'},[el('div',{class:'sign'},[el('div',{},[el('span',{class:'eyebrow',text:'Sign off'}),el('h2',{text:SO.title||('Send your approvals to '+(SO.to||'Kelly'))}),
+  main.appendChild(el('section',{id:'signoff'},[el('div',{class:'sign'},[el('div',{},[el('span',{class:'eyebrow',text:'Sign-off'}),el('h2',{text:SO.title||('Send your approvals to '+(SO.to||'Kelly'))}),
     el('p',{text:SO.text||('Your choices are saved in this browser as you go. When you are done, copy the summary and paste it into a reply to '+(SO.to||'Kelly')+', or open it in an email.')}),
     el('div',{class:'fields'},inputs),el('div',{class:'acts'},[copyBtn,mail,rest]),toastEl]),sumbox])]));
   app.appendChild(el('footer',{},[el('div',{class:'wrap',text:D.footer||('Prepared by '+D.prepared_by+' for '+D.client+', '+D.date_line+'. Drafts for approval; nothing has been sent, posted or published.')})]));
