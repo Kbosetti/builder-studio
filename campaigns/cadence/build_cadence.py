@@ -81,7 +81,7 @@ ev.append({"d": date(2026, 11, 5), "ch": "Sales team", "camp": "fb", "title": "L
 for w in range(WEEKS):
     fri = START + timedelta(days=7 * w + 4)
     ev.append({"d": fri, "ch": "Sales team", "camp": "all", "title": "Friday call list", "aud": "Everyone who clicked an email, opened a text link or visited a campaign page this week and has not booked",
-               "who": "Online sales counselors and New Home Consultants", "body": "Call first, then text if there is no answer. Use the follow up script that matches what they looked at: Design Dollars, the Home Portrait, or their land.", "hold": ""})
+               "who": "Online sales counselors and New Home Consultants", "body": "Call first, then text if there is no answer. Use the follow-up script that matches what they looked at: Design Dollars, the Home Portrait, or their land.", "hold": ""})
 
 org = {s["id"]: s for s in json.load(open(f"{C}/traffic/organic.json"))["sections"]}
 for i in org["social"]["items"]:
@@ -119,9 +119,9 @@ for i in org["community"]["items"] + org["youtube"]["items"]:
         ev.append({"d": d, "ch": ch, "camp": campaign(i["title"], i["body"]), "title": i["title"], "aud": i["meta"].split(" · ")[1] if " · " in i["meta"] else "",
                    "who": "Marketing", "body": i["body"], "link": i.get("link", ""), "notes": clean(i.get("notes", "")), "hold": ""})
 # one time setup on day one
-setup = [("Website pop-up, announcement bar and thank you pages", "Website vendor and marketing"), ("YouTube descriptions, pinned comment and retitles", "Marketing"),
+setup = [("Website pop-up, announcement bar and thank-you pages", "Website vendor and marketing"), ("YouTube descriptions, pinned comment and retitles", "Marketing"),
          ("Listing portal profiles and the Design Dollars snippet", "Marketing"), ("Print the counter cards and community flyers", "Design Centers"),
-         ("Missed call text back with the quiz link", "Marketing"), ("Email signature line or banner for everyone at Mitchell", "Everyone")]
+         ("Missed-call text-back with the quiz link", "Marketing"), ("Email signature line or banner for everyone at Mitchell", "Everyone")]
 for t, who in setup:
     ev.append({"d": START, "ch": "Setup", "camp": "all", "title": t, "aud": "One time, the first week", "who": who, "body": "Everything for this is in the approval document and the traffic kit.", "hold": ""})
 
@@ -154,7 +154,7 @@ if os.path.exists(fgp):
     fg = json.load(open(fgp))
     top = [g for g in fg.get("groups", []) if (g.get("priority") or 3) == 1]
     if top:
-        ev.append({"d": START, "ch": "FB groups", "camp": "all", "title": f"Join the {len(top)} first choice Facebook groups", "aud": "Local, new to the area and land groups",
+        ev.append({"d": START, "ch": "FB groups", "camp": "all", "title": f"Join the {len(top)} first-choice Facebook groups", "aud": "Local, new-to-the-area and land groups",
                    "who": "Marketing, plus any consultant who lives in the area", "body": "\n".join(f"{g['name']} ({g.get('area', '')})\n{g.get('url', '')}" for g in top),
                    "notes": "Read each group's rules. Comment helpfully for a week or two before asking anything.", "hold": ""})
     if fg.get("outreach"):

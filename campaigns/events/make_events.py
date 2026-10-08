@@ -44,7 +44,7 @@ DD_SHORT = "Every Mitchell home comes with $5,000 in Design Dollars, up to $25,0
 DD_SCOTT = "Your home comes with $5,000 in Design Dollars, and it goes up to $25,000 the more you personalize."
 DD_DOC = "Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000."
 DD_LOCK = "Reserve by October 31, 2026, and your Design Dollars are locked. Your tier is set later, when you make your selections."
-SM = "zero down, zero closing costs and no construction loan, because Mitchell self funds every build"
+SM = "zero down, zero closing costs and no construction loan, because Mitchell self-funds every build"
 PHONES = "Virginia and Maryland (540) 701-2759, North and South Carolina (984) 331-5468"
 LUNCH = "[Lunch provided: Mitchell to confirm.]"
 
@@ -79,19 +79,19 @@ EVENTS.append({
     "date": "Saturday, October 24, 2026",
     "time": "10am to 2pm, local time at every studio",
     "where": ALL5,
-    "audience": "Anyone planning a Mitchell home who has not signed yet, above all the buyers who have been saving photos of the home they want: active leads, Design Dollars email clickers and Home Portrait quiz takers. Walk ins welcome; an RSVP gets a reserved time with a Design Consultant.",
+    "audience": "Anyone planning a Mitchell home who has not signed yet, above all the buyers who have been saving photos of the home they want: active leads, Design Dollars email clickers and Home Portrait quiz takers. Walk-ins welcome; an RSVP gets a reserved time with a Design Consultant.",
     "what": [
         "Buyers bring the photos they have been saving, on their phone or in a folder.",
         "A Design Consultant matches the favorites to Mitchell selections and shows what they cost.",
         "Together they see where that list lands on the Design Dollars ladder, and how far it is to the next tier.",
     ],
-    "why": "Turns the dd2 ladder email into a seat at the design table one week before the October 31 reserve by date, with the buyer's own photos as the reason to come in.",
+    "why": "Turns the dd2 ladder email into a seat at the design table one week before the October 31 reserve-by date, with the buyer's own photos as the reason to come in.",
     "confirm": [
         "Approve the date and the 10am to 2pm hours, or name the studios that will take part.",
         "Staffing at every studio: a Design Consultant for the full four hours, plus a New Home Consultant for land and plan questions. Newport News and Wilmington each have one New Home Consultant; name the cover.",
-        "Reserved times: CEA proposes 30 minute slots with walk ins between them. Confirm the length and how many tables each studio can run at once.",
+        "Reserved times: CEA proposes 30-minute slots with walk-ins between them. Confirm the length and how many tables each studio can run at once.",
         "Pricing at the table: can a Design Consultant price a photo list on the spot? If not, copy changes to: we will send you the numbers.",
-        "RSVP form (Kelly builds it in Builder Studio): name, phone, email, studio, preferred time, and the text consent checkbox with legal approved wording.",
+        "RSVP form (Kelly builds it in Builder Studio): name, phone, email, studio, preferred time, and the text consent checkbox with legal-approved wording.",
         "Food: none promised anywhere. If Mitchell wants coffee or light refreshments, add one line to the Facebook event.",
         "Studio addresses as listed on the live Design Dollars page, and which phone line Richmond shows.",
     ],
@@ -106,7 +106,7 @@ EVENTS.append({
             "fine": FINE}}],
     "social": [
         {"date": "Monday, October 19, 2026", "channels": "Facebook, Instagram feed",
-         "body": "You have been saving photos of this house for years. The kitchen. The porch. The light over the table.\n\nBring them in. On Saturday, October 24, from 10am to 2pm, every Mitchell Design Center is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. " + DD_SHORT + "\n\nFredericksburg, Richmond, Newport News, Raleigh and Wilmington. Walk ins welcome. RSVP and we will save you a time: " + RSVP + "\n\n" + FINE + "\n\n#BuildOnYourLand #MitchellHomes",
+         "body": "You have been saving photos of this house for years. The kitchen. The porch. The light over the table.\n\nBring them in. On Saturday, October 24, from 10am to 2pm, every Mitchell Design Center is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. " + DD_SHORT + "\n\nFredericksburg, Richmond, Newport News, Raleigh and Wilmington. Walk-ins welcome. RSVP and we will save you a time: " + RSVP + "\n\n" + FINE + "\n\n#BuildOnYourLand #MitchellHomes",
          "link": u(RSVP, "facebook", e),
          "notes": "Image: a Design Center finish wall or kitchen display, e.g. " + M + "2023/2/6/Design_Center_13_IfaBRgj.jpg . " + BOOST + " " + IG_NOTE.format(ig=u(RSVP, "instagram", e))},
         {"date": "Friday, October 23, 2026", "channels": "Facebook, Instagram Stories",
@@ -114,16 +114,16 @@ EVENTS.append({
          "link": u(RSVP, "facebook", e),
          "notes": "Stories: use the link sticker with the Instagram link " + u(RSVP, "instagram", e) + " . Fine print stays on the Story frame. " + BOOST},
     ],
-    "facebook_event": "Bring Your Photos Saturday at the Mitchell Homes [city] Design Center\nSaturday, October 24, 2026, 10am to 2pm\n[studio address]\n\nYou know what you want. You have the photos to prove it. Bring them in.\n\nSit down with a Mitchell Design Consultant, show us the kitchens, porches, tile and lighting you have been saving, and we will match them to Mitchell selections and show you what they cost. With more than 40,000 selections, most of what is in your folder is something we already carry.\n\nYou will also see where your list lands on the Mitchell Design Dollars ladder. " + DD_DOC + " " + DD_LOCK + "\n\nWalk ins are welcome. RSVP and we will save you a time with a Design Consultant: " + RSVP + "\n\nQuestions? Call a New Home Consultant: " + PHONES + ".\n\n" + FINE + " One offer per contract.",
+    "facebook_event": "Bring Your Photos Saturday at the Mitchell Homes [city] Design Center\nSaturday, October 24, 2026, 10am to 2pm\n[studio address]\n\nYou know what you want. You have the photos to prove it. Bring them in.\n\nSit down with a Mitchell Design Consultant, show us the kitchens, porches, tile and lighting you have been saving, and we will match them to Mitchell selections and show you what they cost. With more than 40,000 selections, most of what is in your folder is something we already carry.\n\nYou will also see where your list lands on the Mitchell Design Dollars ladder. " + DD_DOC + " " + DD_LOCK + "\n\nWalk-ins are welcome. RSVP and we will save you a time with a Design Consultant: " + RSVP + "\n\nQuestions? Call a New Home Consultant: " + PHONES + ".\n\n" + FINE + " One offer per contract.",
     "facebook_event_notes": "One Facebook event per Design Center, so each shows a real address to people nearby; only [city] and [studio address] change. Link: " + u(RSVP, "facebook_event", e) + " . Cover image: no people.",
     "gbp": {
         "title": "Bring Your Photos Saturday",
-        "body": "Bring the photos you have been saving for your future home to our [city] Design Center. A Design Consultant will match your favorites to Mitchell selections, show you what they cost, and show you where they land on the Design Dollars ladder. " + DD_SHORT + " Walk ins welcome, or tap Sign up to save a time.\n\n" + FINE,
+        "body": "Bring the photos you have been saving for your future home to our [city] Design Center. A Design Consultant will match your favorites to Mitchell selections, show you what they cost, and show you where they land on the Design Dollars ladder. " + DD_SHORT + " Walk-ins welcome, or tap Sign up to save a time.\n\n" + FINE,
         "button": "Sign up",
         "link": u(RSVP, "gbp", e),
-        "post_on": "All five Design Center profiles, Monday, October 19. Event type post, start Saturday, October 24, 10am, end 2pm.",
+        "post_on": "All five Design Center profiles, Monday, October 19. Event-type post, start Saturday, October 24, 10am, end 2pm.",
         "notes": "Title holds 58 characters. Image: that studio's interior, no people."},
-    "nextdoor": "Saving photos of the home you want to build? Bring them in.\n\nOn Saturday, October 24, from 10am to 2pm, the Mitchell Homes [city] Design Center at [studio address] is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. " + DD_SHORT + "\n\nWalk ins welcome. RSVP for a reserved time: " + u(RSVP, "nextdoor", e) + "\n\nMitchell Homes, building on your land since 1992.\n\n" + FINE,
+    "nextdoor": "Saving photos of the home you want to build? Bring them in.\n\nOn Saturday, October 24, from 10am to 2pm, the Mitchell Homes [city] Design Center at [studio address] is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. " + DD_SHORT + "\n\nWalk-ins welcome. RSVP for a reserved time: " + u(RSVP, "nextdoor", e) + "\n\nMitchell Homes, building on your land since 1992.\n\n" + FINE,
     "nextdoor_when": "Tuesday, October 20, 2026, from each Design Center's Nextdoor business page where one exists.",
     "invite_when": "Thursday, October 22, 2026. Every New Home Consultant to their own active leads.",
     "invite_text": "Hi [first name], it is [your name] with Mitchell Homes. This Saturday, Oct 24, from 10 to 2, bring the home photos you have been saving to our [city] Design Center. A Design Consultant will show you what your favorites cost. Want me to save you a time?",
@@ -152,8 +152,8 @@ EVENTS.append({
         ("2026-10-22", "Thursday, October 22", "Sales team", "Personal invite text and email to own active leads (the email replaces that day's Design Dollars consultant email)", "New Home Consultants"),
         ("2026-10-23", "Friday, October 23", "Social", "Post 2 (Facebook, Instagram Stories)", "Marketing"),
         ("2026-10-23", "Friday, October 23", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
-        ("2026-10-24", "Saturday, October 24", "Event", "Bring Your Photos Saturday, 10am to 2pm; thank you text by 6pm", "Design Consultants, New Home Consultants"),
-        ("2026-10-25", "Sunday, October 25", "Sales team", "Follow up email with the priced list", "New Home Consultants"),
+        ("2026-10-24", "Saturday, October 24", "Event", "Bring Your Photos Saturday, 10am to 2pm; thank-you text by 6pm", "Design Consultants, New Home Consultants"),
+        ("2026-10-25", "Sunday, October 25", "Sales team", "Follow-up email with the priced list", "New Home Consultants"),
     ]),
 })
 
@@ -165,16 +165,16 @@ EVENTS.append({
     "date": "Tuesday, October 27, 2026",
     "time": "7pm Eastern, about 30 minutes",
     "where": "Online: live on the Mitchell Homes Facebook page and YouTube channel at the same time. No studio needed.",
-    "audience": "Everyone still deciding before the October 31 reserve by date: active leads, Design Dollars email clickers, quiz takers, and anyone curious how SimplyMitchell works. Agents and past homeowners welcome.",
+    "audience": "Everyone still deciding before the October 31 reserve-by date: active leads, Design Dollars email clickers, quiz takers, and anyone curious how SimplyMitchell works. Agents and past homeowners welcome.",
     "what": [
         "Scott Sleeme and Deven Sellers explain Mitchell Design Dollars in plain terms: $5,000 on every home, up to $25,000 the more you personalize, and what it covers.",
         "They answer questions sent in ahead and asked live, including how SimplyMitchell works: " + SM + ".",
         "The recording stays on both channels, and each answer becomes its own short clip.",
     ],
-    "why": "Answers the two questions that stall a Design Dollars decision (what does it cover, do I have to choose now) four days before the October 31 reserve by date, in Scott's own voice.",
+    "why": "Answers the two questions that stall a Design Dollars decision (what does it cover, do I have to choose now) four days before the October 31 reserve-by date, in Scott's own voice.",
     "confirm": [
         "Scott and Deven's time: Tuesday, October 27, about 6:30pm to 7:45pm Eastern for setup, the live half hour and a short wrap.",
-        "Streaming: one tool that sends to Facebook and YouTube at once, a camera and microphone, and who runs it (Brittany or CEA). If the YouTube channel has never streamed, enable live streaming at least a day ahead; first time approval can take up to 24 hours.",
+        "Streaming: one tool that sends to Facebook and YouTube at once, a camera and microphone, and who runs it (Brittany or CEA). If the YouTube channel has never streamed, enable live streaming at least a day ahead; first-time approval can take up to 24 hours.",
         "Questions: a question field on the RSVP form, comments on the October 22 post, and consultant replies. Name who screens them before the show and who answers comments live.",
         "On screen: the Design Dollars fine print and the financing line. Answers stay inside the approved wording (Scott's two sentences; Every choice priced before we build; no build duration; no claim that the price cannot change).",
         "Who posts the replay and cuts the clips.",
@@ -182,7 +182,7 @@ EVENTS.append({
     ],
     "rides_in": [{
         "email": "dd2", "send": "Tuesday, October 20, 2026",
-        "placement": "Second short line in dd2, directly under the Bring Your Photos block. Chosen over dd3 because questions have to arrive before the show and the day before reminder only reaches people who RSVPed, so the invitation needs a week of lead time. dd3 keeps its one job: booking a Design Center visit before October 31.",
+        "placement": "Second short line in dd2, directly under the Bring Your Photos block. Chosen over dd3 because questions have to arrive before the show and the day-before reminder only reaches people who RSVPed, so the invitation needs a week of lead time. dd3 keeps its one job: booking a Design Center visit before October 31.",
         "block": {
             "head": "Ask Scott and Deven, live",
             "text": "On Tuesday, October 27, at 7pm Eastern, Scott Sleeme and Deven Sellers go live on Facebook and YouTube for about 30 minutes to answer your questions about SimplyMitchell and Design Dollars, from the $5,000 every home starts with to the $25,000 top tier. Send yours ahead of time, and they will answer as many as they can.",
@@ -199,18 +199,18 @@ EVENTS.append({
          "link": "[YouTube Live link]",
          "notes": "Stories: link sticker to the YouTube Live link. Post the morning of the show."},
     ],
-    "facebook_event": "Behind the Build Live: Your Design Dollars and SimplyMitchell Questions\nTuesday, October 27, 2026, 7pm Eastern, about 30 minutes\nOnline: live here on Facebook and on the Mitchell Homes YouTube channel\n\nBuilding a home on your land comes with questions. Bring yours to the people who answer them every day.\n\nScott Sleeme, Owner and CEO of Mitchell Homes, and Deven Sellers, Executive Vice President, host Behind the Build. For one live half hour, they answer your questions about:\n\nMitchell Design Dollars. " + DD_DOC + " What they cover, and why you do not have to choose a single finish to lock them in.\n\nSimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self funds every build.\n\nSend your question ahead of time and we will remind you before we go live: " + RSVP + " . Or ask in the comments during the show.\n\n" + DD_LOCK + "\n\n" + FINE + " " + FIN,
+    "facebook_event": "Behind the Build Live: Your Design Dollars and SimplyMitchell Questions\nTuesday, October 27, 2026, 7pm Eastern, about 30 minutes\nOnline: live here on Facebook and on the Mitchell Homes YouTube channel\n\nBuilding a home on your land comes with questions. Bring yours to the people who answer them every day.\n\nScott Sleeme, Owner and CEO of Mitchell Homes, and Deven Sellers, Executive Vice President, host Behind the Build. For one live half hour, they answer your questions about:\n\nMitchell Design Dollars. " + DD_DOC + " What they cover, and why you do not have to choose a single finish to lock them in.\n\nSimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.\n\nSend your question ahead of time and we will remind you before we go live: " + RSVP + " . Or ask in the comments during the show.\n\n" + DD_LOCK + "\n\n" + FINE + " " + FIN,
     "facebook_event_notes": "One online Facebook event with Facebook Live as the location. Link: " + u(RSVP, "facebook_event", e) + " . Publish Thursday, October 22.",
     "gbp": {
         "title": "Behind the Build Live: Design Dollars Q&A",
         "body": "Building on your land comes with questions. On Tuesday, October 27, at 7pm Eastern, Scott Sleeme and Deven Sellers go live on the Mitchell Homes Facebook page and YouTube channel to answer yours about Mitchell Design Dollars and SimplyMitchell. About 30 minutes. Tap Sign up to send a question and get a reminder.\n\n" + DD_SHORT + " " + FINE,
         "button": "Sign up",
         "link": u(RSVP, "gbp", e),
-        "post_on": "All five Design Center profiles, Thursday, October 22. Event type post, start October 27, 7pm, end 7:30pm.",
+        "post_on": "All five Design Center profiles, Thursday, October 22. Event-type post, start October 27, 7pm, end 7:30pm.",
         "notes": "The event is online. If Google rejects an online event on a studio profile, post it as an Update instead or skip it."},
     "nextdoor": None,
     "nextdoor_when": "Skip: online event, not local.",
-    "invite_when": "Friday, October 23, 2026. Every New Home Consultant to active leads who are not coming Saturday (Saturday's guests hear about it in person and in Sunday's follow up), so nobody gets two invitations in one day.",
+    "invite_when": "Friday, October 23, 2026. Every New Home Consultant to active leads who are not coming Saturday (Saturday's guests hear about it in person and in Sunday's follow-up), so nobody gets two invitations in one day.",
     "invite_text": "Hi [first name], [your name] with Mitchell Homes. Tuesday at 7pm Eastern, Scott and Deven are live on Facebook and YouTube for 30 minutes answering questions about building on your land with Mitchell. Got one you want answered? Text it to me and I will pass it along.",
     "invite_email": {
         "subject": "Your question, answered live by Scott and Deven",
@@ -225,7 +225,7 @@ EVENTS.append({
         "body": "Hi [first name],\n\nThank you for tuning in to Behind the Build Live last night. If you missed any of it, the full replay is here: [YouTube replay link]\n\nThe two questions we heard most: [question one, answered in a sentence] and [question two, answered in a sentence].\n\nIf you are planning to build, this is the week that matters. Reserve by Saturday, October 31, and your Design Dollars are locked: $5,000 on every Mitchell home, up to $25,000 the more you personalize. Your tier is set later, when you make your selections, and your reservation deposit is $150, which is all Mitchell receives until closing.\n\nSee the full ladder: " + u(DD, "followup", e) + "\n\nWant to talk it through before Saturday? Reply with a time, or call me at the number below." + SIG + "\n\n" + FINE},
     "extra_texts": [],
     "notes": [
-        "For a consultant's own active leads, this follow up stands in for the October 29 deadline text in the cadence; skip that text for anyone who got this email.",
+        "For a consultant's own active leads, this follow-up stands in for the October 29 deadline text in the cadence; skip that text for anyone who got this email.",
         "Clips: one question per Short, titled with the question, per the YouTube plan.",
     ],
     "schedule": sched([
@@ -235,8 +235,8 @@ EVENTS.append({
         ("2026-10-23", "Friday, October 23", "Sales team", "Personal invite text and email to active leads not coming Saturday", "New Home Consultants"),
         ("2026-10-26", "Monday, October 26", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
         ("2026-10-27", "Tuesday, October 27", "Social", "Post 2, tonight at 7 (Facebook, Instagram Stories)", "Marketing"),
-        ("2026-10-27", "Tuesday, October 27", "Event", "Live at 7pm Eastern; thank you text after the show", "Scott and Deven; consultants"),
-        ("2026-10-28", "Wednesday, October 28", "Sales team", "Follow up email with the replay and the October 31 date", "New Home Consultants, online sales counselors"),
+        ("2026-10-27", "Tuesday, October 27", "Event", "Live at 7pm Eastern; thank-you text after the show", "Scott and Deven; consultants"),
+        ("2026-10-28", "Wednesday, October 28", "Sales team", "Follow-up email with the replay and the October 31 date", "New Home Consultants, online sales counselors"),
     ]),
 })
 
@@ -250,7 +250,7 @@ EVENTS.append({
     "where": ALL5 + " A free fall edition of the Homebuyer Roadmap to Success class.",
     "audience": "People who own land, have family land, or are shopping for land to build on: the landowner and looking for land segments, quiz takers who answered either way, and anyone who clicked a Four Buyers email or page.",
     "what": [
-        "A one hour class on what to know before you build: perc tests and soil, wells and septic, road access and utilities.",
+        "A one-hour class on what to know before you build: perc tests and soil, wells and septic, road access and utilities.",
         "How the money works: SimplyMitchell on land you own (zero down, zero closing costs, no construction loan), and what to plan for if you are still buying.",
         "Thirty minutes of open questions, then time with a New Home Consultant for anyone who brings a parcel address, survey or plat.",
     ],
@@ -289,14 +289,14 @@ EVENTS.append({
          "link": u(RSVP, "facebook", e),
          "notes": "Stories: link sticker with " + u(RSVP, "instagram", e) + " . " + BOOST},
     ],
-    "facebook_event": "Building on Your Land 101 at the Mitchell Homes [city] Design Center\nSaturday, November 7, 2026, 10am to 11:30am\n[studio address]\n\nOwning land is the hardest part of building a custom home, and the most misunderstood. This free 90 minute class is the fall edition of Mitchell's Homebuyer Roadmap to Success, built around the questions landowners ask us first:\n\nPerc tests and soil: what they tell you about your homesite.\nWells and septic: what your land needs, and how it shapes the plan.\nAccess and utilities: driveways, power and water, and where the home can sit.\nThe money: how SimplyMitchell works on land you own, with " + SM + ", and what to plan for if you are still buying.\n\nBring your parcel address, a survey or plat if you have one, and your questions. Stay after for time with a New Home Consultant.\n\nStill looking for land? You are welcome too. This is the class to take before you buy.\n\nRSVP: " + RSVP + "\n\nCannot make it? Watch Behind the Build: Well and Septic https://www.youtube.com/watch?v=zWwtw8qgp4w and Purchasing Land 101 https://www.youtube.com/watch?v=trgJ8maymOA\n\n" + FIN,
+    "facebook_event": "Building on Your Land 101 at the Mitchell Homes [city] Design Center\nSaturday, November 7, 2026, 10am to 11:30am\n[studio address]\n\nOwning land is the hardest part of building a custom home, and the most misunderstood. This free 90-minute class is the fall edition of Mitchell's Homebuyer Roadmap to Success, built around the questions landowners ask us first:\n\nPerc tests and soil: what they tell you about your homesite.\nWells and septic: what your land needs, and how it shapes the plan.\nAccess and utilities: driveways, power and water, and where the home can sit.\nThe money: how SimplyMitchell works on land you own, with " + SM + ", and what to plan for if you are still buying.\n\nBring your parcel address, a survey or plat if you have one, and your questions. Stay after for time with a New Home Consultant.\n\nStill looking for land? You are welcome too. This is the class to take before you buy.\n\nRSVP: " + RSVP + "\n\nCannot make it? Watch Behind the Build: Well and Septic https://www.youtube.com/watch?v=zWwtw8qgp4w and Purchasing Land 101 https://www.youtube.com/watch?v=trgJ8maymOA\n\n" + FIN,
     "facebook_event_notes": "One Facebook event per Design Center; only [city] and [studio address] change. Link: " + u(RSVP, "facebook_event", e) + " . Cover image: land or a finished home, no people.",
     "gbp": {
         "title": "Building on Your Land 101: Free Class",
         "body": "Own land, or shopping for it? Join us at our [city] Design Center on Saturday, November 7, from 10am to 11:30am for Building on Your Land 101, a free class on what to know before you build: perc tests and soil, wells and septic, access and utilities, and how the money works with SimplyMitchell. Bring your parcel address and your questions. Tap Sign up to save a seat.",
         "button": "Sign up",
         "link": u(RSVP, "gbp", e),
-        "post_on": "All five Design Center profiles, Monday, November 2. Event type post, start November 7, 10am, end 11:30am.",
+        "post_on": "All five Design Center profiles, Monday, November 2. Event-type post, start November 7, 10am, end 11:30am.",
         "notes": "Image: land or a finished Mitchell home, no people."},
     "nextdoor": "Own land, or thinking about buying some to build on?\n\nMitchell Homes is hosting a free class, Building on Your Land 101, at our [city] Design Center ([studio address]) on Saturday, November 7, from 10am to 11:30am. We will cover perc tests and soil, wells and septic, access and utilities, and how the money works.\n\nBring your parcel address and your questions. RSVP: " + u(RSVP, "nextdoor", e) + "\n\nMitchell Homes, building on your land since 1992.",
     "nextdoor_when": "Tuesday, November 3, 2026, from each Design Center's Nextdoor business page. Fair housing: never name a county or call an area a good place to live.",
@@ -328,8 +328,8 @@ EVENTS.append({
         ("2026-11-05", "Thursday, November 5", "Sales team", "Personal invite text and email (the text replaces that day's landowner text)", "New Home Consultants"),
         ("2026-11-06", "Friday, November 6", "Social", "Post 2 (Facebook, Instagram Stories)", "Marketing"),
         ("2026-11-06", "Friday, November 6", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
-        ("2026-11-07", "Saturday, November 7", "Event", "Class, 10am to 11:30am; thank you text", "Presenters, New Home Consultants"),
-        ("2026-11-08", "Sunday, November 8", "Sales team", "Follow up email with recap and next step", "New Home Consultants"),
+        ("2026-11-07", "Saturday, November 7", "Event", "Class, 10am to 11:30am; thank-you text", "Presenters, New Home Consultants"),
+        ("2026-11-08", "Sunday, November 8", "Sales team", "Follow-up email with recap and next step", "New Home Consultants"),
     ]),
 })
 
@@ -352,11 +352,11 @@ EVENTS.append({
     "why": "Gives the Carolinas launch of the Four Buyers campaign a physical place to land, and introduces the coast and the four South Carolina counties to the studio that opened September 11.",
     "confirm": [
         "Approve the date and 10am to 3pm hours. Wilmington has one New Home Consultant; name who joins (a Design Consultant, the New Home Sales Associate, or a Raleigh consultant).",
-        "Design Dollars after October 31: the Facebook event and follow up name the offer without a reserve by date. Approve the November date (Kelly recommends November 30) by November 9, or CEA removes the Design Dollars lines from every E4 piece.",
+        "Design Dollars after October 31: the Facebook event and follow-up name the offer without a reserve-by date. Approve the November date (Kelly recommends November 30) by November 9, or CEA removes the Design Dollars lines from every E4 piece.",
         "The one text on Wednesday, November 11: confirm the audience. The brief says all Carolinas contacts with text consent; Mitchell may prefer to limit it to the Wilmington division, since Belville is a long drive from the Triangle.",
         "Refreshments or a giveaway: none promised. If Mitchell wants either, add one line to the Facebook event and the Nextdoor post.",
         "Parking and door signage for Suite A.",
-        "RSVP form (Kelly), optional for a drop in event: name, phone, email, own land or still looking, county, text consent.",
+        "RSVP form (Kelly), optional for a drop-in event: name, phone, email, own land or still looking, county, text consent.",
     ],
     "rides_in": [],
     "rides_in_note": "No email block, as briefed. The Wilmington profile, social, Nextdoor, consultant invites and one text carry it.",
@@ -377,7 +377,7 @@ EVENTS.append({
         "body": "Join us Saturday, November 14, from 10am to 3pm, for an open house at our Wilmington Design Center in Belville. Walk the finishes in person, look through more than 40 floor plans, and sit down with a New Home Consultant about building on your land. Ask how SimplyMitchell works: zero down, zero closing costs and no construction loan. Drop in any time, or tap Sign up to RSVP.",
         "button": "Sign up",
         "link": u(RSVP, "gbp", e),
-        "post_on": "Wilmington NC profile only, Thursday, November 5. Event type post, start November 14, 10am, end 3pm.",
+        "post_on": "Wilmington NC profile only, Thursday, November 5. Event-type post, start November 14, 10am, end 3pm.",
         "notes": "Image: the studio interior, no people."},
     "nextdoor": "Thinking about building a home on land you own, or land you are still looking for?\n\nMitchell Homes is hosting an open house at our Wilmington Design Center, 42 Waterford Business Center Way, Suite A, in Belville, on Saturday, November 14, from 10am to 3pm. Walk the finishes in person, look through more than 40 floor plans, and bring your land questions to a New Home Consultant.\n\nDrop in any time. RSVP if you would like a time set aside: " + u(RSVP, "nextdoor", e) + "\n\nMitchell Homes, building on your land since 1992.",
     "nextdoor_when": "Tuesday, November 10, 2026, from the Wilmington Design Center's Nextdoor business page.",
@@ -412,8 +412,8 @@ EVENTS.append({
         ("2026-11-11", "Wednesday, November 11", "Text", "The one bulk text to Carolinas contacts with text consent", "Marketing"),
         ("2026-11-13", "Friday, November 13", "Social", "Post 2 (Facebook, Instagram Stories)", "Marketing"),
         ("2026-11-13", "Friday, November 13", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
-        ("2026-11-14", "Saturday, November 14", "Event", "Open house, 10am to 3pm; thank you text", "Wilmington team"),
-        ("2026-11-15", "Sunday, November 15", "Sales team", "Follow up email", "New Home Consultants"),
+        ("2026-11-14", "Saturday, November 14", "Event", "Open house, 10am to 3pm; thank-you text", "Wilmington team"),
+        ("2026-11-15", "Sunday, November 15", "Sales team", "Follow-up email", "New Home Consultants"),
     ]),
 })
 
@@ -427,11 +427,11 @@ EVENTS.append({
     "where": "Online: live on the Mitchell Homes Facebook page and YouTube channel, the same setup as Behind the Build Live.",
     "audience": "People planning a getaway, a family retreat, a second home or the place they will retire, at the lake, on the coast or in the mountains: quiz takers who chose Smith Mountain Lake, Lake Gaston, the Shenandoah Valley or the Eastern Shore and Outer Banks, contacts interested in those areas, and past homeowners thinking about a second place.",
     "what": [
-        "A 30 minute live conversation about building a getaway, second home or retirement home at the lake, on the coast or in the mountains.",
-        "What to look at first on a lake, coastal or mountain lot, and how building works when you live hours away, with weekly communication from groundbreaking to move in.",
-        "Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan, because Mitchell self funds every build. Live questions throughout.",
+        "A 30-minute live conversation about building a getaway, second home or retirement home at the lake, on the coast or in the mountains.",
+        "What to look at first on a lake, coastal or mountain lot, and how building works when you live hours away, with weekly communication from groundbreaking to move-in.",
+        "Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan, because Mitchell self-funds every build. Live questions throughout.",
     ],
-    "why": "Gives retreat and retirement buyers, the audience for The Gathering Place Portrait, a reason to talk to Mitchell the same night hp4 lands, and answers their biggest objection, second home financing, out loud.",
+    "why": "Gives retreat and retirement buyers, the audience for The Gathering Place Portrait, a reason to talk to Mitchell the same night hp4 lands, and answers their biggest objection, second-home financing, out loud.",
     "confirm": [
         "Host: Scott and Deven, or a New Home Consultant who builds at the lake and on the coast. Thursday, November 12, about 6:30pm to 7:45pm Eastern.",
         "Second homes: confirm the SimplyMitchell terms for a second home or retirement home before the show, so live answers match.",
@@ -444,12 +444,12 @@ EVENTS.append({
         "placement": "Event block after the Take the Quiz button and before the footer. hp4's job is the quiz, so the block stays short and sits under the button.",
         "block": {
             "head": "Tonight at 7: The Gathering Place, live",
-            "text": "Tonight at 7pm Eastern, join us on Facebook or YouTube for a 30 minute live conversation about building the getaway, the second home or the place you plan to retire, at the lake, on the coast or in the mountains. Bring your questions, especially the hard ones about second home financing.",
+            "text": "Tonight at 7pm Eastern, join us on Facebook or YouTube for a 30-minute live conversation about building the getaway, the second home or the place you plan to retire, at the lake, on the coast or in the mountains. Bring your questions, especially the hard ones about second-home financing.",
             "cta": "Join Us Tonight",
             "link": u(RSVP, "email", e)}}],
     "social": [
         {"date": "Tuesday, November 10, 2026", "channels": "Facebook, Instagram feed",
-         "body": "Some homes are built for every day. Some are built for the long table, the full house weekend and the years after work.\n\nIf you are planning a getaway, a second home or the place you will retire, at the lake, on the coast or in the mountains, join us live on Thursday, November 12, at 7pm Eastern. In 30 minutes we will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why the second home banks make hard, Mitchell makes simple.\n\nWatch on Facebook or YouTube. RSVP for a reminder: " + RSVP + "\n\n#BuildOnYourLand #MitchellHomes",
+         "body": "Some homes are built for every day. Some are built for the long table, the full-house weekend and the years after work.\n\nIf you are planning a getaway, a second home or the place you will retire, at the lake, on the coast or in the mountains, join us live on Thursday, November 12, at 7pm Eastern. In 30 minutes we will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why the second home banks make hard, Mitchell makes simple.\n\nWatch on Facebook or YouTube. RSVP for a reminder: " + RSVP + "\n\n#BuildOnYourLand #MitchellHomes",
          "link": u(RSVP, "facebook", e),
          "notes": "Image: a real Mitchell home by the water, e.g. the hp4 hero " + M + "2026/3/24/10_mwFjkrl.jpg . Never the painted portrait. " + BOOST + " " + IG_NOTE.format(ig=u(RSVP, "instagram", e))},
         {"date": "Thursday, November 12, 2026", "channels": "Facebook, Instagram Stories",
@@ -457,14 +457,14 @@ EVENTS.append({
          "link": "[YouTube Live link]",
          "notes": "Stories: link sticker to the YouTube Live link. Post the morning of the show."},
     ],
-    "facebook_event": "The Gathering Place Live: Building Your Getaway\nThursday, November 12, 2026, 7pm Eastern, 30 minutes\nOnline: live here on Facebook and on the Mitchell Homes YouTube channel\n\nSome homes are built for every day. Some are built for the long table, the full house weekend and the place you plan to retire.\n\nIf you are planning a getaway, a family retreat, a second home or a home for retirement, at the lake, on the coast or in the mountains, spend 30 minutes with us. We will talk through:\n\nWhat to look at first on a lake, coastal or mountain lot.\nHow building works when you live hours away, with weekly communication from groundbreaking to move in.\nWhy second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan to qualify for, because Mitchell self funds every build.\n\nAsk your questions live in the comments, or send them ahead: " + RSVP + "\n\n" + FIN,
+    "facebook_event": "The Gathering Place Live: Building Your Getaway\nThursday, November 12, 2026, 7pm Eastern, 30 minutes\nOnline: live here on Facebook and on the Mitchell Homes YouTube channel\n\nSome homes are built for every day. Some are built for the long table, the full-house weekend and the place you plan to retire.\n\nIf you are planning a getaway, a family retreat, a second home or a home for retirement, at the lake, on the coast or in the mountains, spend 30 minutes with us. We will talk through:\n\nWhat to look at first on a lake, coastal or mountain lot.\nHow building works when you live hours away, with weekly communication from groundbreaking to move-in.\nWhy second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan to qualify for, because Mitchell self-funds every build.\n\nAsk your questions live in the comments, or send them ahead: " + RSVP + "\n\n" + FIN,
     "facebook_event_notes": "One online Facebook event with Facebook Live as the location. Link: " + u(RSVP, "facebook_event", e) + " . Publish Tuesday, November 10.",
     "gbp": {
         "title": "The Gathering Place: Build Your Getaway",
         "body": "Planning a getaway, a second home or the place you will retire, at the lake, on the coast or in the mountains? Join Mitchell Homes live on Thursday, November 12, at 7pm Eastern, on our Facebook page and YouTube channel. In 30 minutes we cover what to look at first on a lake, coastal or mountain lot, building from hours away, and how SimplyMitchell removes the construction loan. Tap Sign up for a reminder.",
         "button": "Sign up",
         "link": u(RSVP, "gbp", e),
-        "post_on": "All five Design Center profiles, Tuesday, November 10. Event type post, start November 12, 7pm, end 7:30pm.",
+        "post_on": "All five Design Center profiles, Tuesday, November 10. Event-type post, start November 12, 7pm, end 7:30pm.",
         "notes": "Online event. If Google rejects it on a studio profile, post as an Update or skip."},
     "nextdoor": None,
     "nextdoor_when": "Skip: online event, not local.",
@@ -472,7 +472,7 @@ EVENTS.append({
     "invite_text": "Hi [first name], [your name] with Mitchell Homes. You mentioned [the lake / the coast / the mountains]. Thursday at 7pm Eastern we are live on Facebook and YouTube for 30 minutes on building a getaway or retirement home. Want me to send you the link?",
     "invite_email": {
         "subject": "Thursday at 7: building the getaway",
-        "body": "Hi [first name],\n\nYou mentioned [the lake, the coast or the mountains] when we talked, so I wanted you to hear about this first.\n\nOn Thursday, November 12, at 7pm Eastern, we are going live on Facebook and YouTube for 30 minutes on building a getaway, a second home or the place you plan to retire. We will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why second homes are where banks get strict.\n\nThat last one matters. Mitchell self funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple.\n\nWatch here: [Facebook Live link] or [YouTube Live link]. If you have a question you want answered on air, reply and I will pass it along." + SIG + "\n\n" + FIN},
+        "body": "Hi [first name],\n\nYou mentioned [the lake, the coast or the mountains] when we talked, so I wanted you to hear about this first.\n\nOn Thursday, November 12, at 7pm Eastern, we are going live on Facebook and YouTube for 30 minutes on building a getaway, a second home or the place you plan to retire. We will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why second homes are where banks get strict.\n\nThat last one matters. Mitchell self-funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple.\n\nWatch here: [Facebook Live link] or [YouTube Live link]. If you have a question you want answered on air, reply and I will pass it along." + SIG + "\n\n" + FIN},
     "reminder_when": "Wednesday, November 11, 2026. Builder Studio workflow, RSVPs with text consent only.",
     "reminder_text": "Mitchell Homes: Tomorrow at 7pm Eastern, The Gathering Place, live: 30 minutes on building your getaway. Watch: [YouTube Live link] Reply STOP to opt out",
     "thanks_when": "Thursday, November 12, 2026, right after the show. Each consultant to their own leads who RSVPed; online sales counselors to the rest.",
@@ -480,12 +480,12 @@ EVENTS.append({
     "followup_when": "Friday, November 13, 2026. The consultant (or an online sales counselor), to every RSVP.",
     "followup_email": {
         "subject": "The getaway, one step closer",
-        "body": "Hi [first name],\n\nThank you for joining The Gathering Place live last night. The full replay is here: [YouTube replay link]\n\nThe short version: start with the lot itself, from soil and septic to access and utilities. Building from hours away works because you hear from us every week from groundbreaking to move in. And with Mitchell there is no construction loan to qualify for, because Mitchell self funds every build.\n\nIf you have not taken the Home Portrait quiz yet, choose your lake, coast or mountain region and tell us what the home is for. Eight questions, about 90 seconds: " + u(QUIZ, "followup", e) + "\n\n[Carolinas contacts only: We are also hosting an open house at our Wilmington Design Center in Belville tomorrow, Saturday, November 14, from 10am to 3pm. Come by any time.]\n\nOr reply with a time, and we can talk about your land, or the land you are still looking for.\n\n" + FIN + SIG},
+        "body": "Hi [first name],\n\nThank you for joining The Gathering Place live last night. The full replay is here: [YouTube replay link]\n\nThe short version: start with the lot itself, from soil and septic to access and utilities. Building from hours away works because you hear from us every week from groundbreaking to move-in. And with Mitchell there is no construction loan to qualify for, because Mitchell self-funds every build.\n\nIf you have not taken the Home Portrait quiz yet, choose your lake, coast or mountain region and tell us what the home is for. Eight questions, about 90 seconds: " + u(QUIZ, "followup", e) + "\n\n[Carolinas contacts only: We are also hosting an open house at our Wilmington Design Center in Belville tomorrow, Saturday, November 14, from 10am to 3pm. Come by any time.]\n\nOr reply with a time, and we can talk about your land, or the land you are still looking for.\n\n" + FIN + SIG},
     "extra_texts": [],
     "notes": [
-        "The invitation never shows or describes the painted Home Portrait; the follow up names the quiz only.",
+        "The invitation never shows or describes the painted Home Portrait; the follow-up names the quiz only.",
         "Hosts describe what to check on a lot, never which areas are better places to live (fair housing).",
-        "hp4 goes the morning of the show, so most RSVPs come from the Tuesday post, the Facebook event and the consultant invites; the day before reminder only reaches those.",
+        "hp4 goes the morning of the show, so most RSVPs come from the Tuesday post, the Facebook event and the consultant invites; the day-before reminder only reaches those.",
     ],
     "schedule": sched([
         ("2026-11-10", "Tuesday, November 10", "Social", "Post 1 (Facebook, Instagram feed). Publish the online Facebook event.", "Marketing"),
@@ -494,8 +494,8 @@ EVENTS.append({
         ("2026-11-11", "Wednesday, November 11", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
         ("2026-11-12", "Thursday, November 12", "Email", "Event block in hp4, tonight at 7", "Marketing"),
         ("2026-11-12", "Thursday, November 12", "Social", "Post 2, tonight at 7 (Facebook, Instagram Stories)", "Marketing"),
-        ("2026-11-12", "Thursday, November 12", "Event", "Live at 7pm Eastern; thank you text after the show", "Host; consultants"),
-        ("2026-11-13", "Friday, November 13", "Sales team", "Follow up email with the replay (and Saturday's open house for Carolinas contacts)", "New Home Consultants, online sales counselors"),
+        ("2026-11-12", "Thursday, November 12", "Event", "Live at 7pm Eastern; thank-you text after the show", "Host; consultants"),
+        ("2026-11-13", "Friday, November 13", "Sales team", "Follow-up email with the replay (and Saturday's open house for Carolinas contacts)", "New Home Consultants, online sales counselors"),
     ]),
 })
 
@@ -520,7 +520,7 @@ EVENTS.append({
         "Continuing education credit: not offered and not mentioned anywhere. Offering it would need course approval first.",
         "Presenter at each studio (a New Home Consultant; Scott or Deven at one studio if possible) and room capacity.",
         "The agent list: the realtor segment in Builder Studio by division, land listing agents first.",
-        "Design Dollars after October 31: these pieces name the offer without a reserve by date. Confirm the program continues in November and approve the November date.",
+        "Design Dollars after October 31: these pieces name the offer without a reserve-by date. Confirm the program continues in November and approve the November date.",
         "RSVP form (Kelly): name, brokerage, email, phone, studio, text consent.",
     ],
     "rides_in": [{
@@ -542,14 +542,14 @@ EVENTS.append({
          "link": u(RSVP, "facebook", e),
          "notes": "Stories: link sticker with " + u(RSVP, "instagram", e) + " . LinkedIn: " + u(RSVP, "linkedin", e)},
     ],
-    "facebook_event": "Realtor Lunch and Learn at the Mitchell Homes [city] Design Center\nWednesday, November 18, 2026, 11:30am to 1pm\n[studio address]\n\nFor real estate agents and brokers. " + LUNCH + "\n\nYour clients who own land, or are about to buy it, usually hit the same wall: how do we build on it without a construction loan and a second closing? Mitchell answers that question every day. Spend 90 minutes with us and leave ready to answer it too.\n\nWhat we cover:\nHow building on a client's land works with Mitchell, and why there is zero down, zero closing costs and no construction loan: Mitchell self funds every build.\nMitchell Design Dollars. Every Mitchell home comes with $5,000 in Design Dollars to spend on design selections. The more selections the customer buys, the more Mitchell adds, up to $25,000.\nThe Home Portrait: a quiz of eight questions, about 90 seconds, you can send to any client.\nHow to refer a client, and the terms of Mitchell's realtor incentive program.\nA walk through the Design Center.\n\nRSVP: " + RSVP + "\n\n" + FINE + " " + FIN,
+    "facebook_event": "Realtor Lunch and Learn at the Mitchell Homes [city] Design Center\nWednesday, November 18, 2026, 11:30am to 1pm\n[studio address]\n\nFor real estate agents and brokers. " + LUNCH + "\n\nYour clients who own land, or are about to buy it, usually hit the same wall: how do we build on it without a construction loan and a second closing? Mitchell answers that question every day. Spend 90 minutes with us and leave ready to answer it too.\n\nWhat we cover:\nHow building on a client's land works with Mitchell, and why there is zero down, zero closing costs and no construction loan: Mitchell self-funds every build.\nMitchell Design Dollars. Every Mitchell home comes with $5,000 in Design Dollars to spend on design selections. The more selections the customer buys, the more Mitchell adds, up to $25,000.\nThe Home Portrait: a quiz of eight questions, about 90 seconds, you can send to any client.\nHow to refer a client, and the terms of Mitchell's realtor incentive program.\nA walk through the Design Center.\n\nRSVP: " + RSVP + "\n\n" + FINE + " " + FIN,
     "facebook_event_notes": "One Facebook event per Design Center; only [city] and [studio address] change. Link: " + u(RSVP, "facebook_event", e) + " . Publish Wednesday, November 4.",
     "gbp": {
         "title": "Realtor Lunch and Learn",
         "body": "Real estate agents and brokers: join us at our [city] Design Center on Wednesday, November 18, from 11:30am to 1pm. Learn how building on a client's land works with Mitchell, from SimplyMitchell (zero down, zero closing costs, no construction loan) to Mitchell Design Dollars and the Home Portrait quiz, how to refer, and the terms of our realtor incentive program. Tap Sign up to save a seat.\n\n" + DD_SHORT + " " + FINE,
         "button": "Sign up",
         "link": u(RSVP, "gbp", e),
-        "post_on": "All five Design Center profiles, Wednesday, November 4. Event type post, start November 18, 11:30am, end 1pm.",
+        "post_on": "All five Design Center profiles, Wednesday, November 4. Event-type post, start November 18, 11:30am, end 1pm.",
         "notes": "If lunch is confirmed, add: Lunch is on us."},
     "nextdoor": None,
     "nextdoor_when": "Skip: a professional audience, not neighbors.",
@@ -557,7 +557,7 @@ EVENTS.append({
     "invite_text": "Hi [first name], [your name] with Mitchell Homes. Next Wednesday, Nov 18, 11:30 to 1, we are hosting agents at our [city] Design Center: how building on a client's land works, how to refer, and our realtor incentive. Can I save you a seat?",
     "invite_email": {
         "subject": "Next Wednesday at our [city] Design Center",
-        "body": "Hi [first name],\n\nYou talk with people who own land, or are about to buy it, every week, so I wanted to invite you personally.\n\nOn Wednesday, November 18, from 11:30am to 1pm, we are hosting a Lunch and Learn for agents at our [city] Design Center. " + LUNCH + " In 90 minutes we will cover how building on a client's land works with Mitchell, why there is zero down, zero closing costs and no construction loan (Mitchell self funds every build), what Mitchell Design Dollars and the Home Portrait quiz mean for your clients, and how referrals and our realtor incentive program work.\n\nCan I save you a seat? Just reply, and tell me if a colleague would like to come." + SIG + "\n\n" + DD_SHORT + " " + FINE + " " + FIN},
+        "body": "Hi [first name],\n\nYou talk with people who own land, or are about to buy it, every week, so I wanted to invite you personally.\n\nOn Wednesday, November 18, from 11:30am to 1pm, we are hosting a Lunch and Learn for agents at our [city] Design Center. " + LUNCH + " In 90 minutes we will cover how building on a client's land works with Mitchell, why there is zero down, zero closing costs and no construction loan (Mitchell self-funds every build), what Mitchell Design Dollars and the Home Portrait quiz mean for your clients, and how referrals and our realtor incentive program work.\n\nCan I save you a seat? Just reply, and tell me if a colleague would like to come." + SIG + "\n\n" + DD_SHORT + " " + FINE + " " + FIN},
     "reminder_when": "Tuesday, November 17, 2026. Builder Studio workflow, RSVPs with text consent only.",
     "reminder_text": "Mitchell Homes: See you tomorrow, Wed Nov 18, 11:30am to 1pm, for the Realtor Lunch and Learn at our [city] Design Center, [studio address]. Reply STOP to opt out",
     "thanks_when": "Wednesday, November 18, 2026, that afternoon. The New Home Consultant who hosted.",
@@ -565,7 +565,7 @@ EVENTS.append({
     "followup_when": "Thursday, November 19, 2026. The New Home Consultant who hosted.",
     "followup_email": {
         "subject": "For your next client with land",
-        "body": "Hi [first name],\n\nThank you for joining us at the Design Center yesterday. Here is everything in one place for the next client who mentions land.\n\nThe short version for your client: Mitchell has built custom homes on land the buyer owns since 1992. Mitchell self funds every build, so there is zero down, zero closing costs and no construction loan. More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections.\n\nDesign Dollars: every Mitchell home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more your client personalizes.\n\nThe Home Portrait quiz to send a client: " + u(QUIZ, "followup", e) + "\n\nHow to refer: [referral steps, once Mitchell confirms]\nRealtor incentive: [terms, once Mitchell confirms]\n\nWhen you have a client ready to talk, text or call me directly." + SIG + "\n\n" + FINE + " " + FIN},
+        "body": "Hi [first name],\n\nThank you for joining us at the Design Center yesterday. Here is everything in one place for the next client who mentions land.\n\nThe short version for your client: Mitchell has built custom homes on land the buyer owns since 1992. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan. More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections.\n\nDesign Dollars: every Mitchell home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more your client personalizes.\n\nThe Home Portrait quiz to send a client: " + u(QUIZ, "followup", e) + "\n\nHow to refer: [referral steps, once Mitchell confirms]\nRealtor incentive: [terms, once Mitchell confirms]\n\nWhen you have a client ready to talk, text or call me directly." + SIG + "\n\n" + FINE + " " + FIN},
     "extra_texts": [],
     "notes": [
         "Every E6 piece waits on the realtor incentive terms; the lunch bracket comes out or becomes Lunch is on us once Mitchell decides.",
@@ -578,8 +578,8 @@ EVENTS.append({
         ("2026-11-11", "Wednesday, November 11", "Sales team", "Personal invite text and email to agents they know", "New Home Consultants"),
         ("2026-11-16", "Monday, November 16", "Social", "Post 2 (Facebook, Instagram Stories, LinkedIn)", "Marketing"),
         ("2026-11-17", "Tuesday, November 17", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
-        ("2026-11-18", "Wednesday, November 18", "Event", "Lunch and Learn, 11:30am to 1pm; thank you text", "New Home Consultants"),
-        ("2026-11-19", "Thursday, November 19", "Sales team", "Follow up email with the referral kit", "New Home Consultants"),
+        ("2026-11-18", "Wednesday, November 18", "Event", "Lunch and Learn, 11:30am to 1pm; thank-you text", "New Home Consultants"),
+        ("2026-11-19", "Thursday, November 19", "Sales team", "Follow-up email with the referral kit", "New Home Consultants"),
     ]),
 })
 
@@ -588,7 +588,7 @@ ABOUT = [
     "[RSVP link] is the Builder Studio form Kelly will create (one per event, or one form with an event field). Every link field shows the tracked version: put the real form URL where [RSVP link] sits and keep the UTM string, so each RSVP shows where it came from. In body copy, paste the link from that item's link field.",
     "Cadence: no new marketing emails and no extra marketing texts. Invitations ride existing emails, social, Facebook events, Google profiles, Nextdoor and personal consultant messages. The only bulk text is E4's on November 11.",
     "Reminder texts go only to people who RSVPed with text consent, from one Builder Studio workflow per event. Consultants tag anyone who RSVPs by reply with the event tag so the same workflow reaches them.",
-    "Design Dollars: wherever named, it carries the $5,000 floor and the short fine print. Texts never name it. After October 31, pieces that name it (E4, E6) wait for Mitchell's November reserve by date.",
+    "Design Dollars: wherever named, it carries the $5,000 floor and the short fine print. Texts never name it. After October 31, pieces that name it (E4, E6) wait for Mitchell's November reserve-by date.",
     "Images: anything that could be boosted (social posts, Facebook events) uses real Mitchell homes or Design Centers with no people. Never show or describe the painted Home Portrait in any invitation.",
     "Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to the Instagram link listed for that post.",
     "Placeholders: [first name], [your name], [your phone], [city], [studio address], [time], [Facebook Live link], [YouTube Live link], [replay link]. Studio addresses are in the studio table.",
@@ -596,10 +596,10 @@ ABOUT = [
 CADENCE_NOTES = [
     "October 22: E1's invite email replaces the Design Dollars consultant email already set for that day (one consultant email per lead).",
     "November 5: E3's invite text replaces the landowner consultant text already set for that day.",
-    "October 28: E2's follow up stands in for the October 29 deadline text for anyone who received it.",
+    "October 28: E2's follow-up stands in for the October 29 deadline text for anyone who received it.",
     "November 11: the E4 text skips E5 RSVPs, who get the E5 reminder that day, and active leads invited personally on November 9.",
     "dd2 carries two event blocks (E1, then E2's short line). E2 was placed in dd2, not dd3, for lead time.",
-    "E6 rides rb2, the November 4 realtor email. rb3 (November 11) lands the same day as the consultant invites to agents; if Kelly wants, add one line to rb3 pointing to the Lunch and Learn, otherwise leave it. ra2 (November 18, after the event) already carries the lot checklist, so the E6 follow up on November 19 does not repeat it.",
+    "E6 rides rb2, the November 4 realtor email. rb3 (November 11) lands the same day as the consultant invites to agents; if Kelly wants, add one line to rb3 pointing to the Lunch and Learn, otherwise leave it. ra2 (November 18, after the event) already carries the lot checklist, so the E6 follow-up on November 19 does not repeat it.",
     "fb5 is on hold for the plan guide email. If it misses November 4, E3 rides fb1 and the consultant invites only.",
 ]
 
@@ -659,7 +659,7 @@ def q(text):
 
 
 L = ["# Mitchell Homes fall events, October 12 to November 22, 2026", "",
-     "Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.", "",
+     "Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow-up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.", "",
      "## Read first", ""]
 L += [f"- {a}" for a in ABOUT]
 L += ["", "## Where the events touch the existing cadence", ""] + [f"- {c}" for c in CADENCE_NOTES]
@@ -712,8 +712,8 @@ for ev in EVENTS:
           f"**Text** ({ev['invite_text_characters']} characters)", "", q(ev["invite_text"]), "",
           f"**Email** · Subject: {ev['invite_email']['subject']}", "", "```text", ev["invite_email"]["body"], "```", "",
           f"### RSVP reminder text", "", ev["reminder_when"], "", q(ev["reminder_text"]), "", f"({ev['reminder_text_characters']} characters)", "",
-          "### Same day thank you text", "", ev["thanks_when"], "", q(ev["thanks_text"]), "",
-          f"### Next day follow up email", "", ev["followup_when"], "", f"Subject: {ev['followup_email']['subject']}", "", "```text", ev["followup_email"]["body"], "```", ""]
+          "### Same-day thank-you text", "", ev["thanks_when"], "", q(ev["thanks_text"]), "",
+          f"### Next-day follow-up email", "", ev["followup_when"], "", f"Subject: {ev['followup_email']['subject']}", "", "```text", ev["followup_email"]["body"], "```", ""]
     if ev["extra_texts"]:
         L += ["### Extra text", ""]
         for t in ev["extra_texts"]:

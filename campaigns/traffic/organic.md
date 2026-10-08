@@ -14,7 +14,7 @@ Land and lots content earns Mitchell's highest organic engagement but is only 6 
 3. YouTube Shorts: links in Shorts captions do not click. Set Related video to the full Behind the Build episode named in the note; its description carries the quiz and Design Dollars links.
 4. Stories: use the link sticker with the link listed for that post.
 5. The only change between channels is utm_source: facebook, instagram, youtube, tiktok or linkedin.
-6. Any piece that mentions Design Dollars keeps the fine print line in the caption and on the image. After October 31, do not repost a Design Dollars caption until Mitchell approves the November reserve by date.
+6. Any piece that mentions Design Dollars keeps the fine-print line in the caption and on the image. After October 31, do not repost a Design Dollars caption until Mitchell approves the November reserve-by date.
 7. Three hashtags at most. No emojis.
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=bio
@@ -68,7 +68,7 @@ Picturing what could go on your lot? Answer eight questions. We paint your Home 
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s03
 
-Notes: Asset: new: 45 to 90 second vertical clip from the Behind the Build episode "Well and Septic". Text card with the question as the hosts ask it in the first second, cut straight to the answer, captions burned in, end card: Answer eight questions. We paint your Home Portrait.. Well and Septic is the channel's top video. Shorts Related video: the full episode. Cut any build timeline from the clip. Other channels: same link with utm_source=tiktok, instagram, facebook.
+Notes: Asset: new: 45- to 90-second vertical clip from the Behind the Build episode "Well and Septic". Text card with the question as the hosts ask it in the first second, cut straight to the answer, captions burned in, end card: Answer eight questions. We paint your Home Portrait.. Well and Septic is the channel's top video. Shorts Related video: the full episode. Cut any build timeline from the clip. Other channels: same link with utm_source=tiktok, instagram, facebook.
 
 ### s04 · The Home Portrait · Carousel
 *Friday, October 16, 2026 · Instagram feed, Facebook · Carousel*
@@ -115,7 +115,7 @@ Own land, or still looking? Start with your Home Portrait. Eight questions, abou
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s06
 
-Notes: Asset: new: Same Ground, 15 to 25 seconds vertical. 1) Wide shot of a real customer homesite before the build (Brittany's library or a current job, owner's permission). 2) Slow walk to where the front door will be, phone at chest height. 3) Match cut to the finished Mitchell home from the same spot. 4) Text: Same ground. Your home. 5) End card: Answer eight questions. We paint your Home Portrait.. Needs a before and after pair from the same address. No street numbers or neighboring homes in frame. Other channels: same link with utm_source=tiktok, youtube, facebook.
+Notes: Asset: new: Same Ground, 15 to 25 seconds vertical. 1) Wide shot of a real customer homesite before the build (Brittany's library or a current job, owner's permission). 2) Slow walk to where the front door will be, phone at chest height. 3) Match cut to the finished Mitchell home from the same spot. 4) Text: Same ground. Your home. 5) End card: Answer eight questions. We paint your Home Portrait.. Needs a before-and-after pair from the same address. No street numbers or neighboring homes in frame. Other channels: same link with utm_source=tiktok, youtube, facebook.
 
 ### s07 · Mitchell Design Dollars · Reel
 *Tuesday, October 20, 2026 · Facebook, Instagram Reels, LinkedIn · Reel*
@@ -141,7 +141,7 @@ Lavonnia and Rick Downey built their Mitchell home in Henrico, Virginia. Looking
 
 "Talk about no closing costs, no down payment, no construction loan. That's a big deal. I don't think we appreciated what that meant initially. Now looking back, we're like wow, that's the best choice we could've made to go with Mitchell."
 
-That is SimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+That is SimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 
 This fall, your home also comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize. Reserve by October 31, 2026.
 
@@ -166,7 +166,7 @@ No land yet is a good answer. Your Home Portrait starts with the home, then the 
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s09
 
-Notes: Asset: new: 45 to 90 second vertical clip from the Behind the Build episode "Purchasing Land 101", same template as s03.. Shorts Related video: Purchasing Land 101. Never name a county or call an area a good place to buy. Other channels: same link with utm_source=tiktok, instagram.
+Notes: Asset: new: 45- to 90-second vertical clip from the Behind the Build episode "Purchasing Land 101", same template as s03.. Shorts Related video: Purchasing Land 101. Never name a county or call an area a good place to buy. Other channels: same link with utm_source=tiktok, instagram.
 
 ### s10 · Mitchell Design Dollars · Static image
 *Saturday, October 24, 2026 · Instagram feed, Facebook · Static image*
@@ -190,7 +190,7 @@ Notes: Asset: Design Dollars static "Sign now, choose later". Answers the most c
 
 Your land is worth more than you think.
 
-You already own the hardest part of building. Most builders still send you to a bank for a construction loan before anyone turns a shovel. Mitchell self funds every build, so there is no construction loan, zero down and zero closing costs.
+You already own the hardest part of building. Most builders still send you to a bank for a construction loan before anyone turns a shovel. Mitchell self-funds every build, so there is no construction loan, zero down and zero closing costs.
 
 Virginia and Southern Maryland: https://simplymitchellhomes.com/land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s11
 North and South Carolina: https://simplymitchellhomes.com/onyourland?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s11
@@ -216,23 +216,23 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=o
 
 Notes: Asset: Home Portrait reel "Which". Keeps the quiz in feeds while Four Buyers starts. Other channels: same link with utm_source=facebook, tiktok.
 
-### s13 · The Four Buyers · Five card carousel
-*Wednesday, October 28, 2026 · Facebook, LinkedIn, Instagram feed · Five card carousel*
+### s13 · The Four Buyers · Five-card carousel
+*Wednesday, October 28, 2026 · Facebook, LinkedIn, Instagram feed · Five-card carousel*
 
 Your land can be your down payment.
 
 Same land. Same house. The difference is who carries the money while it goes up.
 
-The usual way: a down payment, a construction loan, two closings, and interest while the house is being built. With Mitchell: the land you already own, no construction loan, zero closing costs and one closing, because Mitchell self funds every build.
+The usual way: a down payment, a construction loan, two closings, and interest while the house is being built. With Mitchell: the land you already own, no construction loan, zero closing costs and one closing, because Mitchell self-funds every build.
 
-See the side by side for Virginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13
+See the side-by-side for Virginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13
 In North and South Carolina, start here: https://simplymitchellhomes.com/onyourland?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13
 
 #BuildOnYourLand #MitchellHomes
 
 Link: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13
 
-Notes: Asset: Four Buyers five card carousel: "Your land can be your down payment". No dollar figures or savings math in the caption. Confirm Brittany's held section on /math is cleared first. Other channels: same link with utm_source=linkedin, instagram.
+Notes: Asset: Four Buyers five-card carousel: "Your land can be your down payment". No dollar figures or savings math in the caption. Confirm Brittany's held section on /math is cleared first. Other channels: same link with utm_source=linkedin, instagram.
 
 ### s14 · Mitchell Design Dollars · Static image
 *Thursday, October 29, 2026 · Facebook, Instagram feed · Static image*
@@ -241,7 +241,7 @@ Your cabinets. Your counters. Your floors, your lighting, your hardware. The mor
 
 Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. Buy $60,000 in selections, pay $60,000, and take home $75,000 worth.
 
-The reserve by date for October is Saturday, October 31, 2026. A New Home Consultant can walk you through it: https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s14
+The reserve-by date for October is Saturday, October 31, 2026. A New Home Consultant can walk you through it: https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s14
 
 Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.
 
@@ -293,7 +293,7 @@ Rob and Kat Cuomo built their Mitchell home in Wilmington, North Carolina:
 
 "Mitchell takes all the risk. They want you in your home as fast as possible… You want the bones of the home and the materials that they use to be good. Mitchell spares no expense on premium materials when you build a house."
 
-Mitchell self funds every build. No construction loan, so there is no second closing and no draw period interest.
+Mitchell self-funds every build. No construction loan, so there is no second closing and no draw period interest.
 
 Virginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s17
 North and South Carolina: https://simplymitchellhomes.com/dreamer-carolinas?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s17
@@ -302,7 +302,7 @@ North and South Carolina: https://simplymitchellhomes.com/dreamer-carolinas?utm_
 
 Link: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s17
 
-Notes: Asset: Cuomo homeowner testimonial video, cut from https://www.youtube.com/watch?v=jMSBzlcQ4uU (stands in for the no construction loan reel, which is on hold). Approved self funding wording only, never the line waiting on legal. Quote is a verbatim excerpt from the live pages. Carolinas link shares the s16 hold. Other channels: same link with utm_source=linkedin, instagram.
+Notes: Asset: Cuomo homeowner testimonial video, cut from https://www.youtube.com/watch?v=jMSBzlcQ4uU (stands in for the no-construction-loan reel, which is on hold). Approved self-funding wording only, never the line waiting on legal. Quote is a verbatim excerpt from the live pages. Carolinas link shares the s16 hold. Other channels: same link with utm_source=linkedin, instagram.
 
 ### s18 · The Four Buyers · Reel
 *Wednesday, November 4, 2026 · Facebook, Instagram Reels, TikTok, YouTube Shorts · Reel*
@@ -322,14 +322,14 @@ Link: https://simplymitchellhomes.com/no-land?utm_source=facebook&utm_medium=org
 
 Notes: Asset: new: 15 to 20 seconds vertical. 1) Thumb scrolling land listings on a phone, no addresses readable. 2) Cut to a Design Center: hands turning plan pages, then sample boards. 3) Text: Find the lot. Start the home now. 4) End card: You do not have to own it yet.. No financing claims here: whether SimplyMitchell works the same way for a buyer still buying land is an open flag. Other channels: same link with utm_source=instagram, tiktok, youtube.
 
-### s19 · The Four Buyers · Five card carousel
-*Thursday, November 5, 2026 · Facebook, LinkedIn, Instagram feed · Five card carousel*
+### s19 · The Four Buyers · Five-card carousel
+*Thursday, November 5, 2026 · Facebook, LinkedIn, Instagram feed · Five-card carousel*
 
 A custom home on your land, without the unknowns.
 
 Every choice priced before we build. You choose in daylight, with the number in front of you, before construction begins.
 
-And you hear from us every week, from groundbreaking to move in.
+And you hear from us every week, from groundbreaking to move-in.
 
 Virginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s19
 North and South Carolina: https://simplymitchellhomes.com/yourplan?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s19
@@ -338,7 +338,7 @@ North and South Carolina: https://simplymitchellhomes.com/yourplan?utm_source=fa
 
 Link: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s19
 
-Notes: Asset: Four Buyers five card carousel: "A custom home on your land, without the unknowns". Approved pricing claim wording only; do not strengthen it. Other channels: same link with utm_source=linkedin, instagram.
+Notes: Asset: Four Buyers five-card carousel: "A custom home on your land, without the unknowns". Approved pricing claim wording only; do not strengthen it. Other channels: same link with utm_source=linkedin, instagram.
 
 ### s20 · The Home Portrait · Brand film, 63 seconds
 *Saturday, November 7, 2026 · Facebook, Instagram Reels, YouTube, LinkedIn · Brand film, 63 seconds*
@@ -355,14 +355,14 @@ https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s20
 
-Notes: Asset: 63 second brand film ending "Our legacy is building Yours. Simply.". Awareness close to the four weeks. LinkedIn: post Friday, November 6 instead. YouTube: add the Section 3 description block. Other channels: same link with utm_source=instagram, youtube, linkedin.
+Notes: Asset: 63-second brand film ending "Our legacy is building Yours. Simply.". Awareness close to the four weeks. LinkedIn: post Friday, November 6 instead. YouTube: add the Section 3 description block. Other channels: same link with utm_source=instagram, youtube, linkedin.
 
 ### s21 · The Four Buyers · Reel
 *Monday, November 9, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel*
 
 Custom does not have to mean unpredictable.
 
-Start with one of more than 40 floor plans. Choose every selection in daylight, with the number in front of you, before construction begins. Then hear from us every week, from groundbreaking to move in.
+Start with one of more than 40 floor plans. Choose every selection in daylight, with the number in front of you, before construction begins. Then hear from us every week, from groundbreaking to move-in.
 
 See how we build: link in bio.
 
@@ -420,7 +420,7 @@ Notes: New: 20 to 30 seconds of a homesite walk from Brittany's library, no peop
 
 If a construction loan is why you stopped building on your land, read this.
 
-With Mitchell there is no construction loan. Mitchell self funds every build, so there is zero down, zero closing costs and one closing.
+With Mitchell there is no construction loan. Mitchell self-funds every build, so there is zero down, zero closing costs and one closing.
 
 See the math: link in bio.
 
@@ -430,9 +430,9 @@ Financing terms are illustrative only and subject to credit approval. Not a comm
 
 Link: https://simplymitchellhomes.com/calculator?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s25
 
-Notes: Hold until legal approves the financing wording and the comparison figures on /calculator are confirmed, the same hold as the email that day. Asset: the no construction loan reel once cleared.
+Notes: Hold until legal approves the financing wording and the comparison figures on /calculator are confirmed, the same hold as the email that day. Asset: the no-construction-loan reel once cleared.
 
-### s26 · The Four Buyers · Five card carousel
+### s26 · The Four Buyers · Five-card carousel
 *Thursday, November 19, 2026 · Instagram feed, Facebook · Carousel*
 
 Your dream home has a folder, not a date.
@@ -445,7 +445,7 @@ Link in bio.
 
 Link: https://simplymitchellhomes.com/dreamer?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s26
 
-Notes: Hold until /dreamer and /dreamer-carolinas drop the line about a price fixed from day one. Asset: the five card carousel for this buyer. Carolinas: /dreamer-carolinas.
+Notes: Hold until /dreamer and /dreamer-carolinas drop the line about a price fixed from day one. Asset: the five-card carousel for this buyer. Carolinas: /dreamer-carolinas.
 
 ### s27 · Mitchell Design Dollars · Static image
 *Saturday, November 21, 2026 · Instagram feed, Facebook · Static image*
@@ -462,10 +462,10 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 Link: https://simplymitchellhomes.com/design-dollars?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s27
 
-Notes: Asset: Design Dollars static "The more you personalize". No date line until Mitchell sets the November reserve by date. Facebook: utm_source=facebook.
+Notes: Asset: Design Dollars static "The more you personalize". No date line until Mitchell sets the November reserve-by date. Facebook: utm_source=facebook.
 
-### st01 · The Home Portrait · Three frame Story, poll and link sticker
-*Tuesday, October 13, 2026 · Instagram Stories, Facebook Stories · Three frame Story, poll and link sticker*
+### st01 · The Home Portrait · Three-frame Story, poll and link sticker
+*Tuesday, October 13, 2026 · Instagram Stories, Facebook Stories · Three-frame Story, poll and link sticker*
 
 Frame 1: Do you already own your land? Poll sticker: I own land / Still looking
 Frame 2: Either way, the home comes first. Home first, land in the middle, timing last.
@@ -475,8 +475,8 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=o
 
 Notes: Asset: Home Portrait static ads, one image per frame. Share the poll result the next day as one more frame with the same link sticker. Other channels: same link with utm_source=facebook.
 
-### st02 · The Home Portrait · Four frame this or that, poll stickers and link sticker
-*Monday, October 19, 2026 · Instagram Stories · Four frame this or that, poll stickers and link sticker*
+### st02 · The Home Portrait · Four-frame this or that, poll stickers and link sticker
+*Monday, October 19, 2026 · Instagram Stories · Four-frame this or that, poll stickers and link sticker*
 
 Frame 1: This or that, for the home you are picturing.
 Frame 2: Front porch or screened porch? Poll sticker.
@@ -487,8 +487,8 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=o
 
 Notes: Asset: Home Portrait static ads and carousel images. One image per frame, never a collage; the painting stays the reward.
 
-### st03 · Mitchell Design Dollars · Four frame Story, link sticker
-*Wednesday, October 21, 2026 · Instagram Stories, Facebook Stories · Four frame Story, link sticker*
+### st03 · Mitchell Design Dollars · Four-frame Story, link sticker
+*Wednesday, October 21, 2026 · Instagram Stories, Facebook Stories · Four-frame Story, link sticker*
 
 Frame 1: It is your land. Make it your home.
 Frame 2: Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.
@@ -516,7 +516,7 @@ Notes: Asset: Design Dollars reel, first 10 seconds as frame 1. Remove the frame
 *Monday, October 26, 2026 · Instagram Stories, Facebook Stories · Quiz sticker and two link stickers*
 
 Frame 1: Quiz sticker: What can the land you own do for a new home? A) Sit there  B) Be your down payment
-Frame 2: Your land can be your down payment. Mitchell self funds every build, so there is no construction loan.
+Frame 2: Your land can be your down payment. Mitchell self-funds every build, so there is no construction loan.
 Frame 3: Building in Virginia or Southern Maryland? Link sticker: Start here
 Frame 4: Building in North or South Carolina? Link sticker: Start here
 
@@ -537,7 +537,7 @@ Link: https://simplymitchellhomes.com/dreamer?utm_source=instagram&utm_medium=or
 
 Notes: Asset: new: Mitchell Green background with question sticker, then regional watercolor backgrounds. Same hold as s16 on the two dreamer pages.
 
-### st07 · The Home Portrait · Three frame Story, link sticker
+### st07 · The Home Portrait · Three-frame Story, link sticker
 *Thursday, November 12, 2026 · Instagram Stories, Facebook Stories · Story*
 
 Frame 1: Lake, coast or mountains?
@@ -549,7 +549,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=o
 Notes: Use the poll sticker on frame 1. Same day as the getaway email.
 
 ### Series idea A: One Question, One Answer
-*Twice a week from October 15 · YouTube Shorts, TikTok, Instagram Reels · 45 to 90 second clips from Behind the Build*
+*Twice a week from October 15 · YouTube Shorts, TikTok, Instagram Reels · 45- to 90-second clips from Behind the Build*
 
 Format: one question per clip, from an existing Behind the Build episode. The question appears as a text card in the first second, the answer starts right away, captions are burned in, and the end card reads: Answer eight questions. We paint your Home Portrait.
 
@@ -570,7 +570,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=org
 Notes: s03 and s09 are episodes 1 and 2. Give each later clip its own utm_content id (qa03, qa04 and on). Check SimplyMitchell Savings for the old 6.5 percent figure before clipping it.
 
 ### Series idea B: Before the House
-*Weekly from October 30 · TikTok first, then Instagram Reels and YouTube Shorts · 30 to 60 second land and lot clips*
+*Weekly from October 30 · TikTok first, then Instagram Reels and YouTube Shorts · 30- to 60-second land and lot clips*
 
 Format: a New Home Consultant on a real homesite (owner's permission) answers one land question per clip, in their own words, standing on the ground it is about. TikTok first: the account is empty, and land and lots is the theme that earns Mitchell the most engagement.
 
@@ -588,7 +588,7 @@ Rules: no addresses or neighboring homes in frame, never describe an area as a g
 
 Link: https://simplymitchellhomes.com/onyourland?utm_source=tiktok&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=seriesB
 
-Notes: s15 is episode 1. Modeled on the small builder accounts that win on specific land stories. Prompt 6 links /land for Virginia and Southern Maryland.
+Notes: s15 is episode 1. Modeled on the small-builder accounts that win on specific land stories. Prompt 6 links /land for Virginia and Southern Maryland.
 
 ## Google Business Profile posts, five Design Centers
 
@@ -635,7 +635,7 @@ Notes: Button: Learn more. Image: a Home Portrait static ad, never the painting 
 
 Your land is worth more than you think. At Mitchell Homes, the land you own can be your down payment.
 
-Most builders send you to a bank for a construction loan before anyone turns a shovel. Mitchell self funds every build, so there is zero down, zero closing costs and no construction loan.
+Most builders send you to a bank for a construction loan before anyone turns a shovel. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan.
 
 More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections, chosen in person at our Fredericksburg Design Center.
 
@@ -686,9 +686,9 @@ Notes: Button: Learn more. Image: a Home Portrait static ad, never the painting 
 
 Your land can be your down payment. Same land, same house: the difference is who carries the money while it goes up.
 
-The usual way means a down payment, a construction loan, two closings and interest during the build. With Mitchell there is no construction loan and one closing, because Mitchell self funds every build. Zero down, zero closing costs.
+The usual way means a down payment, a construction loan, two closings and interest during the build. With Mitchell there is no construction loan and one closing, because Mitchell self-funds every build. Zero down, zero closing costs.
 
-See the side by side, then talk it through at our Richmond Design Center in Midlothian.
+See the side-by-side, then talk it through at our Richmond Design Center in Midlothian.
 
 Call a New Home Consultant at (540) 701-2759, or tap Learn more.
 
@@ -739,7 +739,7 @@ Your dream home has a folder, not a date. It starts with one appointment. Bring 
 
 At our Newport News Design Center, the picture in your head becomes a list: more than 40 floor plans and more than 40,000 selections, made in person with someone beside you who has done it before.
 
-No construction loan, because Mitchell self funds every build.
+No construction loan, because Mitchell self-funds every build.
 
 Building on your land across Virginia and Southern Maryland. Call a New Home Consultant at (540) 701-2759, or tap Learn more.
 
@@ -790,7 +790,7 @@ Your dream home has a folder, not a date. It starts with one appointment. Bring 
 
 At our Raleigh Design Center in Garner, the picture in your head becomes a list: more than 40 floor plans and more than 40,000 selections, made in person with someone beside you who has done it before.
 
-No construction loan, because Mitchell self funds every build.
+No construction loan, because Mitchell self-funds every build.
 
 Building on your land across North and South Carolina. Call a New Home Consultant at (984) 331-5468, or tap Learn more.
 
@@ -851,7 +851,7 @@ Notes: Button: Learn more. Image: a real Mitchell home or this studio, no people
 
 ## YouTube and Behind the Build
 
-Every existing episode gets a quiz and Design Dollars link, and search first titles let the episodes rank for the questions landowners type.
+Every existing episode gets a quiz and Design Dollars link, and search-first titles let the episodes rank for the questions landowners type.
 
 ### Description block for every Behind the Build episode
 *Add now, update November 1 · YouTube, all existing episodes · Top of the description*
@@ -872,14 +872,14 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=org
 Notes: The first two lines show above the fold, so the quiz leads. On November 1 change the date line once Mitchell approves the November date, or delete that line until then.
 
 ### Pinned comment
-*Pin now · YouTube, every long form episode and the brand film · Comment*
+*Pin now · YouTube, every long-form episode and the brand film · Comment*
 
 New here? Answer eight questions and we paint your Home Portrait: the home that belongs on your land, in about 90 seconds.
 https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_pinned
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_pinned
 
-Notes: Post from the Mitchell Homes channel account, then pin. Links click in long form comments.
+Notes: Post from the Mitchell Homes channel account, then pin. Links click in long-form comments.
 
 ### Community post 1: where are you on the way to building?
 *October 14, 2026 · YouTube Community · Poll*
@@ -946,7 +946,7 @@ Notes: Search words first, episode name kept, branded suffix dropped (the series
 *Change now · YouTube, existing episode · Title and first description line*
 
 New title: Build on Your Land With No Construction Loan: SimplyMitchell Savings
-First description line: How SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+First description line: How SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 
 Link: https://www.youtube.com/watch?v=8e8mkV1rdzM
 
@@ -964,14 +964,14 @@ Notes: Search words first, episode name kept, branded suffix dropped (the series
 
 ## Listing portals
 
-Zillow, Realtor.com, NewHomeSource and Houzz outrank Mitchell for local build on your lot searches and feed the AI engines, so one consistent profile reaches buyers already shopping.
+Zillow, Realtor.com, NewHomeSource and Houzz outrank Mitchell for local build-on-your-lot searches and feed the AI engines, so one consistent profile reaches buyers already shopping.
 
 ### Builder profile blurb, full length
 *Now · Zillow, Realtor.com, NewHomeSource, Houzz · About the builder field*
 
-Mitchell Homes builds custom homes on land you own. Family owned and building on your land since 1992, we offer more than 40 floor plans from 1,000 to 3,000 square feet and more than 40,000 selections, chosen in person at a Mitchell Design Center.
+Mitchell Homes builds custom homes on land you own. Family-owned and building on your land since 1992, we offer more than 40 floor plans from 1,000 to 3,000 square feet and more than 40,000 selections, chosen in person at a Mitchell Design Center.
 
-Through SimplyMitchell there is zero down, zero closing costs and no construction loan, because Mitchell self funds every build. Every choice is priced before we build, and you hear from us every week from groundbreaking to move in.
+Through SimplyMitchell there is zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. Every choice is priced before we build, and you hear from us every week from groundbreaking to move-in.
 
 Mitchell builds in Virginia, North Carolina, South Carolina and Maryland. Our five Design Centers are in Fredericksburg, Richmond, Newport News, Raleigh and Wilmington.
 
@@ -984,7 +984,7 @@ Notes: Same text on every portal so the AI engines read one consistent descripti
 ### Builder profile blurb, short
 *Now · Zillow, Realtor.com, NewHomeSource, Houzz · Short description fields*
 
-Custom homes on land you own, since 1992. More than 40 floor plans and more than 40,000 selections. Zero down, zero closing costs and no construction loan, because Mitchell self funds every build. Building in Virginia, North Carolina, South Carolina and Maryland.
+Custom homes on land you own, since 1992. More than 40 floor plans and more than 40,000 selections. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. Building in Virginia, North Carolina, South Carolina and Maryland.
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=newhomesource&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=portal_profile_short
 
@@ -1011,13 +1011,13 @@ The owners started with the land and a folder of saved photos. They chose the [P
 
 [One sentence on how they use a space they designed, in their words.]
 
-Built through SimplyMitchell: zero down, zero closing costs and no construction loan, because Mitchell self funds every build. [Confirm the owners used SimplyMitchell; delete this paragraph if not.]
+Built through SimplyMitchell: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. [Confirm the owners used SimplyMitchell; delete this paragraph if not.]
 
 Mitchell Homes has built custom homes on land our buyers own since 1992.
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=houzz&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=houzz_project
 
-Notes: Fill every bracket from the real job and the owners' sign off; invent nothing. Upload the full photo set with room tags. Use the profile's website field for this link.
+Notes: Fill every bracket from the real job and the owners' sign-off; invent nothing. Upload the full photo set with room tags. Use the profile's website field for this link.
 
 ## Community and local
 
@@ -1058,7 +1058,7 @@ Notes: Image: a Home Portrait static ad.
 
 Your land is worth more than you think.
 
-If you own land and have thought about building on it, the first question is usually about money. Mitchell self funds every build, so there is zero down, zero closing costs and no construction loan.
+If you own land and have thought about building on it, the first question is usually about money. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan.
 
 Virginia and Southern Maryland: https://simplymitchellhomes.com/land?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=nd_fourbuyers
 North and South Carolina: https://simplymitchellhomes.com/onyourland?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=nd_fourbuyers
@@ -1070,7 +1070,7 @@ Notes: Virginia studio pages keep only the first link line; Carolinas pages keep
 ### Facebook Groups approach
 *Ongoing from October 12 · Facebook Groups (local land, homesteading, rural property, community groups) · Playbook*
 
-Where: local land for sale, homesteading, rural property and county community groups in each Design Center market. Search the county name with land, acreage or homestead.
+Where: local land-for-sale, homesteading, rural property and county community groups in each Design Center market. Search the county name with land, acreage or homestead.
 
 Who posts: a named New Home Consultant from their own profile, with Mitchell Homes in their profile. A person reads as a neighbor; a Page reads as an ad.
 
@@ -1152,7 +1152,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=local_partner&utm_medi
 
 Notes: Send from the consultant, not a generic inbox. Attach the two episode links from FACTS.md.
 
-## One page summary: every tactic ranked
+## One-page summary: every tactic ranked
 
 Ranks every tactic in this file by expected impact against effort so Kelly can pick where to start.
 
@@ -1186,7 +1186,7 @@ Notes: Impact is a judgment from the July audits, not a forecast.
 ### 4. YouTube retitles, five episodes
 *Rank 4 · Impact medium to high · Effort low*
 
-Titles are written for insiders today. Search first titles let the episodes rank for the questions buyers type. Fifteen minutes.
+Titles are written for insiders today. Search-first titles let the episodes rank for the questions buyers type. Fifteen minutes.
 
 Link: https://www.youtube.com/watch?v=zWwtw8qgp4w
 
@@ -1222,7 +1222,7 @@ Notes: Impact is a judgment from the July audits, not a forecast.
 ### 8. Design Dollars feed posts, through October 31
 *Rank 8 · Impact medium · Effort low*
 
-Five posts to warm followers before the reserve by date. Time boxed; stops November 1 until the next date is approved.
+Five posts to warm followers before the reserve-by date. Time-boxed; stops November 1 until the next date is approved.
 
 Link: https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s02
 
@@ -1267,7 +1267,7 @@ Notes: Impact is a judgment from the July audits, not a forecast.
 ### 13. Houzz project
 *Rank 13 · Impact low to medium · Effort medium*
 
-Wakes up a dormant profile the AI engines underuse. Needs a finished home with cleared photos and owner sign off.
+Wakes up a dormant profile the AI engines underuse. Needs a finished home with cleared photos and owner sign-off.
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=houzz&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=houzz_project
 
@@ -1297,8 +1297,8 @@ Notes: Impact is a judgment from the July audits, not a forecast.
 1. /dreamer and /dreamer-carolinas still carry step Two of their three steps, which promises a price fixed from day one that does not move during the build. FACTS.md does not allow that claim. Fix before s16, s17 (Carolinas link), st06 and the Newport News and Raleigh Four Buyers posts.
 2. /math still carries the text "subject to confirmation before this page is published" and Brittany's client hold is open. Clear it before s13, s17, s19 and the Richmond post.
 3. /land and /math cover Virginia and Southern Maryland only. There is no Carolinas landowner page, so Carolinas links go to /onyourland or /yourplan, which do not mention SimplyMitchell.
-4. The live Design Dollars page lists a sixth Design Center (Rocky Mount, NC, (252) 650-6630), uses the Incentives doc title in its fine print instead of New Home Consultant, and gives per studio phone numbers: Richmond (804) 538-3912, Newport News (757) 210-3482, Wilmington (910) 996-3640. These posts use the two division lines as briefed.
-5. November reserve by date is not approved. Every Design Dollars piece stops or loses its date line on November 1.
+4. The live Design Dollars page lists a sixth Design Center (Rocky Mount, NC, (252) 650-6630), uses the Incentives doc title in its fine print instead of New Home Consultant, and gives per-studio phone numbers: Richmond (804) 538-3912, Newport News (757) 210-3482, Wilmington (910) 996-3640. These posts use the two division lines as briefed.
+5. November reserve-by date is not approved. Every Design Dollars piece stops or loses its date line on November 1.
 6. /no-land and /onyourland promise a plan guide. Confirm it is actually sent before pushing organic traffic there.
 7. Behind the Build clips: check each for a build timeline, the old 6.5 percent figure or pricing before cutting.
 

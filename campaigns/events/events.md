@@ -1,6 +1,6 @@
 # Mitchell Homes fall events, October 12 to November 22, 2026
 
-Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.
+Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow-up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.
 
 ## Read first
 
@@ -8,7 +8,7 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 - [RSVP link] is the Builder Studio form Kelly will create (one per event, or one form with an event field). Every link field shows the tracked version: put the real form URL where [RSVP link] sits and keep the UTM string, so each RSVP shows where it came from. In body copy, paste the link from that item's link field.
 - Cadence: no new marketing emails and no extra marketing texts. Invitations ride existing emails, social, Facebook events, Google profiles, Nextdoor and personal consultant messages. The only bulk text is E4's on November 11.
 - Reminder texts go only to people who RSVPed with text consent, from one Builder Studio workflow per event. Consultants tag anyone who RSVPs by reply with the event tag so the same workflow reaches them.
-- Design Dollars: wherever named, it carries the $5,000 floor and the short fine print. Texts never name it. After October 31, pieces that name it (E4, E6) wait for Mitchell's November reserve by date.
+- Design Dollars: wherever named, it carries the $5,000 floor and the short fine print. Texts never name it. After October 31, pieces that name it (E4, E6) wait for Mitchell's November reserve-by date.
 - Images: anything that could be boosted (social posts, Facebook events) uses real Mitchell homes or Design Centers with no people. Never show or describe the painted Home Portrait in any invitation.
 - Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to the Instagram link listed for that post.
 - Placeholders: [first name], [your name], [your phone], [city], [studio address], [time], [Facebook Live link], [YouTube Live link], [replay link]. Studio addresses are in the studio table.
@@ -17,10 +17,10 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 
 - October 22: E1's invite email replaces the Design Dollars consultant email already set for that day (one consultant email per lead).
 - November 5: E3's invite text replaces the landowner consultant text already set for that day.
-- October 28: E2's follow up stands in for the October 29 deadline text for anyone who received it.
+- October 28: E2's follow-up stands in for the October 29 deadline text for anyone who received it.
 - November 11: the E4 text skips E5 RSVPs, who get the E5 reminder that day, and active leads invited personally on November 9.
 - dd2 carries two event blocks (E1, then E2's short line). E2 was placed in dd2, not dd3, for lead time.
-- E6 rides rb2, the November 4 realtor email. rb3 (November 11) lands the same day as the consultant invites to agents; if Kelly wants, add one line to rb3 pointing to the Lunch and Learn, otherwise leave it. ra2 (November 18, after the event) already carries the lot checklist, so the E6 follow up on November 19 does not repeat it.
+- E6 rides rb2, the November 4 realtor email. rb3 (November 11) lands the same day as the consultant invites to agents; if Kelly wants, add one line to rb3 pointing to the Lunch and Learn, otherwise leave it. ra2 (November 18, after the event) already carries the lot checklist, so the E6 follow-up on November 19 does not repeat it.
 - fb5 is on hold for the plan guide email. If it misses November 4, E3 rides fb1 and the consultant invites only.
 
 ## The six at a glance
@@ -49,12 +49,12 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 | Friday, October 23 | E1 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
 | Friday, October 23 | E1 | Text | Reminder to RSVPs only | Builder Studio workflow |
 | Friday, October 23 | E2 | Sales team | Personal invite text and email to active leads not coming Saturday | New Home Consultants |
-| Saturday, October 24 | E1 | Event | Bring Your Photos Saturday, 10am to 2pm; thank you text by 6pm | Design Consultants, New Home Consultants |
-| Sunday, October 25 | E1 | Sales team | Follow up email with the priced list | New Home Consultants |
+| Saturday, October 24 | E1 | Event | Bring Your Photos Saturday, 10am to 2pm; thank-you text by 6pm | Design Consultants, New Home Consultants |
+| Sunday, October 25 | E1 | Sales team | Follow-up email with the priced list | New Home Consultants |
 | Monday, October 26 | E2 | Text | Reminder to RSVPs only | Builder Studio workflow |
 | Tuesday, October 27 | E2 | Social | Post 2, tonight at 7 (Facebook, Instagram Stories) | Marketing |
-| Tuesday, October 27 | E2 | Event | Live at 7pm Eastern; thank you text after the show | Scott and Deven; consultants |
-| Wednesday, October 28 | E2 | Sales team | Follow up email with the replay and the October 31 date | New Home Consultants, online sales counselors |
+| Tuesday, October 27 | E2 | Event | Live at 7pm Eastern; thank-you text after the show | Scott and Deven; consultants |
+| Wednesday, October 28 | E2 | Sales team | Follow-up email with the replay and the October 31 date | New Home Consultants, online sales counselors |
 | Monday, November 2 | E3 | Social | Post 1 (Facebook, Instagram feed). Publish the five Facebook events. | Marketing |
 | Monday, November 2 | E3 | Google | Event post on all five profiles | Marketing |
 | Tuesday, November 3 | E3 | Email | Event block in fb1 | Marketing |
@@ -67,8 +67,8 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 | Thursday, November 5 | E4 | Google | Event post on the Wilmington profile. Publish the Facebook event. | Marketing |
 | Friday, November 6 | E3 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
 | Friday, November 6 | E3 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Saturday, November 7 | E3 | Event | Class, 10am to 11:30am; thank you text | Presenters, New Home Consultants |
-| Sunday, November 8 | E3 | Sales team | Follow up email with recap and next step | New Home Consultants |
+| Saturday, November 7 | E3 | Event | Class, 10am to 11:30am; thank-you text | Presenters, New Home Consultants |
+| Sunday, November 8 | E3 | Sales team | Follow-up email with recap and next step | New Home Consultants |
 | Monday, November 9 | E4 | Social | Post 1 (Facebook, Instagram feed) | Marketing |
 | Monday, November 9 | E4 | Sales team | Personal invite text and email | Raleigh and Wilmington New Home Consultants |
 | Tuesday, November 10 | E4 | Nextdoor | Post from the Wilmington page | Marketing |
@@ -80,16 +80,16 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 | Wednesday, November 11 | E6 | Sales team | Personal invite text and email to agents they know | New Home Consultants |
 | Thursday, November 12 | E5 | Email | Event block in hp4, tonight at 7 | Marketing |
 | Thursday, November 12 | E5 | Social | Post 2, tonight at 7 (Facebook, Instagram Stories) | Marketing |
-| Thursday, November 12 | E5 | Event | Live at 7pm Eastern; thank you text after the show | Host; consultants |
+| Thursday, November 12 | E5 | Event | Live at 7pm Eastern; thank-you text after the show | Host; consultants |
 | Friday, November 13 | E4 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
 | Friday, November 13 | E4 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Friday, November 13 | E5 | Sales team | Follow up email with the replay (and Saturday's open house for Carolinas contacts) | New Home Consultants, online sales counselors |
-| Saturday, November 14 | E4 | Event | Open house, 10am to 3pm; thank you text | Wilmington team |
-| Sunday, November 15 | E4 | Sales team | Follow up email | New Home Consultants |
+| Friday, November 13 | E5 | Sales team | Follow-up email with the replay (and Saturday's open house for Carolinas contacts) | New Home Consultants, online sales counselors |
+| Saturday, November 14 | E4 | Event | Open house, 10am to 3pm; thank-you text | Wilmington team |
+| Sunday, November 15 | E4 | Sales team | Follow-up email | New Home Consultants |
 | Monday, November 16 | E6 | Social | Post 2 (Facebook, Instagram Stories, LinkedIn) | Marketing |
 | Tuesday, November 17 | E6 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Wednesday, November 18 | E6 | Event | Lunch and Learn, 11:30am to 1pm; thank you text | New Home Consultants |
-| Thursday, November 19 | E6 | Sales team | Follow up email with the referral kit | New Home Consultants |
+| Wednesday, November 18 | E6 | Event | Lunch and Learn, 11:30am to 1pm; thank-you text | New Home Consultants |
+| Thursday, November 19 | E6 | Sales team | Follow-up email with the referral kit | New Home Consultants |
 
 ## Design Center addresses
 
@@ -111,7 +111,7 @@ As listed on the live Design Dollars page. Confirm before printing any address.
 
 **When:** Saturday, October 24, 2026, 10am to 2pm, local time at every studio  
 **Where:** All five Mitchell Design Centers: Fredericksburg VA, Richmond VA (Midlothian), Newport News VA, Raleigh NC (studio in Garner) and Wilmington NC (studio in Belville). Addresses in the studio table, as listed on the live Design Dollars page.  
-**For:** Anyone planning a Mitchell home who has not signed yet, above all the buyers who have been saving photos of the home they want: active leads, Design Dollars email clickers and Home Portrait quiz takers. Walk ins welcome; an RSVP gets a reserved time with a Design Consultant.
+**For:** Anyone planning a Mitchell home who has not signed yet, above all the buyers who have been saving photos of the home they want: active leads, Design Dollars email clickers and Home Portrait quiz takers. Walk-ins welcome; an RSVP gets a reserved time with a Design Consultant.
 
 **What happens**
 
@@ -119,15 +119,15 @@ As listed on the live Design Dollars page. Confirm before printing any address.
 - A Design Consultant matches the favorites to Mitchell selections and shows what they cost.
 - Together they see where that list lands on the Design Dollars ladder, and how far it is to the next tier.
 
-**Why it helps the campaign (for Kelly):** Turns the dd2 ladder email into a seat at the design table one week before the October 31 reserve by date, with the buyer's own photos as the reason to come in.
+**Why it helps the campaign (for Kelly):** Turns the dd2 ladder email into a seat at the design table one week before the October 31 reserve-by date, with the buyer's own photos as the reason to come in.
 
 **Mitchell must confirm**
 
 - Approve the date and the 10am to 2pm hours, or name the studios that will take part.
 - Staffing at every studio: a Design Consultant for the full four hours, plus a New Home Consultant for land and plan questions. Newport News and Wilmington each have one New Home Consultant; name the cover.
-- Reserved times: CEA proposes 30 minute slots with walk ins between them. Confirm the length and how many tables each studio can run at once.
+- Reserved times: CEA proposes 30-minute slots with walk-ins between them. Confirm the length and how many tables each studio can run at once.
 - Pricing at the table: can a Design Consultant price a photo list on the spot? If not, copy changes to: we will send you the numbers.
-- RSVP form (Kelly builds it in Builder Studio): name, phone, email, studio, preferred time, and the text consent checkbox with legal approved wording.
+- RSVP form (Kelly builds it in Builder Studio): name, phone, email, studio, preferred time, and the text consent checkbox with legal-approved wording.
 - Food: none promised anywhere. If Mitchell wants coffee or light refreshments, add one line to the Facebook event.
 - Studio addresses as listed on the live Design Dollars page, and which phone line Richmond shows.
 
@@ -148,8 +148,8 @@ As listed on the live Design Dollars page. Confirm before printing any address.
 | Thursday, October 22 | Sales team | Personal invite text and email to own active leads (the email replaces that day's Design Dollars consultant email) | New Home Consultants |
 | Friday, October 23 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
 | Friday, October 23 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Saturday, October 24 | Event | Bring Your Photos Saturday, 10am to 2pm; thank you text by 6pm | Design Consultants, New Home Consultants |
-| Sunday, October 25 | Sales team | Follow up email with the priced list | New Home Consultants |
+| Saturday, October 24 | Event | Bring Your Photos Saturday, 10am to 2pm; thank-you text by 6pm | Design Consultants, New Home Consultants |
+| Sunday, October 25 | Sales team | Follow-up email with the priced list | New Home Consultants |
 
 ### Email event block
 
@@ -173,7 +173,7 @@ Fine print under the block: Design Dollars apply to Design Center selections onl
 >
 > Bring them in. On Saturday, October 24, from 10am to 2pm, every Mitchell Design Center is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize.
 >
-> Fredericksburg, Richmond, Newport News, Raleigh and Wilmington. Walk ins welcome. RSVP and we will save you a time: [RSVP link]
+> Fredericksburg, Richmond, Newport News, Raleigh and Wilmington. Walk-ins welcome. RSVP and we will save you a time: [RSVP link]
 >
 > Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.
 >
@@ -207,7 +207,7 @@ Notes: Stories: use the link sticker with the Instagram link [RSVP link]?utm_sou
 >
 > You will also see where your list lands on the Mitchell Design Dollars ladder. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. Reserve by October 31, 2026, and your Design Dollars are locked. Your tier is set later, when you make your selections.
 >
-> Walk ins are welcome. RSVP and we will save you a time with a Design Consultant: [RSVP link]
+> Walk-ins are welcome. RSVP and we will save you a time with a Design Consultant: [RSVP link]
 >
 > Questions? Call a New Home Consultant: Virginia and Maryland (540) 701-2759, North and South Carolina (984) 331-5468.
 >
@@ -217,12 +217,12 @@ Notes: One Facebook event per Design Center, so each shows a real address to peo
 
 ### Google Business Profile event post
 
-Post on: All five Design Center profiles, Monday, October 19. Event type post, start Saturday, October 24, 10am, end 2pm.
+Post on: All five Design Center profiles, Monday, October 19. Event-type post, start Saturday, October 24, 10am, end 2pm.
 
 **Title:** Bring Your Photos Saturday (26 of 58 characters)  
 **Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e1`
 
-> Bring the photos you have been saving for your future home to our [city] Design Center. A Design Consultant will match your favorites to Mitchell selections, show you what they cost, and show you where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Walk ins welcome, or tap Sign up to save a time.
+> Bring the photos you have been saving for your future home to our [city] Design Center. A Design Consultant will match your favorites to Mitchell selections, show you what they cost, and show you where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Walk-ins welcome, or tap Sign up to save a time.
 >
 > Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.
 
@@ -236,7 +236,7 @@ Tuesday, October 20, 2026, from each Design Center's Nextdoor business page wher
 >
 > On Saturday, October 24, from 10am to 2pm, the Mitchell Homes [city] Design Center at [studio address] is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize.
 >
-> Walk ins welcome. RSVP for a reserved time: [RSVP link]?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_events&utm_content=e1
+> Walk-ins welcome. RSVP for a reserved time: [RSVP link]?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_events&utm_content=e1
 >
 > Mitchell Homes, building on your land since 1992.
 >
@@ -278,13 +278,13 @@ Friday, October 23, 2026. Builder Studio workflow on the RSVP form, to RSVPs wit
 
 (179 characters)
 
-### Same day thank you text
+### Same-day thank-you text
 
 Saturday, October 24, 2026, by 6pm. The Design Consultant or New Home Consultant each attendee met.
 
 > Thank you for coming in today, [first name]. It was great to see the home you have been picturing. I will send your priced list tomorrow so you have it all in one place. Questions before then? Just text me.
 
-### Next day follow up email
+### Next-day follow-up email
 
 Sunday, October 25, 2026 (schedule it Saturday evening). The New Home Consultant, from their own address.
 
@@ -322,20 +322,20 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 **When:** Tuesday, October 27, 2026, 7pm Eastern, about 30 minutes  
 **Where:** Online: live on the Mitchell Homes Facebook page and YouTube channel at the same time. No studio needed.  
-**For:** Everyone still deciding before the October 31 reserve by date: active leads, Design Dollars email clickers, quiz takers, and anyone curious how SimplyMitchell works. Agents and past homeowners welcome.
+**For:** Everyone still deciding before the October 31 reserve-by date: active leads, Design Dollars email clickers, quiz takers, and anyone curious how SimplyMitchell works. Agents and past homeowners welcome.
 
 **What happens**
 
 - Scott Sleeme and Deven Sellers explain Mitchell Design Dollars in plain terms: $5,000 on every home, up to $25,000 the more you personalize, and what it covers.
-- They answer questions sent in ahead and asked live, including how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+- They answer questions sent in ahead and asked live, including how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 - The recording stays on both channels, and each answer becomes its own short clip.
 
-**Why it helps the campaign (for Kelly):** Answers the two questions that stall a Design Dollars decision (what does it cover, do I have to choose now) four days before the October 31 reserve by date, in Scott's own voice.
+**Why it helps the campaign (for Kelly):** Answers the two questions that stall a Design Dollars decision (what does it cover, do I have to choose now) four days before the October 31 reserve-by date, in Scott's own voice.
 
 **Mitchell must confirm**
 
 - Scott and Deven's time: Tuesday, October 27, about 6:30pm to 7:45pm Eastern for setup, the live half hour and a short wrap.
-- Streaming: one tool that sends to Facebook and YouTube at once, a camera and microphone, and who runs it (Brittany or CEA). If the YouTube channel has never streamed, enable live streaming at least a day ahead; first time approval can take up to 24 hours.
+- Streaming: one tool that sends to Facebook and YouTube at once, a camera and microphone, and who runs it (Brittany or CEA). If the YouTube channel has never streamed, enable live streaming at least a day ahead; first-time approval can take up to 24 hours.
 - Questions: a question field on the RSVP form, comments on the October 22 post, and consultant replies. Name who screens them before the show and who answers comments live.
 - On screen: the Design Dollars fine print and the financing line. Answers stay inside the approved wording (Scott's two sentences; Every choice priced before we build; no build duration; no claim that the price cannot change).
 - Who posts the replay and cuts the clips.
@@ -343,7 +343,7 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 **Notes for Kelly**
 
-- For a consultant's own active leads, this follow up stands in for the October 29 deadline text in the cadence; skip that text for anyone who got this email.
+- For a consultant's own active leads, this follow-up stands in for the October 29 deadline text in the cadence; skip that text for anyone who got this email.
 - Clips: one question per Short, titled with the question, per the YouTube plan.
 
 **Schedule**
@@ -356,12 +356,12 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 | Friday, October 23 | Sales team | Personal invite text and email to active leads not coming Saturday | New Home Consultants |
 | Monday, October 26 | Text | Reminder to RSVPs only | Builder Studio workflow |
 | Tuesday, October 27 | Social | Post 2, tonight at 7 (Facebook, Instagram Stories) | Marketing |
-| Tuesday, October 27 | Event | Live at 7pm Eastern; thank you text after the show | Scott and Deven; consultants |
-| Wednesday, October 28 | Sales team | Follow up email with the replay and the October 31 date | New Home Consultants, online sales counselors |
+| Tuesday, October 27 | Event | Live at 7pm Eastern; thank-you text after the show | Scott and Deven; consultants |
+| Wednesday, October 28 | Sales team | Follow-up email with the replay and the October 31 date | New Home Consultants, online sales counselors |
 
 ### Email event block
 
-**dd2**, Tuesday, October 20, 2026. Second short line in dd2, directly under the Bring Your Photos block. Chosen over dd3 because questions have to arrive before the show and the day before reminder only reaches people who RSVPed, so the invitation needs a week of lead time. dd3 keeps its one job: booking a Design Center visit before October 31.
+**dd2**, Tuesday, October 20, 2026. Second short line in dd2, directly under the Bring Your Photos block. Chosen over dd3 because questions have to arrive before the show and the day-before reminder only reaches people who RSVPed, so the invitation needs a week of lead time. dd3 keeps its one job: booking a Design Center visit before October 31.
 
 > **Ask Scott and Deven, live**
 >
@@ -411,7 +411,7 @@ Notes: Stories: link sticker to the YouTube Live link. Post the morning of the s
 >
 > Mitchell Design Dollars. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. What they cover, and why you do not have to choose a single finish to lock them in.
 >
-> SimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+> SimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 >
 > Send your question ahead of time and we will remind you before we go live: [RSVP link] . Or ask in the comments during the show.
 >
@@ -423,7 +423,7 @@ Notes: One online Facebook event with Facebook Live as the location. Link: [RSVP
 
 ### Google Business Profile event post
 
-Post on: All five Design Center profiles, Thursday, October 22. Event type post, start October 27, 7pm, end 7:30pm.
+Post on: All five Design Center profiles, Thursday, October 22. Event-type post, start October 27, 7pm, end 7:30pm.
 
 **Title:** Behind the Build Live: Design Dollars Q&A (41 of 58 characters)  
 **Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e2`
@@ -440,7 +440,7 @@ Skip: online event, not local.
 
 ### Consultant personal invite
 
-Friday, October 23, 2026. Every New Home Consultant to active leads who are not coming Saturday (Saturday's guests hear about it in person and in Sunday's follow up), so nobody gets two invitations in one day.
+Friday, October 23, 2026. Every New Home Consultant to active leads who are not coming Saturday (Saturday's guests hear about it in person and in Sunday's follow-up), so nobody gets two invitations in one day.
 
 **Text** (267 characters)
 
@@ -455,7 +455,7 @@ If you have a question about building with Mitchell that you have not asked yet,
 
 On Tuesday, October 27, at 7pm Eastern, Scott Sleeme, our Owner and CEO, and Deven Sellers, our Executive Vice President, are going live on Facebook and YouTube for about 30 minutes to answer questions about Mitchell Design Dollars and SimplyMitchell.
 
-A quick refresher on both. Your home comes with $5,000 in Design Dollars, and it goes up to $25,000 the more you personalize. Sign now, and your incentive is locked, but your tier will be decided when you make your selections. And with SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+A quick refresher on both. Your home comes with $5,000 in Design Dollars, and it goes up to $25,000 the more you personalize. Sign now, and your incentive is locked, but your tier will be decided when you make your selections. And with SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 
 Reply with your question and I will make sure it gets to them. Here is where to watch: [Facebook Live link] or [YouTube Live link].
 
@@ -474,13 +474,13 @@ Monday, October 26, 2026. Builder Studio workflow, RSVPs with text consent only.
 
 (157 characters)
 
-### Same day thank you text
+### Same-day thank-you text
 
 Tuesday, October 27, 2026, right after the show. Each consultant to their own leads who RSVPed; online sales counselors to the rest.
 
 > Thank you for joining Scott and Deven tonight, [first name]. If you missed it or want to watch again, the replay is here: [replay link]. Anything they did not get to, text me and I will answer it myself.
 
-### Next day follow up email
+### Next-day follow-up email
 
 Wednesday, October 28, 2026. The consultant (or an online sales counselor), to every RSVP.
 
@@ -519,7 +519,7 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 **What happens**
 
-- A one hour class on what to know before you build: perc tests and soil, wells and septic, road access and utilities.
+- A one-hour class on what to know before you build: perc tests and soil, wells and septic, road access and utilities.
 - How the money works: SimplyMitchell on land you own (zero down, zero closing costs, no construction loan), and what to plan for if you are still buying.
 - Thirty minutes of open questions, then time with a New Home Consultant for anyone who brings a parcel address, survey or plat.
 
@@ -552,8 +552,8 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 | Thursday, November 5 | Sales team | Personal invite text and email (the text replaces that day's landowner text) | New Home Consultants |
 | Friday, November 6 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
 | Friday, November 6 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Saturday, November 7 | Event | Class, 10am to 11:30am; thank you text | Presenters, New Home Consultants |
-| Sunday, November 8 | Sales team | Follow up email with recap and next step | New Home Consultants |
+| Saturday, November 7 | Event | Class, 10am to 11:30am; thank-you text | Presenters, New Home Consultants |
+| Sunday, November 8 | Sales team | Follow-up email with recap and next step | New Home Consultants |
 
 ### Email event block
 
@@ -607,12 +607,12 @@ Notes: Stories: link sticker with [RSVP link]?utm_source=instagram&utm_medium=or
 > Saturday, November 7, 2026, 10am to 11:30am
 > [studio address]
 >
-> Owning land is the hardest part of building a custom home, and the most misunderstood. This free 90 minute class is the fall edition of Mitchell's Homebuyer Roadmap to Success, built around the questions landowners ask us first:
+> Owning land is the hardest part of building a custom home, and the most misunderstood. This free 90-minute class is the fall edition of Mitchell's Homebuyer Roadmap to Success, built around the questions landowners ask us first:
 >
 > Perc tests and soil: what they tell you about your homesite.
 > Wells and septic: what your land needs, and how it shapes the plan.
 > Access and utilities: driveways, power and water, and where the home can sit.
-> The money: how SimplyMitchell works on land you own, with zero down, zero closing costs and no construction loan, because Mitchell self funds every build, and what to plan for if you are still buying.
+> The money: how SimplyMitchell works on land you own, with zero down, zero closing costs and no construction loan, because Mitchell self-funds every build, and what to plan for if you are still buying.
 >
 > Bring your parcel address, a survey or plat if you have one, and your questions. Stay after for time with a New Home Consultant.
 >
@@ -628,7 +628,7 @@ Notes: One Facebook event per Design Center; only [city] and [studio address] ch
 
 ### Google Business Profile event post
 
-Post on: All five Design Center profiles, Monday, November 2. Event type post, start November 7, 10am, end 11:30am.
+Post on: All five Design Center profiles, Monday, November 2. Event-type post, start November 7, 10am, end 11:30am.
 
 **Title:** Building on Your Land 101: Free Class (37 of 58 characters)  
 **Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e3`
@@ -683,13 +683,13 @@ Friday, November 6, 2026. Builder Studio workflow, RSVPs with text consent only.
 
 (185 characters)
 
-### Same day thank you text
+### Same-day thank-you text
 
 Saturday, November 7, 2026, by early afternoon. The New Home Consultant who met each attendee.
 
 > Thank you for coming this morning, [first name]. If a question about your land comes up this weekend, text me. I will send the class notes tomorrow with the next step for your land.
 
-### Next day follow up email
+### Next-day follow-up email
 
 Sunday, November 8, 2026 (schedule it Saturday). The New Home Consultant.
 
@@ -702,7 +702,7 @@ Thank you for joining Building on Your Land 101 yesterday. Here is a short recap
 
 What to gather: your parcel address, any survey or plat, and anything you have on the soil, perc or well.
 What to check: soil and perc, well and septic, road access and utilities.
-How the money works: on land you own, SimplyMitchell means zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+How the money works: on land you own, SimplyMitchell means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 
 Your next step: [a land walk at your property, or a Design Center visit to walk the plans]. Reply with two times that work and I will set it up.
 
@@ -742,11 +742,11 @@ New Home Consultant, Mitchell Homes
 **Mitchell must confirm**
 
 - Approve the date and 10am to 3pm hours. Wilmington has one New Home Consultant; name who joins (a Design Consultant, the New Home Sales Associate, or a Raleigh consultant).
-- Design Dollars after October 31: the Facebook event and follow up name the offer without a reserve by date. Approve the November date (Kelly recommends November 30) by November 9, or CEA removes the Design Dollars lines from every E4 piece.
+- Design Dollars after October 31: the Facebook event and follow-up name the offer without a reserve-by date. Approve the November date (Kelly recommends November 30) by November 9, or CEA removes the Design Dollars lines from every E4 piece.
 - The one text on Wednesday, November 11: confirm the audience. The brief says all Carolinas contacts with text consent; Mitchell may prefer to limit it to the Wilmington division, since Belville is a long drive from the Triangle.
 - Refreshments or a giveaway: none promised. If Mitchell wants either, add one line to the Facebook event and the Nextdoor post.
 - Parking and door signage for Suite A.
-- RSVP form (Kelly), optional for a drop in event: name, phone, email, own land or still looking, county, text consent.
+- RSVP form (Kelly), optional for a drop-in event: name, phone, email, own land or still looking, county, text consent.
 
 **Notes for Kelly**
 
@@ -764,8 +764,8 @@ New Home Consultant, Mitchell Homes
 | Wednesday, November 11 | Text | The one bulk text to Carolinas contacts with text consent | Marketing |
 | Friday, November 13 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
 | Friday, November 13 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Saturday, November 14 | Event | Open house, 10am to 3pm; thank you text | Wilmington team |
-| Sunday, November 15 | Sales team | Follow up email | New Home Consultants |
+| Saturday, November 14 | Event | Open house, 10am to 3pm; thank-you text | Wilmington team |
+| Sunday, November 15 | Sales team | Follow-up email | New Home Consultants |
 
 ### Email event block
 
@@ -778,7 +778,7 @@ No email block, as briefed. The Wilmington profile, social, Nextdoor, consultant
 >
 > Our Wilmington Design Center in Belville is hosting an open house on Saturday, November 14, from 10am to 3pm. Walk the cabinets, counters, tile and lighting in person, look through more than 40 floor plans, and sit down with a New Home Consultant about your land.
 >
-> Own land in coastal North Carolina or in Dillon, Horry, Marion or Marlboro County, South Carolina? Ask how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+> Own land in coastal North Carolina or in Dillon, Horry, Marion or Marlboro County, South Carolina? Ask how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 >
 > Drop in any time, or RSVP and we will have a time ready for you: [RSVP link]
 >
@@ -805,7 +805,7 @@ Notes: Stories: link sticker with [RSVP link]?utm_source=instagram&utm_medium=or
 > Drop in any time between 10 and 3 to:
 > Walk the Design Center and see cabinets, countertops, flooring, tile, lighting and hardware in person.
 > Look through more than 40 floor plans, from 1,000 to 3,000 square feet.
-> Sit down with a New Home Consultant about your land and how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+> Sit down with a New Home Consultant about your land and how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 > See the Mitchell Design Dollars ladder with a Design Consultant. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. [Reserve by date, once Mitchell approves the November date.]
 >
 > The Wilmington Design Center serves coastal North Carolina and Dillon, Horry, Marion and Marlboro counties in South Carolina.
@@ -818,7 +818,7 @@ Notes: One event, Wilmington address. Link: [RSVP link]?utm_source=facebook&utm_
 
 ### Google Business Profile event post
 
-Post on: Wilmington NC profile only, Thursday, November 5. Event type post, start November 14, 10am, end 3pm.
+Post on: Wilmington NC profile only, Thursday, November 5. Event-type post, start November 14, 10am, end 3pm.
 
 **Title:** Open House at our Wilmington Design Center (42 of 58 characters)  
 **Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e4`
@@ -856,7 +856,7 @@ If you have been thinking about the home you want to build, this Saturday is an 
 
 On Saturday, November 14, from 10am to 3pm, we are hosting an open house at our Wilmington Design Center, 42 Waterford Business Center Way, Suite A, in Belville. You can walk the cabinets, counters, tile and lighting in person, look through more than 40 floor plans, and bring your land questions to a New Home Consultant.
 
-If you own land, ask about SimplyMitchell: zero down, zero closing costs and no construction loan, because Mitchell self funds every build. If you are still looking, you can start designing now and bring us the lot when you find it.
+If you own land, ask about SimplyMitchell: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. If you are still looking, you can start designing now and bring us the lot when you find it.
 
 Drop in any time, or reply and I will set aside a time for you.
 
@@ -875,13 +875,13 @@ Friday, November 13, 2026. Builder Studio workflow, RSVPs with text consent only
 
 (166 characters)
 
-### Same day thank you text
+### Same-day thank-you text
 
 Saturday, November 14, 2026, by 6pm. Whoever each guest met.
 
 > Thank you for coming by the Wilmington Design Center today, [first name]. I enjoyed hearing about [their land or plan]. I will follow up tomorrow with the plans and numbers we talked about. Text me any time.
 
-### Next day follow up email
+### Next-day follow-up email
 
 Sunday, November 15, 2026 (schedule it Saturday). The New Home Consultant.
 
@@ -896,7 +896,7 @@ As promised, here is what we talked about:
 [plans that fit, with links]
 [selections they liked, priced if they asked]
 
-A few things worth having in one place. With SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self funds every build. See how it works: https://simplymitchellhomes.com/onyourland?utm_source=sales_email&utm_medium=email&utm_campaign=fall26_events&utm_content=e4
+A few things worth having in one place. With SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. See how it works: https://simplymitchellhomes.com/onyourland?utm_source=sales_email&utm_medium=email&utm_campaign=fall26_events&utm_content=e4
 
 Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. [Reserve by date, once Mitchell approves the November date.]
 
@@ -932,11 +932,11 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 **What happens**
 
-- A 30 minute live conversation about building a getaway, second home or retirement home at the lake, on the coast or in the mountains.
-- What to look at first on a lake, coastal or mountain lot, and how building works when you live hours away, with weekly communication from groundbreaking to move in.
-- Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan, because Mitchell self funds every build. Live questions throughout.
+- A 30-minute live conversation about building a getaway, second home or retirement home at the lake, on the coast or in the mountains.
+- What to look at first on a lake, coastal or mountain lot, and how building works when you live hours away, with weekly communication from groundbreaking to move-in.
+- Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan, because Mitchell self-funds every build. Live questions throughout.
 
-**Why it helps the campaign (for Kelly):** Gives retreat and retirement buyers, the audience for The Gathering Place Portrait, a reason to talk to Mitchell the same night hp4 lands, and answers their biggest objection, second home financing, out loud.
+**Why it helps the campaign (for Kelly):** Gives retreat and retirement buyers, the audience for The Gathering Place Portrait, a reason to talk to Mitchell the same night hp4 lands, and answers their biggest objection, second-home financing, out loud.
 
 **Mitchell must confirm**
 
@@ -948,9 +948,9 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 **Notes for Kelly**
 
-- The invitation never shows or describes the painted Home Portrait; the follow up names the quiz only.
+- The invitation never shows or describes the painted Home Portrait; the follow-up names the quiz only.
 - Hosts describe what to check on a lot, never which areas are better places to live (fair housing).
-- hp4 goes the morning of the show, so most RSVPs come from the Tuesday post, the Facebook event and the consultant invites; the day before reminder only reaches those.
+- hp4 goes the morning of the show, so most RSVPs come from the Tuesday post, the Facebook event and the consultant invites; the day-before reminder only reaches those.
 
 **Schedule**
 
@@ -962,8 +962,8 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 | Wednesday, November 11 | Text | Reminder to RSVPs only | Builder Studio workflow |
 | Thursday, November 12 | Email | Event block in hp4, tonight at 7 | Marketing |
 | Thursday, November 12 | Social | Post 2, tonight at 7 (Facebook, Instagram Stories) | Marketing |
-| Thursday, November 12 | Event | Live at 7pm Eastern; thank you text after the show | Host; consultants |
-| Friday, November 13 | Sales team | Follow up email with the replay (and Saturday's open house for Carolinas contacts) | New Home Consultants, online sales counselors |
+| Thursday, November 12 | Event | Live at 7pm Eastern; thank-you text after the show | Host; consultants |
+| Friday, November 13 | Sales team | Follow-up email with the replay (and Saturday's open house for Carolinas contacts) | New Home Consultants, online sales counselors |
 
 ### Email event block
 
@@ -971,7 +971,7 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 > **Tonight at 7: The Gathering Place, live**
 >
-> Tonight at 7pm Eastern, join us on Facebook or YouTube for a 30 minute live conversation about building the getaway, the second home or the place you plan to retire, at the lake, on the coast or in the mountains. Bring your questions, especially the hard ones about second home financing.
+> Tonight at 7pm Eastern, join us on Facebook or YouTube for a 30-minute live conversation about building the getaway, the second home or the place you plan to retire, at the lake, on the coast or in the mountains. Bring your questions, especially the hard ones about second-home financing.
 >
 > [Join Us Tonight]
 
@@ -981,7 +981,7 @@ Link: `[RSVP link]?utm_source=email&utm_medium=email&utm_campaign=fall26_events&
 
 **Tuesday, November 10, 2026** · Facebook, Instagram feed
 
-> Some homes are built for every day. Some are built for the long table, the full house weekend and the years after work.
+> Some homes are built for every day. Some are built for the long table, the full-house weekend and the years after work.
 >
 > If you are planning a getaway, a second home or the place you will retire, at the lake, on the coast or in the mountains, join us live on Thursday, November 12, at 7pm Eastern. In 30 minutes we will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why the second home banks make hard, Mitchell makes simple.
 >
@@ -1005,13 +1005,13 @@ Notes: Stories: link sticker to the YouTube Live link. Post the morning of the s
 > Thursday, November 12, 2026, 7pm Eastern, 30 minutes
 > Online: live here on Facebook and on the Mitchell Homes YouTube channel
 >
-> Some homes are built for every day. Some are built for the long table, the full house weekend and the place you plan to retire.
+> Some homes are built for every day. Some are built for the long table, the full-house weekend and the place you plan to retire.
 >
 > If you are planning a getaway, a family retreat, a second home or a home for retirement, at the lake, on the coast or in the mountains, spend 30 minutes with us. We will talk through:
 >
 > What to look at first on a lake, coastal or mountain lot.
-> How building works when you live hours away, with weekly communication from groundbreaking to move in.
-> Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan to qualify for, because Mitchell self funds every build.
+> How building works when you live hours away, with weekly communication from groundbreaking to move-in.
+> Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan to qualify for, because Mitchell self-funds every build.
 >
 > Ask your questions live in the comments, or send them ahead: [RSVP link]
 >
@@ -1021,7 +1021,7 @@ Notes: One online Facebook event with Facebook Live as the location. Link: [RSVP
 
 ### Google Business Profile event post
 
-Post on: All five Design Center profiles, Tuesday, November 10. Event type post, start November 12, 7pm, end 7:30pm.
+Post on: All five Design Center profiles, Tuesday, November 10. Event-type post, start November 12, 7pm, end 7:30pm.
 
 **Title:** The Gathering Place: Build Your Getaway (39 of 58 characters)  
 **Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e5`
@@ -1051,7 +1051,7 @@ You mentioned [the lake, the coast or the mountains] when we talked, so I wanted
 
 On Thursday, November 12, at 7pm Eastern, we are going live on Facebook and YouTube for 30 minutes on building a getaway, a second home or the place you plan to retire. We will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why second homes are where banks get strict.
 
-That last one matters. Mitchell self funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple.
+That last one matters. Mitchell self-funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple.
 
 Watch here: [Facebook Live link] or [YouTube Live link]. If you have a question you want answered on air, reply and I will pass it along.
 
@@ -1070,13 +1070,13 @@ Wednesday, November 11, 2026. Builder Studio workflow, RSVPs with text consent o
 
 (153 characters)
 
-### Same day thank you text
+### Same-day thank-you text
 
 Thursday, November 12, 2026, right after the show. Each consultant to their own leads who RSVPed; online sales counselors to the rest.
 
 > Thank you for joining us tonight, [first name]. The replay is here if you want to share it with whoever you are building the getaway with: [replay link]. Any question we did not get to, text me.
 
-### Next day follow up email
+### Next-day follow-up email
 
 Friday, November 13, 2026. The consultant (or an online sales counselor), to every RSVP.
 
@@ -1087,7 +1087,7 @@ Hi [first name],
 
 Thank you for joining The Gathering Place live last night. The full replay is here: [YouTube replay link]
 
-The short version: start with the lot itself, from soil and septic to access and utilities. Building from hours away works because you hear from us every week from groundbreaking to move in. And with Mitchell there is no construction loan to qualify for, because Mitchell self funds every build.
+The short version: start with the lot itself, from soil and septic to access and utilities. Building from hours away works because you hear from us every week from groundbreaking to move-in. And with Mitchell there is no construction loan to qualify for, because Mitchell self-funds every build.
 
 If you have not taken the Home Portrait quiz yet, choose your lake, coast or mountain region and tell us what the home is for. Eight questions, about 90 seconds: https://mitchellhomesliving.com/portrait?utm_source=sales_email&utm_medium=email&utm_campaign=fall26_events&utm_content=e5
 
@@ -1128,7 +1128,7 @@ New Home Consultant, Mitchell Homes
 - Continuing education credit: not offered and not mentioned anywhere. Offering it would need course approval first.
 - Presenter at each studio (a New Home Consultant; Scott or Deven at one studio if possible) and room capacity.
 - The agent list: the realtor segment in Builder Studio by division, land listing agents first.
-- Design Dollars after October 31: these pieces name the offer without a reserve by date. Confirm the program continues in November and approve the November date.
+- Design Dollars after October 31: these pieces name the offer without a reserve-by date. Confirm the program continues in November and approve the November date.
 - RSVP form (Kelly): name, brokerage, email, phone, studio, text consent.
 
 **Notes for Kelly**
@@ -1146,8 +1146,8 @@ New Home Consultant, Mitchell Homes
 | Wednesday, November 11 | Sales team | Personal invite text and email to agents they know | New Home Consultants |
 | Monday, November 16 | Social | Post 2 (Facebook, Instagram Stories, LinkedIn) | Marketing |
 | Tuesday, November 17 | Text | Reminder to RSVPs only | Builder Studio workflow |
-| Wednesday, November 18 | Event | Lunch and Learn, 11:30am to 1pm; thank you text | New Home Consultants |
-| Thursday, November 19 | Sales team | Follow up email with the referral kit | New Home Consultants |
+| Wednesday, November 18 | Event | Lunch and Learn, 11:30am to 1pm; thank-you text | New Home Consultants |
+| Thursday, November 19 | Sales team | Follow-up email with the referral kit | New Home Consultants |
 
 ### Email event block
 
@@ -1196,7 +1196,7 @@ Notes: Stories: link sticker with [RSVP link]?utm_source=instagram&utm_medium=or
 > Your clients who own land, or are about to buy it, usually hit the same wall: how do we build on it without a construction loan and a second closing? Mitchell answers that question every day. Spend 90 minutes with us and leave ready to answer it too.
 >
 > What we cover:
-> How building on a client's land works with Mitchell, and why there is zero down, zero closing costs and no construction loan: Mitchell self funds every build.
+> How building on a client's land works with Mitchell, and why there is zero down, zero closing costs and no construction loan: Mitchell self-funds every build.
 > Mitchell Design Dollars. Every Mitchell home comes with $5,000 in Design Dollars to spend on design selections. The more selections the customer buys, the more Mitchell adds, up to $25,000.
 > The Home Portrait: a quiz of eight questions, about 90 seconds, you can send to any client.
 > How to refer a client, and the terms of Mitchell's realtor incentive program.
@@ -1210,7 +1210,7 @@ Notes: One Facebook event per Design Center; only [city] and [studio address] ch
 
 ### Google Business Profile event post
 
-Post on: All five Design Center profiles, Wednesday, November 4. Event type post, start November 18, 11:30am, end 1pm.
+Post on: All five Design Center profiles, Wednesday, November 4. Event-type post, start November 18, 11:30am, end 1pm.
 
 **Title:** Realtor Lunch and Learn (23 of 58 characters)  
 **Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e6`
@@ -1240,7 +1240,7 @@ Hi [first name],
 
 You talk with people who own land, or are about to buy it, every week, so I wanted to invite you personally.
 
-On Wednesday, November 18, from 11:30am to 1pm, we are hosting a Lunch and Learn for agents at our [city] Design Center. [Lunch provided: Mitchell to confirm.] In 90 minutes we will cover how building on a client's land works with Mitchell, why there is zero down, zero closing costs and no construction loan (Mitchell self funds every build), what Mitchell Design Dollars and the Home Portrait quiz mean for your clients, and how referrals and our realtor incentive program work.
+On Wednesday, November 18, from 11:30am to 1pm, we are hosting a Lunch and Learn for agents at our [city] Design Center. [Lunch provided: Mitchell to confirm.] In 90 minutes we will cover how building on a client's land works with Mitchell, why there is zero down, zero closing costs and no construction loan (Mitchell self-funds every build), what Mitchell Design Dollars and the Home Portrait quiz mean for your clients, and how referrals and our realtor incentive program work.
 
 Can I save you a seat? Just reply, and tell me if a colleague would like to come.
 
@@ -1259,13 +1259,13 @@ Tuesday, November 17, 2026. Builder Studio workflow, RSVPs with text consent onl
 
 (162 characters)
 
-### Same day thank you text
+### Same-day thank-you text
 
 Wednesday, November 18, 2026, that afternoon. The New Home Consultant who hosted.
 
 > Thank you for coming in today, [first name]. Next time a client mentions land, text me their name and I will take it from there. The slides and referral details are coming tomorrow.
 
-### Next day follow up email
+### Next-day follow-up email
 
 Thursday, November 19, 2026. The New Home Consultant who hosted.
 
@@ -1276,7 +1276,7 @@ Hi [first name],
 
 Thank you for joining us at the Design Center yesterday. Here is everything in one place for the next client who mentions land.
 
-The short version for your client: Mitchell has built custom homes on land the buyer owns since 1992. Mitchell self funds every build, so there is zero down, zero closing costs and no construction loan. More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections.
+The short version for your client: Mitchell has built custom homes on land the buyer owns since 1992. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan. More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections.
 
 Design Dollars: every Mitchell home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more your client personalizes.
 

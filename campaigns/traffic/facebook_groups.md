@@ -6,7 +6,7 @@
 
 This list has 26 groups, fewer than the 40 we aimed for. 23 have a confirmed group link; 3 are named in news or blogs but their link could not be found. Facebook hides most groups behind a login and search engines index very few of them, so we kept only groups we could actually see in search results or on an official website. Nothing here is guessed. Member counts are shown only where a source gave one, with the source named.
 
-Gaps the team should fill by searching inside Facebook while logged in (see the search terms at the end): Southern Maryland (no groups found), building a home and building on your land groups for Virginia and North Carolina (none found), homesteading groups in any of the four states (none current found), state land for sale groups (none found that were not broker Pages), and local groups for Fredericksburg, Chesterfield and Midlothian, Newport News and Garner.
+Gaps the team should fill by searching inside Facebook while logged in (see the search terms at the end): Southern Maryland (no groups found), building-a-home and building-on-your-land groups for Virginia and North Carolina (none found), homesteading groups in any of the four states (none current found), state land-for-sale groups (none found that were not broker Pages), and local groups for Fredericksburg, Chesterfield and Midlothian, Newport News and Garner.
 
 **Counts**
 
@@ -15,14 +15,14 @@ Gaps the team should fill by searching inside Facebook while logged in (see the 
 - By confidence: high 7, medium 17, low 2
 - By priority: 1 = 8, 2 = 8, 3 = 10
 
-Confidence means how sure we are the group exists and is active: high = link confirmed plus several indexed posts or a 2026 source; medium = link confirmed from one post or an official site, or a strong named source without a link; low = old or single, self interested source.
+Confidence means how sure we are the group exists and is active: high = link confirmed plus several indexed posts or a 2026 source; medium = link confirmed from one post or an official site, or a strong named source without a link; low = old or single, self-interested source.
 
 ## Playbook
 
 1. Read this first: every group below was found through public search results, not by joining. Facebook hides most group details behind a login, so before joining, open each group's About tab and record the member count, privacy, rules and the date of the newest post. Drop any group with no posts in the last 60 days.
 2. Who joins: join as the Mitchell Homes business Page wherever the group allows Pages (admins can turn this on). Where it does not, join from a named team member's personal profile with "New Home Consultant at Mitchell Homes" in the work info. Even in groups that allow the Page, a named consultant usually gets better replies when answering questions in the comments.
 3. Ask before posting: after joining, read the rules and pinned posts, then send an admin the short outreach note. Do not post anything that mentions Mitchell until an admin says yes or the rules clearly allow it. Log the answer the same day.
-4. Residents only groups (Lake Gaston Community Information, some newcomer clubs): only a team member who lives there joins, or ask the admin for an exception in writing. Never misstate where anyone lives.
+4. Residents-only groups (Lake Gaston Community Information, some newcomer clubs): only a team member who lives there joins, or ask the admin for an exception in writing. Never misstate where anyone lives.
 5. Give before asking: spend the first two weeks in each group only answering questions in the comments. Answer the question fully first; mention Mitchell last, if at all.
 6. One helpful post per group per week at most. Most groups will be better served by one a month.
 7. Never post the same text in many groups on the same day. Rotate the five posts, change the opening line for each group, and spread groups across different days.
@@ -32,33 +32,33 @@ Confidence means how sure we are the group exists and is active: high = link con
 11. Fair housing: never describe a town, county or neighborhood as a good, safe, growing or desirable place to live, and never answer "where should we move" questions. Mitchell builds on land the buyer already owns and does not sell land, so never offer, suggest or rank lots or areas. Point people to their county planning and health departments instead.
 12. No prices, savings figures, Design Dollars or other offers in groups. Those belong on a call with a New Home Consultant.
 13. Photos: real Mitchell homes only. Real Mitchell homeowners are approved for organic posts.
-14. Spam check: skip or leave groups that are mostly land flipper posts, "we buy land" ads, or a wall of business ads with no replies. The Horry County business group network below is flagged for this.
-15. Track every group in one sheet: name, URL, admin, date joined, date asked, admin answer, Page allowed (yes or no), links allowed (yes or no), business post day, last post date, post used, comments, calls booked. Review monthly and drop groups that produce nothing after three posts.
+14. Spam check: skip or leave groups that are mostly land-flipper posts, "we buy land" ads, or a wall of business ads with no replies. The Horry County business group network below is flagged for this.
+15. Track every group in one sheet: name, URL, admin, date joined, date asked, admin answer, Page allowed (yes or no), links allowed (yes or no), business-post day, last post date, post used, comments, calls booked. Review monthly and drop groups that produce nothing after three posts.
 
 ## Admin outreach
 
 ### Short Messenger note to an admin
 
-> Hi [Admin name], I'm [Your name], a New Home Consultant with Mitchell Homes. We're a family owned builder that has built homes on land people already own since 1992. I see questions here about wells, septic and building on a lot. Would you be open to me answering those when they come up, and sharing a short helpful post now and then? No ads unless your rules allow them. Thank you for keeping this group going.
+> Hi [Admin name], I'm [Your name], a New Home Consultant with Mitchell Homes. We're a family-owned builder that has built homes on land people already own since 1992. I see questions here about wells, septic and building on a lot. Would you be open to me answering those when they come up, and sharing a short helpful post now and then? No ads unless your rules allow them. Thank you for keeping this group going.
 
 ### Longer note to an admin
 
-> Hi [Admin name], thank you for running [Group name]. I'm [Your name], a New Home Consultant with Mitchell Homes. Mitchell is family owned and has been building custom homes on land people already own since 1992. We build in Virginia, North Carolina, South Carolina and Maryland.
+> Hi [Admin name], thank you for running [Group name]. I'm [Your name], a New Home Consultant with Mitchell Homes. Mitchell is family-owned and has been building custom homes on land people already own since 1992. We build in Virginia, North Carolina, South Carolina and Maryland.
 >
 > Members here ask good questions about land: perc tests, wells and septic, and what a lot needs before you can build on it. I'd like to help with those as a member who answers questions, not as an advertiser. Whichever of these fits your rules:
-> 1. Answer building on your land questions in the comments when they come up.
-> 2. Share a plain how it works post about once a month, on whatever day you set aside for local businesses.
-> 3. Point people to our Behind the Build episodes on YouTube, where Scott Sleeme and Deven Sellers walk through well and septic, buying land and the build process. They are free and need no sign up.
+> 1. Answer building-on-your-land questions in the comments when they come up.
+> 2. Share a plain how-it-works post about once a month, on whatever day you set aside for local businesses.
+> 3. Point people to our Behind the Build episodes on YouTube, where Scott Sleeme and Deven Sellers walk through well and septic, buying land and the build process. They are free and need no sign-up.
 >
 > I'll always say I work with Mitchell, I won't message members who haven't asked, and I'll follow your rules on links. If you'd rather I not post at all, I understand and will stick to answering questions. Thank you.
 
-## Five value first posts
+## Five value-first posts
 
 Paste as written. Where a group does not allow links, delete the last line.
 
 ### 1. What a perc test tells you before you build
 
-*Fits: Land for sale groups, homesteading and rural groups, lake groups, local community groups that allow helpful posts.*
+*Fits: Land-for-sale groups, homesteading and rural groups, lake groups, local community groups that allow helpful posts.*
 
 ```text
 Own land, or looking at a parcel, and wondering whether it will take a septic system? A soil evaluation, often called a perc test, answers that.
@@ -101,7 +101,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 
 ### 3. Building on land you own: the site costs to ask about
 
-*Fits: Land groups, building a home groups, relocation groups, local community groups.*
+*Fits: Land groups, building-a-home groups, relocation groups, local community groups.*
 
 ```text
 When you build on land you own, the house is one number and the land has its own line items. Ask any builder which of these are in their price and which are separate:
@@ -124,14 +124,14 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 
 ### 4. Can the land you own count toward building on it?
 
-*Fits: Only groups whose rules allow business posts, or on the admin's business post day. It names the SimplyMitchell program. Virginia and Southern Maryland groups use the first link; Carolinas groups use the quiz link.*
+*Fits: Only groups whose rules allow business posts, or on the admin's business-post day. It names the SimplyMitchell program. Virginia and Southern Maryland groups use the first link; Carolinas groups use the quiz link.*
 
 ```text
 A question we hear a lot: can the land I already own count as my down payment?
 
 With a traditional construction loan, it depends on the lender. Some count the equity in land you own toward the down payment. Ask how they value the land, whether it needs to be paid off first, and how many closings the loan involves.
 
-At Mitchell Homes we do it differently. With SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self funds every build.
+At Mitchell Homes we do it differently. With SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
 
 I work with Mitchell Homes and I'm happy to answer questions in the comments.
 
@@ -143,7 +143,7 @@ Link: https://simplymitchellhomes.com/math?utm_source=facebook_group&utm_medium=
 
 ### 5. Seven things to check before you buy a lot to build on
 
-*Fits: Land for sale and land buyer groups, relocation groups, homesteading groups, local community groups.*
+*Fits: Land-for-sale and land-buyer groups, relocation groups, homesteading groups, local community groups.*
 
 ```text
 Looking at a lot to build on? Seven things to check before you commit:
@@ -173,12 +173,12 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 
 - **Link:** https://www.facebook.com/groups/1564511077100004
 - **Area:** Lake Gaston, on the Virginia and North Carolina line (VA/NC) · **Category:** Lake and getaway · **Confidence:** high
-- **Members:** About 50,600, from a third party aggregator snippet with no date; not confirmed on Facebook (seen October 8, 2026).
+- **Members:** About 50,600, from a third-party aggregator snippet with no date; not confirmed on Facebook (seen October 8, 2026).
 - **Privacy:** Public, per the same aggregator snippet; not confirmed.
-- **Rules:** Aggregator snippet: created for Lake Gaston and surrounding areas, for local residents only; what is shared in the group stays in the group. Business post rules not seen.
-- **Activity:** Several posts indexed: a lake map question and a south facing point lot for sale with 250 feet of shoreline. Post dates not visible.
-- **Why:** Largest lake community found. Lot owners and second home buyers read it, and Lake Gaston is one of the quiz retreat regions.
-- **Ask:** Because of the residents only rule, ask the admins whether a Mitchell team member who does not live at the lake may join to answer building questions, or post on a business day. If they say no, do not join.
+- **Rules:** Aggregator snippet: created for Lake Gaston and surrounding areas, for local residents only; what is shared in the group stays in the group. Business-post rules not seen.
+- **Activity:** Several posts indexed: a lake map question and a south-facing point lot for sale with 250 feet of shoreline. Post dates not visible.
+- **Why:** Largest lake community found. Lot owners and second-home buyers read it, and Lake Gaston is one of the quiz retreat regions.
+- **Ask:** Because of the residents-only rule, ask the admins whether a Mitchell team member who does not live at the lake may join to answer building questions, or post on a business day. If they say no, do not join.
 
 #### Moving to North Carolina
 
@@ -188,8 +188,8 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Privacy:** Not shown in search results.
 - **Rules:** Not shown in search results.
 - **Activity:** Two posts indexed: a member planning a move within about two years, and a member announcing a move and asking for tips. Dates not visible.
-- **Why:** Statewide relocation group, which fits the New York and New Jersey into the Carolinas feeder. Answer building on land questions only.
-- **Ask:** Ask whether a builder may answer building questions and share a monthly how it works post, and whether links are allowed.
+- **Why:** Statewide relocation group, which fits the New York and New Jersey into the Carolinas feeder. Answer building-on-land questions only.
+- **Ask:** Ask whether a builder may answer building questions and share a monthly how-it-works post, and whether links are allowed.
 
 #### Moving to Wilmington, NC
 
@@ -222,7 +222,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Rules:** Not shown. One member asked for realtor recommendations and asked agents not to reply; respect requests like that.
 - **Activity:** Posts indexed: the realtor recommendation request, and a newcomer's insurance question with replies from residents and a local insurance agent. Dates not visible.
 - **Why:** Newcomers to Brunswick County ask for local services here, and local businesses do reply in comments.
-- **Ask:** Ask whether there is a business post day and whether a builder may answer building on land questions.
+- **Ask:** Ask whether there is a business-post day and whether a builder may answer building-on-land questions.
 
 #### Hampstead NC Community Page
 
@@ -230,7 +230,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Area:** Hampstead and Pender County (NC) · **Category:** Local community · **Confidence:** high
 - **Members:** Not shown in search results.
 - **Privacy:** Not shown in search results.
-- **Rules:** Not shown. A local loan officer's self introduction was visible, so business introductions may be tolerated; confirm.
+- **Rules:** Not shown. A local loan officer's self-introduction was visible, so business introductions may be tolerated; confirm.
 - **Activity:** Three posts indexed: restaurant owners looking for space, a resident hoping to move back to Hampstead, and the loan officer's introduction. Dates not visible.
 - **Why:** Active community group in the Wilmington division's rural edge, where people own acreage.
 - **Ask:** Ask whether a builder may introduce himself once and then answer building questions.
@@ -254,7 +254,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Privacy:** Not shown in search results.
 - **Rules:** Run by the Fuquay-Varina Chamber of Commerce as its community group for ways to engage and support local businesses.
 - **Activity:** Linked from the chamber's home page (fuquay-varina.com). No posts seen.
-- **Why:** A chamber run group expects local business participation; near the Garner Design Center.
+- **Why:** A chamber-run group expects local business participation; near the Garner Design Center.
 - **Ask:** Ask the chamber whether non-members may post. Joining the chamber may be the price of entry.
 
 ### Priority 2
@@ -278,8 +278,8 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Privacy:** Not shown in search results.
 - **Rules:** Not shown in search results.
 - **Activity:** One post indexed: someone relocating asked about areas to live, schools, daycares, churches and local businesses. Date not visible.
-- **Why:** Newcomer questions show up here. Answer building questions only; skip where to live questions.
-- **Ask:** Ask whether there is a business post day.
+- **Why:** Newcomer questions show up here. Answer building questions only; skip where-to-live questions.
+- **Ask:** Ask whether there is a business-post day.
 
 #### Williamsburg, VA, Events and Deals
 
@@ -307,7 +307,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 
 - **Link:** https://www.facebook.com/groups/SMLNewcomers
 - **Area:** Smith Mountain Lake: Bedford, Franklin and Pittsylvania counties (VA) · **Category:** Lake and getaway · **Confidence:** medium
-- **Members:** Not shown. The club is open to all lake residents with $20 a year dues (Smith Mountain Lake news article, 2019).
+- **Members:** Not shown. The club is open to all lake residents with $20-a-year dues (Smith Mountain Lake news article, 2019).
 - **Privacy:** Not shown in search results.
 - **Rules:** Club group; the monthly newsletter is posted there (club website). Promotions unlikely.
 - **Activity:** Linked from smlnewcomers.com. Club meetings were listed with the Smith Mountain Lake chamber in 2024.
@@ -322,7 +322,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Privacy:** Private (Outer Banks Voice, November 17, 2023).
 - **Rules:** Moderated; the 2023 article names a moderator.
 - **Activity:** A 2023 thread drew about 390 comments; an Outer Banks Coastal Life piece in Winter 2026 addresses group members. URL not found.
-- **Why:** Residents rather than vacationers, which suits second home and retire at the beach buyers.
+- **Why:** Residents rather than vacationers, which suits second-home and retire-at-the-beach buyers.
 - **Ask:** Find it in Facebook search by name. Do not confuse it with the similarly named Pages Obx Locals Only, OBX Local and Outer Banks Locals Obx.
 
 #### Moving to South Carolina
@@ -423,7 +423,7 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 - **Privacy:** Not shown in search results.
 - **Rules:** Described as support for new and young farmer training, mentoring and land issues.
 - **Activity:** Only source is a Permies forum post from about 2014. May be inactive.
-- **Why:** Small farm and land people across the footprint, if it is still active.
+- **Why:** Small-farm and land people across the footprint, if it is still active.
 - **Ask:** Check the newest post date before joining.
 
 #### Sewer & Septic Systems Care & General Info
@@ -452,11 +452,11 @@ Link: https://mitchellhomesliving.com/portrait?utm_source=facebook_group&utm_med
 
 - **Link:** Not found. Search Facebook for the exact name.
 - **Area:** National (US) · **Category:** Land for sale and land buyers · **Confidence:** low
-- **Members:** 75,000 plus, per a land buying company's blog (about 2025).
+- **Members:** 75,000 plus, per a land-buying company's blog (about 2025).
 - **Privacy:** Not shown in search results.
 - **Rules:** Not shown in search results.
 - **Activity:** Only one source, a company that buys land. URL not found.
-- **Why:** National land audience. Flag: likely heavy with land flippers and we buy land posts.
+- **Why:** National land audience. Flag: likely heavy with land flippers and we-buy-land posts.
 - **Ask:** Check it in Facebook search; skip it if it is mostly flipper ads.
 
 ## Search terms for the gaps
