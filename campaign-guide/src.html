@@ -135,6 +135,8 @@ section{display:flex;flex-direction:column;gap:18px;min-width:0}
 .row{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
 .row .nm{flex:1;min-width:0;display:flex;flex-direction:column}
 .row .nm b{font-size:14px;font-weight:700}
+.row .nm .what{font-size:13px;color:var(--ink);margin-top:2px}
+.row .nm .pill{vertical-align:2px;margin-left:4px}
 .row .nm code{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);overflow-wrap:anywhere}
 .row .acts{display:flex;gap:6px;flex:none}
 .sm{font:inherit;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);text-decoration:none;cursor:pointer;white-space:nowrap}
@@ -404,27 +406,21 @@ dialog::backdrop{background:var(--scrim)}
 
   <section id="older">
     <div class="head">
-      <div class="headrow"><span class="eyebrow">Set up by the previous agency</span><span class="pill live">Still running</span></div>
-      <h2>Older Meta and Google campaigns</h2>
-      <p class="lede">All still live. Links get filled in as Affain and White Glove confirm each one.</p>
+      <div class="headrow"><span class="eyebrow">Running alongside the fall campaigns</span><span class="pill live">Still running</span></div>
+      <h2>Older campaigns still running</h2>
+      <p class="lede">These ads are still live, and each one sends buyers to its own page. If a buyer mentions one of them, this is what they saw.</p>
     </div>
-    <div class="cols">
-      <div class="col">
-        <h3>Meta (Facebook and Instagram)</h3>
-        <ul>
-          <li><b>Live Outside the Box, Richmond</b><a href="https://resources.mitchellhomesinc.com/richmond-live-outside-the-box/" target="_blank" rel="noopener">resources.mitchellhomesinc.com/richmond-live-outside-the-box</a><span class="muted">Still running next to the On Your Land test</span></li>
-          <li><b>$10,000 incentive campaign</b><span class="muted">Still running</span><span class="tbd">Landing page link to be added</span></li>
-          <li><b>Other active ads</b><span class="tbd">Waiting on the list from Affain</span></li>
-        </ul>
+    <div class="dir">
+      <div class="group">
+        <h3>Live Outside the Box</h3>
+        <div id="g-lotb"></div>
       </div>
-      <div class="col">
-        <h3>Google Ads</h3>
-        <ul>
-          <li><b class="tbd">Campaign name to be added</b><span class="tbd">Landing page link to be added</span></li>
-          <li><b class="tbd">Campaign name to be added</b><span class="tbd">Landing page link to be added</span></li>
-        </ul>
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <div class="group"><h3>All studios</h3><div id="g-allst"></div></div>
+        <div class="group"><h3>August promotions</h3><div id="g-aug"></div></div>
       </div>
     </div>
+    <p class="hint">Google Ads campaign names will be added here once they are confirmed.</p>
   </section>
 
   <section id="pages">
@@ -554,12 +550,20 @@ dialog::backdrop{background:var(--scrim)}
 
 <script>
 (function(){
-  var SM='https://simplymitchellhomes.com';
+  var SM='https://simplymitchellhomes.com',RS='https://resources.mitchellhomesinc.com';
   var PAGES={
     'g-buyers':[['Home Portrait quiz','https://mitchellhomesliving.com/portrait'],['Your Land',SM+'/land'],['Two Ways to Build',SM+'/math'],['Savings Calculator',SM+'/calculator'],
       ['Dreamer, VA and MD',SM+'/dreamer'],['Dreamer Carolinas',SM+'/dreamer-carolinas'],['No Land Yet, VA and MD',SM+'/no-land'],['No Land Yet Carolinas',SM+'/no-land-carolinas']],
     'g-dd':[['Design Dollars',SM+'/design-dollars'],['Design Dollars NHI',SM+'/design-dollars-nhi']],
-    'g-oyl':[['We Build On Your Land',SM+'/onyourland'],['Your Plan. On Your Land.',SM+'/yourplan']]
+    'g-oyl':[['We Build On Your Land',SM+'/onyourland'],['Your Plan. On Your Land.',SM+'/yourplan']],
+    'g-lotb':[['Fredericksburg',RS+'/fredericksburg-live-outside-the-box/','Your dream home is waiting. We build on your land.'],
+      ['Richmond',RS+'/richmond-live-outside-the-box/','Same page for Richmond. Running next to the On Your Land test.'],
+      ['Raleigh',RS+'/raleigh-live-outside-the-box/','Same page for Raleigh.']],
+    'g-allst':[['Build on Your Land',RS+'/build-on-your-land/','Your dream home is waiting. The buyer picks a Design Studio on the form.'],
+      ['Duplex floor plans',RS+'/duplex/','Explore our new duplex floor plans.'],
+      ['Wilmington Design Center VIP list',RS+'/wilmington-design-center-vip/','Join the VIP list. The page was built before the Wilmington studio opened on September 11.','Needs an update']],
+    'g-aug':[['August promo, Virginia and Maryland',RS+'/august-promo-va-md/','Shows the earlier $10,000 offer that Design Dollars replaced on September 1.','Older offer'],
+      ['August promo, North and South Carolina',RS+'/august-promo-nc-sc/','Shows the earlier $15,000 offer that Design Dollars replaced on September 1.','Older offer']]
   };
   function el(t,a,txt){var e=document.createElement(t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
   function selectText(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
@@ -567,7 +571,8 @@ dialog::backdrop{background:var(--scrim)}
     var host=document.getElementById(id);
     PAGES[id].forEach(function(p){
       var row=el('div',{class:'row'}),nm=el('div',{class:'nm'}),code=el('code',{},p[1].replace('https://',''));
-      nm.appendChild(el('b',{},p[0]));nm.appendChild(code);
+      var nb=el('b',{},p[0]);if(p[3]){nb.appendChild(document.createTextNode(' '));nb.appendChild(el('span',{class:'pill soon'},p[3]));}
+      nm.appendChild(nb);nm.appendChild(code);if(p[2])nm.appendChild(el('span',{class:'what'},p[2]));
       var acts=el('div',{class:'acts'});
       var go=el('a',{class:'sm go',href:p[1],target:'_blank',rel:'noopener','aria-label':'Open '+p[0]},'Open');
       var cp=el('button',{class:'sm',type:'button','aria-label':'Copy link to '+p[0]},'Copy link');
