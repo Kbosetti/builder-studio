@@ -78,6 +78,48 @@
    ]
   },
   {
+   "id": "nurture",
+   "title": "Quiet lead nurture texts",
+   "why": "Short texts with a question to answer get replies that emails do not; any reply hands the lead straight back to a person.",
+   "items": [
+    {
+     "title": "Nurture text, Day 2",
+     "meta": "Day 2 · every quiet lead · Builder Studio workflow text · about 160 of 160 characters with a typical name",
+     "body": "Hi {{contact.first_name}}, this is {{user.first_name}} with Mitchell Homes. Still thinking about building? Reply 1 for this year, 2 for next year, or 3 for someday. Reply STOP to opt out",
+     "link": "",
+     "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."
+    },
+    {
+     "title": "Nurture text, Day 19",
+     "meta": "Day 19 · quiet leads who took the Home Portrait · Builder Studio workflow text · about 155 of 160 characters with a typical name",
+     "body": "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell Homes. Your {{contact.portrait_name}} is saved. Want to see what it would take to build it? Just reply. Reply STOP to opt out",
+     "link": "",
+     "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."
+    },
+    {
+     "title": "Nurture text, Day 19",
+     "meta": "Day 19 · quiet leads who have not taken it · Builder Studio workflow text · about 149 of 160 characters with a typical name",
+     "body": "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell. Answer 8 questions about your dream home and we paint your Home Portrait: [trigger link] Reply STOP to opt out",
+     "link": "https://mitchellhomesliving.com/portrait?utm_source=sms&utm_medium=sms&utm_campaign=fall26_nurture&utm_content=nurture_19",
+     "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."
+    },
+    {
+     "title": "Nurture text, Day 45",
+     "meta": "Day 45 · quiet leads who own land · Builder Studio workflow text · about 144 of 160 characters with a typical name",
+     "body": "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell. A short Behind the Build episode on how building on your land works: [trigger link] Reply STOP to opt out",
+     "link": "https://www.youtube.com/watch?v=HEqg3pcNJkk",
+     "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."
+    },
+    {
+     "title": "Nurture text, Day 45",
+     "meta": "Day 45 · quiet leads still looking for land · Builder Studio workflow text · about 135 of 160 characters with a typical name",
+     "body": "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell. A short Behind the Build episode on buying land for a home: [trigger link] Reply STOP to opt out",
+     "link": "https://www.youtube.com/watch?v=trgJ8maymOA",
+     "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."
+    }
+   ]
+  },
+  {
    "id": "followups",
    "title": "Sales team follow ups",
    "why": "Marketing starts the conversation; a person finishes it. Each follow up fires on what the buyer just did, in the consultant's own voice.",

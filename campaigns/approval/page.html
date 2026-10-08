@@ -195,7 +195,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 
 <div class="bar"><div class="wrap">
   <div class="meter"><span id="meterText">0 of 16 reviewed</span><div class="track" aria-hidden="true"><i class="a" id="mA" style="width:0%"></i><i class="c" id="mC" style="width:0%"></i></div></div>
-  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign off</a></nav>
+  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#nurture">Nurture</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign off</a></nav>
 </div></div>
 
 <main class="wrap">
@@ -229,11 +229,15 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   <section id="print"><div class="head"><span class="eyebrow">Print and events</span><h2>For the Design Centers and the community</h2></div>
     <div id="items-print" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
+  <section id="nurture"><div class="head"><span class="eyebrow">Quiet lead nurture</span><h2>For leads who have not answered yet</h2>
+    <p class="lede">When a lead goes quiet for seven days, Home Builder Studio starts a 60 day sequence on its own: personal notes from their consultant, designed emails and short texts, until they reply or book. The moment they answer, it stops and their consultant takes over.</p></div>
+    <div id="items-nurture" style="display:flex;flex-direction:column;gap:18px"></div></section>
+
   <section id="cadence"><div class="head"><span class="eyebrow">Schedule and follow ups</span><h2>How it all fits together</h2>
     <p class="lede">One main email, one text and one personal touch from the sales team each week, with posts that echo the same theme, and clear limits so nobody hears from Mitchell too often.</p></div>
     <div id="items-cadence" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
-  <section id="questions"><div class="head"><span class="eyebrow">Questions for Mitchell</span><h2>Sixteen answers that unlock the rest</h2>
+  <section id="questions"><div class="head"><span class="eyebrow">Questions for Mitchell</span><h2>Seventeen answers that unlock the rest</h2>
     <p class="lede">Items marked Waiting on a question go out as soon as it is answered. Type your answer under each one; it is included in your summary.</p></div>
     <div class="qs" id="qs"></div></section>
 
@@ -300,10 +304,11 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     ['Wilmington VIP page','It was built before the Wilmington Design Center opened. Update it or retire it?'],
     ['Realtor incentive','What are the current realtor incentive terms we can mention to agents?'],
     ['Homeowner referrals','Is there a thank you for homeowner referrals we can mention? The homeowner email makes no offer until you say so.'],
-    ['Sample painting on the landing page','Keep one sample Home Portrait painting on the landing page, or keep every painting as the reward after the quiz?'],
+    ['Sample painting on the landing page (decided)','Decided October 8: no painted portraits anywhere before the quiz. The landing page and every email now show real Mitchell homes instead. Nothing needed from you.'],
     ['Events','Which of the three event ideas should we run, and on which dates?'],
     ['Build time on the quiz','The quiz mentions about 150 days, while the Four Buyers ads avoid any build duration. Keep it in the quiz, or remove it?'],
-    ['Sending address','May we set up email from a Mitchell address so these emails arrive from Mitchell? It takes one DNS change from whoever manages mitchellhomesinc.com.']
+    ['Sending address','May we set up email from a Mitchell address so these emails arrive from Mitchell? It takes one DNS change from whoever manages mitchellhomesinc.com.'],
+    ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.']
   ];
   function waitBadge(q){return el('span',{class:'wait',text:q?('Waiting on question '+q):'Waiting on a question below'});}
 
@@ -349,7 +354,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   item(E,'A1','Design Dollars emails ('+count('designdollars')+')','October 13 to 29 · full list, minus anyone already under contract','Launch, the spend and add ladder, sign now and choose later, and where Design Dollars go, ending on the October 31 reserve by date.',emailGrid('designdollars'));
   item(E,'A2','Home Portrait emails ('+count('portrait')+')','October 15 to November 12 · everyone who has not taken the quiz','Each one sends the reader to the quiz: the invitation, the land question, the nine portraits, and the getaway portrait.',emailGrid('portrait'));
   item(E,'A3','Four Buyers emails ('+count('fourbuyers')+')','November 3 to 19 · landowners first, then buyers without land','One argument per email, each sending landowners to the page that matches it. Carolinas versions go wherever a Carolinas page exists.',emailGrid('fourbuyers'));
-  item(E,'A4','Realtor and homeowner emails ('+count('partners')+')','October 14 and 21','A note for agents with clients who own land, and a referral note for past Mitchell homeowners.',emailGrid('partners'));
+  item(E,'A4','Realtor and homeowner emails ('+count('partners')+')','Wednesdays, October 14 to November 18','Two realtor tracks: agents whose clients own land, and agents who know land and can help Mitchell buyers who are still looking. Plus a referral note for past Mitchell homeowners.',emailGrid('partners'));
 
   var W=document.getElementById('items-web'),w=D.web;
   item(W,'A5','Website pop-up for mitchellhomesinc.com','Ready to go live once approved','It appears after fifteen seconds or halfway down a page, never on quiz pages, and stays away for two weeks once closed. A gentler corner card version is included.',
@@ -371,7 +376,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 
   var PR=document.getElementById('items-print');
   item(PR,'A15','Print pieces ('+D.prints.length+')','Print ready files at 300 dpi','Each QR code is tracked, so every scan is counted.',shots(D.prints.map(function(p){return [p.img,p.title,p.size];})));
-  item(PR,'A16','Event ideas ('+L.events.length+')','Proposals for you to choose from','Ways to bring both campaigns into the Design Centers and the events you already run.',posts(L.events));
+  item(PR,'A16','Events ('+L.eventsSeries.length+')','October 24 to November 18 · proposals until Mitchell confirms dates and staffing','Six events that run with the campaigns. Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages.',posts(L.eventsSeries));
 
   var CA=document.getElementById('items-cadence'),K=D.cadence;
   var rules=el('ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
@@ -383,6 +388,14 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   var calLink=el('p',{},[el('a',{href:K.url,target:'_blank',rel:'noopener',style:'font-weight:700',text:'Open the full calendar: '+K.url.replace('https://','')})]);
   item(CA,'A17','The fall schedule','October 12 to November 22 · every email, text, post and sales touch on one calendar','The weekly rhythm, the limits that keep it from feeling like too much, and the full day by day calendar.',
     el('div',{style:'display:flex;flex-direction:column;gap:14px'},[shots([[K.rhythm,'The weekly rhythm'],[K.week,'Week 1, day by day','Tap to see it larger']]),rules,calLink]));
+  var NU=document.getElementById('items-nurture');
+  var flow=el('ol',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
+    'Day 0: a short personal email from their consultant.','Day 2: a text with a question that is easy to answer.','Day 5: a designed email that answers what landowners ask first, or what to check before buying land.',
+    'Day 12: a homeowner story from their consultant.','Day 19: a text about their Home Portrait, or an invitation to take it.','Day 26: a designed email about Design Dollars.',
+    'Day 35: a polite last note from their consultant: should I keep your file open?','Day 45: a text with a short Behind the Build episode.','Day 60: a designed email with everything in one place, then the monthly newsletter.',
+    'Any reply, a booked appointment or a reservation stops it at once and alerts the consultant.'].map(function(t){return el('li',{text:t});}));
+  item(NU,'A19','Nurture emails ('+count('nurture')+')','Day 0 to Day 60 after a lead goes quiet','Personal notes from the consultant alternate with designed emails, with one version for landowners and one for buyers still looking for land.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[flow,emailGrid('nurture')]));
+  item(NU,'A20','Nurture texts ('+L.nurture.length+')','Days 2, 19 and 45','Short, personal, and easy to answer. Only to leads who gave text consent.',posts(L.nurture));
   item(CA,'A18','Sales team follow ups ('+L.followups.length+')','Fired by what each buyer does, from the consultant\'s own phone or email','Personal texts and emails for quiz takers, Design Dollars and landowner interest, deadline week, Design Center visits, old leads and realtors.',posts(L.followups,6));
 
   // at a glance

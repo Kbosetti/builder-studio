@@ -1,0 +1,520 @@
+{
+ "done": [
+  "Template folder: Fall 2026 | Campaign drafts from CEA (do not send until approved)",
+  "45 email templates loaded into that folder, each named Fall26 · ID · subject line, with its preview text",
+  "13 tags: fall26 quiet, fall26 engaged, fall26 clicked, fall26 nurture done, fall26 skip text this week, realtor land partner, realtor on your land, event bring your photos oct24, event live qa oct27, event land 101 nov7, event gathering place nov12, event wilmington open house nov14, event realtor lunch nov18",
+  "12 trigger links: Fall26 · SMS1 · Design Dollars, Fall26 · SMS2 · Home Portrait, Fall26 · SMS4 · Landowners, Fall26 · Nurture · Home Portrait, Fall26 · Nurture · Roadmap episode, Fall26 · Nurture · Purchasing Land 101 episode, Fall26 · Event RSVP · E1 · Bring Your Photos Saturday, Fall26 · Event RSVP · E2 · Behind the Build Live: Your Design Dolla, Fall26 · Event RSVP · E3 · Building on Your Land 101, Fall26 · Event RSVP · E4 · Wilmington Design Center Open House, Fall26 · Event RSVP · E5 · The Gathering Place Live: Building Your , Fall26 · Event RSVP · E6 · Realtor Lunch and Learn"
+ ],
+ "lists": [
+  {
+   "name": "Fall26 · Full marketing list",
+   "filters": [
+    "Email is not empty",
+    "Email DND is off",
+    "Opportunity status is not Won",
+    "Tags do not include: disqualified, out of area, outside service area, vendor, realtor, realtor database, test contact, hbs test, source internal test"
+   ],
+   "used_by": "Tuesday emails"
+  },
+  {
+   "name": "Fall26 · Engaged",
+   "filters": [
+    "Everything in the full marketing list",
+    "Tag includes fall26 engaged, OR date created is on or after September 1, 2026",
+    "Tags do not include fall26 quiet (they are in the nurture)"
+   ],
+   "used_by": "Thursday emails"
+  },
+  {
+   "name": "Fall26 · No quiz yet",
+   "filters": [
+    "Everything in the engaged list",
+    "Tags do not include home portrait quiz"
+   ],
+   "used_by": "HP3"
+  },
+  {
+   "name": "Fall26 · Landowners VA and MD",
+   "filters": [
+    "Everything in the full marketing list",
+    "Tags include land owned OR land family",
+    "Tags include fredericksburg, va OR richmond, va OR newport news, va, or a Virginia region tag"
+   ],
+   "used_by": "FB1, FB2, FB3, FB4, SMS4"
+  },
+  {
+   "name": "Fall26 · Landowners Carolinas",
+   "filters": [
+    "Everything in the full marketing list",
+    "Tags include land owned OR land family",
+    "Tags include raleigh, nc OR wilmington, nc, or a Carolinas region tag"
+   ],
+   "used_by": "FB4C"
+  },
+  {
+   "name": "Fall26 · Looking for land VA and MD",
+   "filters": [
+    "Everything in the full marketing list",
+    "Tags include land searching OR land dreaming",
+    "Virginia division or region tags"
+   ],
+   "used_by": "FB5"
+  },
+  {
+   "name": "Fall26 · Looking for land Carolinas",
+   "filters": [
+    "Everything in the full marketing list",
+    "Tags include land searching OR land dreaming",
+    "Carolinas division or region tags"
+   ],
+   "used_by": "FB5C"
+  },
+  {
+   "name": "Fall26 · Text list",
+   "filters": [
+    "Phone is not empty",
+    "SMS DND is off and the contact gave text consent",
+    "Tags do not include fall26 clicked, fall26 skip text this week, fall26 quiet",
+    "If the campaign report can export non openers of that week's Tuesday email, send to that export instead"
+   ],
+   "used_by": "The weekly text"
+  },
+  {
+   "name": "Fall26 · Realtors",
+   "filters": [
+    "Tags include realtor OR realtor database",
+    "Email DND is off"
+   ],
+   "used_by": "Realtor emails"
+  },
+  {
+   "name": "Fall26 · Past homeowners",
+   "filters": [
+    "No tag exists yet. Tag closed buyers homeowner (opportunity status Won, or the Lasso homeowner list), then filter on it"
+   ],
+   "used_by": "HO1"
+  }
+ ],
+ "sends": [
+  {
+   "when": "Thursday, October 15",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HP1 · What would your home look like?",
+   "subject": "What would your home look like?",
+   "preview": "Answer eight questions. We paint your Home Portrait.",
+   "to": "Engaged contacts (opened or clicked in the last 90 days) and every lead since September 1",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Thursday, October 22",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HP2 · Your land is part of the portrait",
+   "subject": "Your land is part of the portrait",
+   "preview": "The question we ask fifth changes everything we paint.",
+   "to": "Engaged contacts (written for landowners, welcoming to everyone)",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Thursday, November 5",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HP3 · Nine portraits. Which one is yours?",
+   "subject": "Nine portraits. Which one is yours?",
+   "preview": "The Landowner's, the Dreamer's, the Family, the Planner's, and one for the getaway.",
+   "to": "Engaged contacts who have not taken the quiz yet",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Thursday, November 12",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HP4 · The getaway you keep promising yourselves",
+   "subject": "The getaway you keep promising yourselves",
+   "preview": "Lake, coast or mountains. Your portrait paints it.",
+   "to": "Engaged contacts, or contacts interested in lake, coastal or mountain areas if that field exists",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Tuesday, October 13",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · DD1 · It is your land. Make it your home.",
+   "subject": "It is your land. Make it your home.",
+   "preview": "Every Mitchell home now comes with $5,000 in Design Dollars. Personalize more, and we add more.",
+   "to": "Full list",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Tuesday, October 20",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · DD2 · Choose $60,000 in selections. Take home $75,000 worth.",
+   "subject": "Choose $60,000 in selections. Take home $75,000 worth.",
+   "preview": "Here is how Mitchell Design Dollars grow with the choices you make.",
+   "to": "Full list",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Tuesday, October 27",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · DD3 · You do not have to pick the tile today",
+   "subject": "You do not have to pick the tile today",
+   "preview": "Sign now and your Design Dollars are locked. Your tier is set later.",
+   "to": "Full list, minus anyone who booked a Design Center visit",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Thursday, October 29",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · DD4 · Where your Design Dollars go",
+   "subject": "Where your Design Dollars go",
+   "preview": "Cabinets, counters, tile and more. Reserve by October 31, 2026.",
+   "to": "Engaged contacts and anyone who clicked a Design Dollars email, minus anyone who booked or reserved",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Tuesday, November 3",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB1 · Your land is worth more than you think",
+   "subject": "Your land is worth more than you think",
+   "preview": "You already own the hardest part of building. Here is the math.",
+   "to": "Owns land or family land, Virginia and Maryland",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Tuesday, November 10",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB2 · A custom home on your land, without the unknowns",
+   "subject": "A custom home on your land, without the unknowns",
+   "preview": "Start with a plan that already works. Every choice priced before we build.",
+   "to": "Owns land or family land, Virginia and Maryland",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Tuesday, November 17",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB3 · No construction loan to build on your land",
+   "subject": "No construction loan to build on your land",
+   "preview": "If a bank is the reason you stopped, read this.",
+   "to": "Owns land or family land, Virginia and Maryland",
+   "from": "Mitchell Homes",
+   "hold": "Hold until legal approves the financing wording (to match the Transitioner ad and reel) and the comparison figures on the /calculator page are confirmed."
+  },
+  {
+   "when": "Thursday, November 19",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB4 · Your dream home has a folder, not a date",
+   "subject": "Your dream home has a folder, not a date",
+   "preview": "One appointment. Bring the photos you have been saving.",
+   "to": "Owns land or family land, Virginia and Maryland (fb4c for the Carolinas)",
+   "from": "Mitchell Homes",
+   "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim."
+  },
+  {
+   "when": "Thursday, November 19",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB4C · Your dream home has a folder, not a date",
+   "subject": "Your dream home has a folder, not a date",
+   "preview": "One appointment. Bring the photos you have been saving.",
+   "to": "Owns land or family land, North and South Carolina",
+   "from": "Mitchell Homes",
+   "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim."
+  },
+  {
+   "when": "Wednesday, November 4",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB5 · You do not have to own land yet",
+   "subject": "You do not have to own land yet",
+   "preview": "Start designing now. Bring us the lot when you find it.",
+   "to": "Looking for land, Virginia and Maryland (fb5c for the Carolinas)",
+   "from": "Mitchell Homes",
+   "hold": "Check first that the plan guide email is built: the /no-land form promises one, and nothing sends it yet."
+  },
+  {
+   "when": "Wednesday, November 4",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · FB5C · You do not have to own land yet",
+   "subject": "You do not have to own land yet",
+   "preview": "Start designing now. Bring us the lot when you find it.",
+   "to": "Looking for land, North and South Carolina",
+   "from": "Mitchell Homes",
+   "hold": "Check first that the plan guide email is built: the /no-land form promises one, and nothing sends it yet."
+  },
+  {
+   "when": "Wednesday, October 14",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · RE1 · Your buyer owns land. We build on it.",
+   "subject": "Your buyer owns land. We build on it.",
+   "preview": "Zero down, no construction loan, and up to $25,000 in Design Dollars for your clients.",
+   "to": "Realtors and brokers, land listing agents first",
+   "from": "Mitchell Homes",
+   "hold": "Confirm the current realtor incentive terms with Mitchell before sending."
+  },
+  {
+   "when": "Wednesday, October 28",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · RA1 · Our buyers need land. Do you know land?",
+   "subject": "Our buyers need land. Do you know land?",
+   "preview": "We would like to know the agents who do.",
+   "to": "Realtors and brokers, land and rural agents first",
+   "from": "Mitchell Homes",
+   "hold": "Confirm with Mitchell that consultants may introduce buyers who are still looking for land to local agents (question 17)."
+  },
+  {
+   "when": "Wednesday, November 4",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · RB2 · When your land listing needs a picture",
+   "subject": "When your land listing needs a picture",
+   "preview": "Buyers who can see the home are easier to move.",
+   "to": "Realtors and brokers, land listing agents first",
+   "from": "Mitchell Homes",
+   "hold": "Confirm the current realtor incentive terms with Mitchell (question 11)."
+  },
+  {
+   "when": "Wednesday, November 11",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · RB3 · Your client's down payment may be in the ground",
+   "subject": "Your client's down payment may be in the ground",
+   "preview": "Inherited land, family land, the acreage they already own.",
+   "to": "Realtors and brokers",
+   "from": "Mitchell Homes",
+   "hold": "Confirm the current realtor incentive terms with Mitchell (question 11)."
+  },
+  {
+   "when": "Wednesday, November 18",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · RA2 · What our buyers check before they buy a lot",
+   "subject": "What our buyers check before they buy a lot",
+   "preview": "A short checklist to share with your land clients.",
+   "to": "Realtors and brokers, land and rural agents first",
+   "from": "Mitchell Homes",
+   "hold": ""
+  },
+  {
+   "when": "Wednesday, October 21",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HO1 · Know someone with land and a dream?",
+   "subject": "Know someone with land and a dream?",
+   "preview": "The best Mitchell homes start with a homeowner's introduction.",
+   "to": "Past Mitchell homeowners",
+   "from": "Mitchell Homes",
+   "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer."
+  },
+  {
+   "when": "Wednesday, October 14",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "SMS 1 · Design Dollars",
+   "subject": "",
+   "preview": "Mitchell Homes: Every home now starts with $5,000 in Design Dollars, up to $25,000 as you personalize. Terms apply. [trigger link] Reply STOP to opt out",
+   "to": "Fall26 · Text list",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  },
+  {
+   "when": "Wednesday, October 21",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "SMS 2 · Home Portrait",
+   "subject": "",
+   "preview": "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: [trigger link] Reply STOP to opt out",
+   "to": "Fall26 · Text list",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  },
+  {
+   "when": "Wednesday, October 28",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "SMS 3 · Design Dollars reserve by",
+   "subject": "",
+   "preview": "Mitchell Homes: Reserve by Oct 31 and your Design Dollars are locked. Choose finishes later. Terms apply. Questions? Just reply. STOP to opt out",
+   "to": "Fall26 · Text list",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  },
+  {
+   "when": "Wednesday, November 4",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "SMS 4 · Landowners",
+   "subject": "",
+   "preview": "Mitchell Homes: Your land can be your down payment. Zero down, zero closing costs, no construction loan. Terms apply. [trigger link] STOP to opt out",
+   "to": "Fall26 · Text list",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  },
+  {
+   "when": "Wednesday, November 11",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "Wilmington Design Center Open House invitation",
+   "subject": "",
+   "preview": "Mitchell Homes: Open house Sat Nov 14, 10 to 3, Wilmington Design Center, Belville. Bring your land questions. [trigger link] Reply STOP to opt out",
+   "to": "North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  }
+ ],
+ "workflows": [
+  {
+   "name": "Fall26 | 01 Engagement tagger",
+   "purpose": "Keeps the engaged list current, so Thursday emails only go to people who are reading.",
+   "trigger": "Email Events: Opened or Clicked (any email)",
+   "settings": "Allow re-entry: on",
+   "steps": [
+    "Add tag: fall26 engaged",
+    "Wait: 90 days",
+    "Remove tag: fall26 engaged"
+   ],
+   "exits": [],
+   "notes": "Contacts created since September 1, 2026 count as engaged through the smart list filter, so nobody new is missed while the tag fills in."
+  },
+  {
+   "name": "Fall26 | 02 Clicked, hand to a consultant",
+   "purpose": "A person follows every click within one business day, and the clicker skips that week's marketing text.",
+   "trigger": "Trigger Link Clicked: any link named Fall26; and Email Events: Clicked, on the Fall26 templates",
+   "settings": "Allow re-entry: on",
+   "steps": [
+    "Add tags: fall26 clicked, fall26 skip text this week",
+    "Create task for the assigned user: Follow up within one business day. Use the follow up script for what they clicked. Due in 1 business day",
+    "Send internal notification to the assigned user",
+    "Wait: 7 days",
+    "Remove tags: fall26 clicked, fall26 skip text this week"
+   ],
+   "exits": [],
+   "notes": "Scripts: Clicked a Design Dollars email: text; Clicked a Four Buyers email or page: text; Landowner: follow up email."
+  },
+  {
+   "name": "Fall26 | 03 Quiz taker first touch",
+   "purpose": "Every quiz taker hears from a person within 15 minutes, by name and portrait.",
+   "trigger": "Contact Tag added: home portrait quiz",
+   "settings": "Business hours 8 am to 8 pm local time; outside them, send at 8 am",
+   "steps": [
+    "If the contact has a phone and text consent: Send SMS from the assigned user: Hi [first name], this is [your name] with Mitchell Homes. Your [portrait name] just came through, and I love the [first must have] you picked. Would you like to see what it would take to build it? I can set up a quick call or a Design Studio visit.",
+    "Otherwise: Create task for the assigned user: Call within 15 minutes",
+    "Wait: until the contact replies, or 1 day",
+    "If no reply: Send email from the assigned user, template Fall26 · SALES01 · Your {{contact.portrait_name}} (Quiz taker: next day email)"
+   ],
+   "exits": [
+    "Contact replied",
+    "Appointment booked"
+   ],
+   "notes": "Check Mitchell | 01 Inquiry routing first. If it already sends a first text, add this text there instead, so nobody gets two."
+  },
+  {
+   "name": "Fall26 | 04 Quiet lead detector",
+   "purpose": "Finds leads who have gone quiet, so the nurture starts on its own.",
+   "trigger": "Opportunity Created, in any division pipeline",
+   "settings": "Allow re-entry: off",
+   "steps": [
+    "Wait: until the contact replies, or an appointment is booked, or 7 days pass",
+    "If 7 days passed with no reply and no appointment, and the opportunity is still in New Lead or Contacted: Add tag fall26 quiet"
+   ],
+   "exits": [],
+   "notes": "For leads already in the pipeline, add fall26 quiet in bulk to anyone with no reply in 7 or more days and no appointment."
+  },
+  {
+   "name": "Fall26 | 05 Quiet lead nurture",
+   "purpose": "Sixty days of personal notes, designed emails and texts, until the lead replies or books.",
+   "trigger": "Contact Tag added: fall26 quiet",
+   "settings": "Texts only with consent, between 10 am and 7 pm local time",
+   "steps": [
+    "Day 0: Send email from the assigned user, template Fall26 · NU1 · Did I catch you at a busy time?",
+    "Wait 2 days. If text consent: Send SMS, Nurture text, Day 2",
+    "Wait 3 days. If tags include land owned or land family: Send email Fall26 · NU3 · What landowners ask us first. Otherwise: Send email Fall26 · NU3N · Before you buy land, check these six things",
+    "Wait 7 days: Send email from the assigned user, Fall26 · NU4 · What Lavonnia and Rick told us",
+    "Wait 7 days. If tags include home portrait quiz: Send SMS, Nurture text, Day 19 (took the quiz). Otherwise: Send SMS, Nurture text, Day 19 (not yet), with trigger link Fall26 · Nurture · Home Portrait",
+    "Wait 7 days: Send email Fall26 · NU6 · When you are ready to make it yours (skip this step if Design Dollars has ended)",
+    "Wait 9 days: Send email from the assigned user, Fall26 · NU7 · Should I keep your file open?",
+    "Wait 10 days. If land owned or land family: Send SMS, Nurture text, Day 45 (own land), link Fall26 · Nurture · Roadmap episode. Otherwise: Day 45 (looking), link Fall26 · Nurture · Purchasing Land 101 episode",
+    "Wait 15 days: Send email Fall26 · NU9 · Whenever you are ready",
+    "Add tag fall26 nurture done. Remove tag fall26 quiet"
+   ],
+   "exits": [
+    "Goal: Contact replied (email or text). Then create a task for the assigned user: Replied to the nurture, call today",
+    "Goal: Appointment booked",
+    "Goal: Opportunity moves to Appointment Set or later",
+    "Email or text DND"
+   ],
+   "notes": "If a lead replies later, the consultant sets a task to check back in the spring. Designed emails send from Mitchell Homes; personal ones from the assigned user."
+  },
+  {
+   "name": "Fall26 | 06 Event RSVP",
+   "purpose": "Confirms each RSVP, reminds the day before, and follows up after.",
+   "trigger": "Form Submitted: Fall26 Event RSVP (fields: name, email, phone, event, Design Center, text consent)",
+   "settings": "One workflow, a branch per event",
+   "steps": [
+    "Add the event tag, for example event bring your photos oct24",
+    "Send confirmation email and, with consent, a confirmation text",
+    "Wait until the day before the event at 9 am: Send the RSVP reminder text",
+    "Wait until the event day at 4 pm: Send the thank you text from the assigned user",
+    "Wait 1 day: Send the follow up email from the assigned user, and create a task to call"
+   ],
+   "exits": [],
+   "notes": "The event invitations, reminders and follow ups are in the Events tab. Create the RSVP form first; its link replaces [RSVP link] in every invitation."
+  },
+  {
+   "name": "Fall26 | 07 Realtor replies",
+   "purpose": "Turns realtor replies into partners.",
+   "trigger": "Customer Replied (email), and tags include realtor or realtor database",
+   "settings": "",
+   "steps": [
+    "Create task for Noele Riedl: A realtor replied to a Fall26 email. Note their counties and tag them realtor land partner or realtor on your land",
+    "Notify the New Home Consultant for that division"
+   ],
+   "exits": [],
+   "notes": "Land partners get introductions to buyers still looking for land, once Mitchell approves (question 17)."
+  },
+  {
+   "name": "Fall26 | 08 After a Design Center visit",
+   "purpose": "Same day text that tells the buyer how close they are to the next Design Dollars tier.",
+   "trigger": "Appointment Status: Showed, on the Design Studio Visit calendars",
+   "settings": "Or add these steps to Mitchell | NHC 04 Appointment Completed tasks",
+   "steps": [
+    "Create task for the assigned user: Send the After a Design Center visit text today, with the gap to the next tier filled in"
+   ],
+   "exits": [],
+   "notes": "The amounts change per buyer, so this stays a task with the script rather than an automatic text."
+  }
+ ],
+ "checklist": [
+  "Mitchell signs off in the approval document.",
+  "Sending domain: add a dedicated Mitchell sending domain under Settings, Email Services. Today the platform sends from its default address, which will hurt a 30,000 contact send.",
+  "Unsubscribe: send one test. If the account's automatic footer link is on, remove the {{unsubscribe}} line from the templates so there is only one.",
+  "Texting: confirm the A2P 10DLC registration for Mitchell's numbers is approved before any bulk text.",
+  "Calendars: the Design Studio Visit calendars are switched off. Turn them on with availability before the events and the quiz follow ups.",
+  "The Home Portrait Quiz trigger link and the Home Portrait Quiz URL custom value point to mitchellhomeportrait.vercel.app, an older copy of the quiz outside CEA's Vercel account. Point both to https://mitchellhomesliving.com/portrait once confirmed.",
+  "Routing: check Mitchell | 01 Inquiry routing so quiz leads do not get two first texts.",
+  "Past homeowners: tag them homeowner so the referral email has a list.",
+  "Event RSVP form: create it, then point the six Fall26 · Event RSVP trigger links at it. Today they open Mitchell's contact page, so every invitation already works and updates the moment the links change.",
+  "A few event emails say [city] where the Design Center name goes: set it per division before sending, or duplicate the template per studio."
+ ]
+}

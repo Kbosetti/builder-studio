@@ -105,12 +105,55 @@ def block(b, link):
     if t == "deadline":
         return (f'<p style="margin:0 0 18px;padding:12px 16px;border-radius:10px;background:#fff4d6;font-family:{FONT};font-size:15px;line-height:1.55;'
                 f'font-weight:600;color:{DEEP}">{E(b["text"])}</p>')
+    if t == "event":
+        return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:6px 0 20px"><tr>'
+                f'<td style="border:1px solid #e3e6dc;border-left:4px solid {SUN};border-radius:10px;padding:16px 18px;font-family:{FONT};background:{CREAM}">'
+                f'<p style="margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:{GREEN}">{E(b.get("eyebrow", "You are invited"))}</p>'
+                f'<p style="margin:0 0 6px;font-size:17px;font-weight:800;line-height:1.3;color:{DEEP}">{E(b["head"])}</p>'
+                f'<p style="margin:0 0 10px;font-size:15px;line-height:1.55;color:{INK}">{E(b["text"])}</p>'
+                f'<a href="{E(link(b["href"]))}" target="_blank" style="font-size:14px;font-weight:800;color:{GREEN}">{E(b["cta"])} &#8594;</a></td></tr></table>')
     if t == "cta":
         return button(b["text"], link(b["href"]))
     raise ValueError(t)
 
 
+def render_plain(series, em):
+    """A personal email from the consultant: no header, no images, just words, a signature and the required footer."""
+    link = lambda h: utm(h, series["campaign"], em["id"])
+    P = "margin:0 0 14px;font-family:Arial, Helvetica, sans-serif;font-size:15px;line-height:1.6;color:#222222"
+    parts = []
+    for b in em["blocks"]:
+        if b["t"] == "p":
+            parts.append(f'<p style="{P}">{E(b["text"]).replace(chr(10), "<br>")}</p>')
+        elif b["t"] == "list":
+            parts.append('<ol style="margin:0 0 14px;padding-left:22px;font-family:Arial, Helvetica, sans-serif;font-size:15px;line-height:1.6;color:#222222">'
+                         + "".join(f'<li style="margin:0 0 6px">{E(x)}</li>' for x in b["items"]) + '</ol>')
+        elif b["t"] == "link":
+            parts.append(f'<p style="{P}"><a href="{E(link(b["href"]))}" style="color:#2b6d47">{E(b["text"])}</a></p>')
+    fine = []
+    if em.get("dd"):
+        fine.append(FINE_DD)
+    if em.get("financing"):
+        fine.append(FINE_FIN)
+    fine_html = "".join(f'<p style="margin:0 0 6px">{E(f)}</p>' for f in fine)
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(em["subject"])}</title></head>
+<body style="margin:0;padding:0;background:#ffffff">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">{E(em["preview"])}</div>
+<div style="max-width:560px;padding:24px 20px">
+<p style="{P}">Hi {{{{contact.first_name}}}},</p>
+{"".join(parts)}
+<p style="margin:18px 0 0;font-family:Arial, Helvetica, sans-serif;font-size:15px;line-height:1.5;color:#222222">{{{{user.name}}}}<br>New Home Consultant, Mitchell Homes<br>{{{{user.phone}}}}</p>
+<div style="margin-top:28px;padding-top:12px;border-top:1px solid #e5e5e5;font-family:Arial, Helvetica, sans-serif;font-size:11px;line-height:1.5;color:#888888">
+{fine_html}<p style="margin:0 0 6px">Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.</p>
+<p style="margin:0">{{{{unsubscribe}}}}</p></div>
+</div></body></html>
+"""
+
+
 def render(series, em):
+    if em.get("plain"):
+        return render_plain(series, em)
     content = em["id"]
     link = lambda h: utm(h, series["campaign"], content)
     hero = ""
@@ -175,7 +218,7 @@ a{{color:{GREEN}}}
 
 def text_version(series, em):
     link = lambda h: utm(h, series["campaign"], em["id"])
-    out = [em["headline"].upper(), ""]
+    out = ["Hi {{contact.first_name}},", ""] if em.get("plain") else [em["headline"].upper(), ""]
     for b in em["blocks"]:
         t = b["t"]
         if t in ("p", "small", "deadline"):
@@ -194,9 +237,14 @@ def text_version(series, em):
             out += [b["caption"], ""]
         elif t == "offer":
             out += [b["head"], b["text"], ""]
-        elif t == "cta":
+        elif t in ("cta", "link"):
             out += [f'{b["text"]}: {link(b["href"])}', ""]
-    out += ["Questions? Call a New Home Consultant.", "Virginia and Maryland (540) 701-2759", "North and South Carolina (984) 331-5468", "", "The Mitchell Homes team", ""]
+        elif t == "event":
+            out += [b["head"], b["text"], f'{b["cta"]}: {link(b["href"])}', ""]
+    if em.get("plain"):
+        out += ["{{user.name}}", "New Home Consultant, Mitchell Homes", "{{user.phone}}", ""]
+    else:
+        out += ["Questions? Call a New Home Consultant.", "Virginia and Maryland (540) 701-2759", "North and South Carolina (984) 331-5468", "", "The Mitchell Homes team", ""]
     if em.get("dd"):
         out.append(FINE_DD)
     if em.get("financing"):

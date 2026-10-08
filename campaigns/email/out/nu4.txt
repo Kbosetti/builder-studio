@@ -1,0 +1,19 @@
+Hi {{contact.first_name}},
+
+I wanted to share something one of our homeowner couples in Henrico said after they moved in:
+
+“Talk about no closing costs, no down payment, no construction loan. That's a big deal. I don't think we appreciated what that meant initially. Now looking back, we're like wow, that's the best choice we could've made to go with Mitchell.”
+
+Their story is short, if you would like to hear it in their own words:
+
+Watch the Downey family's story: https://www.youtube.com/watch?v=9vmi-miQzKU
+
+If you have questions about how it would work on your land, just reply.
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}

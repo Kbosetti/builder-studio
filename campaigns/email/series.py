@@ -65,10 +65,9 @@ SERIES = [
         {"id": "hp3", "send": "Thursday, November 5", "segment": "Engaged contacts who have not taken the quiz yet",
          "subject": "Nine portraits. Which one is yours?",
          "preview": "The Landowner's, the Dreamer's, the Family, the Planner's, and one for the getaway.",
+         "hero": hero("2024/6/24/Mathews_1_Aerial.jpg", "Aerial view of a Mitchell home on a wooded homesite"),
          "eyebrow": "The Home Portrait", "headline": "Nine portraits. One of them is yours.",
          "blocks": [
-            {"t": "grid", "cols": 3, "items": [["Richmond", PAINT["Richmond"]], ["Smith Mountain Lake", PAINT["Lake"]], ["Newport News", PAINT["Newport News"]]],
-             "caption": "Every portrait is painted for the region you choose."},
             {"t": "p", "text": "Your Home Portrait is painted from the answers you give. Your region sets the scene. Your land, your people and the way you make big decisions shape the rest."},
             {"t": "covers", "items": [
                 ["The Landowner's Portrait", "For buyers who own land, or have family land, and want to see the math."],
@@ -249,6 +248,63 @@ SERIES = [
             {"t": "cta", "text": "Send Your Client the Home Portrait", "href": QUIZ},
             {"t": "small", "text": "Eight questions, about 90 seconds, and your client sees a painted portrait of their home. Prefer to talk first? Call a New Home Consultant at the numbers below."}],
          "dd": True, "financing": True},
+        {"id": "ra1", "send": "Wednesday, October 28", "segment": "Realtors and brokers, land and rural agents first",
+         "hold": "Confirm with Mitchell that consultants may introduce buyers who are still looking for land to local agents (question 17).",
+         "subject": "Our buyers need land. Do you know land?",
+         "preview": "We would like to know the agents who do.",
+         "hero": hero("2026/3/24/10_UuSAaPU.jpg", "Aerial view of a Mitchell home in a wooded valley below the mountains"),
+         "eyebrow": "For real estate professionals", "headline": "Our buyers need agents who know land",
+         "blocks": [
+            {"t": "p", "text": "Every month, people come to Mitchell ready to build a custom home and still looking for the right lot. They need an agent who knows land: perc tests, wells and septic, road access, easements and county rules."},
+            {"t": "p", "text": "We would like to know the agents who do. If land is part of your business, reply to this email with the counties you work in, and we will add you to our land partner list."},
+            {"t": "p", "text": "When a Mitchell buyer is still looking, we want to be able to introduce them to someone who knows the ground."},
+            {"t": "cta", "text": "See What We Tell Buyers Without Land", "href": SMH + "/no-land"},
+            {"t": "small", "text": "Mitchell has a realtor incentive program for referred buyers. Ask us for the current terms."}]},
+        {"id": "rb2", "send": "Wednesday, November 4", "segment": "Realtors and brokers, land listing agents first",
+         "hold": "Confirm the current realtor incentive terms with Mitchell (question 11).",
+         "subject": "When your land listing needs a picture",
+         "preview": "Buyers who can see the home are easier to move.",
+         "hero": hero("2024/8/14/10_iWQs7EE.jpg", "Aerial view of a Mitchell home in a green clearing surrounded by forest"),
+         "eyebrow": "For real estate professionals", "headline": "Help land buyers see the home",
+         "blocks": [
+            {"t": "p", "text": "Raw land is hard to fall in love with. Most buyers walking a lot are trying to picture the house, and most cannot."},
+            {"t": "p", "text": "That is what the Home Portrait does. Your buyer answers eight questions about the home they want and the land it belongs on, and in about 90 seconds they see a portrait of it, with a clear path to building."},
+            {"t": "p", "text": "When they are ready, Mitchell builds custom homes on land the buyer owns and self funds every build: zero down, zero closing costs and no construction loan."},
+            {"t": "cta", "text": "Send Your Buyer the Home Portrait", "href": QUIZ},
+            {"t": "small", "text": "Mitchell has a realtor incentive program for referred buyers. Ask us for the current terms."}],
+         "financing": True},
+        {"id": "rb3", "send": "Wednesday, November 11", "segment": "Realtors and brokers",
+         "hold": "Confirm the current realtor incentive terms with Mitchell (question 11).",
+         "subject": "Your client's down payment may be in the ground",
+         "preview": "Inherited land, family land, the acreage they already own.",
+         "hero": hero("2026/3/24/10_mwFjkrl.jpg", "Aerial view of a Mitchell home among the trees beside the water"),
+         "eyebrow": "For real estate professionals", "headline": "The land your client owns can count toward the home",
+         "blocks": [
+            {"t": "p", "text": "Some of your clients own land they have never thought of as a down payment: a parcel they inherited, family acreage, a lot they bought years ago."},
+            {"t": "p", "text": "With Mitchell, that land can count toward a custom home. Mitchell self funds every build, so there is zero down, zero closing costs, no construction loan and one closing instead of two."},
+            {"t": "p", "text": "Every Mitchell home also starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more your client personalizes."},
+            {"t": "list", "items": [
+                "Refer a client: reply with their name and county, or have them call a New Home Consultant.",
+                "Mitchell has a realtor incentive program for referred buyers. Ask us for the current terms."]},
+            {"t": "cta", "text": "See What Their Land Can Build", "href": SMH + "/land"}],
+         "dd": True, "financing": True},
+        {"id": "ra2", "send": "Wednesday, November 18, after the Lunch and Learn", "segment": "Realtors and brokers, land and rural agents first",
+         "subject": "What our buyers check before they buy a lot",
+         "preview": "A short checklist to share with your land clients.",
+         "hero": hero("2024/7/24/1.jpg", "A white Mitchell farmhouse with a wraparound porch, set back in the pines at the end of a long drive"),
+         "eyebrow": "For real estate professionals", "headline": "A lot checklist for your land clients",
+         "blocks": [
+            {"t": "p", "text": "When a buyer plans to build, the right lot is about more than the view. Here is what your clients will want to know before they make an offer."},
+            {"t": "covers", "items": [
+                ["Soil and perc test", "Whether the ground supports a septic system, and what kind."],
+                ["Water", "A well or a public connection, and what either costs."],
+                ["Access and utilities", "Road frontage, the driveway, power and internet."],
+                ["Easements and restrictions", "What is recorded on the deed, and any covenants."],
+                ["Zoning and flood zone", "What can be built, and where on the lot."],
+                ["Clearing and grading", "How much work the site needs before the build."]]},
+            {"t": "small", "text": "Behind the Build: Purchasing Land 101", "href": "https://www.youtube.com/watch?v=trgJ8maymOA"},
+            {"t": "small", "text": "Behind the Build: Well and Septic", "href": "https://www.youtube.com/watch?v=zWwtw8qgp4w"},
+            {"t": "cta", "text": "Share the Home Portrait", "href": QUIZ}]},
         {"id": "ho1", "send": "Wednesday, October 21", "segment": "Past Mitchell homeowners",
          "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer.",
          "subject": "Know someone with land and a dream?",
@@ -261,4 +317,117 @@ SERIES = [
             {"t": "cta", "text": "Share the Home Portrait", "href": QUIZ},
             {"t": "p", "text": "And when they are ready to talk, they can call a New Home Consultant directly. Thank you for building with us, and for every introduction."}]},
      ]},
+
+    {"key": "nurture", "name": "Quiet lead nurture", "stage": "Nurture", "campaign": "fall26_nurture",
+     "audience": "Any lead with no reply, no booked appointment and no stage change seven days after first contact. Leaves the moment they reply, book, reserve or opt out.",
+     "goal": "A reply or a booked call. Personal notes from the consultant alternate with designed emails and texts over 60 days, then the lead moves to the monthly newsletter.",
+     "emails": [
+        {"id": "nu1", "send": "Day 0 of the nurture · personal email from the consultant", "segment": "Every quiet lead",
+         "plain": True, "subject": "Did I catch you at a busy time?",
+         "preview": "No pressure. Here are the three questions people ask me first.",
+         "blocks": [
+            {"t": "p", "text": "I tried to reach you about building with Mitchell, and I know life gets full. No pressure at all."},
+            {"t": "p", "text": "In case it helps, here are the three questions people ask me first:"},
+            {"t": "list", "items": [
+                "Can my land be my down payment? If you own land, it can count toward the home.",
+                "Do I need a construction loan? Not with Mitchell. We self fund every build.",
+                "Where do I start? Usually with a 15 minute call, at a time that works for you."]},
+            {"t": "p", "text": "Just reply with a good time and I will call you then."}],
+         "financing": True},
+        {"id": "nu3", "send": "Day 5 · designed email", "segment": "Quiet leads who own land or have family land (nu3n for everyone else)",
+         "subject": "What landowners ask us first",
+         "preview": "Can my land be my down payment? Do I need a construction loan? Here are the answers.",
+         "hero": hero("2024/8/14/10_iWQs7EE.jpg", "Aerial view of a Mitchell home in a green clearing surrounded by forest"),
+         "eyebrow": "Building on your land", "headline": "Three answers for landowners",
+         "blocks": [
+            {"t": "covers", "items": [
+                ["Can my land be my down payment?", "It can. With SimplyMitchell, the land you own counts toward the home, so there is zero down and zero closing costs."],
+                ["Do I need a construction loan?", "No. Mitchell self funds every build, so there is one closing, no draw period interest and no bank deciding whether your land counts."],
+                ["What will it cost to build on my land?", "It depends on your plan, your selections and your site, including well, septic and clearing. A New Home Consultant can walk your land with you and put real numbers on it."]]},
+            {"t": "cta", "text": "See What Your Land Can Build", "href": SMH + "/land"},
+            {"t": "small", "text": "Want to go deeper? Watch Well and Septic on Behind the Build.", "href": "https://www.youtube.com/watch?v=zWwtw8qgp4w"}],
+         "financing": True},
+        {"id": "nu3n", "send": "Day 5 · designed email", "segment": "Quiet leads still looking for land, or land status unknown",
+         "subject": "Before you buy land, check these six things",
+         "preview": "What to know about a lot before you make an offer.",
+         "hero": hero("2026/3/24/10_UuSAaPU.jpg", "Aerial view of a Mitchell home in a wooded valley below the mountains"),
+         "eyebrow": "Building on your land", "headline": "Six things to check before you buy a lot",
+         "blocks": [
+            {"t": "covers", "items": [
+                ["Soil and perc test", "Whether the ground supports a septic system, and what kind."],
+                ["Water", "A well or a public connection, and what either costs."],
+                ["Access and utilities", "Road frontage, the driveway, power and internet."],
+                ["Easements and restrictions", "What is recorded on the deed, and any covenants."],
+                ["Zoning and flood zone", "What can be built, and where on the lot."],
+                ["Clearing and grading", "How much work the site needs before the build."]]},
+            {"t": "p", "text": "We do not sell land, and we will not tell you where to buy. But you can start designing your home now and bring us the lot when you find it."},
+            {"t": "cta", "text": "See How It Works", "href": SMH + "/no-land"},
+            {"t": "small", "text": "Watch Purchasing Land 101 on Behind the Build.", "href": "https://www.youtube.com/watch?v=trgJ8maymOA"}]},
+        {"id": "nu4", "send": "Day 12 · personal email from the consultant", "segment": "Every quiet lead",
+         "plain": True, "subject": "What Lavonnia and Rick told us",
+         "preview": "Two homeowners on what surprised them most.",
+         "blocks": [
+            {"t": "p", "text": "I wanted to share something one of our homeowner couples in Henrico said after they moved in:"},
+            {"t": "p", "text": "\u201cTalk about no closing costs, no down payment, no construction loan. That's a big deal. I don't think we appreciated what that meant initially. Now looking back, we're like wow, that's the best choice we could've made to go with Mitchell.\u201d"},
+            {"t": "p", "text": "Their story is short, if you would like to hear it in their own words:"},
+            {"t": "link", "text": "Watch the Downey family's story", "href": "https://www.youtube.com/watch?v=9vmi-miQzKU"},
+            {"t": "p", "text": "If you have questions about how it would work on your land, just reply."}],
+         "financing": True},
+        {"id": "nu6", "send": "Day 26 · designed email", "segment": "Every quiet lead",
+         "subject": "When you are ready to make it yours",
+         "preview": "Every Mitchell home starts with $5,000 in Design Dollars, up to $25,000.",
+         "hero": hero("2023/2/6/Design_Center_13_IfaBRgj.jpg", "A kitchen display in a Mitchell Design Center with white cabinets, a copper hood and brass pendants"),
+         "eyebrow": "Mitchell Design Dollars", "headline": "The finishes are where it becomes yours",
+         "blocks": [
+            {"t": "p", "text": "Cabinets, countertops, tile, the light over the table. The Design Center is where a plan turns into your home, and it is the part most people look forward to."},
+            {"t": "p", "text": "Every Mitchell home now comes with $5,000 in Mitchell Design Dollars for those selections. Personalize more, and we add more, up to $25,000."},
+            DD_BAND,
+            {"t": "cta", "text": "See How Design Dollars Work", "href": DD}],
+         "dd": True},
+        {"id": "nu7", "send": "Day 35 · personal email from the consultant", "segment": "Every quiet lead",
+         "plain": True, "subject": "Should I keep your file open?",
+         "preview": "My last note for a while.",
+         "blocks": [
+            {"t": "p", "text": "I do not want to fill your inbox, so this is my last note for a while."},
+            {"t": "p", "text": "If building is still on your list, reply yes and I will reach out at a time that works for you. If the timing is not right, reply later and I will check back in the spring."},
+            {"t": "p", "text": "Either way, thank you for thinking of Mitchell."}]},
+        {"id": "nu9", "send": "Day 60 · designed email, then the monthly newsletter", "segment": "Every quiet lead who has not replied",
+         "subject": "Whenever you are ready",
+         "preview": "Floor plans, the Home Portrait and a Design Center near you, all in one place.",
+         "hero": hero("2026/3/3/ava_farmhouse-extended_sky.jpg", "A Mitchell farmhouse with a long front porch under an evening sky"),
+         "eyebrow": "Mitchell Homes", "headline": "Whenever you are ready, we are here",
+         "blocks": [
+            {"t": "p", "text": "Building a home on your land is a big decision, and it is yours to make on your schedule. Here is everything in one place for when the time is right."},
+            {"t": "list", "items": [
+                "Browse more than 40 floor plans, from 1,000 to 3,000 square feet.",
+                "Take the Home Portrait: eight questions, about 90 seconds.",
+                "Visit a Design Center in Fredericksburg, Richmond, Newport News, Raleigh or Wilmington.",
+                "Hear how it all works on Behind the Build, the podcast from Scott Sleeme and Deven Sellers."]},
+            {"t": "cta", "text": "Take the Home Portrait", "href": QUIZ},
+            {"t": "small", "text": "Browse the floor plans", "href": "https://www.mitchellhomesinc.com/new-homes/floorplans/"}]},
+     ]},
 ]
+
+
+# Event invitations ride inside existing emails (campaigns/events/events.json), linked through the per event
+# RSVP trigger links in Builder Studio (campaigns/builder_studio/created.json), so one link update fixes them all.
+def _add_event_blocks():
+    import json, os
+    here = os.path.dirname(os.path.abspath(__file__))
+    ev_path = os.path.join(here, "..", "events", "events.json")
+    rec_path = os.path.join(here, "..", "builder_studio", "created.json")
+    if not (os.path.exists(ev_path) and os.path.exists(rec_path)):
+        return
+    links = {v.get("event"): v["field"] for v in json.load(open(rec_path)).get("links", {}).values() if v.get("event")}
+    by_id = {e["id"]: e for s in SERIES for e in s["emails"]}
+    for ev in json.load(open(ev_path))["events"]:
+        for r in ev.get("rides_in", []):
+            em = by_id.get(r["email"])
+            if em is None or any(b.get("event") == ev["id"] for b in em["blocks"]):
+                continue
+            b = r["block"]
+            em["blocks"].append({"t": "event", "event": ev["id"], "eyebrow": "You are invited", "head": b["head"], "text": b["text"],
+                                 "cta": b["cta"], "href": links.get(ev["id"], "[RSVP link]")})
+
+
+_add_event_blocks()

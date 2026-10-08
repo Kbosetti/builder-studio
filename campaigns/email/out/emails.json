@@ -31,6 +31,14 @@
    "campaign": "fall26_referral",
    "audience": "Realtor and broker contacts (land listing agents first), and past Mitchell homeowners.",
    "goal": "Referrals into the quiz and the Design Dollars page from people who already know buyers."
+  },
+  {
+   "key": "nurture",
+   "name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "campaign": "fall26_nurture",
+   "audience": "Any lead with no reply, no booked appointment and no stage change seven days after first contact. Leaves the moment they reply, book, reserve or opt out.",
+   "goal": "A reply or a booked call. Personal notes from the consultant alternate with designed emails and texts over 60 days, then the lead moves to the monthly newsletter."
   }
  ],
  "emails": [
@@ -230,6 +238,54 @@
    "series": "partners",
    "series_name": "Realtors and homeowners",
    "stage": "Refer",
+   "id": "ra1",
+   "send": "Wednesday, October 28",
+   "segment": "Realtors and brokers, land and rural agents first",
+   "subject": "Our buyers need land. Do you know land?",
+   "preview": "We would like to know the agents who do.",
+   "hold": "Confirm with Mitchell that consultants may introduce buyers who are still looking for land to local agents (question 17).",
+   "subject_len": 39
+  },
+  {
+   "series": "partners",
+   "series_name": "Realtors and homeowners",
+   "stage": "Refer",
+   "id": "rb2",
+   "send": "Wednesday, November 4",
+   "segment": "Realtors and brokers, land listing agents first",
+   "subject": "When your land listing needs a picture",
+   "preview": "Buyers who can see the home are easier to move.",
+   "hold": "Confirm the current realtor incentive terms with Mitchell (question 11).",
+   "subject_len": 38
+  },
+  {
+   "series": "partners",
+   "series_name": "Realtors and homeowners",
+   "stage": "Refer",
+   "id": "rb3",
+   "send": "Wednesday, November 11",
+   "segment": "Realtors and brokers",
+   "subject": "Your client's down payment may be in the ground",
+   "preview": "Inherited land, family land, the acreage they already own.",
+   "hold": "Confirm the current realtor incentive terms with Mitchell (question 11).",
+   "subject_len": 47
+  },
+  {
+   "series": "partners",
+   "series_name": "Realtors and homeowners",
+   "stage": "Refer",
+   "id": "ra2",
+   "send": "Wednesday, November 18, after the Lunch and Learn",
+   "segment": "Realtors and brokers, land and rural agents first",
+   "subject": "What our buyers check before they buy a lot",
+   "preview": "A short checklist to share with your land clients.",
+   "hold": "",
+   "subject_len": 43
+  },
+  {
+   "series": "partners",
+   "series_name": "Realtors and homeowners",
+   "stage": "Refer",
    "id": "ho1",
    "send": "Wednesday, October 21",
    "segment": "Past Mitchell homeowners",
@@ -237,6 +293,90 @@
    "preview": "The best Mitchell homes start with a homeowner's introduction.",
    "hold": "Confirm with Mitchell whether a homeowner referral thank you exists before adding one. This version makes no offer.",
    "subject_len": 35
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu1",
+   "send": "Day 0 of the nurture \u00b7 personal email from the consultant",
+   "segment": "Every quiet lead",
+   "subject": "Did I catch you at a busy time?",
+   "preview": "No pressure. Here are the three questions people ask me first.",
+   "hold": "",
+   "subject_len": 31
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu3",
+   "send": "Day 5 \u00b7 designed email",
+   "segment": "Quiet leads who own land or have family land (nu3n for everyone else)",
+   "subject": "What landowners ask us first",
+   "preview": "Can my land be my down payment? Do I need a construction loan? Here are the answers.",
+   "hold": "",
+   "subject_len": 28
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu3n",
+   "send": "Day 5 \u00b7 designed email",
+   "segment": "Quiet leads still looking for land, or land status unknown",
+   "subject": "Before you buy land, check these six things",
+   "preview": "What to know about a lot before you make an offer.",
+   "hold": "",
+   "subject_len": 43
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu4",
+   "send": "Day 12 \u00b7 personal email from the consultant",
+   "segment": "Every quiet lead",
+   "subject": "What Lavonnia and Rick told us",
+   "preview": "Two homeowners on what surprised them most.",
+   "hold": "",
+   "subject_len": 30
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu6",
+   "send": "Day 26 \u00b7 designed email",
+   "segment": "Every quiet lead",
+   "subject": "When you are ready to make it yours",
+   "preview": "Every Mitchell home starts with $5,000 in Design Dollars, up to $25,000.",
+   "hold": "",
+   "subject_len": 35
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu7",
+   "send": "Day 35 \u00b7 personal email from the consultant",
+   "segment": "Every quiet lead",
+   "subject": "Should I keep your file open?",
+   "preview": "My last note for a while.",
+   "hold": "",
+   "subject_len": 29
+  },
+  {
+   "series": "nurture",
+   "series_name": "Quiet lead nurture",
+   "stage": "Nurture",
+   "id": "nu9",
+   "send": "Day 60 \u00b7 designed email, then the monthly newsletter",
+   "segment": "Every quiet lead who has not replied",
+   "subject": "Whenever you are ready",
+   "preview": "Floor plans, the Home Portrait and a Design Center near you, all in one place.",
+   "hold": "",
+   "subject_len": 22
   }
  ]
 }

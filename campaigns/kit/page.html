@@ -151,7 +151,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
 <nav class="jump" aria-label="Sections"><div class="wrap">
   <a href="#start">Start here</a><a href="#calendar">Calendar</a><a href="#emails">Emails</a><a href="#website">Website</a>
   <a href="#social">Social</a><a href="#google">Google profiles</a><a href="#youtube">YouTube</a><a href="#community">Portals and community</a>
-  <a href="#direct">Texts and sales team</a><a href="#print">Print</a><a href="#ranking">Where to start</a><a href="https://mitchell-fall-cadence.vercel.app" target="_blank" rel="noopener">Full calendar</a>
+  <a href="#direct">Texts and sales team</a><a href="#print">Print</a><a href="#nurture">Nurture</a><a href="#events">Events</a><a href="#groups">Facebook groups</a><a href="#setup">Builder Studio setup</a><a href="#ranking">Where to start</a><a href="https://mitchell-fall-cadence.vercel.app" target="_blank" rel="noopener">Full calendar</a>
 </div></nav>
 
 <main class="wrap">
@@ -184,7 +184,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
   </section>
 
   <section id="emails">
-    <div class="head"><span class="eyebrow">Email</span><h2>Seventeen emails, four series</h2>
+    <div class="head"><span class="eyebrow">Email</span><h2 id="emailsTitle">Every email, by series</h2>
       <p class="lede">Each email is one complete HTML file in Mitchell's look, with photos hosted on Mitchell's own site and links tagged for tracking. Plain text versions are included.</p></div>
     <div class="howto"><b>To load one into Builder Studio</b>
       <ol><li>Marketing, then Emails, then Templates. Create a new template with the code (HTML) editor.</li>
@@ -227,6 +227,29 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
     <div id="lib-print"></div>
   </section>
 
+  <section id="nurture"><div class="head"><span class="eyebrow">Quiet lead nurture</span><h2>Sixty days for leads who have not answered</h2>
+    <p class="lede">Personal notes from the consultant, designed emails and short texts, alternating, until the lead replies or books. The emails are in the Email section under Quiet lead nurture; the texts and the exact flow are below.</p></div>
+    <div class="panel"><h3>How it runs in Builder Studio</h3><ol class="flags" id="nurtureFlow"></ol></div>
+    <div id="lib-nurture"></div></section>
+
+  <section id="events"><div class="head"><span class="eyebrow">Events</span><h2>Six events that run with the campaigns</h2>
+    <p class="lede">Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages. Every event is a proposal until Mitchell confirms dates and staffing.</p></div>
+    <div id="eventlist" style="display:flex;flex-direction:column;gap:16px"></div></section>
+
+  <section id="groups"><div class="head"><span class="eyebrow">Facebook groups</span><h2>Groups to join and ask to post in</h2>
+    <p class="lede">Real groups in Mitchell's markets, found in public search results. Join, read the rules, give before asking, and ask the admins first.</p></div>
+    <div class="filters" id="gfilters"></div>
+    <div class="tablewrap"><table class="cal" id="gtable"><thead><tr><th>Group</th><th>Area</th><th>Type</th><th>Members</th><th>Rules</th><th>Ask</th></tr></thead><tbody></tbody></table></div>
+    <div id="groupextra"></div></section>
+
+  <section id="setup"><div class="head"><span class="eyebrow">Builder Studio</span><h2>What is loaded, and how to build the rest</h2>
+    <p class="lede">Templates, tags and trigger links are already in Mitchell's account as drafts. Workflows, smart lists and scheduled sends cannot be created from outside, so here are the exact steps.</p></div>
+    <div class="two"><div class="panel"><h3>Already done</h3><ul class="counts" id="setupDone"></ul></div><div class="panel"><h3>Before anything goes live</h3><ol class="flags" id="setupCheck"></ol></div></div>
+    <h3>Workflows</h3><div class="items" id="setupWf"></div>
+    <h3>Smart lists</h3><div class="tablewrap"><table class="cal" id="setupLists"><thead><tr><th>Name</th><th>Filters</th><th>Used by</th></tr></thead><tbody></tbody></table></div>
+    <h3>Scheduled sends</h3><div class="tablewrap"><table class="cal" id="setupSends"><thead><tr><th>When</th><th>Channel</th><th>Template</th><th>To</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
   <section id="ranking"><div class="head"><span class="eyebrow">Where to start</span><h2>Every tactic, ranked by impact and effort</h2></div><div id="lib-summary"></div></section>
 </main>
 <footer><div class="wrap">Prepared by CEA Marketing for Mitchell Homes. Drafts for review, October 8, 2026.</div></footer>
@@ -235,7 +258,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
 (function(){
   var D=/*DATA*/null;
   var EXT='<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>';
-  function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(k==='text')e.textContent=a[k];else if(k==='html')e.innerHTML=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c)e.appendChild(c);});return e;}
+  function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(k==='text')e.textContent=a[k];else if(k==='html')e.innerHTML=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c)e.appendChild(typeof c==='string'?document.createTextNode(c):c);});return e;}
   function selectNode(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
   function copyBtn(label,get,target){var b=el('button',{class:'b sm',type:'button',text:label});
     b.addEventListener('click',function(){var done=function(t){var o=label;b.textContent=t;setTimeout(function(){b.textContent=o;},1500);};
@@ -258,7 +281,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
    [org.social.items.length,'social posts, Stories sets and series ideas'],[org.gbp.items.length,'Google Business Profile posts'],
    [org.youtube.items.length,'YouTube descriptions, comments and retitles'],[org.portals.items.length+org.community.items.length,'portal and community pieces'],
    [dir.sms.items.length,'text messages'],[dir.followups.items.length,'sales team follow up texts and emails'],[dir.sales.items.length+dir.website.items.length,'sales team and website pieces'],
-   [dir.events.items.length,'event ideas for Mitchell to approve'],[D.prints.length,'print and signature pieces']
+   [dir.events.items.length,'event ideas for Mitchell to approve'],[D.prints.length,'print and signature pieces'],[((D.events&&D.events.events)||[]).length,'events with their invitations'],[((D.groups&&D.groups.groups)||[]).length,'Facebook groups to join'],[(dir.nurture||{items:[]}).items.length,'nurture texts, with the nurture emails in the Email section']
   ].forEach(function(r){document.getElementById('counts').appendChild(el('li',{},[el('b',{text:String(r[0])}),el('span',{text:r[1]})]));});
 
   // calendar
@@ -272,6 +295,7 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
     rows.push({d:d,ch:'Social',piece:i.title,aud:parts[1]||'',hold:isHold(i.notes)||isHold(i.title),ref:'#social'});});
   org.gbp.items.forEach(function(i){var d=parseDate(i.meta);if(!d)return;rows.push({d:d,ch:'Google profile',piece:i.title,aud:(i.meta.split(' · ')[1]||''),hold:isHold(i.notes),ref:'#google'});});
   org.community.items.forEach(function(i){var d=parseDate(i.meta);if(!d)return;rows.push({d:d,ch:'Nextdoor',piece:i.title,aud:(i.meta.split(' · ')[1]||''),hold:isHold(i.notes),ref:'#community'});});
+  rows=rows.filter(function(r){return r.d;});
   rows.sort(function(a,b){return a.d-b.d;});
   var CH=['All','Email','Text','Social','Google profile','Nextdoor'],cur='All';
   var fmt=new Intl.DateTimeFormat('en-US',{weekday:'short',month:'short',day:'numeric'});
@@ -335,6 +359,61 @@ footer .wrap{padding-block:20px 34px;font-size:13px;color:var(--muted)}
   D.prints.forEach(function(p){var btns=[];if(p.pdf)btns.push(dlBtn('Download PDF',p.pdf,'mitchell-'+p.pdf.split('/').pop(),true));btns.push(dlBtn('Download PNG',p.png,'mitchell-'+p.png.split('/').pop()));
     pr.appendChild(el('div',{class:'shot'},[el('div',{class:'frame'},[img(p.img,p.title)]),el('div',{class:'cap',text:p.title+' · '+p.size}),el('div',{class:'btns'},btns)]));});
   var sh=document.getElementById('sightml');sh.textContent=D.sig_html;document.getElementById('sigbtns').appendChild(copyBtn('Copy HTML',function(){return D.sig_html;},sh));
+
+  // nurture
+  lib('lib-nurture',dir.nurture);
+  var SU=D.setup||{},nf=document.getElementById('nurtureFlow');
+  var nwf=(SU.workflows||[]).filter(function(w){return /Quiet lead nurture/.test(w.name);})[0];
+  if(nwf)nwf.steps.concat(nwf.exits.map(function(x){return 'Exit: '+x;})).forEach(function(t){nf.appendChild(el('li',{text:t}));});
+
+  // events
+  var EV=(D.events&&D.events.events)||[],eh=document.getElementById('eventlist');
+  if(!EV.length)eh.appendChild(el('p',{class:'muted',text:'The events arrive with the next update.'}));
+  EV.forEach(function(e){
+    var pieces=[];
+    (e.rides_in||[]).forEach(function(r){var b=r.block||{};pieces.push(['Email block in '+String(r.email).toUpperCase(),[b.head,b.text,(b.cta||'')+': '+(b.link||'')].join('\n\n')]);});
+    (e.social||[]).forEach(function(x,i){pieces.push(['Social post '+(i+1)+(x.date?' · '+x.date:'')+(x.channels?' · '+x.channels:''),x.body+(x.link?'\n\n'+x.link:'')]);});
+    if(e.facebook_event)pieces.push(['Facebook event',typeof e.facebook_event==='string'?e.facebook_event:JSON.stringify(e.facebook_event,null,1)]);
+    if(e.gbp)pieces.push(['Google profile event post',[e.gbp.title,e.gbp.body,e.gbp.button?'Button: '+e.gbp.button:''].join('\n\n')]);
+    if(e.nextdoor)pieces.push(['Nextdoor',e.nextdoor]);
+    if(e.invite_text)pieces.push(['Consultant invite text',e.invite_text]);
+    if(e.invite_email)pieces.push(['Consultant invite email','Subject: '+e.invite_email.subject+'\n\n'+e.invite_email.body]);
+    if(e.reminder_text)pieces.push(['RSVP reminder text',e.reminder_text]);
+    if(e.thanks_text)pieces.push(['Same day thank you text',e.thanks_text]);
+    if(e.followup_email)pieces.push(['Next day follow up email','Subject: '+e.followup_email.subject+'\n\n'+e.followup_email.body]);
+    (e.extra_texts||[]).forEach(function(x){pieces.push(['Text'+(x.date?' · '+x.date:'')+(x.audience?' · '+x.audience:''),x.body]);});
+    var grid=el('div',{class:'items'});
+    pieces.forEach(function(pc){var body=el('div',{class:'body',text:pc[1]});grid.appendChild(el('div',{class:'item'},[el('div',{class:'meta',text:pc[0]}),body,el('div',{class:'btns'},[copyBtn('Copy',function(){return pc[1];},body)])]));});
+    var det=el('details',{},[el('summary',{style:'cursor:pointer;font-weight:700;color:var(--accent)',text:'All '+pieces.length+' invitation and follow up pieces'}),el('div',{style:'margin-top:12px'},[grid])]);
+    eh.appendChild(el('div',{class:'panel',style:'display:flex;flex-direction:column;gap:10px'},[
+      el('div',{class:'erow'},[el('span',{class:'pill hold',text:'Proposal'}),el('b',{text:(e.id||'').toUpperCase()}),el('span',{text:[e.date,e.time,e.where].filter(Boolean).join(' · ')})]),
+      el('h3',{text:e.name}),el('p',{class:'muted',style:'font-size:14px',text:'For: '+(e.audience||'')}),
+      el('ul',{class:'flags'},(e.what||[]).map(function(t){return el('li',{text:t});})),
+      e.why?el('p',{style:'font-size:14px',text:'Why: '+e.why}):null,
+      (e.confirm&&e.confirm.length)?el('p',{class:'notes hold',text:'Mitchell confirms: '+e.confirm.join('; ')}):null,det]));});
+
+  // facebook groups
+  var FG=D.groups||{},gs=FG.groups||[],gt=document.querySelector('#gtable tbody'),gstate='All';
+  function drawG(){gt.textContent='';gs.filter(function(g){return gstate==='All'||g.state===gstate;}).sort(function(a,b){return (a.priority||3)-(b.priority||3);}).forEach(function(g){
+    gt.appendChild(el('tr',{},[el('td',{},[el('a',{href:g.url,target:'_blank',rel:'noopener',text:g.name}),el('div',{class:'muted',style:'font-size:12px',text:(g.why||'')})]),
+      el('td',{text:g.area||''}),el('td',{text:g.category||''}),el('td',{text:(g.members||'')+(g.privacy?' · '+g.privacy:'')}),el('td',{text:g.rules||''}),
+      el('td',{},[el('span',{class:'pill '+((g.priority||3)===1?'ok':'hold'),text:'Priority '+(g.priority||3)}),el('div',{class:'muted',style:'font-size:12px',text:'Confidence '+(g.confidence||'')})])]));});}
+  if(gs.length){var states=['All'].concat(gs.map(function(g){return g.state;}).filter(function(v,i,a){return v&&a.indexOf(v)===i;}));
+    states.forEach(function(st){var b=el('button',{class:'chip',type:'button','aria-pressed':String(st==='All'),text:st});b.addEventListener('click',function(){gstate=st;[].forEach.call(document.querySelectorAll('#gfilters .chip'),function(x){x.setAttribute('aria-pressed',String(x===b));});drawG();});document.getElementById('gfilters').appendChild(b);});
+    drawG();}
+  else gt.appendChild(el('tr',{},[el('td',{colspan:'6',text:'The group list arrives with the next update.'})]));
+  var gx=document.getElementById('groupextra');
+  if(FG.playbook){gx.appendChild(el('div',{class:'panel'},[el('h3',{text:'How to join and post'}),el('ol',{class:'flags'},FG.playbook.map(function(t){return el('li',{text:t});}))]));}
+  if(FG.outreach||FG.posts)lib('groupextra',{title:'Messages to admins, and posts that give before they ask',why:'',items:(FG.outreach||[]).map(function(o){return {title:o.title,body:o.body};}).concat((FG.posts||[]).map(function(o){return {title:o.title,meta:o.fits||'',body:o.body,link:o.link||''};}))});
+
+  // builder studio
+  (SU.done||[]).forEach(function(t){document.getElementById('setupDone').appendChild(el('li',{},[el('b',{text:'✓'}),el('span',{text:t})]));});
+  (SU.checklist||[]).forEach(function(t){document.getElementById('setupCheck').appendChild(el('li',{text:t}));});
+  (SU.workflows||[]).forEach(function(w){var steps=el('ol',{style:'margin:0;padding-left:20px;font-size:13.5px;display:flex;flex-direction:column;gap:5px'},w.steps.map(function(t){return el('li',{text:t});}));
+    document.getElementById('setupWf').appendChild(el('div',{class:'item'},[el('h3',{text:w.name}),el('div',{class:'meta',text:w.purpose}),el('div',{style:'font-size:13.5px'},[el('b',{text:'Trigger: '}),w.trigger]),
+      w.settings?el('div',{class:'meta',text:w.settings}):null,steps,w.exits.length?el('div',{style:'font-size:13px'},[el('b',{text:'Ends when: '}),w.exits.join('; ')]):null,w.notes?el('div',{class:'notes',text:w.notes}):null]));});
+  var slb=document.querySelector('#setupLists tbody');(SU.lists||[]).forEach(function(x){slb.appendChild(el('tr',{},[el('td',{class:'chan',text:x.name}),el('td',{},[el('ul',{style:'margin:0;padding-left:18px'},x.filters.map(function(f){return el('li',{text:f});}))]),el('td',{text:x.used_by})]));});
+  var ssb=document.querySelector('#setupSends tbody');(SU.sends||[]).forEach(function(x){ssb.appendChild(el('tr',{},[el('td',{class:'d',text:x.when+', '+x.time}),el('td',{text:x.channel}),el('td',{},[el('b',{text:x.template}),el('div',{class:'muted',style:'font-size:12px',text:x.preview})]),el('td',{text:x.to}),el('td',{},[el('span',{class:'pill '+(x.hold?'hold':'ok'),text:x.hold?'Hold':'Ready'})])]));});
 
   // downloads: the downloads capability when granted, otherwise open the file in a new tab
   function wireDownloads(){dlReady.then(function(){dlBtns.forEach(function(b){if(b.dataset.wired)return;b.dataset.wired='1';

@@ -61,11 +61,22 @@ for e in em["emails"]:
     e["q"] = qref(e["hold"]) if e["hold"] else 0
 lists = {k: clean(v["items"], skip=("How to post",)) for k, v in
          {"social": org["social"], "gbp": org["gbp"], "youtube": org["youtube"], "portals": org["portals"], "community": org["community"]}.items()}
-lists.update({k: clean(dr[k]["items"]) for k in ("sms", "sales", "followups", "website", "events")})
+lists.update({k: clean(dr[k]["items"]) for k in ("sms", "sales", "followups", "nurture", "website", "events")})
+ev_path = f"{C}/events/events.json"
+lists["eventsSeries"] = []
+if os.path.exists(ev_path):
+    for e in json.load(open(ev_path))["events"]:
+        rides = ", ".join(r["email"].upper() for r in e.get("rides_in", []))
+        body = "\n".join(e.get("what", []))
+        body += "\n\nInvitations: " + (f"a short block in email {rides}, " if rides else "") + "social posts, a Facebook event, the Google profile, " + ("Nextdoor, " if e.get("nextdoor") else "") + "a personal invitation from each consultant, and a reminder text the day before to people who RSVP."
+        if e.get("extra_texts"):
+            body += " Plus one invitation text: " + e["extra_texts"][0]["body"]
+        body += "\n\nWhat Mitchell confirms: " + "; ".join(e.get("confirm", []))
+        lists["eventsSeries"].append({"title": e["name"], "meta": f"{e['date']} · {e['time']} · {e.get('where', '')}", "body": body, "link": "", "hold": False, "q": 14})
 for k, items in lists.items():
     for it in items:
-        it["q"] = qref(it["notes"]) if it["hold"] else 0
-        del it["notes"]
+        if "notes" in it: it["q"] = qref(it["notes"]) if it["hold"] else 0
+        it.pop("notes", None)
 ranking = [{"title": it["title"], "meta": it.get("meta", ""), "body": it["body"]} for it in org["summary"]["items"]]
 
 os.makedirs(f"{OUT}/cadence", exist_ok=True)

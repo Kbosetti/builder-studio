@@ -11,7 +11,7 @@ const fs = require('fs'), path = require('path');
   for (const j of jobs) {
     const url = /^https?:/.test(j.src) ? j.src : 'file://' + path.resolve(j.src);
     let broken = [];
-    for (let t = 0; t < 3; t++) {
+    for (let t = 0; t < (j.tries || 3); t++) {
       const ctx = await browser.newContext({ viewport: { width: j.width || 1280, height: j.height || 900 }, deviceScaleFactor: j.scale || 1.5, ignoreHTTPSErrors: true });
       const p = await ctx.newPage();
       await p.goto(url, { waitUntil: 'load', timeout: 60000 }).catch(() => {});

@@ -77,7 +77,10 @@ for rd in ("landing/README.md", "README.md", "popup/README.md"):
     if os.path.exists(f"{W}/{rd}"):
         web["readme"] += open(f"{W}/{rd}").read() + "\n\n"
 
-DATA = {"emails": em, "organic": organic, "direct": direct, "prints": prints, "sig_html": sig_html, "web": web}
+def opt(path):
+    return json.load(open(path)) if os.path.exists(path) else None
+DATA = {"emails": em, "organic": organic, "direct": direct, "prints": prints, "sig_html": sig_html, "web": web,
+        "events": opt(f"{C}/events/events.json"), "groups": opt(f"{C}/traffic/facebook_groups.json"), "setup": opt(f"{C}/builder_studio/setup.json")}
 data = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
 page = open(f"{HERE}/page.html").read().replace("/*DATA*/null", data)
 if re.search(r"[–—]", page):

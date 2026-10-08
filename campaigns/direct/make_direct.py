@@ -85,6 +85,22 @@ followups = [
   "body": "Subject: Clients with land\n\nHi [first name],\n\nFollowing up on Mitchell's note this week. If you have a client who owns land, or is about to buy some, we would love to help them build on it: zero down, zero closing costs and no construction loan, and every home starts with $5,000 in Design Dollars, up to $25,000.\n\nHappy to meet for coffee or set up a call with your client. [Realtor incentive terms, once Mitchell confirms them.]" + SIG + FINE,
   "notes": "Waits on the realtor incentive terms (question 11)."},
 ]
+nurture_texts = [
+ ("Day 2 · every quiet lead", "Hi {{contact.first_name}}, this is {{user.first_name}} with Mitchell Homes. Still thinking about building? Reply 1 for this year, 2 for next year, or 3 for someday.", ""),
+ ("Day 19 · quiet leads who took the Home Portrait", "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell Homes. Your {{contact.portrait_name}} is saved. Want to see what it would take to build it? Just reply.", ""),
+ ("Day 19 · quiet leads who have not taken it", "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell. Answer 8 questions about your dream home and we paint your Home Portrait: [trigger link]", QUIZ),
+ ("Day 45 · quiet leads who own land", "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell. A short Behind the Build episode on how building on your land works: [trigger link]", "https://www.youtube.com/watch?v=HEqg3pcNJkk"),
+ ("Day 45 · quiet leads still looking for land", "Hi {{contact.first_name}}, {{user.first_name}} with Mitchell. A short Behind the Build episode on buying land for a home: [trigger link]", "https://www.youtube.com/watch?v=trgJ8maymOA"),
+]
+nitems = []
+for when_, text, url in nurture_texts:
+    est = text.replace("{{contact.first_name}}", "Jennifer").replace("{{user.first_name}}", "Melissa").replace("{{contact.portrait_name}}", "Landowner's Portrait").replace("[trigger link]", "xxxxxxx.xx/xxxxxx")
+    full = est + " Reply STOP to opt out"
+    if len(full) > 160: sys.exit(f"nurture text too long ({len(full)}): {when_}")
+    nitems.append({"title": "Nurture text, " + when_.split(" · ")[0], "meta": when_ + f" · Builder Studio workflow text · about {len(full)} of 160 characters with a typical name",
+                   "body": text + " Reply STOP to opt out", "link": u(url, "sms", "sms", "fall26_nurture", "nurture_" + when_.split(" ")[1]) if url.startswith("https://mitchell") else url,
+                   "notes": "Only with text consent. Any reply ends the sequence and alerts the consultant."})
+sections.append({"id": "nurture", "title": "Quiet lead nurture texts", "why": "Short texts with a question to answer get replies that emails do not; any reply hands the lead straight back to a person.", "items": nitems})
 sections.append({"id": "followups", "title": "Sales team follow ups", "why": "Marketing starts the conversation; a person finishes it. Each follow up fires on what the buyer just did, in the consultant's own voice.", "items": followups})
 
 web = [

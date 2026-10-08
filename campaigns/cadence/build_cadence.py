@@ -56,7 +56,7 @@ em = json.load(open(f"{C}/email/out/emails.json"))
 for e in em["emails"]:
     shutil.copy(f"{C}/kit/out/email/{e['id']}.jpg", f"{OUT}/email/{e['id']}.jpg")
     files.append(f"email/{e['id']}.jpg")
-    camp = {"designdollars": "dd", "portrait": "hp", "fourbuyers": "fb", "partners": "ref"}[e["series"]]
+    camp = {"designdollars": "dd", "portrait": "hp", "fourbuyers": "fb", "partners": "ref", "nurture": "all"}[e["series"]]
     ev.append({"d": when(e["send"]), "ch": "Email", "camp": camp, "title": e["subject"], "aud": e["segment"], "who": "Marketing",
                "body": "Preview text: " + e["preview"], "img": f"email/{e['id']}.jpg", "hold": e["hold"], "tag": e["id"].upper()})
 
@@ -125,10 +125,34 @@ setup = [("Website pop-up, announcement bar and thank you pages", "Website vendo
 for t, who in setup:
     ev.append({"d": START, "ch": "Setup", "camp": "all", "title": t, "aud": "One time, the first week", "who": who, "body": "Everything for this is in the approval document and the traffic kit.", "hold": ""})
 
+ep = f"{C}/events/events.json"
+if os.path.exists(ep):
+    SCHED = {"e1": (date(2026, 10, 24), date(2026, 10, 22), date(2026, 10, 23)), "e2": (date(2026, 10, 27), None, date(2026, 10, 26)),
+             "e3": (date(2026, 11, 7), date(2026, 11, 5), date(2026, 11, 6)), "e4": (date(2026, 11, 14), date(2026, 11, 12), date(2026, 11, 13)),
+             "e5": (date(2026, 11, 12), None, date(2026, 11, 11)), "e6": (date(2026, 11, 18), date(2026, 11, 11), date(2026, 11, 17))}
+    camp_of = {"e1": "dd", "e2": "dd", "e3": "fb", "e4": "all", "e5": "hp", "e6": "ref"}
+    replaced = {(date(2026, 10, 22), "Design Dollars: personal email to active leads"), (date(2026, 11, 5), "Landowners: personal text to active leads")}
+    ev = [x for x in ev if (x["d"], x["title"]) not in replaced]
+    for e in json.load(open(ep))["events"]:
+        day, inv, rem = SCHED.get(e["id"], (None, None, None))
+        cp = camp_of.get(e["id"], "all")
+        ev.append({"d": day, "ch": "Event", "camp": cp, "title": e["name"], "aud": e.get("audience", ""), "who": e.get("where", ""),
+                   "body": "\n".join(e.get("what", [])) + ("\n\nWhen: " + e["date"] + ", " + e["time"]), "notes": "Mitchell confirms: " + "; ".join(e.get("confirm", [])), "hold": "Proposal"})
+        if inv and e.get("invite_text"):
+            ev.append({"d": inv, "ch": "Sales team", "camp": cp, "title": f"Invite to {e['name']}", "aud": "Each consultant's own active leads" if e["id"] != "e6" else "Agents each consultant knows",
+                       "who": "New Home Consultants", "body": e["invite_text"] + ("\n\nEmail version: " + e["invite_email"]["subject"] if e.get("invite_email") else ""), "hold": ""})
+        if rem and e.get("reminder_text"):
+            ev.append({"d": rem, "ch": "Text", "camp": cp, "title": f"Reminder: {e['name']}", "aud": "Only people who RSVPed", "who": "Builder Studio workflow", "body": e["reminder_text"], "hold": ""})
+        for x in e.get("extra_texts", []):
+            ev.append({"d": when(x["date"]), "ch": "Text", "camp": cp, "title": f"Invitation: {e['name']}", "aud": x.get("audience", ""), "who": "Marketing", "body": x["body"], "hold": ""})
+        for i, x in enumerate(e.get("social", [])):
+            d2 = when(x.get("date", ""))
+            if d2:
+                ev.append({"d": d2, "ch": "Social", "camp": cp, "title": f"Event: {e['name']}", "aud": x.get("channels", ""), "who": "Marketing", "body": x["body"], "link": x.get("link", ""), "hold": ""})
 ev = [x for x in ev if x["d"] and START <= x["d"] < START + timedelta(days=7 * WEEKS)]
 for x in ev:
     x["d"] = x["d"].isoformat()
-ev.sort(key=lambda x: (x["d"], ["Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "YouTube"].index(x["ch"]) if x["ch"] in ["Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "YouTube"] else 9))
+ev.sort(key=lambda x: (x["d"], ["Event", "Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "YouTube"].index(x["ch"]) if x["ch"] in ["Event", "Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "YouTube"] else 9))
 playbook = [{"title": i["title"], "meta": i["meta"], "body": i["body"], "notes": clean(i.get("notes", ""))} for i in dr["followups"]["items"]]
 
 data = {"start": START.isoformat(), "weeks": WEEKS, "events": ev, "playbook": playbook}

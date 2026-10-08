@@ -85,7 +85,7 @@ table.load{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;fo
 .ev .c{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .ev .n{font-size:12.5px;font-weight:600;line-height:1.3;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .ev .h{align-self:flex-start;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;background:var(--hold-bg);color:var(--hold);border-radius:999px;padding:1px 7px;margin-top:2px}
-.ev.dd{border-left-color:var(--c-dd)} .ev.hp{border-left-color:var(--c-hp)} .ev.fb{border-left-color:var(--c-fb)} .ev.ref{border-left-color:var(--c-ref)}
+.ev.event{background:var(--hold-bg)} .ev.dd{border-left-color:var(--c-dd)} .ev.hp{border-left-color:var(--c-hp)} .ev.fb{border-left-color:var(--c-fb)} .ev.ref{border-left-color:var(--c-ref)}
 .none{font-size:14px;color:var(--muted)}
 
 .plays{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
@@ -189,7 +189,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
 (function(){
   var D=/*DATA*/null;
   var CAMPS={dd:'Design Dollars',hp:'Home Portrait',fb:'Four Buyers',ref:'Realtors and homeowners',all:'All campaigns'};
-  var CHANS=['Email','Text','Sales team','Social','Google','Nextdoor','YouTube','Setup'];
+  var CHANS=['Event','Email','Text','Sales team','Social','Google','Nextdoor','YouTube','Setup'];
   var THEMES=['Launch: Design Dollars to the database, the Home Portrait to engaged contacts','Spend and add, and the land question','Deadline week: reserve by October 31, and the Four Buyers ads begin','Landowners: your land can be your down payment','Without the unknowns, and the getaway portrait','No construction loan, and one appointment'];
   function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(a[k]==null)continue;if(k==='text')e.textContent=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c!=null&&c!==false)e.appendChild(typeof c==='string'?document.createTextNode(c):c);});return e;}
   function day(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
@@ -239,7 +239,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
       for(var d=0;d<7;d++){var dt=new Date(s);dt.setDate(s.getDate()+d);var iso=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
         var list=D.events.filter(function(e){return e.d===iso&&(fc==='all'||e.camp===fc)&&(fh==='all'||e.ch===fh);});count+=list.length;
         var cell=el('div',{class:'day'+(list.length?'':' empty')},[el('div',{class:'dl',text:fmtD.format(dt)})]);
-        list.forEach(function(e){var b=el('button',{type:'button',class:'ev '+e.camp,'aria-label':e.ch+': '+e.title},[el('span',{class:'c',text:e.ch}),el('span',{class:'n',text:e.title}),e.hold?el('span',{class:'h',text:'Hold'}):null]);
+        list.forEach(function(e){var b=el('button',{type:'button',class:'ev '+e.camp+(e.ch==='Event'?' event':''),'aria-label':e.ch+': '+e.title},[el('span',{class:'c',text:e.ch}),el('span',{class:'n',text:e.title}),e.hold?el('span',{class:'h',text:e.ch==='Event'?'Proposal':'Hold'}):null]);
           b.onclick=function(){open(e,b);};cell.appendChild(b);});
         grid.appendChild(cell);}
       if(!count)return;any=true;

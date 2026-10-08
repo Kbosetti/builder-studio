@@ -1,0 +1,14 @@
+Hi {{contact.first_name}},
+
+I do not want to fill your inbox, so this is my last note for a while.
+
+If building is still on your list, reply yes and I will reach out at a time that works for you. If the timing is not right, reply later and I will check back in the spring.
+
+Either way, thank you for thinking of Mitchell.
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}
