@@ -1,0 +1,442 @@
+<title>Mitchell Fall Campaign Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+@font-face{font-family:"Charlotte";src:url(%%charlotte%%) format("woff2");font-display:block}
+/* Layout: deep green masthead, a sticky jump bar, then one section per campaign in running order, ending with the landing page directory. */
+:root{
+  --bg:#faf8f3; --surface:#ffffff; --ink:#1e4f33; --muted:#566a5d; --line:#e2e5da;
+  --accent:#2b6d47; --on-accent:#ffffff; --sun:#f5d053; --on-sun:#1e4f33;
+  --band:#1e4f33; --on-band:#ffffff; --band-muted:#cfe0d4;
+  --live-bg:#dcefe2; --live-ink:#1e5a37; --soon-bg:#fff1c2; --soon-ink:#6b4f00;
+  --shade:rgba(16,44,28,.14); --scrim:rgba(10,24,16,.86);
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --script:"Charlotte","Brush Script MT",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111914; --surface:#18221c; --ink:#e6eee8; --muted:#a2b2a7; --line:#2a382f;
+  --accent:#86c9a1; --on-accent:#0f1a13; --band:#173b27; --on-band:#ffffff; --band-muted:#b9cfc0;
+  --live-bg:#1d3a28; --live-ink:#9fdcb6; --soon-bg:#3a3010; --soon-ink:#f5d98a;
+  --shade:rgba(0,0,0,.45); --scrim:rgba(0,0,0,.88); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111914; --surface:#18221c; --ink:#e6eee8; --muted:#a2b2a7; --line:#2a382f;
+  --accent:#86c9a1; --on-accent:#0f1a13; --band:#173b27; --on-band:#ffffff; --band-muted:#b9cfc0;
+  --live-bg:#1d3a28; --live-ink:#9fdcb6; --soon-bg:#3a3010; --soon-ink:#f5d98a;
+  --shade:rgba(0,0,0,.45); --scrim:rgba(0,0,0,.88); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6}
+a{color:var(--accent)}
+p{margin:0}
+h1,h2,h3{margin:0;text-wrap:balance}
+h2{font-size:clamp(24px,3.6vw,32px);font-weight:800;line-height:1.15}
+h3{font-size:16px;font-weight:700}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted);font-size:16px}
+
+/* masthead */
+.mast{background:var(--band);color:var(--on-band)}
+.mast .wrap{padding-block:36px 40px;display:flex;flex-direction:column;gap:14px}
+.mast img{width:150px;height:auto}
+.mast .eyebrow{color:var(--sun)}
+.mast h1{font-size:clamp(34px,6vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.01em}
+.mast h1 .s{font-family:var(--script);font-weight:400;color:var(--sun);font-size:1.45em;line-height:.6;letter-spacing:0;padding-left:.08em}
+.mast p{color:var(--band-muted);font-size:17px;max-width:52ch}
+.mast .stamp{font-size:13px;font-weight:600;color:var(--band-muted)}
+
+/* jump bar */
+.jump{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.jump .wrap{display:flex;gap:8px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+.jump .wrap::-webkit-scrollbar{display:none}
+.jump a{flex:none;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.jump a:hover{border-color:var(--accent)}
+
+main.wrap{padding-block:40px 56px;display:flex;flex-direction:column;gap:64px}
+section{display:flex;flex-direction:column;gap:18px;min-width:0}
+.head{display:flex;flex-direction:column;gap:8px}
+.headrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.pill.live{background:var(--live-bg);color:var(--live-ink)}
+.pill.soon{background:var(--soon-bg);color:var(--soon-ink)}
+
+/* running order */
+.order{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:step}
+.step{position:relative;display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.step:hover{border-color:var(--accent)}
+.step .n{width:38px;height:38px;border-radius:50%;background:var(--sun);color:var(--on-sun);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.step .stage{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.step h3{font-size:19px}
+.step .pill{align-self:flex-start}
+.step:not(:last-child)::after{content:"";position:absolute;top:38px;right:-14px;width:14px;height:2px;background:var(--line)}
+.callout{display:flex;flex-direction:column;gap:4px;padding:14px 18px;border-left:4px solid var(--sun);background:var(--surface);border-radius:0 12px 12px 0}
+.callout b{font-size:16px}
+
+/* actions and facts */
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.b{font:inherit;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;text-decoration:none;cursor:pointer;border:1.5px solid var(--accent);background:transparent;color:var(--accent)}
+.b.primary{background:var(--accent);color:var(--on-accent)}
+.b svg{width:14px;height:14px;flex:none}
+.b:hover{filter:brightness(1.08)}
+.facts{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.facts div{display:flex;flex-wrap:wrap;gap:4px 8px}
+.facts dt,.facts b{font-weight:700}
+.facts a{font-weight:600;overflow-wrap:anywhere}
+
+/* image strips */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.strip.sq{grid-auto-columns:minmax(150px,1fr)}
+.tile{scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;min-width:0;padding:0;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:zoom-in}
+.tile img{display:block;width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;box-shadow:0 2px 10px var(--shade)}
+.strip.sq .tile img{aspect-ratio:1}
+.tile span{font-size:13px;font-weight:600}
+.tile:hover img{outline:2px solid var(--accent);outline-offset:2px}
+.hint{font-size:13px;color:var(--muted)}
+
+/* buyer tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tab{font:inherit;font-size:14px;font-weight:700;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+
+/* offer */
+.offer{background:var(--band);color:var(--on-band);border-radius:16px;padding:22px 24px;display:flex;flex-direction:column;gap:6px}
+.offer strong{font-size:clamp(18px,2.4vw,22px);font-weight:800;line-height:1.3}
+.offer strong em{font-style:normal;color:var(--sun)}
+.offer small{color:var(--band-muted);font-size:13px}
+
+/* on your land */
+.sets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.set{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.set:hover{border-color:var(--accent)}
+.set .eyebrow{font-size:11px}
+.set h3{font-size:19px}
+.set .path{font-size:14px;font-weight:600;color:var(--accent);overflow-wrap:anywhere}
+.states{display:flex;flex-wrap:wrap;gap:8px}
+.states span{font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+
+/* older campaigns */
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.col{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.col li{display:flex;flex-direction:column;gap:2px;padding-top:12px;border-top:1px solid var(--line);font-size:14px}
+.col li:first-child{padding-top:0;border-top:0}
+.col li b{font-size:15px}
+.col li a{overflow-wrap:anywhere;font-weight:600}
+.tbd{color:var(--muted);font-style:italic}
+
+/* landing pages */
+.dir{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.group{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 18px 10px;min-width:0}
+.group h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding:12px 0 6px}
+.row{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.row .nm{flex:1;min-width:0;display:flex;flex-direction:column}
+.row .nm b{font-size:14px;font-weight:700}
+.row .nm code{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted);overflow-wrap:anywhere}
+.row .acts{display:flex;gap:6px;flex:none}
+.sm{font:inherit;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);text-decoration:none;cursor:pointer;white-space:nowrap}
+.sm.go{background:var(--accent);color:var(--on-accent)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:22px 36px;font-size:13px;color:var(--muted)}
+
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
+/* viewer */
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;margin:0}
+dialog::backdrop{background:var(--scrim)}
+.lb{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px}
+.lb img{max-width:min(640px,100%);max-height:calc(100% - 90px);width:auto;height:auto;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lb .cap{color:#fff;font-size:14px;font-weight:600;text-align:center}
+.lb .ctl{display:flex;gap:10px}
+.lb button{font:inherit;font-size:14px;font-weight:700;padding:9px 16px;border-radius:999px;border:0;background:#f5d053;color:#1e4f33;cursor:pointer}
+.lb button.x{background:#ffffff}
+
+@media (max-width:760px){
+  .order,.sets,.cols,.dir{grid-template-columns:minmax(0,1fr)}
+  .step:not(:last-child)::after{top:auto;bottom:-14px;right:auto;left:38px;width:2px;height:14px}
+  .strip{grid-auto-columns:minmax(150px,44%)}
+}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <img src="%%img:mitchell-logo-white.png%%" alt="Mitchell Homes" width="150" height="69">
+    <span class="eyebrow">Mitchell Homes · Sales team</span>
+    <h1>Fall Campaign <span class="s">Guide</span></h1>
+    <p>Every campaign, every deck, and every live landing page in one place.</p>
+    <span class="stamp">Updated October 8, 2026</span>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections">
+  <div class="wrap">
+    <a href="#order">Running order</a>
+    <a href="#portrait">Home Portrait</a>
+    <a href="#buyers">Four Buyers</a>
+    <a href="#dollars">Design Dollars</a>
+    <a href="#land">On Your Land</a>
+    <a href="#older">Older campaigns</a>
+    <a href="#pages">Landing pages</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="order">
+    <div class="head">
+      <span class="eyebrow">How a buyer meets us</span>
+      <h2>Three campaigns, one running order</h2>
+    </div>
+    <div class="order">
+      <a class="step" href="#portrait"><span class="n">1</span><span class="stage">Discover</span><h3>The Home Portrait</h3><span class="pill live">Running now</span></a>
+      <a class="step" href="#buyers"><span class="n">2</span><span class="stage">Believe</span><h3>The Four Buyers</h3><span class="pill soon">Launches late October</span></a>
+      <a class="step" href="#dollars"><span class="n">3</span><span class="stage">Decide</span><h3>Mitchell Design Dollars</h3><span class="pill live">Live now</span></a>
+    </div>
+    <div class="callout">
+      <b>One offer per contract, never both.</b>
+      <span class="muted">Plus the <a href="#land">On Your Land test</a>, running now for buyers who own land in all four states.</span>
+    </div>
+  </section>
+
+  <section id="portrait">
+    <div class="head">
+      <div class="headrow"><span class="eyebrow">Campaign 1 · Discover</span><span class="pill live">Running now</span></div>
+      <h2>The Home Portrait</h2>
+      <p class="lede">The ads, the eight-question quiz, the nine portraits, Design Dollars, and what lands on your desk. Speaker notes are in the deck.</p>
+    </div>
+    <div class="btns">
+      <a class="b primary" href="https://docs.google.com/presentation/d/1rgvYZhl3NFwzNBPATiOTZAhrSwT8koYz5PETDbKyxXs/edit" target="_blank" rel="noopener">Open the 24-slide deck %%ext%%</a>
+      <a class="b" href="https://mitchellhomesliving.com/portrait" target="_blank" rel="noopener">Take the quiz %%ext%%</a>
+      <a class="b" href="https://claude.ai/artifact/MVB65BDPo5Zr9zCLJPpaft" target="_blank" rel="noopener">Open the ad kit %%ext%%</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Quiz:</dt><dd style="margin:0"><a href="https://mitchellhomesliving.com/portrait" target="_blank" rel="noopener">mitchellhomesliving.com/portrait</a></dd></div>
+      <div><dt>Ad kit:</dt><dd style="margin:0">4 reels, 4 static ads and 2 carousels, with Meta copy</dd></div>
+    </dl>
+    <div class="head">
+      <h3>The ads in the feed</h3>
+      <p class="hint">One ad for each kind of buyer. Every ad sends them to the quiz. Tap an ad to see it larger.</p>
+    </div>
+    <div class="strip" data-group="portrait">
+      <button class="tile" type="button"><img src="%%img:portrait-value-unlocker.jpg%%" alt="Value Unlocker ad: What would you build on your land?"><span>Value Unlocker</span></button>
+      <button class="tile" type="button"><img src="%%img:portrait-grounded-dreamer.jpg%%" alt="Grounded Dreamer ad: Every home is a portrait. Discover yours."><span>Grounded Dreamer</span></button>
+      <button class="tile" type="button"><img src="%%img:portrait-transitioner.jpg%%" alt="Transitioner ad: Your family is growing. What comes next?"><span>Transitioner</span></button>
+      <button class="tile" type="button"><img src="%%img:portrait-land-seeker.jpg%%" alt="Land Seeker ad: No land yet? Start with the dream."><span>Land Seeker</span></button>
+      <button class="tile" type="button"><img src="%%img:portrait-gathering-place.jpg%%" alt="Gathering Place ad: The getaway you keep promising yourselves. See it."><span>Gathering Place</span></button>
+    </div>
+  </section>
+
+  <section id="buyers">
+    <div class="head">
+      <div class="headrow"><span class="eyebrow">Campaign 2 · Believe</span><span class="pill soon">Launches late October</span></div>
+      <h2>The Four Buyers</h2>
+      <p class="lede">Value Unlocker, Planner, Transitioner and Grounded Dreamer. Why each one stalled, and the five-card carousel that answers it.</p>
+    </div>
+    <div class="btns">
+      <a class="b primary" href="https://www.canva.com/d/K8Gwl0EpE_sIj9J" target="_blank" rel="noopener">Open the deck in Canva %%ext%%</a>
+      <a class="b" href="https://claude.ai/artifact/WmTeQwqh1MfEijU9UqT9bB" target="_blank" rel="noopener">Watch the reels %%ext%%</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Reels:</dt><dd style="margin:0">One video per buyer, with Meta copy. Carolinas versions for Raleigh and Wilmington are in progress.</dd></div>
+    </dl>
+    <div class="head">
+      <h3>The carousels</h3>
+      <p class="hint">Pick a buyer to see their five cards in order. Tap a card to see it larger.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Buyer">
+      <button class="tab" type="button" role="tab" id="t-vu" aria-controls="p-vu" aria-selected="true">Value Unlocker</button>
+      <button class="tab" type="button" role="tab" id="t-pl" aria-controls="p-pl" aria-selected="false">Planner</button>
+      <button class="tab" type="button" role="tab" id="t-tr" aria-controls="p-tr" aria-selected="false">Transitioner</button>
+      <button class="tab" type="button" role="tab" id="t-gd" aria-controls="p-gd" aria-selected="false">Grounded Dreamer</button>
+    </div>
+    <div class="strip sq" role="tabpanel" id="p-vu" aria-labelledby="t-vu" data-group="vu">
+      <button class="tile" type="button"><img src="%%img:buyers-value-unlocker-1.jpg%%" alt="Card 1: Your land is worth more than you think"><span>Card 1</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-value-unlocker-2.jpg%%" alt="Card 2: Acreage you own is equity you hold"><span>Card 2</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-value-unlocker-3.jpg%%" alt="Card 3: Your land can be your down payment"><span>Card 3</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-value-unlocker-4.jpg%%" alt="Card 4: No surprise charges in month four"><span>Card 4</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-value-unlocker-5.jpg%%" alt="Card 5: Up to $25,000 in Mitchell Design Dollars"><span>Card 5</span></button>
+    </div>
+    <div class="strip sq" role="tabpanel" id="p-pl" aria-labelledby="t-pl" data-group="pl" hidden>
+      <button class="tile" type="button"><img src="%%img:buyers-planner-1.jpg%%" alt="Card 1: A custom home on your land, without the unknowns"><span>Card 1</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-planner-2.jpg%%" alt="Card 2: Start with 40 home plans, not a blank page"><span>Card 2</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-planner-3.jpg%%" alt="Card 3: Every choice priced before we build"><span>Card 3</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-planner-4.jpg%%" alt="Card 4: You hear from us every week"><span>Card 4</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-planner-5.jpg%%" alt="Card 5: Up to $25,000 in Mitchell Design Dollars"><span>Card 5</span></button>
+    </div>
+    <div class="strip sq" role="tabpanel" id="p-tr" aria-labelledby="t-tr" data-group="tr" hidden>
+      <button class="tile" type="button"><img src="%%img:buyers-transitioner-1.jpg%%" alt="Card 1: No construction loan to build on your land"><span>Card 1</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-transitioner-2.jpg%%" alt="Card 2: Mitchell funds your build, not a bank"><span>Card 2</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-transitioner-3.jpg%%" alt="Card 3: Your land can be your down payment"><span>Card 3</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-transitioner-4.jpg%%" alt="Card 4: A finished home on the land you already own"><span>Card 4</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-transitioner-5.jpg%%" alt="Card 5: Up to $25,000 in Mitchell Design Dollars"><span>Card 5</span></button>
+    </div>
+    <div class="strip sq" role="tabpanel" id="p-gd" aria-labelledby="t-gd" data-group="gd" hidden>
+      <button class="tile" type="button"><img src="%%img:buyers-grounded-dreamer-1.jpg%%" alt="Card 1: Your dream home has a folder, not a date"><span>Card 1</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-grounded-dreamer-2.jpg%%" alt="Card 2: 40 plans and 40,000 ways to make it yours"><span>Card 2</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-grounded-dreamer-3.jpg%%" alt="Card 3: Built on the land you already own"><span>Card 3</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-grounded-dreamer-4.jpg%%" alt="Card 4: It starts with one appointment"><span>Card 4</span></button>
+      <button class="tile" type="button"><img src="%%img:buyers-grounded-dreamer-5.jpg%%" alt="Card 5: Up to $25,000 in Mitchell Design Dollars"><span>Card 5</span></button>
+    </div>
+  </section>
+
+  <section id="dollars">
+    <div class="head">
+      <div class="headrow"><span class="eyebrow">Campaign 3 · Decide</span><span class="pill live">Live now</span></div>
+      <h2>Mitchell Design Dollars</h2>
+      <p class="lede">The offer, the campaign line, the landing page, the ads, and how we talk about it.</p>
+    </div>
+    <div class="offer">
+      <strong>Every Mitchell home starts with <em>$5,000</em> in Design Dollars, up to <em>$25,000</em>.</strong>
+      <small>Design Center selections only. Not applied to base price. No cash value.</small>
+    </div>
+    <div class="btns">
+      <a class="b primary" href="https://docs.google.com/presentation/d/1sjEvpEUZiOca0dku11gc269_FKty_JeqGrECJnT2dPY/edit" target="_blank" rel="noopener">Open the deck %%ext%%</a>
+      <a class="b" href="https://simplymitchellhomes.com/design-dollars" target="_blank" rel="noopener">View the landing page %%ext%%</a>
+      <a class="b" href="https://claude.ai/artifact/K1qsQS9kHUxgXwoDpVhVAF" target="_blank" rel="noopener">Watch the reels %%ext%%</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Reels:</dt><dd style="margin:0">Design Dollars ad kit with video ads and Meta copy</dd></div>
+    </dl>
+    <div class="head">
+      <h3>The ads in the feed</h3>
+      <p class="hint">Tap an ad to see it larger.</p>
+    </div>
+    <div class="strip" data-group="dollars">
+      <button class="tile" type="button"><img src="%%img:dd-your-land.jpg%%" alt="It is your land. Make it your home. Up to $25,000 in Mitchell Design Dollars."><span>It is your land</span></button>
+      <button class="tile" type="button"><img src="%%img:dd-sign-now.jpg%%" alt="Sign now. Choose your finishes later. Up to $25,000 in Mitchell Design Dollars."><span>Sign now, choose later</span></button>
+      <button class="tile" type="button"><img src="%%img:dd-every-choice.jpg%%" alt="Every choice in it is yours. Up to $25,000 in Mitchell Design Dollars."><span>Every choice is yours</span></button>
+      <button class="tile" type="button"><img src="%%img:dd-personalize.jpg%%" alt="The more you personalize, the more we cover. Tiers from $5,000 to $25,000."><span>The more you personalize</span></button>
+    </div>
+  </section>
+
+  <section id="land">
+    <div class="head">
+      <div class="headrow"><span class="eyebrow">Meta test · All four states</span><span class="pill live">Running now</span></div>
+      <h2>On Your Land</h2>
+      <p class="lede">Two ad sets that say where Mitchell builds and that we build on the buyer’s land. Anyone outside our four states is filtered out before they reach you.</p>
+    </div>
+    <div class="sets">
+      <a class="set" href="https://simplymitchellhomes.com/onyourland" target="_blank" rel="noopener"><span class="eyebrow">Ad set A</span><h3>We build on your land</h3><span class="path">simplymitchellhomes.com/onyourland</span></a>
+      <a class="set" href="https://simplymitchellhomes.com/yourplan" target="_blank" rel="noopener"><span class="eyebrow">Ad set B</span><h3>Your plan. On your land.</h3><span class="path">simplymitchellhomes.com/yourplan</span></a>
+    </div>
+    <div class="callout">
+      <b>Every lead answers “Where will you build?”</b>
+      <div class="states" aria-label="Answer choices"><span>Virginia</span><span>North Carolina</span><span>South Carolina</span><span>Southern Maryland</span></div>
+    </div>
+  </section>
+
+  <section id="older">
+    <div class="head">
+      <div class="headrow"><span class="eyebrow">Set up by the previous agency</span><span class="pill live">Still running</span></div>
+      <h2>Older Meta and Google campaigns</h2>
+      <p class="lede">All still live. Links get filled in as Affain and White Glove confirm each one.</p>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <h3>Meta (Facebook and Instagram)</h3>
+        <ul>
+          <li><b>Live Outside the Box, Richmond</b><a href="https://resources.mitchellhomesinc.com/richmond-live-outside-the-box/" target="_blank" rel="noopener">resources.mitchellhomesinc.com/richmond-live-outside-the-box</a><span class="muted">Still running next to the On Your Land test</span></li>
+          <li><b>$10,000 incentive campaign</b><span class="muted">Still running</span><span class="tbd">Landing page link to be added</span></li>
+          <li><b>Other active ads</b><span class="tbd">Waiting on the list from Affain</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Google Ads</h3>
+        <ul>
+          <li><b class="tbd">Campaign name to be added</b><span class="tbd">Landing page link to be added</span></li>
+          <li><b class="tbd">Campaign name to be added</b><span class="tbd">Landing page link to be added</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pages">
+    <div class="head">
+      <span class="eyebrow">Home Builder Studio</span>
+      <h2>Every live landing page</h2>
+      <p class="lede">Open any page, or copy its full link to paste into a text or email.</p>
+    </div>
+    <div class="dir">
+      <div class="group">
+        <h3>Four Buyers and Home Portrait</h3>
+        <div id="g-buyers"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+        <div class="group"><h3>Design Dollars</h3><div id="g-dd"></div></div>
+        <div class="group"><h3>On Your Land test</h3><div id="g-oyl"></div></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap">Prepared by CEA Marketing for the Mitchell Homes sales team. Updated October 8, 2026.</div></footer>
+
+<dialog id="lb" aria-label="Ad preview">
+  <div class="lb">
+    <img id="lb-img" alt="">
+    <div class="cap" id="lb-cap"></div>
+    <div class="ctl">
+      <button type="button" id="lb-prev">Previous</button>
+      <button type="button" id="lb-next">Next</button>
+      <button type="button" class="x" id="lb-close">Close</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var SM='https://simplymitchellhomes.com';
+  var PAGES={
+    'g-buyers':[['Home Portrait quiz','https://mitchellhomesliving.com/portrait'],['Your Land',SM+'/land'],['Two Ways to Build',SM+'/math'],['Savings Calculator',SM+'/calculator'],
+      ['Dreamer, VA and MD',SM+'/dreamer'],['Dreamer Carolinas',SM+'/dreamer-carolinas'],['No Land Yet, VA and MD',SM+'/no-land'],['No Land Yet Carolinas',SM+'/no-land-carolinas']],
+    'g-dd':[['Design Dollars',SM+'/design-dollars'],['Design Dollars NHI',SM+'/design-dollars-nhi']],
+    'g-oyl':[['We Build On Your Land',SM+'/onyourland'],['Your Plan. On Your Land.',SM+'/yourplan']]
+  };
+  function el(t,a,txt){var e=document.createElement(t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+  function selectText(n){var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}
+  Object.keys(PAGES).forEach(function(id){
+    var host=document.getElementById(id);
+    PAGES[id].forEach(function(p){
+      var row=el('div',{class:'row'}),nm=el('div',{class:'nm'}),code=el('code',{},p[1].replace('https://',''));
+      nm.appendChild(el('b',{},p[0]));nm.appendChild(code);
+      var acts=el('div',{class:'acts'});
+      var go=el('a',{class:'sm go',href:p[1],target:'_blank',rel:'noopener','aria-label':'Open '+p[0]},'Open');
+      var cp=el('button',{class:'sm',type:'button','aria-label':'Copy link to '+p[0]},'Copy link');
+      cp.addEventListener('click',function(){
+        var done=function(t){cp.textContent=t;setTimeout(function(){cp.textContent='Copy link';},1600);};
+        try{navigator.clipboard.writeText(p[1]).then(function(){done('Copied');},function(){selectText(code);done('Selected');});}
+        catch(e){selectText(code);done('Selected');}
+      });
+      acts.appendChild(go);acts.appendChild(cp);row.appendChild(nm);row.appendChild(acts);host.appendChild(row);
+    });
+  });
+
+  // buyer tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function pick(t,focus){tabs.forEach(function(o){var on=o===t;o.setAttribute('aria-selected',on);o.tabIndex=on?0:-1;document.getElementById(o.getAttribute('aria-controls')).hidden=!on;});if(focus)t.focus();}
+  tabs.forEach(function(t,i){
+    t.tabIndex=i?-1:0;
+    t.addEventListener('click',function(){pick(t);});
+    t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){e.preventDefault();pick(tabs[(i+d+tabs.length)%tabs.length],true);}});
+  });
+
+  // larger view
+  var dlg=document.getElementById('lb'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap'),list=[],at=0,opener=null;
+  function show(){var t=list[at],i=t.querySelector('img');img.src=i.src;img.alt=i.alt;cap.textContent=t.querySelector('span').textContent+'  ·  '+(at+1)+' of '+list.length;}
+  function open(t){list=[].slice.call(t.parentNode.querySelectorAll('.tile'));at=list.indexOf(t);opener=t;show();
+    if(dlg.showModal){try{dlg.showModal();}catch(e){dlg.setAttribute('open','');}}else dlg.setAttribute('open','');}
+  function close(){if(dlg.close)dlg.close();else dlg.removeAttribute('open');}
+  document.querySelectorAll('.tile').forEach(function(t){t.addEventListener('click',function(){open(t);});});
+  document.getElementById('lb-prev').addEventListener('click',function(){at=(at-1+list.length)%list.length;show();});
+  document.getElementById('lb-next').addEventListener('click',function(){at=(at+1)%list.length;show();});
+  document.getElementById('lb-close').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.classList.contains('lb'))close();});
+  dlg.addEventListener('close',function(){if(opener)opener.focus();});
+  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){at=(at+1)%list.length;show();}else if(e.key==='ArrowLeft'){at=(at-1+list.length)%list.length;show();}});
+})();
+</script>
