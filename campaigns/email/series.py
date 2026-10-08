@@ -1,6 +1,6 @@
 """Fall 2026 email series for Mitchell Homes: Design Dollars, Home Portrait, Four Buyers, plus realtor and homeowner emails.
 
-Every line follows campaigns/FACTS.md. Block types: p, list, steps, ladder, covers, quote, grid, offer, cta, small.
+Every line follows campaigns/FACTS.md. Block types: p, list, steps, ladder, covers, quote, grid, offer, cta, small, video (a thumbnail that opens the video; see videos/).
 Rendered by build.py into out/<id>.html (paste into Builder Studio or Lasso) and out/<id>.txt.
 """
 
@@ -59,6 +59,7 @@ SERIES = [
                 "If you own land, your portrait shows how it can carry the build: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.",
                 "If there is family land in the picture, it shows the same path.",
                 "If you are still looking, it shows what you can start on now, before you hold a deed."]},
+            {"t": "video", "v": "cuomo", "text": "See how their land became their home."},
             {"t": "cta", "text": "Take the Quiz", "href": QUIZ},
             {"t": "small", "text": "Eight questions. About 90 seconds."}],
          "financing": True},
@@ -128,6 +129,7 @@ SERIES = [
             {"t": "p", "text": "Most people stall right here. They think every cabinet, countertop and tile has to be settled before they can move forward."},
             {"t": "p", "text": "It does not. Sign now, and your incentive is locked. Your tier is decided later, when you sit down at the Design Center and choose what actually goes in the home."},
             {"t": "p", "text": "When that day comes, you choose in daylight, with the number in front of you, before construction begins. And your reservation deposit is $150. That is all Mitchell receives until closing."},
+            {"t": "video", "v": "ferguson", "text": "Tips from the Ferguson showroom team on choosing selections you will love for years."},
             {"t": "cta", "text": "Book Your Design Center Visit", "href": DD},
             {"t": "small", "text": "Start with a conversation, not a commitment. Tell us where you are building, and an online sales counselor will call you, usually within fifteen minutes."}],
          "dd": True},
@@ -174,6 +176,7 @@ SERIES = [
                 ["Start with a plan that works", "More than 40 floor plans from 1,000 to 3,000 square feet. You are editing a plan that already works, not inventing one and hoping."],
                 ["Every choice priced before we build", "You choose in daylight, with the number in front of you, before construction begins. Your selections are reviewed and signed off at the pre-construction meeting, and then ground breaks."],
                 ["You hear from us every week", "From groundbreaking to move-in, so you never have to wonder where things stand."]]},
+            {"t": "video", "v": "keys", "text": "What happens between signing and the day you get your keys."},
             {"t": "cta", "text": "See How We Build", "href": SMH + "/land"},
             DD_BAND],
          "dd": True},
@@ -188,6 +191,7 @@ SERIES = [
             {"t": "p", "text": "A construction loan usually means a down payment before work starts, two closings, interest while the house goes up, and inspections before every draw. It is the obstacle that ends most builds before they begin."},
             {"t": "p", "text": "With Mitchell there is no construction loan. Mitchell self-funds every build, so there is zero down, zero closing costs and one closing. The land you already own counts toward the home."},
             {"t": "p", "text": "Then comes the part you wanted all along: a finished home on the land you already own."},
+            {"t": "video", "v": "downey", "text": "Hear what building with no construction loan meant to them."},
             {"t": "cta", "text": "See the Math", "href": SMH + "/calculator"},
             DD_BAND],
          "dd": True, "financing": True},
@@ -219,6 +223,7 @@ SERIES = [
                 ["Still yours: finding the lot", "You choose where you want to be. We do not sell land, and we will not tell you where to buy."],
                 ["Ours: everything after that", "The plan, the selections, the permits, the build, and the money that normally has to sit in a construction loan."]]},
             {"t": "p", "text": "You do not have to wait for a deed to begin. Come into a Design Center, walk the plan library, and see what your budget actually buys."},
+            {"t": "video", "v": "land101", "text": "What to look for before you buy land to build on."},
             {"t": "cta", "text": "See How It Works", "href": SMH + "/no-land"},
             {"t": "small", "text": "Want to look around first? Browse more than 40 floor plans at mitchellhomesinc.com.", "href": "https://www.mitchellhomesinc.com/new-homes/floorplans/"},
             DD_BAND],
@@ -245,6 +250,7 @@ SERIES = [
                 "Every Mitchell home starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more your client personalizes.",
                 "Mitchell has a realtor incentive program for referred buyers. Ask us for the current terms."]},
             {"t": "p", "text": "Listing land? Buyers who can picture the home are easier to move. The Home Portrait gives them that picture in about 90 seconds."},
+            {"t": "video", "v": "cuomo", "text": "A client story you can share with buyers who own land."},
             {"t": "cta", "text": "Send Your Client the Home Portrait", "href": QUIZ},
             {"t": "small", "text": "Eight questions, about 90 seconds, and your client sees a painted portrait of their home. Prefer to talk first? Call a New Home Consultant at the numbers below."}],
          "dd": True, "financing": True},
@@ -344,6 +350,7 @@ SERIES = [
                 ["Can my land be my down payment?", "It can. With SimplyMitchell, the land you own counts toward the home, so there is zero down and zero closing costs."],
                 ["Do I need a construction loan?", "No. Mitchell self-funds every build, so there is one closing, no draw period interest and no bank deciding whether your land counts."],
                 ["What will it cost to build on my land?", "It depends on your plan, your selections and your site, including well, septic and clearing. A New Home Consultant can walk your land with you and put real numbers on it."]]},
+            {"t": "video", "v": "wellseptic", "text": "What to know about a well and septic before you build on your land."},
             {"t": "cta", "text": "See What Your Land Can Build", "href": SMH + "/land"},
             {"t": "small", "text": "Want to go deeper? Watch Well and Septic on Behind the Build.", "href": "https://www.youtube.com/watch?v=zWwtw8qgp4w"}],
          "financing": True},
@@ -361,6 +368,7 @@ SERIES = [
                 ["Zoning and flood zone", "What can be built, and where on the lot."],
                 ["Clearing and grading", "How much work the site needs before the build."]]},
             {"t": "p", "text": "We do not sell land, and we will not tell you where to buy. But you can start designing your home now and bring us the lot when you find it."},
+            {"t": "video", "v": "land101", "text": "What to look for before you buy land to build on."},
             {"t": "cta", "text": "See How It Works", "href": SMH + "/no-land"},
             {"t": "small", "text": "Watch Purchasing Land 101 on Behind the Build.", "href": "https://www.youtube.com/watch?v=trgJ8maymOA"}]},
         {"id": "nu4", "send": "Day 12 · personal email from the consultant", "segment": "Every quiet lead",
@@ -403,6 +411,7 @@ SERIES = [
                 "Take the Home Portrait: eight questions, about 90 seconds.",
                 "Visit a Design Center in Fredericksburg, Richmond, Newport News, Raleigh or Wilmington.",
                 "Hear how it all works on Behind the Build, the podcast from Scott Sleeme and Deven Sellers."]},
+            {"t": "video", "v": "roadmap", "text": "Every step from your first call to your keys, in one episode."},
             {"t": "cta", "text": "Take the Home Portrait", "href": QUIZ},
             {"t": "small", "text": "Browse the floor plans", "href": "https://www.mitchellhomesinc.com/new-homes/floorplans/"}]},
      ]},

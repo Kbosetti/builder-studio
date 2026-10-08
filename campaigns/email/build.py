@@ -22,6 +22,7 @@ FINE_DD = ("*Design Dollars apply to Design Center selections including cabinets
            "basements, well, septic, site work, or contract category options. Not applied to base price and not redeemable for cash. Tier "
            "determined at the time selections are made. One offer per contract. Program effective September 1, 2026. Full terms available "
            "from your New Home Consultant.")
+VIDEOS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "videos", "videos.json")))  # make_thumbs.py --upload
 FINE_FIN = "Financing terms are illustrative only and subject to credit approval. Not a commitment to lend."
 E = html.escape
 
@@ -112,6 +113,14 @@ def block(b, link):
                 f'<p style="margin:0 0 6px;font-size:17px;font-weight:800;line-height:1.3;color:{DEEP}">{E(b["head"])}</p>'
                 f'<p style="margin:0 0 10px;font-size:15px;line-height:1.55;color:{INK}">{E(b["text"])}</p>'
                 f'<a href="{E(link(b["href"]))}" target="_blank" style="font-size:14px;font-weight:800;color:{GREEN}">{E(b["cta"])} &#8594;</a></td></tr></table>')
+    if t == "video":
+        v = VIDEOS[b["v"]]
+        title = b.get("title", v["title"])
+        return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:6px 0 22px"><tr><td style="font-family:{FONT}">'
+                f'<a href="{E(v["url"])}" target="_blank"><img src="{E(v["cdn"])}" width="520" alt="Play the video: {E(title)}" '
+                f'style="display:block;width:100%;max-width:520px;height:auto;border:0;border-radius:10px"></a>'
+                f'<p style="margin:10px 0 0;font-size:15px;line-height:1.5;color:{INK}"><b style="color:{DEEP}">{E(title)}{"." if b.get("text") and title[-1] not in ".?!:" else ""}</b>'
+                f'{(" " + E(b["text"])) if b.get("text") else ""} <a href="{E(v["url"])}" target="_blank" style="color:{GREEN};font-weight:700;white-space:nowrap">Watch &#8594;</a></p></td></tr></table>')
     if t == "cta":
         return button(b["text"], link(b["href"]))
     raise ValueError(t)
@@ -130,6 +139,9 @@ def render_plain(series, em):
                          + "".join(f'<li style="margin:0 0 6px">{E(x)}</li>' for x in b["items"]) + '</ol>')
         elif b["t"] == "link":
             parts.append(f'<p style="{P}"><a href="{E(link(b["href"]))}" style="color:#2b6d47">{E(b["text"])}</a></p>')
+        elif b["t"] == "video":
+            v = VIDEOS[b["v"]]
+            parts.append(f'<p style="{P}">{E(b.get("text", ""))} <a href="{E(v["url"])}" style="color:#2b6d47">{E(b.get("title", v["title"]))}</a></p>')
     fine = []
     if em.get("dd"):
         fine.append(FINE_DD)
@@ -241,6 +253,11 @@ def text_version(series, em):
             out += [f'{b["text"]}: {link(b["href"])}', ""]
         elif t == "event":
             out += [b["head"], b["text"], f'{b["cta"]}: {link(b["href"])}', ""]
+        elif t == "video":
+            v = VIDEOS[b["v"]]
+            title = b.get("title", v["title"])
+            line = (b.get("text", "") + " " + title).strip() if em.get("plain") else f'{b.get("kind", v["kind"])}: {title}.' + (" " + b["text"] if b.get("text") else "")
+            out += [line, f'Watch: {v["url"]}', ""]
     if em.get("plain"):
         out += ["{{user.name}}", "New Home Consultant, Mitchell Homes", "{{user.phone}}", ""]
     else:

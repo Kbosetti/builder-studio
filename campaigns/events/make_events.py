@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fall 2026 events for Mitchell Homes: six proposals with every invitation and follow up.
+"""Fall 2026 events for Mitchell Homes: seven proposals with every invitation and follow up.
 
 usage: python3 campaigns/events/make_events.py   writes events.json and events.md next to this file.
 DRAFTS ONLY. Nothing here is sent, posted, scheduled or created. Every event is a proposal until
@@ -396,7 +396,7 @@ EVENTS.append({
         "body": "Hi [first name],\n\nThank you for coming to the open house yesterday. It was good to talk about [their land, plan or favorite finish].\n\nAs promised, here is what we talked about:\n[plans that fit, with links]\n[selections they liked, priced if they asked]\n\nA few things worth having in one place. With SimplyMitchell, building on land you own means " + SM + ". See how it works: " + u(SMH + "/onyourland", "followup", e) + "\n\n" + DD_SHORT + " [Reserve by date, once Mitchell approves the November date.]\n\nIf you would like to see a Mitchell home on the coast first, Rob and Kat Cuomo built theirs in Wilmington: https://www.youtube.com/watch?v=jMSBzlcQ4uU\n\nReady for the next step? Reply with a time for a land walk or a second visit." + SIG + "\n\n" + FINE + " " + FIN},
     "extra_texts": [{
         "date": "Wednesday, November 11, 2026",
-        "audience": "North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.",
+        "audience": "North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, past Mitchell homeowners (My Mitchell Story opens for them that day), active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.",
         "body": E4_TEXT.replace("{link}", "[trigger link]"),
         "link": u(RSVP, "sms", e),
         "notes": "Builder Studio bulk SMS between 10am and 7pm. Make the link a Builder Studio trigger link to the tracked RSVP URL so it stays short."}],
@@ -583,15 +583,106 @@ EVENTS.append({
     ]),
 })
 
+# ---------------------------------------------------------------- E7
+# Kicks off My Mitchell Story, the homeowner video contest (campaigns/homeowners/make_contest.py).
+e = "e7"
+REFRESH = "[Refreshments: Mitchell to confirm.]"
+ENTRY = "[entry form link]"
+RULES = "[official rules link]"
+SESSION = "Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last."
+HP_PRIZE = "Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500."
+PROMPTS = "What do you love most about your home? How do you use it, day to day? How does your home make you feel? Where is your favorite place to hang out?"
+EVENTS.append({
+    "id": e,
+    "name": "Homeowner Appreciation Night",
+    "date": "Tuesday, November 10, 2026",
+    "time": "5:30pm to 7:30pm, local time at every studio",
+    "where": ALL5,
+    "audience": "Past Mitchell homeowners and their families, invited personally by the New Home Consultant who built with them and by email (ho2, the homeowner invitation in campaigns/homeowners/contest.json). RSVP requested so each studio can plan; families welcome.",
+    "what": [
+        "A thank-you evening for the people who built with Mitchell: homeowners catch up with the New Home Consultants and Design Consultants who helped build their home and meet other Mitchell homeowners. " + REFRESH,
+        "My Mitchell Story opens that night. Homeowners hear how it works (a short phone video about what they love about their home) and can book their photo session on the spot at a booking table.",
+        "A simple story corner at each studio: a chair, good light, a phone stand and the four questions on a card. Staff help homeowners film a first take on their own phone, so the take is theirs to finish at home and send in.",
+    ],
+    "why": "Starts My Mitchell Story in person with the homeowners most likely to enter, from the people they built with. Homeowners leave with a photo session booked and, for many, a first take already on their phone, which is the hardest part of any video contest.",
+    "confirm": [
+        "Approve Tuesday, November 10, 5:30pm to 7:30pm, at all five studios, or name the studios that will host. Nothing else is in the studios that night: E3 is Saturday, November 7, E5 is online on Thursday, November 12, and E4 is Saturday, November 14 in Wilmington. The Wilmington team works three events in eight days; name the cover.",
+        "Staffing at every studio: the New Home Consultants and Design Consultants who can attend, one person at the photo session booking table, and one at the story corner.",
+        "Refreshments and a budget per studio. An appreciation night implies something to eat or drink; every piece marks it " + REFRESH,
+        "My Mitchell Story must be approved before November 10: the prizes, the form of the $2,500, the photo session cap and budget, the photographers, and the Official Rules after legal review. If it is not, the night runs as a thank-you evening and the contest launch moves.",
+        "Photo session booking on the night: the photographers' calendars must be live in Builder Studio by Monday, November 9. A session booked that night is held for the homeowner and takes place after their entry arrives.",
+        "The homeowner list: confirm past homeowners are in Builder Studio with email addresses, which have text consent, and which consultant invites homeowners whose consultant has left Mitchell.",
+        "Homeowners with an open warranty issue: CEA suggests their consultant or the warranty team calls them before any invitation goes out.",
+        "RSVP form (Kelly builds it in Builder Studio): name, email, phone, studio, number of guests, and the text consent checkbox with legal-approved wording. It adds the tag homeowner appreciation rsvp.",
+        "Story corner kit per studio: a chair, a phone stand, a small light and a card with the four questions. No painted Home Portrait anywhere in the room or on screens.",
+    ],
+    "rides_in": [],
+    "rides_in_note": "No block in a buyer email. A thank-you evening for homeowners has its own invitation, ho2, sent to past homeowners on Wednesday, October 28; it lives with the contest emails in campaigns/homeowners/contest.json.",
+    "own_email": "ho2",
+    "social": [
+        {"date": "Wednesday, October 28, 2026", "channels": "Facebook, Instagram feed",
+         "body": "To everyone who has built a home with Mitchell: thank you.\n\nOn Tuesday, November 10, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Come see the people who helped build your home, meet other Mitchell homeowners, and bring the family.\n\nIt is also the night My Mitchell Story opens: show us, in a short phone video, what you love about your home. " + SESSION + "\n\nFredericksburg, Richmond, Newport News, Raleigh and Wilmington. Mitchell homeowners, please RSVP so we can plan: " + RSVP + "\n\n#MyMitchellStory #MitchellHomes",
+         "link": u(RSVP, "facebook", e),
+         "notes": "Image: a real Mitchell home at dusk, e.g. " + M + "2026/3/3/ava_farmhouse-extended_sky.jpg . Organic only; do not boost (the audience is homeowners, and a boosted post would reach buyers). " + IG_NOTE.format(ig=u(RSVP, "instagram", e))},
+        {"date": "Tuesday, November 10, 2026", "channels": "Facebook, Instagram Stories",
+         "body": "Tonight, 5:30pm to 7:30pm: Homeowner Appreciation Night at every Mitchell Design Center. Mitchell homeowners, come say hello, book your photo session, and film a first take of your story in our story corner.\n\n#MyMitchellStory",
+         "link": u(RSVP, "facebook", e),
+         "notes": "Stories, the morning of the event, with the link sticker " + u(RSVP, "instagram", e) + " . After the event, post photos from the night only of homeowners who said yes, organic only, never boosted."},
+    ],
+    "facebook_event": "Homeowner Appreciation Night at the Mitchell Homes [city] Design Center\nTuesday, November 10, 2026, 5:30pm to 7:30pm\n[studio address]\n\nFor Mitchell homeowners and their families.\n\nYou built a home with us, and we would like to say thank you in person. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. " + REFRESH + "\n\nIt is also the night My Mitchell Story opens. Tell us, in a short phone video, what you love about your home, how you use it and where you like to spend your time. " + SESSION + " Book yours that night, and film a first take in our story corner if you like.\n\nPlease RSVP so we can plan: " + RSVP + "\n\nQuestions? Call a New Home Consultant: " + PHONES + ".",
+    "facebook_event_notes": "One Facebook event per Design Center; only [city] and [studio address] change. Link: " + u(RSVP, "facebook_event", e) + " . Publish Wednesday, October 28. Cover image: a real Mitchell home at dusk, no people. Do not boost. If a prospective buyer RSVPs, welcome them and have a consultant follow up separately.",
+    "gbp": {
+        "title": "Homeowner Appreciation Night",
+        "body": "Mitchell homeowners, this evening is for you. Join us at our [city] Design Center on Tuesday, November 10, from 5:30pm to 7:30pm, to catch up with the people who helped build your home, meet other Mitchell homeowners and bring the family. It is also the night we open My Mitchell Story, a short video about what you love about your home. Tap Sign up to RSVP.",
+        "button": "Sign up",
+        "link": u(RSVP, "gbp", e),
+        "post_on": "All five Design Center profiles, Wednesday, October 28. Event-type post, start November 10, 5:30pm, end 7:30pm.",
+        "notes": "Image: a real Mitchell home exterior, no people. A public post that shows buyers how Mitchell treats its homeowners."},
+    "nextdoor": None,
+    "nextdoor_when": "Skip: an invitation for Mitchell homeowners, not the neighborhood.",
+    "invite_when": "Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.",
+    "invite_text": "Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 10, 5:30 to 7:30pm, at our [city] Design Center. Can you come?",
+    "invite_email": {
+        "subject": "You are invited, [first name]",
+        "body": "Hi [first name],\n\nI still remember [one thing about their home or their build]. I hope the home is treating you well.\n\nOn Tuesday, November 10, from 5:30pm to 7:30pm, we are hosting Homeowner Appreciation Night at our [city] Design Center, a thank-you evening for the people who built with us. Bring the family. " + REFRESH + "\n\nIt is also the night we open My Mitchell Story: a chance to show us, in a short phone video, what you love about your home and how you live in it. " + SESSION + " You can book yours that night.\n\nCan you make it? Reply and I will save you a spot, or RSVP here: " + RSVP + SIG},
+    "reminder_when": "Monday, November 9, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.",
+    "reminder_text": "Mitchell Homes: See you tomorrow, Tue Nov 10, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out",
+    "thanks_when": "Tuesday, November 10, 2026, by 9pm. The consultant who invited each guest.",
+    "thanks_text": "Thank you for coming tonight, [first name]. It was so good to see you. Your My Mitchell Story link comes by email in the morning. Text me any time.",
+    "followup_when": "Wednesday, November 11, 2026, morning. The consultant, to every homeowner who came. Attendees get this in place of ho3, the launch email, so nobody gets two that day.",
+    "followup_email": {
+        "subject": "Thank you for last night",
+        "body": "Hi [first name],\n\nThank you for coming to Homeowner Appreciation Night. It was good to see you, and to hear about [one thing they shared about their home].\n\nHere is everything for My Mitchell Story in one place.\n\nFilm a short video on your phone, about 30 to 90 seconds, at home, answering one or more of these: " + PROMPTS + "\n\nSend it here: " + u(ENTRY, "followup", e) + " . Upload the video or paste a link. Entries close Sunday, December 6, at 11:59pm Eastern.\n\n[If they booked: Your photo session is set for [date and time]. If not: Once your entry is in, you will get a link to book your photo session.]\n\nIf you filmed a first take in the story corner, it is on your phone. Add a minute at home, the porch, the kitchen, your favorite spot, and send it in.\n\n" + HP_PRIZE + " Official Rules: " + RULES + "\n\nI cannot wait to see your story." + SIG},
+    "extra_texts": [],
+    "notes": [
+        "Never show a painted Home Portrait at the event, on screens or at the story corner. The finalist prize is described in words only: a framed painting of their Mitchell home.",
+        "Story corner: staff film on the homeowner's own phone, so the take belongs to the homeowner. Everyone filmed says yes first; children only with a parent there and agreeing. No popular music playing in the room, so the take can be used.",
+        "Photos of homeowners at the event are for organic social, email and the website only, with their consent. Never in paid ads (Meta Housing category).",
+        "Fair housing: hosts and captions never describe a town or neighborhood as good, safe or desirable.",
+        "The full contest package (rules, form, emails ho2 to ho6, workflow emails, texts, social, photographer brief) is campaigns/homeowners/contest.md.",
+    ],
+    "schedule": sched([
+        ("2026-10-28", "Wednesday, October 28", "Email", "ho2, the invitation, to past homeowners (campaigns/homeowners/contest.json)", "Marketing"),
+        ("2026-10-28", "Wednesday, October 28", "Social", "Post 1 (Facebook, Instagram feed). Publish the five Facebook events.", "Marketing"),
+        ("2026-10-28", "Wednesday, October 28", "Google", "Event post on all five Design Center profiles", "Marketing"),
+        ("2026-10-29", "Thursday, October 29", "Sales team", "Personal invites to the homeowners each consultant built with, through Tuesday, November 3", "New Home Consultants"),
+        ("2026-11-09", "Monday, November 9", "Text", "Reminder to RSVPs only", "Builder Studio workflow"),
+        ("2026-11-10", "Tuesday, November 10", "Social", "Post 2 (Facebook, Instagram Stories)", "Marketing"),
+        ("2026-11-10", "Tuesday, November 10", "Event", "Homeowner Appreciation Night, 5:30pm to 7:30pm; My Mitchell Story entries open; thank-you text by 9pm", "New Home Consultants, Design Consultants, photo session booker"),
+        ("2026-11-11", "Wednesday, November 11", "Sales team", "Follow-up email to every homeowner who came (in place of ho3)", "New Home Consultants"),
+        ("2026-11-11", "Wednesday, November 11", "Email", "ho3, the My Mitchell Story launch, to past homeowners who did not come", "Marketing"),
+    ]),
+})
+
 ABOUT = [
     "Drafts only. Nothing has been sent, posted, scheduled or created in any system. Every event is a proposal until Mitchell approves its date and staffing.",
     "[RSVP link] is the Builder Studio form Kelly will create (one per event, or one form with an event field). Every link field shows the tracked version: put the real form URL where [RSVP link] sits and keep the UTM string, so each RSVP shows where it came from. In body copy, paste the link from that item's link field.",
-    "Cadence: no new marketing emails and no extra marketing texts. Invitations ride existing emails, social, Facebook events, Google profiles, Nextdoor and personal consultant messages. The only bulk text is E4's on November 11.",
+    "Cadence: no new marketing emails and no extra marketing texts. Invitations ride existing emails, social, Facebook events, Google profiles, Nextdoor and personal consultant messages. The only bulk text is E4's on November 11. E7 is the one exception: a thank-you evening for past homeowners gets its own homeowner invitation (ho2, October 28), drafted with the My Mitchell Story contest in campaigns/homeowners/contest.json.",
     "Reminder texts go only to people who RSVPed with text consent, from one Builder Studio workflow per event. Consultants tag anyone who RSVPs by reply with the event tag so the same workflow reaches them.",
     "Design Dollars: wherever named, it carries the $5,000 floor and the short fine print. Texts never name it. After October 31, pieces that name it (E4, E6) wait for Mitchell's November reserve-by date.",
-    "Images: anything that could be boosted (social posts, Facebook events) uses real Mitchell homes or Design Centers with no people. Never show or describe the painted Home Portrait in any invitation.",
+    "Images: anything that could be boosted (social posts, Facebook events) uses real Mitchell homes or Design Centers with no people. Never show or describe the painted Home Portrait in any invitation. The one exception is E7, which names the My Mitchell Story finalist prize in words only (a framed painting of their Mitchell home) and never shows one.",
     "Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to the Instagram link listed for that post.",
-    "Placeholders: [first name], [your name], [your phone], [city], [studio address], [time], [Facebook Live link], [YouTube Live link], [replay link]. Studio addresses are in the studio table.",
+    "Placeholders: [first name], [your name], [your phone], [city], [studio address], [time], [Facebook Live link], [YouTube Live link], [replay link], and for E7 [entry form link] and [official rules link]. Studio addresses are in the studio table.",
 ]
 CADENCE_NOTES = [
     "October 22: E1's invite email replaces the Design Dollars consultant email already set for that day (one consultant email per lead).",
@@ -601,6 +692,10 @@ CADENCE_NOTES = [
     "dd2 carries two event blocks (E1, then E2's short line). E2 was placed in dd2, not dd3, for lead time.",
     "E6 rides rb2, the November 4 realtor email. rb3 (November 11) lands the same day as the consultant invites to agents; if Kelly wants, add one line to rb3 pointing to the Lunch and Learn, otherwise leave it. ra2 (November 18, after the event) already carries the lot checklist, so the E6 follow-up on November 19 does not repeat it.",
     "fb5 is on hold for the plan guide email. If it misses November 4, E3 rides fb1 and the consultant invites only.",
+    "October 28: E7's invitation, ho2, goes to past homeowners on the Wednesday partner day (ra1 goes to realtors the same day). Consultants' personal homeowner invites run October 29 to November 3, ahead of E3's November 5 invites to active leads.",
+    "November 10: E7 shares the day with fb2 (landowner email), E5's first post, Google post and invites, and E4's Nextdoor post. None of those go to the homeowner list, so a past homeowner hears about one thing that day.",
+    "November 11: the E4 bulk text skips past Mitchell homeowners, who get the My Mitchell Story launch that morning (ho3, or their consultant's follow-up if they came to E7).",
+    "build_cadence.py places events by a date map that lists e1 to e6 only. Until e7 is added there (event November 10, invites October 29, reminder November 9), the cadence shows E7's social posts but not the evening itself.",
 ]
 
 # ---------------------------------------------------------------- checks
@@ -632,6 +727,8 @@ for ev in EVENTS:
     for name, body in surfaces:
         if "Design Dollars" in body and not ("$5,000" in body and "No cash value." in body):
             problems.append(f"{i} {name}: Design Dollars without the $5,000 floor or fine print")
+        # E7 may name the My Mitchell Story finalist prize in these exact words; no other mention of painting is allowed
+        body = re.sub(r"framed painting of (their|your) Mitchell home", "", body)
         if re.search(r"\bpaint(ed|ing|s)?\b", body.replace("paint and hardware", "").replace("paint, and hardware", ""), re.I):
             problems.append(f"{i} {name}: mentions painting")
 for ev in EVENTS:
@@ -658,14 +755,15 @@ def q(text):
     return "\n".join("> " + line if line else ">" for line in text.split("\n"))
 
 
+COUNT = {6: "Six", 7: "Seven", 8: "Eight"}.get(len(EVENTS), str(len(EVENTS)))
 L = ["# Mitchell Homes fall events, October 12 to November 22, 2026", "",
-     "Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow-up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.", "",
+     f"{COUNT} event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow-up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.", "",
      "## Read first", ""]
 L += [f"- {a}" for a in ABOUT]
 L += ["", "## Where the events touch the existing cadence", ""] + [f"- {c}" for c in CADENCE_NOTES]
-L += ["", "## The six at a glance", "", "| | Event | When | Where | Rides in |", "|---|---|---|---|---|"]
+L += ["", f"## The {COUNT.lower()} at a glance", "", "| | Event | When | Where | Rides in |", "|---|---|---|---|---|"]
 for ev in EVENTS:
-    rides = ", ".join(r["email"] for r in ev["rides_in"]) or "no email (text, social, profile, Nextdoor, invites)"
+    rides = ", ".join(r["email"] for r in ev["rides_in"]) or (f"its own homeowner email, {ev['own_email']}" if ev.get("own_email") else "no email (text, social, profile, Nextdoor, invites)")
     where = "Online" if ev["where"].startswith("Online") else ("Wilmington (Belville)" if ev["id"] == "e4" else "All five Design Centers")
     L.append(f"| {ev['id'].upper()} | {ev['name']} | {ev['date']}, {ev['time']} | {where} | {rides} |")
 L += ["", "## Every touch by date", "", "| Date | Event | Channel | What | Who |", "|---|---|---|---|---|"]

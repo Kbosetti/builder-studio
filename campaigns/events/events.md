@@ -1,17 +1,17 @@
 # Mitchell Homes fall events, October 12 to November 22, 2026
 
-Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow-up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.
+Seven event proposals for CEA Marketing (Kelly Bosetti), each with every invitation and follow-up. Built from `campaigns/FACTS.md` by `make_events.py`; `events.json` holds the same content.
 
 ## Read first
 
 - Drafts only. Nothing has been sent, posted, scheduled or created in any system. Every event is a proposal until Mitchell approves its date and staffing.
 - [RSVP link] is the Builder Studio form Kelly will create (one per event, or one form with an event field). Every link field shows the tracked version: put the real form URL where [RSVP link] sits and keep the UTM string, so each RSVP shows where it came from. In body copy, paste the link from that item's link field.
-- Cadence: no new marketing emails and no extra marketing texts. Invitations ride existing emails, social, Facebook events, Google profiles, Nextdoor and personal consultant messages. The only bulk text is E4's on November 11.
+- Cadence: no new marketing emails and no extra marketing texts. Invitations ride existing emails, social, Facebook events, Google profiles, Nextdoor and personal consultant messages. The only bulk text is E4's on November 11. E7 is the one exception: a thank-you evening for past homeowners gets its own homeowner invitation (ho2, October 28), drafted with the My Mitchell Story contest in campaigns/homeowners/contest.json.
 - Reminder texts go only to people who RSVPed with text consent, from one Builder Studio workflow per event. Consultants tag anyone who RSVPs by reply with the event tag so the same workflow reaches them.
 - Design Dollars: wherever named, it carries the $5,000 floor and the short fine print. Texts never name it. After October 31, pieces that name it (E4, E6) wait for Mitchell's November reserve-by date.
-- Images: anything that could be boosted (social posts, Facebook events) uses real Mitchell homes or Design Centers with no people. Never show or describe the painted Home Portrait in any invitation.
+- Images: anything that could be boosted (social posts, Facebook events) uses real Mitchell homes or Design Centers with no people. Never show or describe the painted Home Portrait in any invitation. The one exception is E7, which names the My Mitchell Story finalist prize in words only (a framed painting of their Mitchell home) and never shows one.
 - Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to the Instagram link listed for that post.
-- Placeholders: [first name], [your name], [your phone], [city], [studio address], [time], [Facebook Live link], [YouTube Live link], [replay link]. Studio addresses are in the studio table.
+- Placeholders: [first name], [your name], [your phone], [city], [studio address], [time], [Facebook Live link], [YouTube Live link], [replay link], and for E7 [entry form link] and [official rules link]. Studio addresses are in the studio table.
 
 ## Where the events touch the existing cadence
 
@@ -22,8 +22,12 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 - dd2 carries two event blocks (E1, then E2's short line). E2 was placed in dd2, not dd3, for lead time.
 - E6 rides rb2, the November 4 realtor email. rb3 (November 11) lands the same day as the consultant invites to agents; if Kelly wants, add one line to rb3 pointing to the Lunch and Learn, otherwise leave it. ra2 (November 18, after the event) already carries the lot checklist, so the E6 follow-up on November 19 does not repeat it.
 - fb5 is on hold for the plan guide email. If it misses November 4, E3 rides fb1 and the consultant invites only.
+- October 28: E7's invitation, ho2, goes to past homeowners on the Wednesday partner day (ra1 goes to realtors the same day). Consultants' personal homeowner invites run October 29 to November 3, ahead of E3's November 5 invites to active leads.
+- November 10: E7 shares the day with fb2 (landowner email), E5's first post, Google post and invites, and E4's Nextdoor post. None of those go to the homeowner list, so a past homeowner hears about one thing that day.
+- November 11: the E4 bulk text skips past Mitchell homeowners, who get the My Mitchell Story launch that morning (ho3, or their consultant's follow-up if they came to E7).
+- build_cadence.py places events by a date map that lists e1 to e6 only. Until e7 is added there (event November 10, invites October 29, reminder November 9), the cadence shows E7's social posts but not the evening itself.
 
-## The six at a glance
+## The seven at a glance
 
 | | Event | When | Where | Rides in |
 |---|---|---|---|---|
@@ -33,6 +37,7 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 | E4 | Wilmington Design Center Open House | Saturday, November 14, 2026, 10am to 3pm | Wilmington (Belville) | no email (text, social, profile, Nextdoor, invites) |
 | E5 | The Gathering Place Live: Building Your Getaway | Thursday, November 12, 2026, 7pm Eastern, 30 minutes | Online | hp4 |
 | E6 | Realtor Lunch and Learn | Wednesday, November 18, 2026, 11:30am to 1pm | All five Design Centers | rb2 |
+| E7 | Homeowner Appreciation Night | Tuesday, November 10, 2026, 5:30pm to 7:30pm, local time at every studio | All five Design Centers | its own homeowner email, ho2 |
 
 ## Every touch by date
 
@@ -55,6 +60,10 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 | Tuesday, October 27 | E2 | Social | Post 2, tonight at 7 (Facebook, Instagram Stories) | Marketing |
 | Tuesday, October 27 | E2 | Event | Live at 7pm Eastern; thank-you text after the show | Scott and Deven; consultants |
 | Wednesday, October 28 | E2 | Sales team | Follow-up email with the replay and the October 31 date | New Home Consultants, online sales counselors |
+| Wednesday, October 28 | E7 | Email | ho2, the invitation, to past homeowners (campaigns/homeowners/contest.json) | Marketing |
+| Wednesday, October 28 | E7 | Social | Post 1 (Facebook, Instagram feed). Publish the five Facebook events. | Marketing |
+| Wednesday, October 28 | E7 | Google | Event post on all five Design Center profiles | Marketing |
+| Thursday, October 29 | E7 | Sales team | Personal invites to the homeowners each consultant built with, through Tuesday, November 3 | New Home Consultants |
 | Monday, November 2 | E3 | Social | Post 1 (Facebook, Instagram feed). Publish the five Facebook events. | Marketing |
 | Monday, November 2 | E3 | Google | Event post on all five profiles | Marketing |
 | Tuesday, November 3 | E3 | Email | Event block in fb1 | Marketing |
@@ -71,13 +80,18 @@ Six event proposals for CEA Marketing (Kelly Bosetti), each with every invitatio
 | Sunday, November 8 | E3 | Sales team | Follow-up email with recap and next step | New Home Consultants |
 | Monday, November 9 | E4 | Social | Post 1 (Facebook, Instagram feed) | Marketing |
 | Monday, November 9 | E4 | Sales team | Personal invite text and email | Raleigh and Wilmington New Home Consultants |
+| Monday, November 9 | E7 | Text | Reminder to RSVPs only | Builder Studio workflow |
 | Tuesday, November 10 | E4 | Nextdoor | Post from the Wilmington page | Marketing |
 | Tuesday, November 10 | E5 | Social | Post 1 (Facebook, Instagram feed). Publish the online Facebook event. | Marketing |
 | Tuesday, November 10 | E5 | Google | Event post on all five profiles (or Update) | Marketing |
 | Tuesday, November 10 | E5 | Sales team | Personal invite text and email to lake, coast and mountain leads | New Home Consultants |
+| Tuesday, November 10 | E7 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
+| Tuesday, November 10 | E7 | Event | Homeowner Appreciation Night, 5:30pm to 7:30pm; My Mitchell Story entries open; thank-you text by 9pm | New Home Consultants, Design Consultants, photo session booker |
 | Wednesday, November 11 | E4 | Text | The one bulk text to Carolinas contacts with text consent | Marketing |
 | Wednesday, November 11 | E5 | Text | Reminder to RSVPs only | Builder Studio workflow |
 | Wednesday, November 11 | E6 | Sales team | Personal invite text and email to agents they know | New Home Consultants |
+| Wednesday, November 11 | E7 | Sales team | Follow-up email to every homeowner who came (in place of ho3) | New Home Consultants |
+| Wednesday, November 11 | E7 | Email | ho3, the My Mitchell Story launch, to past homeowners who did not come | Marketing |
 | Thursday, November 12 | E5 | Email | Event block in hp4, tonight at 7 | Marketing |
 | Thursday, November 12 | E5 | Social | Post 2, tonight at 7 (Facebook, Instagram Stories) | Marketing |
 | Thursday, November 12 | E5 | Event | Live at 7pm Eastern; thank-you text after the show | Host; consultants |
@@ -913,7 +927,7 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 
 ### Extra text
 
-**Wednesday, November 11, 2026** · North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.
+**Wednesday, November 11, 2026** · North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, past Mitchell homeowners (My Mitchell Story opens for them that day), active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.
 
 > Mitchell Homes: Open house Sat Nov 14, 10 to 3, Wilmington Design Center, Belville. Bring your land questions. [trigger link] Reply STOP to opt out
 
@@ -1292,5 +1306,190 @@ New Home Consultant, Mitchell Homes
 [your phone]
 
 Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.
+```
+
+
+---
+
+## E7. Homeowner Appreciation Night
+
+*Proposal until Mitchell approves the date and staffing.*
+
+**When:** Tuesday, November 10, 2026, 5:30pm to 7:30pm, local time at every studio  
+**Where:** All five Mitchell Design Centers: Fredericksburg VA, Richmond VA (Midlothian), Newport News VA, Raleigh NC (studio in Garner) and Wilmington NC (studio in Belville). Addresses in the studio table, as listed on the live Design Dollars page.  
+**For:** Past Mitchell homeowners and their families, invited personally by the New Home Consultant who built with them and by email (ho2, the homeowner invitation in campaigns/homeowners/contest.json). RSVP requested so each studio can plan; families welcome.
+
+**What happens**
+
+- A thank-you evening for the people who built with Mitchell: homeowners catch up with the New Home Consultants and Design Consultants who helped build their home and meet other Mitchell homeowners. [Refreshments: Mitchell to confirm.]
+- My Mitchell Story opens that night. Homeowners hear how it works (a short phone video about what they love about their home) and can book their photo session on the spot at a booking table.
+- A simple story corner at each studio: a chair, good light, a phone stand and the four questions on a card. Staff help homeowners film a first take on their own phone, so the take is theirs to finish at home and send in.
+
+**Why it helps the campaign (for Kelly):** Starts My Mitchell Story in person with the homeowners most likely to enter, from the people they built with. Homeowners leave with a photo session booked and, for many, a first take already on their phone, which is the hardest part of any video contest.
+
+**Mitchell must confirm**
+
+- Approve Tuesday, November 10, 5:30pm to 7:30pm, at all five studios, or name the studios that will host. Nothing else is in the studios that night: E3 is Saturday, November 7, E5 is online on Thursday, November 12, and E4 is Saturday, November 14 in Wilmington. The Wilmington team works three events in eight days; name the cover.
+- Staffing at every studio: the New Home Consultants and Design Consultants who can attend, one person at the photo session booking table, and one at the story corner.
+- Refreshments and a budget per studio. An appreciation night implies something to eat or drink; every piece marks it [Refreshments: Mitchell to confirm.]
+- My Mitchell Story must be approved before November 10: the prizes, the form of the $2,500, the photo session cap and budget, the photographers, and the Official Rules after legal review. If it is not, the night runs as a thank-you evening and the contest launch moves.
+- Photo session booking on the night: the photographers' calendars must be live in Builder Studio by Monday, November 9. A session booked that night is held for the homeowner and takes place after their entry arrives.
+- The homeowner list: confirm past homeowners are in Builder Studio with email addresses, which have text consent, and which consultant invites homeowners whose consultant has left Mitchell.
+- Homeowners with an open warranty issue: CEA suggests their consultant or the warranty team calls them before any invitation goes out.
+- RSVP form (Kelly builds it in Builder Studio): name, email, phone, studio, number of guests, and the text consent checkbox with legal-approved wording. It adds the tag homeowner appreciation rsvp.
+- Story corner kit per studio: a chair, a phone stand, a small light and a card with the four questions. No painted Home Portrait anywhere in the room or on screens.
+
+**Notes for Kelly**
+
+- Never show a painted Home Portrait at the event, on screens or at the story corner. The finalist prize is described in words only: a framed painting of their Mitchell home.
+- Story corner: staff film on the homeowner's own phone, so the take belongs to the homeowner. Everyone filmed says yes first; children only with a parent there and agreeing. No popular music playing in the room, so the take can be used.
+- Photos of homeowners at the event are for organic social, email and the website only, with their consent. Never in paid ads (Meta Housing category).
+- Fair housing: hosts and captions never describe a town or neighborhood as good, safe or desirable.
+- The full contest package (rules, form, emails ho2 to ho6, workflow emails, texts, social, photographer brief) is campaigns/homeowners/contest.md.
+
+**Schedule**
+
+| Date | Channel | What | Who |
+|---|---|---|---|
+| Wednesday, October 28 | Email | ho2, the invitation, to past homeowners (campaigns/homeowners/contest.json) | Marketing |
+| Wednesday, October 28 | Social | Post 1 (Facebook, Instagram feed). Publish the five Facebook events. | Marketing |
+| Wednesday, October 28 | Google | Event post on all five Design Center profiles | Marketing |
+| Thursday, October 29 | Sales team | Personal invites to the homeowners each consultant built with, through Tuesday, November 3 | New Home Consultants |
+| Monday, November 9 | Text | Reminder to RSVPs only | Builder Studio workflow |
+| Tuesday, November 10 | Social | Post 2 (Facebook, Instagram Stories) | Marketing |
+| Tuesday, November 10 | Event | Homeowner Appreciation Night, 5:30pm to 7:30pm; My Mitchell Story entries open; thank-you text by 9pm | New Home Consultants, Design Consultants, photo session booker |
+| Wednesday, November 11 | Sales team | Follow-up email to every homeowner who came (in place of ho3) | New Home Consultants |
+| Wednesday, November 11 | Email | ho3, the My Mitchell Story launch, to past homeowners who did not come | Marketing |
+
+### Email event block
+
+No block in a buyer email. A thank-you evening for homeowners has its own invitation, ho2, sent to past homeowners on Wednesday, October 28; it lives with the contest emails in campaigns/homeowners/contest.json.
+### Social posts
+
+**Wednesday, October 28, 2026** · Facebook, Instagram feed
+
+> To everyone who has built a home with Mitchell: thank you.
+>
+> On Tuesday, November 10, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Come see the people who helped build your home, meet other Mitchell homeowners, and bring the family.
+>
+> It is also the night My Mitchell Story opens: show us, in a short phone video, what you love about your home. Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last.
+>
+> Fredericksburg, Richmond, Newport News, Raleigh and Wilmington. Mitchell homeowners, please RSVP so we can plan: [RSVP link]
+>
+> #MyMitchellStory #MitchellHomes
+
+Link: `[RSVP link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_events&utm_content=e7`  
+Notes: Image: a real Mitchell home at dusk, e.g. https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg . Organic only; do not boost (the audience is homeowners, and a boosted post would reach buyers). Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_events&utm_content=e7 that morning.
+
+**Tuesday, November 10, 2026** · Facebook, Instagram Stories
+
+> Tonight, 5:30pm to 7:30pm: Homeowner Appreciation Night at every Mitchell Design Center. Mitchell homeowners, come say hello, book your photo session, and film a first take of your story in our story corner.
+>
+> #MyMitchellStory
+
+Link: `[RSVP link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_events&utm_content=e7`  
+Notes: Stories, the morning of the event, with the link sticker [RSVP link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_events&utm_content=e7 . After the event, post photos from the night only of homeowners who said yes, organic only, never boosted.
+
+### Facebook event description
+
+> Homeowner Appreciation Night at the Mitchell Homes [city] Design Center
+> Tuesday, November 10, 2026, 5:30pm to 7:30pm
+> [studio address]
+>
+> For Mitchell homeowners and their families.
+>
+> You built a home with us, and we would like to say thank you in person. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. [Refreshments: Mitchell to confirm.]
+>
+> It is also the night My Mitchell Story opens. Tell us, in a short phone video, what you love about your home, how you use it and where you like to spend your time. Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last. Book yours that night, and film a first take in our story corner if you like.
+>
+> Please RSVP so we can plan: [RSVP link]
+>
+> Questions? Call a New Home Consultant: Virginia and Maryland (540) 701-2759, North and South Carolina (984) 331-5468.
+
+Notes: One Facebook event per Design Center; only [city] and [studio address] change. Link: [RSVP link]?utm_source=facebook&utm_medium=facebook_event&utm_campaign=fall26_events&utm_content=e7 . Publish Wednesday, October 28. Cover image: a real Mitchell home at dusk, no people. Do not boost. If a prospective buyer RSVPs, welcome them and have a consultant follow up separately.
+
+### Google Business Profile event post
+
+Post on: All five Design Center profiles, Wednesday, October 28. Event-type post, start November 10, 5:30pm, end 7:30pm.
+
+**Title:** Homeowner Appreciation Night (28 of 58 characters)  
+**Button:** Sign up, linking to `[RSVP link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_events&utm_content=e7`
+
+> Mitchell homeowners, this evening is for you. Join us at our [city] Design Center on Tuesday, November 10, from 5:30pm to 7:30pm, to catch up with the people who helped build your home, meet other Mitchell homeowners and bring the family. It is also the night we open My Mitchell Story, a short video about what you love about your home. Tap Sign up to RSVP.
+
+Notes: Image: a real Mitchell home exterior, no people. A public post that shows buyers how Mitchell treats its homeowners. If Google rejects a post for a phone number in the text, delete that sentence; the Call button uses the profile number.
+
+### Nextdoor
+
+Skip: an invitation for Mitchell homeowners, not the neighborhood.
+
+### Consultant personal invite
+
+Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.
+
+**Text** (156 characters)
+
+> Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 10, 5:30 to 7:30pm, at our [city] Design Center. Can you come?
+
+**Email** · Subject: You are invited, [first name]
+
+```text
+Hi [first name],
+
+I still remember [one thing about their home or their build]. I hope the home is treating you well.
+
+On Tuesday, November 10, from 5:30pm to 7:30pm, we are hosting Homeowner Appreciation Night at our [city] Design Center, a thank-you evening for the people who built with us. Bring the family. [Refreshments: Mitchell to confirm.]
+
+It is also the night we open My Mitchell Story: a chance to show us, in a short phone video, what you love about your home and how you live in it. Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last. You can book yours that night.
+
+Can you make it? Reply and I will save you a spot, or RSVP here: [RSVP link]
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+```
+
+### RSVP reminder text
+
+Monday, November 9, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.
+
+> Mitchell Homes: See you tomorrow, Tue Nov 10, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out
+
+(145 characters)
+
+### Same-day thank-you text
+
+Tuesday, November 10, 2026, by 9pm. The consultant who invited each guest.
+
+> Thank you for coming tonight, [first name]. It was so good to see you. I will email you the My Mitchell Story link in the morning, and if you filmed a first take, it is on your phone and ready to finish at home.
+
+### Next-day follow-up email
+
+Wednesday, November 11, 2026, morning. The consultant, to every homeowner who came. Attendees get this in place of ho3, the launch email, so nobody gets two that day.
+
+Subject: Thank you for last night
+
+```text
+Hi [first name],
+
+Thank you for coming to Homeowner Appreciation Night. It was good to see you, and to hear about [one thing they shared about their home].
+
+Here is everything for My Mitchell Story in one place.
+
+Film a short video on your phone, about 30 to 90 seconds, at home, answering one or more of these: What do you love most about your home? How do you use it, day to day? How does your home make you feel? Where is your favorite place to hang out?
+
+Send it here: [entry form link]?utm_source=sales_email&utm_medium=email&utm_campaign=fall26_events&utm_content=e7 . Upload the video or paste a link. Entries close Sunday, December 6, at 11:59pm Eastern.
+
+[If they booked: Your photo session is set for [date and time]. If not: Once your entry is in, you will get a link to book your photo session.]
+
+If you filmed a first take in the story corner, it is on your phone. Add a minute at home, the porch, the kitchen, your favorite spot, and send it in.
+
+Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. Official Rules: [official rules link]
+
+I cannot wait to see your story.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
 ```
 
