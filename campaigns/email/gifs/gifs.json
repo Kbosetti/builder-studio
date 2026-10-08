@@ -1,0 +1,332 @@
+{
+ "hp1": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
+   "porch_farmhouse",
+   "living_open",
+   "kitchen_brass"
+  ],
+  "file": "gifs/hp1.gif",
+  "kb": 423,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/488d5f9a-e0dd-49f6-aa57-f2fdd7219986.gif"
+ },
+ "hp2": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=1200&height=640&mode=crop",
+   "aerial_farmland",
+   "drive_trees",
+   "farmhouse_field"
+  ],
+  "file": "gifs/hp2.gif",
+  "kb": 558,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c68fbf12-3417-4aff-85ed-13702346e01e.gif"
+ },
+ "hp3": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/6/24/Mathews_1_Aerial.jpg?width=1200&height=640&mode=crop",
+   "cape_cod",
+   "blue_dusk",
+   "blue_ranch"
+  ],
+  "file": "gifs/hp3.gif",
+  "kb": 490,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/40f0b4d1-084c-45d3-84c6-51d325af50a5.gif"
+ },
+ "hp4": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/10_mwFjkrl.jpg?width=1200&height=640&mode=crop",
+   "aerial_lake",
+   "coastal_dusk",
+   "living_water"
+  ],
+  "file": "gifs/hp4.gif",
+  "kb": 415,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/75d083be-b9ac-4e30-9434-b4d804c8e087.gif"
+ },
+ "dd1": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_13_IfaBRgj.jpg?width=1200&height=640&mode=crop",
+   "dc_showroom",
+   "kitchen_brass",
+   "dc_hood"
+  ],
+  "file": "gifs/dd1.gif",
+  "kb": 430,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2a1e5e1b-1b9e-4214-952e-6d4404b222f8.gif"
+ },
+ "dd2": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/59-DSC06144.jpg?width=1200&height=640&mode=crop",
+   "dc_tile",
+   "dc_island",
+   "kitchen_quartz"
+  ],
+  "file": "gifs/dd2.gif",
+  "kb": 404,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bb8ab8b4-21eb-4bbd-b8bc-eaf3cca7b073.gif"
+ },
+ "dd3": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2023/3/24/Richmond_Design_Studio.jpg?width=1200&height=640&mode=crop",
+   "dc_hands",
+   "dc_samples",
+   "dc_kitchen"
+  ],
+  "file": "gifs/dd3.gif",
+  "kb": 429,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/aab3e4b0-f041-4ec9-a0c7-3d57819f07f6.gif"
+ },
+ "dd4": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_15_WcldBUt.jpg?width=1200&height=640&mode=crop",
+   "dc_hood",
+   "bath",
+   "kitchen_island"
+  ],
+  "file": "gifs/dd4.gif",
+  "kb": 385,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/83a96d8c-4a0d-4750-b09b-e886e02c873a.gif"
+ },
+ "fb1": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/7/5/1_GuQrrFW.jpg?width=1200&height=640&mode=crop",
+   "aerial_hills",
+   "aerial_house_woods",
+   "farmhouse_field"
+  ],
+  "file": "gifs/fb1.gif",
+  "kb": 476,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/7724bcf6-b73d-418a-a7fe-cfbe1f114893.gif"
+ },
+ "fb2": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/38-DSC06023.jpg?width=1200&height=640&mode=crop",
+   "porch_farmhouse",
+   "kitchen_wood",
+   "living_open"
+  ],
+  "file": "gifs/fb2.gif",
+  "kb": 428,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/58386c12-1384-4f36-a154-d5182212148c.gif"
+ },
+ "fb3": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg?width=1200&height=640&mode=crop",
+   "drive_trees",
+   "cape_cod",
+   "kitchen_living"
+  ],
+  "file": "gifs/fb3.gif",
+  "kb": 493,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/95ea0db4-66be-426a-94d8-631511fd881a.gif"
+ },
+ "fb4": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
+   "blue_dusk",
+   "screen_porch",
+   "bedroom"
+  ],
+  "file": "gifs/fb4.gif",
+  "kb": 434,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/528dfabb-b47c-4038-8ac7-37bef038cf35.gif"
+ },
+ "fb4c": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
+   "blue_dusk",
+   "screen_porch",
+   "bedroom"
+  ],
+  "file": "gifs/fb4c.gif",
+  "kb": 434,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e2389b5c-ec91-4539-8628-aff7b085336f.gif"
+ },
+ "fb5": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
+   "aerial_farmland",
+   "two_story",
+   "dining"
+  ],
+  "file": "gifs/fb5.gif",
+  "kb": 475,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/738aa8db-53ea-42b6-a597-1e3362a295db.gif"
+ },
+ "fb5c": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
+   "aerial_farmland",
+   "two_story",
+   "dining"
+  ],
+  "file": "gifs/fb5c.gif",
+  "kb": 475,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/4150b727-ef31-4e08-93aa-e4130c6f9157.gif"
+ },
+ "re1": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/7/5/1_GuQrrFW.jpg?width=1200&height=640&mode=crop",
+   "aerial_pond",
+   "farmhouse_field",
+   "blue_ranch"
+  ],
+  "file": "gifs/re1.gif",
+  "kb": 488,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ad0bb036-a888-49e6-9895-0eb760edf692.gif"
+ },
+ "ra1": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
+   "aerial_hills",
+   "aerial_farmland",
+   "aerial_woods"
+  ],
+  "file": "gifs/ra1.gif",
+  "kb": 600,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1c379a6f-7496-4287-8c2b-2807aa9e0bc8.gif"
+ },
+ "rb2": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=1200&height=640&mode=crop",
+   "aerial_house_woods",
+   "cape_cod",
+   "porch_farmhouse"
+  ],
+  "file": "gifs/rb2.gif",
+  "kb": 450,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a637ec24-b65b-4ad2-806a-f4dc02c32ae4.gif"
+ },
+ "rb3": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/10_mwFjkrl.jpg?width=1200&height=640&mode=crop",
+   "aerial_lake",
+   "farmhouse_drive",
+   "kitchen_island"
+  ],
+  "file": "gifs/rb3.gif",
+  "kb": 403,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/abd5c6a1-7da2-472b-b685-62e2933c5383.gif"
+ },
+ "ra2": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
+   "aerial_woods",
+   "drive_trees",
+   "aerial_pond"
+  ],
+  "file": "gifs/ra2.gif",
+  "kb": 558,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2d4cf470-6419-4f64-b4f6-c051cf325923.gif"
+ },
+ "ho1": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
+   "porch_farmhouse",
+   "breakfast_nook",
+   "porch_view"
+  ],
+  "file": "gifs/ho1.gif",
+  "kb": 417,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/01c78137-bb14-469d-98d5-d4d8b33344ac.gif"
+ },
+ "nu3": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/8/14/10_iWQs7EE.jpg?width=1200&height=640&mode=crop",
+   "aerial_farmland",
+   "farmhouse_field",
+   "kitchen_white"
+  ],
+  "file": "gifs/nu3.gif",
+  "kb": 489,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0f9b6d27-8a0c-4e18-a589-2a3da4223d8c.gif"
+ },
+ "nu3n": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/10_UuSAaPU.jpg?width=1200&height=640&mode=crop",
+   "aerial_hills",
+   "two_story",
+   "living_open"
+  ],
+  "file": "gifs/nu3n.gif",
+  "kb": 484,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e6410fc7-9045-4c9c-b189-d0a9df769cda.gif"
+ },
+ "nu6": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_13_IfaBRgj.jpg?width=1200&height=640&mode=crop",
+   "dc_showroom",
+   "kitchen_quartz",
+   "kitchen_brass"
+  ],
+  "file": "gifs/nu6.gif",
+  "kb": 420,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3eeb0f90-9fe9-4289-bba5-7eab66c9dd0b.gif"
+ },
+ "nu9": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
+   "blue_dusk",
+   "living_water",
+   "kitchen_wood"
+  ],
+  "file": "gifs/nu9.gif",
+  "kb": 384,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e9e29fbe-4966-42a4-b90c-50ec2d2e5767.gif"
+ },
+ "ho2": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
+   "dc_showroom",
+   "porch_view",
+   "dining"
+  ],
+  "file": "gifs/ho2.gif",
+  "kb": 428,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3a386e41-ad72-489d-b4d1-059fa5c7782e.gif"
+ },
+ "ho3": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg?width=1200&height=640&mode=crop",
+   "porch_view",
+   "breakfast_nook",
+   "living_open"
+  ],
+  "file": "gifs/ho3.gif",
+  "kb": 467,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9da7be36-c421-4443-ae37-f3b00601ee66.gif"
+ },
+ "ho4": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/24/38-DSC06023.jpg?width=1200&height=640&mode=crop",
+   "kitchen_living",
+   "screen_porch",
+   "porch_farmhouse"
+  ],
+  "file": "gifs/ho4.gif",
+  "kb": 430,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a7e8eff7-0a45-4215-a8d2-b92f7b4eeaa1.gif"
+ },
+ "ho5": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
+   "dining",
+   "porch_planks",
+   "bedroom"
+  ],
+  "file": "gifs/ho5.gif",
+  "kb": 424,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1b0bf4a7-6ab3-4deb-b1fc-cc14bc08c511.gif"
+ },
+ "ho6": {
+  "sig": [
+   "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
+   "farmhouse_field",
+   "living_water",
+   "porch_view"
+  ],
+  "file": "gifs/ho6.gif",
+  "kb": 392,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/23519558-6d27-4d1d-9be4-4b81ab4ab552.gif"
+ }
+}

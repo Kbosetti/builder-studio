@@ -195,7 +195,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 
 <div class="bar"><div class="wrap">
   <div class="meter"><span id="meterText">0 of 16 reviewed</span><div class="track" aria-hidden="true"><i class="a" id="mA" style="width:0%"></i><i class="c" id="mC" style="width:0%"></i></div></div>
-  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#nurture">Nurture</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign-off</a></nav>
+  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#nurture">Nurture</a><a href="#homeowners">Homeowners</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign-off</a></nav>
 </div></div>
 
 <main class="wrap">
@@ -212,7 +212,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     <details class="rank"><summary>Our recommended order, by impact and effort</summary><ol id="rank"></ol></details>
   </section>
 
-  <section id="emails"><div class="head"><span class="eyebrow">Email</span><h2>Seventeen emails to the Mitchell database</h2>
+  <section id="emails"><div class="head"><span class="eyebrow">Email</span><h2>Emails to the Mitchell database</h2>
     <p class="lede">One idea and one button in each. Photos come from Mitchell's own site, and every link is tagged so results can be tracked by email.</p></div>
     <div id="items-email" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
@@ -233,11 +233,15 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     <p class="lede">When a lead goes quiet for seven days, Home Builder Studio starts a 60-day sequence on its own: personal notes from their consultant, designed emails and short texts, until they reply or book. The moment they answer, it stops and their consultant takes over.</p></div>
     <div id="items-nurture" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
+  <section id="homeowners"><div class="head"><span class="eyebrow">Homeowners</span><h2>My Mitchell Story</h2>
+    <p class="lede">Mitchell homeowners tell the story of their home in a short phone video. It starts with a Homeowner Appreciation Night at the Design Centers. Every entrant gets a professional photo session at their home, five finalists receive a framed painting of their own Mitchell home, and one grand prize winner also receives $2,500.</p></div>
+    <div id="items-homeowners" style="display:flex;flex-direction:column;gap:18px"></div></section>
+
   <section id="cadence"><div class="head"><span class="eyebrow">Schedule and follow-ups</span><h2>How it all fits together</h2>
     <p class="lede">One main email, one text and one personal touch from the sales team each week, with posts that echo the same theme, and clear limits so nobody hears from Mitchell too often.</p></div>
     <div id="items-cadence" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
-  <section id="questions"><div class="head"><span class="eyebrow">Questions for Mitchell</span><h2>Seventeen answers that unlock the rest</h2>
+  <section id="questions"><div class="head"><span class="eyebrow">Questions for Mitchell</span><h2>The answers that unlock the rest</h2>
     <p class="lede">Items marked Waiting on a question go out as soon as it is answered. Type your answer under each one; it is included in your summary.</p></div>
     <div class="qs" id="qs"></div></section>
 
@@ -308,7 +312,11 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     ['Events','Which of the six events should we run, on which dates, and who from Mitchell can staff each one?'],
     ['Build time on the quiz','The quiz mentions about 150 days, while the Four Buyers ads avoid any build duration. Keep it in the quiz, or remove it?'],
     ['Sending address','May we set up email from a Mitchell address so these emails arrive from Mitchell? It takes one DNS change from whoever manages mitchellhomesinc.com.'],
-    ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.']
+    ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.'],
+    ['Homeowner contest prizes','In what form is the $2,500 grand prize paid, and who paints and frames the finalists\' Home Portraits? The contest emails wait on this.'],
+    ['Photo sessions','How many homeowner photo sessions can Mitchell fund, with which photographers, and how far will they travel?'],
+    ['Contest rules and judges','Will legal review the draft Official Rules, and who from Mitchell sits on the judging panel?'],
+    ['Homeowner list','Where does the list of past Mitchell homeowners live, and who on it has agreed to emails and texts?']
   ];
   function waitBadge(q){return el('span',{class:'wait',text:q?('Waiting on question '+q):'Waiting on a question below'});}
 
@@ -359,8 +367,10 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   var W=document.getElementById('items-web'),w=D.web;
   item(W,'A5','Website pop-up for mitchellhomesinc.com','Ready to go live once approved','It appears after fifteen seconds or halfway down a page, never on quiz pages, and stays away for two weeks once closed. A gentler corner-card version is included.',
     shots([[w['popup-open-desktop'],'The pop-up on a computer'],[w['popup-open-phone'],'The pop-up on a phone'],[w['slidein-desktop'],'The gentler corner card'],[w['slidein-phone'],'The corner card on a phone']]));
-  item(W,'A6','Home Portrait landing page','Suggested address: mitchellhomesinc.com/home-portrait','What a visitor sees before taking the quiz: how it works, what is inside a portrait, the five portraits, SimplyMitchell, Design Dollars, a homeowner story and common questions.',
+  item(W,'A6','Home Portrait landing page','Suggested address: mitchellhomesinc.com/home-portrait','What a visitor sees before taking the quiz: how it works, what is inside a portrait, the five portraits, SimplyMitchell, Design Dollars, a homeowner story, homeowner videos and common questions.',
     shots([[w['landing-desktop-full'],'On a computer','Tap to see the whole page'],[w['landing-phone-full'],'On a phone','Tap to see the whole page']]));
+  item(W,'A26','Homeowner video strip for mitchellhomesinc.com','Ready for the website vendor once approved','Two homeowner stories and a Behind the Build episode, ready to paste into any page. The videos load only when someone taps Play, so pages stay fast. The Home Portrait reels join it once they are hosted.',
+    shots([[w['videos-desktop'],'On a computer'],[w['videos-phone'],'On a phone']]));
 
   var SO=document.getElementById('items-social');
   item(SO,'A7','Social posts ('+L.social.length+')','October 12 to November 8 · Facebook, Instagram, YouTube Shorts, TikTok, LinkedIn','Built from the reels and ads you already have. Land leads, because land posts earn Mitchell the most engagement.',posts(L.social,8));
@@ -377,7 +387,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
 
   var PR=document.getElementById('items-print');
   item(PR,'A15','Print pieces ('+D.prints.length+')','Print-ready files at 300 dpi','Each QR code is tracked, so every scan is counted.',shots(D.prints.map(function(p){return [p.img,p.title,p.size];})));
-  item(PR,'A16','Events ('+L.eventsSeries.length+')','October 24 to November 18 · proposals until Mitchell confirms dates and staffing','Six events that run with the campaigns. Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages.',posts(L.eventsSeries));
+  item(PR,'A16','Events ('+L.eventsSeries.length+')','October 24 to November 18 · proposals until Mitchell confirms dates and staffing',L.eventsSeries.length+' events that run with the campaigns. Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages.',posts(L.eventsSeries));
 
   var CA=document.getElementById('items-cadence'),K=D.cadence;
   var rules=el('ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
@@ -397,6 +407,16 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     'Any reply, a booked appointment or a reservation stops it at once and alerts the consultant.'].map(function(t){return el('li',{text:t});}));
   item(NU,'A19','Nurture emails ('+count('nurture')+')','Day 0 to Day 60 after a lead goes quiet','Personal notes from the consultant alternate with designed emails, with one version for landowners and one for buyers still looking for land.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[flow,emailGrid('nurture')]));
   item(NU,'A20','Nurture texts ('+L.nurture.length+')','Days 2, 19 and 45','Short, personal, and easy to answer. Only to leads who gave text consent.',posts(L.nurture));
+  var HO=document.getElementById('items-homeowners'),CT=D.contest;
+  if(CT){
+    function ulist(arr,ordered){return el(ordered?'ol':'ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},arr.map(function(t){return el('li',{text:t});}));}
+    function sub(t){return el('h4',{style:'margin:8px 0 0',text:t});}
+    item(HO,'A22','Homeowner Appreciation Night and My Mitchell Story','Kickoff Tuesday, November 10 · entries through Sunday, December 6 · winner announced December 15',CT.summary,
+      el('div',{style:'display:flex;flex-direction:column;gap:10px'},[sub('How it works'),ulist(CT.how,true),sub('What homeowners receive'),ulist(CT.prizes),sub('The dates'),ulist(CT.timeline),sub('The four questions homeowners answer on video'),ulist(CT.prompts)]));
+    item(HO,'A23','Homeowner emails ('+count('homeowners')+')','Wednesdays to past homeowners, plus four automatic notes','The invitation, the launch, filming tips, the last week and the winner, and the personal notes each entrant receives along the way.',emailGrid('homeowners'));
+    item(HO,'A24','Homeowner texts, posts and scripts ('+L.contest.length+')','November 9 to December 15','Short texts only to homeowners who agreed to texts, posts that feature entries only with permission, and words for consultants and the warranty team.',posts(L.contest,8));
+    item(HO,'A25','Official Rules, entry form and photo sessions','Draft for legal review','The rules are a draft for Mitchell\'s legal team. The entry form collects the video and the permissions; the photographer brief sets what every session includes.',posts(L.contestRules,6));
+  }
   item(CA,'A18','Sales team follow-ups ('+L.followups.length+')','Fired by what each buyer does, from the consultant\'s own phone or email','Personal texts and emails for quiz takers, Design Dollars and landowner interest, deadline week, Design Center visits, old leads and realtors.',posts(L.followups,6));
 
   // at a glance

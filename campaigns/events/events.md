@@ -784,6 +784,7 @@ New Home Consultant, Mitchell Homes
 ### Email event block
 
 No email block, as briefed. The Wilmington profile, social, Nextdoor, consultant invites and one text carry it.
+
 ### Social posts
 
 **Monday, November 9, 2026** · Facebook, Instagram feed
@@ -1364,6 +1365,7 @@ Design Dollars apply to Design Center selections only. Not applied to base price
 ### Email event block
 
 No block in a buyer email. A thank-you evening for homeowners has its own invitation, ho2, sent to past homeowners on Wednesday, October 28; it lives with the contest emails in campaigns/homeowners/contest.json.
+
 ### Social posts
 
 **Wednesday, October 28, 2026** · Facebook, Instagram feed
@@ -1425,7 +1427,7 @@ Skip: an invitation for Mitchell homeowners, not the neighborhood.
 
 ### Consultant personal invite
 
-Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.
+Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with who have not RSVPed to ho2 yet: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.
 
 **Text** (156 characters)
 
@@ -1461,7 +1463,7 @@ Monday, November 9, 2026. Builder Studio workflow on the RSVP form, to RSVPs wit
 
 Tuesday, November 10, 2026, by 9pm. The consultant who invited each guest.
 
-> Thank you for coming tonight, [first name]. It was so good to see you. I will email you the My Mitchell Story link in the morning, and if you filmed a first take, it is on your phone and ready to finish at home.
+> Thank you for coming tonight, [first name]. It was so good to see you. Your My Mitchell Story link comes by email in the morning. Text me any time.
 
 ### Next-day follow-up email
 

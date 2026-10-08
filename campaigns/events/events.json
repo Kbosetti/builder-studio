@@ -1024,7 +1024,7 @@
    },
    "nextdoor": null,
    "nextdoor_when": "Skip: an invitation for Mitchell homeowners, not the neighborhood.",
-   "invite_when": "Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.",
+   "invite_when": "Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with who have not RSVPed to ho2 yet: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.",
    "invite_text": "Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 10, 5:30 to 7:30pm, at our [city] Design Center. Can you come?",
    "invite_email": {
     "subject": "You are invited, [first name]",
@@ -1033,7 +1033,7 @@
    "reminder_when": "Monday, November 9, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.",
    "reminder_text": "Mitchell Homes: See you tomorrow, Tue Nov 10, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out",
    "thanks_when": "Tuesday, November 10, 2026, by 9pm. The consultant who invited each guest.",
-   "thanks_text": "Thank you for coming tonight, [first name]. It was so good to see you. I will email you the My Mitchell Story link in the morning, and if you filmed a first take, it is on your phone and ready to finish at home.",
+   "thanks_text": "Thank you for coming tonight, [first name]. It was so good to see you. Your My Mitchell Story link comes by email in the morning. Text me any time.",
    "followup_when": "Wednesday, November 11, 2026, morning. The consultant, to every homeowner who came. Attendees get this in place of ho3, the launch email, so nobody gets two that day.",
    "followup_email": {
     "subject": "Thank you for last night",
@@ -1114,7 +1114,7 @@
    ],
    "invite_text_characters": 156,
    "reminder_text_characters": 145,
-   "thanks_text_characters": 211
+   "thanks_text_characters": 147
   }
  ]
 }

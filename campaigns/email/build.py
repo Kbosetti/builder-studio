@@ -22,6 +22,8 @@ FINE_DD = ("*Design Dollars apply to Design Center selections including cabinets
            "basements, well, septic, site work, or contract category options. Not applied to base price and not redeemable for cash. Tier "
            "determined at the time selections are made. One offer per contract. Program effective September 1, 2026. Full terms available "
            "from your New Home Consultant.")
+_GIFS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gifs", "gifs.json")
+GIFS = json.load(open(_GIFS)) if os.path.exists(_GIFS) else {}  # hero_gifs.py --upload
 VIDEOS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "videos", "videos.json")))  # make_thumbs.py --upload
 FINE_FIN = "Financing terms are illustrative only and subject to credit approval. Not a commitment to lend."
 E = html.escape
@@ -170,7 +172,8 @@ def render(series, em):
     link = lambda h: utm(h, series["campaign"], content)
     hero = ""
     if em.get("hero"):
-        hero = (f'<tr><td style="padding:0"><img src="{E(em["hero"]["src"])}" width="600" alt="{E(em["hero"]["alt"])}" '
+        src = GIFS.get(em["id"], {}).get("cdn") or em["hero"]["src"]  # the animated hero when hero_gifs.py made one
+        hero = (f'<tr><td style="padding:0"><img src="{E(src)}" width="600" alt="{E(em["hero"]["alt"])}" '
                 f'style="display:block;width:100%;max-width:600px;height:auto;border:0"></td></tr>')
     body = "".join(block(b, link) for b in em["blocks"])
     fine = []
@@ -219,7 +222,7 @@ a{{color:{GREEN}}}
 </td></tr>
 <tr><td class="pad" bgcolor="#f1efe8" style="padding:22px 40px;font-family:{FONT};font-size:11px;line-height:1.55;color:{MUTED}">
 {fine_html}<p style="margin:0 0 8px">Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113. Building on your land since 1992.</p>
-<p style="margin:0">You are receiving this email because you asked Mitchell Homes about building a home. {{{{unsubscribe}}}}</p>
+<p style="margin:0">{E(em.get("reason") or series.get("reason") or "You are receiving this email because you asked Mitchell Homes about building a home.")} {{{{unsubscribe}}}}</p>
 </td></tr>
 </table>
 </td></tr></table>

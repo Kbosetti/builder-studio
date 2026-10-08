@@ -640,7 +640,7 @@ EVENTS.append({
         "notes": "Image: a real Mitchell home exterior, no people. A public post that shows buyers how Mitchell treats its homeowners."},
     "nextdoor": None,
     "nextdoor_when": "Skip: an invitation for Mitchell homeowners, not the neighborhood.",
-    "invite_when": "Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.",
+    "invite_when": "Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with who have not RSVPed to ho2 yet: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.",
     "invite_text": "Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 10, 5:30 to 7:30pm, at our [city] Design Center. Can you come?",
     "invite_email": {
         "subject": "You are invited, [first name]",
@@ -786,7 +786,7 @@ for ev in EVENTS:
     L += [f"| {s['day']} | {s['channel']} | {s['what']} | {s['who']} |" for s in ev["schedule"]]
     L += ["", "### Email event block", ""]
     if not ev["rides_in"]:
-        L.append(ev.get("rides_in_note", "None."))
+        L += [ev.get("rides_in_note", "None."), ""]
     for r in ev["rides_in"]:
         b = r["block"]
         L += [f"**{r['email']}**, {r['send']}. {r['placement']}", "", q(f"**{b['head']}**\n\n{b['text']}\n\n[{b['cta']}]") , "",

@@ -2,7 +2,7 @@
 """Publish the built guide to its public web address, https://mitchell-fall-campaign-guide.vercel.app
 
 usage: python3 campaign-guide/build.py && python3 campaign-guide/deploy.py      (needs VERCEL_TOKEN)
-Wraps out/index.html in a full page (noindex), adds the deck slides, uploads through the Vercel API with
+Wraps out/index.html in a full page (noindex), adds the deck slides and reels, uploads through the Vercel API with
 curl (the sandbox proxy resets some connections, so every upload retries), and deploys to production of
 project mitchell-fall-campaign-guide (prj_64xxrfKyQ9YoLQpuBRAowodj6xyi) in the CEA Marketing team.
 """
@@ -40,7 +40,7 @@ def main():
     site = tempfile.mkdtemp(prefix="guide-site-")
     open(f"{site}/index.html", "w").write(HEAD + open(f"{HERE}/out/index.html").read() + "\n</body></html>\n")
     json.dump(VERCEL_JSON, open(f"{site}/vercel.json", "w"))
-    for f in glob.glob(f"{HERE}/decks/*/*.jpg"):
+    for f in glob.glob(f"{HERE}/decks/*/*.jpg") + glob.glob(f"{HERE}/reels/*.mp4"):
         dst = os.path.join(site, os.path.relpath(f, HERE))
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copy(f, dst)

@@ -39,6 +39,14 @@
    "campaign": "fall26_nurture",
    "audience": "Any lead with no reply, no booked appointment and no stage change seven days after first contact. Leaves the moment they reply, book, reserve or opt out.",
    "goal": "A reply or a booked call. Personal notes from the consultant alternate with designed emails and texts over 60 days, then the lead moves to the monthly newsletter."
+  },
+  {
+   "key": "homeowners",
+   "name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "campaign": "fall26_homeowners",
+   "audience": "Past Mitchell homeowners. Contest emails after November 11 skip anyone who has already entered.",
+   "goal": "My Mitchell Story invites Mitchell homeowners to show us, in a short phone video, what they love about their home, how they live in it and where they like to spend their time. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last, with the photos theirs to keep; five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. It opens at Homeowner Appreciation Night at all five Design Centers on Tuesday, November 10, 2026, and closes Sunday, December 6, 2026; every date and amount is a proposal for Mitchell to confirm."
   }
  ],
  "emails": [
@@ -377,6 +385,114 @@
    "preview": "Floor plans, the Home Portrait and a Design Center near you, all in one place.",
    "hold": "",
    "subject_len": 22
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "ho2",
+   "send": "Wednesday, October 28",
+   "segment": "Past Mitchell homeowners (smart list: Past Mitchell homeowners), minus anyone the warranty team is calling first",
+   "subject": "An evening for the people who built with us",
+   "preview": "Homeowner Appreciation Night, Tuesday, November 10, at your Mitchell Design Center.",
+   "hold": "Hold until Mitchell approves the November 10 date, staffing and refreshments, and the contest itself (prizes, session cap, Official Rules after legal review). If the contest is not approved by Monday, October 26, send it without the My Mitchell Story paragraph.",
+   "subject_len": 43
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "ho3",
+   "send": "Wednesday, November 11",
+   "segment": "Past Mitchell homeowners who did not come to Homeowner Appreciation Night (those who came get their consultant's follow-up that morning instead)",
+   "subject": "What do you love most about your home?",
+   "preview": "Show us in a short phone video. Your photo session at home is on us, while sessions last.",
+   "hold": "Hold until legal approves the Official Rules and Mitchell confirms the prizes, the form of the $2,500, the session cap and the dates.",
+   "subject_len": 38
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "ho4",
+   "send": "Wednesday, November 18",
+   "segment": "Past Mitchell homeowners who have not entered (no tag my mitchell story entry)",
+   "subject": "Your phone is all you need",
+   "preview": "A few tips for filming your Mitchell story, and your photo session is on us.",
+   "hold": "Holds with ho3 (Official Rules and prize details).",
+   "subject_len": 26
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "ho5",
+   "send": "Wednesday, December 2",
+   "segment": "Past Mitchell homeowners who have not entered (no tag my mitchell story entry)",
+   "subject": "Your story, by Sunday",
+   "preview": "My Mitchell Story closes Sunday, December 6, at 11:59pm Eastern.",
+   "hold": "Holds with ho3 (Official Rules and prize details). If Mitchell caps photo sessions and they run out before December 2, drop the photo session sentence.",
+   "subject_len": 21
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "ho6",
+   "send": "Tuesday, December 15",
+   "segment": "All past Mitchell homeowners, including every entrant",
+   "subject": "Meet the My Mitchell Story winner",
+   "preview": "And thank you to every homeowner who showed us their home.",
+   "hold": "Waits on the winner's verification and signed releases. Fill every bracket from the entries, with permission. The hero can be a home-only photo from the winner's session once they sign the release. Never show the painting.",
+   "subject_len": 33
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "hw1",
+   "send": "Automatic, when an entry arrives",
+   "segment": "Every entrant Immediately after an entry form is submitted (workflow My Mitchell Story | 01 Entry received), from the homeowner's assigned New Home Consultant.",
+   "subject": "Your story is in",
+   "preview": "Thank you. Here is what happens next.",
+   "hold": "",
+   "subject_len": 16
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "hw2",
+   "send": "Automatic, when an entry is verified",
+   "segment": "Every verified entrant When the contest coordinator adds the tag my mitchell story verified (workflow My Mitchell Story | 02 Photo session).",
+   "subject": "Let us book your photo session",
+   "preview": "About an hour at your home, and the photos are yours to keep.",
+   "hold": "Waits on the photographers, the session cap and the booking calendar.",
+   "subject_len": 30
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "hw3",
+   "send": "About December 8, to each finalist",
+   "segment": "The four finalists who are not the grand prize winner About Tuesday, December 8, after the phone call, when the coordinator adds the tag my mitchell story finalist (workflow My Mitchell Story | 03 Finalists).",
+   "subject": "You are a My Mitchell Story finalist",
+   "preview": "Congratulations. Here is what happens next.",
+   "hold": "Waits on judging, the artist and delivery date, and the release and affidavit from legal.",
+   "subject_len": 36
+  },
+  {
+   "series": "homeowners",
+   "series_name": "My Mitchell Story",
+   "stage": "Homeowners",
+   "id": "hw4",
+   "send": "About December 8, to the winner",
+   "segment": "The potential grand prize winner About Tuesday, December 8, after the phone call; sent by hand from the template, not by workflow.",
+   "subject": "Your story won",
+   "preview": "Congratulations. You are the My Mitchell Story grand prize winner.",
+   "hold": "Waits on judging, the form of the $2,500, and the release and affidavit from legal.",
+   "subject_len": 14
   }
  ]
 }

@@ -35,7 +35,7 @@ prints = [{"title": t, "size": z, "img": take(f"print/{n}.jpg")} for n, t, z in 
     ("design-dollars-counter-card", "Design Dollars counter card", "5 x 7 in, the design table"),
     ("landowner-community-flyer", "Landowner community board flyer", "8.5 x 11 in, feed stores, farm supply, hardware stores"),
     ("email-signature-banner", "Email signature banner", "600 x 150, every Mitchell email signature")]]
-web = {k: take(f"website/{k}.jpg") for k in ["popup-open-desktop", "popup-open-phone", "slidein-desktop", "slidein-phone", "landing-desktop-full", "landing-phone-full"]}
+web = {k: take(f"website/{k}.jpg") for k in ["popup-open-desktop", "popup-open-phone", "slidein-desktop", "slidein-phone", "landing-desktop-full", "landing-phone-full", "videos-desktop", "videos-phone"]}
 
 
 def clean(items, skip=()):
@@ -50,7 +50,8 @@ def clean(items, skip=()):
 
 def qref(text):
     t = text or ""
-    for pat, q in [(r"dreamer|price locked|locked from day one", 5), (r"legal", 7), (r"/math|calculator|comparison", 6), (r"plan guide", 8),
+    for pat, q in [(r"Official Rules|judging|winner's verification", 20), (r"photographer|session cap|booking calendar", 19),
+                   (r"\$2,500|the artist", 18), (r"November 10 date|staffing and refreshments", 14), (r"dreamer|price locked|locked from day one", 5), (r"legal", 7), (r"/math|calculator|comparison", 6), (r"plan guide", 8),
                    (r"realtor incentive", 11), (r"referral|thank.you exists", 12), (r"November|reserve.by", 1)]:
         if re.search(pat, t, re.I):
             return q
@@ -89,6 +90,34 @@ for k, items in lists.items():
     for it in items:
         if "notes" in it: it["q"] = qref(it["notes"]) if it["hold"] else 0
         it.pop("notes", None)
+cpath = f"{C}/homeowners/contest.json"
+contest = None
+lists["contest"], lists["contestRules"] = [], []
+if os.path.exists(cpath):
+    ct = json.load(open(cpath))
+    for t in ct["texts"]:
+        lists["contest"].append({"title": "Text: " + t["title"], "meta": t["when"].split(". ")[0], "body": t["body"] + "\n\nTo: " + t["to"], "link": "", "hold": False, "q": 0})
+    for x in ct["social"]:
+        lists["contest"].append({"title": "Post: " + x["title"], "meta": x["date"] + " · " + x["channels"], "body": x["body"], "link": x.get("link", ""), "hold": False, "q": 0})
+    g = ct["gbp"]
+    lists["contest"].append({"title": "Google profile post: " + g["title"], "meta": g["post_on"], "body": g["body"], "link": g.get("link", ""), "hold": False, "q": 0})
+    for x in ct["sales"]:
+        lists["contest"].append({"title": "Script: " + x["title"], "meta": x.get("when", ""), "body": x["body"], "link": "", "hold": False, "q": 0})
+    for r in ct["rules"]:
+        lists["contestRules"].append({"title": "Official Rules: " + r["head"], "meta": "Draft for legal review", "body": r["text"], "link": "", "hold": True, "q": 20})
+    f, ph = ct["form"], ct["photographer"]
+    lines = [str(f.get("intro", "")), ""] + [x["label"] + " (" + x["required"].lower() + ")" + (": " + x["help"] if x.get("help") else "") for x in f["fields"]]
+    lines += ["", "Permissions the entrant checks:"] + [x["label"] + ": " + x["text"] for x in f["consents"]]
+    lines += ["", "Button: " + str(f["submit"]), "After sending: " + str(f["thank_you"])]
+    lists["contestRules"].append({"title": "Entry form", "meta": "Built in Home Builder Studio", "body": "\n".join(lines).strip(), "link": "", "hold": False, "q": 0})
+    lines = [ph["what"], "Length: " + ph["length"], "When: " + ph["when"], "", "Shot list:"] + [a + ": " + b for a, b in ph["shot_list"]]
+    lines += ["", "Never photographed: " + "; ".join(ph["do_not_photograph"]), "", "Delivery: " + ph["delivery"], "Release: " + ph["release"], "How Mitchell may use the photos: " + ph["mitchell_use"]]
+    lists["contestRules"].append({"title": "Photographer brief", "meta": "Every entrant's photo session", "body": "\n".join(lines), "link": "", "hold": True, "q": 19})
+    contest = {"summary": " ".join(ct["summary"]) if isinstance(ct["summary"], list) else ct["summary"],
+               "how": [h if isinstance(h, str) else h.get("text", h.get("step", "")) for h in ct["how_it_works"]],
+               "prizes": [f"{p['tier']}: {p['what']}" for p in ct["prizes"]],
+               "timeline": [f"{t['date']}: {t['what']}" for t in ct["timeline"]],
+               "prompts": ct["prompts"]}
 ranking = [{"title": it["title"], "meta": it.get("meta", ""), "body": it["body"]} for it in org["summary"]["items"]]
 
 os.makedirs(f"{OUT}/cadence", exist_ok=True)
@@ -96,7 +125,7 @@ for n in ("rhythm", "week1"):
     shutil.copy(f"{C}/cadence/shots/{n}.jpg", f"{OUT}/cadence/{n}.jpg")
     files.append(f"cadence/{n}.jpg")
 cadence = {"rhythm": "cadence/rhythm.jpg", "week": "cadence/week1.jpg", "url": "https://mitchell-fall-cadence.vercel.app"}
-DATA = {"emails": em, "lists": lists, "prints": prints, "web": web, "ranking": ranking, "cadence": cadence}
+DATA = {"emails": em, "lists": lists, "prints": prints, "web": web, "ranking": ranking, "cadence": cadence, "contest": contest}
 font = base64.b64encode(open(f"{C}/../home-portrait/fonts/charlotte.woff2", "rb").read()).decode()
 page = (open(f"{HERE}/page.html").read()
         .replace("/*DATA*/null", json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/"))

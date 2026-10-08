@@ -1,9 +1,10 @@
 {
  "done": [
   "Template folder: Fall 2026 | Campaign drafts from CEA (do not send until approved)",
-  "45 email templates loaded into that folder, each named Fall26 · ID · subject line, with its preview text",
-  "13 tags: fall26 quiet, fall26 engaged, fall26 clicked, fall26 nurture done, fall26 skip text this week, realtor land partner, realtor on your land, event bring your photos oct24, event live qa oct27, event land 101 nov7, event gathering place nov12, event wilmington open house nov14, event realtor lunch nov18",
-  "12 trigger links: Fall26 · SMS1 · Design Dollars, Fall26 · SMS2 · Home Portrait, Fall26 · SMS4 · Landowners, Fall26 · Nurture · Home Portrait, Fall26 · Nurture · Roadmap episode, Fall26 · Nurture · Purchasing Land 101 episode, Fall26 · Event RSVP · E1 · Bring Your Photos Saturday, Fall26 · Event RSVP · E2 · Behind the Build Live: Your Design Dolla, Fall26 · Event RSVP · E3 · Building on Your Land 101, Fall26 · Event RSVP · E4 · Wilmington Design Center Open House, Fall26 · Event RSVP · E5 · The Gathering Place Live: Building Your , Fall26 · Event RSVP · E6 · Realtor Lunch and Learn"
+  "56 email templates loaded into that folder, each named Fall26 · ID · subject line, with its preview text",
+  "18 tags: fall26 quiet, fall26 engaged, fall26 clicked, fall26 nurture done, fall26 skip text this week, realtor land partner, realtor on your land, event bring your photos oct24, event live qa oct27, event land 101 nov7, event gathering place nov12, event wilmington open house nov14, event realtor lunch nov18, homeowner appreciation rsvp, my mitchell story entry, my mitchell story verified, my mitchell story finalist, event homeowner night nov10",
+  "13 trigger links: Fall26 · SMS1 · Design Dollars, Fall26 · SMS2 · Home Portrait, Fall26 · SMS4 · Landowners, Fall26 · Nurture · Home Portrait, Fall26 · Nurture · Roadmap episode, Fall26 · Nurture · Purchasing Land 101 episode, Fall26 · Event RSVP · E1 · Bring Your Photos Saturday, Fall26 · Event RSVP · E2 · Behind the Build Live: Your Design Dolla, Fall26 · Event RSVP · E3 · Building on Your Land 101, Fall26 · Event RSVP · E4 · Wilmington Design Center Open House, Fall26 · Event RSVP · E5 · The Gathering Place Live: Building Your , Fall26 · Event RSVP · E6 · Realtor Lunch and Learn, Fall26 · Event RSVP · E7 · Homeowner Appreciation Night",
+  "In the media library: 30 animated hero images (one per designed email) and 10 video thumbnails with a Watch the video bar, named fall26-hero-* and fall26-video-*"
  ],
  "lists": [
   {
@@ -90,9 +91,12 @@
   {
    "name": "Fall26 · Past homeowners",
    "filters": [
-    "No tag exists yet. Tag closed buyers homeowner (opportunity status Won, or the Lasso homeowner list), then filter on it"
+    "No tag exists yet. Tag closed buyers homeowner (opportunity status Won, or the Lasso homeowner list), then filter on it",
+    "Email DND is off",
+    "Not a Mitchell team member or team household",
+    "One view per division, so each Design Center sees its own homeowners for invitations"
    ],
-   "used_by": "HO1"
+   "used_by": "HO1 to HO6, the My Mitchell Story texts, each consultant's invite list"
   }
  ],
  "sends": [
@@ -328,6 +332,61 @@
    "hold": "Confirm with Mitchell whether a homeowner referral thank-you exists before adding one. This version makes no offer."
   },
   {
+   "when": "Wednesday, October 28",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HO2 · An evening for the people who built with us",
+   "subject": "An evening for the people who built with us",
+   "preview": "Homeowner Appreciation Night, Tuesday, November 10, at your Mitchell Design Center.",
+   "to": "Past Mitchell homeowners (smart list: Past Mitchell homeowners), minus anyone the warranty team is calling first",
+   "from": "Mitchell Homes",
+   "hold": "Hold until Mitchell approves the November 10 date, staffing and refreshments, and the contest itself (prizes, session cap, Official Rules after legal review). If the contest is not approved by Monday, October 26, send it without the My Mitchell Story paragraph."
+  },
+  {
+   "when": "Wednesday, November 11",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HO3 · What do you love most about your home?",
+   "subject": "What do you love most about your home?",
+   "preview": "Show us in a short phone video. Your photo session at home is on us, while sessions last.",
+   "to": "Past Mitchell homeowners who did not come to Homeowner Appreciation Night (those who came get their consultant's follow-up that morning instead)",
+   "from": "Mitchell Homes",
+   "hold": "Hold until legal approves the Official Rules and Mitchell confirms the prizes, the form of the $2,500, the session cap and the dates."
+  },
+  {
+   "when": "Wednesday, November 18",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HO4 · Your phone is all you need",
+   "subject": "Your phone is all you need",
+   "preview": "A few tips for filming your Mitchell story, and your photo session is on us.",
+   "to": "Past Mitchell homeowners who have not entered (no tag my mitchell story entry)",
+   "from": "Mitchell Homes",
+   "hold": "Holds with ho3 (Official Rules and prize details)."
+  },
+  {
+   "when": "Wednesday, December 2",
+   "time": "11:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HO5 · Your story, by Sunday",
+   "subject": "Your story, by Sunday",
+   "preview": "My Mitchell Story closes Sunday, December 6, at 11:59pm Eastern.",
+   "to": "Past Mitchell homeowners who have not entered (no tag my mitchell story entry)",
+   "from": "Mitchell Homes",
+   "hold": "Holds with ho3 (Official Rules and prize details). If Mitchell caps photo sessions and they run out before December 2, drop the photo session sentence."
+  },
+  {
+   "when": "Tuesday, December 15",
+   "time": "10:00 am",
+   "channel": "Email campaign",
+   "template": "Fall26 · HO6 · Meet the My Mitchell Story winner",
+   "subject": "Meet the My Mitchell Story winner",
+   "preview": "And thank you to every homeowner who showed us their home.",
+   "to": "All past Mitchell homeowners, including every entrant",
+   "from": "Mitchell Homes",
+   "hold": "Waits on the winner's verification and signed releases. Fill every bracket from the entries, with permission. The hero can be a home-only photo from the winner's session once they sign the release. Never show the painting."
+  },
+  {
    "when": "Wednesday, October 14",
    "time": "11:00 am",
    "channel": "Bulk text",
@@ -378,7 +437,29 @@
    "template": "Wilmington Design Center Open House invitation",
    "subject": "",
    "preview": "Mitchell Homes: Open house Sat Nov 14, 10 to 3, Wilmington Design Center, Belville. Bring your land questions. [trigger link] Reply STOP to opt out",
-   "to": "North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.",
+   "to": "North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, past Mitchell homeowners (My Mitchell Story opens for them that day), active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  },
+  {
+   "when": "Thursday, November 12",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "My Mitchell Story: Contest launch",
+   "subject": "",
+   "preview": "Mitchell Homes: My Mitchell Story is open. Show us what you love about your home in a short video by Dec 6: [trigger link] Reply STOP to opt out",
+   "to": "Past homeowners with text consent who did not RSVP to Homeowner Appreciation Night and have not entered. Their only text that week.",
+   "from": "Mitchell Homes number",
+   "hold": ""
+  },
+  {
+   "when": "Thursday, December 3",
+   "time": "11:00 am",
+   "channel": "Bulk text",
+   "template": "My Mitchell Story: Last-week contest reminder",
+   "subject": "",
+   "preview": "Mitchell Homes: What do you love most about your home? Show us in a short video by Sun, Dec 6. Photo sessions on us: [trigger link] Reply STOP to opt out",
+   "to": "Past homeowners with text consent who have not entered (no tag my mitchell story entry). Their only text that week. If sessions have run out, drop the words Photo sessions on us.",
    "from": "Mitchell Homes number",
    "hold": ""
   }
@@ -503,6 +584,62 @@
    ],
    "exits": [],
    "notes": "The amounts change per buyer, so this stays a task with the script rather than an automatic text."
+  },
+  {
+   "name": "My Mitchell Story | 00 Appreciation Night RSVP",
+   "purpose": "My Mitchell Story, the homeowner contest.",
+   "trigger": "Form submitted: Homeowner Appreciation Night RSVP",
+   "settings": "",
+   "steps": [
+    "Add tag: homeowner appreciation rsvp",
+    "Internal notification to the assigned consultant",
+    "Wait until Monday, November 9, 10am",
+    "If text consent: Send SMS, the RSVP reminder"
+   ],
+   "exits": [],
+   "notes": ""
+  },
+  {
+   "name": "My Mitchell Story | 01 Entry received",
+   "purpose": "My Mitchell Story, the homeowner contest.",
+   "trigger": "Form submitted: My Mitchell Story entry form",
+   "settings": "",
+   "steps": [
+    "Add tag: my mitchell story entry",
+    "Send email hw1 (Your story is in) from the assigned user",
+    "Internal notification to the contest coordinator and the assigned consultant",
+    "Create task for the contest coordinator, due in 1 business day: check eligibility (Mitchell homeowner record and address, one entry per household, not a team household), that the video plays, the music rule, and the consent boxes",
+    "If the entry passes, the coordinator adds tag my mitchell story verified (starts workflow 02). If not, the coordinator calls the entrant."
+   ],
+   "exits": [],
+   "notes": "Every contest email and text after November 11 skips contacts tagged my mitchell story entry, except ho6, which goes to everyone."
+  },
+  {
+   "name": "My Mitchell Story | 02 Photo session",
+   "purpose": "My Mitchell Story, the homeowner contest.",
+   "trigger": "Contact tag added: my mitchell story verified",
+   "settings": "",
+   "steps": [
+    "Send email hw2 (booking link) from the assigned user",
+    "Wait 3 days, or until a session is booked on the photo session calendar",
+    "If no session is booked: create task for the coordinator to call and book",
+    "When a session is booked: the day before, if text consent, send the photo session reminder text; the photographer gets the calendar invite with the entry video link and the shot list"
+   ],
+   "exits": [],
+   "notes": ""
+  },
+  {
+   "name": "My Mitchell Story | 03 Finalists",
+   "purpose": "My Mitchell Story, the homeowner contest.",
+   "trigger": "Contact tag added: my mitchell story finalist",
+   "settings": "",
+   "steps": [
+    "The coordinator or consultant calls first; the tag goes on after the call",
+    "Send email hw3 from the assigned user (the grand prize winner gets hw4, sent by hand instead)",
+    "Wait 3 business days: if documents are not back, create task for the coordinator to call"
+   ],
+   "exits": [],
+   "notes": ""
   }
  ],
  "checklist": [
@@ -515,6 +652,7 @@
   "Routing: check Mitchell | 01 Inquiry routing so quiz leads do not get two first texts.",
   "Past homeowners: tag them homeowner so the referral email has a list.",
   "Event RSVP form: create it, then point the six Fall26 · Event RSVP trigger links at it. Today they open Mitchell's contact page, so every invitation already works and updates the moment the links change.",
-  "A few event emails say [city] where the Design Center name goes: set it per division before sending, or duplicate the template per studio."
+  "A few event emails say [city] where the Design Center name goes: set it per division before sending, or duplicate the template per studio.",
+  "My Mitchell Story: build the two forms (Appreciation Night RSVP, contest entry), the photo session calendars and the four contest workflows from the kit's Homeowners tab; the tags are already in the account."
  ]
 }

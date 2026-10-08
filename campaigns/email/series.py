@@ -233,6 +233,7 @@ SERIES = [
      ]},
 
     {"key": "partners", "name": "Realtors and homeowners", "stage": "Refer", "campaign": "fall26_referral",
+     "reason": "You are receiving this email because you are on the Mitchell Homes real estate partner list.",
      "audience": "Realtor and broker contacts (land listing agents first), and past Mitchell homeowners.",
      "goal": "Referrals into the quiz and the Design Dollars page from people who already know buyers.",
      "emails": [
@@ -312,6 +313,7 @@ SERIES = [
             {"t": "small", "text": "Behind the Build: Well and Septic", "href": "https://www.youtube.com/watch?v=zWwtw8qgp4w"},
             {"t": "cta", "text": "Share the Home Portrait", "href": QUIZ}]},
         {"id": "ho1", "send": "Wednesday, October 21", "segment": "Past Mitchell homeowners",
+         "reason": "You are receiving this email because you built your home with Mitchell Homes.",
          "hold": "Confirm with Mitchell whether a homeowner referral thank-you exists before adding one. This version makes no offer.",
          "subject": "Know someone with land and a dream?",
          "preview": "The best Mitchell homes start with a homeowner's introduction.",
@@ -417,6 +419,42 @@ SERIES = [
      ]},
 ]
 
+
+
+# My Mitchell Story, the homeowner contest, lives in campaigns/homeowners/contest.json (make_contest.py); its emails
+# join here as their own series so they render, preview and load into Builder Studio like the rest.
+def _add_contest_series():
+    import json, os
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "homeowners", "contest.json")
+    if not os.path.exists(path):
+        return
+    c = json.load(open(path))
+    rec_path = os.path.join(os.path.dirname(path), "..", "builder_studio", "created.json")
+    rsvp = next((v["field"] for v in json.load(open(rec_path)).get("links", {}).values() if v.get("event") == "e7"), None) if os.path.exists(rec_path) else None
+    emails = []
+    for e in c["emails"] + c["workflow_emails"]:
+        e = json.loads(json.dumps(e).replace("[RSVP link]", rsvp)) if rsvp else dict(e)
+        path_, alt = e.pop("hero_path", None), e.pop("hero_alt", "")
+        if path_:
+            e["hero"] = hero(path_, alt)
+        short = {"hw1": "Automatic, when an entry arrives", "hw2": "Automatic, when an entry is verified",
+                 "hw3": "About December 8, to each finalist", "hw4": "About December 8, to the winner"}.get(e["id"])
+        if short:
+            e["segment"] = (e.get("segment", "") + " " + e["send"] + ".").strip()
+            e["send"] = short
+        emails.append(e)
+    launch = next((e for e in emails if e["id"] == "ho3"), None)
+    if launch and not any(b["t"] == "video" for b in launch["blocks"]):
+        i = next(i for i, b in enumerate(launch["blocks"]) if b["t"] == "cta")
+        launch["blocks"].insert(i, {"t": "video", "v": "downey", "text": "Need an idea? This is how the Downey family told theirs."})
+    SERIES.append({"key": "homeowners", "name": c["name"], "stage": "Homeowners", "campaign": "fall26_homeowners",
+                   "reason": "You are receiving this email because you built your home with Mitchell Homes.",
+                   "audience": "Past Mitchell homeowners. Contest emails after November 11 skip anyone who has already entered.",
+                   "goal": " ".join(c["summary"]) if isinstance(c["summary"], list) else c["summary"],
+                   "emails": emails})
+
+
+_add_contest_series()
 
 # Event invitations ride inside existing emails (campaigns/events/events.json), linked through the per event
 # RSVP trigger links in Builder Studio (campaigns/builder_studio/created.json), so one link update fixes them all.

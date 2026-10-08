@@ -64,13 +64,16 @@ web = {"shots": [], "snippet": "", "landing": "", "readme": ""}
 W = f"{C}/website"
 for f, label in [("popup-open-desktop.png", "Pop-up on a computer"), ("popup-open-phone.png", "Pop-up on a phone"),
                  ("slidein-desktop.png", "Slide-in corner card, the gentler option"), ("slidein-phone.png", "Slide-in on a phone"),
-                 ("landing-desktop-full.png", "Landing page on a computer"), ("landing-phone-full.png", "Landing page on a phone")]:
+                 ("landing-desktop-full.png", "Landing page on a computer"), ("landing-phone-full.png", "Landing page on a phone"),
+                 ("videos-desktop.png", "Video strip for any page, on a computer"), ("videos-phone.png", "Video strip on a phone")]:
     if os.path.exists(f"{W}/shots/{f}"):
         width = 420 if "phone" in f else 1100
         web["shots"].append({"label": label, "img": jpg(f"{W}/shots/{f}", f"website/{f.replace('.png', '.jpg')}", width)})
 if os.path.exists(f"{W}/popup/portrait-popup-snippet.html"):
     web["snippet"] = open(f"{W}/popup/portrait-popup-snippet.html").read()
     web["snippet_file"] = copy(f"{W}/popup/portrait-popup-snippet.html", "website/portrait-popup-snippet.html")
+if os.path.exists(f"{W}/videos/video-strip-snippet.html"):
+    web["video_file"] = copy(f"{W}/videos/video-strip-snippet.html", "website/video-strip-snippet.html")
 if os.path.exists(f"{W}/landing/home-portrait.html"):
     web["landing_file"] = copy(f"{W}/landing/home-portrait.html", "website/home-portrait-landing.html")
 for rd in ("landing/README.md", "README.md", "popup/README.md"):
@@ -80,7 +83,7 @@ for rd in ("landing/README.md", "README.md", "popup/README.md"):
 def opt(path):
     return json.load(open(path)) if os.path.exists(path) else None
 DATA = {"emails": em, "organic": organic, "direct": direct, "prints": prints, "sig_html": sig_html, "web": web,
-        "events": opt(f"{C}/events/events.json"), "groups": opt(f"{C}/traffic/facebook_groups.json"), "setup": opt(f"{C}/builder_studio/setup.json")}
+        "events": opt(f"{C}/events/events.json"), "groups": opt(f"{C}/traffic/facebook_groups.json"), "setup": opt(f"{C}/builder_studio/setup.json"), "contest": opt(f"{C}/homeowners/contest.json")}
 data = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
 page = open(f"{HERE}/page.html").read().replace("/*DATA*/null", data)
 if re.search(r"[–—]", page):

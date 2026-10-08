@@ -25,13 +25,13 @@ lists = [
     {"name": "Fall26 · Looking for land Carolinas", "filters": ["Everything in the full marketing list", "Tags include land searching OR land dreaming", "Carolinas division or region tags"], "used_by": "FB5C"},
     {"name": "Fall26 · Text list", "filters": ["Phone is not empty", "SMS DND is off and the contact gave text consent", "Tags do not include fall26 clicked, fall26 skip text this week, fall26 quiet", "If the campaign report can export non-openers of that week's Tuesday email, send to that export instead"], "used_by": "The weekly text"},
     {"name": "Fall26 · Realtors", "filters": ["Tags include realtor OR realtor database", "Email DND is off"], "used_by": "Realtor emails"},
-    {"name": "Fall26 · Past homeowners", "filters": ["No tag exists yet. Tag closed buyers homeowner (opportunity status Won, or the Lasso homeowner list), then filter on it"], "used_by": "HO1"},
+    {"name": "Fall26 · Past homeowners", "filters": ["No tag exists yet. Tag closed buyers homeowner (opportunity status Won, or the Lasso homeowner list), then filter on it", "Email DND is off", "Not a Mitchell team member or team household", "One view per division, so each Design Center sees its own homeowners for invitations"], "used_by": "HO1 to HO6, the My Mitchell Story texts, each consultant's invite list"},
 ]
 
 times = {"Tuesday": "10:00 am", "Wednesday": "11:00 am", "Thursday": "10:00 am"}
 sends = []
 for e in emails:
-    if not re.match(r"(Mon|Tues|Wednes|Thurs|Fri)day, (October|November)", e["send"]):
+    if not re.match(r"(Mon|Tues|Wednes|Thurs|Fri)day, (October|November|December)", e["send"]):
         continue
     day = e["send"].split(",")[0]
     sends.append({"when": e["send"].split(", after")[0], "time": times.get(day, "10:00 am"), "channel": "Email campaign", "template": T(e["id"]),
@@ -46,6 +46,14 @@ if os.path.exists(ev_path):
         for x in ev.get("extra_texts", []):
             sends.append({"when": x["date"].replace(", 2026", ""), "time": "11:00 am", "channel": "Bulk text", "template": f"{ev['name']} invitation",
                           "subject": "", "preview": x["body"], "to": x.get("audience", ""), "from": "Mitchell Homes number", "hold": ""})
+
+cp = f"{C}/homeowners/contest.json"
+contest = json.load(open(cp)) if os.path.exists(cp) else None
+if contest:
+    for t in contest["texts"]:
+        if "bulk" in t["when"].lower():
+            sends.append({"when": t["when"].split(",")[0] + "," + t["when"].split(",")[1].replace(" 2026", "").split(".")[0], "time": "11:00 am", "channel": "Bulk text",
+                          "template": "My Mitchell Story: " + t["title"], "subject": "", "preview": t["body"], "to": t["to"], "from": "Mitchell Homes number", "hold": ""})
 
 
 def sms(title):
@@ -124,7 +132,21 @@ if created.get("tags"):
     done.append(f"{len(created['tags'])} tags: " + ", ".join(created["tags"]))
 if created.get("links"):
     done.append(f"{len(created['links'])} trigger links: " + ", ".join(created["links"]))
+media = []
+for path, what in ((f"{C}/email/gifs/gifs.json", "animated hero images (one per designed email)"), (f"{C}/email/videos/videos.json", "video thumbnails with a Watch the video bar")):
+    if os.path.exists(path):
+        n = sum(1 for v in json.load(open(path)).values() if v.get("cdn"))
+        if n:
+            media.append(f"{n} {what}")
+if media:
+    done.append("In the media library: " + " and ".join(media) + ", named fall26-hero-* and fall26-video-*")
 
+if contest:
+    bs = contest["builder_studio"]
+    for w in bs["workflows"]:
+        workflows.append({"name": w["name"], "purpose": "My Mitchell Story, the homeowner contest.", "trigger": w["trigger"], "settings": "",
+                          "steps": w["steps"], "exits": [], "notes": bs.get("exclusions", "") if "Entry" in w["name"] else ""})
+    checklist.append("My Mitchell Story: build the two forms (Appreciation Night RSVP, contest entry), the photo session calendars and the four contest workflows from the kit's Homeowners tab; the tags are already in the account.")
 json.dump({"done": done, "lists": lists, "sends": sends, "workflows": workflows, "checklist": checklist}, open(f"{HERE}/setup.json", "w"), indent=1, ensure_ascii=False)
 txt = json.dumps({"lists": lists, "workflows": workflows, "checklist": checklist}, ensure_ascii=False)
 assert not re.search(r"[–—]", txt), "dash"
