@@ -149,10 +149,26 @@ if os.path.exists(ep):
             d2 = when(x.get("date", ""))
             if d2:
                 ev.append({"d": d2, "ch": "Social", "camp": cp, "title": f"Event: {e['name']}", "aud": x.get("channels", ""), "who": "Marketing", "body": x["body"], "link": x.get("link", ""), "hold": ""})
+fgp = f"{C}/traffic/facebook_groups.json"
+if os.path.exists(fgp):
+    fg = json.load(open(fgp))
+    top = [g for g in fg.get("groups", []) if (g.get("priority") or 3) == 1]
+    if top:
+        ev.append({"d": START, "ch": "FB groups", "camp": "all", "title": f"Join the {len(top)} first choice Facebook groups", "aud": "Local, new to the area and land groups",
+                   "who": "Marketing, plus any consultant who lives in the area", "body": "\n".join(f"{g['name']} ({g.get('area', '')})\n{g.get('url', '')}" for g in top),
+                   "notes": "Read each group's rules. Comment helpfully for a week or two before asking anything.", "hold": ""})
+    if fg.get("outreach"):
+        o = fg["outreach"][0]
+        ev.append({"d": START + timedelta(days=8), "ch": "FB groups", "camp": "all", "title": "Ask the group admins before posting", "aud": "Admins of the groups joined in week one",
+                   "who": "Marketing", "body": o["body"], "notes": "Keep a list of which groups said yes. Post only there.", "hold": ""})
+    for i, x in enumerate(fg.get("posts", [])[:5]):
+        ev.append({"d": START + timedelta(days=9 + 7 * i), "ch": "FB groups", "camp": campaign(x["title"], x["body"]), "title": x["title"], "aud": x.get("fits", "Groups whose admins said yes"),
+                   "who": "Marketing", "body": x["body"], "link": x.get("link", ""), "notes": "Only in groups whose admins said yes.", "hold": ""})
 ev = [x for x in ev if x["d"] and START <= x["d"] < START + timedelta(days=7 * WEEKS)]
 for x in ev:
     x["d"] = x["d"].isoformat()
-ev.sort(key=lambda x: (x["d"], ["Event", "Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "YouTube"].index(x["ch"]) if x["ch"] in ["Event", "Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "YouTube"] else 9))
+ORDER = ["Event", "Setup", "Email", "Text", "Sales team", "Social", "Google", "Nextdoor", "FB groups", "YouTube"]
+ev.sort(key=lambda x: (x["d"], ORDER.index(x["ch"]) if x["ch"] in ORDER else 9))
 playbook = [{"title": i["title"], "meta": i["meta"], "body": i["body"], "notes": clean(i.get("notes", ""))} for i in dr["followups"]["items"]]
 
 data = {"start": START.isoformat(), "weeks": WEEKS, "events": ev, "playbook": playbook}

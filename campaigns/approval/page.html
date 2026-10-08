@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap">
 <style>
 @font-face{font-family:"Charlotte";src:url(%%charlotte%%) format("woff2");font-display:block}
-/* Layout: a deep green cover, a sticky review bar that counts approvals, the plan at a glance, sixteen numbered approval items in send order, the open questions, then sign off. */
+/* Layout: a deep green cover, a sticky review bar that counts approvals, the plan at a glance, the numbered approval items by channel, the open questions, then sign off. */
 :root{
   --bg:#faf8f3; --paper:#ffffff; --ink:#1e4f33; --text:#26352c; --muted:#5d6f63; --line:#e2e5da; --wash:#f2f0e8;
   --accent:#2b6d47; --on-accent:#ffffff; --sun:#f5d053; --on-sun:#1e4f33; --band:#1e4f33; --on-band:#ffffff; --band-muted:#cfe0d4;
@@ -305,7 +305,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
     ['Realtor incentive','What are the current realtor incentive terms we can mention to agents?'],
     ['Homeowner referrals','Is there a thank you for homeowner referrals we can mention? The homeowner email makes no offer until you say so.'],
     ['Sample painting on the landing page (decided)','Decided October 8: no painted portraits anywhere before the quiz. The landing page and every email now show real Mitchell homes instead. Nothing needed from you.'],
-    ['Events','Which of the three event ideas should we run, and on which dates?'],
+    ['Events','Which of the six events should we run, on which dates, and who from Mitchell can staff each one?'],
     ['Build time on the quiz','The quiz mentions about 150 days, while the Four Buyers ads avoid any build duration. Keep it in the quiz, or remove it?'],
     ['Sending address','May we set up email from a Mitchell address so these emails arrive from Mitchell? It takes one DNS change from whoever manages mitchellhomesinc.com.'],
     ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.']
@@ -368,6 +368,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   item(SO,'A9','YouTube and Behind the Build ('+L.youtube.length+')','Now, updated November 1','A quiz and Design Dollars link under every episode, a pinned comment, community posts, and clearer episode titles.',posts(L.youtube));
   item(SO,'A10','Listing portals ('+L.portals.length+')','Now · Zillow, Realtor.com, NewHomeSource, Houzz','One consistent builder description everywhere, with the Design Dollars offer.',posts(L.portals));
   item(SO,'A11','Nextdoor and local partners ('+L.community.length+')','From October 14','Nextdoor posts, helpful posts for local land groups, and a note for surveyors, land agents and extension offices.',posts(L.community));
+  if(L.groups&&L.groups.length)item(SO,'A21','Facebook groups to join ('+L.groups.length+')','From October 12 · join first, post only where the admins say yes','Local community, new to the area, land and homesteading groups in Mitchell\'s markets. The team joins, helps for a week or two, then asks the admins before posting anything about Mitchell.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[posts(L.groups,8),L.groupMsgs&&L.groupMsgs.length?el('h4',{style:'margin:6px 0 0',text:'The note to admins, and posts that help before they ask'}):null,L.groupMsgs&&L.groupMsgs.length?posts(L.groupMsgs):null]));
 
   var DI=document.getElementById('items-direct');
   item(DI,'A12','Text messages ('+L.sms.length+')','October 14 to November 4 · only contacts who agreed to texts','Short, with a tracked link and a way to opt out.',posts(L.sms));
@@ -399,7 +400,7 @@ a:focus-visible,button:focus-visible,textarea:focus-visible,input:focus-visible,
   item(CA,'A18','Sales team follow ups ('+L.followups.length+')','Fired by what each buyer does, from the consultant\'s own phone or email','Personal texts and emails for quiz takers, Design Dollars and landowner interest, deadline week, Design Center visits, old leads and realtors.',posts(L.followups,6));
 
   // at a glance
-  var M=[['Email',1,1,1],['Website pop-up and landing page',0,1,0],['Website bar and thank you pages',1,1,0],['Social posts',1,1,1],['Google Business Profiles',1,1,1],['YouTube',1,1,0],['Listing portals',1,0,0],['Nextdoor and local groups',1,1,1],['Text messages',1,1,1],['Sales team',1,1,0],['Print',1,1,0],['Events',1,1,0]];
+  var M=[['Email',1,1,1],['Website pop-up and landing page',0,1,0],['Website bar and thank you pages',1,1,0],['Social posts',1,1,1],['Google Business Profiles',1,1,1],['YouTube',1,1,0],['Listing portals',1,0,0],['Nextdoor and local groups',1,1,1],['Facebook groups',1,1,1],['Text messages',1,1,1],['Sales team',1,1,0],['Print',1,1,0],['Events',1,1,0]];
   var mt=document.getElementById('matrix');
   M.forEach(function(r){mt.appendChild(el('tr',{},[el('td',{text:r[0]})].concat([1,2,3].map(function(i){return el('td',{},[r[i]?el('span',{class:'dot','aria-label':'Yes'}):el('span',{class:'muted','aria-label':'No',text:'·'})]);}))));});
   var MONTHS={October:9,November:10};

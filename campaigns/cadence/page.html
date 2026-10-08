@@ -189,7 +189,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
 (function(){
   var D=/*DATA*/null;
   var CAMPS={dd:'Design Dollars',hp:'Home Portrait',fb:'Four Buyers',ref:'Realtors and homeowners',all:'All campaigns'};
-  var CHANS=['Event','Email','Text','Sales team','Social','Google','Nextdoor','YouTube','Setup'];
+  var CHANS=['Event','Email','Text','Sales team','Social','Google','Nextdoor','FB groups','YouTube','Setup'];
   var THEMES=['Launch: Design Dollars to the database, the Home Portrait to engaged contacts','Spend and add, and the land question','Deadline week: reserve by October 31, and the Four Buyers ads begin','Landowners: your land can be your down payment','Without the unknowns, and the getaway portrait','No construction loan, and one appointment'];
   function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(a[k]==null)continue;if(k==='text')e.textContent=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c!=null&&c!==false)e.appendChild(typeof c==='string'?document.createTextNode(c):c);});return e;}
   function day(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}

@@ -73,6 +73,16 @@ if os.path.exists(ev_path):
             body += " Plus one invitation text: " + e["extra_texts"][0]["body"]
         body += "\n\nWhat Mitchell confirms: " + "; ".join(e.get("confirm", []))
         lists["eventsSeries"].append({"title": e["name"], "meta": f"{e['date']} · {e['time']} · {e.get('where', '')}", "body": body, "link": "", "hold": False, "q": 14})
+fg_path = f"{C}/traffic/facebook_groups.json"
+lists["groups"], lists["groupMsgs"] = [], []
+if os.path.exists(fg_path):
+    fg = json.load(open(fg_path))
+    for g in sorted(fg.get("groups", []), key=lambda g: (g.get("priority") or 3, g.get("state") or "")):
+        meta = " · ".join(x for x in (g.get("area"), g.get("members"), g.get("privacy")) if x)
+        body = "\n\n".join(x for x in (g.get("why"), ("Posting rules: " + g["rules"]) if g.get("rules") else "", g.get("ask")) if x)
+        lists["groups"].append({"title": g["name"], "meta": meta, "body": body, "link": g.get("url", ""), "hold": False})
+    for o in fg.get("outreach", []) + fg.get("posts", []):
+        lists["groupMsgs"].append({"title": o["title"], "meta": o.get("fits", ""), "body": o["body"], "link": o.get("link", ""), "hold": False})
 for k, items in lists.items():
     for it in items:
         if "notes" in it: it["q"] = qref(it["notes"]) if it["hold"] else 0
