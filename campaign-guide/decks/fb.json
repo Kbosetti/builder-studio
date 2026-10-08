@@ -1,28 +1,20 @@
 {
- "count": 30,
+ "count": 20,
  "slides": [
   {
    "notes": "Persona 1 is the lead persona. It targets the buyer who is already halfway to the close, so the ad's job is arithmetic, not persuasion.",
    "links": []
   },
   {
-   "notes": "Four buyers, four different reasons for stalling. One campaign has to speak to the average of them, which is nobody. This slide is the argument for persona specific creative.",
+   "notes": "Four buyers, four different reasons for stalling. One campaign has to speak to the average of them, which is nobody.",
    "links": []
   },
   {
-   "notes": "July sold a discount to strangers. August sells a landowner an argument about the thing they already own, and only then hands them the money.",
+   "notes": "July sold a discount to strangers. September sells a landowner an argument about the thing they already own, and only then hands them the money.",
    "links": []
   },
   {
-   "notes": "Pushback worth having: these are four objections, not four audiences, and Housing category targeting cannot separate them. I would run them as a sequenced set against one geo pool.",
-   "links": []
-  },
-  {
-   "notes": "Three recommendations before the creative. Persona specific campaigns per market rather than one general campaign. Imagery gets replaced once we have access to the full library. And a fifth campaign for buyers without land, which needs different messaging and is in progress.",
-   "links": []
-  },
-  {
-   "notes": "The carousel already is a funnel in one unit. Card one is awareness, two to four are consideration, card five is decision. So the journey should sequence the assets we have rather than multiply the campaigns. Decision stage retargeting on Meta needs verifying against Housing category rules.",
+   "notes": "",
    "links": []
   },
   {
@@ -34,31 +26,23 @@
    "links": []
   },
   {
-   "notes": "Reason to believe. Offer cut. The value of the land counts toward the build.",
+   "notes": "The value of the land counts toward the build.",
    "links": []
   },
   {
-   "notes": "States program mechanics. Carries the illustrative only qualifier in primary text, not on the card.",
+   "notes": "",
    "links": []
   },
   {
-   "notes": "Build duration deliberately not claimed anywhere in this campaign.",
+   "notes": "",
    "links": []
   },
   {
-   "notes": "Rule Zero. The offer is earned. Four reasons to believe precede it.",
+   "notes": "",
    "links": []
   },
   {
-   "notes": "Primary text runs 124 of 125 characters. The offer never appears above the fold.",
-   "links": []
-  },
-  {
-   "notes": "One idea survives the squeeze. For Value Unlocker it is the down payment, not the land.",
-   "links": []
-  },
-  {
-   "notes": "The three small units are where Rule Zero bites. The offer is cut from two of them and demoted to the legal strip in a third.",
+   "notes": "",
    "links": []
   },
   {
@@ -70,7 +54,7 @@
    "links": []
   },
   {
-   "notes": "Primary text runs 124 of 125 characters. The offer never appears above the fold.",
+   "notes": "",
    "links": []
   },
   {
@@ -78,19 +62,11 @@
    "links": []
   },
   {
-   "notes": "Compression for the Planner. The one line that survives every squeeze is priced before you sign, because it is both the claim and the proof.",
-   "links": []
-  },
-  {
    "notes": "This buyer did not decide against building. They called a bank, heard what a construction loan involves, and quietly stopped. This persona does not sell a house, it removes a bank.",
    "links": []
   },
   {
-   "notes": "Primary text runs 124 of 125 characters. The offer never appears above the fold.",
-   "links": []
-  },
-  {
-   "notes": "Compression for the Transitioner. The bank is the obstacle, so removing the bank is the only line that survives.",
+   "notes": "",
    "links": []
   },
   {
@@ -98,27 +74,11 @@
    "links": []
   },
   {
-   "notes": "Primary text runs 124 of 125 characters. The offer never appears above the fold.",
+   "notes": "",
    "links": []
   },
   {
-   "notes": "This person has been saving photographs of this house for years. Showing them one more beautiful room does nothing. What they are missing is a date. Three photo units here are placeholders.",
-   "links": []
-  },
-  {
-   "notes": "The five carousel cards are already a storyboard. Each one is a beat. Cut them to nine by sixteen and the same asset works in feed, Stories and Reels with no new photography.",
-   "links": []
-  },
-  {
-   "notes": "These are finished 1080 by 1920 stills, not concepts. Hand them to an editor in this order with the hold times and the reel assembles itself in an afternoon.",
-   "links": []
-  },
-  {
-   "notes": "Personas 1 and 2 have pages. The Transitioner page needs more discussion and the Grounded Dreamer page has not been built, so two of the four have nowhere to land yet. The thank you page has its own URL so it can fire as a conversion, which is the piece that was missing in July.",
-   "links": []
-  },
-  {
-   "notes": "Five things I need before the rest of the campaign can be finished.",
+   "notes": "This person has been saving photographs of this house for years. Showing them one more beautiful room does nothing. What they are missing is a date.",
    "links": []
   }
  ]

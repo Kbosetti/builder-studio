@@ -25,6 +25,7 @@ src = re.sub(r"%%img:([\w.-]+)%%", lambda m: uri(f"{HERE}/img/{m.group(1)}"), sr
 DECKS = ("hp", "fb", "dd")
 src = re.sub(r"%%thumb:(\w+)%%", lambda m: uri(f"{HERE}/decks/{m.group(1)}/t01.jpg"), src)
 decks = {k: json.load(open(f"{HERE}/decks/{k}.json")) for k in DECKS}
+src = re.sub(r"%%count:(\w+)%%", lambda m: str(decks[m.group(1)]["count"]), src)
 src = src.replace("%%decks%%", json.dumps(decks, ensure_ascii=False).replace("</", "<\\/"))
 left = re.findall(r"%%[\w:.-]+%%", src)
 assert not left, left

@@ -269,9 +269,9 @@ dialog::backdrop{background:var(--scrim)}
       <p class="lede">Open a deck to page through the slides with the speaker notes beside them. No Google or Canva account needed.</p>
     </div>
     <div class="decks">
-      <button class="deck" type="button" data-deck="hp"><img src="%%thumb:hp%%" alt="" width="360" height="203"><span class="eyebrow">Campaign 1 · Discover</span><h3>The Home Portrait</h3><span class="meta">Sales team showcase · 24 slides · speaker notes on every slide</span><span class="go">Open the deck</span></button>
-      <button class="deck" type="button" data-deck="fb"><img src="%%thumb:fb%%" alt="" width="360" height="203"><span class="eyebrow">Campaign 2 · Believe</span><h3>The Four Buyers</h3><span class="meta">Creative review, September 2026 · 30 slides · presenter notes</span><span class="go">Open the deck</span></button>
-      <button class="deck" type="button" data-deck="dd"><img src="%%thumb:dd%%" alt="" width="360" height="203"><span class="eyebrow">Campaign 3 · Decide</span><h3>Mitchell Design Dollars</h3><span class="meta">Fall 2026 campaign deck · 11 slides</span><span class="go">Open the deck</span></button>
+      <button class="deck" type="button" data-deck="hp"><img src="%%thumb:hp%%" alt="" width="360" height="203"><span class="eyebrow">Campaign 1 · Discover</span><h3>The Home Portrait</h3><span class="meta">Sales team showcase · %%count:hp%% slides · speaker notes on every slide</span><span class="go">Open the deck</span></button>
+      <button class="deck" type="button" data-deck="fb"><img src="%%thumb:fb%%" alt="" width="360" height="203"><span class="eyebrow">Campaign 2 · Believe</span><h3>The Four Buyers</h3><span class="meta">September 2026 · %%count:fb%% slides · the four buyers and their ads</span><span class="go">Open the deck</span></button>
+      <button class="deck" type="button" data-deck="dd"><img src="%%thumb:dd%%" alt="" width="360" height="203"><span class="eyebrow">Campaign 3 · Decide</span><h3>Mitchell Design Dollars</h3><span class="meta">Fall 2026 · %%count:dd%% slides · the offer, the ads and how we talk about it</span><span class="go">Open the deck</span></button>
     </div>
   </section>
 
@@ -488,7 +488,7 @@ dialog::backdrop{background:var(--scrim)}
 (function(){
   // slide counts, notes and links come from decks/<key>.json at build time; images load on demand
   var DATA=%%decks%%;
-  var META={hp:'The Home Portrait · Sales team showcase',fb:'The Four Buyers · Creative review',dd:'Mitchell Design Dollars · Fall 2026'};
+  var META={hp:'The Home Portrait · Sales team showcase',fb:'The Four Buyers · September 2026',dd:'Mitchell Design Dollars · Fall 2026'};
   var EXT='%%ext%%';
   var dlg=document.getElementById('dv'),img=document.getElementById('dv-img'),load=document.getElementById('dv-load'),
       notes=document.getElementById('dv-notes'),links=document.getElementById('dv-links'),strip=document.getElementById('dv-strip'),

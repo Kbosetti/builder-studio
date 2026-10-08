@@ -4,7 +4,8 @@
 usage: python3 campaign-guide/prepare_decks.py <key> <deck.pdf> [<notes>]
   <notes> is the deck's .pptx export (Google Slides) or a JSON list of notes, one per slide (Canva).
 Writes decks/<key>/NN.jpg (1600 wide), decks/<key>/tNN.jpg (thumbnail) and decks/<key>.json, which
-build.py folds into the page. Re-run after re-exporting a deck; deck titles live in src.html.
+build.py folds into the page. decks/edits.json lists the behind-the-scenes slides, boxes and notes the
+sales team version leaves out. Re-run after re-exporting a deck; deck titles live in src.html.
 """
 import json, os, re, sys, zipfile
 from urllib.parse import parse_qs, urlparse
@@ -36,9 +37,36 @@ def pptx_notes(path):
         notes.append(re.sub(r"\n{3,}", "\n\n", text).strip())
     return notes
 
+def cover_rect(page, text, mode):
+    hit = page.search_for(text)
+    if not hit:
+        sys.exit(f"cover: '{text}' not found on slide {page.number + 1}")
+    hit = hit[0]
+    if mode == "block":
+        return next(pymupdf.Rect(b[:4]) for b in page.get_text("blocks") if pymupdf.Rect(b[:4]).intersects(hit))
+    boxes = [d["rect"] for d in page.get_drawings()
+             if d.get("fill") is not None and d["rect"].contains(hit) and d["rect"].width < page.rect.width * .95]
+    if not boxes:
+        sys.exit(f"cover: no box around '{text}' on slide {page.number + 1}")
+    return (max if mode == "outer" else min)(boxes, key=lambda b: b.get_area())
+
+def paint_over(page, rect):
+    # fill with the colour that surrounds the box, so the slide reads as if it was never there
+    r = pymupdf.Rect(rect) + (-2, -2, 2, 2)
+    pix = page.get_pixmap()
+    pts = [(x, y) for x in range(int(r.x0) - 3, int(r.x1) + 4, 6) for y in (int(r.y0) - 3, int(r.y1) + 3)]
+    pts += [(x, y) for y in range(int(r.y0), int(r.y1), 6) for x in (int(r.x0) - 3, int(r.x1) + 3)]
+    seen = [pix.pixel(min(max(x, 0), pix.width - 1), min(max(y, 0), pix.height - 1)) for x, y in pts]
+    fill = max(set(seen), key=seen.count)
+    page.draw_rect(r, color=None, fill=[c / 255 for c in fill[:3]], overlay=True)
+
 def main(key, pdf, notes_src=None):
     out = f"{HERE}/decks/{key}"
     os.makedirs(out, exist_ok=True)
+    for f in os.listdir(out):  # start clean so dropped slides do not linger
+        os.remove(f"{out}/{f}")
+    edits = json.load(open(f"{HERE}/decks/edits.json")).get(key, {})
+    hide = set(edits.get("hide", []))
     doc = pymupdf.open(pdf)
     if notes_src and notes_src.endswith(".pptx"):
         notes = pptx_notes(notes_src)
@@ -46,9 +74,15 @@ def main(key, pdf, notes_src=None):
         notes = json.load(open(notes_src))
     else:
         notes = []
+    for k, v in edits.get("notes", {}).items():
+        notes[int(k) - 1] = v
     slides = []
     for i, page in enumerate(doc):
-        n = i + 1
+        if i + 1 in hide:
+            continue
+        for c in edits.get("cover", {}).get(str(i + 1), []):
+            paint_over(page, cover_rect(page, c["text"], c["mode"]))
+        n = len(slides) + 1
         for name, width, q in ((f"{n:02d}.jpg", 1600, 80), (f"t{n:02d}.jpg", 360, 72)):
             z = width / page.rect.width
             page.get_pixmap(matrix=pymupdf.Matrix(z, z)).save(f"{out}/{name}", jpg_quality=q)

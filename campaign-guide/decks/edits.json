@@ -1,0 +1,180 @@
+{
+  "_about": "What the sales team version leaves out of each deck. Slide numbers are the original deck's. hide drops a slide; cover paints over a box or line found by its text (box = smallest shape around the text, outer = largest, block = the text block itself); notes replaces a slide's speaker notes, and an empty string removes them.",
+  "fb": {
+    "hide": [
+      5,
+      6,
+      14,
+      15,
+      20,
+      23,
+      27,
+      28,
+      29,
+      30
+    ],
+    "cover": {
+      "8": [
+        {
+          "text": "Destination:",
+          "mode": "block"
+        },
+        {
+          "text": "No offer on this card",
+          "mode": "box"
+        }
+      ],
+      "9": [
+        {
+          "text": "Destination:",
+          "mode": "block"
+        },
+        {
+          "text": "Reason to believe",
+          "mode": "box"
+        }
+      ],
+      "10": [
+        {
+          "text": "Destination:",
+          "mode": "block"
+        },
+        {
+          "text": "Illustrative only",
+          "mode": "box"
+        }
+      ],
+      "11": [
+        {
+          "text": "Destination:",
+          "mode": "block"
+        },
+        {
+          "text": "Build duration",
+          "mode": "box"
+        }
+      ],
+      "12": [
+        {
+          "text": "Converts on:",
+          "mode": "block"
+        }
+      ],
+      "13": [
+        {
+          "text": "Design Centers are named without",
+          "mode": "box"
+        }
+      ],
+      "17": [
+        {
+          "text": "Claim confirmed by Mitchell",
+          "mode": "box"
+        },
+        {
+          "text": "Cards 1, 2 and 4",
+          "mode": "box"
+        }
+      ],
+      "18": [
+        {
+          "text": "No build duration claim anywhere in this copy",
+          "mode": "box"
+        }
+      ],
+      "21": [
+        {
+          "text": "needs legal",
+          "mode": "box"
+        },
+        {
+          "text": "Card 3 to",
+          "mode": "box"
+        }
+      ],
+      "22": [
+        {
+          "text": "load bearing line",
+          "mode": "box"
+        }
+      ],
+      "25": [
+        {
+          "text": "placeholder imagery",
+          "mode": "box"
+        }
+      ],
+      "26": [
+        {
+          "text": "Card four wants",
+          "mode": "box"
+        },
+        {
+          "text": "No page built for this persona",
+          "mode": "box"
+        }
+      ]
+    },
+    "notes": {
+      "2": "Four buyers, four different reasons for stalling. One campaign has to speak to the average of them, which is nobody.",
+      "3": "July sold a discount to strangers. September sells a landowner an argument about the thing they already own, and only then hands them the money.",
+      "4": "",
+      "9": "The value of the land counts toward the build.",
+      "10": "",
+      "11": "",
+      "12": "",
+      "13": "",
+      "18": "",
+      "22": "",
+      "25": "",
+      "26": "This person has been saving photographs of this house for years. Showing them one more beautiful room does nothing. What they are missing is a date."
+    }
+  },
+  "dd": {
+    "hide": [
+      4,
+      8,
+      11
+    ],
+    "cover": {
+      "1": [
+        {
+          "text": "For Mitchell Homes approval",
+          "mode": "box"
+        }
+      ],
+      "5": [
+        {
+          "text": "The four step build process",
+          "mode": "box"
+        }
+      ],
+      "6": [
+        {
+          "text": "1080 x 1350 for feed",
+          "mode": "box"
+        }
+      ],
+      "9": [
+        {
+          "text": "Meta shortens primary text",
+          "mode": "box"
+        },
+        {
+          "text": "Note",
+          "mode": "block"
+        }
+      ],
+      "10": [
+        {
+          "text": "Two image rules came out",
+          "mode": "outer"
+        }
+      ]
+    },
+    "notes": {
+      "1": "",
+      "3": ""
+    }
+  }
+}
