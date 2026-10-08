@@ -159,10 +159,10 @@ if os.path.exists(fgp):
                    "notes": "Read each group's rules. Comment helpfully for a week or two before asking anything.", "hold": ""})
     if fg.get("outreach"):
         o = fg["outreach"][0]
-        ev.append({"d": START + timedelta(days=8), "ch": "FB groups", "camp": "all", "title": "Ask the group admins before posting", "aud": "Admins of the groups joined in week one",
+        ev.append({"d": START + timedelta(days=10), "ch": "FB groups", "camp": "all", "title": "Ask the group admins before posting", "aud": "Admins of the groups joined in week one",
                    "who": "Marketing", "body": o["body"], "notes": "Keep a list of which groups said yes. Post only there.", "hold": ""})
     for i, x in enumerate(fg.get("posts", [])[:5]):
-        ev.append({"d": START + timedelta(days=9 + 7 * i), "ch": "FB groups", "camp": campaign(x["title"], x["body"]), "title": x["title"], "aud": x.get("fits", "Groups whose admins said yes"),
+        ev.append({"d": START + timedelta(days=16 + 7 * i), "ch": "FB groups", "camp": campaign(x["title"], x["body"]), "title": x["title"], "aud": x.get("fits", "Groups whose admins said yes"),
                    "who": "Marketing", "body": x["body"], "link": x.get("link", ""), "notes": "Only in groups whose admins said yes.", "hold": ""})
 ev = [x for x in ev if x["d"] and START <= x["d"] < START + timedelta(days=7 * WEEKS)]
 for x in ev:

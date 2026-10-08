@@ -78,8 +78,10 @@ lists["groups"], lists["groupMsgs"] = [], []
 if os.path.exists(fg_path):
     fg = json.load(open(fg_path))
     for g in sorted(fg.get("groups", []), key=lambda g: (g.get("priority") or 3, g.get("state") or "")):
-        meta = " · ".join(x for x in (g.get("area"), g.get("members"), g.get("privacy")) if x)
-        body = "\n\n".join(x for x in (g.get("why"), ("Posting rules: " + g["rules"]) if g.get("rules") else "", g.get("ask")) if x)
+        meta = " · ".join(x for x in (g.get("area"), {1: "First choice", 2: "Second wave", 3: "If time allows"}.get(g.get("priority") or 3)) if x)
+        body = "\n\n".join(x for x in (g.get("why"), ("Members: " + g["members"]) if g.get("members") and not g["members"].startswith("Not shown") else "",
+                                        ("What we know of the rules: " + g["rules"]) if g.get("rules") else "", "How we ask: " + g["ask"] if g.get("ask") else "",
+                                        "" if g.get("url") else "Link not found yet: search Facebook for the group name while logged in.") if x)
         lists["groups"].append({"title": g["name"], "meta": meta, "body": body, "link": g.get("url", ""), "hold": False})
     for o in fg.get("outreach", []) + fg.get("posts", []):
         lists["groupMsgs"].append({"title": o["title"], "meta": o.get("fits", ""), "body": o["body"], "link": o.get("link", ""), "hold": False})
