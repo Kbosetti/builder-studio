@@ -445,7 +445,7 @@ def _add_contest_series():
         if path_:
             e["hero"] = hero(path_, alt)
         short = {"hw1": "Automatic, when an entry arrives", "hw2": "Automatic, when an entry is verified",
-                 "hw3": "About December 8, to each finalist", "hw4": "About December 8, to the winner"}.get(e["id"])
+                 "hw3": "About December 15, to each finalist", "hw4": "About December 15, to the winner"}.get(e["id"])
         if short:
             e["segment"] = (e.get("segment", "") + " " + e["send"] + ".").strip()
             e["send"] = short
