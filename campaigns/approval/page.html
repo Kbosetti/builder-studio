@@ -208,7 +208,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
 
 <div class="bar"><div class="wrap">
   <div class="meter"><span id="meterText">0 of 16 reviewed</span><div class="track" aria-hidden="true"><i class="a" id="mA" style="width:0%"></i><i class="c" id="mC" style="width:0%"></i></div></div>
-  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#nurture">Nurture</a><a href="#homeowners">Homeowners</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign-off</a></nav>
+  <nav aria-label="Sections"><a href="#glance">At a glance</a><a href="#emails">Email</a><a href="#web">Website</a><a href="#social">Social and search</a><a href="#direct">Texts and team</a><a href="#print">Print and events</a><a href="#nurture">Nurture</a><a href="#cadence">Schedule</a><a href="#questions">Questions</a><a class="go" href="#signoff">Sign-off</a></nav>
 </div></div>
 
 <main class="wrap">
@@ -245,10 +245,6 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
   <section id="nurture"><div class="head"><span class="eyebrow">Quiet-lead nurture</span><h2>For leads who have not answered yet</h2>
     <p class="lede">When a lead goes quiet for seven days, Home Builder Studio starts a 60-day sequence on its own: personal notes from their consultant, designed emails and short texts, until they reply or book. The moment they answer, it stops and their consultant takes over.</p></div>
     <div id="items-nurture" style="display:flex;flex-direction:column;gap:18px"></div></section>
-
-  <section id="homeowners"><div class="head"><span class="eyebrow">Homeowners</span><h2>My Mitchell Story</h2>
-    <p class="lede">Mitchell homeowners tell the story of their home in a short phone video. It starts with a Homeowner Appreciation Night at the Design Centers. Every entrant gets a professional photo session at their home, five finalists receive a framed painting of their own Mitchell home, and one grand prize winner also receives $2,500.</p></div>
-    <div id="items-homeowners" style="display:flex;flex-direction:column;gap:18px"></div></section>
 
   <section id="cadence"><div class="head"><span class="eyebrow">Schedule and follow-ups</span><h2>How it all fits together</h2>
     <p class="lede">One main email, one text and one personal touch from the sales team each week, with posts that echo the same theme, and clear limits so nobody hears from Mitchell too often.</p></div>
@@ -346,14 +342,10 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
     ['Realtor incentive','What are the current realtor incentive terms we can mention to agents?'],
     ['Homeowner referrals','Is there a thank-you for homeowner referrals we can mention? The homeowner email makes no offer until you say so.'],
     ['Sample painting on the landing page (decided)','Decided October 8: no painted portraits anywhere before the quiz. The landing page and every email now show real Mitchell homes instead. Nothing needed from you.'],
-    ['Events','We propose four events: the Design Dollars live Q&A on October 29, Bring Your Photos Saturday on November 7, Homeowner Appreciation Night on November 17 and the Realtor Lunch and Learn on November 18. Do these dates work, and who from Mitchell can staff each one?'],
+    ['Events','We propose three events: the Design Dollars live Q&A on October 29, Bring Your Photos Saturday on November 7 and the Realtor Lunch and Learn on November 18. Do these dates work, and who from Mitchell can staff each one?'],
     ['Build time on the quiz','The quiz mentions about 150 days, while the Four Buyers ads avoid any build duration. Keep it in the quiz, or remove it?'],
     ['Sending address','May we set up email from a Mitchell address so these emails arrive from Mitchell? It takes one DNS change from whoever manages mitchellhomesinc.com.'],
-    ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.'],
-    ['Homeowner contest prizes','In what form is the $2,500 grand prize paid, and who paints and frames the finalists\' Home Portraits? The contest emails wait on this.'],
-    ['Photo sessions','How many homeowner photo sessions can Mitchell fund, with which photographers, and how far will they travel?'],
-    ['Contest rules and judges','Will legal review the draft Official Rules, and who from Mitchell sits on the judging panel?'],
-    ['Homeowner list','Where does the list of past Mitchell homeowners live, and who on it has agreed to emails and texts?']
+    ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.']
   ];
   function waitBadge(q){return el('span',{class:'wait',text:q?('Waiting on question '+q):'Waiting on a question below'});}
 
@@ -463,20 +455,10 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
     item(NU,'A19','Nurture emails ('+count('nurture')+')','Live November 2 · Day 0 to Day 60 after a lead goes quiet','Personal notes from the consultant alternate with designed emails, with one version for landowners and one for buyers still looking for land.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[flow,nuGrid]));
   }
   item(NU,'A20','Nurture texts ('+L.nurture.length+')','Days 2, 19 and 45','Short, personal, and easy to answer. Only to leads who gave text consent.',posts(L.nurture));
-  var HO=document.getElementById('items-homeowners'),CT=D.contest;
-  if(CT){
-    function ulist(arr,ordered){return el(ordered?'ol':'ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},arr.map(function(t){return el('li',{text:t});}));}
-    function sub(t){return el('h4',{style:'margin:8px 0 0',text:t});}
-    if(CT.overview!==false)item(HO,'A22','Homeowner Appreciation Night and My Mitchell Story',CT.when,CT.summary,
-      el('div',{style:'display:flex;flex-direction:column;gap:10px'},[sub('How it works'),ulist(CT.how,true),sub('What homeowners receive'),ulist(CT.prizes),sub('The dates'),ulist(CT.timeline),sub('The four questions homeowners answer on video'),ulist(CT.prompts)]));
-    item(HO,'A23','Homeowner emails ('+count('homeowners')+')',sends('homeowners')+' · past homeowners, plus automatic notes to entrants','The invitation, the launch, filming tips, the last week and the winner, and the personal notes each entrant receives along the way.',emailGrid('homeowners'));
-    item(HO,'A24','Homeowner texts, posts and scripts ('+L.contest.length+')',metas(L.contest),'Short texts only to homeowners who agreed to texts, posts that feature entries only with permission, and words for consultants and the warranty team.',posts(L.contest,8));
-    item(HO,'A25','Official Rules, entry form and photo sessions','Draft for legal review','The rules are a draft for Mitchell\'s legal team. The entry form collects the video and the permissions; the photographer brief sets what every session includes.',posts(L.contestRules,6));
-  }
   item(CA,'A18','Sales team follow-ups ('+L.followups.length+')','Fired by what each buyer does, from the consultant\'s own phone or email','Personal texts and emails for quiz takers, Design Dollars and landowner interest, deadline week, Design Center visits, old leads and realtors.',posts(L.followups,6));
 
   // a batch page shows only its own sections and questions
-  ['emails','web','social','direct','print','nurture','homeowners','cadence'].forEach(function(id){var sec=document.getElementById(id);
+  ['emails','web','social','direct','print','nurture','cadence'].forEach(function(id){var sec=document.getElementById(id);
     if(sec&&!sec.querySelector('article.item')){sec.hidden=true;var a=document.querySelector('.bar nav a[href="#'+id+'"]');if(a)a.hidden=true;}});
   if(B){
     var cv=document.querySelector('.cover');

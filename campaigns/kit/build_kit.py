@@ -99,7 +99,7 @@ for rd in ("landing/README.md", "README.md", "popup/README.md"):
 def opt(path):
     return json.load(open(path)) if os.path.exists(path) else None
 DATA = {"emails": em, "organic": organic, "direct": direct, "prints": prints, "sig_html": sig_html, "web": web,
-        "events": opt(f"{C}/events/events.json"), "groups": opt(f"{C}/traffic/facebook_groups.json"), "setup": opt(f"{C}/builder_studio/setup.json"), "contest": opt(f"{C}/homeowners/contest.json"), "live": live, "links": links}
+        "events": opt(f"{C}/events/events.json"), "groups": opt(f"{C}/traffic/facebook_groups.json"), "setup": opt(f"{C}/builder_studio/setup.json"), "live": live, "links": links}
 data = json.dumps(DATA, ensure_ascii=False).replace("</", "<\\/")
 page = open(f"{HERE}/page.html").read().replace("/*DATA*/null", data)
 if re.search(r"[–—]", page):

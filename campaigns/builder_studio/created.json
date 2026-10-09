@@ -12,12 +12,7 @@
   "event land 101 nov7": "DzDJcW5yxZ2WMET5peT0",
   "event gathering place nov12": "dPFD6BDEQUgQUBANf0os",
   "event wilmington open house nov14": "quCT4zPMOI9Z3Sy5GQOV",
-  "event realtor lunch nov18": "B7LafiI05Bvno44xAotD",
-  "homeowner appreciation rsvp": "qX9gsqz9rT9yH306GVdy",
-  "my mitchell story entry": "4l58ap3YlN4N0hXLR1RS",
-  "my mitchell story verified": "NdAnWhzyogtlx3Dpv6jM",
-  "my mitchell story finalist": "2hjoOa88qYc2AaNbxWFk",
-  "event homeowner night nov10": "stdl7QNKQqfQO8sebVqj"
+  "event realtor lunch nov18": "B7LafiI05Bvno44xAotD"
  },
  "links": {
   "Fall26 · SMS1 · Design Dollars": {
@@ -85,12 +80,6 @@
    "field": "{{trigger_link.hA6451tWHlmbDq5eNgmf}}",
    "to": "https://www.mitchellhomesinc.com/contact/?utm_source=email&utm_medium=email&utm_campaign=fall26_events&utm_content=e6",
    "event": "e6"
-  },
-  "Fall26 · Event RSVP · E7 · Homeowner Appreciation Night": {
-   "id": "S2BaJ9B3B85fWUDffByk",
-   "field": "{{trigger_link.S2BaJ9B3B85fWUDffByk}}",
-   "to": "https://www.mitchellhomesinc.com/contact/?utm_source=email&utm_medium=email&utm_campaign=fall26_events&utm_content=e7",
-   "event": "e7"
   }
  },
  "folder": {
@@ -210,42 +199,6 @@
    "id": "6ac84c9b22c8998f747682e0",
    "name": "Fall26 · NU9 · Whenever you are ready"
   },
-  "HO2": {
-   "id": "6ac84c9d9ed784b5df35deb2",
-   "name": "Fall26 · HO2 · An evening for the people who built with us"
-  },
-  "HO3": {
-   "id": "6ac84c9e87cdcc5d6eaa8517",
-   "name": "Fall26 · HO3 · What do you love most about your home?"
-  },
-  "HO4": {
-   "id": "6ac84ca0976a2a32d9ec16c2",
-   "name": "Fall26 · HO4 · Your phone is all you need"
-  },
-  "HO5": {
-   "id": "6ac84ca29ed784b5df35df1d",
-   "name": "Fall26 · HO5 · Your story, by Sunday"
-  },
-  "HO6": {
-   "id": "6ac84ca3976a2a32d9ec16fa",
-   "name": "Fall26 · HO6 · Meet the My Mitchell Story winner"
-  },
-  "HW1": {
-   "id": "6ac84ca5e6a28b9ad5e34a2e",
-   "name": "Fall26 · HW1 · Your story is in"
-  },
-  "HW2": {
-   "id": "6ac84ca7976a2a32d9ec1732",
-   "name": "Fall26 · HW2 · Let us book your photo session"
-  },
-  "HW3": {
-   "id": "6ac84ca887cdcc5d6eaa878c",
-   "name": "Fall26 · HW3 · You are a My Mitchell Story finalist"
-  },
-  "HW4": {
-   "id": "6ac84caa22c8998f74768404",
-   "name": "Fall26 · HW4 · Your story won"
-  },
   "SALES01": {
    "id": "6ac84cac1cdda3621d324bca",
    "name": "Fall26 · SALES01 · Your {{contact.portrait_name}}"
@@ -313,14 +266,6 @@
   "E6FOLLOW": {
    "id": "6ac84cc587cdcc5d6eaa8a16",
    "name": "Fall26 · E6FOLLOW · For your next client with land"
-  },
-  "E7INVITE": {
-   "id": "6ac84cc79ed784b5df35e3c0",
-   "name": "Fall26 · E7INVITE · You are invited, {{contact.first_name}}"
-  },
-  "E7FOLLOW": {
-   "id": "6ac84cc922c8998f74768783",
-   "name": "Fall26 · E7FOLLOW · Thank you for last night"
   }
  }
 }

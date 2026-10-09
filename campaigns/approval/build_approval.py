@@ -49,8 +49,6 @@ def batch_of_date(text):
 
 
 def email_batch(eid):
-    if eid.startswith("hw"):
-        return PIECE["hw"]["batch"]
     if eid.startswith("nu"):
         return PIECE["nurture"]["batch"]
     return PIECE[eid]["batch"] if eid in PIECE else None
@@ -77,8 +75,7 @@ def clean(items, skip=()):
 
 def qref(text):
     t = text or ""
-    for pat, q in [(r"Official Rules|judging|winner's verification", 20), (r"photographer|session cap|booking calendar", 19),
-                   (r"\$2,500|the artist", 18), (r"November 10 date|staffing and refreshments", 14), (r"dreamer|price locked|locked from day one", 5), (r"legal", 7), (r"/math|calculator|comparison", 6), (r"plan guide", 8),
+    for pat, q in [(r"dreamer|price locked|locked from day one", 5), (r"legal", 7), (r"/math|calculator|comparison", 6), (r"plan guide", 8),
                    (r"realtor incentive", 11), (r"referral|thank.you exists", 12), (r"November|reserve.by", 1)]:
         if re.search(pat, t, re.I):
             return q
@@ -127,35 +124,7 @@ for k, items in lists.items():
     for it in items:
         if "notes" in it: it["q"] = qref(it["notes"]) if it["hold"] else 0
         it.pop("notes", None)
-cpath = f"{C}/homeowners/contest.json"
 contest = None
-lists["contest"], lists["contestRules"] = [], []
-if os.path.exists(cpath):
-    ct = json.load(open(cpath))
-    for t in ct["texts"]:
-        lists["contest"].append({"title": "Text: " + t["title"], "meta": t["when"].split(". ")[0], "body": t["body"] + "\n\nTo: " + t["to"], "link": "", "hold": False, "q": 0,
-                                 "b": 2 if re.search(r"invite|RSVP|Thank-you after", t["title"]) else 3})
-    for x in ct["social"]:
-        lists["contest"].append({"title": "Post: " + x["title"], "meta": x["date"] + " · " + x["channels"], "body": x["body"], "link": x.get("link", ""), "hold": False, "q": 0, "b": 3})
-    g = ct["gbp"]
-    lists["contest"].append({"title": "Google profile post: " + g["title"], "meta": g["post_on"], "body": g["body"], "link": g.get("link", ""), "hold": False, "q": 0, "b": 3})
-    for x in ct["sales"]:
-        lists["contest"].append({"title": "Script: " + x["title"], "meta": x.get("when", ""), "body": x["body"], "link": "", "hold": False, "q": 0, "b": 3})
-    for r in ct["rules"]:
-        lists["contestRules"].append({"title": "Official Rules: " + r["head"], "meta": "Draft for legal review", "body": r["text"], "link": "", "hold": True, "q": 20})
-    f, ph = ct["form"], ct["photographer"]
-    lines = [str(f.get("intro", "")), ""] + [x["label"] + " (" + x["required"].lower() + ")" + (": " + x["help"] if x.get("help") else "") for x in f["fields"]]
-    lines += ["", "Permissions the entrant checks:"] + [x["label"] + ": " + x["text"] for x in f["consents"]]
-    lines += ["", "Button: " + str(f["submit"]), "After sending: " + str(f["thank_you"])]
-    lists["contestRules"].append({"title": "Entry form", "meta": "Built in Home Builder Studio", "body": "\n".join(lines).strip(), "link": "", "hold": False, "q": 0})
-    lines = [ph["what"], "Length: " + ph["length"], "When: " + ph["when"], "", "Shot list:"] + [a + ": " + b for a, b in ph["shot_list"]]
-    lines += ["", "Never photographed: " + "; ".join(ph["do_not_photograph"]), "", "Delivery: " + ph["delivery"], "Release: " + ph["release"], "How Mitchell may use the photos: " + ph["mitchell_use"]]
-    lists["contestRules"].append({"title": "Photographer brief", "meta": "Every entrant's photo session", "body": "\n".join(lines), "link": "", "hold": True, "q": 19})
-    contest = {"summary": " ".join(ct["summary"]) if isinstance(ct["summary"], list) else ct["summary"],
-               "how": [h if isinstance(h, str) else h.get("text", h.get("step", "")) for h in ct["how_it_works"]],
-               "prizes": [f"{p['tier']}: {p['what']}" for p in ct["prizes"]],
-               "timeline": [f"{t['date']}: {t['what']}" for t in ct["timeline"]],
-               "prompts": ct["prompts"], "when": "Kickoff Tuesday, November 17 · entries through Sunday, December 13 · winner announced Friday, December 18"}
 ranking = [{"title": it["title"], "meta": it.get("meta", ""), "body": it["body"]} for it in org["summary"]["items"]]
 
 os.makedirs(f"{OUT}/cadence", exist_ok=True)
@@ -197,10 +166,6 @@ for B in plan["batches"]:
     d["cadence"] = dict(d["cadence"], rhythm=up(d["cadence"]["rhythm"]), week=up(d["cadence"]["week"])) if n == 1 else None
     d["ranking"] = []
     d["live"] = {u: up(r) for u, r in d["live"].items()}
-    if d["contest"]:
-        d["contest"]["overview"] = n in (2, 3)
-        if n == 1:
-            d["contest"] = None
     bpage = (open(f"{HERE}/page.html").read().replace("/*DATA*/null", json.dumps(d, ensure_ascii=False).replace("</", "<\\/"))
              .replace("%%charlotte%%", "data:font/woff2;base64," + font))
     if re.search(r"[\u2013\u2014]", bpage):
