@@ -1,0 +1,34 @@
+[
+ {
+  "key": "land",
+  "title": "Your Land",
+  "tag": "Paid and organic",
+  "note": "",
+  "organic_only": false,
+  "source": "mitchell-reel-land (1).mp4"
+ },
+ {
+  "key": "space",
+  "title": "A Space of You",
+  "tag": "Paid and organic",
+  "note": "",
+  "organic_only": false,
+  "source": "mitchell-reel-space (1).mp4"
+ },
+ {
+  "key": "which",
+  "title": "Which One Are You?",
+  "tag": "Paid and organic",
+  "note": "",
+  "organic_only": false,
+  "source": "mitchell-reel-which (1).mp4"
+ },
+ {
+  "key": "saturday",
+  "title": "Saturday Morning",
+  "tag": "Organic only",
+  "note": "Shows children, so it runs organically, never as a paid Meta housing ad.",
+  "organic_only": true,
+  "source": "mitchell-reel-saturday (1).mp4"
+ }
+]

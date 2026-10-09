@@ -3,7 +3,7 @@
 
 usage: GHL_PIT=... python3 campaign-guide/fetch_reels.py      then build.py, publish and deploy.py
 Finds the newest video file whose name matches each reel (land, space, which, saturday), downloads it to
-reels/<key>.mp4, makes a poster from the frame at one second (reels/<key>.jpg), and writes reels/reels.json,
+reels/<key>.mp4, makes a poster from the frame at three seconds (reels/<key>.jpg), and writes reels/reels.json,
 which build.py turns into the "The reels" row in the Home Portrait section. The titles, tags and the
 organic-only note match the Home Portrait ad kit (https://claude.ai/artifact/MVB65BDPo5Zr9zCLJPpaft).
 """
@@ -50,7 +50,7 @@ def main():
             subprocess.run([FF, "-loglevel", "error", "-y", "-i", mp4, "-c:v", "libx264", "-crf", "23", "-preset", "veryfast",
                             "-c:a", "aac", "-movflags", "+faststart", mp4 + ".tmp.mp4"], check=True)
             os.replace(mp4 + ".tmp.mp4", mp4)
-        subprocess.run([FF, "-loglevel", "error", "-y", "-ss", "1", "-i", mp4, "-frames:v", "1", "-vf", "scale=540:-2", "-q:v", "4",
+        subprocess.run([FF, "-loglevel", "error", "-y", "-ss", "3", "-i", mp4, "-frames:v", "1", "-vf", "scale=540:-2", "-q:v", "4",
                         f"{OUT}/{key}.jpg"], check=True)
         rows.append({"key": key, "title": title, "tag": tag, "note": note, "organic_only": tag == "Organic only", "source": match["name"]})
         print("got", title, "from", match["name"], os.path.getsize(mp4) // 1024, "KB")

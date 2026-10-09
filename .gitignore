@@ -3,3 +3,4 @@ credentials.env
 __pycache__/
 *.pyc
 campaigns/email/live_cache/
+campaign-guide/reels/*.mp4
