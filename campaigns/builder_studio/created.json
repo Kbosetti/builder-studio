@@ -94,232 +94,232 @@
   }
  },
  "folder": {
-  "id": "6ac84c6ef94e3d0736ed139b",
+  "id": "6ac8e00214693690e9a301b7",
   "name": "Fall 2026 | Campaign drafts from CEA (do not send until approved)"
  },
  "templates": {
   "HP1": {
-   "id": "6ac84c6f2991e7ab425b1eb5",
+   "id": "6ac8e00314693690e9a301c7",
    "name": "Fall26 · HP1 · What would your home look like?"
   },
   "HP2": {
-   "id": "6ac84c70976a2a32d9ec12fe",
+   "id": "6ac8e00422c8998f7482192b",
    "name": "Fall26 · HP2 · Your land is part of the portrait"
   },
   "HP3": {
-   "id": "6ac84c729660fa02e848b4df",
+   "id": "6ac8e0069ed784b5df412574",
    "name": "Fall26 · HP3 · Nine portraits. Which one is yours?"
   },
   "HP4": {
-   "id": "6ac84c74976a2a32d9ec1344",
+   "id": "6ac8e0082991e7ab42668821",
    "name": "Fall26 · HP4 · The getaway you keep promising yourselves"
   },
   "DD1": {
-   "id": "6ac84c751cdda3621d32426e",
+   "id": "6ac8e00a1cdda3621d3d99e9",
    "name": "Fall26 · DD1 · It is your land. Make it your home."
   },
   "DD2": {
-   "id": "6ac84c779660fa02e848b546",
+   "id": "6ac8e00b39edc5e18c15528b",
    "name": "Fall26 · DD2 · Choose $60,000 in selections. Take home $75,000 worth."
   },
   "DD3": {
-   "id": "6ac84c78e6a28b9ad5e33fca",
+   "id": "6ac8e00d4c92b27bd3d937eb",
    "name": "Fall26 · DD3 · You do not have to pick the tile today"
   },
   "DD4": {
-   "id": "6ac84c7a22c8998f74768080",
+   "id": "6ac8e00fe6a28b9ad5eebea3",
    "name": "Fall26 · DD4 · Where your Design Dollars go"
   },
   "FB1": {
-   "id": "6ac84c7c87cdcc5d6eaa8262",
+   "id": "6ac8e01122c8998f74821a1e",
    "name": "Fall26 · FB1 · Your land is worth more than you think"
   },
   "FB2": {
-   "id": "6ac84c7df94e3d0736ed14c5",
+   "id": "6ac8e012f9707340c68f639c",
    "name": "Fall26 · FB2 · A custom home on your land, without the unknowns"
   },
   "FB3": {
-   "id": "6ac84c7f1cdda3621d324301",
+   "id": "6ac8e0149ed784b5df41268a",
    "name": "Fall26 · FB3 · No construction loan to build on your land"
   },
   "FB4": {
-   "id": "6ac84c802991e7ab425b2010",
+   "id": "6ac8e01608741365d8934b73",
    "name": "Fall26 · FB4 · Your dream home has a folder, not a date"
   },
   "FB4C": {
-   "id": "6ac84c822991e7ab425b2022",
+   "id": "6ac8e0181ea8584cd7a4c9d7",
    "name": "Fall26 · FB4C · Your dream home has a folder, not a date"
   },
   "FB5": {
-   "id": "6ac84c849660fa02e848b65b",
+   "id": "6ac8e01a14693690e9a3037c",
    "name": "Fall26 · FB5 · You do not have to own land yet"
   },
   "FB5C": {
-   "id": "6ac84c859ed784b5df35dcc4",
+   "id": "6ac8e01c9660fa02e853fd1b",
    "name": "Fall26 · FB5C · You do not have to own land yet"
   },
   "RE1": {
-   "id": "6ac84c8787cdcc5d6eaa8320",
+   "id": "6ac8e01d1ea8584cd7a4ca1a",
    "name": "Fall26 · RE1 · Your buyer owns land. We build on it."
   },
   "RA1": {
-   "id": "6ac84c8887cdcc5d6eaa833e",
+   "id": "6ac8e01f39edc5e18c1553d3",
    "name": "Fall26 · RA1 · Our buyers need land. Do you know land?"
   },
   "RB2": {
-   "id": "6ac84c8a976a2a32d9ec14de",
+   "id": "6ac8e020f94e3d0736f88c6f",
    "name": "Fall26 · RB2 · When your land listing needs a picture"
   },
   "RB3": {
-   "id": "6ac84c8b87cdcc5d6eaa8395",
+   "id": "6ac8e02208741365d8934ca6",
    "name": "Fall26 · RB3 · Your client's down payment may be in the ground"
   },
   "RA2": {
-   "id": "6ac84c8de6a28b9ad5e344ff",
+   "id": "6ac8e02487cdcc5d6eb5f6ef",
    "name": "Fall26 · RA2 · What our buyers check before they buy a lot"
   },
   "HO1": {
-   "id": "6ac84c8f1ea8584cd7996995",
+   "id": "6ac8e0251ea8584cd7a4cacb",
    "name": "Fall26 · HO1 · Know someone with land and a dream?"
   },
   "NU1": {
-   "id": "6ac84c9187cdcc5d6eaa840c",
+   "id": "6ac8e02714693690e9a3045d",
    "name": "Fall26 · NU1 · Did I catch you at a busy time?"
   },
   "NU3": {
-   "id": "6ac84c932991e7ab425b23c9",
+   "id": "6ac8e0292991e7ab42668a15",
    "name": "Fall26 · NU3 · What landowners ask us first"
   },
   "NU3N": {
-   "id": "6ac84c95e6a28b9ad5e3459a",
+   "id": "6ac8e02b976a2a32d9f75aed",
    "name": "Fall26 · NU3N · Before you buy land, check these six things"
   },
   "NU4": {
-   "id": "6ac84c969660fa02e848b7d7",
+   "id": "6ac8e02c9ed784b5df412882",
    "name": "Fall26 · NU4 · What Lavonnia and Rick told us"
   },
   "NU6": {
-   "id": "6ac84c982991e7ab425b2452",
+   "id": "6ac8e02e1cdda3621d3d9c58",
    "name": "Fall26 · NU6 · When you are ready to make it yours"
   },
   "NU7": {
-   "id": "6ac84c991cdda3621d3244af",
+   "id": "6ac8e0309ed784b5df4128c9",
    "name": "Fall26 · NU7 · Should I keep your file open?"
   },
   "NU9": {
-   "id": "6ac84c9b22c8998f747682e0",
+   "id": "6ac8e0319660fa02e853fe6c",
    "name": "Fall26 · NU9 · Whenever you are ready"
   },
   "HO2": {
-   "id": "6ac84c9d9ed784b5df35deb2",
+   "id": "6ac8e0331ea8584cd7a4cbb9",
    "name": "Fall26 · HO2 · An evening for the people who built with us"
   },
   "HO3": {
-   "id": "6ac84c9e87cdcc5d6eaa8517",
+   "id": "6ac8e0352991e7ab42668aeb",
    "name": "Fall26 · HO3 · What do you love most about your home?"
   },
   "HO4": {
-   "id": "6ac84ca0976a2a32d9ec16c2",
+   "id": "6ac8e03714693690e9a3058d",
    "name": "Fall26 · HO4 · Your phone is all you need"
   },
   "HO5": {
-   "id": "6ac84ca29ed784b5df35df1d",
+   "id": "6ac8e038f94e3d0736f88df6",
    "name": "Fall26 · HO5 · Your story, by Sunday"
   },
   "HO6": {
-   "id": "6ac84ca3976a2a32d9ec16fa",
+   "id": "6ac8e03a39edc5e18c15556c",
    "name": "Fall26 · HO6 · Meet the My Mitchell Story winner"
   },
   "HW1": {
-   "id": "6ac84ca5e6a28b9ad5e34a2e",
+   "id": "6ac8e03b39edc5e18c15559b",
    "name": "Fall26 · HW1 · Your story is in"
   },
   "HW2": {
-   "id": "6ac84ca7976a2a32d9ec1732",
+   "id": "6ac8e03df9707340c68f66b8",
    "name": "Fall26 · HW2 · Let us book your photo session"
   },
   "HW3": {
-   "id": "6ac84ca887cdcc5d6eaa878c",
+   "id": "6ac8e03fe6a28b9ad5eec2b2",
    "name": "Fall26 · HW3 · You are a My Mitchell Story finalist"
   },
   "HW4": {
-   "id": "6ac84caa22c8998f74768404",
+   "id": "6ac8e0411cdda3621d3d9d87",
    "name": "Fall26 · HW4 · Your story won"
   },
   "SALES01": {
-   "id": "6ac84cac1cdda3621d324bca",
+   "id": "6ac8e0429ed784b5df4129df",
    "name": "Fall26 · SALES01 · Your {{contact.portrait_name}}"
   },
   "SALES02": {
-   "id": "6ac84cadf94e3d0736ed1844",
+   "id": "6ac8e0444c92b27bd3d93c3c",
    "name": "Fall26 · SALES02 · Where your plan lands on the Design Dollars ladder"
   },
   "SALES03": {
-   "id": "6ac84caf1ea8584cd7996e14",
+   "id": "6ac8e046f9707340c68f670f",
    "name": "Fall26 · SALES03 · Before October 31"
   },
   "SALES04": {
-   "id": "6ac84cb09ed784b5df35e01f",
+   "id": "6ac8e0471ea8584cd7a4ccff",
    "name": "Fall26 · SALES04 · Your land, in numbers"
   },
   "SALES05": {
-   "id": "6ac84cb2f94e3d0736ed188a",
+   "id": "6ac8e0499ed784b5df412a58",
    "name": "Fall26 · SALES05 · Clients with land"
   },
   "E1INVITE": {
-   "id": "6ac84cb41cdda3621d324c28",
+   "id": "6ac8e04be6a28b9ad5eec389",
    "name": "Fall26 · E1INVITE · Bring your photos Saturday"
   },
   "E1FOLLOW": {
-   "id": "6ac84cb522c8998f747684c9",
+   "id": "6ac8e04d14693690e9a30744",
    "name": "Fall26 · E1FOLLOW · Your photos, priced"
   },
   "E2INVITE": {
-   "id": "6ac84cb72991e7ab425b2a18",
+   "id": "6ac8e04e39edc5e18c1556a0",
    "name": "Fall26 · E2INVITE · Your question, answered live by Scott and Deven"
   },
   "E2FOLLOW": {
-   "id": "6ac84cb81ea8584cd7996ec7",
+   "id": "6ac8e050e6a28b9ad5eec3d1",
    "name": "Fall26 · E2FOLLOW · The answers from last night, and October 31"
   },
   "E3INVITE": {
-   "id": "6ac84cbaf94e3d0736ed1928",
+   "id": "6ac8e0522991e7ab42668caa",
    "name": "Fall26 · E3INVITE · Saturday morning: Building on Your Land 101"
   },
   "E3FOLLOW": {
-   "id": "6ac84cbbf94e3d0736ed1946",
+   "id": "6ac8e0549ed784b5df412b23",
    "name": "Fall26 · E3FOLLOW · Your land, next steps"
   },
   "E4INVITE": {
-   "id": "6ac84cbd2991e7ab425b2a82",
+   "id": "6ac8e056e6a28b9ad5eec426",
    "name": "Fall26 · E4INVITE · Open house Saturday in Belville"
   },
   "E4FOLLOW": {
-   "id": "6ac84cbf9660fa02e848bd5b",
+   "id": "6ac8e05714693690e9a3080e",
    "name": "Fall26 · E4FOLLOW · From Saturday at the Wilmington Design Center"
   },
   "E5INVITE": {
-   "id": "6ac84cc01ea8584cd7996f63",
+   "id": "6ac8e059f9707340c68f67e8",
    "name": "Fall26 · E5INVITE · Thursday at 7: building the getaway"
   },
   "E5FOLLOW": {
-   "id": "6ac84cc29ed784b5df35e2cd",
+   "id": "6ac8e05b14693690e9a30829",
    "name": "Fall26 · E5FOLLOW · The getaway, one step closer"
   },
   "E6INVITE": {
-   "id": "6ac84cc39ed784b5df35e32b",
+   "id": "6ac8e05c1cdda3621d3d9f8e",
    "name": "Fall26 · E6INVITE · Next Wednesday at our [city] Design Center"
   },
   "E6FOLLOW": {
-   "id": "6ac84cc587cdcc5d6eaa8a16",
+   "id": "6ac8e05e976a2a32d9f75dfe",
    "name": "Fall26 · E6FOLLOW · For your next client with land"
   },
   "E7INVITE": {
-   "id": "6ac84cc79ed784b5df35e3c0",
+   "id": "6ac8e060e6a28b9ad5eec4fb",
    "name": "Fall26 · E7INVITE · You are invited, {{contact.first_name}}"
   },
   "E7FOLLOW": {
-   "id": "6ac84cc922c8998f74768783",
+   "id": "6ac8e0629660fa02e8540199",
    "name": "Fall26 · E7FOLLOW · Thank you for last night"
   }
  }

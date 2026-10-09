@@ -10,21 +10,21 @@ Drafts for Mitchell Homes, prepared by CEA Marketing for Kelly Bosetti. Built by
 - Every date and amount is a proposal for Mitchell to confirm. The Official Rules are a draft for Mitchell's legal review and make no legal conclusions.
 - Homeowner Appreciation Night, the kickoff, is event E7 in campaigns/events/events.json (invitation post, Facebook event, Google post, consultant invite, reminder, thank-you and follow-up). The event texts here are read from there, so the two never drift apart.
 - Placeholders: [entry form link], [RSVP link], [official rules link], [photo session booking link], [trigger link], [contest email address], [number], [ARV], [first name], [your name], [city], [time]. Email CTAs carry the bare placeholder; social and Google links show the tracked version (utm_campaign=fall26_homeowners). Put the real URL where the placeholder sits and keep the UTM string.
-- Emails use the series.py email format, with hero_path and hero_alt in place of hero. They are not in series.py, so build.py does not render or upload them yet; to do that, add them to series.py as a series and turn each hero_path into hero(path, alt).
+- Emails use the series.py email format, with hero_path and hero_alt in place of hero. series.py loads them as the homeowners series, so build.py renders them and upload.py loads them into Builder Studio with the rest.
 - Workflow emails (hw1 to hw4) are plain personal notes. build.py adds the Hi {{contact.first_name}} line and the {{user.name}} New Home Consultant signature, and in plain mode shows only p, list and link blocks, so their links sit in link blocks.
 - No painted Home Portrait appears anywhere, and none is described as an image to look at. The prize is named in words only: a framed painting of their Mitchell home.
 - Rule Zero holds for homeowners too: every piece opens with the home and the homeowner, and the prizes come after.
 
 ## The contest in three sentences
 
-My Mitchell Story invites Mitchell homeowners to show us, in a short phone video, what they love about their home, how they live in it and where they like to spend their time. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last, with the photos theirs to keep; five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. It opens at Homeowner Appreciation Night at all five Design Centers on Tuesday, November 10, 2026, and closes Sunday, December 6, 2026; every date and amount is a proposal for Mitchell to confirm.
+My Mitchell Story invites Mitchell homeowners to show us, in a short phone video, what they love about their home, how they live in it and where they like to spend their time. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last, with the photos theirs to keep and, for entries by Sunday, November 29, ready in time for holiday cards; five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. It opens at Homeowner Appreciation Night at all five Design Centers on Tuesday, November 17, 2026, and closes Sunday, December 13, 2026; every date and amount is a proposal for Mitchell to confirm.
 
 ## How it works
 
 1. Film a short video at home on your phone, about 30 to 90 seconds.
 2. Answer one or more of the four questions, in your own words and your own voice.
 3. Send it through the entry form: upload the video or paste a link.
-4. We confirm your entry and send a link to book your photo session at home, paid for by Mitchell, while sessions last.
+4. We confirm your entry and send a link to book your photo session at home, paid for by Mitchell, while sessions last. Enter by Sunday, November 29, and you can book a session by Saturday, December 5, with your edited photos back within five business days, in time for holiday cards.
 5. After entries close, a panel from Mitchell and CEA Marketing chooses five finalists, one from each Design Center region, and one grand prize winner.
 6. Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag Mitchell Homes. Welcome, never required.
 
@@ -39,7 +39,7 @@ My Mitchell Story invites Mitchell homeowners to show us, in a short phone video
 
 | Who | What | Notes |
 |---|---|---|
-| Every eligible entrant | A professional photo session at their Mitchell home, about 45 to 60 minutes, paid for by Mitchell. The edited photos are theirs to keep. | Proposal. Limited to [number] sessions, or while sessions last, within a budget Mitchell sets. Sessions take place after the entry arrives, from mid-November through [January 31, 2027]. Approximate retail value [ARV] each, stated in the rules. |
+| Every eligible entrant | A professional photo session at their Mitchell home, about 45 to 60 minutes, paid for by Mitchell: family photos in front of the home they built, plus the rooms and spots they love, including the favorite spot from their video. The edited photos are theirs to keep. | Proposal. Limited to [number] sessions, or while sessions last, within a budget Mitchell sets. Sessions take place after the entry arrives, from Wednesday, November 18 through [January 31, 2027]. Holiday card window: entries by Sunday, November 29 can book a session from Wednesday, November 18 to Saturday, December 5, Thanksgiving weekend (Friday, November 27 and Saturday, November 28) included, with edited photos within five business days. Approximate retail value [ARV] each, stated in the rules. |
 | Five finalists, one from each Design Center region | Their own Home Portrait: a framed painting of their Mitchell home. | Proposal. Artist, size, frame and delivery date are open questions. Approximate retail value [ARV] each. Described in words only and never shown. |
 | Grand prize, one winner chosen from the five finalists | $2,500, plus their Home Portrait. | Proposal, at the amount Kelly suggested. The form (check, prepaid card, gift card or other) is an open question. Approximate retail value $2,500 plus the Home Portrait. Prizes of $600 or more in a year are reported on IRS Form 1099. |
 
@@ -47,22 +47,24 @@ My Mitchell Story invites Mitchell homeowners to show us, in a short phone video
 
 | Date | What |
 |---|---|
-| Wednesday, October 28, 2026 | Invitation to Homeowner Appreciation Night (ho2) to past homeowners. Facebook events and Google event posts go up (E7). |
-| Thursday, October 29 to Tuesday, November 3, 2026 | New Home Consultants personally invite the homeowners they built with. |
-| Monday, November 9, 2026 | RSVP reminder text. Photo session calendars live in Builder Studio, so homeowners can book at the event. |
-| Tuesday, November 10, 2026, 5:30pm to 7:30pm | Homeowner Appreciation Night at all five Design Centers. Entries open at 5:30pm Eastern. |
-| Wednesday, November 11, 2026 | Launch email (ho3) to homeowners who did not come; each consultant's follow-up email to those who did. Announcement post and Google post. |
-| Thursday, November 12, 2026 | Launch text to homeowners with text consent who did not RSVP. |
-| From mid-November | Photo sessions roll as entries are confirmed, through [January 31, 2027]. |
-| Wednesday, November 18, 2026 | Filming tips email (ho4) to homeowners who have not entered. |
-| Fridays, November 20, November 27 and December 4, 2026 | Entrant spotlights on social, only with the entrant's consent. |
-| Wednesday, December 2, 2026 | Last-week email (ho5) to homeowners who have not entered. |
-| Thursday, December 3, 2026 | Last-week text to homeowners with text consent who have not entered. |
-| Sunday, December 6, 2026, 11:59pm Eastern | Entries close. |
-| Monday, December 7 and Tuesday, December 8, 2026 | Judging. |
-| Tuesday, December 8, 2026 | Finalists and the potential grand prize winner get a phone call, then their note (hw3, hw4). Documents due within five business days. |
-| Thursday, December 10, 2026 | Finalists announced on social. |
-| Tuesday, December 15, 2026 | Grand prize winner announced (ho6 and social), once verification is complete. |
+| Wednesday, November 4, 2026 | Invitation to Homeowner Appreciation Night (ho2) to past homeowners. Facebook events and Google event posts go up (E7). |
+| Thursday, November 5 to Tuesday, November 10, 2026 | New Home Consultants personally invite the homeowners they built with. |
+| Monday, November 16, 2026 | RSVP reminder text. Photo session calendars live in Builder Studio, holiday card window first, so homeowners can book at the event. |
+| Tuesday, November 17, 2026, 5:30pm to 7:30pm | Homeowner Appreciation Night at all five Design Centers. Entries open at 5:30pm Eastern. |
+| Wednesday, November 18, 2026 | Launch email (ho3) to homeowners who did not come; each consultant's follow-up email to those who did. Announcement post and Google post. Photo sessions begin. |
+| Thursday, November 19, 2026 | Launch text to homeowners with text consent who did not RSVP. |
+| Wednesday, November 18 to Saturday, December 5, 2026 | Holiday card window: homeowners who enter by Sunday, November 29 book their session in these dates, Thanksgiving weekend (Friday, November 27 and Saturday, November 28) included, and get their edited photos within five business days, in time for holiday cards. |
+| Sunday, November 29, 2026 | Last day to enter for a holiday card session. |
+| From Wednesday, November 18 | Photo sessions roll as entries are confirmed, through [January 31, 2027]. |
+| Fridays, November 20, December 4 and December 11, 2026 | Entrant spotlights on social, only with the entrant's consent. |
+| Wednesday, December 2, 2026 | Filming tips email (ho4) to homeowners who have not entered. |
+| Wednesday, December 9, 2026 | Last-week email (ho5) to homeowners who have not entered. |
+| Thursday, December 10, 2026 | Last-week text to homeowners with text consent who have not entered. |
+| Sunday, December 13, 2026, 11:59pm Eastern | Entries close. |
+| Monday, December 14 and Tuesday, December 15, 2026 | Judging. |
+| Tuesday, December 15, 2026 | Finalists and the potential grand prize winner get a phone call, then their note (hw3, hw4). Documents due within five business days. |
+| Thursday, December 17, 2026 | Finalists announced on social. |
+| Friday, December 18, 2026 | Grand prize winner announced (ho6 and social), once verification is complete. |
 | [Date, with the artist] | Home Portraits delivered to the five finalists, privately. |
 
 ## Judging
@@ -92,13 +94,14 @@ My Mitchell Story invites Mitchell homeowners to show us, in a short phone video
 |---|---|---|
 | The $2,500 | In what form does the grand prize winner receive $2,500: a check, a prepaid card, a gift card, or something else? | A check is the simplest to deliver and report. |
 | Photo sessions | How many sessions, or what budget, and which photographers? One photographer per Design Center region, or one who travels? How far from a Design Center will they travel? | Set a number per region, so no region runs out first. CEA can shortlist photographers in each region. Sessions through January 31, 2027. |
+| Holiday card window | How many photo sessions will Mitchell fund in the holiday card window (Wednesday, November 18 to Saturday, December 5, Thanksgiving weekend included, for entries by Sunday, November 29), and can the photographers deliver edited photos within five business days? | Hold a set number of window sessions per region and confirm the five-business-day delivery in each photographer's agreement before ho2 names it on November 4. If either falls short, ho2, ho3, the launch text and the launch posts drop the holiday card line. |
 | Home Portraits | Who paints the five Home Portraits, at what size, in what frame, by when, and at what value (for the rules)? | An artist working from each finalist's session photos, delivered privately in January. |
 | Showing the paintings | May a finalist's or the winner's painting ever be shown publicly? | Keep them private. The painting is the reward, the same promise the Home Portrait quiz makes, and showing one would break the rule that no painted portrait appears before someone takes the quiz. |
 | Judges | Who sits on the panel from Mitchell (for example Scott Sleeme, Deven Sellers, Brittany Horner) and from CEA Marketing, and how many judges in all? | Three to five judges, with no one judging an entry from a homeowner they personally sold to. |
-| Homeowner Appreciation Night | Approve Tuesday, November 10, 5:30pm to 7:30pm at all five Design Centers, with staffing, refreshments and a budget per studio. | All five studios, with the photo session booking table and story corner at each. See E7 in events.md. |
-| Official Rules | Legal review of the draft rules, including the questions for legal in its last section. | Start the review by October 23 so the rules are final before the October 28 invitation names the contest. |
+| Homeowner Appreciation Night | Approve Tuesday, November 17, 5:30pm to 7:30pm at all five Design Centers, with staffing, refreshments and a budget per studio. | All five studios, with the photo session booking table and story corner at each. See E7 in events.md. |
+| Official Rules | Legal review of the draft rules, including the questions for legal in its last section. | Start the review by October 30 so the rules are final before the November 4 invitation names the contest. |
 | Eligibility | Are later owners of a Mitchell-built home (bought from an earlier owner) eligible? Do the exclusions cover CEA Marketing, the photographers and the artist, as drafted? | Yes to later owners, verified by deed or tax record. Keep the wider exclusions. |
-| The homeowner list | Where do past homeowners live today (Builder Studio or Lasso), how are they marked, and which have email and text consent? | Build the Past Mitchell homeowners smart list in Builder Studio before October 26, with a view per division. |
+| The homeowner list | Where do past homeowners live today (Builder Studio or Lasso), how are they marked, and which have email and text consent? | Build the Past Mitchell homeowners smart list in Builder Studio before November 2, with a view per division. |
 | Homeowners with open warranty issues | Should homeowners with an open warranty issue get the invitation and contest emails? | Yes, after a personal call from their consultant or the warranty team first. |
 | Contest coordinator | Who at Mitchell checks entries, books sessions and answers questions, and what email address appears in the rules? | One named coordinator and one contest inbox. |
 | Usage | How long may Mitchell use entries (the license term), how are homeowners credited, and how fast are takedowns? | First names and state; three years; takedown within five business days. |
@@ -111,37 +114,37 @@ My Mitchell Story invites Mitchell homeowners to show us, in a short phone video
 
 Series.py format. Every one is a draft and every one waits on Mitchell (see Hold).
 
-### ho2 · Wednesday, October 28 · An evening for the people who built with us
+### ho2 · Wednesday, November 4 · An evening for the people who built with us
 
 **To:** Past Mitchell homeowners (smart list: Past Mitchell homeowners), minus anyone the warranty team is calling first  
-**Preview:** Homeowner Appreciation Night, Tuesday, November 10, at your Mitchell Design Center.  
+**Preview:** Homeowner Appreciation Night, Tuesday, November 17, at your Mitchell Design Center.  
 **Hero:** `https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg` (A white Mitchell farmhouse with a wraparound porch, set back in the pines at the end of a long drive)  
 **Eyebrow:** For Mitchell homeowners  
 **Headline:** Thank you for building with us  
-**Hold:** Hold until Mitchell approves the November 10 date, staffing and refreshments, and the contest itself (prizes, session cap, Official Rules after legal review). If the contest is not approved by Monday, October 26, send it without the My Mitchell Story paragraph.
+**Hold:** Hold until Mitchell approves the November 17 date, staffing and refreshments, and the contest itself (prizes, session cap, the holiday card window and its five-business-day delivery, Official Rules after legal review). If the contest is not approved by Monday, November 2, send it without the My Mitchell Story paragraph; if only the holiday card window is not confirmed, drop its sentence.
 
 Every Mitchell home started with someone who could already picture it: the porch, the kitchen, the room where everyone ends up. You brought that picture to us, and then you made the home your own.
 
-So we would like to say thank you, in person. On Tuesday, November 10, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. [Refreshments: Mitchell to confirm.]
+So we would like to say thank you, in person. On Tuesday, November 17, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. [Refreshments: Mitchell to confirm.]
 
-It is also the night we open My Mitchell Story, a chance to show us, in a short phone video, what you love about your home. Everyone who enters gets a professional photo session at home, paid for by Mitchell, while sessions last, and you can book yours that night.
+It is also the night we open My Mitchell Story, a chance to show us, in a short phone video, what you love about your home. Everyone who enters gets a professional photo session at home, paid for by Mitchell, while sessions last. Book yours that night, and if your entry is in by Sunday, November 29, your family photos in front of your home will be ready in time for holiday cards.
 
 **[RSVP]** `[RSVP link]`
 
 *Fredericksburg, Richmond (Midlothian), Newport News, Raleigh (Garner) and Wilmington (Belville), 5:30pm to 7:30pm local time. Please RSVP so each studio can plan.*
 
-### ho3 · Wednesday, November 11 · What do you love most about your home?
+### ho3 · Wednesday, November 18 · What do you love most about your home?
 
 **To:** Past Mitchell homeowners who did not come to Homeowner Appreciation Night (those who came get their consultant's follow-up that morning instead)  
-**Preview:** Show us in a short phone video. Your photo session at home is on us, while sessions last.  
+**Preview:** Show us in a short phone video. Enter by November 29, and your photo session at home is in time for holiday cards.  
 **Hero:** `https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg` (A finished Mitchell home with a covered front porch, wood posts and a curved walk)  
 **Eyebrow:** My Mitchell Story  
 **Headline:** Every home is a portrait. Show us yours.  
-**Hold:** Hold until legal approves the Official Rules and Mitchell confirms the prizes, the form of the $2,500, the session cap and the dates.
+**Hold:** Hold until legal approves the Official Rules and Mitchell confirms the prizes, the form of the $2,500, the session cap, the holiday card window and its five-business-day delivery, and the dates.
 
 You know your home in a way no floor plan ever could. The chair by the window that gets the morning light. The counter where homework happens. The porch at the end of a long day.
 
-Tell us about it. My Mitchell Story is open to Mitchell homeowners through Sunday, December 6. Film a short video on your phone, about 30 to 90 seconds, and answer one or more of these:
+Tell us about it. My Mitchell Story is open to Mitchell homeowners through Sunday, December 13. Film a short video on your phone, about 30 to 90 seconds, and answer one or more of these:
 
 - What do you love most about your home?
 - How do you use it, day to day?
@@ -152,13 +155,15 @@ Tell us about it. My Mitchell Story is open to Mitchell homeowners through Sunda
 2. **Send it in** Upload your video or paste a link on the entry form.
 3. **Book your photo session** We send you a link to schedule a professional photo session at your home, paid for by Mitchell, while sessions last. The photos are yours to keep.
 
+Enter by Sunday, November 29, and you can book your session any day through Saturday, December 5, including Thanksgiving weekend, when the whole family is home. Your edited photos arrive within five business days, in time for holiday cards: your family in front of the home you built, and the rooms you love.
+
 After entries close, a panel from Mitchell and CEA Marketing chooses five finalists, one from each Design Center region. Each finalist receives their own Home Portrait, a framed painting of their Mitchell home. One grand prize winner also receives $2,500.
 
 **[Tell Your Story]** `[entry form link]`
 
-*Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag Mitchell Homes. Never required: entries count only through the form. Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 6, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]*
+*Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag Mitchell Homes. Never required: entries count only through the form. Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]*
 
-### ho4 · Wednesday, November 18 · Your phone is all you need
+### ho4 · Wednesday, December 2 · Your phone is all you need
 
 **To:** Past Mitchell homeowners who have not entered (no tag my mitchell story entry)  
 **Preview:** A few tips for filming your Mitchell story, and your photo session is on us.  
@@ -175,44 +180,44 @@ Most good home stories start in one place: the chair by the fireplace, the kitch
 4. **Hold steady** Prop the phone on a shelf or hold it with both hands. Slow moves beat fast ones.
 5. **Keep it yours** Keep house numbers, street signs and license plates out of the frame, and ask before you film anyone.
 
-Once your entry is in, we send a link to book your photo session: about an hour at your home with a professional photographer, paid for by Mitchell, while sessions last. The photos are yours to keep.
+Once your entry is in, we send a link to book your photo session: about an hour at your home with a professional photographer, paid for by Mitchell, while sessions last. The photos are yours to keep, and sessions run into January, so they are ready for the new year. [If any holiday card sessions remain, the team adds one line about them here before sending.]
 
 **[Tell Your Story]** `[entry form link]`
 
-*Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 6, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]*
+*Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]*
 
-### ho5 · Wednesday, December 2 · Your story, by Sunday
+### ho5 · Wednesday, December 9 · Your story, by Sunday
 
 **To:** Past Mitchell homeowners who have not entered (no tag my mitchell story entry)  
-**Preview:** My Mitchell Story closes Sunday, December 6, at 11:59pm Eastern.  
+**Preview:** My Mitchell Story closes Sunday, December 13, at 11:59pm Eastern.  
 **Hero:** `https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg` (A Mitchell kitchen with a large white island, wood cabinets and woven pendant lights)  
 **Eyebrow:** My Mitchell Story  
 **Headline:** There is still time to tell it  
-**Hold:** Holds with ho3 (Official Rules and prize details). If Mitchell caps photo sessions and they run out before December 2, drop the photo session sentence.
+**Hold:** Holds with ho3 (Official Rules and prize details). If Mitchell caps photo sessions and they run out before December 9, drop the photo session sentence.
 
 Somewhere in your home is the spot where the day slows down. Maybe it is the kitchen everyone ends up in, or the porch after dinner. That is the story we would love to see.
 
-My Mitchell Story closes this Sunday, December 6, at 11:59pm Eastern. A minute on your phone is enough. Show us the place, and tell us why you love it.
+My Mitchell Story closes this Sunday, December 13, at 11:59pm Eastern. A minute on your phone is enough. Show us the place, and tell us why you love it.
 
 - What do you love most about your home?
 - How do you use it, day to day?
 - How does your home make you feel?
 - Where is your favorite place to hang out?
 
-Every entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500.
+Every entrant gets a professional photo session at home, paid for by Mitchell, while sessions last, and sessions run into January, so your photos are ready for the new year. [If any holiday card sessions remain, the team adds one line about them here before sending.] Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500.
 
 **[Send My Story]** `[entry form link]`
 
-*Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 6, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]*
+*Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]*
 
-### ho6 · Tuesday, December 15 · Meet the My Mitchell Story winner
+### ho6 · Friday, December 18 · Meet the My Mitchell Story winner
 
 **To:** All past Mitchell homeowners, including every entrant  
 **Preview:** And thank you to every homeowner who showed us their home.  
 **Hero:** `https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg` (A Mitchell farmhouse with a long front porch under an evening sky)  
 **Eyebrow:** My Mitchell Story  
 **Headline:** Thank you for showing us your homes  
-**Hold:** Waits on the winner's verification and signed releases. Fill every bracket from the entries, with permission. The hero can be a home-only photo from the winner's session once they sign the release. Never show the painting.
+**Hold:** Waits on the winner's verification and signed releases; if the winner's documents are not back by Thursday, December 17, ho6 and the winner post move to the day after they arrive. Fill every bracket from the entries, with permission. The hero can be a home-only photo from the winner's session once they sign the release. Never show the painting.
 
 This fall, [number] Mitchell homeowners showed us the places they love most: [two or three real examples from entries, in their words, with permission]. Every one of them reminded us why we build.
 
@@ -245,7 +250,7 @@ Here is what happens next:
 
 - We confirm your entry within two business days.
 - Then we send a link to book your photo session at home, paid for by Mitchell, while sessions last.
-- Entries close Sunday, December 6, at 11:59pm Eastern, and we plan to announce the finalists about December 10.
+- Entries close Sunday, December 13, at 11:59pm Eastern, and we plan to announce the finalists about December 17.
 
 If you need to change anything, just reply to this email.
 
@@ -254,7 +259,7 @@ If you need to change anything, just reply to this email.
 **When:** When the contest coordinator adds the tag my mitchell story verified (workflow My Mitchell Story | 02 Photo session)  
 **To:** Every verified entrant  
 **Preview:** About an hour at your home, and the photos are yours to keep.  
-**Hold:** Waits on the photographers, the session cap and the booking calendar.
+**Hold:** Waits on the photographers, the session cap, the holiday card window and the booking calendar. After Thanksgiving weekend, drop the Thanksgiving sentence. Once the entries received by Sunday, November 29 are verified (about Tuesday, December 1), replace the holiday card paragraph in the template with: Sessions run into January, so your photos are ready for the new year.
 
 Your My Mitchell Story entry is confirmed. Thank you.
 
@@ -262,8 +267,10 @@ Next is your photo session. A professional photographer will spend about 45 to 6
 
 - We like to finish outside in the hour before sunset, when the front of the home looks its best.
 - Inside, we photograph the kitchen, the porch and the favorite spot from your video, plus a few details.
-- Family photos only if you want them. Everyone pictured signs a short release, and a parent signs for any child.
-- You receive [number] edited photos within [two weeks], yours to keep.
+- Family photos in front of your home, if you want them. Everyone pictured signs a short release, and a parent signs for any child.
+- You receive [number] edited photos, yours to keep: within five business days for sessions through Saturday, December 5, and within [two weeks] after that.
+
+Thinking of holiday cards? Book any day through Saturday, December 5, and your photos arrive in time. Friday, November 27 and Saturday, November 28 are open too, while the whole family is home for Thanksgiving.
 
 Book your photo session: `[photo session booking link]`
 
@@ -271,7 +278,7 @@ If none of the times work, reply and we will find one. Sessions run through [Jan
 
 ### hw3 · You are a My Mitchell Story finalist
 
-**When:** About Tuesday, December 8, after the phone call, when the coordinator adds the tag my mitchell story finalist (workflow My Mitchell Story | 03 Finalists)  
+**When:** About Tuesday, December 15, after the phone call, when the coordinator adds the tag my mitchell story finalist (workflow My Mitchell Story | 03 Finalists)  
 **To:** The four finalists who are not the grand prize winner  
 **Preview:** Congratulations. Here is what happens next.  
 **Hold:** Waits on judging, the artist and delivery date, and the release and affidavit from legal.
@@ -286,11 +293,11 @@ To confirm your prize, please return these within five business days:
 - A completed W-9, if your prizes total $600 or more in the year. [Tax advisor to confirm.]
 - A good time for a short call about your Home Portrait.
 
-We announce the finalists on Thursday, December 10, so please keep the news in the family until then. Thank you for showing us your home.
+We announce the finalists on Thursday, December 17, so please keep the news in the family until then. Thank you for showing us your home.
 
 ### hw4 · Your story won
 
-**When:** About Tuesday, December 8, after the phone call; sent by hand from the template, not by workflow  
+**When:** About Tuesday, December 15, after the phone call; sent by hand from the template, not by workflow  
 **To:** The potential grand prize winner  
 **Preview:** Congratulations. You are the My Mitchell Story grand prize winner.  
 **Hold:** Waits on judging, the form of the $2,500, and the release and affidavit from legal.
@@ -305,33 +312,33 @@ To confirm your prize, please return these within five business days:
 - A completed W-9. Prizes of $600 or more are reported on IRS Form 1099.
 - A good time for a short call to plan the announcement and your Home Portrait.
 
-We announce the winner on Tuesday, December 15, so please keep it in the family until then. Thank you for letting us share your story.
+We announce the winner on Friday, December 18, so please keep it in the family until then. Thank you for letting us share your story.
 
 ## Texts
 
 **Consultant invite to Homeowner Appreciation Night** (156 of 160 characters with a typical name)  
-When: Thursday, October 29 to Tuesday, November 3, 2026. Every New Home Consultant to the homeowners they built with who have not RSVPed to ho2 yet: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.  
+When: Thursday, November 5 to Tuesday, November 10, 2026. Every New Home Consultant to the homeowners they built with who have not RSVPed to ho2 yet: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division's consultant.  
 To: Homeowners each New Home Consultant built with, 1-to-1, only where the consultant already texts that homeowner. A personal text, so no STOP line.
 
-> Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 10, 5:30 to 7:30pm, at our [city] Design Center. Can you come?
+> Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 17, 5:30 to 7:30pm, at our [city] Design Center. Can you come?
 
 **RSVP reminder** (153 of 160 characters with a typical name)  
-When: Monday, November 9, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.  
+When: Monday, November 16, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.  
 To: Homeowners tagged homeowner appreciation rsvp who gave text consent.
 
-> Mitchell Homes: See you tomorrow, Tue Nov 10, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out
+> Mitchell Homes: See you tomorrow, Tue Nov 17, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out
 
 **Thank-you after the event** (143 of 160 characters with a typical name)  
-When: Tuesday, November 10, 2026, by 9pm. The consultant who invited each guest.  
+When: Tuesday, November 17, 2026, by 9pm. The consultant who invited each guest.  
 To: Each homeowner who came, 1-to-1 from the consultant who invited them. A personal text, so no STOP line.
 
 > Thank you for coming tonight, [first name]. It was so good to see you. Your My Mitchell Story link comes by email in the morning. Text me any time.
 
-**Contest launch** (147 of 160 characters with a typical name)  
-When: Thursday, November 12, 2026, between 10am and 7pm. Builder Studio bulk text.  
-To: Past homeowners with text consent who did not RSVP to Homeowner Appreciation Night and have not entered. Their only text that week.
+**Contest launch** (158 of 160 characters with a typical name)  
+When: Thursday, November 19, 2026, between 10am and 7pm. Builder Studio bulk text.  
+To: Past homeowners with text consent who did not RSVP to Homeowner Appreciation Night and have not entered. Their only text that week. If the holiday card window is not confirmed, use: Mitchell Homes: My Mitchell Story is open. Show us what you love about your home in a short video by Dec 13: [trigger link] Reply STOP to opt out
 
-> Mitchell Homes: My Mitchell Story is open. Show us what you love about your home in a short video by Dec 6: [trigger link] Reply STOP to opt out
+> Mitchell Homes: My Mitchell Story is open. Film what you love about your home by Nov 29 for holiday card photos on us: [trigger link] Reply STOP to opt out
 
 **Photo session reminder** (132 of 160 characters with a typical name)  
 When: The day before each session. Workflow My Mitchell Story | 02, on the photo session calendar.  
@@ -339,18 +346,18 @@ To: Entrants with a booked session who gave text consent.
 
 > Mitchell Homes: Your My Mitchell Story photo session is tomorrow at [time]. Need a different time? Just reply. Reply STOP to opt out
 
-**Last-week contest reminder** (156 of 160 characters with a typical name)  
-When: Thursday, December 3, 2026, between 10am and 7pm. Builder Studio bulk text.  
+**Last-week contest reminder** (157 of 160 characters with a typical name)  
+When: Thursday, December 10, 2026, between 10am and 7pm. Builder Studio bulk text.  
 To: Past homeowners with text consent who have not entered (no tag my mitchell story entry). Their only text that week. If sessions have run out, drop the words Photo sessions on us.
 
-> Mitchell Homes: What do you love most about your home? Show us in a short video by Sun, Dec 6. Photo sessions on us: [trigger link] Reply STOP to opt out
+> Mitchell Homes: What do you love most about your home? Show us in a short video by Sun, Dec 13. Photo sessions on us: [trigger link] Reply STOP to opt out
 
 ## Sales and warranty team scripts
 
 ### Text to a homeowner you built with
 
 **Who:** New Home Consultants, 1-to-1  
-**When:** Wednesday, November 11 to Friday, December 4, to homeowners who have not entered (no tag my mitchell story entry)
+**When:** Wednesday, November 18 to Friday, December 11, to homeowners who have not entered (no tag my mitchell story entry)
 
 ```text
 Hi [first name], it is [your name] from Mitchell. My Mitchell Story is open: a short phone video about what you love about your home. Entrants get a photo session at home, on us, while they last. Want the link?
@@ -361,7 +368,7 @@ Notes: A personal text from your own phone or your Builder Studio number, so no 
 ### Short email to a homeowner you built with
 
 **Who:** New Home Consultants  
-**When:** Any time from Wednesday, November 11 to Wednesday, December 2, to homeowners who have not entered
+**When:** Any time from Wednesday, November 18 to Wednesday, December 9, to homeowners who have not entered
 
 ```text
 Subject: I would love to see your home again
@@ -374,7 +381,7 @@ We just opened My Mitchell Story for Mitchell homeowners. Film a short video on 
 
 Here is the link: [entry form link]?utm_source=sales_email&utm_medium=email&utm_campaign=fall26_homeowners&utm_content=nhc_email
 
-Entries close Sunday, December 6. If you have any questions, just reply.
+Entries close Sunday, December 13. If you have any questions, just reply.
 
 [your name]
 New Home Consultant, Mitchell Homes
@@ -386,7 +393,7 @@ Notes: From your own address, so it reads like a person, because it is one. Skip
 ### 20-second phone script
 
 **Who:** New Home Consultants  
-**When:** At the end of any call with a past homeowner, November 11 to December 4
+**When:** At the end of any call with a past homeowner, November 18 to December 11
 
 ```text
 Before I let you go: we just opened something for Mitchell homeowners called My Mitchell Story. You film a short video on your phone about what you love about your home, and everyone who enters gets a professional photo session at the house, on us, while sessions last. Can I text you the link?
@@ -397,7 +404,7 @@ Notes: About 55 words. If they say yes, text the entry link and note it in Build
 ### 20-second script for the warranty team
 
 **Who:** Warranty team, on the phone or at the end of a visit  
-**When:** November 11 to December 4, only when the service item is resolved and the homeowner is happy
+**When:** November 18 to December 11, only when the service item is resolved and the homeowner is happy
 
 ```text
 Glad we got that taken care of. One more thing, if you have a minute: Mitchell just opened My Mitchell Story for homeowners. It is a short phone video about what you love about your home, and everyone who enters gets a professional photo session at home, on us, while sessions last. Would you like someone to send you the link?
@@ -409,7 +416,7 @@ Notes: Never on a call about an open or unresolved issue, and never if the homeo
 
 Organic only. Nothing here is boosted.
 
-### Announcement · Wednesday, November 11, 2026
+### Announcement · Wednesday, November 18, 2026
 
 **Channels:** Facebook, Instagram feed  
 **Format:** Single image of a real Mitchell home exterior with no people, or a 15-second Reel of home-only footage
@@ -418,17 +425,19 @@ Organic only. Nothing here is boosted.
 >
 > Mitchell homeowners, My Mitchell Story is open. Film a short video on your phone, about 30 to 90 seconds, and tell us what you love most about your home, how you use it, how it makes you feel, or where you like to hang out.
 >
-> Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. The photos are yours to keep. Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500.
+> Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. The photos are yours to keep. Want family photos in front of your home for holiday cards? Enter by Sunday, November 29, and book your session as soon as this week, Thanksgiving weekend included.
 >
-> Enter by Sunday, December 6: [entry form link]
+> Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500.
+>
+> Enter by Sunday, December 13: [entry form link]
 > Open to Mitchell homeowners 18 or older. No purchase necessary. Official Rules: [official rules link]
 >
 > #MyMitchellStory #MitchellHomes
 
 Link: `[entry form link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_announce`  
-Notes: Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg . Pin to the top of the Facebook page through December 6. Organic only. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_announce.
+Notes: Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg . Pin to the top of the Facebook page through December 13; on Monday, November 30, edit the caption to drop the holiday card sentences. Organic only. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_announce.
 
-### How to enter · Friday, November 13, 2026
+### How to enter · Wednesday, November 25, 2026
 
 **Channels:** Instagram carousel, Facebook  
 **Format:** Carousel, five slides of text on real Mitchell home photos with no people: 1 Every home is a portrait. Show us yours. 2 Film it at home. 3 Answer one question. 4 Send it in. 5 Your photo session is on us.
@@ -438,19 +447,19 @@ Notes: Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260
 > 1. Film a short video at home on your phone, about 30 to 90 seconds.
 > 2. Answer one or more: What do you love most about your home? How do you use it, day to day? How does your home make you feel? Where is your favorite place to hang out?
 > 3. Send it through the entry form: upload it or paste a link.
-> 4. Book your photo session at home, on us, while sessions last.
+> 4. Book your photo session at home, on us, while sessions last. Enter by this Sunday, November 29, and your photos are ready in time for holiday cards.
 >
 > Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag us. Never required.
 >
-> Enter by Sunday, December 6: [entry form link]
+> Enter by Sunday, December 13: [entry form link]
 > Official Rules: [official rules link]
 >
 > #MyMitchellStory
 
 Link: `[entry form link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_howto`  
-Notes: Organic only. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_howto.
+Notes: Posted the day before Thanksgiving, so families home for the weekend can film and enter by Sunday. Organic only. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_howto.
 
-### Filming tips · Tuesday, November 17, 2026
+### Filming tips · Tuesday, December 1, 2026
 
 **Channels:** Instagram Reels, Facebook Reels  
 **Format:** 30-second Reel: a team member's hands filming a Mitchell home on a phone, tips on screen. Home-only footage, no faces, no popular music.
@@ -463,7 +472,7 @@ Notes: Organic only. Never ask people to share, like or tag friends to enter (Me
 > Hold steady, or prop the phone on a shelf.
 > Keep house numbers and license plates out of the frame.
 >
-> One take is fine. Real beats perfect. Enter by Sunday, December 6: [entry form link]
+> One take is fine. Real beats perfect. Enter by Sunday, December 13: [entry form link]
 >
 > #MyMitchellStory
 
@@ -477,47 +486,47 @@ Notes: If filmed in the Mitchell model home, do not name the plan until Brittany
 
 > [First names] have lived in their Mitchell home in [state] since [year]. Their favorite place to hang out? [Their answer, in their words.]
 >
-> This is My Mitchell Story. Mitchell homeowners, show us yours by Sunday, December 6: [entry form link]
+> This is My Mitchell Story. Mitchell homeowners, show us yours by Sunday, December 13: [entry form link]
 >
 > #MyMitchellStory #MitchellHomes
 
 Link: `[entry form link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_spot1`  
-Notes: Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child's name. Captions describe the home and the homeowner's words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging.
+Notes: Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child's name. Captions describe the home and the homeowner's words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging. Three days after entries open: if no entry with the spotlight box checked is ready, skip this one.
 
-### Entrant spotlight 2: how it feels · Friday, November 27, 2026
+### Entrant spotlight 2: how it feels · Friday, December 4, 2026
 
 **Channels:** Facebook, Instagram Reels  
 **Format:** The entrant's video as submitted, trimmed for length only
 
 > "[How their home makes them feel, in their words.]"
 >
-> [First names], Mitchell homeowners in [state], told us what coming home feels like. This is My Mitchell Story. Show us yours by Sunday, December 6: [entry form link]
+> [First names], Mitchell homeowners in [state], told us what coming home feels like. This is My Mitchell Story. Show us yours by Sunday, December 13: [entry form link]
 >
 > #MyMitchellStory #MitchellHomes
 
 Link: `[entry form link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_spot2`  
 Notes: Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child's name. Captions describe the home and the homeowner's words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging.
 
-### Entrant spotlight 3: a day at home · Friday, December 4, 2026
+### Entrant spotlight 3: a day at home · Friday, December 11, 2026
 
 **Channels:** Facebook, Instagram Reels  
 **Format:** The entrant's video as submitted, trimmed for length only
 
 > A day in [first names]' Mitchell home in [state] starts [where their day starts, in their words].
 >
-> This is My Mitchell Story, and there are two days left to tell yours. Entries close Sunday, December 6, at 11:59pm Eastern: [entry form link]
+> This is My Mitchell Story, and there are two days left to tell yours. Entries close Sunday, December 13, at 11:59pm Eastern: [entry form link]
 >
 > #MyMitchellStory #MitchellHomes
 
 Link: `[entry form link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_spot3`  
 Notes: Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child's name. Captions describe the home and the homeowner's words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging.
 
-### Last call · Thursday, December 3, 2026 (Story again on Sunday, December 6)
+### Last call · Thursday, December 10, 2026 (Story again on Sunday, December 13)
 
 **Channels:** Facebook, Instagram feed and Stories  
 **Format:** Single image of a real Mitchell home at dusk with no people; the Sunday Story uses the same image with the link sticker
 
-> Mitchell homeowners, there is still time. My Mitchell Story closes Sunday, December 6, at 11:59pm Eastern.
+> Mitchell homeowners, there is still time. My Mitchell Story closes Sunday, December 13, at 11:59pm Eastern.
 >
 > A minute on your phone is enough. Show us the place you love most at home, and tell us why. Every eligible entrant gets a professional photo session at home, on us, while sessions last.
 >
@@ -529,7 +538,7 @@ Notes: Only entries with the spotlight box checked, after the coordinator confir
 Link: `[entry form link]?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_last`  
 Notes: Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg . If sessions have run out, drop the photo session sentence. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_homeowners&utm_content=mms_last.
 
-### Finalists · Thursday, December 10, 2026
+### Finalists · Thursday, December 17, 2026
 
 **Channels:** Facebook, Instagram carousel  
 **Format:** Carousel: one home-only exterior photo from each finalist's session, with their release, first names and state on each slide
@@ -542,13 +551,13 @@ Notes: Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse
 > [First names, state: one line.]
 > [First names, state: one line.]
 >
-> Thank you to every homeowner who showed us their home. The grand prize winner is announced Tuesday, December 15.
+> Thank you to every homeowner who showed us their home. The grand prize winner is announced Friday, December 18.
 >
 > #MyMitchellStory #MitchellHomes
 
 Notes: Only finalists who returned their documents and agreed to publicity. Never show the Home Portrait paintings. Organic only.
 
-### Grand prize winner · Tuesday, December 15, 2026
+### Grand prize winner · Friday, December 18, 2026
 
 **Channels:** Facebook, Instagram Reels, YouTube Shorts  
 **Format:** The winner's video as submitted, with their release
@@ -565,20 +574,20 @@ Notes: Only after verification is complete. Never show the painting, not even at
 
 ## Google Business Profile post
 
-Post on: All five Design Center profiles, Wednesday, November 11, after the E7 event post ends. Event-type post, start November 11, end December 6, 11:59pm.
+Post on: All five Design Center profiles, Wednesday, November 18, after the E7 event post ends. Event-type post, start November 18, end December 13, 11:59pm.
 
 **Title:** My Mitchell Story: tell us about your home (42 of 58 characters)  
 **Button:** Learn more, linking to `[entry form link]?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_homeowners&utm_content=mms_gbp`
 
-> Mitchell homeowners, what do you love most about your home? Show us in a short phone video, about 30 to 90 seconds, through Sunday, December 6, 2026. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. Open to Mitchell homeowners 18 or older. No purchase necessary. Official Rules at the link.
+> Mitchell homeowners, what do you love most about your home? Show us in a short phone video, about 30 to 90 seconds, through Sunday, December 13, 2026. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. Enter by Sunday, November 29, and your family photos in front of your home will be ready in time for holiday cards. Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. Open to Mitchell homeowners 18 or older. No purchase necessary. Official Rules at the link.
 
-Notes: Image: a real Mitchell home exterior, no people. If Google rejects the event post, post it as an Update.
+Notes: Image: a real Mitchell home exterior, no people. If Google rejects the event post, post it as an Update. On Monday, November 30, edit the post to drop the holiday card sentence.
 
 ## Entry form (Builder Studio)
 
 A Builder Studio form at [entry form link], linked from every contest email, post and text. Mobile first: most entrants fill it in on the phone that holds the video.
 
-**Intro at the top of the form:** Every home is a portrait. Show us yours. Tell us about your Mitchell home in a short video, about 30 to 90 seconds, filmed on your phone. Entries close Sunday, December 6, 2026, at 11:59pm Eastern.
+**Intro at the top of the form:** Every home is a portrait. Show us yours. Tell us about your Mitchell home in a short video, about 30 to 90 seconds, filmed on your phone. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. Enter by Sunday, November 29, and you can book your photo session in time for holiday cards.
 
 | Field | Type | Required | Help text |
 |---|---|---|---|
@@ -597,7 +606,7 @@ A Builder Studio form at [entry form link], linked from every contest email, pos
 | In one sentence, what do you love most about your home? | Short text | Optional | In your words. We may use it as a caption, with your permission. |
 | Did you post it too? Your Instagram or TikTok handle | Text | Optional | Never required to enter, and it does not affect judging. |
 | Photos at your session | Radio: The home only / The home and my family / I will decide at the session | Required | Family photos are only taken if you want them. |
-| Best times for your photo session | Checkboxes: weekday afternoons, weekday evenings, Saturday, Sunday | Optional | The front of the home looks best in the hour before sunset. |
+| Best times for your photo session | Checkboxes: weekday afternoons, weekday evenings, Saturday, Sunday, Thanksgiving weekend (Friday, November 27 or Saturday, November 28) | Optional | The front of the home looks best in the hour before sunset. Entered by Sunday, November 29? Sessions through Saturday, December 5 get your edited photos to you within five business days, in time for holiday cards. |
 | Does anyone in your household work for Mitchell Homes, CEA Marketing, or a photographer or artist working on this contest? | Radio: No / Yes | Required | Household members of the contest team are not eligible. Thank you for understanding. |
 
 **Consent checkboxes**
@@ -618,13 +627,14 @@ A Builder Studio form at [entry form link], linked from every contest email, pos
 - Builder Studio forms may not enforce one of two fields. If not, make both optional and let workflow 01's coordinator task catch an entry with neither.
 - If the household question is Yes, the entry still saves; the coordinator replies personally rather than the form showing an error.
 - No painted Home Portrait or sample painting on the form page. A real Mitchell home photo, no people, as the header image.
+- After Thanksgiving weekend, remove the Thanksgiving weekend checkbox. On Monday, November 30, remove the holiday card sentence from the intro and the holiday card line in the session times help text.
 
 ## Photographer brief
 
-One professional photo session at each verified entrant's Mitchell home, paid for by Mitchell. The homeowner keeps the edited photos. For the five finalists, the session photos are also the artist's reference for their Home Portrait.
+One professional photo session at each verified entrant's Mitchell home, paid for by Mitchell: family photos in front of the home they built, if they want them, plus the rooms and spots they love, including the favorite spot from their video. The homeowner keeps the edited photos. For the five finalists, the session photos are also the artist's reference for their Home Portrait.
 
 **Length:** About 45 to 60 minutes on site, plus travel.  
-**When:** Sessions roll as entries are confirmed, from mid-November through [January 31, 2027]. Book each session to end at the front of the home in the hour before sunset (roughly 4pm to 5pm in December).
+**When:** Sessions roll as entries are confirmed, from Wednesday, November 18 through [January 31, 2027]. Holiday card window: entrants who enter by Sunday, November 29 book a session between Wednesday, November 18 and Saturday, December 5, including Friday, November 27 and Saturday, November 28 (Thanksgiving weekend, when the whole family is home), and get their edited photos within five business days so they can order holiday cards. Capacity for the window: [number] sessions per region, Mitchell to confirm; open the window's slots, Thanksgiving weekend included, before any later dates. Book each session to end at the front of the home in the hour before sunset (roughly 4pm to 5pm in late November and December).
 
 **Before the session**
 
@@ -637,7 +647,7 @@ One professional photo session at each verified entrant's Mitchell home, paid fo
 1. Five minutes with the homeowner: what they love, the favorite spot from the video, and whether they want people in any photos.
 2. Interiors first, in natural light: the kitchen, the favorite spot, the living spaces.
 3. Details.
-4. Family moments, only if they want them.
+4. Family photos, only if they want them: in front of the home and on the porch, a few posed for a holiday card and a few candid.
 5. The porch, then the front elevation as the light turns golden.
 
 **Shot list**
@@ -648,7 +658,7 @@ One professional photo session at each verified entrant's Mitchell home, paid fo
 | The porch | The chairs, the front door, and the view from the porch looking out. |
 | The kitchen | Wide, then the island or table the way the family uses it. |
 | The favorite spot | The place the homeowner named in their video, wide and close. |
-| Family moments, only if they want them | Natural and candid, never staged. Children only with a parent there and agreeing. |
+| Family photos in front of the home, only if they want them | The family in front of the home they built: a few posed shots for a holiday card, vertical and horizontal, then natural, candid moments. Children only with a parent there and agreeing. |
 | Details | Hardware, tile, the mantel, light through a window, the view out the back. |
 | The land | The yard, the trees, the view: the ground the home stands on. |
 
@@ -660,7 +670,7 @@ One professional photo session at each verified entrant's Mitchell home, paid fo
 - Anything the homeowner asks you to skip.
 
 **Style:** Warm, never cool. Natural light, no hard shadows, lived in but uncluttered. Ask before moving anything, and put it back.  
-**Delivery:** [25 to 40] edited images in an online gallery within [two weeks]: full resolution for the homeowner, and web and full-resolution sets for Mitchell. Label every image Home only, Adults or Children, so Mitchell knows where each one may run.  
+**Delivery:** [25 to 40] edited images in an online gallery within five business days for sessions in the holiday card window (through Saturday, December 5), and within [two weeks] after that: full resolution for the homeowner, and web and full-resolution sets for Mitchell. Label every image Home only, Adults or Children, so Mitchell knows where each one may run.  
 **Releases:** Every adult pictured signs a model release before the camera comes out, and a parent or legal guardian signs for each child. The owner signs a property release. Without signed releases, the session is home only. [Release forms: for Mitchell's legal to draft.]  
 **What Mitchell may use, and where:** Images with people: organic social, email, Mitchell's websites, print and Design Centers, credited by first names and state. Home-only images: anywhere, including paid ads. Never in paid: any image with a person or a child. The photographer's agreement grants Mitchell this license and the homeowner a personal-use license; the photographer uses images in a portfolio only with the homeowner's OK.  
 **Budget:** [Rate per session and travel, once Mitchell sets the budget and chooses photographers.]
@@ -686,10 +696,10 @@ Nothing here has been created. The API can make tags, templates and trigger link
 
 | Tag | Added by | Used for |
 |---|---|---|
-| `homeowner appreciation rsvp` | The Homeowner Appreciation Night RSVP form, or a consultant when a homeowner RSVPs by reply | The reminder text on November 9; consultants' thank-you list |
+| `homeowner appreciation rsvp` | The Homeowner Appreciation Night RSVP form, or a consultant when a homeowner RSVPs by reply | The reminder text on November 16; consultants' thank-you list |
 | `my mitchell story entry` | The entry form | Workflow 01, and excluding entrants from ho4, ho5 and the contest texts |
 | `my mitchell story verified` | The contest coordinator, after checking eligibility (CEA's addition to the three requested tags) | Workflow 02, the photo session booking note |
-| `my mitchell story finalist` | The contest coordinator, after judging and the phone call | Workflow 03, the finalist note, and the December 10 finalist list |
+| `my mitchell story finalist` | The contest coordinator, after judging and the phone call | Workflow 03, the finalist note, and the December 17 finalist list |
 
 **Smart list: Past Mitchell homeowners**
 
@@ -705,7 +715,7 @@ Used by: ho2 to ho6, the contest texts, and each consultant's invite list
 - Homeowner Appreciation Night RSVP: name, email, phone, studio, number of guests, text consent. Adds homeowner appreciation rsvp.
 - My Mitchell Story entry form: see the form spec. Adds my mitchell story entry.
 
-**Calendar:** My Mitchell Story photo sessions: one calendar per photographer or region, 60-minute slots plus travel, linked from hw2 as [photo session booking link]. Live by Monday, November 9, so homeowners can book at the event.
+**Calendar:** My Mitchell Story photo sessions: one calendar per photographer or region, 60-minute slots plus travel, linked from hw2 as [photo session booking link]. Live by Monday, November 16, so homeowners can book at the event, with the holiday card window (November 18 to December 5, including Friday, November 27 and Saturday, November 28) open first.
 
 **Trigger links:** `[entry form link]`, `[RSVP link]`, `[official rules link]`, `[photo session booking link]`
 
@@ -715,7 +725,7 @@ Used by: ho2 to ho6, the contest texts, and each consultant's invite list
 
 1. Add tag: homeowner appreciation rsvp
 2. Internal notification to the assigned consultant
-3. Wait until Monday, November 9, 10am
+3. Wait until Monday, November 16, 10am
 4. If text consent: Send SMS, the RSVP reminder
 
 *My Mitchell Story | 01 Entry received*. Trigger: Form submitted: My Mitchell Story entry form
@@ -739,7 +749,7 @@ Used by: ho2 to ho6, the contest texts, and each consultant's invite list
 2. Send email hw3 from the assigned user (the grand prize winner gets hw4, sent by hand instead)
 3. Wait 3 business days: if documents are not back, create task for the coordinator to call
 
-**Exclusions:** Every contest email and text after November 11 skips contacts tagged my mitchell story entry, except ho6, which goes to everyone.
+**Exclusions:** Every contest email and text after November 18 skips contacts tagged my mitchell story entry, except ho6, which goes to everyone.
 
 ---
 
@@ -763,7 +773,7 @@ The Contest is open to legal residents of the United States who are 18 or older 
 
 **4. Entry period**
 
-The Contest begins on Tuesday, November 10, 2026, at 5:30pm Eastern Time and ends on Sunday, December 6, 2026, at 11:59pm Eastern Time (the Entry Period). Sponsor's computer is the official clock. Entries received after the Entry Period ends are not eligible.
+The Contest begins on Tuesday, November 17, 2026, at 5:30pm Eastern Time and ends on Sunday, December 13, 2026, at 11:59pm Eastern Time (the Entry Period). Sponsor's computer is the official clock. Entries received after the Entry Period ends are not eligible.
 
 **5. How to enter**
 
@@ -775,11 +785,11 @@ Each entry is one original video of about 30 to 90 seconds (judges watch up to t
 
 **7. Judging and criteria**
 
-On or about December 7 and 8, 2026, a panel of [three to five] judges from Mitchell Homes and CEA Marketing will score every eligible entry on: the story, 40 percent (how clearly and personally the entry tells what the Entrant loves about the home, and why); the home in everyday life, 30 percent (how the home shows up in the way the Entrant lives: the rooms, the routines, the favorite places); and how it feels to watch, 30 percent (the warmth, honesty and feeling of home that come through). Judging never considers who appears in the video, how many people appear or whether anyone appears at all; the size, price, plan or location of the home; video production quality; or likes, views, comments or followers on any platform. The highest-scoring eligible entry from each of the five Mitchell Design Center regions (Fredericksburg, Richmond, Newport News, Raleigh and Wilmington, assigned by the region that serves the home's location) becomes a finalist. If a region has no eligible entries, that finalist place goes to the next-highest-scoring eligible entry from any region. The grand prize winner is the highest-scoring finalist. Ties are broken by the score for the story, then by a vote of the judges. The judges' decisions are final.
+On or about December 14 and 15, 2026, a panel of [three to five] judges from Mitchell Homes and CEA Marketing will score every eligible entry on: the story, 40 percent (how clearly and personally the entry tells what the Entrant loves about the home, and why); the home in everyday life, 30 percent (how the home shows up in the way the Entrant lives: the rooms, the routines, the favorite places); and how it feels to watch, 30 percent (the warmth, honesty and feeling of home that come through). Judging never considers who appears in the video, how many people appear or whether anyone appears at all; the size, price, plan or location of the home; video production quality; or likes, views, comments or followers on any platform. The highest-scoring eligible entry from each of the five Mitchell Design Center regions (Fredericksburg, Richmond, Newport News, Raleigh and Wilmington, assigned by the region that serves the home's location) becomes a finalist. If a region has no eligible entries, that finalist place goes to the next-highest-scoring eligible entry from any region. The grand prize winner is the highest-scoring finalist. Ties are broken by the score for the story, then by a vote of the judges. The judges' decisions are final.
 
 **8. Prizes and approximate retail value**
 
-Photo session, for every eligible Entrant while sessions last: one professional photo session at the Entrant's Mitchell home, about 45 to 60 minutes, with [number] edited digital photos delivered for the Entrant's personal use. Limited to the first [number] eligible entries [or: within a budget of [amount]]. Sessions take place after the entry is received, between [November 11, 2026] and [January 31, 2027], at a time arranged with Sponsor's photographer. Approximate retail value (ARV): [ARV] each. Finalist prize (five): the Entrant's own Home Portrait, a framed painting of their Mitchell home, about [size], by [artist], delivered on or about [date]. ARV: [ARV] each. Grand prize (one, chosen from the five finalists): $2,500 [form: check, prepaid card, gift card or other, to confirm], in addition to the finalist prize. ARV: $2,500. Total ARV of all prizes: [ARV total]. Prizes are not transferable. No substitution or cash equivalent, except that Sponsor may substitute a prize of equal or greater value if a prize becomes unavailable. Sessions not used by [January 31, 2027] and prizes not claimed are forfeited.
+Photo session, for every eligible Entrant while sessions last: one professional photo session at the Entrant's Mitchell home, about 45 to 60 minutes, with [number] edited digital photos delivered for the Entrant's personal use. Limited to the first [number] eligible entries [or: within a budget of [amount]]. Sessions take place after the entry is received, between [November 18, 2026] and [January 31, 2027], at a time arranged with Sponsor's photographer. Holiday Card Window: an eligible Entrant whose entry is received by Sunday, November 29, 2026, at 11:59pm Eastern Time may book a session between November 18 and December 5, 2026, including November 27 and 28, 2026, and receives the edited photos within five business days after the session. Holiday Card Window sessions are limited to [number], first come, first served; an Entrant who cannot be scheduled in the Holiday Card Window keeps a session on the later dates, while sessions last. Approximate retail value (ARV): [ARV] each. Finalist prize (five): the Entrant's own Home Portrait, a framed painting of their Mitchell home, about [size], by [artist], delivered on or about [date]. ARV: [ARV] each. Grand prize (one, chosen from the five finalists): $2,500 [form: check, prepaid card, gift card or other, to confirm], in addition to the finalist prize. ARV: $2,500. Total ARV of all prizes: [ARV total]. Prizes are not transferable. No substitution or cash equivalent, except that Sponsor may substitute a prize of equal or greater value if a prize becomes unavailable. Sessions not used by [January 31, 2027] and prizes not claimed are forfeited.
 
 **9. Taxes**
 
@@ -791,7 +801,7 @@ This is a judged contest, not a random drawing. The odds of winning depend on th
 
 **11. Winner notification and verification**
 
-Potential finalists and the potential grand prize winner will be notified by phone and email on or about December 8, 2026. Each must respond, and return a signed affidavit of eligibility, a liability release and, where lawful, a publicity release, plus a W-9 where required, within five business days of notification. If a potential winner cannot be reached after reasonable attempts, does not respond in time, is found ineligible or does not comply with these rules, the prize may be forfeited and awarded to the next-highest-scoring eligible entry. Finalists are announced on or about December 10, 2026, and the grand prize winner on or about December 15, 2026, once verification is complete.
+Potential finalists and the potential grand prize winner will be notified by phone and email on or about December 15, 2026. Each must respond, and return a signed affidavit of eligibility, a liability release and, where lawful, a publicity release, plus a W-9 where required, within five business days of notification. If a potential winner cannot be reached after reasonable attempts, does not respond in time, is found ineligible or does not comply with these rules, the prize may be forfeited and awarded to the next-highest-scoring eligible entry. Finalists are announced on or about December 17, 2026, and the grand prize winner on or about December 18, 2026, once verification is complete.
 
 **12. License to use entries**
 
@@ -835,5 +845,5 @@ Void where prohibited or restricted by law. The Contest is subject to all applic
 
 **22. Questions for legal**
 
-For counsel's review, with no conclusions from CEA: how a homeowner-only contest sits with the no purchase line; any registration, bonding or disclosure requirements in Virginia, North Carolina, South Carolina or Maryland; the 1099 threshold and how the photo session and the Home Portrait are valued and reported; whether a photo session for every eligible Entrant, limited to [number] sessions, needs its own terms; the license term and the takedown promise; consent for minors who appear in videos and photos; and whether judges from CEA Marketing need a conflict statement.
+For counsel's review, with no conclusions from CEA: how a homeowner-only contest sits with the no purchase line; any registration, bonding or disclosure requirements in Virginia, North Carolina, South Carolina or Maryland; the 1099 threshold and how the photo session and the Home Portrait are valued and reported; whether a photo session for every eligible Entrant, limited to [number] sessions, and the Holiday Card Window with its five-business-day delivery need their own terms; the license term and the takedown promise; consent for minors who appear in videos and photos; and whether judges from CEA Marketing need a conflict statement.
 

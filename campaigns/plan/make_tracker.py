@@ -95,6 +95,21 @@ for t, owner, notes in [
 ]:
     add(3, B3, "Build", t, "Builder Studio" if "form" in t else "", "", owner, "", notes)
 
+# My Mitchell Story milestones after the kickoff (dates from campaigns/homeowners/contest.json)
+for when, kind, task, ch, aud, owner, notes in [
+    (date(2026, 11, 18), "Contest", "Holiday card photo sessions begin (through Saturday, December 5, Thanksgiving weekend included)", "Photographers", "Entrants", "Mitchell",
+     "Each photographer delivers edited photos within five business days. Question 19."),
+    (date(2026, 11, 19), "Send", "Schedule the My Mitchell Story launch text", "Text", "Homeowners with text consent who did not RSVP", "CEA team", ""),
+    (date(2026, 11, 30), "Contest", "Holiday card window closed: update the pinned post, Google post, entry form and the HW2 paragraph", "Builder Studio", "", "CEA team",
+     "Each piece carries a note with the new wording."),
+    (date(2026, 12, 10), "Send", "Schedule the My Mitchell Story last-week text", "Text", "Homeowners with text consent who have not entered", "CEA team", ""),
+    (date(2026, 12, 13), "Contest", "Entries close at 11:59pm Eastern", "", "", "", ""),
+    (date(2026, 12, 15), "Contest", "Judging done; call the five finalists and the potential winner, then send HW3 and HW4", "Phone and email", "Finalists", "Mitchell",
+     "Documents due within five business days; if the winner's papers are not back by December 17, HO6 and the winner post slip."),
+    (date(2026, 12, 17), "Post", "Finalists announced on social", "Social", "", "CEA team", "Only with each finalist's signed release."),
+]:
+    add(3, when, kind, task, ch, aud, owner, "", notes)
+
 # every scheduled send
 CH = {"email": "Email", "text": "Text"}
 for p in plan["pieces"]:

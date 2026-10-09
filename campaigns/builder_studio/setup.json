@@ -2,7 +2,7 @@
  "done": [
   "Template folder: Fall 2026 | Campaign drafts from CEA (do not send until approved)",
   "56 email templates loaded into that folder, each named Fall26 · ID · subject line, with its preview text",
-  "18 tags: fall26 quiet, fall26 engaged, fall26 clicked, fall26 nurture done, fall26 skip text this week, realtor land partner, realtor on your land, event bring your photos oct24, event live qa oct27, event land 101 nov7, event gathering place nov12, event wilmington open house nov14, event realtor lunch nov18, homeowner appreciation rsvp, my mitchell story entry, my mitchell story verified, my mitchell story finalist, event homeowner night nov10",
+  "18 tags: fall26 quiet, fall26 engaged, fall26 clicked, fall26 nurture done, fall26 skip text this week, realtor land partner, realtor on your land, event bring your photos nov7, event live qa oct29, event land 101, event gathering place, event wilmington open house, event realtor lunch nov18, homeowner appreciation rsvp, my mitchell story entry, my mitchell story verified, my mitchell story finalist, event homeowner night nov17",
   "13 trigger links: Fall26 · SMS1 · Design Dollars, Fall26 · SMS2 · Home Portrait, Fall26 · SMS4 · Landowners, Fall26 · Nurture · Home Portrait, Fall26 · Nurture · Roadmap episode, Fall26 · Nurture · Purchasing Land 101 episode, Fall26 · Event RSVP · E1 · Bring Your Photos Saturday, Fall26 · Event RSVP · E2 · Behind the Build Live: Your Design Dolla, Fall26 · Event RSVP · E3 · Building on Your Land 101, Fall26 · Event RSVP · E4 · Wilmington Design Center Open House, Fall26 · Event RSVP · E5 · The Gathering Place Live: Building Your , Fall26 · Event RSVP · E6 · Realtor Lunch and Learn, Fall26 · Event RSVP · E7 · Homeowner Appreciation Night",
   "In the media library: 30 animated hero images (one per designed email) and 14 video thumbnails with a Watch the video bar, named fall26-hero-* and fall26-video-*"
  ],
@@ -101,7 +101,7 @@
  ],
  "sends": [
   {
-   "when": "Thursday, October 15",
+   "when": "Thursday, October 22",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HP1 · What would your home look like?",
@@ -112,7 +112,7 @@
    "hold": ""
   },
   {
-   "when": "Thursday, October 22",
+   "when": "Thursday, November 5",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HP2 · Your land is part of the portrait",
@@ -123,7 +123,7 @@
    "hold": ""
   },
   {
-   "when": "Thursday, November 5",
+   "when": "Thursday, November 12",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HP3 · Nine portraits. Which one is yours?",
@@ -134,7 +134,7 @@
    "hold": ""
   },
   {
-   "when": "Thursday, November 12",
+   "when": "Thursday, November 19",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HP4 · The getaway you keep promising yourselves",
@@ -145,7 +145,7 @@
    "hold": ""
   },
   {
-   "when": "Tuesday, October 13",
+   "when": "Tuesday, October 20",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · DD1 · It is your land. Make it your home.",
@@ -156,7 +156,7 @@
    "hold": ""
   },
   {
-   "when": "Tuesday, October 20",
+   "when": "Tuesday, October 27",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · DD2 · Choose $60,000 in selections. Take home $75,000 worth.",
@@ -167,7 +167,7 @@
    "hold": ""
   },
   {
-   "when": "Tuesday, October 27",
+   "when": "Tuesday, November 10",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · DD3 · You do not have to pick the tile today",
@@ -175,22 +175,22 @@
    "preview": "Sign now and your Design Dollars are locked. Your tier is set later.",
    "to": "Full list, minus anyone who booked a Design Center visit",
    "from": "Mitchell Homes",
-   "hold": ""
+   "hold": "Says reserve by November 30, the November reserve-by date. Waits on Mitchell confirming it (question 1)."
   },
   {
-   "when": "Thursday, October 29",
+   "when": "Tuesday, November 24",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · DD4 · Where your Design Dollars go",
    "subject": "Where your Design Dollars go",
-   "preview": "Cabinets, counters, tile and more. Reserve by October 31, 2026.",
-   "to": "Engaged contacts and anyone who clicked a Design Dollars email, minus anyone who booked or reserved",
+   "preview": "Cabinets, counters, tile and more. Reserve by November 30, 2026.",
+   "to": "Full list, minus anyone who booked or reserved",
    "from": "Mitchell Homes",
-   "hold": ""
+   "hold": "Says reserve by November 30, the November reserve-by date. Waits on Mitchell confirming it (question 1)."
   },
   {
-   "when": "Tuesday, November 3",
-   "time": "10:00 am",
+   "when": "Wednesday, November 4",
+   "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · FB1 · Your land is worth more than you think",
    "subject": "Your land is worth more than you think",
@@ -200,7 +200,7 @@
    "hold": ""
   },
   {
-   "when": "Tuesday, November 10",
+   "when": "Tuesday, November 17",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · FB2 · A custom home on your land, without the unknowns",
@@ -209,39 +209,6 @@
    "to": "Owns land or family land, Virginia and Maryland",
    "from": "Mitchell Homes",
    "hold": ""
-  },
-  {
-   "when": "Tuesday, November 17",
-   "time": "10:00 am",
-   "channel": "Email campaign",
-   "template": "Fall26 · FB3 · No construction loan to build on your land",
-   "subject": "No construction loan to build on your land",
-   "preview": "If a bank is the reason you stopped, read this.",
-   "to": "Owns land or family land, Virginia and Maryland",
-   "from": "Mitchell Homes",
-   "hold": "Hold until legal approves the financing wording (to match the Transitioner ad and reel) and the comparison figures on the /calculator page are confirmed."
-  },
-  {
-   "when": "Thursday, November 19",
-   "time": "10:00 am",
-   "channel": "Email campaign",
-   "template": "Fall26 · FB4 · Your dream home has a folder, not a date",
-   "subject": "Your dream home has a folder, not a date",
-   "preview": "One appointment. Bring the photos you have been saving.",
-   "to": "Owns land or family land, Virginia and Maryland (fb4c for the Carolinas)",
-   "from": "Mitchell Homes",
-   "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim."
-  },
-  {
-   "when": "Thursday, November 19",
-   "time": "10:00 am",
-   "channel": "Email campaign",
-   "template": "Fall26 · FB4C · Your dream home has a folder, not a date",
-   "subject": "Your dream home has a folder, not a date",
-   "preview": "One appointment. Bring the photos you have been saving.",
-   "to": "Owns land or family land, North and South Carolina",
-   "from": "Mitchell Homes",
-   "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim."
   },
   {
    "when": "Wednesday, November 4",
@@ -266,7 +233,7 @@
    "hold": "Check first that the plan guide email is built: the /no-land form promises one, and nothing sends it yet."
   },
   {
-   "when": "Wednesday, October 14",
+   "when": "Wednesday, October 21",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · RE1 · Your buyer owns land. We build on it.",
@@ -277,7 +244,7 @@
    "hold": "Confirm the current realtor incentive terms with Mitchell before sending."
   },
   {
-   "when": "Wednesday, October 28",
+   "when": "Wednesday, November 4",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · RA1 · Our buyers need land. Do you know land?",
@@ -288,7 +255,7 @@
    "hold": "Confirm with Mitchell that consultants may introduce buyers who are still looking for land to local agents (question 17)."
   },
   {
-   "when": "Wednesday, November 4",
+   "when": "Wednesday, November 11",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · RB2 · When your land listing needs a picture",
@@ -299,19 +266,8 @@
    "hold": "Confirm the current realtor incentive terms with Mitchell (question 11)."
   },
   {
-   "when": "Wednesday, November 11",
-   "time": "11:00 am",
-   "channel": "Email campaign",
-   "template": "Fall26 · RB3 · Your client's down payment may be in the ground",
-   "subject": "Your client's down payment may be in the ground",
-   "preview": "Inherited land, family land, the acreage they already own.",
-   "to": "Realtors and brokers",
-   "from": "Mitchell Homes",
-   "hold": "Confirm the current realtor incentive terms with Mitchell (question 11)."
-  },
-  {
-   "when": "Wednesday, November 18",
-   "time": "11:00 am",
+   "when": "Thursday, November 19, the day after the Lunch and Learn",
+   "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · RA2 · What our buyers check before they buy a lot",
    "subject": "What our buyers check before they buy a lot",
@@ -321,40 +277,29 @@
    "hold": ""
   },
   {
-   "when": "Wednesday, October 21",
-   "time": "11:00 am",
-   "channel": "Email campaign",
-   "template": "Fall26 · HO1 · Know someone with land and a dream?",
-   "subject": "Know someone with land and a dream?",
-   "preview": "The best Mitchell homes start with a homeowner's introduction.",
-   "to": "Past Mitchell homeowners",
-   "from": "Mitchell Homes",
-   "hold": "Confirm with Mitchell whether a homeowner referral thank-you exists before adding one. This version makes no offer."
-  },
-  {
-   "when": "Wednesday, October 28",
+   "when": "Wednesday, November 4",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HO2 · An evening for the people who built with us",
    "subject": "An evening for the people who built with us",
-   "preview": "Homeowner Appreciation Night, Tuesday, November 10, at your Mitchell Design Center.",
+   "preview": "Homeowner Appreciation Night, Tuesday, November 17, at your Mitchell Design Center.",
    "to": "Past Mitchell homeowners (smart list: Past Mitchell homeowners), minus anyone the warranty team is calling first",
    "from": "Mitchell Homes",
-   "hold": "Hold until Mitchell approves the November 10 date, staffing and refreshments, and the contest itself (prizes, session cap, Official Rules after legal review). If the contest is not approved by Monday, October 26, send it without the My Mitchell Story paragraph."
+   "hold": "Hold until Mitchell approves the November 17 date, staffing and refreshments, and the contest itself (prizes, session cap, the holiday card window and its five-business-day delivery, Official Rules after legal review). If the contest is not approved by Monday, November 2, send it without the My Mitchell Story paragraph; if only the holiday card window is not confirmed, drop its sentence."
   },
   {
-   "when": "Wednesday, November 11",
+   "when": "Wednesday, November 18",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HO3 · What do you love most about your home?",
    "subject": "What do you love most about your home?",
-   "preview": "Show us in a short phone video. Your photo session at home is on us, while sessions last.",
+   "preview": "Show us in a short phone video. Enter by November 29, and your photo session at home is in time for holiday cards.",
    "to": "Past Mitchell homeowners who did not come to Homeowner Appreciation Night (those who came get their consultant's follow-up that morning instead)",
    "from": "Mitchell Homes",
-   "hold": "Hold until legal approves the Official Rules and Mitchell confirms the prizes, the form of the $2,500, the session cap and the dates."
+   "hold": "Hold until legal approves the Official Rules and Mitchell confirms the prizes, the form of the $2,500, the session cap, the holiday card window and its five-business-day delivery, and the dates."
   },
   {
-   "when": "Wednesday, November 18",
+   "when": "Wednesday, December 2",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HO4 · Your phone is all you need",
@@ -365,18 +310,18 @@
    "hold": "Holds with ho3 (Official Rules and prize details)."
   },
   {
-   "when": "Wednesday, December 2",
+   "when": "Wednesday, December 9",
    "time": "11:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HO5 · Your story, by Sunday",
    "subject": "Your story, by Sunday",
-   "preview": "My Mitchell Story closes Sunday, December 6, at 11:59pm Eastern.",
+   "preview": "My Mitchell Story closes Sunday, December 13, at 11:59pm Eastern.",
    "to": "Past Mitchell homeowners who have not entered (no tag my mitchell story entry)",
    "from": "Mitchell Homes",
-   "hold": "Holds with ho3 (Official Rules and prize details). If Mitchell caps photo sessions and they run out before December 2, drop the photo session sentence."
+   "hold": "Holds with ho3 (Official Rules and prize details). If Mitchell caps photo sessions and they run out before December 9, drop the photo session sentence."
   },
   {
-   "when": "Tuesday, December 15",
+   "when": "Friday, December 18",
    "time": "10:00 am",
    "channel": "Email campaign",
    "template": "Fall26 · HO6 · Meet the My Mitchell Story winner",
@@ -384,10 +329,10 @@
    "preview": "And thank you to every homeowner who showed us their home.",
    "to": "All past Mitchell homeowners, including every entrant",
    "from": "Mitchell Homes",
-   "hold": "Waits on the winner's verification and signed releases. Fill every bracket from the entries, with permission. The hero can be a home-only photo from the winner's session once they sign the release. Never show the painting."
+   "hold": "Waits on the winner's verification and signed releases; if the winner's documents are not back by Thursday, December 17, ho6 and the winner post move to the day after they arrive. Fill every bracket from the entries, with permission. The hero can be a home-only photo from the winner's session once they sign the release. Never show the painting."
   },
   {
-   "when": "Wednesday, October 14",
+   "when": "Wednesday, October 21",
    "time": "11:00 am",
    "channel": "Bulk text",
    "template": "SMS 1 · Design Dollars",
@@ -398,7 +343,7 @@
    "hold": ""
   },
   {
-   "when": "Wednesday, October 21",
+   "when": "Wednesday, November 11",
    "time": "11:00 am",
    "channel": "Bulk text",
    "template": "SMS 2 · Home Portrait",
@@ -420,7 +365,7 @@
    "hold": ""
   },
   {
-   "when": "Wednesday, November 4",
+   "when": "Friday, November 6",
    "time": "11:00 am",
    "channel": "Bulk text",
    "template": "SMS 4 · Landowners",
@@ -431,34 +376,23 @@
    "hold": ""
   },
   {
-   "when": "Wednesday, November 11",
-   "time": "11:00 am",
-   "channel": "Bulk text",
-   "template": "Wilmington Design Center Open House invitation",
-   "subject": "",
-   "preview": "Mitchell Homes: Open house Sat Nov 14, 10 to 3, Wilmington Design Center, Belville. Bring your land questions. [trigger link] Reply STOP to opt out",
-   "to": "North and South Carolina contacts with text consent, minus anyone who already RSVPed, anyone under contract, past Mitchell homeowners (My Mitchell Story opens for them that day), active leads their consultant invited on November 9, and E5 RSVPs (they get the E5 reminder that day). The only bulk text that week.",
-   "from": "Mitchell Homes number",
-   "hold": ""
-  },
-  {
-   "when": "Thursday, November 12",
+   "when": "Thursday, November 19",
    "time": "11:00 am",
    "channel": "Bulk text",
    "template": "My Mitchell Story: Contest launch",
    "subject": "",
-   "preview": "Mitchell Homes: My Mitchell Story is open. Show us what you love about your home in a short video by Dec 6: [trigger link] Reply STOP to opt out",
-   "to": "Past homeowners with text consent who did not RSVP to Homeowner Appreciation Night and have not entered. Their only text that week.",
+   "preview": "Mitchell Homes: My Mitchell Story is open. Film what you love about your home by Nov 29 for holiday card photos on us: [trigger link] Reply STOP to opt out",
+   "to": "Past homeowners with text consent who did not RSVP to Homeowner Appreciation Night and have not entered. Their only text that week. If the holiday card window is not confirmed, use: Mitchell Homes: My Mitchell Story is open. Show us what you love about your home in a short video by Dec 13: [trigger link] Reply STOP to opt out",
    "from": "Mitchell Homes number",
    "hold": ""
   },
   {
-   "when": "Thursday, December 3",
+   "when": "Thursday, December 10",
    "time": "11:00 am",
    "channel": "Bulk text",
    "template": "My Mitchell Story: Last-week contest reminder",
    "subject": "",
-   "preview": "Mitchell Homes: What do you love most about your home? Show us in a short video by Sun, Dec 6. Photo sessions on us: [trigger link] Reply STOP to opt out",
+   "preview": "Mitchell Homes: What do you love most about your home? Show us in a short video by Sun, Dec 13. Photo sessions on us: [trigger link] Reply STOP to opt out",
    "to": "Past homeowners with text consent who have not entered (no tag my mitchell story entry). Their only text that week. If sessions have run out, drop the words Photo sessions on us.",
    "from": "Mitchell Homes number",
    "hold": ""
@@ -553,7 +487,7 @@
    "trigger": "Form Submitted: Fall26 Event RSVP (fields: name, email, phone, event, Design Center, text consent)",
    "settings": "One workflow, a branch per event",
    "steps": [
-    "Add the event tag, for example event bring your photos oct24",
+    "Add the event tag, for example event bring your photos nov7",
     "Send confirmation email and, with consent, a confirmation text",
     "Wait until the day before the event at 9 am: Send the RSVP reminder text",
     "Wait until the event day at 4 pm: Send the thank-you text from the assigned user",
@@ -593,7 +527,7 @@
    "steps": [
     "Add tag: homeowner appreciation rsvp",
     "Internal notification to the assigned consultant",
-    "Wait until Monday, November 9, 10am",
+    "Wait until Monday, November 16, 10am",
     "If text consent: Send SMS, the RSVP reminder"
    ],
    "exits": [],
@@ -612,7 +546,7 @@
     "If the entry passes, the coordinator adds tag my mitchell story verified (starts workflow 02). If not, the coordinator calls the entrant."
    ],
    "exits": [],
-   "notes": "Every contest email and text after November 11 skips contacts tagged my mitchell story entry, except ho6, which goes to everyone."
+   "notes": "Every contest email and text after November 18 skips contacts tagged my mitchell story entry, except ho6, which goes to everyone."
   },
   {
    "name": "My Mitchell Story | 02 Photo session",

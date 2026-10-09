@@ -308,7 +308,8 @@
    "dining"
   ],
   "file": "gifs/ho2.gif",
-  "kb": 1137
+  "kb": 1137,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ea04e9c7-c429-4e32-a2fa-046fddb09ae8.gif"
  },
  "ho3": {
   "sig": [
@@ -319,7 +320,8 @@
    "living_open"
   ],
   "file": "gifs/ho3.gif",
-  "kb": 1188
+  "kb": 1188,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f3fd7bc4-a330-4475-9ce7-fb8fc401619d.gif"
  },
  "ho4": {
   "sig": [
@@ -330,7 +332,8 @@
    "porch_farmhouse"
   ],
   "file": "gifs/ho4.gif",
-  "kb": 1076
+  "kb": 1076,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3e847a98-3e5b-47d7-b512-3661d2e1cf16.gif"
  },
  "ho5": {
   "sig": [
@@ -341,7 +344,8 @@
    "bedroom"
   ],
   "file": "gifs/ho5.gif",
-  "kb": 1021
+  "kb": 1021,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fefb4316-d294-4328-966c-0c99c638bec7.gif"
  },
  "ho6": {
   "sig": [
@@ -352,6 +356,7 @@
    "porch_view"
   ],
   "file": "gifs/ho6.gif",
-  "kb": 1073
+  "kb": 1073,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cc70ffca-1b0f-4324-8dce-9d342348a855.gif"
  }
 }
