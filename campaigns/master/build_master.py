@@ -92,7 +92,7 @@ DATA = {
     "tracks": [
         {"name": "Realtors", "does": "About every other week to agents whose clients own land, and to agents who know land for buyers still looking. Plus a Realtor Lunch and Learn."},
         {"name": "The sales team", "does": "Every click and every quiz gets a person: an online sales counselor within 15 minutes for quiz takers, a New Home Consultant within one business day for anyone who clicks, and a Friday call list."},
-        {"name": "Homeowners", "does": "My Mitchell Story: homeowners share a short phone video about the home they love, and every entrant gets a professional photo session at home, paid for by Mitchell, in time for holiday cards. It starts with Homeowner Appreciation Night on November 17."},
+        {"name": "Homeowners", "does": "My Mitchell Story, Brittany's idea: homeowners share a short phone video about the home they love, and every entrant gets a professional photo session at home, paid for by Mitchell, in time for holiday cards. It starts with Homeowner Appreciation Night on November 17."},
         {"name": "Quiet leads", "does": "Leads who have not answered get 60 days of personal notes from their consultant, a few designed emails and short texts. It stops the moment they reply or book."},
     ],
     "weeks": weeks, "events": ev_cards, "batches": batches, "questions": first, "later": later,
