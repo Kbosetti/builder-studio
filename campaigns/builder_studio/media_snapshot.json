@@ -1,0 +1,720 @@
+{
+ "as_of": "2026-10-09",
+ "note": "Media library files that CEA's fall work uses, from the library listing on October 9, 2026.",
+ "files": [
+  {
+   "name": "cover-fredericksburg.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/67b7f0dc-c0d0-4510-816b-8952132379e1.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 48
+  },
+  {
+   "name": "cover-gallery-family.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9258a2b9-0359-4bb8-9eda-59d96d9a91d3.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 54
+  },
+  {
+   "name": "cover-newport-news.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/32da2899-c18d-49e6-a1f8-6d398238da40.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 29
+  },
+  {
+   "name": "cover-raleigh.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a7ff568-766d-4aad-bf94-2428d6c775e0.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 59
+  },
+  {
+   "name": "cover-richmond.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a579f035-57a0-4942-be79-a20750ce1402.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 31
+  },
+  {
+   "name": "cover-wilmington.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6773dfda-39de-4b52-9f6f-7f511483e779.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 57
+  },
+  {
+   "name": "mitchell-logo-color.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e4529905-d7ac-402c-9183-68ed2605c863.png",
+   "created": "2026-09-03",
+   "type": "image/png",
+   "kb": 159
+  },
+  {
+   "name": "mitchell-logo-white.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8f411080-4033-4bae-81e3-fd4fa4ea1aa1.png",
+   "created": "2026-09-03",
+   "type": "image/png",
+   "kb": 132
+  },
+  {
+   "name": "portrait-01-sunrise-acreage.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ac0892d8-cb2c-4e05-97e9-c5b7fb4af130.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 117
+  },
+  {
+   "name": "portrait-02-framing-blueprint.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3e3cf633-0e4a-4d5f-ab20-e2bc43d85f01.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 63
+  },
+  {
+   "name": "portrait-03-firepit-family.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8b734af0-1dcb-4458-a68c-41a332a62ff5.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 59
+  },
+  {
+   "name": "portrait-04-stage-crowd.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/875e6073-d9bb-4a0b-b4a9-d91c3773c3d9.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 50
+  },
+  {
+   "name": "portrait-05-builder-roof-trusses.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8548e51a-f643-44d2-803e-53367bee913b.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 88
+  },
+  {
+   "name": "portrait-06-aerial-farmhouse-acreage.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/28fbc768-2609-4fe7-bb20-8d00fc86ec0f.jpg",
+   "created": "2026-09-03",
+   "type": "image/jpeg",
+   "kb": 72
+  },
+  {
+   "name": "aerial-farmland.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e2c2740e-e537-4a40-9a40-6de9bd29939f.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 55
+  },
+  {
+   "name": "aerial-field.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f9084730-345e-4f59-9069-a26adf5cb554.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 40
+  },
+  {
+   "name": "bright-living.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/94971fe9-8a31-4def-ae1e-20b8d683f079.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 47
+  },
+  {
+   "name": "couple-land.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/22e45927-85ce-4ea2-a33b-426140dc0f83.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 43
+  },
+  {
+   "name": "coverlake.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/666b6807-d99e-4cf5-9b4d-70d76e36e4fa.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 122
+  },
+  {
+   "name": "dd-bath.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/700aaca8-c41c-4cc8-a71e-61b283878a90.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 74
+  },
+  {
+   "name": "dd-design-center-full.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/173a7268-47db-4ca8-8dd6-dec2fa8bd52e.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 97
+  },
+  {
+   "name": "dd-hero-bg.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1f8f6b01-1c27-4cc3-9bf8-5d7b0fbdfda2.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 333
+  },
+  {
+   "name": "dd-logo-topbar.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/15624871-5493-4fc1-bba5-2f624c9cf20e.png",
+   "created": "2026-09-04",
+   "type": "image/png",
+   "kb": 30
+  },
+  {
+   "name": "dd-simply-mitchell.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a8d00743-8632-4d2a-9e0f-d4044623390a.png",
+   "created": "2026-09-04",
+   "type": "image/png",
+   "kb": 19
+  },
+  {
+   "name": "dd-strip-cabinets.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/00907208-b1a5-44bb-b976-23f450514a46.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 48
+  },
+  {
+   "name": "dd-strip-flooring.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cdcc11e2-3e4e-4b89-a011-9e6e4920ff2d.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 115
+  },
+  {
+   "name": "dd-strip-tile.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a7a02aeb-27ae-4786-9add-05901f5e66e3.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 73
+  },
+  {
+   "name": "family-dusk.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/254db93b-66a4-400f-a708-ba25bb2f8258.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 51
+  },
+  {
+   "name": "family-home-dusk.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2d798c5a-d84c-4c11-bd84-d2304394c874.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 81
+  },
+  {
+   "name": "farmhouse-fall.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c74ca5b7-e794-4832-a694-35cd3fd049ea.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 81
+  },
+  {
+   "name": "firepit.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/93f32748-cf1c-44c0-b67d-fe287c831451.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 37
+  },
+  {
+   "name": "framing.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bac5e0c8-f4ea-44da-9055-d708dbc1cc55.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 56
+  },
+  {
+   "name": "hands-field.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ab8306a-1b87-4903-bf41-164eece3aba3.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 29
+  },
+  {
+   "name": "island-family.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e002afd7-c87d-4c71-8d0b-57b5f2138a7f.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 66
+  },
+  {
+   "name": "keys.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/466c5236-51a4-4462-9f75-b94cd1bfeb26.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 25
+  },
+  {
+   "name": "kids-field.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b4a930e0-a127-49e5-b603-c0033eeba12d.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 45
+  },
+  {
+   "name": "lake-cove.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c61843ad-c412-4618-8f00-a8eb168002d1.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 121
+  },
+  {
+   "name": "living-room-dance.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/51b699b3-63b2-4579-b8ab-7969f795a4ff.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 38
+  },
+  {
+   "name": "navy-kitchen.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b1ec0293-5794-4e8b-816f-0625db68949c.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 42
+  },
+  {
+   "name": "pines-craftsman.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8d160584-341d-40bf-8a4a-6ddc18d55ecd.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 77
+  },
+  {
+   "name": "pines-home.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/75d94682-147d-4e4b-be69-6c5b96ea7f3a.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 133
+  },
+  {
+   "name": "puppy.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b48ec5ee-b941-476e-979e-9f4782a580f7.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 24
+  },
+  {
+   "name": "ranch-dusk.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/7303184b-ca30-49c1-b751-c989db2290ad.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 66
+  },
+  {
+   "name": "shoreline.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bd6de9b1-5429-4d72-ad9d-671e35de5168.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 23
+  },
+  {
+   "name": "simply-mitchell-green.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/41c487e2-7f2d-42a5-b9eb-527d61eb9a8d.png",
+   "created": "2026-09-04",
+   "type": "image/png",
+   "kb": 19
+  },
+  {
+   "name": "simply-mitchell-white.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f689b758-0925-487c-9f04-fc6562214b2d.png",
+   "created": "2026-09-04",
+   "type": "image/png",
+   "kb": 20
+  },
+  {
+   "name": "timber-sky.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3d92c78d-556d-428c-b6ec-7d3982180a4d.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 38
+  },
+  {
+   "name": "valley.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/39ef50db-c2c5-438a-8aca-ac7a0f43b87c.jpg",
+   "created": "2026-09-04",
+   "type": "image/jpeg",
+   "kb": 67
+  },
+  {
+   "name": "simply-mitchell-color.png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ce104221-b97e-40d0-90a2-7e52159fe2fb.png",
+   "created": "2026-09-30",
+   "type": "image/png",
+   "kb": 9
+  },
+  {
+   "name": "fall26-hero-dd1 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/506f980a-f605-45ea-9fba-4e613ca02170.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1037
+  },
+  {
+   "name": "fall26-hero-dd2 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6860a961-e9a5-4154-b9ba-7ffcc25a4108.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 974
+  },
+  {
+   "name": "fall26-hero-dd3 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/521efb6b-202f-4a6e-8e3e-0a266738f4d9.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1077
+  },
+  {
+   "name": "fall26-hero-dd4 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/aff90cf8-8223-47df-b8df-462dcf053566.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 951
+  },
+  {
+   "name": "fall26-hero-fb1 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/671cb81d-b0fd-43dd-a07f-f15ec8f72f9e.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1325
+  },
+  {
+   "name": "fall26-hero-fb2 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cb05a1d8-ecb8-435c-bbcb-2b0b822b03fd.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1040
+  },
+  {
+   "name": "fall26-hero-fb3 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/af217a17-4a20-4968-83a7-48411e3f229c.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1290
+  },
+  {
+   "name": "fall26-hero-fb4 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cd08fb3d-b7be-4d66-b7c4-cc9de234b896.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1130
+  },
+  {
+   "name": "fall26-hero-fb5 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0ff758ca-0c1e-4134-aacb-5d4dc6dcd8e3.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1357
+  },
+  {
+   "name": "fall26-hero-ho1 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b2149e8f-6be7-429c-98e2-5148703ba56d.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1101
+  },
+  {
+   "name": "fall26-hero-hp1 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/12abc8f2-aefa-4212-9a73-5608015c36a1.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1103
+  },
+  {
+   "name": "fall26-hero-hp2 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/95167b53-3aad-4240-aca4-a2f80091f219.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1569
+  },
+  {
+   "name": "fall26-hero-hp3 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/be3b44e1-3542-4c2f-b589-93b097d3e50b.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1324
+  },
+  {
+   "name": "fall26-hero-hp4 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/109a132e-8bbd-48c9-8066-2f2620b50fb8.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1148
+  },
+  {
+   "name": "fall26-hero-nu3 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/8808e3dd-68f4-4b23-a427-a019cedab7b6.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1381
+  },
+  {
+   "name": "fall26-hero-nu3n (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3c2499f8-7581-4fcf-bede-30be5bf49072.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1329
+  },
+  {
+   "name": "fall26-hero-nu6 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/d7d0dcc7-3c69-416f-91ad-fb0ad82a2bb4.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1027
+  },
+  {
+   "name": "fall26-hero-nu9 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0b1e83a7-05b6-4672-9340-93d6c2f99b16.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1018
+  },
+  {
+   "name": "fall26-hero-ra1 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/9a1e9581-a201-4ffd-8674-fb35a3699c88.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1670
+  },
+  {
+   "name": "fall26-hero-ra2 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/d75a8b4f-996a-43ec-a5b2-61169ad98f93.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1528
+  },
+  {
+   "name": "fall26-hero-rb2 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0a3fed67-c100-4bfe-9f6e-211eccbc34f3.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1311
+  },
+  {
+   "name": "fall26-hero-rb3 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/b2a90894-4f80-4804-ac33-6014e0d0ebcb.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1105
+  },
+  {
+   "name": "fall26-hero-re1 (1).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/18ecdeda-1584-406d-835c-796c302c660f.gif",
+   "created": "2026-10-08",
+   "type": "image/gif",
+   "kb": 1336
+  },
+  {
+   "name": "fall26-video-cuomo (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1d469140-eb8a-4f76-a74c-0ead1be7efcb.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 287
+  },
+  {
+   "name": "fall26-video-downey (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3b3921fa-2ce4-4e07-8b93-e2372837af6b.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 184
+  },
+  {
+   "name": "fall26-video-ferguson (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/4b5e45c4-e55a-4296-8ab7-0f399ec4877d.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 168
+  },
+  {
+   "name": "fall26-video-keys (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1f201036-8fc9-4322-97d8-b9d6a7f38556.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 145
+  },
+  {
+   "name": "fall26-video-land101 (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fc5b992f-f6fb-40dd-ae55-2e62fc002520.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 150
+  },
+  {
+   "name": "fall26-video-misconceptions (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/2d59a276-f620-49cc-81a5-4d5ba16a6d9b.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 144
+  },
+  {
+   "name": "fall26-video-mortgage (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fd2f01e5-064e-4dbe-83f6-f8f2d7078b6e.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 157
+  },
+  {
+   "name": "fall26-video-roadmap (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f3ea40fe-6a94-4284-9aae-3bcd50001472.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 149
+  },
+  {
+   "name": "fall26-video-savings (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/dc5a7594-167d-4237-943b-77ee4660a6e7.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 126
+  },
+  {
+   "name": "fall26-video-wellseptic (1).jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/666e6a99-349c-4c75-853b-29df0f0224b0.jpg",
+   "created": "2026-10-08",
+   "type": "image/jpeg",
+   "kb": 154
+  },
+  {
+   "name": "fall26-hero-ho2 (2).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ea04e9c7-c429-4e32-a2fa-046fddb09ae8.gif",
+   "created": "2026-10-09",
+   "type": "image/gif",
+   "kb": 1138
+  },
+  {
+   "name": "fall26-hero-ho3 (2).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/f3fd7bc4-a330-4475-9ce7-fb8fc401619d.gif",
+   "created": "2026-10-09",
+   "type": "image/gif",
+   "kb": 1189
+  },
+  {
+   "name": "fall26-hero-ho4 (2).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3e847a98-3e5b-47d7-b512-3661d2e1cf16.gif",
+   "created": "2026-10-09",
+   "type": "image/gif",
+   "kb": 1076
+  },
+  {
+   "name": "fall26-hero-ho5 (2).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fefb4316-d294-4328-966c-0c99c638bec7.gif",
+   "created": "2026-10-09",
+   "type": "image/gif",
+   "kb": 1021
+  },
+  {
+   "name": "fall26-hero-ho6 (2).gif",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/cc70ffca-1b0f-4324-8dce-9d342348a855.gif",
+   "created": "2026-10-09",
+   "type": "image/gif",
+   "kb": 1074
+  },
+  {
+   "name": "fall26-reel-poster-reel_land.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bf971c37-8f84-4750-adc6-30b3178aceda.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 172
+  },
+  {
+   "name": "fall26-reel-poster-reel_saturday.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a60893fe-9145-4b32-9cd9-fa82da27b07c.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 70
+  },
+  {
+   "name": "fall26-reel-poster-reel_space.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1a40abdd-7b7f-425d-bf98-c16c129411fc.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 60
+  },
+  {
+   "name": "fall26-reel-poster-reel_which.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/838504b9-2842-4a09-9919-4b80f2ad8582.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 138
+  },
+  {
+   "name": "fall26-tagline-dreams (1).png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/39724c57-66a6-4e3d-b1ad-ff94a1325e49.png",
+   "created": "2026-10-09",
+   "type": "image/png",
+   "kb": 19
+  },
+  {
+   "name": "fall26-tagline-trust (1).png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e113fbab-8d02-454b-80b0-d2fe3b970a54.png",
+   "created": "2026-10-09",
+   "type": "image/png",
+   "kb": 18
+  },
+  {
+   "name": "fall26-tagline-yours (1).png",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ec57cf4c-3274-4795-89ca-9c4a2cea197e.png",
+   "created": "2026-10-09",
+   "type": "image/png",
+   "kb": 19
+  },
+  {
+   "name": "fall26-video-reel_land.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e8d2da1c-26ec-4128-873e-0a77e3cd5ee4.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 144
+  },
+  {
+   "name": "fall26-video-reel_saturday.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fdafe4c7-e25c-4106-bf22-e390905c3173.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 88
+  },
+  {
+   "name": "fall26-video-reel_space.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/89464cd8-818f-4556-9b8c-dd0e0dfb09ab.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 81
+  },
+  {
+   "name": "fall26-video-reel_which.jpg",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3c1af5d7-3f9d-4ff3-a315-e308159bdd2c.jpg",
+   "created": "2026-10-09",
+   "type": "image/jpeg",
+   "kb": 122
+  },
+  {
+   "name": "mitchell-reel-land (charlotte end card).mp4",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e925a21f-4d13-4d1c-b868-513e3ca7c3fb.mp4",
+   "created": "2026-10-09",
+   "type": "video/mp4",
+   "kb": 17157
+  },
+  {
+   "name": "mitchell-reel-saturday (charlotte end card).mp4",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/280f74f1-7264-434c-b38f-062f9ed5b3cf.mp4",
+   "created": "2026-10-09",
+   "type": "video/mp4",
+   "kb": 13362
+  },
+  {
+   "name": "mitchell-reel-space (charlotte end card).mp4",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/5de4f9b8-5f5f-4baa-a140-3713d4694e67.mp4",
+   "created": "2026-10-09",
+   "type": "video/mp4",
+   "kb": 11697
+  },
+  {
+   "name": "mitchell-reel-which (charlotte end card).mp4",
+   "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/96187d00-3a8d-4030-8925-6a04a75adefc.mp4",
+   "created": "2026-10-09",
+   "type": "video/mp4",
+   "kb": 12367
+  }
+ ]
+}

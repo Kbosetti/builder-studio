@@ -1,0 +1,178 @@
+<title>Mitchell Builder Studio Inventory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a reference sheet. Green header band, a sticky bar with section links and a filter, then one section per kind of thing in the account, tables in their own scroll boxes. */
+:root{
+  --bg:#f7f6f1; --paper:#ffffff; --ink:#173d28; --text:#26352c; --muted:#5d6f63; --line:#e1e4da; --wash:#eef0e8;
+  --accent:#2b6d47; --on-accent:#ffffff; --sun:#f5d053; --band:#1e4f33; --on-band:#ffffff; --band-muted:#c9dccf;
+  --b1:#2b6d47; --b2:#8a6d00; --b3:#5b4a8a; --later:#6c6c6c; --pill-bg:#eef0e8;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --on-accent:#0f1a13; --band:#163a26; --band-muted:#b9cfc0; --b1:#86c9a1; --b2:#e7c65a; --b3:#b9a8ea; --later:#a8a8a8; --pill-bg:#1d2921; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --on-accent:#0f1a13; --band:#163a26; --band-muted:#b9cfc0; --b1:#86c9a1; --b2:#e7c65a; --b3:#b9a8ea; --later:#a8a8a8; --pill-bg:#1d2921; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14.5px;line-height:1.55;margin:0}
+h1,h2,h3,p,ul,ol{margin:0}
+h1,h2,h3{color:var(--ink);text-wrap:balance}
+a{color:var(--accent)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px}
+.mono{font-family:var(--mono);font-size:12.5px}
+.sub{color:var(--muted);font-size:12px}
+.count{font-size:12px;font-weight:700;color:var(--muted);background:var(--pill-bg);border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:middle}
+header.top{background:var(--band);color:var(--on-band)}
+header.top .wrap{padding-block:34px 30px;display:flex;flex-direction:column;gap:12px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun)}
+header.top h1{color:#fff;font-size:clamp(28px,4.4vw,42px);font-weight:800;line-height:1.1}
+header.top p{color:var(--band-muted);max-width:70ch;font-size:15.5px}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:8px}
+.stat{display:flex;align-items:baseline;gap:8px}
+.stat b{font-size:28px;font-weight:800;color:#fff;font-variant-numeric:tabular-nums}
+.stat span{color:var(--band-muted);font-size:13px;font-weight:600}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding-block:10px}
+.bar nav{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;font-weight:600}
+.bar nav a{text-decoration:none;color:var(--muted)}
+.bar nav a:hover,.bar nav a:focus-visible{color:var(--accent)}
+.bar input{margin-left:auto;min-width:0;width:260px;max-width:100%;font:inherit;font-size:13.5px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text)}
+.bar input:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+main.wrap{display:flex;flex-direction:column;gap:44px;padding-block:34px 60px}
+section{display:flex;flex-direction:column;gap:14px;min-width:0;scroll-margin-top:70px}
+section > h2{font-size:24px;font-weight:800;line-height:1.2}
+section > p.lede{max-width:78ch;color:var(--muted)}
+h3{font-size:16px;font-weight:700;margin-top:10px}
+.where{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.where div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.where b{color:var(--ink);font-size:14px}
+.where span{font-size:13.5px;color:var(--muted)}
+.live{display:flex;flex-direction:column;gap:10px;max-width:86ch;padding-left:18px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--wash);padding:9px 12px;border-bottom:1px solid var(--line)}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:13.5px}
+tbody tr:last-child td{border-bottom:0}
+td.url{font-family:var(--mono);font-size:12px;overflow-wrap:anywhere;max-width:360px}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;white-space:nowrap;background:var(--pill-bg);color:var(--muted)}
+.pill.b1{color:var(--b1)} .pill.b2{color:var(--b2)} .pill.b3{color:var(--b3)} .pill.later{color:var(--later)}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+details + details{margin-top:-4px}
+summary{cursor:pointer;font-weight:700;color:var(--ink)}
+ul.files{list-style:none;padding:10px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:4px 18px}
+ul.files li{min-width:0;overflow-wrap:anywhere}
+.log{display:flex;flex-direction:column;gap:8px;max-width:86ch;padding-left:18px}
+.note{background:var(--wash);border-radius:12px;padding:14px 16px;max-width:86ch}
+.foot{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+.nomatch{display:none}
+@media (max-width:640px){.bar input{margin-left:0;width:100%}}
+</style>
+
+<header class="top"><div class="wrap">
+  <span class="eyebrow">Mitchell Homes · Builder Studio</span>
+  <h1>What CEA added to Builder Studio</h1>
+  <p>Everything we have put into Mitchell's Builder Studio account for the fall campaigns, as of %%ASOF%%. Nothing here sends on its own. Every email is a draft, and the workflows, lists and scheduled sends get built only after Mitchell approves each batch.</p>
+  <div class="stats">%%COUNTS%%</div>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <nav aria-label="Sections"><a href="#where">Where to find it</a><a href="#live">Working now</a><a href="#emails">Email drafts</a><a href="#tags">Tags</a><a href="#links">Trigger links</a><a href="#fields">Custom fields</a><a href="#media">Media</a><a href="#changes">Changes today</a><a href="#build">Still to build</a></nav>
+  <input id="filter" type="search" placeholder="Filter, for example HP2 or realtor" aria-label="Filter every table on this page">
+</div></div>
+
+<main class="wrap">
+  <section id="where">
+    <h2>Where to find it</h2>
+    <div class="where">
+      <div><b>Email drafts (%%NTPL%%)</b><span>Marketing, Emails, Templates, in the folder "%%FOLDER%%". Each is named Fall26 · key · subject line.</span></div>
+      <div><b>Tags (%%NTAGS%%)</b><span>Settings, Tags. Search fall26, event, realtor or my mitchell story.</span></div>
+      <div><b>Trigger links (%%NLINKS%%)</b><span>Marketing, Trigger Links. Search Fall26.</span></div>
+      <div><b>Custom fields (9)</b><span>Settings, Custom Fields. Region, Home Intent, Selection Appetite, Portrait Name, Design Dollars Focus.</span></div>
+      <div><b>Media (%%NMEDIA%% files in use)</b><span>Media Storage, top level. Search fall26 or mitchell-reel. The original reels are in the Reels folder.</span></div>
+    </div>
+  </section>
+
+  <section id="live">
+    <h2>Already working in the account</h2>
+    <p class="lede">These have run since September. They create records for every lead, so they are the one part of our work that is live today.</p>
+    <ul class="live">
+      <li><b>The Home Portrait quiz</b> at mitchellhomesliving.com/portrait. Every finished quiz creates or updates the contact, fills the quiz fields below, and tags it home portrait quiz, plus the persona, land status, division, region, timeline and selections. It adds qualified lead when the buyer owns land and plans to build within a year. It also adds a quiz results note, sends the portrait email with the PDF, and creates or updates the opportunity in the division's pipeline.</li>
+      <li><b>The landing page forms</b> (Your Land, Two Ways to Build, the Land Savings Calculator, the Dreamer pages and both Design Dollars pages). Leads come in tagged landing page lead plus the page name, with an opportunity in the online sales counselor pipeline.</li>
+      <li><b>Booking buttons.</b> "Visit a Design Studio" on the quiz checks the division's Design Studio Visit calendar on every click. The calendars are switched off right now, so buyers land on that studio's page on mitchellhomesinc.com instead. Turning a calendar on with open times switches the button to the booking page, with no other change.</li>
+    </ul>
+  </section>
+
+  <section id="emails">
+    <h2>Email drafts <span class="count">%%NTPL%%</span></h2>
+    <p class="lede">All in the one folder. Designed emails send from Mitchell Homes. Personal ones leave the from name blank so the workflow sends them from the assigned consultant. When copy changes we update each template in place, so these IDs stay the same. The proofing column shows which batch Mitchell approves it in.</p>
+    %%TEMPLATES%%
+  </section>
+
+  <section id="tags">
+    <h2>Tags <span class="count">%%NTAGS%%</span></h2>
+    <p class="lede">Created for the workflows. We have not added them to any contacts.</p>
+    <div class="tw"><table><thead><tr><th>Tag</th><th>What it does</th><th>ID</th></tr></thead><tbody>%%TAGS%%</tbody></table></div>
+  </section>
+
+  <section id="links">
+    <h2>Trigger links <span class="count">%%NLINKS%%</span></h2>
+    <p class="lede">Every Fall26 email and text links through these, so one change updates every message. The event RSVP links open Mitchell's contact page for now. Point them at the RSVP form once it is built.</p>
+    <div class="tw"><table><thead><tr><th>Name</th><th>Merge field</th><th>Opens</th><th>Used in</th></tr></thead><tbody>%%LINKS%%</tbody></table></div>
+  </section>
+
+  <section id="fields">
+    <h2>Custom fields <span class="count">9</span></h2>
+    <p class="lede">Created on September 4 for the Home Portrait quiz.</p>
+    <div class="tw"><table><thead><tr><th>Object</th><th>Field</th><th>Key</th><th>ID</th></tr></thead><tbody>%%FIELDS%%</tbody></table></div>
+    <p class="note">Each quiz also fills these contact fields, most of which were already in the account: %%QUIZFIELDS%%. Workflows can filter on nurture_track (the_planner_sequence, the_transitioner_sequence, the_value_unlocker_sequence, the_grounded_dreamer_sequence, the_gathering_place_sequence).</p>
+  </section>
+
+  <section id="media">
+    <h2>Media library <span class="count">%%NMEDIA%%</span></h2>
+    <p class="lede">The library files our emails, pages and quiz use. Open a group to see every file name and upload date.</p>
+    <div>%%MEDIA%%</div>
+  </section>
+
+  <section id="changes">
+    <h2>Changes made today, October 9</h2>
+    <ul class="log">
+      <li>Renamed the event tags to the new dates. "event bring your photos oct24" is now "nov7" and "event live qa oct27" is now "oct29". The three winter events lost their dates.</li>
+      <li>My Mitchell Story was removed this morning and put back this afternoon. That covered its 11 email drafts, 5 tags, RSVP link and 5 hero images. The old IDs no longer exist, and the IDs on this page are the current ones.</li>
+      <li>Every designed email now ends with the "Our legacy is building ___. Simply." brand line in Charlotte. All 56 drafts were refreshed in place.</li>
+      <li>Uploaded the four Home Portrait reels again with the end card's "Yours" corrected, named "mitchell-reel-… (charlotte end card).mp4". The originals Kelly uploaded stay in the Reels folder.</li>
+      <li>Deleted the three first versions of the brand line images, which the final ones replaced.</li>
+      <li>Apart from what the quiz and landing page forms create for each lead, we have not edited or deleted any contacts, workflows, calendars, pipelines or Mitchell's own templates. The fall lists also leave out the test tags used for intake checks (hbs test, test contact, source internal test).</li>
+    </ul>
+  </section>
+
+  <section id="build">
+    <h2>Still to build, after Mitchell approves each batch</h2>
+    <p class="lede">The API cannot create these, so they get built by hand. The steps for each one are in the traffic kit's Builder Studio setup tab, and the team tracker has who and when.</p>
+    <h3>Workflows <span class="count">%%NWF%%</span></h3>
+    <div class="tw"><table><thead><tr><th>Workflow</th><th>Trigger</th><th>What it does</th></tr></thead><tbody>%%WORKFLOWS%%</tbody></table></div>
+    <h3>Smart lists <span class="count">%%NLISTS%%</span></h3>
+    <div class="tw"><table><thead><tr><th>List</th><th>Filters</th><th>Used by</th></tr></thead><tbody>%%LISTS%%</tbody></table></div>
+    <h3>Scheduled sends <span class="count">%%NSENDS%%</span></h3>
+    <div class="tw"><table><thead><tr><th>Date</th><th>Time</th><th>Template</th><th>To</th></tr></thead><tbody>%%SENDS%%</tbody></table></div>
+    <h3>Before anything goes live</h3>
+    <ul class="log">%%CHECK%%</ul>
+  </section>
+
+  <p class="foot">Built by CEA Marketing from the account records on %%ASOF%%. Questions go to Kelly.</p>
+</main>
+
+<script>
+(function(){
+  var input=document.getElementById('filter');
+  function run(){
+    var q=input.value.trim().toLowerCase();
+    document.querySelectorAll('tbody tr, ul.files li').forEach(function(el){
+      el.classList.toggle('nomatch', !!q && el.textContent.toLowerCase().indexOf(q)<0);
+    });
+    document.querySelectorAll('details').forEach(function(d){ if(q){ d.open = !!d.querySelector('li:not(.nomatch)'); } });
+  }
+  input.addEventListener('input', run);
+})();
+</script>
