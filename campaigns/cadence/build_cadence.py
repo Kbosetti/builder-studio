@@ -184,6 +184,8 @@ playbook = [{"title": i["title"], "meta": i["meta"], "body": i["body"], "notes":
 plan = json.load(open(f"{C}/plan/plan.json"))
 data = {"start": START.isoformat(), "weeks": WEEKS, "events": ev, "playbook": playbook, "themes": plan["week_themes"], "batchOfWeek": [1, 1, 2, 2, 3, 3]}
 page = open(f"{HERE}/page.html").read().replace("/*DATA*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
+import base64
+page = page.replace("%%charlotte%%", "data:font/woff2;base64," + base64.b64encode(open(f"{C}/../assets/fonts/Charlotte.woff2", "rb").read()).decode())
 if re.search(r"[–—]", page):
     raise SystemExit("dash found")
 for banned in ("FACTS.md", "previous agency", "CEA Marketing Group", "HighLevel"):

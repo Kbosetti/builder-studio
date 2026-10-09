@@ -20,6 +20,7 @@ Tier: core · Batch: 1
 5. The only change between channels is utm_source: facebook, instagram, youtube, tiktok or linkedin.
 6. Any piece that mentions Design Dollars keeps the fine-print line in the caption and on the image. After October 31, do not repost a Design Dollars caption until Mitchell approves the November reserve-by date.
 7. Three hashtags at most. No emojis.
+8. Type on every graphic and video: Montserrat for captions, supers and headlines, and Charlotte script on one word only, the brand line's modifier word (Yours, Dreams, Trust), with the tagline logo's lean and weight. End video on the Discover Yours card the reels use. Font files are in the brand kit.
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=bio
 
@@ -399,7 +400,7 @@ https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_
 
 Link: https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s20
 
-Notes: Asset: 63-second brand film ending "Our legacy is building Yours. Simply.". Awareness close to the first four weeks. LinkedIn: post Friday, November 13 instead. YouTube: add the Section 3 description block. Other channels: same link with utm_source=instagram, youtube, linkedin.
+Notes: Asset: 63-second brand film ending "Our legacy is building Yours. Simply." (Yours in Charlotte with the tagline treatment). Awareness close to the first four weeks. LinkedIn: post Friday, November 13 instead. YouTube: add the Section 3 description block. Other channels: same link with utm_source=instagram, youtube, linkedin.
 
 ### s21 · The Four Buyers · Reel
 *Thursday, November 19, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel*

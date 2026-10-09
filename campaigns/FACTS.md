@@ -75,4 +75,4 @@ Homebuyer Roadmap to Success https://www.youtube.com/watch?v=HEqg3pcNJkk · Well
 - Mitchell's own site photos (real Mitchell homes and Design Centers) on https://media.mitchellhomesinc.com/276/..., listed in the scratchpad scrape and in `campaigns/email/images.json`.
 
 ## Brand look
-Mitchell Green #2b6d47, Deep Green #1e4f33, Yellow #f5d053, Cream #faf8f3, Warm Grey #929292. Montserrat; Charlotte script on one word only.
+Mitchell Green #2b6d47, Deep Green #1e4f33, Yellow #f5d053, Cream #faf8f3, Warm Grey #929292. Montserrat for every word but one; Charlotte script on that one word only (the modifier word in a brand line, like Yours in "Our legacy is building Yours. Simply." or "Discover Yours"). Charlotte always gets the tagline logo treatment: a 10 degree lean and a heavier weight (CSS `font-style:oblique 10deg;-webkit-text-stroke:.035em currentColor;paint-order:stroke fill`), matched on September 30, 2026 to the tagline crop Brittany sent. Font files: `assets/fonts/` (Charlotte .otf, .ttf, .woff2; Montserrat .woff2). Videos follow the same rule: Montserrat captions and supers, Charlotte with the treatment on the end card word.

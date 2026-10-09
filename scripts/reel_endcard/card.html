@@ -1,0 +1,27 @@
+<!doctype html><html><head><style>@font-face{font-family:C;src:url(/home/user/builder-studio/assets/fonts/Charlotte.woff2)}body{margin:0}</style></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+async function make(opts){
+  await document.fonts.load('100px C');
+  const {bbox, color, bg} = opts;
+  const W0 = bbox[2]-bbox[0]+1, H0 = bbox[3]-bbox[1]+1, cx=(bbox[0]+bbox[2])/2, cy=(bbox[1]+bbox[3])/2;
+  // size from the plain (upright, unstroked) ink width, which is how the card was set
+  const s = document.createElement('canvas'); s.width=2000; s.height=1000; const g=s.getContext('2d');
+  g.font='100px C'; const m=g.measureText('Yours');
+  const w100=m.actualBoundingBoxLeft+m.actualBoundingBoxRight, h100=m.actualBoundingBoxAscent+m.actualBoundingBoxDescent;
+  const size = 100*W0/w100;
+  // draw the treated word on a scratch canvas to find its ink box
+  function draw(ctx, x, y){ ctx.save(); ctx.translate(x,y); ctx.transform(1,0,-Math.tan(10*Math.PI/180),1,0,0);
+    ctx.font=size+'px C'; ctx.fillStyle=color; ctx.strokeStyle=color; ctx.lineWidth=0.035*size; ctx.lineJoin='round';
+    ctx.strokeText('Yours',0,0); ctx.fillText('Yours',0,0); ctx.restore(); }
+  g.clearRect(0,0,2000,1000); draw(g, 500, 600);
+  const d=g.getImageData(0,0,2000,1000).data; let x0=1e9,y0=1e9,x1=-1,y1=-1;
+  for(let y=0;y<1000;y++)for(let x=0;x<2000;x++){ if(d[(y*2000+x)*4+3]>40){ if(x<x0)x0=x; if(x>x1)x1=x; if(y<y0)y0=y; if(y>y1)y1=y; } }
+  const ox = cx - (x0+x1)/2 + 500, oy = cy - (y0+y1)/2 + 600;
+  const img=new Image(); img.src=opts.src; await img.decode();
+  const c=document.getElementById('c').getContext('2d'); c.drawImage(img,0,0);
+  c.fillStyle=bg; c.fillRect(bbox[0]-8, bbox[1]-8, W0+16, H0+16);
+  draw(c, ox, oy);
+  return {size, ratio:(h100/w100)/(H0/W0), newInk:[x0-500+ox, y0-600+oy, x1-500+ox, y1-600+oy], url: document.getElementById('c').toDataURL('image/png')};
+}
+</script></body></html>

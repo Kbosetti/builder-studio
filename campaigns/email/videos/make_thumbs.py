@@ -33,10 +33,10 @@ VIDEOS = [  # key, YouTube id, title as the caption shows it, kind
 
 CDN = "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/"
 REELS = [  # key, the reel in the media library (uploaded by Kelly from the Home Portrait ad kit), title, guide file
-    ("reel_land", CDN + "6ac8218f89da6e6f9bc29a28.mp4", "Your Land", "land"),
-    ("reel_space", CDN + "6ac8218f6fdae56241ba2f34.mp4", "A Space of You", "space"),
-    ("reel_which", CDN + "6ac8218f02ee523cd5edbece.mp4", "Which One Are You?", "which"),
-    ("reel_saturday", CDN + "6ac8218f195f9172edfef8b0.mp4", "Saturday Morning", "saturday"),
+    ("reel_land", CDN + "e925a21f-4d13-4d1c-b868-513e3ca7c3fb.mp4", "Your Land", "land"),
+    ("reel_space", CDN + "5de4f9b8-5f5f-4baa-a140-3713d4694e67.mp4", "A Space of You", "space"),
+    ("reel_which", CDN + "96187d00-3a8d-4030-8925-6a04a75adefc.mp4", "Which One Are You?", "which"),
+    ("reel_saturday", CDN + "280f74f1-7264-434c-b38f-062f9ed5b3cf.mp4", "Saturday Morning", "saturday"),
 ]
 REEL_PAGE = """<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:M;src:url('%s') format('woff2');font-weight:100 900}

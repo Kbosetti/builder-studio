@@ -25,6 +25,22 @@ FINE_DD = ("*Design Dollars apply to Design Center selections including cabinets
 _GIFS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "gifs", "gifs.json")
 GIFS = json.load(open(_GIFS)) if os.path.exists(_GIFS) else {}  # hero_gifs.py --upload
 VIDEOS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "videos", "videos.json")))  # make_thumbs.py --upload
+_TAG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "taglines", "taglines.json")
+TAGLINES = json.load(open(_TAG)) if os.path.exists(_TAG) else {}  # taglines/make_taglines.py --upload
+# the brand line's modifier word, set in Charlotte: Yours for awareness, Dreams and Trust for in market
+TAG_WORD = {"portrait": "Yours", "homeowners": "Yours", "designdollars": "Dreams", "fourbuyers": "Trust", "partners": "Trust", "nurture": "Trust"}
+
+
+def tagline_row(series, em):
+    word = "Yours" if em["id"].startswith("ho") else TAG_WORD.get(series["key"], "Yours")
+    t = TAGLINES.get(word, {})
+    if not t.get("cdn"):
+        return ""
+    return (f'<tr><td bgcolor="{DEEP}" align="center" style="padding:0;line-height:0;font-size:0">'
+            f'<img src="{t["cdn"]}" width="600" alt="{E(t["alt"])}" style="display:block;width:100%;max-width:600px;height:auto;border:0;color:#ffffff;'
+            f'font-family:{FONT};font-size:15px;line-height:1.4"></td></tr>')
+
+
 FINE_FIN = "Financing terms are illustrative only and subject to credit approval. Not a commitment to lend."
 E = html.escape
 
@@ -220,6 +236,7 @@ a{{color:{GREEN}}}
 <p style="margin:0 0 14px;color:{MUTED}">Virginia and Maryland <a href="tel:+15407012759" style="color:{GREEN};font-weight:700;text-decoration:none">(540) 701-2759</a><br>North and South Carolina <a href="tel:+19843315468" style="color:{GREEN};font-weight:700;text-decoration:none">(984) 331-5468</a></p>
 <p style="margin:0;font-weight:700;color:{DEEP}">The Mitchell Homes team</p>
 </td></tr>
+{tagline_row(series, em)}
 <tr><td class="pad" bgcolor="#f1efe8" style="padding:22px 40px;font-family:{FONT};font-size:11px;line-height:1.55;color:{MUTED}">
 {fine_html}<p style="margin:0 0 8px">Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113. Building on your land since 1992.</p>
 <p style="margin:0">{E(em.get("reason") or series.get("reason") or "You are receiving this email because you asked Mitchell Homes about building a home.")} {{{{unsubscribe}}}}</p>

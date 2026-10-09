@@ -2,6 +2,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 <style>
+@font-face{font-family:"Charlotte";src:url(%%charlotte%%) format("woff2");font-display:block}
 /* Layout: green cover, the weekly rhythm as seven day columns, the rules, touches per week, then the six week calendar (day columns on desktop, a day list on phones) and the sales team playbook. */
 :root{
   --bg:#faf8f3; --paper:#ffffff; --ink:#1e4f33; --text:#26352c; --muted:#5d6f63; --line:#e2e5da; --wash:#f2f0e8;
@@ -32,6 +33,7 @@ h3{font-size:16px;font-weight:700}
 .cover .wrap{padding-block:32px 34px;display:flex;flex-direction:column;gap:12px}
 .cover .eyebrow{color:var(--sun)}
 .cover h1{color:#fff;font-size:clamp(32px,5.4vw,52px);font-weight:800;line-height:1.05}
+.cover h1 .s{font-family:"Charlotte","Brush Script MT",cursive;font-weight:400;font-style:oblique 10deg;-webkit-text-stroke:.035em currentColor;paint-order:stroke fill;color:var(--sun);font-size:1.5em;line-height:.6;padding-left:.06em}
 .cover p{color:var(--band-muted);font-size:16px;max-width:60ch}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:#e8efe9;margin-top:4px}
 .legend span{display:inline-flex;align-items:center;gap:7px}
@@ -122,7 +124,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
 
 <header class="cover"><div class="wrap">
   <span class="eyebrow">Mitchell Homes · Fall 2026 · October 19 to November 29</span>
-  <h1>The fall cadence</h1>
+  <h1>The fall <span class="s">cadence</span></h1>
   <p>Every email, text, post and sales follow-up for Design Dollars, the Home Portrait and the Four Buyers on one calendar, so it all lands in order and nobody hears from us too often.</p>
   <div class="legend" id="legend"></div>
 </div></header>

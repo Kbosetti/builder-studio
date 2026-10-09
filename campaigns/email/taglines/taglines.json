@@ -1,0 +1,32 @@
+{
+ "Yours": {
+  "sig": [
+   "charlotte-lockup-2-tagline-slant",
+   "Yours"
+  ],
+  "file": "taglines/yours.png",
+  "alt": "Our legacy is building Yours. Simply.",
+  "width": 600,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/ec57cf4c-3274-4795-89ca-9c4a2cea197e.png"
+ },
+ "Dreams": {
+  "sig": [
+   "charlotte-lockup-2-tagline-slant",
+   "Dreams"
+  ],
+  "file": "taglines/dreams.png",
+  "alt": "Our legacy is building Dreams. Simply.",
+  "width": 600,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/39724c57-66a6-4e3d-b1ad-ff94a1325e49.png"
+ },
+ "Trust": {
+  "sig": [
+   "charlotte-lockup-2-tagline-slant",
+   "Trust"
+  ],
+  "file": "taglines/trust.png",
+  "alt": "Our legacy is building Trust. Simply.",
+  "width": 600,
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e113fbab-8d02-454b-80b0-d2fe3b970a54.png"
+ }
+}

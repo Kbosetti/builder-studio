@@ -32,7 +32,7 @@ BASE = f"""
 @font-face{{font-family:C;src:url({SRC}/charlotte.woff2)}}
 *{{box-sizing:border-box;margin:0}}
 html,body{{width:%(w)spx;height:%(h)spx;overflow:hidden;font-family:M,sans-serif;color:#1e4f33;background:#faf8f3}}
-.s{{font-family:C,cursive;font-weight:400;color:#f5d053;font-size:1.55em;line-height:.7;padding:0 .04em}}
+.s{{font-family:C,cursive;font-weight:400;font-style:oblique 10deg;-webkit-text-stroke:.035em currentColor;paint-order:stroke fill;color:#f5d053;font-size:1.55em;line-height:.7;padding:0 .04em}}
 .qr svg{{display:block;width:100%;height:auto}}
 """
 
@@ -82,12 +82,15 @@ tr.top td{{background:#f5d053;color:#1e4f33}} tr.top td:last-child{{color:#1e4f3
 .r p{{font-size:12px;line-height:1.5;color:#e8efe9}}
 .r p b{{color:#fff}}
 .f{{position:absolute;left:28px;right:28px;bottom:18px;font-size:7.5px;line-height:1.4;color:#b9cfc0}}
+.tg{{position:absolute;left:28px;right:28px;bottom:58px;text-align:center;color:#fff;font-weight:600;font-size:12.5px;letter-spacing:.06em}}
+.tg .s{{font-size:2.3em;margin:0 .06em 0 .14em;position:relative;top:.06em}}
 </style>
 <img class="logo" src="{SRC}/mitchell-logo-white.png" alt="Mitchell Homes">
 <div class="eb">Mitchell Design Dollars</div>
 <h1>The more you personalize, the more we cover.*</h1>
 <table><tr><th>Selections you choose</th><th>Mitchell adds</th></tr>{tr}</table>
 <div class="r"><div class="qr">{qr(q2)}</div><p><b>Sign now and your incentive is locked.</b> Your tier is set when you make your selections. Ask your Design Consultant how close you are to the next tier.</p></div>
+<div class="tg">Our legacy is building<span class="s">Dreams</span>. Simply.</div>
 <div class="f">{FINE_DD}</div>
 """))
 
