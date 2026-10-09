@@ -6,7 +6,7 @@ Tiers: core runs from October 19; add runs if Mitchell can staff it; later is fi
 Batches: Mitchell proofs each batch about five days before its first send, and CEA builds it in Builder Studio
 the same week. The cadence keeps the database from being flooded: the full list gets one email a week
 (Tuesday, or Wednesday in Election Day week), engaged contacts get a Home Portrait email on four Thursdays,
-and there are four bulk texts in six weeks. Realtors are their own list.
+and there are four bulk texts in six weeks. Realtors and homeowners are their own lists.
 Design Dollars: pieces sending in October keep October 31; pieces sending in November say November 30 and
 wait for Mitchell to confirm it (question 1).
 """
@@ -19,9 +19,9 @@ BATCHES = [
     {"n": 1, "name": "Launch", "sends": "October 19 to November 1", "proof_by": "Wednesday, October 14", "build_by": "Friday, October 16",
      "theme": "Design Dollars to the database through the October 31 reserve-by date, the Home Portrait to engaged contacts, the website and the counter cards."},
     {"n": 2, "name": "Landowners", "sends": "November 2 to 15", "proof_by": "Wednesday, October 28", "build_by": "Friday, October 30",
-     "theme": "The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the Realtor Lunch invitation."},
-    {"n": 3, "name": "Close", "sends": "November 16 to 29", "proof_by": "Wednesday, November 11", "build_by": "Friday, November 13",
-     "theme": "The last Four Buyers and Home Portrait emails, the November 30 last call and the Realtor Lunch and Learn."},
+     "theme": "The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the homeowner invitation."},
+    {"n": 3, "name": "Close and homeowners", "sends": "November 16 to 29, with the homeowner contest through December 18", "proof_by": "Wednesday, November 11", "build_by": "Friday, November 13",
+     "theme": "The last Four Buyers and Home Portrait emails, the November 30 last call, the Realtor Lunch follow-up and My Mitchell Story, whose free photo sessions land in time for holiday cards."},
 ]
 
 WEEK_THEMES = [
@@ -29,7 +29,7 @@ WEEK_THEMES = [
     "Reserve by Saturday, October 31, with the Design Dollars live Q&A on Thursday",
     "Landowners: your land can be your down payment, and Bring Your Photos Saturday",
     "Design Dollars in November, and the nine portraits",
-    "Without the unknowns, and the Realtor Lunch and Learn",
+    "Without the unknowns, Homeowner Appreciation Night and the Realtor Lunch",
     "Thanksgiving week: one email, the November 30 last call",
 ]
 
@@ -61,8 +61,14 @@ PIECES = [
     P("rb2", "email", "Realtors: when your land listing needs a picture, and the Realtor Lunch invitation", "Wednesday, November 11", "add", 2, "Realtors"),
     P("ra2", "email", "Realtors: what our buyers check before they buy a lot", "Thursday, November 19", "add", 3, "Realtors", "The day after the Realtor Lunch"),
     P("rb3", "email", "Realtors: your client's down payment may be in the ground", "When the incentive terms are confirmed", "later", None, "Realtors", "Waits on question 11"),
-    # homeowners
+    # homeowners: their own list
     P("ho1", "email", "Homeowners: know someone with land and a dream?", "When a referral thank-you is decided", "later", None, "Past homeowners", "Waits on question 12"),
+    P("ho2", "email", "Homeowners: invitation to Homeowner Appreciation Night", "Wednesday, November 4", "add", 2, "Past homeowners", "Waits on question 21"),
+    P("ho3", "email", "My Mitchell Story launch", "Wednesday, November 18", "add", 3, "Past homeowners"),
+    P("ho4", "email", "My Mitchell Story: your phone is all you need", "Wednesday, December 2", "add", 3, "Homeowners who have not entered"),
+    P("ho5", "email", "My Mitchell Story: last week to enter", "Wednesday, December 9", "add", 3, "Homeowners who have not entered"),
+    P("ho6", "email", "My Mitchell Story winner", "Friday, December 18", "add", 3, "Past homeowners"),
+    P("hw", "automation", "My Mitchell Story notes to entrants (four automatic emails)", "From November 17", "add", 3, "Entrants"),
     # texts: four bulk texts in six weeks, never on an email day, only to people who agreed to texts
     P("sms1", "text", "Design Dollars", "Wednesday, October 21", "core", 1, "Text list, non-openers"),
     P("sms3", "text", "Reserve by October 31", "Wednesday, October 28", "core", 1, "Text list, non-openers"),
@@ -84,10 +90,12 @@ PIECES = [
     # events
     P("e2", "event", "Behind the Build Live: your Design Dollars questions (online)", "Thursday, October 29, 7pm", "add", 1, "", "Moved from Election Day"),
     P("e1", "event", "Bring Your Photos Saturday at all five Design Centers", "Saturday, November 7", "add", 2, "", "Moved from Halloween"),
+    P("e7", "event", "Homeowner Appreciation Night at the Design Centers", "Tuesday, November 17", "add", 2, "Past homeowners"),
     P("e6", "event", "Realtor Lunch and Learn", "Wednesday, November 18", "add", 2, "Realtors"),
     P("e3", "event", "Building on Your Land 101", "Winter", "later", None),
     P("e4", "event", "Wilmington Design Center Open House", "Winter", "later", None),
     P("e5", "event", "The Gathering Place Live", "Winter", "later", None),
+    P("contest", "contest", "My Mitchell Story: rules, entry form, photo sessions, posts and texts", "November 17 to December 18", "add", 3, "Past homeowners", "Rules go to legal now; photographers booked for the holiday card window, November 18 to December 5"),
     # posts
     P("social-1", "social", "Social: four posts in week 1 and four in week 2", "October 19 to November 1", "core", 1),
     P("social-2", "social", "Social: three posts a week", "November 2 to 15", "core", 2),
@@ -117,8 +125,8 @@ SOCIAL = {  # social post id: (new date, batch); every other post is banked for 
 
 QUESTIONS = {  # approval question number: the batch whose pieces wait on it
     2: 1, 3: 1, 4: 1, 9: 1, 14: 1, 15: 1, 16: 1,
-    1: 2, 6: 2, 8: 2, 10: 2, 17: 2,
-    11: 3,
+    1: 2, 6: 2, 8: 2, 10: 2, 17: 2, 19: 2, 20: 2, 21: 2,
+    11: 3, 18: 3,
     5: None, 7: None, 12: None,
 }
 

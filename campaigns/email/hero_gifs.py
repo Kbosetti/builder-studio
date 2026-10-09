@@ -53,7 +53,9 @@ MAP = {  # email id: the three photos after its own hero
     "rb3": ["aerial_lake", "farmhouse_drive", "kitchen_island"], "ra2": ["aerial_woods", "drive_trees", "aerial_pond"],
     "ho1": ["porch_farmhouse", "breakfast_nook", "porch_view"], "nu3": ["aerial_farmland", "farmhouse_field", "kitchen_white"],
     "nu3n": ["aerial_hills", "two_story", "living_open"], "nu6": ["dc_showroom", "kitchen_quartz", "kitchen_brass"],
-    "nu9": ["blue_dusk", "living_water", "kitchen_wood"],
+    "nu9": ["blue_dusk", "living_water", "kitchen_wood"], "ho2": ["dc_showroom", "porch_view", "dining"],
+    "ho3": ["porch_view", "breakfast_nook", "living_open"], "ho4": ["kitchen_living", "screen_porch", "porch_farmhouse"],
+    "ho5": ["dining", "porch_planks", "bedroom"], "ho6": ["farmhouse_field", "living_water", "porch_view"],
 }
 MAP["fb4c"], MAP["fb5c"] = MAP["fb4"], MAP["fb5"]
 VARIANTS = {"fb4c": "fb4", "fb5c": "fb5"}

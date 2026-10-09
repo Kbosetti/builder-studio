@@ -298,5 +298,60 @@
   "file": "gifs/nu9.gif",
   "kb": 1018,
   "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/0b1e83a7-05b6-4672-9340-93d6c2f99b16.gif"
+ },
+ "ho2": {
+  "sig": [
+   "900px-per-frame-palette",
+   "https://media.mitchellhomesinc.com/276/2024/7/24/1.jpg?width=1200&height=640&mode=crop",
+   "dc_showroom",
+   "porch_view",
+   "dining"
+  ],
+  "file": "gifs/ho2.gif",
+  "kb": 1137
+ },
+ "ho3": {
+  "sig": [
+   "900px-per-frame-palette",
+   "https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg?width=1200&height=640&mode=crop",
+   "porch_view",
+   "breakfast_nook",
+   "living_open"
+  ],
+  "file": "gifs/ho3.gif",
+  "kb": 1188
+ },
+ "ho4": {
+  "sig": [
+   "900px-per-frame-palette",
+   "https://media.mitchellhomesinc.com/276/2026/3/24/38-DSC06023.jpg?width=1200&height=640&mode=crop",
+   "kitchen_living",
+   "screen_porch",
+   "porch_farmhouse"
+  ],
+  "file": "gifs/ho4.gif",
+  "kb": 1076
+ },
+ "ho5": {
+  "sig": [
+   "900px-per-frame-palette",
+   "https://media.mitchellhomesinc.com/276/2026/3/3/55-DSC06124.jpg?width=1200&height=640&mode=crop",
+   "dining",
+   "porch_planks",
+   "bedroom"
+  ],
+  "file": "gifs/ho5.gif",
+  "kb": 1021
+ },
+ "ho6": {
+  "sig": [
+   "900px-per-frame-palette",
+   "https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg?width=1200&height=640&mode=crop",
+   "farmhouse_field",
+   "living_water",
+   "porch_view"
+  ],
+  "file": "gifs/ho6.gif",
+  "kb": 1073
  }
 }

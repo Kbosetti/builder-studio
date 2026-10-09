@@ -31,7 +31,7 @@ Design Dollars to the database through the October 31 reserve-by date, the Home 
 
 Sends November 2 to 15. Mitchell proofs by Wednesday, October 28; CEA builds by Friday, October 30.
 
-The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the Realtor Lunch invitation.
+The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the homeowner invitation.
 
 - Wednesday, November 4: Four Buyers: your land is worth more than you think, and Bring Your Photos Saturday (core, Landowners). Wednesday, not Election Day
 - Wednesday, November 4: Four Buyers: you do not have to own land yet (Virginia and Maryland) (core, Buyers still looking for land)
@@ -41,28 +41,36 @@ The Four Buyers to landowners and buyers still looking, Design Dollars in Novemb
 - Thursday, November 12: Home Portrait: nine portraits, with the Which One Are You? reel (core, Engaged contacts)
 - Wednesday, November 4: Realtors: our buyers need land, do you know land? (add, Realtors). Waits on question 17
 - Wednesday, November 11: Realtors: when your land listing needs a picture, and the Realtor Lunch invitation (add, Realtors)
+- Wednesday, November 4: Homeowners: invitation to Homeowner Appreciation Night (add, Past homeowners). Waits on question 21
 - Friday, November 6: Landowners (core, Text list, landowners)
 - Wednesday, November 11: Home Portrait (core, Text list, non-openers)
 - Live November 2: Quiet-lead nurture: four personal notes, three designed emails, five texts over 60 days (core, Quiet leads)
 - Live November 2: After a Design Center visit text (core)
 - Thursday, November 5: Landowners personal text (core, Active leads who own land)
 - Saturday, November 7: Bring Your Photos Saturday at all five Design Centers (add). Moved from Halloween
+- Tuesday, November 17: Homeowner Appreciation Night at the Design Centers (add, Past homeowners)
 - Wednesday, November 18: Realtor Lunch and Learn (add, Realtors)
 - November 2 to 15: Social: three posts a week (core)
 - Monday, November 2 and Wednesday, November 11: Google profile posts: Four Buyers update, Home Portrait repost, November Design Dollars offer (core)
 
-## Batch 3: Close
+## Batch 3: Close and homeowners
 
-Sends November 16 to 29. Mitchell proofs by Wednesday, November 11; CEA builds by Friday, November 13.
+Sends November 16 to 29, with the homeowner contest through December 18. Mitchell proofs by Wednesday, November 11; CEA builds by Friday, November 13.
 
-The last Four Buyers and Home Portrait emails, the November 30 last call and the Realtor Lunch and Learn.
+The last Four Buyers and Home Portrait emails, the November 30 last call, the Realtor Lunch follow-up and My Mitchell Story, whose free photo sessions land in time for holiday cards.
 
 - Tuesday, November 17: Four Buyers: a custom home on your land, without the unknowns (core, Landowners)
 - Thursday, November 19: Home Portrait: the getaway, with the Saturday Morning reel (core, Engaged contacts)
 - Tuesday, November 24: Design Dollars last call: reserve by Monday, November 30 (core, Full list). Waits on question 1
 - Thursday, November 19: Realtors: what our buyers check before they buy a lot (add, Realtors). The day after the Realtor Lunch
+- Wednesday, November 18: My Mitchell Story launch (add, Past homeowners)
+- Wednesday, December 2: My Mitchell Story: your phone is all you need (add, Homeowners who have not entered)
+- Wednesday, December 9: My Mitchell Story: last week to enter (add, Homeowners who have not entered)
+- Friday, December 18: My Mitchell Story winner (add, Past homeowners)
+- From November 17: My Mitchell Story notes to entrants (four automatic emails) (add, Entrants)
 - Thursday, November 19: Old-lead check-in (core, Leads quiet for 90 days or more)
 - Monday, November 23: Bring your photos text (core, Active leads)
+- November 17 to December 18: My Mitchell Story: rules, entry form, photo sessions, posts and texts (add, Past homeowners). Rules go to legal now; photographers booked for the holiday card window, November 18 to December 5
 - November 16 to 29: Social: three posts, then two in Thanksgiving week (core)
 
 ## Later (finished, banked for winter)

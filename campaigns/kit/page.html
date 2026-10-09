@@ -164,7 +164,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
 <nav class="jump" aria-label="Sections"><div class="wrap">
   <a href="#start">Start here</a><a href="#calendar">Calendar</a><a href="#emails">Emails</a><a href="#website">Website</a>
   <a href="#social">Social</a><a href="#google">Google profiles</a><a href="#youtube">YouTube</a><a href="#community">Portals and community</a>
-  <a href="#direct">Texts and sales team</a><a href="#print">Print</a><a href="#nurture">Nurture</a><a href="#events">Events</a><a href="#groups">Facebook groups</a><a href="#setup">Builder Studio setup</a><a href="#ranking">Where to start</a><a href="https://mitchell-fall-plan.vercel.app" target="_blank" rel="noopener">Master plan</a><a href="https://mitchell-fall-cadence.vercel.app" target="_blank" rel="noopener">Full calendar</a>
+  <a href="#direct">Texts and sales team</a><a href="#print">Print</a><a href="#nurture">Nurture</a><a href="#events">Events</a><a href="#homeowners">Homeowners</a><a href="#groups">Facebook groups</a><a href="#setup">Builder Studio setup</a><a href="#ranking">Where to start</a><a href="https://mitchell-fall-plan.vercel.app" target="_blank" rel="noopener">Master plan</a><a href="https://mitchell-fall-cadence.vercel.app" target="_blank" rel="noopener">Full calendar</a>
 </div></nav>
 
 <main class="wrap">
@@ -248,6 +248,13 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
   <section id="events"><div class="head"><span class="eyebrow">Events</span><h2>Six events that run with the campaigns</h2>
     <p class="lede">Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages. Every event is a proposal until Mitchell confirms dates and staffing.</p></div>
     <div id="eventlist" style="display:flex;flex-direction:column;gap:16px"></div></section>
+
+  <section id="homeowners"><div class="head"><span class="eyebrow">Homeowners</span><h2>My Mitchell Story</h2>
+    <p class="lede" id="ctLede"></p></div>
+    <div class="two"><div class="panel"><h3>How it works</h3><ol class="flags" id="ctHow"></ol></div><div class="panel"><h3>What homeowners receive</h3><ul class="flags" id="ctPrizes"></ul></div></div>
+    <div class="two"><div class="panel"><h3>The dates</h3><ul class="flags" id="ctDates"></ul></div><div class="panel"><h3>Open questions for Mitchell</h3><ol class="flags" id="ctQs"></ol></div></div>
+    <p class="muted" style="font-size:14px">The homeowner emails are in the Email section under My Mitchell Story. Homeowner Appreciation Night, the kickoff, is E7 in Events.</p>
+    <div id="lib-contest"></div></section>
 
   <section id="groups"><div class="head"><span class="eyebrow">Facebook groups</span><h2>Groups to join and ask to post in</h2>
     <p class="lede">Real groups in Mitchell's markets, found in public search results. Join, read the rules, give before asking, and ask the admins first.</p></div>
@@ -432,6 +439,21 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
       el('ul',{class:'flags'},(e.what||[]).map(function(t){return el('li',{text:t});})),
       e.why?el('p',{style:'font-size:14px',text:'Why: '+e.why}):null,
       (e.confirm&&e.confirm.length)?el('p',{class:'notes hold',text:'Mitchell confirms: '+e.confirm.join('; ')}):null,det]));});
+
+  // my mitchell story
+  var CT=D.contest;
+  if(CT){
+    document.getElementById('ctLede').textContent=(Array.isArray(CT.summary)?CT.summary.join(' '):CT.summary)+' '+CT.line;
+    function fill(id,arr){var h=document.getElementById(id);arr.forEach(function(t){h.appendChild(el('li',{text:t}));});}
+    fill('ctHow',CT.how_it_works);fill('ctPrizes',CT.prizes.map(function(p){return p.tier+': '+p.what+(p.note?' ('+p.note+')':'');}));
+    fill('ctDates',CT.timeline.map(function(t){return t.date+': '+t.what;}));fill('ctQs',CT.questions.map(function(q){return typeof q==='string'?q:(q.q||q.question||q.text||JSON.stringify(q));}));
+    function str(v){return typeof v==='string'?v:Array.isArray(v)?v.map(function(x){return Array.isArray(x)?x.join(': '):typeof x==='string'?'- '+x:Object.keys(x).map(function(k){return x[k];}).filter(Boolean).join(' · ');}).join('\n'):Object.keys(v).map(function(k){return k.replace(/_/g,' ')+': '+str(v[k]);}).join('\n\n');}
+    lib('lib-contest',{title:'Texts',why:'Only to homeowners who agreed to texts. Personal 1-to-1 texts come from the consultant who built with them.',items:CT.texts.map(function(t){return {title:t.title,meta:t.when,body:t.body+'\n\nTo: '+t.to};})});
+    lib('lib-contest',{title:'Words for consultants and the warranty team',why:'',items:CT.sales.map(function(t){return {title:t.title,meta:t.when||'',body:t.body};})});
+    lib('lib-contest',{title:'Social posts and the Google profile post',why:'Entries appear only with the entrant\'s written permission.',items:CT.social.map(function(x){return {title:x.title,meta:[x.date,x.channels,x.format].filter(Boolean).join(' · '),body:x.body,link:x.link||'',notes:x.notes||''};}).concat([{title:'Google profile post: '+CT.gbp.title,meta:CT.gbp.post_on,body:CT.gbp.body+(CT.gbp.button?'\n\nButton: '+CT.gbp.button:''),link:CT.gbp.link||'',notes:CT.gbp.notes||''}])});
+    lib('lib-contest',{title:'Filming tips, the entry form and the photo sessions',why:'',items:[{title:'Filming tips for homeowners',body:CT.filming_tips.map(function(t){return '- '+t;}).join('\n')},{title:'Entry form (built in Builder Studio)',body:str(CT.form)},{title:'Photographer brief',body:str(CT.photographer)},{title:'Where entries and photos may be used',body:str(CT.usage)},{title:'Builder Studio setup',body:str(CT.builder_studio)}]});
+    lib('lib-contest',{title:'Official Rules (draft for Mitchell\'s legal review)',why:'Nothing here is final until legal approves it.',items:CT.rules.map(function(r){return {title:r.head,body:r.text};})});
+  }
 
   // facebook groups
   var FG=D.groups||{},gs=FG.groups||[],gt=document.querySelector('#gtable tbody'),gstate='All';

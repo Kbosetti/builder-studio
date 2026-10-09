@@ -1,0 +1,21 @@
+Hi {{contact.first_name}},
+
+Your My Mitchell Story entry is confirmed. Thank you.
+
+Next is your photo session. A professional photographer will spend about 45 to 60 minutes at your home, paid for by Mitchell. Here is what to expect:
+
+* We like to finish outside in the hour before sunset, when the front of the home looks its best.
+* Inside, we photograph the kitchen, the porch and the favorite spot from your video, plus a few details.
+* Family photos only if you want them. Everyone pictured signs a short release, and a parent signs for any child.
+* You receive [number] edited photos within [two weeks], yours to keep.
+
+Book your photo session: [photo session booking link]
+
+If none of the times work, reply and we will find one. Sessions run through [January 31, 2027].
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}

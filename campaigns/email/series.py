@@ -425,7 +425,12 @@ SERIES = [
             {"t": "small", "text": "Browse the floor plans", "href": "https://www.mitchellhomesinc.com/new-homes/floorplans/"}]},
      ]},
 ]
-:
+
+
+
+# My Mitchell Story, the homeowner contest, lives in campaigns/homeowners/contest.json (make_contest.py); its emails
+# join here as their own series so they render, preview and load into Builder Studio like the rest.
+def _add_contest_series():
     import json, os
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "homeowners", "contest.json")
     if not os.path.exists(path):

@@ -52,7 +52,7 @@ section{display:flex;flex-direction:column;gap:18px;min-width:0}
 .stage .k{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .stage p{font-size:14px}
 .stage .to{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
-.tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tracks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}
 .track{border-top:3px solid var(--sun);padding-top:12px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .track p{font-size:14px;color:var(--muted)}
 /* cadence numbers */
@@ -71,7 +71,7 @@ section{display:flex;flex-direction:column;gap:18px;min-width:0}
 .week li .d{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
 .week li .c{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:block}
 /* events */
-.events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.events{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .event{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .event .date{font-size:13px;font-weight:700;color:var(--accent)}
 .event p{font-size:13.5px;color:var(--muted)}
@@ -139,7 +139,7 @@ section{display:flex;flex-direction:column;gap:18px;min-width:0}
   </section>
 
   <section id="events">
-    <div class="head"><span class="eyebrow">Events</span><h2>Three events that ride the same messages</h2>
+    <div class="head"><span class="eyebrow">Events</span><h2>Four events that ride the same messages</h2>
       <p class="lede">Each one is invited inside emails and posts that already go out, so nobody gets extra messages. Dates and staffing are proposals until you confirm them.</p></div>
     <div class="events" id="eventcards"></div>
   </section>

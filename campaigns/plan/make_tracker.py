@@ -63,7 +63,7 @@ add(2, date(2026, 10, 23), "Proof", "Send Mitchell the Batch 2 link", "Email", "
 add(3, date(2026, 11, 6), "Proof", "Send Mitchell the Batch 3 link", "Email", "Mitchell", "Kelly", f"{APPROVAL}/batch-3/")
 
 # CEA build work, due the Friday of proofing week
-B1, B2 = (due(BATCH[n]["build_by"]) for n in (1, 2))
+B1, B2, B3 = (due(BATCH[n]["build_by"]) for n in (1, 2, 3))
 for t, owner, notes in [
     ("Sending domain: add a Mitchell sending domain in Builder Studio (Settings, Email Services)", "CEA team and Mitchell IT", "One DNS change from whoever manages mitchellhomesinc.com (question 16)."),
     ("Text registration (A2P 10DLC) confirmed for Mitchell's numbers", "CEA team", "No bulk texts until it is approved."),
@@ -76,16 +76,25 @@ for t, owner, notes in [
     ("Workflow 07 Realtor replies, and missed-call text-back on every division number", "CEA team", ""),
     ("Website: pop-up, Home Portrait landing page, video strip, announcement bar and thank-you pages live", "Website vendor", "Files are in the kit, Website tab."),
     ("Print: counter cards in all five Design Centers, email signature banner for everyone", "Design Centers", ""),
+    ("My Mitchell Story Official Rules to Mitchell's legal team (start now; needed by November 11)", "Kelly", "Question 20."),
 ]:
     add(1, B1, "Build", t, "Builder Studio" if "Workflow" in t or "list" in t or "Sending" in t or "registration" in t or "trigger" in t else "", "", owner, "", notes)
 for t, owner, notes in [
-    ("Smart lists: Landowners VA and MD, Landowners Carolinas, Looking for land VA and MD, Looking for land Carolinas", "CEA team", ""),
+    ("Smart lists: Landowners VA and MD, Landowners Carolinas, Looking for land VA and MD, Looking for land Carolinas, Past homeowners", "CEA team", "Past homeowners needs the homeowner tag first (question 21)."),
     ("Workflows 04 Quiet-lead detector and 05 Quiet-lead nurture (live November 2)", "CEA team", "Nine nurture emails and five texts are already in Builder Studio as drafts."),
     ("Workflow 08 After a Design Center visit, and turn the Design Studio Visit calendars back on", "CEA team", ""),
+    ("Homeowner Appreciation Night RSVP form and workflow My Mitchell Story 00", "CEA team", ""),
     ("Bring Your Photos Saturday (November 7): staff and supplies at all five Design Centers", "Mitchell", ""),
     ("Realtor Lunch and Learn (November 18): lunch, room and presenter at each Design Center", "Mitchell", ""),
+    ("Book the photographers for the holiday card window: sessions November 18 to December 5, Thanksgiving weekend included, edited photos within five business days, then sessions through January 31", "Mitchell", "Question 19. Brief in the kit, Homeowners tab."),
+    ("Homeowner Appreciation Night (November 17): staff, refreshments and a story corner at each Design Center", "Mitchell", ""),
 ]:
     add(2, B2, "Build", t, "Builder Studio" if "Workflow" in t or "list" in t or "form" in t else "", "", owner, "", notes)
+for t, owner, notes in [
+    ("My Mitchell Story entry form, photo session calendars, and workflows 01 to 03", "CEA team", "Form spec and steps in the kit, Homeowners tab."),
+]:
+    add(3, B3, "Build", t, "Builder Studio" if "form" in t else "", "", owner, "", notes)
+
 # every scheduled send
 CH = {"email": "Email", "text": "Text"}
 for p in plan["pieces"]:

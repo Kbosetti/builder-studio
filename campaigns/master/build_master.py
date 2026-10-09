@@ -28,7 +28,7 @@ def parse(text):
 
 KIND = {"email": "Email", "text": "Text", "event": "Event"}
 AUDIENCE = {"Full list": "the database", "Engaged contacts": "engaged contacts", "Landowners": "landowners", "Realtors": "realtors",
-            "Text list, non-openers": "text list", "Text list, landowners": "landowners who agreed to texts"}
+            "Past homeowners": "homeowners", "Text list, non-openers": "text list", "Text list, landowners": "landowners who agreed to texts"}
 weeks = []
 for w in range(plan["weeks"]):
     a = date.fromordinal(start.toordinal() + 7 * w)
@@ -60,6 +60,7 @@ for w in weeks:
 EVENT_CARD = {  # where, and who it is for, in a line each
     "e2": ("Online, live on Facebook and YouTube", "For anyone deciding before the October 31 reserve-by date. Scott and Deven answer Design Dollars and SimplyMitchell questions."),
     "e1": ("All five Mitchell Design Centers, 10am to 2pm", "For active leads: bring the photos you have been saving, and see what they would cost with Design Dollars."),
+    "e7": ("All five Mitchell Design Centers, 5:30 to 7:30pm", "For past Mitchell homeowners, invited by the consultant who built with them. My Mitchell Story begins that night, and homeowners can book their photo session there."),
     "e6": ("All five Mitchell Design Centers, over lunch", "For local real estate agents, land listing agents first: how Mitchell builds on the land their clients own."),
 }
 ev_cards = []
@@ -91,6 +92,7 @@ DATA = {
     "tracks": [
         {"name": "Realtors", "does": "About every other week to agents whose clients own land, and to agents who know land for buyers still looking. Plus a Realtor Lunch and Learn."},
         {"name": "The sales team", "does": "Every click and every quiz gets a person: an online sales counselor within 15 minutes for quiz takers, a New Home Consultant within one business day for anyone who clicks, and a Friday call list."},
+        {"name": "Homeowners", "does": "My Mitchell Story: homeowners share a short phone video about the home they love, and every entrant gets a professional photo session at home, paid for by Mitchell, in time for holiday cards. It starts with Homeowner Appreciation Night on November 17."},
         {"name": "Quiet leads", "does": "Leads who have not answered get 60 days of personal notes from their consultant, a few designed emails and short texts. It stops the moment they reply or book."},
     ],
     "weeks": weeks, "events": ev_cards, "batches": batches, "questions": first, "later": later,

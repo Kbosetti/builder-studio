@@ -56,7 +56,7 @@ em = json.load(open(f"{C}/email/out/emails.json"))
 for e in em["emails"]:
     shutil.copy(f"{C}/kit/out/email/{e['id']}.jpg", f"{OUT}/email/{e['id']}.jpg")
     files.append(f"email/{e['id']}.jpg")
-    camp = {"designdollars": "dd", "portrait": "hp", "fourbuyers": "fb", "partners": "ref", "nurture": "all"}[e["series"]]
+    camp = {"designdollars": "dd", "portrait": "hp", "fourbuyers": "fb", "partners": "ref", "nurture": "all", "homeowners": "ref"}[e["series"]]
     ev.append({"d": when(e["send"]), "ch": "Email", "camp": camp, "title": e["subject"], "aud": e["segment"], "who": "Marketing",
                "body": "Preview text: " + e["preview"], "img": f"email/{e['id']}.jpg", "hold": e["hold"], "tag": e["id"].upper()})
 
@@ -133,8 +133,8 @@ ep = f"{C}/events/events.json"
 if os.path.exists(ep):
     # (event day, consultant invites, RSVP reminder); e3, e4 and e5 are banked for winter
     SCHED = {"e2": (date(2026, 10, 29), date(2026, 10, 26), date(2026, 10, 28)), "e1": (date(2026, 11, 7), date(2026, 11, 2), date(2026, 11, 6)),
-             "e6": (date(2026, 11, 18), date(2026, 11, 11), date(2026, 11, 17))}
-    camp_of = {"e1": "dd", "e2": "dd", "e3": "fb", "e4": "all", "e5": "hp", "e6": "ref"}
+             "e7": (date(2026, 11, 17), date(2026, 11, 5), date(2026, 11, 16)), "e6": (date(2026, 11, 18), date(2026, 11, 11), date(2026, 11, 17))}
+    camp_of = {"e1": "dd", "e2": "dd", "e3": "fb", "e4": "all", "e5": "hp", "e6": "ref", "e7": "ref"}
     for e in json.load(open(ep))["events"]:
         if e.get("tier") == "later" or e["id"] not in SCHED:
             continue
@@ -143,7 +143,7 @@ if os.path.exists(ep):
         ev.append({"d": day, "ch": "Event", "camp": cp, "title": e["name"], "aud": e.get("audience", ""), "who": e.get("where", ""),
                    "body": "\n".join(e.get("what", [])) + ("\n\nWhen: " + e["date"] + ", " + e["time"]), "notes": "Mitchell confirms: " + "; ".join(e.get("confirm", [])), "hold": "Proposal"})
         if inv and e.get("invite_text"):
-            ev.append({"d": inv, "ch": "Sales team", "camp": cp, "title": f"Invite to {e['name']}", "aud": {"e6": "Agents each consultant knows"}.get(e["id"], "Each consultant's own active leads"),
+            ev.append({"d": inv, "ch": "Sales team", "camp": cp, "title": f"Invite to {e['name']}", "aud": {"e6": "Agents each consultant knows", "e7": "Homeowners each consultant built with"}.get(e["id"], "Each consultant's own active leads"),
                        "who": "New Home Consultants", "body": e["invite_text"] + ("\n\nEmail version: " + e["invite_email"]["subject"] if e.get("invite_email") else ""), "hold": ""})
         if rem and e.get("reminder_text"):
             ev.append({"d": rem, "ch": "Text", "camp": cp, "title": f"Reminder: {e['name']}", "aud": "Only people who RSVPed", "who": "Builder Studio workflow", "body": e["reminder_text"], "hold": ""})
@@ -153,6 +153,26 @@ if os.path.exists(ep):
             d2 = when(x.get("date", ""))
             if d2:
                 ev.append({"d": d2, "ch": "Social", "camp": cp, "title": f"Event: {e['name']}", "aud": x.get("channels", ""), "who": "Marketing", "body": x["body"], "link": x.get("link", ""), "hold": ""})
+# My Mitchell Story, the homeowner contest (campaigns/homeowners/contest.json); its emails come in with the rest,
+# and E7 (Homeowner Appreciation Night) carries the invitation and reminder
+cp = f"{C}/homeowners/contest.json"
+if os.path.exists(cp):
+    ct = json.load(open(cp))
+    for t in ct["texts"]:
+        if t["title"] in ("Consultant invite to Homeowner Appreciation Night", "RSVP reminder"):
+            continue
+        ch = "Sales team" if "1-to-1" in t["to"] else "Text"
+        ev.append({"d": when(t["when"]), "ch": ch, "camp": "ref", "title": "My Mitchell Story: " + t["title"][0].lower() + t["title"][1:],
+                   "aud": t["to"], "who": "New Home Consultants" if ch == "Sales team" else "Builder Studio", "body": t["body"], "hold": ""})
+    for x in ct["social"]:
+        ev.append({"d": when(x["date"]), "ch": "Social", "camp": "ref", "title": f"My Mitchell Story: {x['title']}", "aud": x["channels"], "who": "Marketing",
+                   "body": x["body"], "link": x.get("link", ""), "notes": clean(x.get("notes", "")), "hold": ""})
+    g = ct["gbp"]
+    ev.append({"d": when(g["post_on"]), "ch": "Google", "camp": "ref", "title": g["title"], "aud": "Google Business Profile for each Design Center", "who": "Marketing",
+               "body": g["body"], "link": g.get("link", ""), "notes": clean(g.get("notes", "")), "hold": ""})
+    sale = ct["sales"][0]
+    ev.append({"d": date(2026, 11, 18), "ch": "Sales team", "camp": "ref", "title": "My Mitchell Story: " + sale["title"][0].lower() + sale["title"][1:], "aud": sale.get("when", ""),
+               "who": "New Home Consultants", "body": sale["body"], "hold": ""})
 # Facebook group outreach, Nextdoor and YouTube cleanup are banked for winter (campaigns/plan), so they stay off this calendar
 ev = [x for x in ev if x["d"] and START <= x["d"] < START + timedelta(days=7 * WEEKS)]
 for x in ev:

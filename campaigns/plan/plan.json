@@ -16,15 +16,15 @@
    "sends": "November 2 to 15",
    "proof_by": "Wednesday, October 28",
    "build_by": "Friday, October 30",
-   "theme": "The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the Realtor Lunch invitation."
+   "theme": "The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the homeowner invitation."
   },
   {
    "n": 3,
-   "name": "Close",
-   "sends": "November 16 to 29",
+   "name": "Close and homeowners",
+   "sends": "November 16 to 29, with the homeowner contest through December 18",
    "proof_by": "Wednesday, November 11",
    "build_by": "Friday, November 13",
-   "theme": "The last Four Buyers and Home Portrait emails, the November 30 last call and the Realtor Lunch and Learn."
+   "theme": "The last Four Buyers and Home Portrait emails, the November 30 last call, the Realtor Lunch follow-up and My Mitchell Story, whose free photo sessions land in time for holiday cards."
   }
  ],
  "week_themes": [
@@ -32,7 +32,7 @@
   "Reserve by Saturday, October 31, with the Design Dollars live Q&A on Thursday",
   "Landowners: your land can be your down payment, and Bring Your Photos Saturday",
   "Design Dollars in November, and the nine portraits",
-  "Without the unknowns, and the Realtor Lunch and Learn",
+  "Without the unknowns, Homeowner Appreciation Night and the Realtor Lunch",
   "Thanksgiving week: one email, the November 30 last call"
  ],
  "pieces": [
@@ -247,6 +247,66 @@
    "note": "Waits on question 12"
   },
   {
+   "id": "ho2",
+   "kind": "email",
+   "title": "Homeowners: invitation to Homeowner Appreciation Night",
+   "date": "Wednesday, November 4",
+   "tier": "add",
+   "batch": 2,
+   "to": "Past homeowners",
+   "note": "Waits on question 21"
+  },
+  {
+   "id": "ho3",
+   "kind": "email",
+   "title": "My Mitchell Story launch",
+   "date": "Wednesday, November 18",
+   "tier": "add",
+   "batch": 3,
+   "to": "Past homeowners",
+   "note": ""
+  },
+  {
+   "id": "ho4",
+   "kind": "email",
+   "title": "My Mitchell Story: your phone is all you need",
+   "date": "Wednesday, December 2",
+   "tier": "add",
+   "batch": 3,
+   "to": "Homeowners who have not entered",
+   "note": ""
+  },
+  {
+   "id": "ho5",
+   "kind": "email",
+   "title": "My Mitchell Story: last week to enter",
+   "date": "Wednesday, December 9",
+   "tier": "add",
+   "batch": 3,
+   "to": "Homeowners who have not entered",
+   "note": ""
+  },
+  {
+   "id": "ho6",
+   "kind": "email",
+   "title": "My Mitchell Story winner",
+   "date": "Friday, December 18",
+   "tier": "add",
+   "batch": 3,
+   "to": "Past homeowners",
+   "note": ""
+  },
+  {
+   "id": "hw",
+   "kind": "automation",
+   "title": "My Mitchell Story notes to entrants (four automatic emails)",
+   "date": "From November 17",
+   "tier": "add",
+   "batch": 3,
+   "to": "Entrants",
+   "note": ""
+  },
+  {
    "id": "sms1",
    "kind": "text",
    "title": "Design Dollars",
@@ -417,6 +477,16 @@
    "note": "Moved from Halloween"
   },
   {
+   "id": "e7",
+   "kind": "event",
+   "title": "Homeowner Appreciation Night at the Design Centers",
+   "date": "Tuesday, November 17",
+   "tier": "add",
+   "batch": 2,
+   "to": "Past homeowners",
+   "note": ""
+  },
+  {
    "id": "e6",
    "kind": "event",
    "title": "Realtor Lunch and Learn",
@@ -455,6 +525,16 @@
    "batch": null,
    "to": "",
    "note": ""
+  },
+  {
+   "id": "contest",
+   "kind": "contest",
+   "title": "My Mitchell Story: rules, entry form, photo sessions, posts and texts",
+   "date": "November 17 to December 18",
+   "tier": "add",
+   "batch": 3,
+   "to": "Past homeowners",
+   "note": "Rules go to legal now; photographers booked for the holiday card window, November 18 to December 5"
   },
   {
    "id": "social-1",
@@ -678,7 +758,11 @@
   "8": 2,
   "10": 2,
   "17": 2,
+  "19": 2,
+  "20": 2,
+  "21": 2,
   "11": 3,
+  "18": 3,
   "5": null,
   "7": null,
   "12": null
