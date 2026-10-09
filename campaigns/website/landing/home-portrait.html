@@ -287,6 +287,12 @@ body{margin:0;background:#faf8f3}
 .mhl .vid h3{font-size:18px;font-weight:700;line-height:1.3;color:var(--deep)}
 .mhl .vid p{font-size:14.5px;color:var(--body);line-height:1.55}
 @media (max-width:900px){.mhl .vgrid{grid-template-columns:1fr;gap:30px}}
+.mhl .rgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:22px}
+.mhl .rgrid figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.mhl .rgrid video{display:block;width:100%;aspect-ratio:9/16;border-radius:10px;background:var(--deep);object-fit:cover}
+.mhl .rgrid figcaption{font-size:14px;font-weight:700;color:var(--deep)}
+.mhl .rlabel{margin-top:44px;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+@media (max-width:900px){.mhl .rgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <script type="application/ld+json">
 {
@@ -484,6 +490,13 @@ body{margin:0;background:#faf8f3}
             <h3>Purchasing Land 101</h3>
             <p>What to look for before you buy land to build on, from the Mitchell team.</p>
           </div>
+        </div>
+        <p class="rlabel">The Home Portrait in under 30 seconds</p>
+        <div class="rgrid">
+          <figure><video controls playsinline preload="none" poster="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bf971c37-8f84-4750-adc6-30b3178aceda.jpg" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f89da6e6f9bc29a28.mp4" aria-label="Your Land reel"></video><figcaption>Your Land</figcaption></figure>
+          <figure><video controls playsinline preload="none" poster="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1a40abdd-7b7f-425d-bf98-c16c129411fc.jpg" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f6fdae56241ba2f34.mp4" aria-label="A Space of You reel"></video><figcaption>A Space of You</figcaption></figure>
+          <figure><video controls playsinline preload="none" poster="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/838504b9-2842-4a09-9919-4b80f2ad8582.jpg" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f02ee523cd5edbece.mp4" aria-label="Which One Are You? reel"></video><figcaption>Which One Are You?</figcaption></figure>
+          <figure><video controls playsinline preload="none" poster="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a60893fe-9145-4b32-9cd9-fa82da27b07c.jpg" src="https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f195f9172edfef8b0.mp4" aria-label="Saturday Morning reel"></video><figcaption>Saturday Morning</figcaption></figure>
         </div>
       </div>
     </section>

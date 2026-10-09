@@ -78,5 +78,41 @@
   "kind": "Behind the Build",
   "thumb": "mortgage.jpg",
   "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fd2f01e5-064e-4dbe-83f6-f8f2d7078b6e.jpg"
+ },
+ "reel_land": {
+  "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f89da6e6f9bc29a28.mp4",
+  "title": "Your Land",
+  "kind": "Home Portrait reel",
+  "thumb": "reel_land.jpg",
+  "poster": "reel_land_poster.jpg",
+  "poster_cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/bf971c37-8f84-4750-adc6-30b3178aceda.jpg",
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e8d2da1c-26ec-4128-873e-0a77e3cd5ee4.jpg"
+ },
+ "reel_space": {
+  "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f6fdae56241ba2f34.mp4",
+  "title": "A Space of You",
+  "kind": "Home Portrait reel",
+  "thumb": "reel_space.jpg",
+  "poster": "reel_space_poster.jpg",
+  "poster_cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/1a40abdd-7b7f-425d-bf98-c16c129411fc.jpg",
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/89464cd8-818f-4556-9b8c-dd0e0dfb09ab.jpg"
+ },
+ "reel_which": {
+  "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f02ee523cd5edbece.mp4",
+  "title": "Which One Are You?",
+  "kind": "Home Portrait reel",
+  "thumb": "reel_which.jpg",
+  "poster": "reel_which_poster.jpg",
+  "poster_cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/838504b9-2842-4a09-9919-4b80f2ad8582.jpg",
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/3c1af5d7-3f9d-4ff3-a315-e308159bdd2c.jpg"
+ },
+ "reel_saturday": {
+  "url": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/6ac8218f195f9172edfef8b0.mp4",
+  "title": "Saturday Morning",
+  "kind": "Home Portrait reel",
+  "thumb": "reel_saturday.jpg",
+  "poster": "reel_saturday_poster.jpg",
+  "poster_cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a60893fe-9145-4b32-9cd9-fa82da27b07c.jpg",
+  "cdn": "https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/fdafe4c7-e25c-4106-bf22-e390905c3173.jpg"
  }
 }
