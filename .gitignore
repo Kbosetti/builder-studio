@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 campaigns/email/live_cache/
 campaign-guide/reels/*.mp4
+campaigns/plan/out/

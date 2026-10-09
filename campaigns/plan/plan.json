@@ -1,0 +1,770 @@
+{
+ "start": "2026-10-19",
+ "weeks": 6,
+ "batches": [
+  {
+   "n": 1,
+   "name": "Launch",
+   "sends": "October 19 to November 1",
+   "proof_by": "Wednesday, October 14",
+   "build_by": "Friday, October 16",
+   "theme": "Design Dollars to the database through the October 31 reserve-by date, the Home Portrait to engaged contacts, the website and the counter cards."
+  },
+  {
+   "n": 2,
+   "name": "Landowners",
+   "sends": "November 2 to 15",
+   "proof_by": "Wednesday, October 28",
+   "build_by": "Friday, October 30",
+   "theme": "The Four Buyers to landowners and buyers still looking, Design Dollars in November, the quiet-lead nurture, Bring Your Photos Saturday and the homeowner invitation."
+  },
+  {
+   "n": 3,
+   "name": "Close and homeowners",
+   "sends": "November 16 to 29, with the homeowner contest through December 18",
+   "proof_by": "Wednesday, November 11",
+   "build_by": "Friday, November 13",
+   "theme": "The last Four Buyers and Home Portrait emails, the November 30 last call, the Realtor Lunch follow-up and My Mitchell Story."
+  }
+ ],
+ "week_themes": [
+  "Design Dollars launch, and the Home Portrait to engaged contacts",
+  "Reserve by Saturday, October 31, with the Design Dollars live Q&A on Thursday",
+  "Landowners: your land can be your down payment, and Bring Your Photos Saturday",
+  "Design Dollars in November, and the nine portraits",
+  "Without the unknowns, Homeowner Appreciation Night and the Realtor Lunch",
+  "Thanksgiving week: one email, the November 30 last call"
+ ],
+ "pieces": [
+  {
+   "id": "dd1",
+   "kind": "email",
+   "title": "Design Dollars launch",
+   "date": "Tuesday, October 20",
+   "tier": "core",
+   "batch": 1,
+   "to": "Full list",
+   "note": ""
+  },
+  {
+   "id": "hp1",
+   "kind": "email",
+   "title": "Home Portrait invitation, with the Your Land reel",
+   "date": "Thursday, October 22",
+   "tier": "core",
+   "batch": 1,
+   "to": "Engaged contacts",
+   "note": ""
+  },
+  {
+   "id": "dd2",
+   "kind": "email",
+   "title": "The spend and add ladder, reserve by Saturday, October 31, and the live Q&A invitation",
+   "date": "Tuesday, October 27",
+   "tier": "core",
+   "batch": 1,
+   "to": "Full list",
+   "note": ""
+  },
+  {
+   "id": "fb1",
+   "kind": "email",
+   "title": "Four Buyers: your land is worth more than you think, and Bring Your Photos Saturday",
+   "date": "Wednesday, November 4",
+   "tier": "core",
+   "batch": 2,
+   "to": "Landowners",
+   "note": "Wednesday, not Election Day"
+  },
+  {
+   "id": "fb5",
+   "kind": "email",
+   "title": "Four Buyers: you do not have to own land yet (Virginia and Maryland)",
+   "date": "Wednesday, November 4",
+   "tier": "core",
+   "batch": 2,
+   "to": "Buyers still looking for land",
+   "note": ""
+  },
+  {
+   "id": "fb5c",
+   "kind": "email",
+   "title": "Four Buyers: you do not have to own land yet (Carolinas)",
+   "date": "Wednesday, November 4",
+   "tier": "core",
+   "batch": 2,
+   "to": "Buyers still looking for land",
+   "note": ""
+  },
+  {
+   "id": "hp2",
+   "kind": "email",
+   "title": "Home Portrait: your land is part of the portrait",
+   "date": "Thursday, November 5",
+   "tier": "core",
+   "batch": 2,
+   "to": "Engaged contacts",
+   "note": ""
+  },
+  {
+   "id": "dd3",
+   "kind": "email",
+   "title": "Design Dollars in November: sign now, choose later",
+   "date": "Tuesday, November 10",
+   "tier": "core",
+   "batch": 2,
+   "to": "Full list",
+   "note": "Says reserve by November 30; waits on question 1"
+  },
+  {
+   "id": "hp3",
+   "kind": "email",
+   "title": "Home Portrait: nine portraits, with the Which One Are You? reel",
+   "date": "Thursday, November 12",
+   "tier": "core",
+   "batch": 2,
+   "to": "Engaged contacts",
+   "note": ""
+  },
+  {
+   "id": "fb2",
+   "kind": "email",
+   "title": "Four Buyers: a custom home on your land, without the unknowns",
+   "date": "Tuesday, November 17",
+   "tier": "core",
+   "batch": 3,
+   "to": "Landowners",
+   "note": ""
+  },
+  {
+   "id": "hp4",
+   "kind": "email",
+   "title": "Home Portrait: the getaway, with the Saturday Morning reel",
+   "date": "Thursday, November 19",
+   "tier": "core",
+   "batch": 3,
+   "to": "Engaged contacts",
+   "note": ""
+  },
+  {
+   "id": "dd4",
+   "kind": "email",
+   "title": "Design Dollars last call: reserve by Monday, November 30",
+   "date": "Tuesday, November 24",
+   "tier": "core",
+   "batch": 3,
+   "to": "Full list",
+   "note": "Waits on question 1"
+  },
+  {
+   "id": "fb3",
+   "kind": "email",
+   "title": "Four Buyers: no construction loan",
+   "date": "When legal clears the wording",
+   "tier": "later",
+   "batch": null,
+   "to": "Landowners",
+   "note": "Waits on question 7"
+  },
+  {
+   "id": "fb4",
+   "kind": "email",
+   "title": "Four Buyers: your dream home has a folder (Virginia and Maryland)",
+   "date": "When the Dreamer page is fixed",
+   "tier": "later",
+   "batch": null,
+   "to": "Dreamers",
+   "note": "Waits on question 5"
+  },
+  {
+   "id": "fb4c",
+   "kind": "email",
+   "title": "Four Buyers: your dream home has a folder (Carolinas)",
+   "date": "When the Dreamer page is fixed",
+   "tier": "later",
+   "batch": null,
+   "to": "Dreamers",
+   "note": "Waits on question 5"
+  },
+  {
+   "id": "re1",
+   "kind": "email",
+   "title": "Realtors: your buyer owns land, we build on it",
+   "date": "Wednesday, October 21",
+   "tier": "add",
+   "batch": 1,
+   "to": "Realtors",
+   "note": ""
+  },
+  {
+   "id": "ra1",
+   "kind": "email",
+   "title": "Realtors: our buyers need land, do you know land?",
+   "date": "Wednesday, November 4",
+   "tier": "add",
+   "batch": 2,
+   "to": "Realtors",
+   "note": "Waits on question 17"
+  },
+  {
+   "id": "rb2",
+   "kind": "email",
+   "title": "Realtors: when your land listing needs a picture, and the Realtor Lunch invitation",
+   "date": "Wednesday, November 11",
+   "tier": "add",
+   "batch": 2,
+   "to": "Realtors",
+   "note": ""
+  },
+  {
+   "id": "ra2",
+   "kind": "email",
+   "title": "Realtors: what our buyers check before they buy a lot",
+   "date": "Thursday, November 19",
+   "tier": "add",
+   "batch": 3,
+   "to": "Realtors",
+   "note": "The day after the Realtor Lunch"
+  },
+  {
+   "id": "rb3",
+   "kind": "email",
+   "title": "Realtors: your client's down payment may be in the ground",
+   "date": "When the incentive terms are confirmed",
+   "tier": "later",
+   "batch": null,
+   "to": "Realtors",
+   "note": "Waits on question 11"
+  },
+  {
+   "id": "ho1",
+   "kind": "email",
+   "title": "Homeowners: know someone with land and a dream?",
+   "date": "When a referral thank-you is decided",
+   "tier": "later",
+   "batch": null,
+   "to": "Past homeowners",
+   "note": "Waits on question 12"
+  },
+  {
+   "id": "ho2",
+   "kind": "email",
+   "title": "Homeowners: invitation to Homeowner Appreciation Night",
+   "date": "Wednesday, November 4",
+   "tier": "add",
+   "batch": 2,
+   "to": "Past homeowners",
+   "note": "Waits on question 21"
+  },
+  {
+   "id": "ho3",
+   "kind": "email",
+   "title": "My Mitchell Story launch",
+   "date": "Wednesday, November 18",
+   "tier": "add",
+   "batch": 3,
+   "to": "Past homeowners",
+   "note": ""
+  },
+  {
+   "id": "ho4",
+   "kind": "email",
+   "title": "My Mitchell Story: your phone is all you need",
+   "date": "Wednesday, December 2",
+   "tier": "add",
+   "batch": 3,
+   "to": "Homeowners who have not entered",
+   "note": ""
+  },
+  {
+   "id": "ho5",
+   "kind": "email",
+   "title": "My Mitchell Story: last week to enter",
+   "date": "Wednesday, December 9",
+   "tier": "add",
+   "batch": 3,
+   "to": "Homeowners who have not entered",
+   "note": ""
+  },
+  {
+   "id": "ho6",
+   "kind": "email",
+   "title": "My Mitchell Story winner",
+   "date": "Friday, December 18",
+   "tier": "add",
+   "batch": 3,
+   "to": "Past homeowners",
+   "note": ""
+  },
+  {
+   "id": "hw",
+   "kind": "automation",
+   "title": "My Mitchell Story notes to entrants (four automatic emails)",
+   "date": "From November 17",
+   "tier": "add",
+   "batch": 3,
+   "to": "Entrants",
+   "note": ""
+  },
+  {
+   "id": "sms1",
+   "kind": "text",
+   "title": "Design Dollars",
+   "date": "Wednesday, October 21",
+   "tier": "core",
+   "batch": 1,
+   "to": "Text list, non-openers",
+   "note": ""
+  },
+  {
+   "id": "sms3",
+   "kind": "text",
+   "title": "Reserve by October 31",
+   "date": "Wednesday, October 28",
+   "tier": "core",
+   "batch": 1,
+   "to": "Text list, non-openers",
+   "note": ""
+  },
+  {
+   "id": "sms4",
+   "kind": "text",
+   "title": "Landowners",
+   "date": "Friday, November 6",
+   "tier": "core",
+   "batch": 2,
+   "to": "Text list, landowners",
+   "note": ""
+  },
+  {
+   "id": "sms2",
+   "kind": "text",
+   "title": "Home Portrait",
+   "date": "Wednesday, November 11",
+   "tier": "core",
+   "batch": 2,
+   "to": "Text list, non-openers",
+   "note": ""
+  },
+  {
+   "id": "auto-core",
+   "kind": "automation",
+   "title": "Engagement tagger, clicked hand-off to a consultant, quiz taker first touch, missed-call text-back",
+   "date": "Live October 19",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "nurture",
+   "kind": "automation",
+   "title": "Quiet-lead nurture: four personal notes, three designed emails, five texts over 60 days",
+   "date": "Live November 2",
+   "tier": "core",
+   "batch": 2,
+   "to": "Quiet leads",
+   "note": ""
+  },
+  {
+   "id": "auto-visit",
+   "kind": "automation",
+   "title": "After a Design Center visit text",
+   "date": "Live November 2",
+   "tier": "core",
+   "batch": 2,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "auto-realtor",
+   "kind": "automation",
+   "title": "Realtor replies go to a consultant",
+   "date": "Live October 21",
+   "tier": "add",
+   "batch": 1,
+   "to": "Realtors",
+   "note": ""
+  },
+  {
+   "id": "sales-share",
+   "kind": "sales",
+   "title": "Share the Home Portrait with your leads",
+   "date": "Thursday, October 22",
+   "tier": "core",
+   "batch": 1,
+   "to": "Each consultant's cold or stalled leads",
+   "note": ""
+  },
+  {
+   "id": "sales-dd",
+   "kind": "sales",
+   "title": "Design Dollars personal email to active leads",
+   "date": "Friday, October 23",
+   "tier": "core",
+   "batch": 1,
+   "to": "Each consultant's active leads",
+   "note": ""
+  },
+  {
+   "id": "sales-deadline",
+   "kind": "sales",
+   "title": "Deadline week personal email and text",
+   "date": "Tuesday, October 27 and Thursday, October 29",
+   "tier": "core",
+   "batch": 1,
+   "to": "Active leads",
+   "note": ""
+  },
+  {
+   "id": "sales-land",
+   "kind": "sales",
+   "title": "Landowners personal text",
+   "date": "Thursday, November 5",
+   "tier": "core",
+   "batch": 2,
+   "to": "Active leads who own land",
+   "note": ""
+  },
+  {
+   "id": "sales-old",
+   "kind": "sales",
+   "title": "Old-lead check-in",
+   "date": "Thursday, November 19",
+   "tier": "core",
+   "batch": 3,
+   "to": "Leads quiet for 90 days or more",
+   "note": ""
+  },
+  {
+   "id": "sales-photos",
+   "kind": "sales",
+   "title": "Bring your photos text",
+   "date": "Monday, November 23",
+   "tier": "core",
+   "batch": 3,
+   "to": "Active leads",
+   "note": ""
+  },
+  {
+   "id": "sales-friday",
+   "kind": "sales",
+   "title": "Friday call list: everyone who clicked and has not booked",
+   "date": "Every Friday",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "e2",
+   "kind": "event",
+   "title": "Behind the Build Live: your Design Dollars questions (online)",
+   "date": "Thursday, October 29, 7pm",
+   "tier": "add",
+   "batch": 1,
+   "to": "",
+   "note": "Moved from Election Day"
+  },
+  {
+   "id": "e1",
+   "kind": "event",
+   "title": "Bring Your Photos Saturday at all five Design Centers",
+   "date": "Saturday, November 7",
+   "tier": "add",
+   "batch": 2,
+   "to": "",
+   "note": "Moved from Halloween"
+  },
+  {
+   "id": "e7",
+   "kind": "event",
+   "title": "Homeowner Appreciation Night at the Design Centers",
+   "date": "Tuesday, November 17",
+   "tier": "add",
+   "batch": 2,
+   "to": "Past homeowners",
+   "note": ""
+  },
+  {
+   "id": "e6",
+   "kind": "event",
+   "title": "Realtor Lunch and Learn",
+   "date": "Wednesday, November 18",
+   "tier": "add",
+   "batch": 2,
+   "to": "Realtors",
+   "note": ""
+  },
+  {
+   "id": "e3",
+   "kind": "event",
+   "title": "Building on Your Land 101",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "e4",
+   "kind": "event",
+   "title": "Wilmington Design Center Open House",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "e5",
+   "kind": "event",
+   "title": "The Gathering Place Live",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "contest",
+   "kind": "contest",
+   "title": "My Mitchell Story: rules, entry form, photo sessions, posts and texts",
+   "date": "November 17 to December 18",
+   "tier": "add",
+   "batch": 3,
+   "to": "Past homeowners",
+   "note": "Rules go to legal now"
+  },
+  {
+   "id": "social-1",
+   "kind": "social",
+   "title": "Social: four posts in week 1 and four in week 2",
+   "date": "October 19 to November 1",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "social-2",
+   "kind": "social",
+   "title": "Social: three posts a week",
+   "date": "November 2 to 15",
+   "tier": "core",
+   "batch": 2,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "social-3",
+   "kind": "social",
+   "title": "Social: three posts, then two in Thanksgiving week",
+   "date": "November 16 to 29",
+   "tier": "core",
+   "batch": 3,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "gbp-1",
+   "kind": "google",
+   "title": "Google profile posts at all five Design Centers: Design Dollars offer and Home Portrait update",
+   "date": "Monday, October 19 and Wednesday, October 21",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "gbp-2",
+   "kind": "google",
+   "title": "Google profile posts: Four Buyers update, Home Portrait repost, November Design Dollars offer",
+   "date": "Monday, November 2 and Wednesday, November 11",
+   "tier": "core",
+   "batch": 2,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "web",
+   "kind": "website",
+   "title": "Website pop-up, Home Portrait landing page and homeowner video strip",
+   "date": "Live October 19",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "web-bars",
+   "kind": "website",
+   "title": "Website announcement bars and thank-you pages",
+   "date": "Live October 19",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "print",
+   "kind": "print",
+   "title": "Counter cards for every Design Center and the email signature banner",
+   "date": "In the studios by October 19",
+   "tier": "core",
+   "batch": 1,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "later-social",
+   "kind": "social",
+   "title": "Fifteen more social posts and two video series ideas",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "later-groups",
+   "kind": "social",
+   "title": "Facebook group outreach (26 groups) and Nextdoor posts",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "later-youtube",
+   "kind": "website",
+   "title": "YouTube descriptions, pinned comment and episode retitles",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "later-flyer",
+   "kind": "print",
+   "title": "Landowner community board flyer",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  },
+  {
+   "id": "later-partners",
+   "kind": "sales",
+   "title": "Local partner outreach",
+   "date": "Winter",
+   "tier": "later",
+   "batch": null,
+   "to": "",
+   "note": ""
+  }
+ ],
+ "social": {
+  "s01": [
+   "Monday, October 19",
+   1
+  ],
+  "s02": [
+   "Tuesday, October 20",
+   1
+  ],
+  "st01": [
+   "Thursday, October 22",
+   1
+  ],
+  "s04": [
+   "Friday, October 23",
+   1
+  ],
+  "s07": [
+   "Tuesday, October 27",
+   1
+  ],
+  "s08": [
+   "Wednesday, October 28",
+   1
+  ],
+  "st04": [
+   "Thursday, October 29",
+   1
+  ],
+  "s14": [
+   "Friday, October 30",
+   1
+  ],
+  "s11": [
+   "Monday, November 2",
+   2
+  ],
+  "s13": [
+   "Wednesday, November 4",
+   2
+  ],
+  "s17": [
+   "Thursday, November 5",
+   2
+  ],
+  "s09": [
+   "Tuesday, November 10",
+   2
+  ],
+  "s23": [
+   "Thursday, November 12",
+   2
+  ],
+  "s20": [
+   "Saturday, November 14",
+   2
+  ],
+  "s19": [
+   "Tuesday, November 17",
+   3
+  ],
+  "s21": [
+   "Thursday, November 19",
+   3
+  ],
+  "s15": [
+   "Saturday, November 21",
+   3
+  ],
+  "s27": [
+   "Monday, November 23",
+   3
+  ],
+  "s22": [
+   "Tuesday, November 24",
+   3
+  ]
+ },
+ "questions": {
+  "2": 1,
+  "3": 1,
+  "4": 1,
+  "9": 1,
+  "14": 1,
+  "15": 1,
+  "16": 1,
+  "20": 1,
+  "1": 2,
+  "6": 2,
+  "8": 2,
+  "10": 2,
+  "17": 2,
+  "21": 2,
+  "11": 3,
+  "18": 3,
+  "19": 3,
+  "5": null,
+  "7": null,
+  "12": null
+ }
+}

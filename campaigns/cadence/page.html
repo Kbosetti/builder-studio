@@ -121,7 +121,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
 </style>
 
 <header class="cover"><div class="wrap">
-  <span class="eyebrow">Mitchell Homes · Fall 2026 · October 12 to November 22</span>
+  <span class="eyebrow">Mitchell Homes · Fall 2026 · October 19 to November 29</span>
   <h1>The fall cadence</h1>
   <p>Every email, text, post and sales follow-up for Design Dollars, the Home Portrait and the Four Buyers on one calendar, so it all lands in order and nobody hears from us too often.</p>
   <div class="legend" id="legend"></div>
@@ -134,12 +134,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
 <main class="wrap">
   <section id="rhythm">
     <div class="head"><span class="eyebrow">The weekly rhythm</span><h2>Same shape every week</h2>
-      <p class="lede">Each week has one main email, one text, a personal touch from the sales team, and posts that echo the same theme. The pattern makes it easy to run and easy for buyers to follow.</p></div>
+      <p class="lede">Each week has one email to the whole list, a Home Portrait email to engaged contacts most Thursdays, a personal touch from the sales team, and three or four posts on the same theme. Texts go out four times in six weeks. Light enough that nobody feels flooded, steady enough that nobody forgets Mitchell.</p></div>
     <div class="rhythm">
-      <div class="rd"><b>Monday</b><ul><li class="s">Land post on social</li><li>Google profile posts refresh</li></ul></div>
-      <div class="rd"><b>Tuesday</b><ul><li class="e">The week's main email, full list</li><li class="s">Social echoes the email</li></ul></div>
-      <div class="rd"><b>Wednesday</b><ul><li class="t">One text, to people who did not open Tuesday's email</li><li class="e">Realtor or homeowner email</li></ul></div>
-      <div class="rd"><b>Thursday</b><ul><li class="e">Second email, engaged contacts only</li><li class="s">Consultants send their personal touch</li></ul></div>
+      <div class="rd"><b>Monday</b><ul><li class="s">Social post</li><li>Google profile posts refresh</li></ul></div>
+      <div class="rd"><b>Tuesday</b><ul><li class="e">The week's one email, full list</li><li class="s">Social echoes the email</li></ul></div>
+      <div class="rd"><b>Wednesday</b><ul><li class="t">A text in four of the six weeks, only to people who did not open Tuesday's email</li><li class="e">Realtor or homeowner email, their own lists</li></ul></div>
+      <div class="rd"><b>Thursday</b><ul><li class="e">Home Portrait email, engaged contacts only, four of six weeks</li><li class="s">Consultants send their personal touch</li></ul></div>
       <div class="rd"><b>Friday</b><ul><li class="s">Call list: everyone who clicked this week</li><li>Social</li></ul></div>
       <div class="rd"><b>Saturday</b><ul><li>Stories and event days</li></ul></div>
       <div class="rd"><b>Every day</b><ul><li class="s">Quiz takers hear from a person within 15 minutes</li></ul></div>
@@ -149,11 +149,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
   <section id="rules">
     <div class="head"><span class="eyebrow">The rules</span><h2>What keeps it from feeling like too much</h2></div>
     <div class="rules">
-      <div class="rule"><b>Two emails a week at most.</b>Tuesday goes to the full list. Thursday goes only to contacts who opened or clicked in the last 90 days, plus every lead since September 1. Everyone else hears from us once a week.</div>
-      <div class="rule"><b>One text a week at most.</b>Only to contacts with text consent, never on the same day as their email, and only to people who did not open Tuesday's email.</div>
+      <div class="rule"><b>One email a week to the full list.</b>Engaged contacts, who opened or clicked in the last 90 days or joined since September 1, also get a Home Portrait email on four Thursdays. Most people hear from Mitchell once a week, never more than twice.</div>
+      <div class="rule"><b>Four texts in six weeks.</b>Only to contacts with text consent, never on the same day as their email, and only to people who did not open that week's email.</div>
       <div class="rule"><b>A person follows every signal.</b>Quiz takers and form fills hear from someone within 15 minutes. Anyone who clicks hears from a consultant within one business day, and skips that week's marketing text.</div>
       <div class="rule"><b>Conversations come first.</b>Anyone booked, under contract, or talking with a consultant comes off the campaign emails and texts, so they only hear from their consultant.</div>
-      <div class="rule"><b>Deadline week is the one heavy week.</b>October 26 to 31 carries two Design Dollars emails, a text, a personal email and a personal text before the October 31 reserve-by date. If Mitchell approves a November date, the same pattern repeats the week of November 23.</div>
+      <div class="rule"><b>Two deadline weeks, both light.</b>October 26 to 31 carries one Design Dollars email, one text, and a personal email and text from each consultant before the October 31 reserve-by date. The week of November 23 carries one last-call email for November 30, once Mitchell confirms that date.</div>
+      <div class="rule"><b>Approved and built in three batches.</b>Mitchell proofs each batch about five days before it starts, and CEA builds it in Builder Studio that week: Batch 1 by October 14, Batch 2 by October 28, Batch 3 by November 11.</div>
       <div class="rule"><b>Holds slide, nothing else moves.</b>A piece marked Hold goes out in the next open slot of its kind once its question is answered. The rest of the calendar stays as it is.</div>
     </div>
   </section>
@@ -189,8 +190,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
 (function(){
   var D=/*DATA*/null;
   var CAMPS={dd:'Design Dollars',hp:'Home Portrait',fb:'Four Buyers',ref:'Realtors and homeowners',all:'All campaigns'};
-  var CHANS=['Event','Email','Text','Sales team','Social','Google','Nextdoor','FB groups','YouTube','Setup'];
-  var THEMES=['Launch: Design Dollars to the database, the Home Portrait to engaged contacts','Spend and add, and the land question','Deadline week: reserve by October 31, and the Four Buyers ads begin','Landowners: your land can be your down payment','Without the unknowns, and the getaway portrait','No construction loan, and one appointment'];
+  var CHANS=['Event','Email','Text','Sales team','Social','Google','Setup'];
+  var THEMES=D.themes||[];
   function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(a[k]==null)continue;if(k==='text')e.textContent=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c!=null&&c!==false)e.appendChild(typeof c==='string'?document.createTextNode(c):c);});return e;}
   function day(iso){var p=iso.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
   var fmtD=new Intl.DateTimeFormat('en-US',{weekday:'short',month:'short',day:'numeric'}),fmtL=new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric'}),fmtM=new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric'});
@@ -244,7 +245,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset
         grid.appendChild(cell);}
       if(!count)return;any=true;
       var end=new Date(s);end.setDate(s.getDate()+6);
-      host.appendChild(el('div',{class:'week'},[el('div',{class:'wh'},[el('h3',{text:'Week '+(wi+1)+' · '+fmtM.format(s)+' to '+fmtM.format(end)}),el('span',{class:'theme',text:THEMES[wi]||''})]),grid]));});
+      host.appendChild(el('div',{class:'week'},[el('div',{class:'wh'},[el('h3',{text:'Week '+(wi+1)+' · '+fmtM.format(s)+' to '+fmtM.format(end)+(D.batchOfWeek?' · Batch '+D.batchOfWeek[wi]:'')}),el('span',{class:'theme',text:THEMES[wi]||''})]),grid]));});
     if(!any)host.appendChild(el('p',{class:'none',text:'Nothing matches these filters. Choose All to see everything.'}));}
   draw();
 

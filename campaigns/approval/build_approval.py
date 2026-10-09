@@ -3,10 +3,13 @@
 
 usage: python3 campaigns/kit/build_kit.py && python3 campaigns/approval/build_approval.py
 Writes campaigns/approval/out/index.html (page content for the Artifact tool) plus the preview images it
-shows, and campaigns/approval/files.json. Approvals live in each reviewer's browser and come back to Kelly
+shows, and campaigns/approval/files.json. Also writes out/batch-1, batch-2 and batch-3: the proofing pages
+Mitchell actually uses, each with only the pieces and questions of that batch (campaigns/plan/plan.json),
+sharing the images in out/. Approvals live in each reviewer's browser and come back to Kelly
 through the Copy summary button, because Mitchell's team opens the public copy (deploy.py), not Claude.
 """
-import base64, json, os, re, shutil
+import base64, copy, json, os, re, shutil
+from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 C = os.path.dirname(HERE)
@@ -32,6 +35,27 @@ for e in em["emails"]:
 kitdata = json.load(open(f"{KIT}/live.json"))
 live = {u: take(rel) for u, rel in kitdata["live"].items()}
 org = {s["id"]: s for s in json.load(open(f"{C}/traffic/organic.json"))["sections"]}
+plan = json.load(open(f"{C}/plan/plan.json"))
+PIECE = {p["id"]: p for p in plan["pieces"]}
+MONTHS = {"October": 10, "November": 11, "December": 12}
+
+
+def batch_of_date(text):
+    m = re.search(r"(October|November|December) (\d{1,2})", text or "")
+    if not m:
+        return None
+    d = date(2026, MONTHS[m.group(1)], int(m.group(2)))
+    return 1 if d < date(2026, 11, 2) else 2 if d < date(2026, 11, 16) else 3
+
+
+def email_batch(eid):
+    if eid.startswith("hw"):
+        return PIECE["hw"]["batch"]
+    if eid.startswith("nu"):
+        return PIECE["nurture"]["batch"]
+    return PIECE[eid]["batch"] if eid in PIECE else None
+
+
 dr = {s["id"]: s for s in json.load(open(f"{C}/direct/direct.json"))["sections"]}
 prints = [{"title": t, "size": z, "img": take(f"print/{n}.jpg")} for n, t, z in [
     ("portrait-counter-card", "Home Portrait counter card", "5 x 7 in, Design Center counters"),
@@ -46,7 +70,7 @@ def clean(items, skip=()):
     for it in items:
         if any(s in it["title"] for s in skip):
             continue
-        out.append({"title": it["title"], "meta": it.get("meta", ""), "body": it["body"], "link": it.get("link", ""),
+        out.append({"title": it["title"], "meta": it.get("meta", ""), "body": it["body"], "link": it.get("link", ""), "b": it.get("batch"),
                     "hold": bool(re.search(r"\bhold\b", (it.get("notes", "") + " " + it["title"]), re.I)), "notes": it.get("notes", "")})
     return out
 
@@ -63,9 +87,17 @@ def qref(text):
 
 for e in em["emails"]:
     e["q"] = qref(e["hold"]) if e["hold"] else 0
+    e["b"] = email_batch(e["id"])
 lists = {k: clean(v["items"], skip=("How to post",)) for k, v in
          {"social": org["social"], "gbp": org["gbp"], "youtube": org["youtube"], "portals": org["portals"], "community": org["community"]}.items()}
 lists.update({k: clean(dr[k]["items"]) for k in ("sms", "sales", "followups", "nurture", "website", "events")})
+for it in lists["sms"]:
+    it["b"] = PIECE.get("sms" + it["title"].split(" · ")[0].split()[-1], {}).get("batch")
+for it in lists["followups"]:
+    it["b"] = batch_of_date(it["meta"]) or 1
+for k, b in (("sales", 1), ("website", 1), ("nurture", 2)):
+    for it in lists[k]:
+        it["b"] = b
 ev_path = f"{C}/events/events.json"
 lists["eventsSeries"] = []
 if os.path.exists(ev_path):
@@ -76,7 +108,8 @@ if os.path.exists(ev_path):
         if e.get("extra_texts"):
             body += " Plus one invitation text: " + e["extra_texts"][0]["body"]
         body += "\n\nWhat Mitchell confirms: " + "; ".join(e.get("confirm", []))
-        lists["eventsSeries"].append({"title": e["name"], "meta": f"{e['date']} · {e['time']} · {e.get('where', '')}", "body": body, "link": "", "hold": False, "q": 14})
+        b = None if e.get("tier") == "later" else PIECE.get(e["id"], {}).get("batch")
+        lists["eventsSeries"].append({"title": e["name"], "meta": f"{e['date']} · {e['time']} · {e.get('where', '')}", "body": body, "link": "", "hold": False, "q": 14, "b": b})
 fg_path = f"{C}/traffic/facebook_groups.json"
 lists["groups"], lists["groupMsgs"] = [], []
 if os.path.exists(fg_path):
@@ -100,13 +133,14 @@ lists["contest"], lists["contestRules"] = [], []
 if os.path.exists(cpath):
     ct = json.load(open(cpath))
     for t in ct["texts"]:
-        lists["contest"].append({"title": "Text: " + t["title"], "meta": t["when"].split(". ")[0], "body": t["body"] + "\n\nTo: " + t["to"], "link": "", "hold": False, "q": 0})
+        lists["contest"].append({"title": "Text: " + t["title"], "meta": t["when"].split(". ")[0], "body": t["body"] + "\n\nTo: " + t["to"], "link": "", "hold": False, "q": 0,
+                                 "b": 2 if re.search(r"invite|RSVP|Thank-you after", t["title"]) else 3})
     for x in ct["social"]:
-        lists["contest"].append({"title": "Post: " + x["title"], "meta": x["date"] + " · " + x["channels"], "body": x["body"], "link": x.get("link", ""), "hold": False, "q": 0})
+        lists["contest"].append({"title": "Post: " + x["title"], "meta": x["date"] + " · " + x["channels"], "body": x["body"], "link": x.get("link", ""), "hold": False, "q": 0, "b": 3})
     g = ct["gbp"]
-    lists["contest"].append({"title": "Google profile post: " + g["title"], "meta": g["post_on"], "body": g["body"], "link": g.get("link", ""), "hold": False, "q": 0})
+    lists["contest"].append({"title": "Google profile post: " + g["title"], "meta": g["post_on"], "body": g["body"], "link": g.get("link", ""), "hold": False, "q": 0, "b": 3})
     for x in ct["sales"]:
-        lists["contest"].append({"title": "Script: " + x["title"], "meta": x.get("when", ""), "body": x["body"], "link": "", "hold": False, "q": 0})
+        lists["contest"].append({"title": "Script: " + x["title"], "meta": x.get("when", ""), "body": x["body"], "link": "", "hold": False, "q": 0, "b": 3})
     for r in ct["rules"]:
         lists["contestRules"].append({"title": "Official Rules: " + r["head"], "meta": "Draft for legal review", "body": r["text"], "link": "", "hold": True, "q": 20})
     f, ph = ct["form"], ct["photographer"]
@@ -121,7 +155,7 @@ if os.path.exists(cpath):
                "how": [h if isinstance(h, str) else h.get("text", h.get("step", "")) for h in ct["how_it_works"]],
                "prizes": [f"{p['tier']}: {p['what']}" for p in ct["prizes"]],
                "timeline": [f"{t['date']}: {t['what']}" for t in ct["timeline"]],
-               "prompts": ct["prompts"]}
+               "prompts": ct["prompts"], "when": "Kickoff Tuesday, November 17 · entries through Sunday, December 13 · winner announced Friday, December 18"}
 ranking = [{"title": it["title"], "meta": it.get("meta", ""), "body": it["body"]} for it in org["summary"]["items"]]
 
 os.makedirs(f"{OUT}/cadence", exist_ok=True)
@@ -141,4 +175,37 @@ for banned in ("previous agency", "CEA Marketing Group", "HighLevel", "GoHighLev
         raise SystemExit(f"client facing page contains {banned!r}")
 open(f"{OUT}/index.html", "w").write(page)
 json.dump(files, open(f"{HERE}/files.json", "w"), indent=0)
+
+
+def up(path):
+    return "../" + path if path else path
+
+
+QMAP = {int(k): v for k, v in plan["questions"].items()}
+for B in plan["batches"]:
+    n = B["n"]
+    d = copy.deepcopy(DATA)
+    d["batch"] = {k: B[k] for k in ("n", "name", "sends", "proof_by", "build_by", "theme")}
+    d["planUrl"] = "https://mitchell-fall-plan.vercel.app"
+    d["qnums"] = sorted(q for q, b in QMAP.items() if b == n)
+    d["emails"]["emails"] = [e for e in d["emails"]["emails"] if e.get("b") == n]
+    for e in d["emails"]["emails"]:
+        e["img"] = up(e["img"])
+    d["lists"] = {k: [it for it in v if it.get("b") == n] for k, v in d["lists"].items()}
+    d["prints"] = [dict(p, img=up(p["img"])) for p in d["prints"] if "community board" not in p["title"]] if n == 1 else []
+    d["web"] = {k: up(v) for k, v in d["web"].items()} if n == 1 else None
+    d["cadence"] = dict(d["cadence"], rhythm=up(d["cadence"]["rhythm"]), week=up(d["cadence"]["week"])) if n == 1 else None
+    d["ranking"] = []
+    d["live"] = {u: up(r) for u, r in d["live"].items()}
+    if d["contest"]:
+        d["contest"]["overview"] = n in (2, 3)
+        if n == 1:
+            d["contest"] = None
+    bpage = (open(f"{HERE}/page.html").read().replace("/*DATA*/null", json.dumps(d, ensure_ascii=False).replace("</", "<\\/"))
+             .replace("%%charlotte%%", "data:font/woff2;base64," + font))
+    if re.search(r"[\u2013\u2014]", bpage):
+        raise SystemExit(f"dash found in batch {n}")
+    os.makedirs(f"{OUT}/batch-{n}", exist_ok=True)
+    open(f"{OUT}/batch-{n}/index.html", "w").write(bpage)
+    print(f"batch-{n}:", len(d["emails"]["emails"]), "emails,", sum(len(v) for v in d["lists"].values()), "other pieces,", len(d["qnums"]), "questions")
 print("index.html", len(page) // 1024, "KB;", len(files), "images,", sum(os.path.getsize(f"{OUT}/{f}") for f in files) // 1024, "KB")

@@ -2,166 +2,212 @@
  "sections": [
   {
    "id": "social",
-   "title": "Organic social calendar, October 12 to November 8, 2026",
+   "title": "Organic social calendar, October 19 to November 29, 2026",
    "why": "Land and lots content earns Mitchell's highest organic engagement but is only 6 percent of posts, so making it the hero on reels, Stories and a first TikTok presence sends warm landowners to the quiz and campaign pages at no media cost.",
    "items": [
     {
      "title": "How to post this calendar",
      "meta": "Read first · all channels · posting rules",
+     "tier": "core",
+     "batch": 1,
      "body": "1. Facebook and LinkedIn: paste the caption with that channel's link on the link line. Regional posts already carry both links.\n2. Instagram and TikTok: captions say Link in bio. Set the bio link to that post's Instagram or TikTok link the morning it goes up. Instagram allows several bio links, so regional posts can carry both. If the TikTok account cannot show a bio link yet, the end card carries the call to action.\n3. YouTube Shorts: links in Shorts captions do not click. Set Related video to the full Behind the Build episode named in the note; its description carries the quiz and Design Dollars links.\n4. Stories: use the link sticker with the link listed for that post.\n5. The only change between channels is utm_source: facebook, instagram, youtube, tiktok or linkedin.\n6. Any piece that mentions Design Dollars keeps the fine-print line in the caption and on the image. After October 31, do not repost a Design Dollars caption until Mitchell approves the November reserve-by date.\n7. Three hashtags at most. No emojis.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=bio",
      "notes": "Default bio link shown here; replace it with each post's link on the day."
     },
     {
      "title": "s01 · The Home Portrait · Reel",
-     "meta": "Monday, October 12, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel",
+     "meta": "Monday, October 19, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel",
+     "tier": "core",
+     "batch": 1,
      "body": "You chose this ground for a reason. Maybe it has been in the family for years. Maybe you saved for it one paycheck at a time.\n\nThe house that goes on it should be yours, not a stranger's idea of a home.\n\nAnswer eight questions. We paint your Home Portrait: the home that belongs on your land, in your own words. About 90 seconds. Link in bio.\n\n#BuildOnYourLand #MitchellHomes #CustomHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s01",
      "notes": "Asset: Home Portrait reel \"Land\". Opens the land pillar. On Shorts, set Related video to Purchasing Land 101. Other channels: same link with utm_source=facebook, youtube, tiktok."
     },
     {
      "title": "s02 · Mitchell Design Dollars · Static image",
-     "meta": "Tuesday, October 13, 2026 · Facebook, Instagram feed, LinkedIn · Static image",
+     "meta": "Tuesday, October 20, 2026 · Facebook, Instagram feed, LinkedIn · Static image",
+     "tier": "core",
+     "batch": 1,
      "body": "It is your land. Make it your home.\n\nYou already hold the hardest part of building: the ground. Mitchell Homes has been building custom homes on land our buyers own since 1992, with more than 40 floor plans and more than 40,000 selections to make one of them yours.\n\nThis fall, your home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more you personalize. Reserve by October 31, 2026.\n\nSee how it works: https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s02\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s02",
      "notes": "Asset: Design Dollars static \"It is your land\". Land and home first, offer second (Rule Zero). Instagram: replace the link line with Link in bio. Other channels: same link with utm_source=instagram, linkedin."
     },
     {
      "title": "s03 · The Home Portrait · Short video, series One Question, One Answer, episode 1",
-     "meta": "Thursday, October 15, 2026 · YouTube Shorts, TikTok, Instagram Reels, Facebook Reels · Short video, series One Question, One Answer, episode 1",
+     "meta": "Winter, date to be set · YouTube Shorts, TikTok, Instagram Reels, Facebook Reels · Short video, series One Question, One Answer, episode 1",
+     "tier": "later",
+     "batch": null,
      "body": "No public water or sewer at the road? That is common on rural land.\n\nHere is how well and septic fit into building a home on your own land, from our Behind the Build podcast. Full episode on our YouTube channel.\n\nPicturing what could go on your lot? Answer eight questions. We paint your Home Portrait. Link in bio.\n\n#BuildOnYourLand #WellAndSeptic #MitchellHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s03",
      "notes": "Asset: new: 45- to 90-second vertical clip from the Behind the Build episode \"Well and Septic\". Text card with the question as the hosts ask it in the first second, cut straight to the answer, captions burned in, end card: Answer eight questions. We paint your Home Portrait.. Well and Septic is the channel's top video. Shorts Related video: the full episode. Cut any build timeline from the clip. Other channels: same link with utm_source=tiktok, instagram, facebook."
     },
     {
      "title": "s04 · The Home Portrait · Carousel",
-     "meta": "Friday, October 16, 2026 · Instagram feed, Facebook · Carousel",
+     "meta": "Friday, October 23, 2026 · Instagram feed, Facebook · Carousel",
+     "tier": "core",
+     "batch": 1,
      "body": "Every home is a portrait. Discover yours.\n\nThe porch you would actually sit on. A kitchen laid out the way you cook. Room for the people who visit most.\n\nAnswer eight questions. We paint your Home Portrait. Home first, land in the middle, timing last. No land yet is a good answer.\n\nLink in bio.\n\n#MitchellHomes #CustomHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s04",
      "notes": "Asset: Home Portrait carousel 1. Cards stay as approved; the caption carries the quiz line. Other channels: same link with utm_source=facebook."
     },
     {
      "title": "s05 · The Home Portrait · Reel",
-     "meta": "Saturday, October 17, 2026 · Instagram Reels, Facebook Reels, TikTok · Reel",
+     "meta": "Winter, date to be set · Instagram Reels, Facebook Reels, TikTok · Reel",
+     "tier": "later",
+     "batch": null,
      "body": "Picture a Saturday in the home you have not built yet. Where is the coffee? Where does the light land in the afternoon? Who is on the porch?\n\nThat picture is where your Home Portrait starts. Answer eight questions and we paint it, in about 90 seconds.\n\nLink in bio.\n\n#MitchellHomes #CustomHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s05",
      "notes": "Asset: Home Portrait reel \"Saturday\" (organic only). Saturday is organic only. Never boost it. Other channels: same link with utm_source=facebook, tiktok."
     },
     {
      "title": "s06 · The Home Portrait · Reel",
-     "meta": "Monday, October 19, 2026 · Instagram Reels, TikTok, YouTube Shorts, Facebook Reels · Reel",
+     "meta": "Winter, date to be set · Instagram Reels, TikTok, YouTube Shorts, Facebook Reels · Reel",
+     "tier": "later",
+     "batch": null,
      "body": "Same ground. A home that was not there before.\n\nEvery Mitchell home starts on land someone chose for a reason. We walk it with the owners before anything is built, and this is what it becomes.\n\nOwn land, or still looking? Start with your Home Portrait. Eight questions, about 90 seconds. Link in bio.\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s06",
      "notes": "Asset: new: Same Ground, 15 to 25 seconds vertical. 1) Wide shot of a real customer homesite before the build (Brittany's library or a current job, owner's permission). 2) Slow walk to where the front door will be, phone at chest height. 3) Match cut to the finished Mitchell home from the same spot. 4) Text: Same ground. Your home. 5) End card: Answer eight questions. We paint your Home Portrait.. Needs a before-and-after pair from the same address. No street numbers or neighboring homes in frame. Other channels: same link with utm_source=tiktok, youtube, facebook."
     },
     {
      "title": "s07 · Mitchell Design Dollars · Reel",
-     "meta": "Tuesday, October 20, 2026 · Facebook, Instagram Reels, LinkedIn · Reel",
+     "meta": "Tuesday, October 27, 2026 · Facebook, Instagram Reels, LinkedIn · Reel",
+     "tier": "core",
+     "batch": 1,
      "body": "The kitchen you pictured. The floors you keep going back to. The lighting that makes the room feel like yours.\n\nThat is what the Design Center is for. The more of you goes into the home, the more Mitchell puts in.\n\nYour home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more you personalize. Sign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026.\n\nhttps://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s07\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s07",
      "notes": "Asset: Design Dollars reel. Uses Scott's two approved sentences. Followers are the warm audience this offer is meant for. Other channels: same link with utm_source=instagram, linkedin."
     },
     {
      "title": "s08 · Mitchell Design Dollars · Testimonial video cut, 30 to 45 seconds",
-     "meta": "Wednesday, October 21, 2026 · Facebook, LinkedIn, Instagram Reels, YouTube Shorts · Testimonial video cut, 30 to 45 seconds",
+     "meta": "Wednesday, October 28, 2026 · Facebook, LinkedIn, Instagram Reels, YouTube Shorts · Testimonial video cut, 30 to 45 seconds",
+     "tier": "core",
+     "batch": 1,
      "body": "Lavonnia and Rick Downey built their Mitchell home in Henrico, Virginia. Looking back, this is what stayed with them:\n\n\"Talk about no closing costs, no down payment, no construction loan. That's a big deal. I don't think we appreciated what that meant initially. Now looking back, we're like wow, that's the best choice we could've made to go with Mitchell.\"\n\nThat is SimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.\n\nThis fall, your home also comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize. Reserve by October 31, 2026.\n\nhttps://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s08\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s08",
      "notes": "Asset: Downey homeowner testimonial video, cut from https://www.youtube.com/watch?v=9vmi-miQzKU. Downey quote verbatim from FACTS.md. Shorts Related video: the Downey video. Other channels: same link with utm_source=linkedin, instagram, youtube."
     },
     {
-     "title": "s09 · The Home Portrait · Short video, series One Question, One Answer, episode 2",
-     "meta": "Thursday, October 22, 2026 · YouTube Shorts, TikTok, Instagram Reels · Short video, series One Question, One Answer, episode 2",
+     "title": "s09 · The Home Portrait · Short video, series One Question, One Answer, episode 1",
+     "meta": "Tuesday, November 10, 2026 · YouTube Shorts, TikTok, Instagram Reels · Short video, series One Question, One Answer, episode 1",
+     "tier": "core",
+     "batch": 2,
      "body": "Buying land to build a home on? Start with this question.\n\nFrom Behind the Build, Purchasing Land 101. Full episode on our YouTube channel.\n\nNo land yet is a good answer. Your Home Portrait starts with the home, then the land. Eight questions, link in bio.\n\n#BuyingLand #BuildOnYourLand #MitchellHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s09",
      "notes": "Asset: new: 45- to 90-second vertical clip from the Behind the Build episode \"Purchasing Land 101\", same template as s03.. Shorts Related video: Purchasing Land 101. Never name a county or call an area a good place to buy. Other channels: same link with utm_source=tiktok, instagram."
     },
     {
      "title": "s10 · Mitchell Design Dollars · Static image",
-     "meta": "Saturday, October 24, 2026 · Instagram feed, Facebook · Static image",
+     "meta": "Winter, date to be set · Instagram feed, Facebook · Static image",
+     "tier": "later",
+     "batch": null,
      "body": "You do not have to pick every cabinet and countertop before you sign.\n\nMost people stall right here. Start with the plan and the land. The finishes come later, in person at a Design Center, with the number in front of you.\n\nYour home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more you personalize. Sign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026.\n\nLink in bio.\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s10",
      "notes": "Asset: Design Dollars static \"Sign now, choose later\". Answers the most common stall before signing. Facebook: replace Link in bio with the link. Other channels: same link with utm_source=facebook."
     },
     {
      "title": "s11 · The Four Buyers · Reel",
-     "meta": "Monday, October 26, 2026 · Facebook, Instagram Reels, YouTube Shorts, TikTok · Reel",
+     "meta": "Monday, November 2, 2026 · Facebook, Instagram Reels, YouTube Shorts, TikTok · Reel",
+     "tier": "core",
+     "batch": 2,
      "body": "Your land is worth more than you think.\n\nYou already own the hardest part of building. Most builders still send you to a bank for a construction loan before anyone turns a shovel. Mitchell self-funds every build, so there is no construction loan, zero down and zero closing costs.\n\nVirginia and Southern Maryland: https://simplymitchellhomes.com/land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s11\nNorth and South Carolina: https://simplymitchellhomes.com/onyourland?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s11\n\n#BuildOnYourLand #MitchellHomes #CustomHomes",
      "link": "https://simplymitchellhomes.com/land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s11",
      "notes": "Asset: Four Buyers reel: \"Your land is worth more than you think\". First Four Buyers post. /land covers Virginia and Southern Maryland only, so the Carolinas go to /onyourland. On Facebook, post as a standard video so links click. Other channels: same link with utm_source=instagram, youtube, tiktok."
     },
     {
      "title": "s12 · The Home Portrait · Reel",
-     "meta": "Tuesday, October 27, 2026 · Instagram Reels, Facebook Reels, TikTok · Reel",
+     "meta": "Winter, date to be set · Instagram Reels, Facebook Reels, TikTok · Reel",
+     "tier": "later",
+     "batch": null,
      "body": "Which home is yours? Not the one on a sales sheet. The one that fits how you live: where you cook, where you work, where everyone ends up at night.\n\nEvery answer changes the picture. Answer eight questions. We paint your Home Portrait.\n\nLink in bio.\n\n#MitchellHomes #CustomHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s12",
      "notes": "Asset: Home Portrait reel \"Which\". Keeps the quiz in feeds while Four Buyers starts. Other channels: same link with utm_source=facebook, tiktok."
     },
     {
      "title": "s13 · The Four Buyers · Five-card carousel",
-     "meta": "Wednesday, October 28, 2026 · Facebook, LinkedIn, Instagram feed · Five-card carousel",
+     "meta": "Wednesday, November 4, 2026 · Facebook, LinkedIn, Instagram feed · Five-card carousel",
+     "tier": "core",
+     "batch": 2,
      "body": "Your land can be your down payment.\n\nSame land. Same house. The difference is who carries the money while it goes up.\n\nThe usual way: a down payment, a construction loan, two closings, and interest while the house is being built. With Mitchell: the land you already own, no construction loan, zero closing costs and one closing, because Mitchell self-funds every build.\n\nSee the side-by-side for Virginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13\nIn North and South Carolina, start here: https://simplymitchellhomes.com/onyourland?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s13",
      "notes": "Asset: Four Buyers five-card carousel: \"Your land can be your down payment\". No dollar figures or savings math in the caption. Confirm Brittany's held section on /math is cleared first. Other channels: same link with utm_source=linkedin, instagram."
     },
     {
      "title": "s14 · Mitchell Design Dollars · Static image",
-     "meta": "Thursday, October 29, 2026 · Facebook, Instagram feed · Static image",
+     "meta": "Friday, October 30, 2026 · Facebook, Instagram feed · Static image",
+     "tier": "core",
+     "batch": 1,
      "body": "Your cabinets. Your counters. Your floors, your lighting, your hardware. The more of you goes into the home, the more Mitchell puts in.\n\nEvery Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. Buy $60,000 in selections, pay $60,000, and take home $75,000 worth.\n\nThe reserve-by date for October is Saturday, October 31, 2026. A New Home Consultant can walk you through it: https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s14\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.\n\n#MitchellHomes #CustomHomes",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s14",
      "notes": "Asset: Design Dollars static \"The more you personalize\". Last Design Dollars feed post with the October date. Pair with Story st04. Other channels: same link with utm_source=instagram."
     },
     {
      "title": "s15 · The Four Buyers · Short video, series Before the House, episode 1",
-     "meta": "Friday, October 30, 2026 · TikTok, Instagram Reels, YouTube Shorts, Facebook Reels · Short video, series Before the House, episode 1",
+     "meta": "Saturday, November 21, 2026 · TikTok, Instagram Reels, YouTube Shorts, Facebook Reels · Short video, series Before the House, episode 1",
+     "tier": "core",
+     "batch": 3,
      "body": "Where does the house go on your land?\n\nIt is one of the first things we talk through on a land walk. One of our New Home Consultants shows what we look at before a spot is chosen.\n\nMitchell builds in Virginia, North Carolina, South Carolina and Maryland. See how it works on your land. Link in bio.\n\n#BuildOnYourLand #LandOwner #MitchellHomes",
      "link": "https://simplymitchellhomes.com/onyourland?utm_source=tiktok&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s15",
      "notes": "Asset: new: 30 to 60 seconds vertical on a real customer homesite (owner's permission). A New Home Consultant stands where the house could sit and answers: Where does the house go on your land? Three beats in their own words: what they look at first, what moves the spot, what happens next. Captions burned in. End card: We build on your land.. First original TikTok series. Script the question only; the consultant answers in their own words. Other channels: same link with utm_source=instagram, youtube, facebook."
     },
     {
      "title": "s16 · The Four Buyers · Reel",
-     "meta": "Monday, November 2, 2026 · Facebook, Instagram Reels, TikTok · Reel",
+     "meta": "Winter, date to be set · Facebook, Instagram Reels, TikTok · Reel",
+     "tier": "later",
+     "batch": null,
      "body": "Your dream home has a folder, not a date.\n\nThe screenshots. The saved pins. The porch you photographed on a trip and never forgot.\n\nIt starts with one appointment. Bring the photos you have been saving.\n\nVirginia and Southern Maryland: https://simplymitchellhomes.com/dreamer?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s16\nNorth and South Carolina: https://simplymitchellhomes.com/dreamer-carolinas?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s16\n\n#CustomHomes #MitchellHomes",
      "link": "https://simplymitchellhomes.com/dreamer?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s16",
      "notes": "Asset: Four Buyers reel: \"Your dream home has a folder, not a date\". Hold until /dreamer and /dreamer-carolinas drop the line about a price fixed from day one, which FACTS.md does not allow. Other channels: same link with utm_source=instagram, tiktok."
     },
     {
      "title": "s17 · The Four Buyers · Testimonial video cut, 30 to 45 seconds",
-     "meta": "Tuesday, November 3, 2026 · Facebook, LinkedIn, Instagram Reels · Testimonial video cut, 30 to 45 seconds",
+     "meta": "Thursday, November 5, 2026 · Facebook, LinkedIn, Instagram Reels · Testimonial video cut, 30 to 45 seconds",
+     "tier": "core",
+     "batch": 2,
      "body": "No construction loan to build on your land.\n\nRob and Kat Cuomo built their Mitchell home in Wilmington, North Carolina:\n\n\"Mitchell takes all the risk. They want you in your home as fast as possible… You want the bones of the home and the materials that they use to be good. Mitchell spares no expense on premium materials when you build a house.\"\n\nMitchell self-funds every build. No construction loan, so there is no second closing and no draw period interest.\n\nVirginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s17\nNorth and South Carolina: https://simplymitchellhomes.com/dreamer-carolinas?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s17\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s17",
      "notes": "Asset: Cuomo homeowner testimonial video, cut from https://www.youtube.com/watch?v=jMSBzlcQ4uU (stands in for the no-construction-loan reel, which is on hold). Approved self-funding wording only, never the line waiting on legal. Quote is a verbatim excerpt from the live pages. Carolinas link shares the s16 hold. Other channels: same link with utm_source=linkedin, instagram."
     },
     {
      "title": "s18 · The Four Buyers · Reel",
-     "meta": "Wednesday, November 4, 2026 · Facebook, Instagram Reels, TikTok, YouTube Shorts · Reel",
+     "meta": "Winter, date to be set · Facebook, Instagram Reels, TikTok, YouTube Shorts · Reel",
+     "tier": "later",
+     "batch": null,
      "body": "You do not have to own it yet.\n\nBuying land and building a house can feel like two hard things stacked on top of each other. You choose where you want to be. We take it from there: the plan, the selections, the permits and the build.\n\nStart now. Walk the plans at a Design Center while you look. We do not sell land, and we will not tell you where to buy.\n\nVirginia and Southern Maryland: https://simplymitchellhomes.com/no-land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s18\nNorth and South Carolina: https://simplymitchellhomes.com/no-land-carolinas?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s18\n\n#CustomHomes #MitchellHomes",
      "link": "https://simplymitchellhomes.com/no-land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s18",
      "notes": "Asset: new: 15 to 20 seconds vertical. 1) Thumb scrolling land listings on a phone, no addresses readable. 2) Cut to a Design Center: hands turning plan pages, then sample boards. 3) Text: Find the lot. Start the home now. 4) End card: You do not have to own it yet.. No financing claims here: whether SimplyMitchell works the same way for a buyer still buying land is an open flag. Other channels: same link with utm_source=instagram, tiktok, youtube."
     },
     {
      "title": "s19 · The Four Buyers · Five-card carousel",
-     "meta": "Thursday, November 5, 2026 · Facebook, LinkedIn, Instagram feed · Five-card carousel",
+     "meta": "Tuesday, November 17, 2026 · Facebook, LinkedIn, Instagram feed · Five-card carousel",
+     "tier": "core",
+     "batch": 3,
      "body": "A custom home on your land, without the unknowns.\n\nEvery choice priced before we build. You choose in daylight, with the number in front of you, before construction begins.\n\nAnd you hear from us every week, from groundbreaking to move-in.\n\nVirginia and Southern Maryland: https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s19\nNorth and South Carolina: https://simplymitchellhomes.com/yourplan?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s19\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://simplymitchellhomes.com/math?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s19",
      "notes": "Asset: Four Buyers five-card carousel: \"A custom home on your land, without the unknowns\". Approved pricing claim wording only; do not strengthen it. Other channels: same link with utm_source=linkedin, instagram."
     },
     {
      "title": "s20 · The Home Portrait · Brand film, 63 seconds",
-     "meta": "Saturday, November 7, 2026 · Facebook, Instagram Reels, YouTube, LinkedIn · Brand film, 63 seconds",
+     "meta": "Saturday, November 14, 2026 · Facebook, Instagram Reels, YouTube, LinkedIn · Brand film, 63 seconds",
+     "tier": "core",
+     "batch": 2,
      "body": "Too many homes are built for the crowd. You did not buy your own land to live in a stranger's idea of a home.\n\nSince 1992, Mitchell Homes has built custom homes on land our buyers own. Our legacy is building Yours. Simply.\n\nWhere does yours start? Answer eight questions. We paint your Home Portrait.\n\nhttps://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s20\n\n#MitchellHomes #BuildOnYourLand",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s20",
-     "notes": "Asset: 63-second brand film ending \"Our legacy is building Yours. Simply.\". Awareness close to the four weeks. LinkedIn: post Friday, November 6 instead. YouTube: add the Section 3 description block. Other channels: same link with utm_source=instagram, youtube, linkedin."
+     "notes": "Asset: 63-second brand film ending \"Our legacy is building Yours. Simply.\". Awareness close to the first four weeks. LinkedIn: post Friday, November 13 instead. YouTube: add the Section 3 description block. Other channels: same link with utm_source=instagram, youtube, linkedin."
     },
     {
      "title": "s21 · The Four Buyers · Reel",
-     "meta": "Monday, November 9, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel",
+     "meta": "Thursday, November 19, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel",
+     "tier": "core",
+     "batch": 3,
      "body": "Custom does not have to mean unpredictable.\n\nStart with one of more than 40 floor plans. Choose every selection in daylight, with the number in front of you, before construction begins. Then hear from us every week, from groundbreaking to move-in.\n\nSee how we build: link in bio.\n\n#BuildOnYourLand #MitchellHomes #CustomHomes",
      "link": "https://simplymitchellhomes.com/land?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s21",
-     "notes": "Asset: Four Buyers reel: \"A custom home on your land, without the unknowns\". Echoes the Tuesday email. Carolinas: link /onyourland. Other channels: same link with utm_source=facebook, youtube, tiktok."
+     "notes": "Asset: Four Buyers reel: \"A custom home on your land, without the unknowns\". Echoes the Tuesday, November 17 email. Carolinas: link /onyourland. Other channels: same link with utm_source=facebook, youtube, tiktok."
     },
     {
      "title": "s22 · The Four Buyers · Static image",
-     "meta": "Tuesday, November 10, 2026 · Facebook, LinkedIn · Static image",
+     "meta": "Tuesday, November 24, 2026 · Facebook, LinkedIn · Static image",
+     "tier": "core",
+     "batch": 3,
      "body": "Every choice priced before we build.\n\nAt a Mitchell Design Center you choose cabinets, counters, tile and flooring in person, with the number in front of you, and sign off on your selections before ground breaks. No guessing in month four.\n\nSee how it works: https://simplymitchellhomes.com/land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s22\n\n#MitchellHomes #CustomHomes",
      "link": "https://simplymitchellhomes.com/land?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s22",
      "notes": "Asset: Four Buyers carousel card \"Every choice priced before we build\". LinkedIn: same link with utm_source=linkedin."
@@ -169,55 +215,71 @@
     {
      "title": "s23 · The Home Portrait · Static image",
      "meta": "Thursday, November 12, 2026 · Instagram feed, Facebook · Static image",
+     "tier": "core",
+     "batch": 2,
      "body": "The lake house you keep talking about. The place on the coast. The cabin with the long table.\n\nIf the home you are dreaming about is a getaway or the place you will retire, there is a Home Portrait for it: The Gathering Place. Answer eight questions and we paint it, lake, coast or mountains.\n\nLink in bio.\n\n#MitchellHomes #CustomHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s23",
      "notes": "Asset: Home Portrait static \"The getaway you keep promising yourselves\". Never the painting itself; the painting is the reward. Facebook: replace Link in bio with the link, utm_source=facebook."
     },
     {
      "title": "s24 · The Home Portrait · Short video, series Before the House",
-     "meta": "Saturday, November 14, 2026 · TikTok, Instagram Reels, YouTube Shorts · Short video",
+     "meta": "Winter, date to be set · TikTok, Instagram Reels, YouTube Shorts · Short video",
+     "tier": "later",
+     "batch": null,
      "body": "Before the house, there is the ground. This is the part most people skip: walking the land, finding where the porch should face, and where the afternoon light lands.\n\nEvery Mitchell home starts here. See what yours could look like: link in bio.\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=tiktok&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s24",
      "notes": "New: 20 to 30 seconds of a homesite walk from Brittany's library, no people needed. Next episode of the Before the House series. Other channels: utm_source=instagram, youtube."
     },
     {
      "title": "s25 · The Four Buyers · Reel",
-     "meta": "Tuesday, November 17, 2026 · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel",
+     "meta": "Winter, date to be set · Instagram Reels, Facebook Reels, YouTube Shorts, TikTok · Reel",
+     "tier": "later",
+     "batch": null,
      "body": "If a construction loan is why you stopped building on your land, read this.\n\nWith Mitchell there is no construction loan. Mitchell self-funds every build, so there is zero down, zero closing costs and one closing.\n\nSee the math: link in bio.\n\nFinancing terms are illustrative only and subject to credit approval. Not a commitment to lend.\n\n#BuildOnYourLand #MitchellHomes",
      "link": "https://simplymitchellhomes.com/calculator?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s25",
-     "notes": "Hold until legal approves the financing wording and the comparison figures on /calculator are confirmed, the same hold as the email that day. Asset: the no-construction-loan reel once cleared."
+     "notes": "Hold until legal approves the financing wording and the comparison figures on /calculator are confirmed, the same hold as the no-construction-loan email (fb3), which is banked until legal clears the wording (question 7). Asset: the no-construction-loan reel once cleared."
     },
     {
      "title": "s26 · The Four Buyers · Five-card carousel",
-     "meta": "Thursday, November 19, 2026 · Instagram feed, Facebook · Carousel",
+     "meta": "Winter, date to be set · Instagram feed, Facebook · Carousel",
+     "tier": "later",
+     "batch": null,
      "body": "Your dream home has a folder, not a date.\n\nYou have been saving photos of this house for years. Bring them in. One appointment at a Mitchell Design Center, and we will price what is in them.\n\nLink in bio.\n\n#MitchellHomes #CustomHomes",
      "link": "https://simplymitchellhomes.com/dreamer?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=s26",
      "notes": "Hold until /dreamer and /dreamer-carolinas drop the line about a price fixed from day one. Asset: the five-card carousel for this buyer. Carolinas: /dreamer-carolinas."
     },
     {
      "title": "s27 · Mitchell Design Dollars · Static image",
-     "meta": "Saturday, November 21, 2026 · Instagram feed, Facebook · Static image",
-     "body": "The more of you goes into the home, the more Mitchell puts in.\n\nEvery Mitchell home starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize. Sign now and your incentive is locked; your tier is set when you choose your finishes.\n\nLink in bio.\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.\n\n#MitchellHomes #CustomHomes",
+     "meta": "Monday, November 23, 2026 · Instagram feed, Facebook · Static image",
+     "tier": "core",
+     "batch": 3,
+     "body": "The more of you goes into the home, the more Mitchell puts in.\n\nEvery Mitchell home starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize. Sign now and your incentive is locked; your tier is set when you choose your finishes. Reserve by November 30, 2026.\n\nLink in bio.\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.\n\n#MitchellHomes #CustomHomes",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s27",
-     "notes": "Asset: Design Dollars static \"The more you personalize\". No date line until Mitchell sets the November reserve-by date. Facebook: utm_source=facebook."
+     "notes": "Asset: Design Dollars static \"The more you personalize\". Hold until Mitchell confirms November 30 (question 1). Facebook: utm_source=facebook."
     },
     {
      "title": "st01 · The Home Portrait · Three-frame Story, poll and link sticker",
-     "meta": "Tuesday, October 13, 2026 · Instagram Stories, Facebook Stories · Three-frame Story, poll and link sticker",
+     "meta": "Thursday, October 22, 2026 · Instagram Stories, Facebook Stories · Three-frame Story, poll and link sticker",
+     "tier": "core",
+     "batch": 1,
      "body": "Frame 1: Do you already own your land? Poll sticker: I own land / Still looking\nFrame 2: Either way, the home comes first. Home first, land in the middle, timing last.\nFrame 3: Answer eight questions. We paint your Home Portrait. Link sticker: Take the Quiz",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=st01",
      "notes": "Asset: Home Portrait static ads, one image per frame. Share the poll result the next day as one more frame with the same link sticker. Other channels: same link with utm_source=facebook."
     },
     {
      "title": "st02 · The Home Portrait · Four-frame this or that, poll stickers and link sticker",
-     "meta": "Monday, October 19, 2026 · Instagram Stories · Four-frame this or that, poll stickers and link sticker",
+     "meta": "Winter, date to be set · Instagram Stories · Four-frame this or that, poll stickers and link sticker",
+     "tier": "later",
+     "batch": null,
      "body": "Frame 1: This or that, for the home you are picturing.\nFrame 2: Front porch or screened porch? Poll sticker.\nFrame 3: Open kitchen or a separate dining room? Poll sticker.\nFrame 4: Every answer changes the picture. Answer eight questions. We paint your Home Portrait. Link sticker: Take the Quiz",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=st02",
      "notes": "Asset: Home Portrait static ads and carousel images. One image per frame, never a collage; the painting stays the reward."
     },
     {
      "title": "st03 · Mitchell Design Dollars · Four-frame Story, link sticker",
-     "meta": "Wednesday, October 21, 2026 · Instagram Stories, Facebook Stories · Four-frame Story, link sticker",
+     "meta": "Winter, date to be set · Instagram Stories, Facebook Stories · Four-frame Story, link sticker",
+     "tier": "later",
+     "batch": null,
      "body": "Frame 1: It is your land. Make it your home.\nFrame 2: Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\nFrame 3: Buy $60,000 in selections and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000.\nFrame 4: Reserve by October 31, 2026. Link sticker: See how it works\nSmall text on every frame: Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=st03",
      "notes": "Asset: Design Dollars static \"Every choice is yours\". Ladder figures from FACTS.md. Fine print on every frame, not only the last. Other channels: same link with utm_source=facebook."
@@ -225,41 +287,53 @@
     {
      "title": "st04 · Mitchell Design Dollars · Countdown sticker and link sticker, runs October 29 to 31",
      "meta": "Thursday, October 29, 2026 · Instagram Stories, Facebook Stories · Countdown sticker and link sticker, runs October 29 to 31",
+     "tier": "core",
+     "batch": 1,
      "body": "Frame 1: Your finishes, chosen in person at a Design Center.\nFrame 2: $5,000 in Mitchell Design Dollars with every Mitchell home, up to $25,000 the more you personalize. Countdown sticker: Reserve by October 31\nFrame 3: Talk to a New Home Consultant. Link sticker: Reserve now\nSmall text on every frame: Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=st04",
      "notes": "Asset: Design Dollars reel, first 10 seconds as frame 1. Remove the frames on November 1. Other channels: same link with utm_source=facebook."
     },
     {
      "title": "st05 · The Four Buyers · Quiz sticker and two link stickers",
-     "meta": "Monday, October 26, 2026 · Instagram Stories, Facebook Stories · Quiz sticker and two link stickers",
+     "meta": "Winter, date to be set · Instagram Stories, Facebook Stories · Quiz sticker and two link stickers",
+     "tier": "later",
+     "batch": null,
      "body": "Frame 1: Quiz sticker: What can the land you own do for a new home? A) Sit there  B) Be your down payment\nFrame 2: Your land can be your down payment. Mitchell self-funds every build, so there is no construction loan.\nFrame 3: Building in Virginia or Southern Maryland? Link sticker: Start here\nFrame 4: Building in North or South Carolina? Link sticker: Start here",
      "link": "https://simplymitchellhomes.com/land?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=st05",
      "notes": "Asset: Four Buyers reel \"Your land is worth more than you think\", first 5 seconds. Frame 3 gets the first link, frame 4 the second. Other channels: same link with utm_source=facebook."
     },
     {
      "title": "st06 · The Four Buyers · Question box and two link stickers",
-     "meta": "Monday, November 2, 2026 · Instagram Stories · Question box and two link stickers",
+     "meta": "Winter, date to be set · Instagram Stories · Question box and two link stickers",
+     "tier": "later",
+     "batch": null,
      "body": "Frame 1: Your dream home has a folder, not a date.\nFrame 2: Question sticker: What is the one photo in your folder?\nFrame 3: Reshare three answers, with permission, over a watercolor background.\nFrame 4: It starts with one appointment. Bring the photos you have been saving. Link sticker: Virginia and Maryland\nFrame 5: Link sticker: North and South Carolina",
      "link": "https://simplymitchellhomes.com/dreamer?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=st06",
      "notes": "Asset: new: Mitchell Green background with question sticker, then regional watercolor backgrounds. Same hold as s16 on the two dreamer pages."
     },
     {
      "title": "st07 · The Home Portrait · Three-frame Story, link sticker",
-     "meta": "Thursday, November 12, 2026 · Instagram Stories, Facebook Stories · Story",
+     "meta": "Winter, date to be set · Instagram Stories, Facebook Stories · Story",
+     "tier": "later",
+     "batch": null,
      "body": "Frame 1: Lake, coast or mountains?\nFrame 2: Tell us where the getaway is, and we paint it.\nFrame 3: Answer eight questions. About 90 seconds. [link sticker: Take the Quiz]",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=st07",
      "notes": "Use the poll sticker on frame 1. Same day as the getaway email."
     },
     {
      "title": "Series idea A: One Question, One Answer",
-     "meta": "Twice a week from October 15 · YouTube Shorts, TikTok, Instagram Reels · 45- to 90-second clips from Behind the Build",
+     "meta": "Winter, date to be set · YouTube Shorts, TikTok, Instagram Reels · 45- to 90-second clips from Behind the Build",
+     "tier": "later",
+     "batch": null,
      "body": "Format: one question per clip, from an existing Behind the Build episode. The question appears as a text card in the first second, the answer starts right away, captions are burned in, and the end card reads: Answer eight questions. We paint your Home Portrait.\n\nStarter list (question to pull, then episode):\n1. Does my land need a well and septic? Well and Septic\n2. What should I check before I buy land? Purchasing Land 101\n3. What do people get wrong about building on their own land? Common Misconceptions\n4. How does the mortgage work when you build? Mortgage 101\n5. What is SimplyMitchell? SimplyMitchell Savings\n6. What happens after I sign? Contract to Keys\n7. What are the steps to build on my land? Homebuyer Roadmap to Success\n8. How do I choose fixtures I will still like later? Ferguson Selection Tips\n\nRules: use the question as the hosts ask it and keep the answer in Mitchell's own words. Cut any build timeline, any savings percentage and any price. On Shorts, set Related video to the full episode, whose description carries the quiz link (Section 3).",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=seriesA",
      "notes": "s03 and s09 are episodes 1 and 2. Give each later clip its own utm_content id (qa03, qa04 and on). Check SimplyMitchell Savings for the old 6.5 percent figure before clipping it."
     },
     {
      "title": "Series idea B: Before the House",
-     "meta": "Weekly from October 30 · TikTok first, then Instagram Reels and YouTube Shorts · 30- to 60-second land and lot clips",
+     "meta": "Winter, date to be set · TikTok first, then Instagram Reels and YouTube Shorts · 30- to 60-second land and lot clips",
+     "tier": "later",
+     "batch": null,
      "body": "Format: a New Home Consultant on a real homesite (owner's permission) answers one land question per clip, in their own words, standing on the ground it is about. TikTok first: the account is empty, and land and lots is the theme that earns Mitchell the most engagement.\n\nEpisode prompts:\n1. Where does the house go on your land?\n2. Where does the driveway go?\n3. What is a perc test, and why does it come first?\n4. No public water or sewer at the road. Now what?\n5. What happens on a land walk?\n6. Can my land be my down payment?\n\nProduction: film six in one afternoon per division, phone on a gimbal, natural light, warm grade. End card: We build on your land. Link in bio.\n\nRules: no addresses or neighboring homes in frame, never describe an area as a good place to buy, no prices or savings math, no build timeline.",
      "link": "https://simplymitchellhomes.com/onyourland?utm_source=tiktok&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=seriesB",
      "notes": "s15 is episode 1. Modeled on the small-builder accounts that win on specific land stories. Prompt 6 links /land for Virginia and Southern Maryland."
@@ -273,105 +347,135 @@
    "items": [
     {
      "title": "Fredericksburg VA: Design Dollars offer post",
-     "meta": "Post October 12, end October 31, 2026 · Google Business Profile, Fredericksburg VA · Offer post",
-     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 12, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Fredericksburg Design Center, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (540) 701-2759.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
+     "meta": "Post October 19, end October 31, 2026; repost November 2 with the November 30 reserve-by date once Mitchell confirms it (question 1) · Google Business Profile, Fredericksburg VA · Offer post",
+     "tier": "core",
+     "batch": 1,
+     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 19, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Fredericksburg Design Center, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (540) 701-2759.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_designdollars&utm_content=gbp_fredericksburg_offer",
-     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 1 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
+     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 2 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
     },
     {
      "title": "Fredericksburg VA: Home Portrait update",
-     "meta": "Post October 14, 2026, repost November 4 · Google Business Profile, Fredericksburg VA · Update post",
+     "meta": "Post October 21, 2026, repost November 11 · Google Business Profile, Fredericksburg VA · Update post",
+     "tier": "core",
+     "batch": 1,
      "body": "Answer eight questions. We paint your Home Portrait. Tell us about the home you picture and the land it belongs on.\n\nIn about 90 seconds you get a painted Home Portrait: your spaces and style in your own words, and the clearest path to building it. No land yet is a good answer.\n\nWhen you are ready, bring your portrait to our Fredericksburg Design Center and walk through it with a New Home Consultant. Building on your land across Virginia and Southern Maryland.\n\nCall (540) 701-2759, or tap Learn more to take the quiz.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_portrait&utm_content=gbp_fredericksburg_portrait",
      "notes": "Button: Learn more. Image: a Home Portrait static ad, never the painting itself. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
     },
     {
      "title": "Fredericksburg VA: Four Buyers update (Your land is worth more than you think)",
-     "meta": "Post October 26, 2026 · Google Business Profile, Fredericksburg VA · Update post",
+     "meta": "Post November 2, 2026 · Google Business Profile, Fredericksburg VA · Update post",
+     "tier": "core",
+     "batch": 2,
      "body": "Your land is worth more than you think. At Mitchell Homes, the land you own can be your down payment.\n\nMost builders send you to a bank for a construction loan before anyone turns a shovel. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan.\n\nMore than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections, chosen in person at our Fredericksburg Design Center.\n\nBuilding on your land across Virginia and Southern Maryland since 1992. Call a New Home Consultant at (540) 701-2759, or tap Learn more.",
      "link": "https://simplymitchellhomes.com/land?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_fredericksburg_fourbuyers",
      "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
     },
     {
      "title": "Richmond VA (Midlothian): Design Dollars offer post",
-     "meta": "Post October 12, end October 31, 2026 · Google Business Profile, Richmond VA (Midlothian) · Offer post",
-     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 12, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Richmond Design Center in Midlothian, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (540) 701-2759.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
+     "meta": "Post October 19, end October 31, 2026; repost November 2 with the November 30 reserve-by date once Mitchell confirms it (question 1) · Google Business Profile, Richmond VA (Midlothian) · Offer post",
+     "tier": "core",
+     "batch": 1,
+     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 19, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Richmond Design Center in Midlothian, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (540) 701-2759.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_designdollars&utm_content=gbp_richmond_offer",
-     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 1 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (804) 538-3912 for this studio; confirm which line the profile shows."
+     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 2 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (804) 538-3912 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Richmond VA (Midlothian): Home Portrait update",
-     "meta": "Post October 14, 2026, repost November 4 · Google Business Profile, Richmond VA (Midlothian) · Update post",
+     "meta": "Post October 21, 2026, repost November 11 · Google Business Profile, Richmond VA (Midlothian) · Update post",
+     "tier": "core",
+     "batch": 1,
      "body": "Answer eight questions. We paint your Home Portrait. Tell us about the home you picture and the land it belongs on.\n\nIn about 90 seconds you get a painted Home Portrait: your spaces and style in your own words, and the clearest path to building it. No land yet is a good answer.\n\nWhen you are ready, bring your portrait to our Richmond Design Center in Midlothian and walk through it with a New Home Consultant. Building on your land across Virginia and Southern Maryland.\n\nCall (540) 701-2759, or tap Learn more to take the quiz.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_portrait&utm_content=gbp_richmond_portrait",
      "notes": "Button: Learn more. Image: a Home Portrait static ad, never the painting itself. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (804) 538-3912 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Richmond VA (Midlothian): Four Buyers update (Your land can be your down payment)",
-     "meta": "Post October 26, 2026 · Google Business Profile, Richmond VA (Midlothian) · Update post",
+     "meta": "Post November 2, 2026 · Google Business Profile, Richmond VA (Midlothian) · Update post",
+     "tier": "core",
+     "batch": 2,
      "body": "Your land can be your down payment. Same land, same house: the difference is who carries the money while it goes up.\n\nThe usual way means a down payment, a construction loan, two closings and interest during the build. With Mitchell there is no construction loan and one closing, because Mitchell self-funds every build. Zero down, zero closing costs.\n\nSee the side-by-side, then talk it through at our Richmond Design Center in Midlothian.\n\nCall a New Home Consultant at (540) 701-2759, or tap Learn more.",
      "link": "https://simplymitchellhomes.com/math?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_richmond_fourbuyers",
      "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (804) 538-3912 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Newport News VA: Design Dollars offer post",
-     "meta": "Post October 12, end October 31, 2026 · Google Business Profile, Newport News VA · Offer post",
-     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 12, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Newport News Design Center, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (540) 701-2759.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
+     "meta": "Post October 19, end October 31, 2026; repost November 2 with the November 30 reserve-by date once Mitchell confirms it (question 1) · Google Business Profile, Newport News VA · Offer post",
+     "tier": "core",
+     "batch": 1,
+     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 19, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Newport News Design Center, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (540) 701-2759.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_designdollars&utm_content=gbp_newportnews_offer",
-     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 1 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (757) 210-3482 for this studio; confirm which line the profile shows."
+     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 2 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (757) 210-3482 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Newport News VA: Home Portrait update",
-     "meta": "Post October 14, 2026, repost November 4 · Google Business Profile, Newport News VA · Update post",
+     "meta": "Post October 21, 2026, repost November 11 · Google Business Profile, Newport News VA · Update post",
+     "tier": "core",
+     "batch": 1,
      "body": "Answer eight questions. We paint your Home Portrait. Tell us about the home you picture and the land it belongs on.\n\nIn about 90 seconds you get a painted Home Portrait: your spaces and style in your own words, and the clearest path to building it. No land yet is a good answer.\n\nWhen you are ready, bring your portrait to our Newport News Design Center and walk through it with a New Home Consultant. Building on your land across Virginia and Southern Maryland.\n\nCall (540) 701-2759, or tap Learn more to take the quiz.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_portrait&utm_content=gbp_newportnews_portrait",
      "notes": "Button: Learn more. Image: a Home Portrait static ad, never the painting itself. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (757) 210-3482 for this studio; confirm which line the profile shows."
     },
     {
-     "title": "Newport News VA: Four Buyers update (Your dream home has a folder, not a date)",
-     "meta": "Post October 26, 2026 · Google Business Profile, Newport News VA · Update post",
-     "body": "Your dream home has a folder, not a date. It starts with one appointment. Bring the photos you have been saving.\n\nAt our Newport News Design Center, the picture in your head becomes a list: more than 40 floor plans and more than 40,000 selections, made in person with someone beside you who has done it before.\n\nNo construction loan, because Mitchell self-funds every build.\n\nBuilding on your land across Virginia and Southern Maryland. Call a New Home Consultant at (540) 701-2759, or tap Learn more.",
-     "link": "https://simplymitchellhomes.com/dreamer?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_newportnews_fourbuyers",
-     "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. Hold until the dreamer page drops the line about a price fixed from day one. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (757) 210-3482 for this studio; confirm which line the profile shows."
+     "title": "Newport News VA: Four Buyers update (Your land is worth more than you think)",
+     "meta": "Post November 2, 2026 · Google Business Profile, Newport News VA · Update post",
+     "tier": "core",
+     "batch": 2,
+     "body": "Your land is worth more than you think. At Mitchell Homes, the land you own can be your down payment.\n\nMost builders send you to a bank for a construction loan before anyone turns a shovel. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan.\n\nMore than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections, chosen in person at our Newport News Design Center.\n\nBuilding on your land across Virginia and Southern Maryland since 1992. Call a New Home Consultant at (540) 701-2759, or tap Learn more.",
+     "link": "https://simplymitchellhomes.com/land?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_newportnews_fourbuyers",
+     "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (757) 210-3482 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Raleigh NC (studio in Garner): Design Dollars offer post",
-     "meta": "Post October 12, end October 31, 2026 · Google Business Profile, Raleigh NC (studio in Garner) · Offer post",
-     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 12, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Raleigh Design Center in Garner, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (984) 331-5468.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
+     "meta": "Post October 19, end October 31, 2026; repost November 2 with the November 30 reserve-by date once Mitchell confirms it (question 1) · Google Business Profile, Raleigh NC (studio in Garner) · Offer post",
+     "tier": "core",
+     "batch": 1,
+     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 19, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Raleigh Design Center in Garner, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (984) 331-5468.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_designdollars&utm_content=gbp_raleigh_offer",
-     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 1 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
+     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 2 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
     },
     {
      "title": "Raleigh NC (studio in Garner): Home Portrait update",
-     "meta": "Post October 14, 2026, repost November 4 · Google Business Profile, Raleigh NC (studio in Garner) · Update post",
+     "meta": "Post October 21, 2026, repost November 11 · Google Business Profile, Raleigh NC (studio in Garner) · Update post",
+     "tier": "core",
+     "batch": 1,
      "body": "Answer eight questions. We paint your Home Portrait. Tell us about the home you picture and the land it belongs on.\n\nIn about 90 seconds you get a painted Home Portrait: your spaces and style in your own words, and the clearest path to building it. No land yet is a good answer.\n\nWhen you are ready, bring your portrait to our Raleigh Design Center in Garner and walk through it with a New Home Consultant. Building on your land across North and South Carolina.\n\nCall (984) 331-5468, or tap Learn more to take the quiz.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_portrait&utm_content=gbp_raleigh_portrait",
      "notes": "Button: Learn more. Image: a Home Portrait static ad, never the painting itself. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
     },
     {
-     "title": "Raleigh NC (studio in Garner): Four Buyers update (Your dream home has a folder, not a date)",
-     "meta": "Post October 26, 2026 · Google Business Profile, Raleigh NC (studio in Garner) · Update post",
-     "body": "Your dream home has a folder, not a date. It starts with one appointment. Bring the photos you have been saving.\n\nAt our Raleigh Design Center in Garner, the picture in your head becomes a list: more than 40 floor plans and more than 40,000 selections, made in person with someone beside you who has done it before.\n\nNo construction loan, because Mitchell self-funds every build.\n\nBuilding on your land across North and South Carolina. Call a New Home Consultant at (984) 331-5468, or tap Learn more.",
-     "link": "https://simplymitchellhomes.com/dreamer-carolinas?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_raleigh_fourbuyers",
-     "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. Hold until the dreamer page drops the line about a price fixed from day one. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
+     "title": "Raleigh NC (studio in Garner): Four Buyers update (You do not have to own it yet)",
+     "meta": "Post November 2, 2026 · Google Business Profile, Raleigh NC (studio in Garner) · Update post",
+     "tier": "core",
+     "batch": 2,
+     "body": "You do not have to own it yet. Start designing your Mitchell home now and bring us the lot when you find it.\n\nYou choose where you want to be. We do not sell land, and we will not tell you where to buy. While you look, walk the plans at our Raleigh Design Center in Garner: more than 40 floor plans from 1,000 to 3,000 square feet.\n\nCall a New Home Consultant at (984) 331-5468, or tap Learn more.",
+     "link": "https://simplymitchellhomes.com/no-land-carolinas?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_raleigh_fourbuyers",
+     "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number."
     },
     {
      "title": "Wilmington NC (open, studio in Belville): Design Dollars offer post",
-     "meta": "Post October 12, end October 31, 2026 · Google Business Profile, Wilmington NC (open, studio in Belville) · Offer post",
-     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 12, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Wilmington Design Center in Belville, now open, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (984) 331-5468.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
+     "meta": "Post October 19, end October 31, 2026; repost November 2 with the November 30 reserve-by date once Mitchell confirms it (question 1) · Google Business Profile, Wilmington NC (open, studio in Belville) · Offer post",
+     "tier": "core",
+     "batch": 1,
+     "body": "Title: Make it yours: $5,000 in Design Dollars, up to $25,000\nStart date: October 19, 2026\nEnd date: October 31, 2026\n\nOffer details:\nMake it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize.\n\nChoose every finish in person at our Wilmington Design Center in Belville, now open, with the number in front of you. Buy $25,000 in selections and Mitchell adds $7,500. Buy $60,000 and Mitchell adds $15,000. Buy $100,000 or more and Mitchell adds $25,000. Use them on cabinets, countertops, flooring, tile, lighting and electrical, plumbing fixtures, appliances, paint and hardware.\n\nSign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by October 31, 2026. Call a New Home Consultant at (984) 331-5468.\n\nTerms and conditions:\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Cannot be combined with any other Mitchell promotion. Full terms from your New Home Consultant.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_designdollars&utm_content=gbp_wilmington_offer",
-     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 1 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (910) 996-3640 for this studio; confirm which line the profile shows."
+     "notes": "Put the link in Redeem online. Title field holds 58 characters. Renew on November 2 only with Mitchell's approved November date. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (910) 996-3640 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Wilmington NC (open, studio in Belville): Home Portrait update",
-     "meta": "Post October 14, 2026, repost November 4 · Google Business Profile, Wilmington NC (open, studio in Belville) · Update post",
+     "meta": "Post October 21, 2026, repost November 11 · Google Business Profile, Wilmington NC (open, studio in Belville) · Update post",
+     "tier": "core",
+     "batch": 1,
      "body": "Answer eight questions. We paint your Home Portrait. Tell us about the home you picture and the land it belongs on.\n\nIn about 90 seconds you get a painted Home Portrait: your spaces and style in your own words, and the clearest path to building it. No land yet is a good answer.\n\nWhen you are ready, bring your portrait to our Wilmington Design Center in Belville, now open, and walk through it with a New Home Consultant. Building on your land across North and South Carolina.\n\nCall (984) 331-5468, or tap Learn more to take the quiz.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_portrait&utm_content=gbp_wilmington_portrait",
      "notes": "Button: Learn more. Image: a Home Portrait static ad, never the painting itself. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (910) 996-3640 for this studio; confirm which line the profile shows."
     },
     {
      "title": "Wilmington NC (open, studio in Belville): Four Buyers update (You do not have to own it yet)",
-     "meta": "Post October 26, 2026 · Google Business Profile, Wilmington NC (open, studio in Belville) · Update post",
+     "meta": "Post November 2, 2026 · Google Business Profile, Wilmington NC (open, studio in Belville) · Update post",
+     "tier": "core",
+     "batch": 2,
      "body": "You do not have to own it yet. Start designing your Mitchell home now and bring us the lot when you find it.\n\nYou choose where you want to be. We do not sell land, and we will not tell you where to buy. While you look, walk the plans at our Wilmington Design Center in Belville: more than 40 floor plans from 1,000 to 3,000 square feet.\n\nSouth Carolina is served from the Wilmington Design Center.\n\nCall a New Home Consultant at (984) 331-5468, or tap Learn more.",
      "link": "https://simplymitchellhomes.com/no-land-carolinas?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_fourbuyers&utm_content=gbp_wilmington_fourbuyers",
      "notes": "Button: Learn more. Image: a real Mitchell home or this studio, no people needed. If Google rejects the post for the phone number in the text, delete that sentence; the Call button uses the profile number. The live Design Dollars page lists (910) 996-3640 for this studio; confirm which line the profile shows."
@@ -385,7 +489,9 @@
    "items": [
     {
      "title": "Description block for every Behind the Build episode",
-     "meta": "Add now, update November 1 · YouTube, all existing episodes · Top of the description",
+     "meta": "Winter, date to be set · YouTube, all existing episodes · Top of the description",
+     "tier": "later",
+     "batch": null,
      "body": "Building on land you own, or still looking? Answer eight questions. We paint your Home Portrait.\nTake the quiz: https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_description\n\nThis fall, your home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more you personalize. Reserve by October 31, 2026.\nSee how it works: https://simplymitchellhomes.com/design-dollars?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=yt_description\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.\n\nMitchell Homes has built custom homes on land our buyers own since 1992. Mitchell builds in Virginia, North Carolina, South Carolina and Maryland. Our five Design Centers are in Virginia and North Carolina.\nVirginia and Maryland: (540) 701-2759\nNorth and South Carolina: (984) 331-5468",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_description",
      "notes": "The first two lines show above the fold, so the quiz leads. On November 1 change the date line once Mitchell approves the November date, or delete that line until then."
@@ -393,20 +499,26 @@
     {
      "title": "Pinned comment",
      "meta": "Pin now · YouTube, every long-form episode and the brand film · Comment",
+     "tier": "later",
+     "batch": null,
      "body": "New here? Answer eight questions and we paint your Home Portrait: the home that belongs on your land, in about 90 seconds.\nhttps://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_pinned",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_pinned",
      "notes": "Post from the Mitchell Homes channel account, then pin. Links click in long-form comments."
     },
     {
      "title": "Community post 1: where are you on the way to building?",
-     "meta": "October 14, 2026 · YouTube Community · Poll",
+     "meta": "Winter, date to be set · YouTube Community · Poll",
+     "tier": "later",
+     "batch": null,
      "body": "Where are you on the way to building your home?\nPoll options:\nI own my land\nI am looking for land\nPicturing the home for now\nAlready working with Mitchell\n\nWhatever you picked, the Home Portrait starts with the home. Answer eight questions. We paint your Home Portrait.\nhttps://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_community1",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_community1",
      "notes": "Poll answers tell us which Before the House prompts to film first."
     },
     {
      "title": "Community post 2: Design Dollars",
-     "meta": "October 20, 2026 · YouTube Community · Image post",
+     "meta": "Winter, date to be set · YouTube Community · Image post",
+     "tier": "later",
+     "batch": null,
      "body": "The kitchen you pictured. The floors you keep going back to. Chosen in person at a Mitchell Design Center.\n\nYour home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more you personalize. Reserve by October 31, 2026.\nhttps://simplymitchellhomes.com/design-dollars?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=yt_community2\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=yt_community2",
      "notes": "Image: Design Dollars static \"Every choice is yours\"."
@@ -414,6 +526,8 @@
     {
      "title": "Retitle: Well and Septic",
      "meta": "Change now · YouTube, existing episode · Title and first description line",
+     "tier": "later",
+     "batch": null,
      "body": "New title: Well and Septic Explained: Building a Home on Your Own Land\nFirst description line: Building on rural land without public water or sewer? Here is how well and septic fit into a custom home build.",
      "link": "https://www.youtube.com/watch?v=zWwtw8qgp4w",
      "notes": "Search words first, episode name kept, branded suffix dropped (the series name lives in the playlist and description). Leave the description block above this line."
@@ -421,6 +535,8 @@
     {
      "title": "Retitle: Purchasing Land 101",
      "meta": "Change now · YouTube, existing episode · Title and first description line",
+     "tier": "later",
+     "batch": null,
      "body": "New title: Buying Land to Build a House: Purchasing Land 101\nFirst description line: What to know before you buy land to build a custom home on.",
      "link": "https://www.youtube.com/watch?v=trgJ8maymOA",
      "notes": "Search words first, episode name kept, branded suffix dropped (the series name lives in the playlist and description). Leave the description block above this line."
@@ -428,6 +544,8 @@
     {
      "title": "Retitle: Common Misconceptions",
      "meta": "Change now · YouTube, existing episode · Title and first description line",
+     "tier": "later",
+     "batch": null,
      "body": "New title: Building a Custom Home on Your Land: Common Misconceptions\nFirst description line: The things people most often get wrong about building a custom home on land they own.",
      "link": "https://www.youtube.com/watch?v=d7AZtCxOLro",
      "notes": "Search words first, episode name kept, branded suffix dropped (the series name lives in the playlist and description). Leave the description block above this line."
@@ -435,6 +553,8 @@
     {
      "title": "Retitle: SimplyMitchell Savings",
      "meta": "Change now · YouTube, existing episode · Title and first description line",
+     "tier": "later",
+     "batch": null,
      "body": "New title: Build on Your Land With No Construction Loan: SimplyMitchell Savings\nFirst description line: How SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.",
      "link": "https://www.youtube.com/watch?v=8e8mkV1rdzM",
      "notes": "Search words first, episode name kept, branded suffix dropped (the series name lives in the playlist and description). Check the episode does not quote the old 6.5 percent figure before promoting it."
@@ -442,6 +562,8 @@
     {
      "title": "Retitle: Contract to Keys",
      "meta": "Change now · YouTube, existing episode · Title and first description line",
+     "tier": "later",
+     "batch": null,
      "body": "New title: What Happens After You Sign to Build a Custom Home: Contract to Keys\nFirst description line: Every step from signing your contract to getting your keys when you build on your land.",
      "link": "https://www.youtube.com/watch?v=sfnU69Gdqcs",
      "notes": "Search words first, episode name kept, branded suffix dropped (the series name lives in the playlist and description). Do not add a timeline to the title or description."
@@ -456,6 +578,8 @@
     {
      "title": "Builder profile blurb, full length",
      "meta": "Now · Zillow, Realtor.com, NewHomeSource, Houzz · About the builder field",
+     "tier": "core",
+     "batch": 1,
      "body": "Mitchell Homes builds custom homes on land you own. Family-owned and building on your land since 1992, we offer more than 40 floor plans from 1,000 to 3,000 square feet and more than 40,000 selections, chosen in person at a Mitchell Design Center.\n\nThrough SimplyMitchell there is zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. Every choice is priced before we build, and you hear from us every week from groundbreaking to move-in.\n\nMitchell builds in Virginia, North Carolina, South Carolina and Maryland. Our five Design Centers are in Fredericksburg, Richmond, Newport News, Raleigh and Wilmington.\n\nVirginia and Maryland: (540) 701-2759. North and South Carolina: (984) 331-5468.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=zillow&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=portal_profile",
      "notes": "Same text on every portal so the AI engines read one consistent description. Swap utm_source per portal: zillow, realtor, newhomesource, houzz."
@@ -463,6 +587,8 @@
     {
      "title": "Builder profile blurb, short",
      "meta": "Now · Zillow, Realtor.com, NewHomeSource, Houzz · Short description fields",
+     "tier": "core",
+     "batch": 1,
      "body": "Custom homes on land you own, since 1992. More than 40 floor plans and more than 40,000 selections. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. Building in Virginia, North Carolina, South Carolina and Maryland.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=newhomesource&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=portal_profile_short",
      "notes": "For fields with a character cap. Swap utm_source per portal."
@@ -470,6 +596,8 @@
     {
      "title": "Design Dollars promo snippet",
      "meta": "Now to October 31, 2026 · Zillow, Realtor.com, NewHomeSource promotion fields · Promotion",
+     "tier": "core",
+     "batch": 1,
      "body": "Make it your home. Every Mitchell home comes with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize. Reserve by October 31, 2026.\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=zillow&utm_medium=referral&utm_campaign=fall26_designdollars&utm_content=portal_promo",
      "notes": "Pick the portal's incentive or promotion category, never a price reduction category. End date October 31; renew only with Mitchell's approved November date. Swap utm_source per portal."
@@ -477,6 +605,8 @@
     {
      "title": "Houzz project description (fill in from a real finished home)",
      "meta": "When photos are cleared · Houzz · Project description",
+     "tier": "core",
+     "batch": 1,
      "body": "Title: A custom Mitchell home on land the owners already held, [County], [State]\n\nThe [Plan name] plan, [square feet] square feet, built by Mitchell Homes on a homesite the owners chose [their reason, in their words].\n\nThe owners started with the land and a folder of saved photos. They chose the [Plan name] from more than 40 Mitchell floor plans, then made it theirs at our [Studio] Design Center: [two or three real selections, such as cabinet style, countertop and flooring].\n\n[One sentence on how they use a space they designed, in their words.]\n\nBuilt through SimplyMitchell: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. [Confirm the owners used SimplyMitchell; delete this paragraph if not.]\n\nMitchell Homes has built custom homes on land our buyers own since 1992.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=houzz&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=houzz_project",
      "notes": "Fill every bracket from the real job and the owners' sign-off; invent nothing. Upload the full photo set with room tags. Use the profile's website field for this link."
@@ -490,28 +620,36 @@
    "items": [
     {
      "title": "Nextdoor: Design Dollars",
-     "meta": "October 14, 2026 · Nextdoor business page · Post",
+     "meta": "Winter, date to be set · Nextdoor business page · Post",
+     "tier": "later",
+     "batch": null,
      "body": "It is your land. Make it your home.\n\nMitchell Homes has built custom homes on land our neighbors own since 1992. This fall, your home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more you personalize. Reserve by October 31, 2026.\n\nTell us where you are building and one of our online sales counselors will call you, usually within fifteen minutes:\nhttps://simplymitchellhomes.com/design-dollars?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=nd_designdollars\n\nDesign Dollars apply to Design Center selections only. Not applied to base price. No cash value.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=nd_designdollars",
      "notes": "Post from each Design Center's Nextdoor business page where one exists."
     },
     {
      "title": "Nextdoor: Home Portrait",
-     "meta": "October 19, 2026 · Nextdoor business page · Post",
+     "meta": "Winter, date to be set · Nextdoor business page · Post",
+     "tier": "later",
+     "batch": null,
      "body": "Picturing a home on land you own, or land you are still looking for?\n\nAnswer eight questions. We paint your Home Portrait: a painting of the home you described, your spaces and style in your own words, and the clearest path to building it. About 90 seconds.\nhttps://mitchellhomesliving.com/portrait?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=nd_portrait\n\nMitchell Homes, building on your land since 1992.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=nd_portrait",
      "notes": "Image: a Home Portrait static ad."
     },
     {
      "title": "Nextdoor: Four Buyers",
-     "meta": "October 27, 2026 · Nextdoor business page · Post",
+     "meta": "Winter, date to be set · Nextdoor business page · Post",
+     "tier": "later",
+     "batch": null,
      "body": "Your land is worth more than you think.\n\nIf you own land and have thought about building on it, the first question is usually about money. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan.\n\nVirginia and Southern Maryland: https://simplymitchellhomes.com/land?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=nd_fourbuyers\nNorth and South Carolina: https://simplymitchellhomes.com/onyourland?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=nd_fourbuyers",
      "link": "https://simplymitchellhomes.com/land?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=nd_fourbuyers",
      "notes": "Virginia studio pages keep only the first link line; Carolinas pages keep only the second."
     },
     {
      "title": "Facebook Groups approach",
-     "meta": "Ongoing from October 12 · Facebook Groups (local land, homesteading, rural property, community groups) · Playbook",
+     "meta": "Winter, date to be set · Facebook Groups (local land, homesteading, rural property, community groups) · Playbook",
+     "tier": "later",
+     "batch": null,
      "body": "Where: local land-for-sale, homesteading, rural property and county community groups in each Design Center market. Search the county name with land, acreage or homestead.\n\nWho posts: a named New Home Consultant from their own profile, with Mitchell Homes in their profile. A person reads as a neighbor; a Page reads as an ad.\n\nRules:\n1. Read the group rules first. Business posts only where the rules allow them, or on the admin's promotion day.\n2. Value first. Answer the question asked, fully, in the comment, before any mention of Mitchell.\n3. Four helpful answers for every one post that mentions Mitchell.\n4. No links unless the rules allow them. If allowed, one link, at the end.\n5. Always disclose: I work with Mitchell Homes.\n6. Never message members who did not ask. Never recommend a county, town or neighborhood or call an area a good place to live (fair housing).\n7. No prices, savings figures or the fall offer in groups. Send those questions to a phone call.\n8. Log each group, its rules and its promotion day in one sheet.\n\nTime: 20 minutes a day, three days a week, per consultant.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=fbgroup_playbook",
      "notes": "Internal playbook. The link is only for groups whose rules allow one."
@@ -519,6 +657,8 @@
     {
      "title": "Facebook Groups example 1: buying land to build on",
      "meta": "Any week · Facebook Groups, land and acreage groups · Helpful post",
+     "tier": "later",
+     "batch": null,
      "body": "Buying land to build a house on? Five things I would check before you commit.\n\n1. Access. Is there legal road frontage or a recorded easement to the parcel?\n2. Septic. Has the soil been evaluated for a septic system? If not, ask about a perc or soil test before closing.\n3. Water. Is there public water at the road, or will you need a well?\n4. Power. How far is the nearest line from where the house would sit?\n5. Rules. Zoning, setbacks and any restrictive covenants recorded on the deed.\n\nYour county planning and health departments have the final word on all of these, and a survey settles the boundaries.\n\nI work with Mitchell Homes. We build on land people already own, so these questions come up every week. Happy to answer anything in the comments. Our Behind the Build episode Purchasing Land 101 goes deeper: https://www.youtube.com/watch?v=trgJ8maymOA",
      "link": "https://www.youtube.com/watch?v=trgJ8maymOA",
      "notes": "If the group bans links, end at the comments line."
@@ -526,20 +666,26 @@
     {
      "title": "Facebook Groups example 2: no public water or sewer",
      "meta": "Any week · Facebook Groups, homesteading and rural property groups · Helpful post",
+     "tier": "later",
+     "batch": null,
      "body": "No public water or sewer on your land? Here is the order it usually goes when you build.\n\nFirst, a soil evaluation shows whether and where a septic system can go. That spot shapes where the house can sit.\nNext, the well site gets planned at the required distance from the septic area. Your county or state health department sets those distances.\nThen the house, the driveway and the power line get placed around both.\n\nIt is a normal part of building on rural land, and it is worth doing before you settle on a house spot.\n\nI work with Mitchell Homes, and we build on land people already own. Our Behind the Build episode on well and septic walks through it: https://www.youtube.com/watch?v=zWwtw8qgp4w",
      "link": "https://www.youtube.com/watch?v=zWwtw8qgp4w",
      "notes": "Keep it general; state and county rules differ."
     },
     {
      "title": "Local partner ideas",
-     "meta": "Start week of October 19 · Each Design Center market · Partner list",
+     "meta": "Winter, date to be set · Each Design Center market · Partner list",
+     "tier": "later",
+     "batch": null,
      "body": "1. Land surveyors. They meet buyers the moment a parcel becomes real. Offer the Behind the Build land episodes as client education and a direct line to a New Home Consultant.\n2. Land listing agents and land auction firms. Agents who list acreage hear what can I build here every week.\n3. Farm Credit associations. They finance land purchases and know which members are ready to build.\n4. Cooperative Extension offices (Virginia Cooperative Extension, N.C. Cooperative Extension, Clemson Cooperative Extension, University of Maryland Extension). They run landowner and homestead workshops; offer a Homebuyer Roadmap to Success session.\n5. Home builders associations. Start with the three associations Mitchell already belongs to and ask for a consumer event slot.\n6. Rural electric cooperatives. Ask about member events and newsletters.\n7. Well drillers, septic designers and soil scientists. Same parcels, mutual referrals.\n\nFair housing: partners may share Mitchell's links; Mitchell never recommends where to buy.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=local_partner&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=partner_outreach",
      "notes": "Confirm the current realtor program terms before offering anything to agents."
     },
     {
      "title": "Partner outreach message",
-     "meta": "Start week of October 19 · Email or LinkedIn message from a New Home Consultant · One paragraph",
+     "meta": "Winter, date to be set · Email or LinkedIn message from a New Home Consultant · One paragraph",
+     "tier": "later",
+     "batch": null,
      "body": "Hi [Name], I am [Your name], a New Home Consultant at the Mitchell Homes [Studio] Design Center. Mitchell has built custom homes on land people already own since 1992, so many of the people you work with end up asking us the question you probably hear too: what can I build here, and how does the money work? I would like to be a useful resource for your clients, not another sales pitch. We have short Behind the Build episodes on purchasing land and on well and septic that you are welcome to share, and I am glad to meet a client of yours on their land and tell them plainly what it would take to build. Could we have coffee in the next two weeks? [Phone]",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=local_partner&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=partner_outreach",
      "notes": "Send from the consultant, not a generic inbox. Attach the two episode links from FACTS.md."
@@ -554,6 +700,8 @@
     {
      "title": "1. Google Business Profile posts, five Design Centers",
      "meta": "Rank 1 · Impact high · Effort low",
+     "tier": "core",
+     "batch": 1,
      "body": "Fifteen posts written. They sit on the map and branded results people already see when they look up a studio, so existing local searches become clicks. Two hours to load.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=google_business_profile&utm_medium=organic&utm_campaign=fall26_designdollars&utm_content=gbp_fredericksburg_offer",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -561,6 +709,8 @@
     {
      "title": "2. Land pillar reels from existing assets, including the first TikTok posts",
      "meta": "Rank 2 · Impact high · Effort low",
+     "tier": "core",
+     "batch": 1,
      "body": "Land and lots earns the highest engagement and is 6 percent of posts today. The Land reel, the landowner reel and the Four Buyers carousels are already cut. TikTok starts from zero.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s01",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -568,6 +718,8 @@
     {
      "title": "3. YouTube description block and pinned comment",
      "meta": "Rank 3 · Impact medium to high · Effort low",
+     "tier": "later",
+     "batch": null,
      "body": "Turns every existing episode into a quiz entrance and gives the Shorts a place to send viewers. One pass through the channel.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_description",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -575,6 +727,8 @@
     {
      "title": "4. YouTube retitles, five episodes",
      "meta": "Rank 4 · Impact medium to high · Effort low",
+     "tier": "later",
+     "batch": null,
      "body": "Titles are written for insiders today. Search-first titles let the episodes rank for the questions buyers type. Fifteen minutes.",
      "link": "https://www.youtube.com/watch?v=zWwtw8qgp4w",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -582,6 +736,8 @@
     {
      "title": "5. Portal profiles and Design Dollars promo",
      "meta": "Rank 5 · Impact medium to high · Effort low",
+     "tier": "core",
+     "batch": 1,
      "body": "Zillow, Realtor.com, NewHomeSource and Houzz outrank Mitchell locally and are cited by the AI engines. One consistent description fixes both.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=zillow&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=portal_profile",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -589,6 +745,8 @@
     {
      "title": "6. Series A, One Question, One Answer",
      "meta": "Rank 6 · Impact high · Effort medium",
+     "tier": "later",
+     "batch": null,
      "body": "Eight episodes already hold the answers. Clipping is editing, not filming. Builds Shorts and TikTok volume at a steady cadence.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=seriesA",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -596,20 +754,26 @@
     {
      "title": "7. Stories with link stickers",
      "meta": "Rank 7 · Impact medium · Effort low",
-     "body": "Six Story sets, mostly existing images. Stories reach followers who already know Mitchell, which suits the warm Design Dollars audience.",
+     "tier": "core",
+     "batch": 1,
+     "body": "Two Story sets in the fall plan, mostly existing images. Stories reach followers who already know Mitchell, which suits the warm Design Dollars audience.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=instagram&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=st01",
      "notes": "Impact is a judgment from the July audits, not a forecast."
     },
     {
      "title": "8. Design Dollars feed posts, through October 31",
      "meta": "Rank 8 · Impact medium · Effort low",
-     "body": "Five posts to warm followers before the reserve-by date. Time-boxed; stops November 1 until the next date is approved.",
+     "tier": "core",
+     "batch": 1,
+     "body": "Four posts to warm followers before the October 31 reserve-by date, then one in November once Mitchell confirms November 30. Time-boxed; stops November 1 until the next date is approved.",
      "link": "https://simplymitchellhomes.com/design-dollars?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_designdollars&utm_content=s02",
      "notes": "Impact is a judgment from the July audits, not a forecast."
     },
     {
      "title": "9. Series B, Before the House",
      "meta": "Rank 9 · Impact high · Effort high",
+     "tier": "later",
+     "batch": null,
      "body": "The biggest upside: original land stories, the format small builders win with. Needs a filming afternoon per division and owner permissions.",
      "link": "https://simplymitchellhomes.com/onyourland?utm_source=tiktok&utm_medium=organic_social&utm_campaign=fall26_fourbuyers&utm_content=seriesB",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -617,6 +781,8 @@
     {
      "title": "10. Facebook Groups, value first",
      "meta": "Rank 10 · Impact medium · Effort medium",
+     "tier": "later",
+     "batch": null,
      "body": "Reaches landowners where they ask questions. Slow, needs a named consultant with 20 minutes a day, and only works if it stays helpful.",
      "link": "https://www.youtube.com/watch?v=trgJ8maymOA",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -624,6 +790,8 @@
     {
      "title": "11. Local partners",
      "meta": "Rank 11 · Impact medium, slow to build · Effort medium",
+     "tier": "later",
+     "batch": null,
      "body": "Surveyors, land agents, Farm Credit and Extension meet buyers at the exact moment land becomes real. Pays off over months, not weeks.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=local_partner&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=partner_outreach",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -631,6 +799,8 @@
     {
      "title": "12. Nextdoor business posts",
      "meta": "Rank 12 · Impact low to medium · Effort low",
+     "tier": "later",
+     "batch": null,
      "body": "Three posts, cheap to run, reach depends on whether each studio has a business page.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=nextdoor&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=nd_portrait",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -638,6 +808,8 @@
     {
      "title": "13. Houzz project",
      "meta": "Rank 13 · Impact low to medium · Effort medium",
+     "tier": "core",
+     "batch": 1,
      "body": "Wakes up a dormant profile the AI engines underuse. Needs a finished home with cleared photos and owner sign-off.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=houzz&utm_medium=referral&utm_campaign=fall26_portrait&utm_content=houzz_project",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -645,6 +817,8 @@
     {
      "title": "14. YouTube community posts",
      "meta": "Rank 14 · Impact low · Effort low",
+     "tier": "later",
+     "batch": null,
      "body": "Two posts to 909 subscribers. Worth doing because they cost minutes; the poll also picks Series B topics.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=youtube&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=yt_community1",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -652,6 +826,8 @@
     {
      "title": "15. LinkedIn company page",
      "meta": "Rank 15 · Impact low · Effort low",
+     "tier": "core",
+     "batch": 1,
      "body": "Seven posts reuse Facebook captions. Small buyer audience; useful for recruiting, partners and relocating professionals.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=linkedin&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s20",
      "notes": "Impact is a judgment from the July audits, not a forecast."
@@ -659,6 +835,8 @@
     {
      "title": "Confirm before posting",
      "meta": "Before anything goes live · all sections · open questions",
+     "tier": "core",
+     "batch": 1,
      "body": "1. /dreamer and /dreamer-carolinas still carry step Two of their three steps, which promises a price fixed from day one that does not move during the build. FACTS.md does not allow that claim. Fix before s16, s17 (Carolinas link), st06 and the Newport News and Raleigh Four Buyers posts.\n2. /math still carries the text \"subject to confirmation before this page is published\" and Brittany's client hold is open. Clear it before s13, s17, s19 and the Richmond post.\n3. /land and /math cover Virginia and Southern Maryland only. There is no Carolinas landowner page, so Carolinas links go to /onyourland or /yourplan, which do not mention SimplyMitchell.\n4. The live Design Dollars page lists a sixth Design Center (Rocky Mount, NC, (252) 650-6630), uses the Incentives doc title in its fine print instead of New Home Consultant, and gives per-studio phone numbers: Richmond (804) 538-3912, Newport News (757) 210-3482, Wilmington (910) 996-3640. These posts use the two division lines as briefed.\n5. November reserve-by date is not approved. Every Design Dollars piece stops or loses its date line on November 1.\n6. /no-land and /onyourland promise a plan guide. Confirm it is actually sent before pushing organic traffic there.\n7. Behind the Build clips: check each for a build timeline, the old 6.5 percent figure or pricing before cutting.",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=facebook&utm_medium=organic_social&utm_campaign=fall26_portrait&utm_content=s04",
      "notes": "Each item names the posts it blocks."

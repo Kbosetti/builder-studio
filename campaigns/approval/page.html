@@ -294,7 +294,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
 <script>
 (function(){
   var D=/*DATA*/null;
-  var KEY='mitchell-fall-approval-v1',S={items:{},notes:{},answers:{},sign:{}};
+  var KEY='mitchell-fall-approval-v1'+(D.batch?'-batch'+D.batch.n:''),S={items:{},notes:{},answers:{},sign:{}};
   try{var saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved)S=Object.assign(S,saved);}catch(e){}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}refresh();}
   function el(t,a,kids){var e=document.createElement(t);for(var k in (a||{})){if(k==='text')e.textContent=a[k];else if(k==='html')e.innerHTML=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c!=null)e.appendChild(typeof c==='string'?document.createTextNode(c):c);});return e;}
@@ -346,7 +346,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
     ['Realtor incentive','What are the current realtor incentive terms we can mention to agents?'],
     ['Homeowner referrals','Is there a thank-you for homeowner referrals we can mention? The homeowner email makes no offer until you say so.'],
     ['Sample painting on the landing page (decided)','Decided October 8: no painted portraits anywhere before the quiz. The landing page and every email now show real Mitchell homes instead. Nothing needed from you.'],
-    ['Events','Which of the six events should we run, on which dates, and who from Mitchell can staff each one?'],
+    ['Events','We propose four events: the Design Dollars live Q&A on October 29, Bring Your Photos Saturday on November 7, Homeowner Appreciation Night on November 17 and the Realtor Lunch and Learn on November 18. Do these dates work, and who from Mitchell can staff each one?'],
     ['Build time on the quiz','The quiz mentions about 150 days, while the Four Buyers ads avoid any build duration. Keep it in the quiz, or remove it?'],
     ['Sending address','May we set up email from a Mitchell address so these emails arrive from Mitchell? It takes one DNS change from whoever manages mitchellhomesinc.com.'],
     ['Referring buyers to land agents','May consultants introduce buyers who are still looking for land to local agents who know land? The realtor land partner emails wait on this.'],
@@ -360,6 +360,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
   // items
   var ITEMS=[];
   function item(host,id,title,when,why,content){
+    if(content==null)return;
     var st=el('span',{class:'state',text:'Not reviewed'});
     var card=el('article',{class:'item',id:'item-'+id,'data-state':S.items[id]||''});
     var a=el('button',{type:'button','aria-pressed':'false',text:'Approve'}),c=el('button',{type:'button',class:'ch','aria-pressed':'false',text:'Needs changes'});
@@ -374,6 +375,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
   }
   function emailGrid(key){
     var list=D.emails.emails.filter(function(e){return e.series===key;});
+    if(!list.length)return null;
     var g=list.map(function(e){return {p:e.img,c:e.id.toUpperCase()+'  '+e.subject};});
     var grid=el('div',{class:'emails'});
     list.forEach(function(e,i){var b=el('button',{type:'button',class:'thumb','aria-label':'Open the email live: '+e.subject},[img(e.img,'Email '+e.subject)]);
@@ -381,12 +383,12 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
       grid.appendChild(el('div',{class:'em'},[b,el('div',{class:'sub',text:e.subject}),el('div',{class:'pre',text:e.preview}),
         el('div',{class:'info'},[el('b',{text:e.id.toUpperCase()}),el('span',{text:e.send}),el('span',{text:e.segment})]),e.hold?waitBadge(e.q):null]));});
     return grid;}
-  function shots(list){var g=list.map(function(s){return {p:s[0],c:s[1]};});var w=el('div',{class:'shots'});
+  function shots(list){if(!list.length)return null;var g=list.map(function(s){return {p:s[0],c:s[1]};});var w=el('div',{class:'shots'});
     list.forEach(function(s,i){var b=el('button',{type:'button','aria-label':'See full size: '+s[1]},[img(s[0],s[1])]);b.onclick=function(){openLb(g,i,b);};
       w.appendChild(el('div',{class:'shot'},[b,el('span',{text:s[1]}),s[2]?el('small',{text:s[2]}):null]));});return w;}
   function linkEl(u){if(/^https?:\/\/[^\s\[\]{}]+$/.test(u))return el('div',{class:'lk'},[el('a',{href:u,target:'_blank',rel:'noopener',text:'Open the link'}),el('span',{text:' '+u.split('?')[0].replace('https://','')})]);
     return el('div',{class:'lk',text:'Link: added in Builder Studio once the '+(/entry form/.test(u)?'entry form':/RSVP/i.test(u)?'RSVP form':'page')+' is built'});}
-  function posts(list,limit){var box=el('div',{class:'posts'}),more=null;
+  function posts(list,limit){if(!list||!list.length)return null;var box=el('div',{class:'posts'}),more=null;
     list.forEach(function(it,i){var d=el('details',{class:'post'});if(limit&&i>=limit)d.hidden=true;
       d.appendChild(el('summary',{},[el('span',{class:'pt',text:it.title}),el('span',{class:'pm',text:it.meta}),el('span',{class:'pr'},[it.hold?waitBadge(it.q):null,el('span',{class:'chev',text:'›'})])]));
       d.appendChild(el('div',{class:'pb'},[el('div',{class:'copy',text:it.body}),it.link?linkEl(it.link):null]));box.appendChild(d);});
@@ -395,70 +397,98 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
     more.onclick=function(){[].forEach.call(box.children,function(d){d.hidden=false;});more.remove();};
     return el('div',{style:'display:flex;flex-direction:column;gap:10px'},[box,more]);}
 
-  var L=D.lists,E=document.getElementById('items-email');
+  var L=D.lists,E=document.getElementById('items-email'),B=D.batch||null;
   var ser={};D.emails.series.forEach(function(s){ser[s.key]=s;});
   function count(k){return D.emails.emails.filter(function(e){return e.series===k;}).length;}
-  item(E,'A1','Design Dollars emails ('+count('designdollars')+')','October 13 to 29 · full list, minus anyone already under contract','Launch, the spend-and-add ladder, sign now and choose later, and where Design Dollars go, ending on the October 31 reserve-by date.',emailGrid('designdollars'));
-  item(E,'A2','Home Portrait emails ('+count('portrait')+')','October 15 to November 12 · everyone who has not taken the quiz','Each one sends the reader to the quiz: the invitation, the land question, the nine portraits, and the getaway portrait.',emailGrid('portrait'));
-  item(E,'A3','Four Buyers emails ('+count('fourbuyers')+')','November 3 to 19 · landowners first, then buyers without land','One argument per email, each sending landowners to the page that matches it. Carolinas versions go wherever a Carolinas page exists.',emailGrid('fourbuyers'));
-  item(E,'A4','Realtor and homeowner emails ('+count('partners')+')','Wednesdays, October 14 to November 18','Two realtor tracks: agents whose clients own land, and agents who know land and can help Mitchell buyers who are still looking. Plus a referral note for past Mitchell homeowners.',emailGrid('partners'));
+  // every "when" line is worked out from the pieces themselves, so it stays right in each batch
+  var MON={October:9,November:10,December:11},MNAME=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function dt(s){var m=/(October|November|December) (\d{1,2})/.exec(s||'');return m?new Date(2026,MON[m[1]],+m[2]):null;}
+  function span(texts){var ds=texts.map(dt).filter(Boolean).sort(function(a,b){return a-b;});if(!ds.length)return 'Saved for winter';
+    var a=ds[0],b=ds[ds.length-1],f=MNAME[a.getMonth()]+' '+a.getDate();if(+a===+b)return f;
+    return f+' to '+(a.getMonth()===b.getMonth()?'':MNAME[b.getMonth()]+' ')+b.getDate();}
+  function sends(k){return span(D.emails.emails.filter(function(e){return e.series===k;}).map(function(e){return e.send;}));}
+  function metas(list){return span((list||[]).map(function(i){return i.meta;}));}
+  item(E,'A1','Design Dollars emails ('+count('designdollars')+')',sends('designdollars')+' · full list, minus anyone already under contract','The launch, the spend-and-add ladder with the October 31 reserve-by date, sign now and choose later, and the November 30 last call once you confirm that date.',emailGrid('designdollars'));
+  item(E,'A2','Home Portrait emails ('+count('portrait')+')',sends('portrait')+' · engaged contacts, four Thursdays','Each one sends the reader to the quiz: the invitation, the land question, the nine portraits, and the getaway portrait, each with a reel.',emailGrid('portrait'));
+  item(E,'A3','Four Buyers emails ('+count('fourbuyers')+')',sends('fourbuyers')+' · landowners, and buyers still looking for land','One argument per email, each sending landowners to the page that matches it. The no-construction-loan and Dreamer emails wait until their questions are answered.',emailGrid('fourbuyers'));
+  item(E,'A4','Realtor emails ('+count('partners')+')',sends('partners')+' · the realtor list, about every other week','Two realtor tracks: agents whose clients own land, and agents who know land and can help Mitchell buyers who are still looking.',emailGrid('partners'));
 
   var W=document.getElementById('items-web'),w=D.web;
-  item(W,'A5','Website pop-up for mitchellhomesinc.com','Ready to go live once approved','It appears after fifteen seconds or halfway down a page, never on quiz pages, and stays away for two weeks once closed. A gentler corner-card version is included.',
-    shots([[w['popup-open-desktop'],'The pop-up on a computer'],[w['popup-open-phone'],'The pop-up on a phone'],[w['slidein-desktop'],'The gentler corner card'],[w['slidein-phone'],'The corner card on a phone']]));
-  item(W,'A6','Home Portrait landing page','Suggested address: mitchellhomesinc.com/home-portrait','What a visitor sees before taking the quiz: how it works, what is inside a portrait, the five portraits, SimplyMitchell, Design Dollars, a homeowner story, homeowner videos and common questions.',
-    shots([[w['landing-desktop-full'],'On a computer','Tap to see the whole page'],[w['landing-phone-full'],'On a phone','Tap to see the whole page']]));
-  item(W,'A26','Homeowner video strip for mitchellhomesinc.com','Ready for the website vendor once approved','Two homeowner stories and a Behind the Build episode, ready to paste into any page. The videos load only when someone taps Play, so pages stay fast. The Home Portrait reels join it once they are hosted.',
-    shots([[w['videos-desktop'],'On a computer'],[w['videos-phone'],'On a phone']]));
+  if(w){
+    item(W,'A5','Website pop-up for mitchellhomesinc.com','Ready to go live once approved','It appears after fifteen seconds or halfway down a page, never on quiz pages, and stays away for two weeks once closed. A gentler corner-card version is included.',
+      shots([[w['popup-open-desktop'],'The pop-up on a computer'],[w['popup-open-phone'],'The pop-up on a phone'],[w['slidein-desktop'],'The gentler corner card'],[w['slidein-phone'],'The corner card on a phone']]));
+    item(W,'A6','Home Portrait landing page','Suggested address: mitchellhomesinc.com/home-portrait','What a visitor sees before taking the quiz: how it works, what is inside a portrait, the five portraits, SimplyMitchell, Design Dollars, a homeowner story, the reels, homeowner videos and common questions.',
+      shots([[w['landing-desktop-full'],'On a computer','Tap to see the whole page'],[w['landing-phone-full'],'On a phone','Tap to see the whole page']]));
+    item(W,'A26','Homeowner video strip for mitchellhomesinc.com','Ready for the website vendor once approved','Two homeowner stories and a Behind the Build episode, ready to paste into any page. The videos load only when someone taps Play, so pages stay fast.',
+      shots([[w['videos-desktop'],'On a computer'],[w['videos-phone'],'On a phone']]));
+  }
 
   var SO=document.getElementById('items-social');
-  item(SO,'A7','Social posts ('+L.social.length+')','October 12 to November 8 · Facebook, Instagram, YouTube Shorts, TikTok, LinkedIn','Built from the reels and ads you already have. Land leads, because land posts earn Mitchell the most engagement.',posts(L.social,8));
-  item(SO,'A8','Google Business Profile posts ('+L.gbp.length+')','From October 12 · all five Design Centers','A Design Dollars offer, a Home Portrait update and a Four Buyers update for each studio, shown on the map and in search.',posts(L.gbp,5));
-  item(SO,'A9','YouTube and Behind the Build ('+L.youtube.length+')','Now, updated November 1','A quiz and Design Dollars link under every episode, a pinned comment, community posts, and clearer episode titles.',posts(L.youtube));
+  item(SO,'A7','Social posts ('+L.social.length+')',metas(L.social)+' · Facebook, Instagram, YouTube Shorts, TikTok, LinkedIn','Three or four a week, built from the reels and ads you already have, echoing the week\'s email.',posts(L.social,8));
+  item(SO,'A8','Google Business Profile posts ('+L.gbp.length+')',metas(L.gbp)+' · all five Design Centers','Updates for each studio, shown on the map and in search.',posts(L.gbp,5));
   item(SO,'A10','Listing portals ('+L.portals.length+')','Now · Zillow, Realtor.com, NewHomeSource, Houzz','One consistent builder description everywhere, with the Design Dollars offer.',posts(L.portals));
-  item(SO,'A11','Nextdoor and local partners ('+L.community.length+')','From October 14','Nextdoor posts, helpful posts for local land groups, and a note for surveyors, land agents and extension offices.',posts(L.community));
-  if(L.groups&&L.groups.length)item(SO,'A21','Facebook groups to join ('+L.groups.length+')','From October 12 · join first, post only where the admins say yes','Local community, new-to-the-area, land and homesteading groups in Mitchell\'s markets. The team joins, helps for a week or two, then asks the admins before posting anything about Mitchell.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[posts(L.groups,8),L.groupMsgs&&L.groupMsgs.length?el('h4',{style:'margin:6px 0 0',text:'The note to admins, and posts that help before they ask'}):null,L.groupMsgs&&L.groupMsgs.length?posts(L.groupMsgs):null]));
+  item(SO,'A9','YouTube and Behind the Build ('+L.youtube.length+')','Saved for winter','A quiz and Design Dollars link under every episode, a pinned comment, community posts, and clearer episode titles.',posts(L.youtube));
+  item(SO,'A11','Nextdoor and local partners ('+L.community.length+')','Saved for winter','Nextdoor posts, helpful posts for local land groups, and a note for surveyors, land agents and extension offices.',posts(L.community));
+  if(L.groups&&L.groups.length)item(SO,'A21','Facebook groups to join ('+L.groups.length+')','Saved for winter · join first, post only where the admins say yes','Local community, new-to-the-area, land and homesteading groups in Mitchell\'s markets. The team joins, helps for a week or two, then asks the admins before posting anything about Mitchell.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[posts(L.groups,8),L.groupMsgs&&L.groupMsgs.length?el('h4',{style:'margin:6px 0 0',text:'The note to admins, and posts that help before they ask'}):null,L.groupMsgs&&L.groupMsgs.length?posts(L.groupMsgs):null]));
 
   var DI=document.getElementById('items-direct');
-  item(DI,'A12','Text messages ('+L.sms.length+')','October 14 to November 4 · only contacts who agreed to texts','Short, with a tracked link and a way to opt out.',posts(L.sms));
+  item(DI,'A12','Text messages ('+L.sms.length+')',metas(L.sms)+' · only contacts who agreed to texts','Four in six weeks, never on an email day, each with a tracked link and a way to opt out.',posts(L.sms));
   item(DI,'A13','Sales team scripts ('+L.sales.length+')','For New Home Consultants and online sales counselors','Texts, a voicemail, the Home Portrait call opener, and an email signature line.',posts(L.sales));
-  item(DI,'A14','Website bar, missed-call text and thank-you pages ('+L.website.length+')','Through October 31, then ongoing','Small additions that put the quiz and the offer in front of people already on the site or already calling.',posts(L.website));
+  item(DI,'A14','Website bar, missed-call text and thank-you pages ('+L.website.length+')','Live October 19','Small additions that put the quiz and the offer in front of people already on the site or already calling.',posts(L.website));
 
   var PR=document.getElementById('items-print');
-  item(PR,'A15','Print pieces ('+D.prints.length+')','Print-ready files at 300 dpi','Each QR code is tracked, so every scan is counted.',shots(D.prints.map(function(p){return [p.img,p.title,p.size];})));
-  item(PR,'A16','Events ('+L.eventsSeries.length+')','October 24 to November 18 · proposals until Mitchell confirms dates and staffing',L.eventsSeries.length+' events that run with the campaigns. Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages.',posts(L.eventsSeries));
+  if(D.prints.length)item(PR,'A15','Print pieces ('+D.prints.length+')','In the Design Centers by October 19','Each QR code is tracked, so every scan is counted.',shots(D.prints.map(function(p){return [p.img,p.title,p.size];})));
+  item(PR,'A16','Events ('+L.eventsSeries.length+')',metas(L.eventsSeries)+' · proposals until you confirm dates and staffing','Each one rides the existing emails, posts and personal invitations, so nobody gets extra marketing messages.',posts(L.eventsSeries));
 
   var CA=document.getElementById('items-cadence'),K=D.cadence;
-  var rules=el('ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
-    'Two emails a week at most. Tuesday goes to the full list; Thursday only to contacts who opened or clicked in the last 90 days, plus every new lead.',
-    'One text a week at most, never on the same day as an email, and only to people who did not open that week\'s email.',
-    'A person follows every signal: quiz takers hear from someone within 15 minutes, and anyone who clicks hears from a consultant within one business day.',
-    'Anyone booked, under contract or talking with a consultant comes off the campaign emails and texts.',
-    'Deadline week, October 26 to 31, is the one heavy week. Pieces on hold go out in the next open slot once their question is answered.'].map(function(t){return el('li',{text:t});}));
-  var calLink=el('p',{},[el('a',{href:K.url,target:'_blank',rel:'noopener',style:'font-weight:700',text:'Open the full calendar: '+K.url.replace('https://','')})]);
-  item(CA,'A17','The fall schedule','October 12 to November 22 · every email, text, post and sales touch on one calendar','The weekly rhythm, the limits that keep it from feeling like too much, and the full day-by-day calendar.',
-    el('div',{style:'display:flex;flex-direction:column;gap:14px'},[shots([[K.rhythm,'The weekly rhythm'],[K.week,'Week 1, day by day','Tap to see it larger']]),rules,calLink]));
+  if(K){
+    var rules=el('ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
+      'One email a week to the full list, on Tuesday. Engaged contacts also get a Home Portrait email on four Thursdays.',
+      'Four texts in six weeks, never on the same day as an email, and only to people who did not open that week\'s email.',
+      'A person follows every signal: quiz takers hear from someone within 15 minutes, and anyone who clicks hears from a consultant within one business day.',
+      'Anyone booked, under contract or talking with a consultant comes off the campaign emails and texts.',
+      'Pieces on hold go out in the next open slot once their question is answered; nothing else moves.'].map(function(t){return el('li',{text:t});}));
+    var calLink=el('p',{},[el('a',{href:K.url,target:'_blank',rel:'noopener',style:'font-weight:700',text:'Open the full calendar: '+K.url.replace('https://','')})]);
+    item(CA,'A17','The fall schedule','October 19 to November 29 · every email, text, post and sales touch on one calendar','The weekly rhythm, the limits that keep it from feeling like too much, and the full day-by-day calendar.',
+      el('div',{style:'display:flex;flex-direction:column;gap:14px'},[shots([[K.rhythm,'The weekly rhythm'],[K.week,'Week 1, day by day','Tap to see it larger']]),rules,calLink]));
+  }
   var NU=document.getElementById('items-nurture');
-  var flow=el('ol',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
-    'Day 0: a short personal email from their consultant.','Day 2: a text with a question that is easy to answer.','Day 5: a designed email that answers what landowners ask first, or what to check before buying land.',
-    'Day 12: a homeowner story from their consultant.','Day 19: a text about their Home Portrait, or an invitation to take it.','Day 26: a designed email about Design Dollars.',
-    'Day 35: a polite last note from their consultant: should I keep your file open?','Day 45: a text with a short Behind the Build episode.','Day 60: a designed email with everything in one place, then the monthly newsletter.',
-    'Any reply, a booked appointment or a reservation stops it at once and alerts the consultant.'].map(function(t){return el('li',{text:t});}));
-  item(NU,'A19','Nurture emails ('+count('nurture')+')','Day 0 to Day 60 after a lead goes quiet','Personal notes from the consultant alternate with designed emails, with one version for landowners and one for buyers still looking for land.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[flow,emailGrid('nurture')]));
+  var nuGrid=emailGrid('nurture');
+  if(nuGrid){
+    var flow=el('ol',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},[
+      'Day 0: a short personal email from their consultant.','Day 2: a text with a question that is easy to answer.','Day 5: a designed email that answers what landowners ask first, or what to check before buying land.',
+      'Day 12: a homeowner story from their consultant.','Day 19: a text about their Home Portrait, or an invitation to take it.','Day 26: a designed email about Design Dollars.',
+      'Day 35: a polite last note from their consultant: should I keep your file open?','Day 45: a text with a short Behind the Build episode.','Day 60: a designed email with everything in one place, then the monthly newsletter.',
+      'Any reply, a booked appointment or a reservation stops it at once and alerts the consultant.'].map(function(t){return el('li',{text:t});}));
+    item(NU,'A19','Nurture emails ('+count('nurture')+')','Live November 2 · Day 0 to Day 60 after a lead goes quiet','Personal notes from the consultant alternate with designed emails, with one version for landowners and one for buyers still looking for land.',el('div',{style:'display:flex;flex-direction:column;gap:14px'},[flow,nuGrid]));
+  }
   item(NU,'A20','Nurture texts ('+L.nurture.length+')','Days 2, 19 and 45','Short, personal, and easy to answer. Only to leads who gave text consent.',posts(L.nurture));
   var HO=document.getElementById('items-homeowners'),CT=D.contest;
   if(CT){
     function ulist(arr,ordered){return el(ordered?'ol':'ul',{style:'margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:76ch'},arr.map(function(t){return el('li',{text:t});}));}
     function sub(t){return el('h4',{style:'margin:8px 0 0',text:t});}
-    item(HO,'A22','Homeowner Appreciation Night and My Mitchell Story','Kickoff Tuesday, November 10 · entries through Sunday, December 6 · winner announced December 15',CT.summary,
+    if(CT.overview!==false)item(HO,'A22','Homeowner Appreciation Night and My Mitchell Story',CT.when,CT.summary,
       el('div',{style:'display:flex;flex-direction:column;gap:10px'},[sub('How it works'),ulist(CT.how,true),sub('What homeowners receive'),ulist(CT.prizes),sub('The dates'),ulist(CT.timeline),sub('The four questions homeowners answer on video'),ulist(CT.prompts)]));
-    item(HO,'A23','Homeowner emails ('+count('homeowners')+')','Wednesdays to past homeowners, plus four automatic notes','The invitation, the launch, filming tips, the last week and the winner, and the personal notes each entrant receives along the way.',emailGrid('homeowners'));
-    item(HO,'A24','Homeowner texts, posts and scripts ('+L.contest.length+')','November 9 to December 15','Short texts only to homeowners who agreed to texts, posts that feature entries only with permission, and words for consultants and the warranty team.',posts(L.contest,8));
+    item(HO,'A23','Homeowner emails ('+count('homeowners')+')',sends('homeowners')+' · past homeowners, plus automatic notes to entrants','The invitation, the launch, filming tips, the last week and the winner, and the personal notes each entrant receives along the way.',emailGrid('homeowners'));
+    item(HO,'A24','Homeowner texts, posts and scripts ('+L.contest.length+')',metas(L.contest),'Short texts only to homeowners who agreed to texts, posts that feature entries only with permission, and words for consultants and the warranty team.',posts(L.contest,8));
     item(HO,'A25','Official Rules, entry form and photo sessions','Draft for legal review','The rules are a draft for Mitchell\'s legal team. The entry form collects the video and the permissions; the photographer brief sets what every session includes.',posts(L.contestRules,6));
   }
   item(CA,'A18','Sales team follow-ups ('+L.followups.length+')','Fired by what each buyer does, from the consultant\'s own phone or email','Personal texts and emails for quiz takers, Design Dollars and landowner interest, deadline week, Design Center visits, old leads and realtors.',posts(L.followups,6));
 
-  // at a glance
+  // a batch page shows only its own sections and questions
+  ['emails','web','social','direct','print','nurture','homeowners','cadence'].forEach(function(id){var sec=document.getElementById(id);
+    if(sec&&!sec.querySelector('article.item')){sec.hidden=true;var a=document.querySelector('.bar nav a[href="#'+id+'"]');if(a)a.hidden=true;}});
+  if(B){
+    var cv=document.querySelector('.cover');
+    cv.querySelector('.eyebrow').textContent='Batch '+B.n+' of 3 · Proof by '+B.proof_by+' · Prepared by CEA Marketing';
+    cv.querySelector('h1').textContent='';cv.querySelector('h1').appendChild(document.createTextNode('Batch '+B.n+': '));cv.querySelector('h1').appendChild(el('span',{class:'s',text:B.name}));
+    var cp=cv.querySelector('p');cp.textContent='The pieces that go out '+B.sends+'. '+B.theme+' Nothing has been sent or posted. ';
+    cp.appendChild(el('a',{href:D.planUrl,target:'_blank',rel:'noopener',style:'color:#fff;font-weight:700',text:'See the whole plan'}));
+    document.getElementById('glance').hidden=true;var ga=document.querySelector('.bar nav a[href="#glance"]');if(ga)ga.hidden=true;
+  }
+
+  // at a glance (the full document only)
+  if(!D.batch){
   var M=[['Email',1,1,1],['Website pop-up and landing page',0,1,0],['Website bar and thank-you pages',1,1,0],['Social posts',1,1,1],['Google Business Profiles',1,1,1],['YouTube',1,1,0],['Listing portals',1,0,0],['Nextdoor and local groups',1,1,1],['Facebook groups',1,1,1],['Text messages',1,1,1],['Sales team',1,1,0],['Print',1,1,0],['Events',1,1,0]];
   var mt=document.getElementById('matrix');
   M.forEach(function(r){mt.appendChild(el('tr',{},[el('td',{text:r[0]})].concat([1,2,3].map(function(i){return el('td',{},[r[i]?el('span',{class:'dot','aria-label':'Yes'}):el('span',{class:'muted','aria-label':'No',text:'·'})]);}))));});
@@ -474,11 +504,13 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
     x.emails.forEach(function(t){ul.appendChild(el('li',{text:'Email: '+t}));});x.texts.forEach(function(t){ul.appendChild(el('li',{text:'Text: '+t}));});
     if(x.posts)ul.appendChild(el('li',{text:x.posts+' social post'+(x.posts>1?'s':'')}));if(x.gbp)ul.appendChild(el('li',{text:x.gbp+' Google profile post'+(x.gbp>1?'s':'')}));
     wh.appendChild(el('div',{class:'week'},[el('b',{text:'Week of '+fmt.format(x.m)}),ul]));});
-  var rk=document.getElementById('rank');D.ranking.forEach(function(r){rk.appendChild(el('li',{},[el('b',{text:r.title.replace(/^\d+\.\s*/,'')}),el('span',{class:'muted',text:'  '+r.meta}),el('div',{class:'muted',text:r.body})]));});
+  var rk=document.getElementById('rank');(D.ranking||[]).forEach(function(r){rk.appendChild(el('li',{},[el('b',{text:r.title.replace(/^\d+\.\s*/,'')}),el('span',{class:'muted',text:'  '+r.meta}),el('div',{class:'muted',text:r.body})]));});
+
+  }
 
   // questions
   var qs=document.getElementById('qs');
-  QUESTIONS.forEach(function(q,i){var n=i+1,ta=el('textarea',{id:'answer-'+n,placeholder:'Your answer','aria-label':'Answer to question '+n});ta.value=S.answers[n]||'';
+  QUESTIONS.forEach(function(q,i){var n=i+1;if(D.qnums&&D.qnums.indexOf(n)<0)return;var ta=el('textarea',{id:'answer-'+n,placeholder:'Your answer','aria-label':'Answer to question '+n});ta.value=S.answers[n]||'';
     ta.addEventListener('input',function(){S.answers[n]=ta.value;save();});
     qs.appendChild(el('div',{class:'q',id:'q'+n},[el('span',{class:'qn',text:'Q'+n}),el('h3',{text:q[0]}),el('p',{text:q[1]}),ta]));});
 
@@ -486,12 +518,12 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
   ['sName','sTitle','sDate'].forEach(function(id){var i=document.getElementById(id);i.value=S.sign[id]||(id==='sDate'?new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric'}).format(new Date()):'');
     i.addEventListener('input',function(){S.sign[id]=i.value;save();});});
   document.getElementById('approveRest').onclick=function(){ITEMS.forEach(function(it){if(!S.items[it.id])S.items[it.id]='approved';});save();toast('Every item you had not marked is now approved.');};
-  function summary(){var L2=['Mitchell Homes fall plan: approvals',''];
+  function summary(){var L2=['Mitchell Homes fall plan: approvals'+(D.batch?', Batch '+D.batch.n+' ('+D.batch.name+')':''),''];
     L2.push('Reviewed by: '+(S.sign.sName||'(name)')+(S.sign.sTitle?', '+S.sign.sTitle:''),'Date: '+(S.sign.sDate||''),'');
     ITEMS.forEach(function(it){var v=S.items[it.id],n=(S.notes[it.id]||'').trim();
       L2.push(it.id+'  '+it.title+': '+(v==='approved'?'Approved':v==='changes'?'Needs changes':'Not reviewed')+(n?'\n     Note: '+n.replace(/\n/g,' '):''));});
     L2.push('','Answers');
-    QUESTIONS.forEach(function(q,i){var a=(S.answers[i+1]||'').trim();L2.push('Q'+(i+1)+'  '+q[0]+': '+(a||'(no answer yet)'));});
+    QUESTIONS.forEach(function(q,i){if(D.qnums&&D.qnums.indexOf(i+1)<0)return;var a=(S.answers[i+1]||'').trim();L2.push('Q'+(i+1)+'  '+q[0]+': '+(a||'(no answer yet)'));});
     return L2.join('\n');}
   var sumbox=document.getElementById('sumbox'),mail=document.getElementById('mailSum');
   function toast(t){var x=document.getElementById('toast');x.textContent=t;clearTimeout(x._t);x._t=setTimeout(function(){x.textContent='';},4000);}
@@ -504,7 +536,7 @@ dialog.live::backdrop{background:rgba(10,20,14,.6)}
       it.a.setAttribute('aria-pressed',String(v==='approved'));it.c.setAttribute('aria-pressed',String(v==='changes'));if(v==='approved')a++;if(v==='changes')c++;});
     var n=ITEMS.length;document.getElementById('meterText').textContent=(a+c)+' of '+n+' reviewed · '+a+' approved · '+c+' with changes';
     document.getElementById('mA').style.width=(a/n*100)+'%';document.getElementById('mC').style.width=(c/n*100)+'%';
-    var t=summary();sumbox.textContent=t;mail.href='mailto:?subject='+encodeURIComponent('Mitchell fall plan approvals')+'&body='+encodeURIComponent(t);}
+    var t=summary();sumbox.textContent=t;mail.href='mailto:?subject='+encodeURIComponent('Mitchell fall plan approvals'+(D.batch?', Batch '+D.batch.n:''))+'&body='+encodeURIComponent(t);}
   refresh();
 })();
 </script>

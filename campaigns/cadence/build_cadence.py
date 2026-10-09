@@ -17,7 +17,7 @@ if os.path.isdir(OUT):
 os.makedirs(f"{OUT}/email")
 files = []
 MONTHS = {"October": 10, "November": 11}
-START, WEEKS = date(2026, 10, 12), 6
+START, WEEKS = date(2026, 10, 19), 6
 
 
 def when(text):
@@ -73,7 +73,7 @@ for i in dr["followups"]["items"]:
                    "who": "New Home Consultants", "body": i["body"], "notes": clean(i.get("notes", "")), "hold": "Waits on question 11" if "question 11" in i.get("notes", "") else ""})
 # the weekly Friday call list and the Thursday first touch for the quiz launch
 first = [x for x in dr["sales"]["items"] if x["title"].startswith("Text to a cold")][0]
-ev.append({"d": date(2026, 10, 15), "ch": "Sales team", "camp": "hp", "title": "Share the Home Portrait with your leads", "aud": "Every New Home Consultant to their cold or stalled leads",
+ev.append({"d": date(2026, 10, 22), "ch": "Sales team", "camp": "hp", "title": "Share the Home Portrait with your leads", "aud": "Every New Home Consultant to their cold or stalled leads",
            "who": "New Home Consultants", "body": first["body"], "notes": "The personal side of the first Home Portrait email the same day.", "hold": ""})
 land = [x for x in dr["followups"]["items"] if x["title"].startswith("Clicked a Four Buyers")][0]
 ev.append({"d": date(2026, 11, 5), "ch": "Sales team", "camp": "fb", "title": "Landowners: personal text to active leads", "aud": "Every New Home Consultant to active leads who own land, with text consent",
@@ -85,6 +85,8 @@ for w in range(WEEKS):
 
 org = {s["id"]: s for s in json.load(open(f"{C}/traffic/organic.json"))["sections"]}
 for i in org["social"]["items"]:
+    if i.get("tier") == "later":
+        continue
     d = when(i["meta"])
     if not d or not re.match(r"\w+day, ", i["meta"]):
         continue
@@ -113,28 +115,29 @@ for (d, kind), g in groups.items():
                "notes": ("On hold for " + " and ".join(g["held"]) + " until the Dreamer pages are fixed; the others can go now.") if g["held"] else "",
                "hold": "Hold" if g["held"] else ""})
 for i in org["community"]["items"] + org["youtube"]["items"]:
+    if i.get("tier") == "later":
+        continue
     d = when(i["meta"])
     if d and re.match(r"(October|November) \d", i["meta"]):
         ch = "Nextdoor" if "Nextdoor" in i["title"] else "YouTube"
         ev.append({"d": d, "ch": ch, "camp": campaign(i["title"], i["body"]), "title": i["title"], "aud": i["meta"].split(" · ")[1] if " · " in i["meta"] else "",
                    "who": "Marketing", "body": i["body"], "link": i.get("link", ""), "notes": clean(i.get("notes", "")), "hold": ""})
 # one time setup on day one
-setup = [("Website pop-up, announcement bar and thank-you pages", "Website vendor and marketing"), ("YouTube descriptions, pinned comment and retitles", "Marketing"),
-         ("Listing portal profiles and the Design Dollars snippet", "Marketing"), ("Print the counter cards and community flyers", "Design Centers"),
+setup = [("Website pop-up, announcement bar and thank-you pages", "Website vendor and marketing"),
+         ("Listing portal profiles and the Design Dollars snippet", "Marketing"), ("Print the counter cards", "Design Centers"),
          ("Missed-call text-back with the quiz link", "Marketing"), ("Email signature line or banner for everyone at Mitchell", "Everyone")]
 for t, who in setup:
     ev.append({"d": START, "ch": "Setup", "camp": "all", "title": t, "aud": "One time, the first week", "who": who, "body": "Everything for this is in the approval document and the traffic kit.", "hold": ""})
 
 ep = f"{C}/events/events.json"
 if os.path.exists(ep):
-    SCHED = {"e1": (date(2026, 10, 24), date(2026, 10, 22), date(2026, 10, 23)), "e2": (date(2026, 10, 27), None, date(2026, 10, 26)),
-             "e3": (date(2026, 11, 7), date(2026, 11, 5), date(2026, 11, 6)), "e4": (date(2026, 11, 14), date(2026, 11, 12), date(2026, 11, 13)),
-             "e5": (date(2026, 11, 12), None, date(2026, 11, 11)), "e6": (date(2026, 11, 18), date(2026, 11, 11), date(2026, 11, 17)),
-             "e7": (date(2026, 11, 10), date(2026, 10, 29), date(2026, 11, 9))}
+    # (event day, consultant invites, RSVP reminder); e3, e4 and e5 are banked for winter
+    SCHED = {"e2": (date(2026, 10, 29), date(2026, 10, 26), date(2026, 10, 28)), "e1": (date(2026, 11, 7), date(2026, 11, 2), date(2026, 11, 6)),
+             "e7": (date(2026, 11, 17), date(2026, 11, 5), date(2026, 11, 16)), "e6": (date(2026, 11, 18), date(2026, 11, 11), date(2026, 11, 17))}
     camp_of = {"e1": "dd", "e2": "dd", "e3": "fb", "e4": "all", "e5": "hp", "e6": "ref", "e7": "ref"}
-    replaced = {(date(2026, 10, 22), "Design Dollars: personal email to active leads"), (date(2026, 11, 5), "Landowners: personal text to active leads")}
-    ev = [x for x in ev if (x["d"], x["title"]) not in replaced]
     for e in json.load(open(ep))["events"]:
+        if e.get("tier") == "later" or e["id"] not in SCHED:
+            continue
         day, inv, rem = SCHED.get(e["id"], (None, None, None))
         cp = camp_of.get(e["id"], "all")
         ev.append({"d": day, "ch": "Event", "camp": cp, "title": e["name"], "aud": e.get("audience", ""), "who": e.get("where", ""),
@@ -168,23 +171,9 @@ if os.path.exists(cp):
     ev.append({"d": when(g["post_on"]), "ch": "Google", "camp": "ref", "title": g["title"], "aud": "Google Business Profile for each Design Center", "who": "Marketing",
                "body": g["body"], "link": g.get("link", ""), "notes": clean(g.get("notes", "")), "hold": ""})
     sale = ct["sales"][0]
-    ev.append({"d": date(2026, 11, 11), "ch": "Sales team", "camp": "ref", "title": "My Mitchell Story: " + sale["title"][0].lower() + sale["title"][1:], "aud": sale.get("when", ""),
+    ev.append({"d": date(2026, 11, 18), "ch": "Sales team", "camp": "ref", "title": "My Mitchell Story: " + sale["title"][0].lower() + sale["title"][1:], "aud": sale.get("when", ""),
                "who": "New Home Consultants", "body": sale["body"], "hold": ""})
-fgp = f"{C}/traffic/facebook_groups.json"
-if os.path.exists(fgp):
-    fg = json.load(open(fgp))
-    top = [g for g in fg.get("groups", []) if (g.get("priority") or 3) == 1]
-    if top:
-        ev.append({"d": START, "ch": "FB groups", "camp": "all", "title": f"Join the {len(top)} first-choice Facebook groups", "aud": "Local, new-to-the-area and land groups",
-                   "who": "Marketing, plus any consultant who lives in the area", "body": "\n".join(f"{g['name']} ({g.get('area', '')})\n{g.get('url', '')}" for g in top),
-                   "notes": "Read each group's rules. Comment helpfully for a week or two before asking anything.", "hold": ""})
-    if fg.get("outreach"):
-        o = fg["outreach"][0]
-        ev.append({"d": START + timedelta(days=10), "ch": "FB groups", "camp": "all", "title": "Ask the group admins before posting", "aud": "Admins of the groups joined in week one",
-                   "who": "Marketing", "body": o["body"], "notes": "Keep a list of which groups said yes. Post only there.", "hold": ""})
-    for i, x in enumerate(fg.get("posts", [])[:5]):
-        ev.append({"d": START + timedelta(days=16 + 7 * i), "ch": "FB groups", "camp": campaign(x["title"], x["body"]), "title": x["title"], "aud": x.get("fits", "Groups whose admins said yes"),
-                   "who": "Marketing", "body": x["body"], "link": x.get("link", ""), "notes": "Only in groups whose admins said yes.", "hold": ""})
+# Facebook group outreach, Nextdoor and YouTube cleanup are banked for winter (campaigns/plan), so they stay off this calendar
 ev = [x for x in ev if x["d"] and START <= x["d"] < START + timedelta(days=7 * WEEKS)]
 for x in ev:
     x["d"] = x["d"].isoformat()
@@ -192,7 +181,8 @@ ORDER = ["Event", "Setup", "Email", "Text", "Sales team", "Social", "Google", "N
 ev.sort(key=lambda x: (x["d"], ORDER.index(x["ch"]) if x["ch"] in ORDER else 9))
 playbook = [{"title": i["title"], "meta": i["meta"], "body": i["body"], "notes": clean(i.get("notes", ""))} for i in dr["followups"]["items"]]
 
-data = {"start": START.isoformat(), "weeks": WEEKS, "events": ev, "playbook": playbook}
+plan = json.load(open(f"{C}/plan/plan.json"))
+data = {"start": START.isoformat(), "weeks": WEEKS, "events": ev, "playbook": playbook, "themes": plan["week_themes"], "batchOfWeek": [1, 1, 2, 2, 3, 3]}
 page = open(f"{HERE}/page.html").read().replace("/*DATA*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
 if re.search(r"[–—]", page):
     raise SystemExit("dash found")

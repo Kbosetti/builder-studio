@@ -9,10 +9,10 @@ def u(url, src, med, camp, cont):
     return url + "?" + urlencode({"utm_source": src, "utm_medium": med, "utm_campaign": camp, "utm_content": cont})
 
 sms = [
- ("SMS 1 · Design Dollars", "Wednesday, October 14", "Mitchell Homes: Every home now starts with $5,000 in Design Dollars, up to $25,000 as you personalize. Terms apply. {link} Reply STOP to opt out", DD, "fall26_designdollars", "sms1"),
- ("SMS 2 · Home Portrait", "Wednesday, October 21", "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: {link} Reply STOP to opt out", QUIZ, "fall26_portrait", "sms2"),
+ ("SMS 1 · Design Dollars", "Wednesday, October 21", "Mitchell Homes: Every home now starts with $5,000 in Design Dollars, up to $25,000 as you personalize. Terms apply. {link} Reply STOP to opt out", DD, "fall26_designdollars", "sms1"),
+ ("SMS 2 · Home Portrait", "Wednesday, November 11", "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: {link} Reply STOP to opt out", QUIZ, "fall26_portrait", "sms2"),
  ("SMS 3 · Design Dollars reserve by", "Wednesday, October 28", "Mitchell Homes: Reserve by Oct 31 and your Design Dollars are locked. Choose finishes later. Terms apply. Questions? Just reply. STOP to opt out", None, "fall26_designdollars", "sms3"),
- ("SMS 4 · Landowners", "Wednesday, November 4", "Mitchell Homes: Your land can be your down payment. Zero down, zero closing costs, no construction loan. Terms apply. {link} STOP to opt out", SMH + "/land", "fall26_fourbuyers", "sms4"),
+ ("SMS 4 · Landowners", "Friday, November 6", "Mitchell Homes: Your land can be your down payment. Zero down, zero closing costs, no construction loan. Terms apply. {link} STOP to opt out", SMH + "/land", "fall26_fourbuyers", "sms4"),
 ]
 items = []
 for title, when, text, url, camp, cid in sms:
@@ -54,7 +54,7 @@ followups = [
  {"title": "Clicked a Design Dollars email: text", "meta": "Within one business day of the click · online sales counselor · text",
   "body": "Hi [first name], [your name] with Mitchell Homes. Every home now starts with $5,000 in Design Dollars for your Design Center selections, up to $25,000 the more you personalize. Happy to show you where your plan would land. Would a quick call this week work?",
   "notes": "Never mention that they clicked. The click only decides who hears from us first."},
- {"title": "Design Dollars: personal email to active leads", "meta": "Thursday, October 22 · every New Home Consultant to their own active leads · personal email",
+ {"title": "Design Dollars: personal email to active leads", "meta": "Friday, October 23 · every New Home Consultant to their own active leads · personal email",
   "body": "Subject: Where your plan lands on the Design Dollars ladder\n\nHi [first name],\n\nQuick note on something new this fall. Every Mitchell home now comes with $5,000 in Design Dollars for your Design Center selections, and the more you personalize, the more Mitchell adds, up to $25,000. Choose $60,000 in selections, for example, and Mitchell adds $15,000, so you take home $75,000 worth.\n\nYou do not have to pick a single finish to secure it. Sign now and your incentive is locked; your tier is set later, when you sit down at the Design Center.\n\nIf you tell me the plan you are leaning toward, I will show you where it would land on the ladder." + SIG + FINE,
   "notes": "One email per lead, from their own consultant. Skip anyone who already heard about Design Dollars in a call this month."},
  {"title": "Deadline week: personal email", "meta": "Tuesday, October 27 · every New Home Consultant to active leads · personal email",
@@ -75,10 +75,10 @@ followups = [
  {"title": "After a Design Center visit: text", "meta": "Same day · Design Consultant or New Home Consultant · text",
   "body": "Thank you for coming in today, [first name]. You are [amount] away from the next Design Dollars tier, which adds [amount] more for your selections. Anything you want me to price before we talk next?",
   "notes": "Scott's rule at the design table: tell them the gap. Fill the amounts from the ladder."},
- {"title": "Old-lead check-in: text and email", "meta": "Once this fall, Thursday, November 12 · New Home Consultant to leads quiet for six months or more",
+ {"title": "Old-lead check-in: text and email", "meta": "Once this fall, Thursday, November 19 · New Home Consultant to leads quiet for six months or more",
   "body": "Text: Hi [first name], [your name] with Mitchell Homes. It has been a while. We built a 90-second quiz that paints a portrait of the home you have in mind: mitchellhomesliving.com/portrait. If building is still on your list, I am here.\n\nEmail subject: Still thinking about building?\nHi [first name], it has been a while since we talked, so I wanted to share something new. Answer eight questions about the home you have in mind, and we paint your Home Portrait, along with what it would take to build it on your land. It takes about 90 seconds: mitchellhomesliving.com/portrait. If the timing is right, I would love to help." + SIG,
   "notes": "Text only to leads with text consent; everyone else gets the email."},
- {"title": "Bring your photos: text", "meta": "Thursday, November 19 · New Home Consultants to active leads with text consent · text",
+ {"title": "Bring your photos: text", "meta": "Monday, November 23 · New Home Consultants to active leads with text consent · text",
   "body": "Hi [first name], [your name] with Mitchell Homes. If you have been saving photos of the home you want, bring them in. We will sit down with the plans and price what is in them. Would [day] work for a Design Studio visit?",
   "notes": "The personal side of the Dreamer email the same day. Fine to send even while that email waits on question 5, because this text makes no pricing claim."},
  {"title": "Realtor follow-up email", "meta": "Two days after the realtor email, to agents who opened it · New Home Consultant · personal email",
