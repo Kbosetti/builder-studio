@@ -1,0 +1,295 @@
+[
+ {
+  "date": "2026-10-13",
+  "time_et": "10:00",
+  "id": "reel-2",
+  "media": "media/reel2_builder.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-14",
+  "time_et": "10:00",
+  "id": "graphic-calm3_stat",
+  "media": "media/calm3_stat.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-15",
+  "time_et": "10:00",
+  "id": "social-2",
+  "media": "media/promo2.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-16",
+  "time_et": "10:00",
+  "id": "graphic-static3b_builders_ai",
+  "media": "media/static3b_builders_ai.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-19",
+  "time_et": "10:00",
+  "id": "reel-7",
+  "media": "media/reel7_case_study.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-20",
+  "time_et": "10:00",
+  "id": "social-3",
+  "media": "media/promo3.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-21",
+  "time_et": "10:00",
+  "id": "carousel-1",
+  "media": "media/car1.jpg..car5.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-22",
+  "time_et": "10:00",
+  "id": "social-4",
+  "media": "media/promo4.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-23",
+  "time_et": "10:00",
+  "id": "graphic-static2_830_leads",
+  "media": "media/static2_830_leads.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-26",
+  "time_et": "10:00",
+  "id": "graphic-calm2_weekend",
+  "media": "media/calm2_weekend.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-27",
+  "time_et": "10:00",
+  "id": "social-5",
+  "media": "media/promo5.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-28",
+  "time_et": "10:00",
+  "id": "reel-6",
+  "media": "media/reel6_growth.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-29",
+  "time_et": "10:00",
+  "id": "social-6",
+  "media": "media/promo6.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-10-30",
+  "time_et": "10:00",
+  "id": "graphic-static7_myth_fact",
+  "media": "media/static7_myth_fact.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-02",
+  "time_et": "10:00",
+  "id": "graphic-calm1_quote",
+  "media": "media/calm1_quote.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-03",
+  "time_et": "10:00",
+  "id": "social-7",
+  "media": "media/promo7.jpg",
+  "channels": [
+   "facebook",
+   "instagram",
+   "linkedin (Kelly)"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-04",
+  "time_et": "10:00",
+  "id": "reel-1",
+  "media": "media/reel1_bold_ideas.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-05",
+  "time_et": "10:00",
+  "id": "graphic-static5_22_percent",
+  "media": "media/static5_22_percent.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-06",
+  "time_et": "10:00",
+  "id": "graphic-calm4_question",
+  "media": "media/calm4_question.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-09",
+  "time_et": "10:00",
+  "id": "reel-4",
+  "media": "media/reel4_service.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-10",
+  "time_et": "10:00",
+  "id": "graphic-static8_lights_camera",
+  "media": "media/static8_lights_camera.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-11",
+  "time_et": "10:00",
+  "id": "reel-3",
+  "media": "media/reel3_tourism.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-12",
+  "time_et": "10:00",
+  "id": "graphic-static4_mood_board",
+  "media": "media/static4_mood_board.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-13",
+  "time_et": "10:00",
+  "id": "reel-5",
+  "media": "media/reel5_video.mp4",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-16",
+  "time_et": "10:00",
+  "id": "graphic-static6_tampa_service",
+  "media": "media/static6_tampa_service.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ },
+ {
+  "date": "2026-11-17",
+  "time_et": "10:00",
+  "id": "graphic-static1_bold_ideas",
+  "media": "media/static1_bold_ideas.jpg",
+  "channels": [
+   "facebook",
+   "instagram"
+  ],
+  "caption_source": "DATA in the approval page index.html: social[].ig / social[].li, or reels/graphics[].cap, carousel.cap / carousel.li"
+ }
+]
