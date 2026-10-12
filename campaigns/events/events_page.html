@@ -1,0 +1,107 @@
+<title>Mitchell Fall Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a working document. Green header with the events at a glance, a sticky jump bar, then one section per event: the write-up first, the email previews, then every piece of copy with a copy button. */
+:root{
+  --bg:#f7f6f1; --paper:#ffffff; --ink:#173d28; --text:#26352c; --muted:#5d6f63; --line:#e1e4da; --wash:#eef0e8;
+  --accent:#2b6d47; --sun:#f5d053; --band:#1e4f33; --on-band:#ffffff; --band-muted:#c9dccf;
+  --fall:#2b6d47; --winter:#6c6c6c; --home:#8a6d00; --tag-bg:#eef0e8;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --band:#163a26; --band-muted:#b9cfc0; --fall:#86c9a1; --winter:#a8a8a8; --home:#e7c65a; --tag-bg:#1d2921; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --band:#163a26; --band-muted:#b9cfc0; --fall:#86c9a1; --winter:#a8a8a8; --home:#e7c65a; --tag-bg:#1d2921; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;margin:0}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+h1,h2,h3{color:var(--ink);text-wrap:balance}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+header.top{background:var(--band);color:var(--on-band)}
+header.top .wrap{padding-block:36px 32px;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun)}
+header.top h1{color:#fff;font-size:clamp(30px,4.6vw,44px);font-weight:800;line-height:1.08}
+header.top p{color:var(--band-muted);max-width:72ch}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:4px 16px;padding-block:10px;font-size:13px;font-weight:600}
+.bar a{color:var(--muted);text-decoration:none}
+.bar a:hover,.bar a:focus-visible{color:var(--accent)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+main.wrap{display:flex;flex-direction:column;gap:40px;padding-block:32px 64px}
+.lede{color:var(--muted);max-width:76ch}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--wash);padding:9px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+tbody tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;border-radius:999px;padding:3px 10px;background:var(--tag-bg);white-space:nowrap}
+.tag.f{color:var(--fall)} .tag.w{color:var(--winter)} .tag.h{color:var(--home)}
+.studios{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.studios li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;font-size:13px;min-width:0}
+.studios b{color:var(--ink)} .studios span{color:var(--muted)}
+section.event{display:flex;flex-direction:column;gap:18px;scroll-margin-top:60px;border-top:2px solid var(--line);padding-top:28px;min-width:0}
+.eh{display:flex;flex-direction:column;gap:10px}
+.eh h2{font-size:clamp(23px,3.2vw,30px);font-weight:800;line-height:1.15}
+.eh .line{font-weight:700;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 24px}
+.facts dt{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{font-size:14px}
+.write{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
+.write > div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.write h3{font-size:15px;font-weight:700}
+.write ul,.write ol{padding-left:20px;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.write p{font-size:14px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.shot{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.shot img{display:block;width:100%;height:300px;object-fit:cover;object-position:top}
+.shot figcaption{font-size:12px;color:var(--muted);padding:8px 10px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}
+summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.pieces{display:flex;flex-direction:column;gap:12px;padding-top:12px}
+.piece{border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0}
+.ph{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:10px 12px;background:var(--wash)}
+.ph div{display:flex;flex-direction:column;min-width:0}
+.ph b{color:var(--ink);font-size:14px}
+.ph span{font-size:12.5px;color:var(--muted)}
+.cp{flex:none;font:inherit;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--accent);cursor:pointer}
+.piece pre{margin:0;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--text)}
+.pn{font-size:12.5px;color:var(--muted);padding:0 12px 12px}
+ul.sched{list-style:none;padding:10px 0 0;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+h2.divider{font-size:26px;font-weight:800;scroll-margin-top:60px;margin-top:10px}
+.foot{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:760px){.write{grid-template-columns:1fr}}
+</style>
+
+<header class="top"><div class="wrap">
+  <span class="eyebrow">Mitchell Homes · Fall 2026</span>
+  <h1>Fall events and homeowner ideas</h1>
+  <p>The write-up for every event we proposed, what Mitchell needs to confirm, and all the copy for each one: invitations, texts, social and Google posts, Facebook events and follow-ups. Every date, prize and staffing detail is a proposal until Mitchell approves it. Nothing has been sent or posted.</p>
+</div></header>
+
+<div class="bar"><div class="wrap">%%NAV%%</div></div>
+
+<main class="wrap">
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2 style="font-size:24px;font-weight:800">At a glance</h2>
+    %%GLANCE%%
+    <p class="lede">Every event is invited inside emails and posts that already go out, so nobody gets extra messages for it. Homeowner Appreciation Night is the exception: past homeowners are their own list.</p>
+    <h3 style="font-size:16px">The five Design Centers</h3>
+    %%STUDIOS%%
+  </section>
+  %%BODY%%
+  <p class="foot">Prepared by CEA Marketing for Mitchell Homes. Placeholders in brackets, like [city] or [RSVP link], are filled per Design Center before anything goes out.</p>
+</main>
+
+<script>
+document.addEventListener('click', function(ev){
+  var b = ev.target.closest('.cp'); if(!b) return;
+  var pre = b.closest('.piece').querySelector('pre'); var text = pre.innerText;
+  function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1600); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(pre); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, press Ctrl+C'; setTimeout(function(){ b.textContent = 'Copy'; }, 2600); }
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
