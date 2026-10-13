@@ -33,7 +33,7 @@ Her ask to Kelly and Tom is a landing page behind the QR code (today it is a pla
 A single static page, mobile first, since nearly everyone arrives from a phone camera:
 
 1. **Header** matching the card: Mitchell logo and tagline lockup, then "Welcome to Our Homeowner Community!" in Charlotte, then one line of thanks for building with Mitchell.
-2. **Leave a review.** "Which Design Center did you build with?" offers five large tap targets. Picking one shows that location's "Review us on Google" button first and biggest, with Yelp second. Below them go the studio's name, address and phone, all from `campaigns/events/events.json` → `studios`:
+2. **Leave a review.** "Which Design Center did you build with?" offers five large tap targets. Picking one shows that location's "Review us on Google" button first and biggest, with Yelp second. Below them go the studio's name, address and phone, all from the `studios` list in `campaigns/events/events.json`:
    - Fredericksburg VA
    - Richmond VA (Midlothian)
    - Newport News VA
