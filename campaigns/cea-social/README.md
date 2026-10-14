@@ -27,3 +27,7 @@ Blog post 1 (How to Choose a Homebuilder Marketing Agency With Real AI Services)
 - The six CEA emails (blog newsletter plus the five email AI Visibility Audit nurture: day 0, 2, 5, 9, 14) are drafts in the CEA sub-account folder "Fall 2026 | CEA emails (drafts, do not send until approved)" as `CEA26 · ID · subject`, from Kelly Bosetti Primeau. HTML in `emails/`, loader `upload_emails.py` (reruns update in place), IDs in `emails_created.json`.
 - The blog images, promo1 and the CEA logo joined the media library too, 39 files in all (`uploaded.json`).
 - CEA contacts on October 14: 13,574 total, 13,184 with an email. Builder role tags: sales managers 1,230, division managers 1,072, marketing managers 644, corporate leaders 387, top executives 355 (tags can overlap). Realtor tags: Clearwater 2,365, Palm Harbor 584, Dunedin 130, Safety Harbor 22. Also home list 444, IBS 2026 153, CEA customers 142, coaches 112, MQL leads 112. About 2% of a 9,600 contact sample were unsubscribed or on do not disturb.
+
+## YouTube (Kelly's call, October 14)
+
+The seven reels stay on Instagram and Facebook only. They are too busy for YouTube. The CEA YouTube channel is for Kelly talking to camera; nothing from `schedule.json` goes there. The channel is also expired in the CEA Social Planner and needs reconnecting before anything posts.
