@@ -14,7 +14,7 @@ Post and schedule through the **CEA sub-account in Home Builder Studio**, with e
 ## Then
 
 1. Done October 14: all 30 files (7 reels, 18 graphics, 5 carousel slides) are in the CEA media library as `CEA social · <file>`; URLs and file IDs in `uploaded.json`. Keys: `GHL_PIT_CEA` and `GHL_LOCATION_CEA` (see CLAUDE.md).
-2. Delete the 21 old drafts in the CEA Social Planner from October 7 so nothing doubles.
+2. Done October 14: deleted all 22 old October 7 drafts in the CEA Social Planner (one post had been saved twice). Zero drafts remain.
 3. Schedule each row of `schedule.json` at 10am Eastern via `POST /social-media-posting/{locationId}/posts`. Facebook gets the blog URL in place of "link in bio".
 4. Set up the "Comment AUDIT" automatic DM in that sub-account.
 
@@ -31,3 +31,5 @@ Blog post 1 (How to Choose a Homebuilder Marketing Agency With Real AI Services)
 ## YouTube (Kelly's call, October 14)
 
 The seven reels stay on Instagram and Facebook only. They are too busy for YouTube. The CEA YouTube channel is for Kelly talking to camera; nothing from `schedule.json` goes there. The channel is also expired in the CEA Social Planner and needs reconnecting before anything posts.
+
+Kelly will share talking head videos she has already made, to sprinkle into the calendar, and will record new ones. Those are the YouTube content.
