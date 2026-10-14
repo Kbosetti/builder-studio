@@ -23,6 +23,21 @@ Never commit tokens. Look for them in this order:
 2. `/root/.config/cea/credentials.env` (local only, gitignored, disappears when the sandbox is reclaimed).
 3. Ask the user. The GHL private integration token also lives in the Vercel project env var `HBS_PIT`.
 
+**Builder Studio sub-accounts (Kelly sent the keys October 13, 2026).** Each PIT is read from `GHL_PIT_<KEY>` and its location from `GHL_LOCATION_<KEY>`, set in the Claude Code environment settings (and in `/root/.config/cea/credentials.env` for the session that received them). The keys themselves never go in this repo.
+
+| Account | KEY | Location ID |
+|---|---|---|
+| CEA Marketing | `CEA` | `m5oY7H8NWJiPv2YEL5Aj` |
+| Homebuilder Studio | `HBS` | `xv1KhcvWVceEaYkTwEVS` |
+| Vitale Homes | `VITALE` | `YuP3eTRFrZacBUiB8vIw` |
+| Sunlife Homes | `SUNLIFE` | `DrqiyXxYx8vvRF6A23dt` |
+| Cornerstone Homes | `CORNERSTONE` | `IXl5RZsJfouKBtQp54a6` |
+| Domain Homes | `DOMAIN` | `iuSAXTHiaLcZQWiBBdgi` |
+| Mitchell Homes | `MITCHELL` | `5o5zLlUPPizy6Ajp61oF` |
+| Justin and Stephanie | `JUSTIN_STEPHANIE` | `pfMSpx3QAIfHjjCuJSwc` |
+
+For Mitchell, scripts that read `GHL_PIT` accept `GHL_PIT_MITCHELL` (export one as the other).
+
 ## Common tasks
 
 - **Deploy the Home Portrait site:** `cd home-portrait && vercel deploy --prod --yes --no-wait --scope team_ruPVbZ5by79KqyoOnsn9JUZ8 --token $VERCEL_TOKEN`. Use `--no-wait`; the sandbox proxy drops connections held open longer than about nine seconds, which also breaks `vercel login` (use a token instead). Verify by comparing MD5 of each served page with the source.
