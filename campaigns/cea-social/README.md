@@ -8,13 +8,12 @@ Post and schedule through the **CEA sub-account in Home Builder Studio**, with e
 
 ## Waiting on
 
-- CEA sub-account Location ID (env var `CEA_GHL_LOCATION_ID`)
-- CEA Private Integration Token with Social Planner and Media scopes (env var `CEA_GHL_PIT`), set in the Claude environment settings
-- Instagram @ceamarketing, the CEA Facebook page and LinkedIn (Kelly plus the CEA page) connected in that sub-account's Social Planner
+- Nothing on access: the CEA key and location arrived October 13, and on October 14 Social Planner showed Facebook (CEA Marketing), Instagram (ceamarketing and kellyprimeauconsulting) and LinkedIn (the CEA page and Kelly) active. Google profiles and YouTube there are expired.
+- Kelly's go ahead on new dates, since the schedule started October 13
 
 ## Then
 
-1. Upload every file in `schedule.json` to the CEA media library (`POST /medias/upload-file`).
+1. Done October 14: all 30 files (7 reels, 18 graphics, 5 carousel slides) are in the CEA media library as `CEA social · <file>`; URLs and file IDs in `uploaded.json`. Keys: `GHL_PIT_CEA` and `GHL_LOCATION_CEA` (see CLAUDE.md).
 2. Delete the 21 old drafts in the CEA Social Planner from October 7 so nothing doubles.
 3. Schedule each row of `schedule.json` at 10am Eastern via `POST /social-media-posting/{locationId}/posts`. Facebook gets the blog URL in place of "link in bio".
 4. Set up the "Comment AUDIT" automatic DM in that sub-account.
