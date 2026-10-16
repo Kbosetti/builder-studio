@@ -1,0 +1,859 @@
+<title>Mitchell Fall Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a working document. Green header with the events at a glance, a sticky jump bar, then one section per event: the write-up first, the email previews, then every piece of copy with a copy button. */
+:root{
+  --bg:#f7f6f1; --paper:#ffffff; --ink:#173d28; --text:#26352c; --muted:#5d6f63; --line:#e1e4da; --wash:#eef0e8;
+  --accent:#2b6d47; --sun:#f5d053; --band:#1e4f33; --on-band:#ffffff; --band-muted:#c9dccf;
+  --fall:#2b6d47; --winter:#6c6c6c; --home:#8a6d00; --tag-bg:#eef0e8;
+  --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --band:#163a26; --band-muted:#b9cfc0; --fall:#86c9a1; --winter:#a8a8a8; --home:#e7c65a; --tag-bg:#1d2921; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101813; --paper:#17211b; --ink:#e6eee8; --text:#d5dfd8; --muted:#a2b2a7; --line:#2a382f; --wash:#1d2921;
+  --accent:#86c9a1; --band:#163a26; --band-muted:#b9cfc0; --fall:#86c9a1; --winter:#a8a8a8; --home:#e7c65a; --tag-bg:#1d2921; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;margin:0}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+h1,h2,h3{color:var(--ink);text-wrap:balance}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+header.top{background:var(--band);color:var(--on-band)}
+header.top .wrap{padding-block:36px 32px;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun)}
+header.top h1{color:#fff;font-size:clamp(30px,4.6vw,44px);font-weight:800;line-height:1.08}
+header.top p{color:var(--band-muted);max-width:72ch}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:4px 16px;padding-block:10px;font-size:13px;font-weight:600}
+.bar a{color:var(--muted);text-decoration:none}
+.bar a:hover,.bar a:focus-visible{color:var(--accent)}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+main.wrap{display:flex;flex-direction:column;gap:40px;padding-block:32px 64px}
+.lede{color:var(--muted);max-width:76ch}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--wash);padding:9px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+tbody tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.04em;border-radius:999px;padding:3px 10px;background:var(--tag-bg);white-space:nowrap}
+.tag.f{color:var(--fall)} .tag.w{color:var(--winter)} .tag.h{color:var(--home)}
+.studios{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.studios li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;font-size:13px;min-width:0}
+.studios b{color:var(--ink)} .studios span{color:var(--muted)}
+section.event{display:flex;flex-direction:column;gap:18px;scroll-margin-top:60px;border-top:2px solid var(--line);padding-top:28px;min-width:0}
+.eh{display:flex;flex-direction:column;gap:10px}
+.eh h2{font-size:clamp(23px,3.2vw,30px);font-weight:800;line-height:1.15}
+.eh .line{font-weight:700;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px 24px}
+.facts dt{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{font-size:14px}
+.write{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
+.write > div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.write h3{font-size:15px;font-weight:700}
+.write ul,.write ol{padding-left:20px;display:flex;flex-direction:column;gap:5px;font-size:14px}
+.write p{font-size:14px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.shot{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.shot img{display:block;width:100%;height:300px;object-fit:cover;object-position:top}
+.shot figcaption{font-size:12px;color:var(--muted);padding:8px 10px}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}
+summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.pieces{display:flex;flex-direction:column;gap:12px;padding-top:12px}
+.piece{border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0}
+.ph{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:10px 12px;background:var(--wash)}
+.ph div{display:flex;flex-direction:column;min-width:0}
+.ph b{color:var(--ink);font-size:14px}
+.ph span{font-size:12.5px;color:var(--muted)}
+.cp{flex:none;font:inherit;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--accent);cursor:pointer}
+.piece pre{margin:0;padding:12px;white-space:pre-wrap;overflow-wrap:anywhere;font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--text)}
+.pn{font-size:12.5px;color:var(--muted);padding:0 12px 12px}
+ul.sched{list-style:none;padding:10px 0 0;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+h2.divider{font-size:26px;font-weight:800;scroll-margin-top:60px;margin-top:10px}
+.foot{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:760px){.write{grid-template-columns:1fr}}
+</style>
+
+<header class="top"><div class="wrap">
+  <span class="eyebrow">Mitchell Homes · Fall 2026</span>
+  <h1>Fall events and homeowner ideas</h1>
+  <p>The write-up for every event we proposed, what Mitchell needs to confirm, and all the copy for each one: invitations, texts, social and Google posts, Facebook events and follow-ups. Every date, prize and staffing detail is a proposal until Mitchell approves it. Nothing has been sent or posted.</p>
+</div></header>
+
+<div class="bar"><div class="wrap"><a href="#e2">Behind the Build Live</a> <a href="#e1">Bring Your Photos Saturday</a> <a href="#e7">Homeowner Appreciation Night</a> <a href="#story">My Mitchell Story</a> <a href="#e6">Realtor Lunch and Learn</a> <a href="#winter">Saved for winter</a></div></div>
+
+<main class="wrap">
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <h2 style="font-size:24px;font-weight:800">At a glance</h2>
+    <div class='tw'><table><thead><tr><th>Event</th><th>Date</th><th>Time</th><th>For</th><th>Status</th></tr></thead><tbody><tr><td><a href="#e2">Behind the Build Live: Your Design Dollars and SimplyMitchell Questions</a></td><td>Thursday, October 29, 2026</td><td>7pm Eastern, about 30 minutes</td><td>Everyone still deciding before the October 31 reserve-by date: active leads, Design Dollars email clickers, quiz takers, and anyone curious how SimplyMitchell works</td><td><span class="tag f">This fall</span></td></tr><tr><td><a href="#e1">Bring Your Photos Saturday</a></td><td>Saturday, November 7, 2026</td><td>10am to 2pm, local time at every studio</td><td>Anyone planning a Mitchell home who has not signed yet, above all the buyers who have been saving photos of the home they want: active leads, Design Dollars email clickers and Home Portrait quiz takers</td><td><span class="tag f">This fall</span></td></tr><tr><td><a href="#e7">Homeowner Appreciation Night</a></td><td>Tuesday, November 17, 2026</td><td>5:30pm to 7:30pm, local time at every studio</td><td>Past Mitchell homeowners and their families, invited personally by the New Home Consultant who built with them and by email</td><td><span class="tag f">This fall</span></td></tr><tr><td><a href="#e6">Realtor Lunch and Learn</a></td><td>Wednesday, November 18, 2026</td><td>11:30am to 1pm</td><td>Real estate agents and brokers in each Design Center&#x27;s market: land listing agents first, then agents who have already sent Mitchell a buyer</td><td><span class="tag f">This fall</span></td></tr><tr><td><a href="#story">My Mitchell Story (homeowner contest)</a></td><td>November 17 to December 18, 2026</td><td>Kicks off at Homeowner Appreciation Night</td><td>Past Mitchell homeowners</td><td><span class="tag h">Brittany's idea</span></td></tr><tr><td><a href="#e3">Building on Your Land 101</a></td><td>Winter, date to be set</td><td>10am to 11:30am</td><td>People who own land, have family land, or are shopping for land to build on: the landowner and looking for land segments, quiz takers who answered either way, and anyone who clicked a Four Buyers email or page</td><td><span class="tag w">Saved for winter</span></td></tr><tr><td><a href="#e4">Wilmington Design Center Open House</a></td><td>Winter, date to be set</td><td>10am to 3pm</td><td>North and South Carolina contacts, led by the Wilmington division: coastal North Carolina and Dillon, Horry, Marion and Marlboro counties in South Carolina</td><td><span class="tag w">Saved for winter</span></td></tr><tr><td><a href="#e5">The Gathering Place Live: Building Your Getaway</a></td><td>Winter, date to be set</td><td>7pm Eastern, 30 minutes</td><td>People planning a getaway, a family retreat, a second home or the place they will retire, at the lake, on the coast or in the mountains: quiz takers who chose Smith Mountain Lake, Lake Gaston, the Shenandoah Valley or the Eastern Shore and Outer Banks, contacts interested in those areas, and past homeowners thinking about a second place</td><td><span class="tag w">Saved for winter</span></td></tr></tbody></table></div>
+    <p class="lede">Every event is invited inside emails and posts that already go out, so nobody gets extra messages for it. Homeowner Appreciation Night is the exception: past homeowners are their own list.</p>
+    <h3 style="font-size:16px">The five Design Centers</h3>
+    <ul class='studios'><li><b>Fredericksburg VA</b><span>621 Warrenton Road, Fredericksburg, VA 22406</span><span>(540) 701-2759</span></li><li><b>Richmond VA (Midlothian)</b><span>14300 Sommerville Court, Midlothian, VA 23113</span><span>(540) 701-2759</span></li><li><b>Newport News VA</b><span>663 Turnberry Boulevard, Suite E, Newport News, VA 23602</span><span>(540) 701-2759</span></li><li><b>Raleigh NC (studio in Garner)</b><span>505 N. Greenfield Pkwy, Suite 120, Garner, NC 27529</span><span>(984) 331-5468</span></li><li><b>Wilmington NC (studio in Belville, open since September 11, 2026)</b><span>42 Waterford Business Center Way, Suite A, Belville, NC 28451</span><span>(984) 331-5468</span></li></ul>
+  </section>
+  <section class="event" id="e2"><header class="eh"><span class="tag f">This fall</span><h2>Behind the Build Live: Your Design Dollars and SimplyMitchell Questions</h2><dl class="facts"><div><dt>When</dt><dd>Thursday, October 29, 2026, 7pm Eastern, about 30 minutes</dd></div><div><dt>Where</dt><dd>Online: live on the Mitchell Homes Facebook page and YouTube channel at the same time. No studio needed.</dd></div><div><dt>Who it is for</dt><dd>Everyone still deciding before the October 31 reserve-by date: active leads, Design Dollars email clickers, quiz takers, and anyone curious how SimplyMitchell works. Agents and past homeowners welcome.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>Scott Sleeme and Deven Sellers explain Mitchell Design Dollars in plain terms: $5,000 on every home, up to $25,000 the more you personalize, and what it covers.</li><li>They answer questions sent in ahead and asked live, including how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.</li><li>The recording stays on both channels, and each answer becomes its own short clip.</li></ul></div><div><h3>Why we are doing it</h3><p>Answers the two questions that stall a Design Dollars decision (what does it cover, do I have to choose now) two days before the October 31 reserve-by date, in Scott&#x27;s own voice.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Scott and Deven&#x27;s time: Thursday, October 29, about 6:30pm to 7:45pm Eastern for setup, the live half hour and a short wrap.</li><li>Streaming: one tool that sends to Facebook and YouTube at once, a camera and microphone, and who runs it (Brittany or CEA). If the YouTube channel has never streamed, enable live streaming at least a day ahead; first-time approval can take up to 24 hours.</li><li>Questions: a question field on the RSVP form, comments on the October 22 post, and consultant replies. Name who screens them before the show and who answers comments live.</li><li>On screen: the Design Dollars fine print and the financing line. Answers stay inside the approved wording (Scott&#x27;s two sentences; Every choice priced before we build; no build duration; no claim that the price cannot change).</li><li>Who posts the replay and cuts the clips.</li><li>RSVP form (Kelly): name, email, phone, text consent, your question.</li></ul></div><div><h3>Good to know</h3><ul><li>October 29 already has the deadline week text to active leads. For a consultant&#x27;s own active leads who RSVPed, the thank-you text that night stands in for it; skip the deadline text for them, since Friday&#x27;s follow-up carries the October 31 date.</li><li>Clips: one question per Short, titled with the question, per the YouTube plan.</li></ul></div></div><div class="shots"><figure class="shot"><img src="img/dd2.jpg" alt="DD2: Choose $60,000 in selections. Take home $75,000 worth. (Tuesday, October 27, 2026)" loading="lazy"><figcaption>DD2: Choose $60,000 in selections. Take home $75,000 worth. (Tuesday, October 27, 2026)</figcaption></figure></div><details class="copy" open><summary>The copy (10 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Invitation inside the DD2 email</b><span>Tuesday, October 27, 2026 · Choose $60,000 in selections. Take home $75,000 worth.</span></div><button type="button" class="cp">Copy</button></div><pre>Ask Scott and Deven, live
+
+On Thursday, October 29, at 7pm Eastern, Scott Sleeme and Deven Sellers go live on Facebook and YouTube for about 30 minutes to answer your questions about SimplyMitchell and Design Dollars, from the $5,000 every home starts with to the $25,000 top tier. Send yours ahead of time, and they will answer as many as they can.
+
+Button: Send a Question ([RSVP link]?utm_source=email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e2)
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Event block near the end, after the Find Your Tier button and before the footer. dd2 already carries the long fine print in its footer. dd2 goes two days before the show, so the October 22 post, the Facebook event and the consultant invites on October 26 carry the call for questions.</p></div><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>Monday, October 26, 2026. Every New Home Consultant to their own active leads.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] with Mitchell Homes. Thursday at 7pm Eastern, Scott and Deven are live on Facebook and YouTube for 30 minutes answering questions about building on your land with Mitchell. Got one you want answered? Text it to me and I will pass it along.</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: Your question, answered live by Scott and Deven</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+If you have a question about building with Mitchell that you have not asked yet, here is a good place to ask it.
+
+On Thursday, October 29, at 7pm Eastern, Scott Sleeme, our Owner and CEO, and Deven Sellers, our Executive Vice President, are going live on Facebook and YouTube for about 30 minutes to answer questions about Mitchell Design Dollars and SimplyMitchell.
+
+A quick refresher on both. Your home comes with $5,000 in Design Dollars, and it goes up to $25,000 the more you personalize. Sign now, and your incentive is locked, but your tier will be decided when you make your selections. And with SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
+
+Reply with your question and I will make sure it gets to them. Here is where to watch: [Facebook Live link] or [YouTube Live link].
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Thursday, October 22, 2026 · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>Building a home on your land comes with questions. Ask the people who build them.
+
+On Thursday, October 29, at 7pm Eastern, Scott Sleeme and Deven Sellers from Behind the Build go live on Facebook and YouTube to answer your questions about Mitchell Design Dollars and SimplyMitchell. What Design Dollars cover. When you choose. How building on your land works with zero down, zero closing costs and no construction loan.
+
+Leave your question in the comments, or send it here and we will remind you before we go live: [RSVP link]
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Image: the Behind the Build title card or Scott and Deven at the microphones (hosts, not a family photo, so it can be boosted). Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e2 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Thursday, October 29, 2026 · Facebook, Instagram Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Tonight at 7pm Eastern, Scott Sleeme and Deven Sellers go live to answer your questions about Mitchell Design Dollars and SimplyMitchell. About 30 minutes. Watch on our Facebook page or YouTube channel, and ask in the comments.
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Reserve by October 31, 2026.
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Stories: link sticker to the YouTube Live link. Post the morning of the show.</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Behind the Build Live: Your Design Dollars and SimplyMitchell Questions
+Thursday, October 29, 2026, 7pm Eastern, about 30 minutes
+Online: live here on Facebook and on the Mitchell Homes YouTube channel
+
+Building a home on your land comes with questions. Bring yours to the people who answer them every day.
+
+Scott Sleeme, Owner and CEO of Mitchell Homes, and Deven Sellers, Executive Vice President, host Behind the Build. For one live half hour, they answer your questions about:
+
+Mitchell Design Dollars. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. What they cover, and why you do not have to choose a single finish to lock them in.
+
+SimplyMitchell. Zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
+
+Send your question ahead of time and we will remind you before we go live: [RSVP link] . Or ask in the comments during the show.
+
+Reserve by October 31, 2026, and your Design Dollars are locked. Your tier is set later, when you make your selections.
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre><p class="pn">One online Facebook event with Facebook Live as the location. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e2 . Publish Thursday, October 22.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>Behind the Build Live: Design Dollars Q&amp;A</span></div><button type="button" class="cp">Copy</button></div><pre>Building on your land comes with questions. On Thursday, October 29, at 7pm Eastern, Scott Sleeme and Deven Sellers go live on the Mitchell Homes Facebook page and YouTube channel to answer yours about Mitchell Design Dollars and SimplyMitchell. About 30 minutes. Tap Sign up to send a question and get a reminder.
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">The event is online. If Google rejects an online event on a studio profile, post it as an Update instead or skip it.</p></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Wednesday, October 28, 2026. Builder Studio workflow, RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: Tomorrow at 7pm Eastern, Scott and Deven go live to answer your questions. About 30 minutes. Watch: [YouTube Live link] Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Thursday, October 29, 2026, right after the show. Each consultant to their own leads who RSVPed; online sales counselors to the rest.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for joining Scott and Deven tonight, [first name]. If you missed it or want to watch again, the replay is here: [replay link]. Anything they did not get to, text me and I will answer it myself.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Friday, October 30, 2026. The consultant (or an online sales counselor), to every RSVP. · Subject: The answers from last night, and October 31</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for tuning in to Behind the Build Live last night. If you missed any of it, the full replay is here: [YouTube replay link]
+
+The two questions we heard most: [question one, answered in a sentence] and [question two, answered in a sentence].
+
+If you are planning to build, this is the week that matters. Reserve by Saturday, October 31, and your Design Dollars are locked: $5,000 on every Mitchell home, up to $25,000 the more you personalize. Your tier is set later, when you make your selections, and your reservation deposit is $150, which is all Mitchell receives until closing.
+
+See the full ladder: https://simplymitchellhomes.com/design-dollars?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e2
+
+Want to talk it through before Saturday? Reply with a time, or call me at the number below.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Thursday, October 22</b> · Social · Post 1, the question call (Facebook, Instagram feed). Publish the online Facebook event. · Marketing</li><li><b>Thursday, October 22</b> · Google · Event post on all five profiles (or Update if Google rejects an online event) · Marketing</li><li><b>Monday, October 26</b> · Sales team · Personal invite text and email to own active leads · New Home Consultants</li><li><b>Tuesday, October 27</b> · Email · Event block in dd2 · Marketing</li><li><b>Wednesday, October 28</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Thursday, October 29</b> · Social · Post 2, tonight at 7 (Facebook, Instagram Stories) · Marketing</li><li><b>Thursday, October 29</b> · Event · Live at 7pm Eastern; thank-you text after the show · Scott and Deven; consultants</li><li><b>Friday, October 30</b> · Sales team · Follow-up email with the replay and the October 31 date · New Home Consultants, online sales counselors</li></ul></details></section><section class="event" id="e1"><header class="eh"><span class="tag f">This fall</span><h2>Bring Your Photos Saturday</h2><dl class="facts"><div><dt>When</dt><dd>Saturday, November 7, 2026, 10am to 2pm, local time at every studio</dd></div><div><dt>Where</dt><dd>All five Mitchell Design Centers: Fredericksburg VA, Richmond VA (Midlothian), Newport News VA, Raleigh NC (studio in Garner) and Wilmington NC (studio in Belville). Addresses in the studio table, as listed on the live Design Dollars page.</dd></div><div><dt>Who it is for</dt><dd>Anyone planning a Mitchell home who has not signed yet, above all the buyers who have been saving photos of the home they want: active leads, Design Dollars email clickers and Home Portrait quiz takers. Walk-ins welcome; an RSVP gets a reserved time with a Design Consultant.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>Buyers bring the photos they have been saving, on their phone or in a folder.</li><li>A Design Consultant matches the favorites to Mitchell selections and shows what they cost.</li><li>Together they see where that list lands on the Design Dollars ladder, and how far it is to the next tier.</li></ul></div><div><h3>Why we are doing it</h3><p>Turns the Four Buyers emails on November 4 (fb1, fb5 and fb5c) into a seat at the design table three weeks before the November 30 reserve-by date, with the buyer&#x27;s own photos as the reason to come in.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Approve the date and the 10am to 2pm hours, or name the studios that will take part.</li><li>Staffing at every studio: a Design Consultant for the full four hours, plus a New Home Consultant for land and plan questions. Newport News and Wilmington each have one New Home Consultant; name the cover.</li><li>Reserved times: CEA proposes 30-minute slots with walk-ins between them. Confirm the length and how many tables each studio can run at once.</li><li>Pricing at the table: can a Design Consultant price a photo list on the spot? If not, copy changes to: we will send you the numbers.</li><li>RSVP form (Kelly builds it in Builder Studio): name, phone, email, studio, preferred time, and the text consent checkbox with legal-approved wording.</li><li>Food: none promised anywhere. If Mitchell wants coffee or light refreshments, add one line to the Facebook event.</li><li>Studio addresses as listed on the live Design Dollars page, and which phone line Richmond shows.</li><li>Design Dollars in November: these pieces say reserve by November 30, the date Kelly recommends. It waits on Mitchell&#x27;s approval (question 1); if Mitchell sets another date, only the date changes.</li></ul></div><div><h3>Good to know</h3><ul><li>November 5 already has a consultant text in the cadence (the landowner text to active leads who own land). Send this invite to those leads on November 2 to 4, so nobody gets two consultant texts that day.</li><li>fb4 (banked for winter) and the consultant text on Monday, November 23 also say bring your photos. This Saturday is the November version; both stay as written.</li><li>Never show the painted Home Portrait at the event table or in any of these pieces.</li></ul></div></div><div class="shots"><figure class="shot"><img src="img/fb1.jpg" alt="FB1: Your land is worth more than you think (Wednesday, November 4, 2026)" loading="lazy"><figcaption>FB1: Your land is worth more than you think (Wednesday, November 4, 2026)</figcaption></figure><figure class="shot"><img src="img/fb5.jpg" alt="FB5: You do not have to own land yet (Wednesday, November 4, 2026)" loading="lazy"><figcaption>FB5: You do not have to own land yet (Wednesday, November 4, 2026)</figcaption></figure><figure class="shot"><img src="img/fb5c.jpg" alt="FB5C: You do not have to own land yet (Wednesday, November 4, 2026)" loading="lazy"><figcaption>FB5C: You do not have to own land yet (Wednesday, November 4, 2026)</figcaption></figure></div><details class="copy" open><summary>The copy (13 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Invitation inside the FB1 email</b><span>Wednesday, November 4, 2026 · Your land is worth more than you think</span></div><button type="button" class="cp">Copy</button></div><pre>Bring Your Photos Saturday, November 7
+
+Bring the photos you have been saving to any Mitchell Design Center between 10am and 2pm, and sit down with a Design Consultant who will show you what your favorites cost. You will also see where they land on the Design Dollars ladder, which starts at $5,000 on every home and grows up to $25,000 the more you personalize.
+
+Button: Save My Time ([RSVP link]?utm_source=email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e1)
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Event block near the end, after the Downey quote and before the Design Dollars band.</p></div><div class="piece"><div class="ph"><div><b>Invitation inside the FB5 email</b><span>Wednesday, November 4, 2026 · You do not have to own land yet</span></div><button type="button" class="cp">Copy</button></div><pre>Bring Your Photos Saturday, November 7
+
+Bring the photos you have been saving to any Mitchell Design Center between 10am and 2pm, and sit down with a Design Consultant who will show you what your favorites cost. You will also see where they land on the Design Dollars ladder, which starts at $5,000 on every home and grows up to $25,000 the more you personalize.
+
+Button: Save My Time ([RSVP link]?utm_source=email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e1)
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Event block after the floor plans line, before the Design Dollars band. fb5 is on hold until the plan guide email is built; if it slips past November 6, this block moves to the consultant invites only.</p></div><div class="piece"><div class="ph"><div><b>Invitation inside the FB5C email</b><span>Wednesday, November 4, 2026 · You do not have to own land yet</span></div><button type="button" class="cp">Copy</button></div><pre>Bring Your Photos Saturday, November 7
+
+Bring the photos you have been saving to any Mitchell Design Center between 10am and 2pm, and sit down with a Design Consultant who will show you what your favorites cost. You will also see where they land on the Design Dollars ladder, which starts at $5,000 on every home and grows up to $25,000 the more you personalize.
+
+Button: Save My Time ([RSVP link]?utm_source=email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e1)
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">The same block as fb5, in the Carolinas version, which is built from fb5 and carries the block and the hold with it.</p></div><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>Monday, November 2 to Thursday, November 5, 2026. Every New Home Consultant to their own active leads.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], it is [your name] with Mitchell Homes. This Saturday, Nov 7, from 10 to 2, bring the home photos you have been saving to our [city] Design Center. A Design Consultant will show you what your favorites cost. Want me to save you a time?</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: Bring your photos Saturday</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+If you have been saving photos of the home you want, this Saturday is a good day to bring them in.
+
+On Saturday, November 7, from 10am to 2pm, our [city] Design Center is open for Bring Your Photos Saturday. Sit down with one of our Design Consultants, show us what you have been saving, and we will match it to Mitchell selections and show you what it costs.
+
+You will also see where your list lands on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. Choose $60,000 in selections, for example, and Mitchell adds $15,000, so you take home $75,000 worth. Sign now, and your incentive is locked, but your tier will be decided when you make your selections. Reserve by November 30.
+
+Reply with a time that works and I will hold it for you, or just come by.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Monday, November 2, 2026 · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>You have been saving photos of this house for years. The kitchen. The porch. The light over the table.
+
+Bring them in. On Saturday, November 7, from 10am to 2pm, every Mitchell Design Center is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize.
+
+Fredericksburg, Richmond, Newport News, Raleigh and Wilmington. Walk-ins welcome. RSVP and we will save you a time: [RSVP link]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.
+
+#BuildOnYourLand #MitchellHomes</pre><p class="pn">Image: a Design Center finish wall or kitchen display, e.g. https://media.mitchellhomesinc.com/276/2023/2/6/Design_Center_13_IfaBRgj.jpg . Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category. Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e1 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Friday, November 6, 2026 · Facebook, Instagram Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Tomorrow, 10am to 2pm. Bring the photos you have been saving to your nearest Mitchell Design Center, and a Design Consultant will show you what your favorites cost.
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Reserve by November 30, 2026, and your Design Dollars are locked. Your tier is set later, when you make your selections.
+
+RSVP: [RSVP link]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Stories: use the link sticker with the Instagram link [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e1 . Fine print stays on the Story frame. Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category.</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Bring Your Photos Saturday at the Mitchell Homes [city] Design Center
+Saturday, November 7, 2026, 10am to 2pm
+[studio address]
+
+You know what you want. You have the photos to prove it. Bring them in.
+
+Sit down with a Mitchell Design Consultant, show us the kitchens, porches, tile and lighting you have been saving, and we will match them to Mitchell selections and show you what they cost. With more than 40,000 selections, most of what is in your folder is something we already carry.
+
+You will also see where your list lands on the Mitchell Design Dollars ladder. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. Reserve by November 30, 2026, and your Design Dollars are locked. Your tier is set later, when you make your selections.
+
+Walk-ins are welcome. RSVP and we will save you a time with a Design Consultant: [RSVP link]
+
+Questions? Call a New Home Consultant: Virginia and Maryland (540) 701-2759, North and South Carolina (984) 331-5468.
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract.</pre><p class="pn">One Facebook event per Design Center, so each shows a real address to people nearby; only [city] and [studio address] change. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e1 . Cover image: no people.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>Bring Your Photos Saturday</span></div><button type="button" class="cp">Copy</button></div><pre>Bring the photos you have been saving for your future home to our [city] Design Center. A Design Consultant will match your favorites to Mitchell selections, show you what they cost, and show you where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Walk-ins welcome, or tap Sign up to save a time.
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Title holds 58 characters. Image: that studio&#x27;s interior, no people.</p></div><div class="piece"><div class="ph"><div><b>Nextdoor</b><span>Wednesday, November 4, 2026, from each Design Center&#x27;s Nextdoor business page where one exists.</span></div><button type="button" class="cp">Copy</button></div><pre>Saving photos of the home you want to build? Bring them in.
+
+On Saturday, November 7, from 10am to 2pm, the Mitchell Homes [city] Design Center at [studio address] is open for Bring Your Photos Saturday. Sit down with a Design Consultant, see what your favorites cost, and see where they land on the Design Dollars ladder. Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize.
+
+Walk-ins welcome. RSVP for a reserved time: [RSVP link]?utm_source=nextdoor&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e1
+
+Mitchell Homes, building on your land since 1992.
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Friday, November 6, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: See you tomorrow at [time] at our [city] Design Center, [studio address]. Bring the photos you have been saving. Need a new time? Reply here. Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Saturday, November 7, 2026, by 6pm. The Design Consultant or New Home Consultant each attendee met.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for coming in today, [first name]. It was great to see the home you have been picturing. I will send your priced list on Monday so you have it all in one place. Questions before then? Just text me.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Monday, November 9, 2026. The New Home Consultant, from their own address. · Subject: Your photos, priced</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for bringing your photos in on Saturday. It was good to see the home you have been picturing, and [one thing they loved, in their words] belongs in it.
+
+Here is what we priced together:
+[selection list with prices, from the Design Consultant]
+
+On the Design Dollars ladder, that list puts you at [tier]. You are [amount] away from the next tier, which adds [amount] more for your selections. Every Mitchell home starts with $5,000 in Mitchell Design Dollars, up to $25,000 the more you personalize. See the full ladder: https://simplymitchellhomes.com/design-dollars?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e1
+
+Reserve by Monday, November 30, and your Design Dollars are locked. Your tier is set later, when you make your selections, and your reservation deposit is $150, which is all Mitchell receives until closing.
+
+One more thing: on Thursday, October 29, Scott Sleeme and Deven Sellers answered Design Dollars and SimplyMitchell questions live on Facebook and YouTube. The replay is here: [replay link]. If you have a question they did not get to, send it to me.
+
+Want to pick a plan to go with your list? Reply with a time this week.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Monday, November 2</b> · Social · Post 1 (Facebook, Instagram feed). Publish the five Facebook events. · Marketing</li><li><b>Monday, November 2</b> · Google · Event post on all five Design Center profiles · Marketing</li><li><b>Monday, November 2</b> · Sales team · Personal invite text and email to own active leads, through Thursday, November 5 (leads who own land by November 4) · New Home Consultants</li><li><b>Wednesday, November 4</b> · Email · Event block in fb1, fb5 and fb5c · Marketing</li><li><b>Wednesday, November 4</b> · Nextdoor · Post from each Design Center page · Marketing</li><li><b>Friday, November 6</b> · Social · Post 2 (Facebook, Instagram Stories) · Marketing</li><li><b>Friday, November 6</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Saturday, November 7</b> · Event · Bring Your Photos Saturday, 10am to 2pm; thank-you text by 6pm · Design Consultants, New Home Consultants</li><li><b>Monday, November 9</b> · Sales team · Follow-up email with the priced list · New Home Consultants</li></ul></details></section><section class="event" id="e7"><header class="eh"><span class="tag f">This fall</span><h2>Homeowner Appreciation Night</h2><dl class="facts"><div><dt>When</dt><dd>Tuesday, November 17, 2026, 5:30pm to 7:30pm, local time at every studio</dd></div><div><dt>Where</dt><dd>All five Mitchell Design Centers: Fredericksburg VA, Richmond VA (Midlothian), Newport News VA, Raleigh NC (studio in Garner) and Wilmington NC (studio in Belville). Addresses in the studio table, as listed on the live Design Dollars page.</dd></div><div><dt>Who it is for</dt><dd>Past Mitchell homeowners and their families, invited personally by the New Home Consultant who built with them and by email. RSVP requested so each studio can plan; families welcome.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>A thank-you evening for the people who built with Mitchell: homeowners catch up with the New Home Consultants and Design Consultants who helped build their home and meet other Mitchell homeowners. [Refreshments: Mitchell to confirm.]</li><li>My Mitchell Story opens that night. Homeowners hear how it works (a short phone video about what they love about their home) and can book their photo session on the spot at a booking table. Sessions start the next day, Thanksgiving weekend included, and homeowners who enter by Sunday, November 29 get their edited photos in time for holiday cards.</li><li>A simple story corner at each studio: a chair, good light, a phone stand and the four questions on a card. Staff help homeowners film a first take on their own phone, so the take is theirs to finish at home and send in.</li></ul></div><div><h3>Why we are doing it</h3><p>Starts My Mitchell Story in person with the homeowners most likely to enter, from the people they built with. Homeowners leave with a photo session booked (family photos in time for holiday cards, the reason to enter now rather than later) and, for many, a first take already on their phone, which is the hardest part of any video contest.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Approve Tuesday, November 17, 5:30pm to 7:30pm, at all five studios, or name the studios that will host. Nothing else is in the studios that night, but every studio also hosts E1 on Saturday, November 7 and E6, the Realtor Lunch and Learn, the next day at 11:30am. Newport News and Wilmington each have one New Home Consultant; name the cover.</li><li>Staffing at every studio: the New Home Consultants and Design Consultants who can attend, one person at the photo session booking table, and one at the story corner.</li><li>Refreshments and a budget per studio. An appreciation night implies something to eat or drink; every piece marks it [Refreshments: Mitchell to confirm.]</li><li>My Mitchell Story must be approved before November 17: the prizes, the form of the $2,500, the photo session cap and budget, the holiday card window (how many sessions Mitchell funds from November 18 to December 5, and whether the photographers can deliver edited photos within five business days), the photographers, and the Official Rules after legal review. If it is not, the night runs as a thank-you evening and the contest launch moves.</li><li>Photo session booking on the night: the photographers&#x27; calendars must be live in Builder Studio by Monday, November 16, with the holiday card window (Wednesday, November 18 to Saturday, December 5, including Friday, November 27 and Saturday, November 28) open first. A session booked that night is held for the homeowner and takes place after their entry arrives.</li><li>The homeowner list: confirm past homeowners are in Builder Studio with email addresses, which have text consent, and which consultant invites homeowners whose consultant has left Mitchell.</li><li>Homeowners with an open warranty issue: CEA suggests their consultant or the warranty team calls them before any invitation goes out.</li><li>RSVP form (Kelly builds it in Builder Studio): name, email, phone, studio, number of guests, and the text consent checkbox with legal-approved wording. It adds the tag homeowner appreciation rsvp.</li><li>Story corner kit per studio: a chair, a phone stand, a small light and a card with the four questions. No painted Home Portrait anywhere in the room or on screens.</li></ul></div><div><h3>Good to know</h3><ul><li>Never show a painted Home Portrait at the event, on screens or at the story corner. The finalist prize is described in words only: a framed painting of their Mitchell home.</li><li>Story corner: staff film on the homeowner&#x27;s own phone, so the take belongs to the homeowner. Everyone filmed says yes first; children only with a parent there and agreeing. No popular music playing in the room, so the take can be used.</li><li>Photos of homeowners at the event are for organic social, email and the website only, with their consent. Never in paid ads (Meta Housing category).</li><li>Fair housing: hosts and captions never describe a town or neighborhood as good, safe or desirable.</li><li>md.</li></ul></div></div><div class="shots"><figure class="shot"><img src="img/ho2.jpg" alt="HO2: An evening for the people who built with us (Wednesday, November 4)" loading="lazy"><figcaption>HO2: An evening for the people who built with us (Wednesday, November 4)</figcaption></figure></div><details class="copy" open><summary>The copy (10 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Invitation email HO2</b><span>Wednesday, November 4 · Subject: An evening for the people who built with us</span></div><button type="button" class="cp">Copy</button></div><pre>THANK YOU FOR BUILDING WITH US
+
+Every Mitchell home started with someone who could already picture it: the porch, the kitchen, the room where everyone ends up. You brought that picture to us, and then you made the home your own.
+
+So we would like to say thank you, in person. On Tuesday, November 17, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. [Refreshments: Mitchell to confirm.]
+
+It is also the night we open My Mitchell Story, a chance to show us, in a short phone video, what you love about your home. Everyone who enters gets a professional photo session at home, paid for by Mitchell, while sessions last. Book yours that night, and if your entry is in by Sunday, November 29, your family photos in front of your home will be ready in time for holiday cards.
+
+RSVP: {{trigger_link.ukeqlhc7kCBoenFieOsI}}
+
+Fredericksburg, Richmond (Midlothian), Newport News, Raleigh (Garner) and Wilmington (Belville), 5:30pm to 7:30pm local time. Please RSVP so each studio can plan.
+
+Questions? Call a New Home Consultant.
+Virginia and Maryland (540) 701-2759
+North and South Carolina (984) 331-5468
+
+The Mitchell Homes team
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>Thursday, November 5 to Tuesday, November 10, 2026. Every New Home Consultant to the homeowners they built with who have not RSVPed to ho2 yet: a text where they already text that homeowner, otherwise the email or a call. Homeowners whose consultant has left Mitchell hear from the division&#x27;s consultant.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 17, 5:30 to 7:30pm, at our [city] Design Center. Can you come?</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: You are invited, [first name]</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+I still remember [one thing about their home or their build]. I hope the home is treating you well.
+
+On Tuesday, November 17, from 5:30pm to 7:30pm, we are hosting Homeowner Appreciation Night at our [city] Design Center, a thank-you evening for the people who built with us. Bring the family. [Refreshments: Mitchell to confirm.]
+
+It is also the night we open My Mitchell Story: a chance to show us, in a short phone video, what you love about your home and how you live in it. Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last. Book yours that night, and if your entry is in by Sunday, November 29, your family photos will be ready in time for holiday cards.
+
+Can you make it? Reply and I will save you a spot, or RSVP here: [RSVP link]
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Wednesday, November 4, 2026 · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>To everyone who has built a home with Mitchell: thank you.
+
+On Tuesday, November 17, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Come see the people who helped build your home, meet other Mitchell homeowners, and bring the family.
+
+It is also the night My Mitchell Story opens: show us, in a short phone video, what you love about your home. Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last. Book yours that night, and if your entry is in by Sunday, November 29, your family photos will be ready in time for holiday cards.
+
+Fredericksburg, Richmond, Newport News, Raleigh and Wilmington. Mitchell homeowners, please RSVP so we can plan: [RSVP link]
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">Image: a real Mitchell home at dusk, e.g. https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg . Organic only; do not boost (the audience is homeowners, and a boosted post would reach buyers). Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e7 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Tuesday, November 17, 2026 · Facebook, Instagram Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Tonight, 5:30pm to 7:30pm: Homeowner Appreciation Night at every Mitchell Design Center. Mitchell homeowners, come say hello, book your photo session in time for holiday cards, and film a first take of your story in our story corner.
+
+#MyMitchellStory</pre><p class="pn">Stories, the morning of the event, with the link sticker [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e7 . After the event, post photos from the night only of homeowners who said yes, organic only, never boosted.</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Homeowner Appreciation Night at the Mitchell Homes [city] Design Center
+Tuesday, November 17, 2026, 5:30pm to 7:30pm
+[studio address]
+
+For Mitchell homeowners and their families.
+
+You built a home with us, and we would like to say thank you in person. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. [Refreshments: Mitchell to confirm.]
+
+It is also the night My Mitchell Story opens. Tell us, in a short phone video, what you love about your home, how you use it and where you like to spend your time. Everyone who enters gets a professional photo session at their home, paid for by Mitchell, while sessions last. Book yours that night, and if your entry is in by Sunday, November 29, your family photos will be ready in time for holiday cards. You can also film a first take in our story corner.
+
+Please RSVP so we can plan: [RSVP link]
+
+Questions? Call a New Home Consultant: Virginia and Maryland (540) 701-2759, North and South Carolina (984) 331-5468.</pre><p class="pn">One Facebook event per Design Center; only [city] and [studio address] change. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e7 . Publish Wednesday, November 4. Cover image: a real Mitchell home at dusk, no people. Do not boost. If a prospective buyer RSVPs, welcome them and have a consultant follow up separately.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>Homeowner Appreciation Night</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell homeowners, this evening is for you. Join us at our [city] Design Center on Tuesday, November 17, from 5:30pm to 7:30pm, to catch up with the people who helped build your home, meet other Mitchell homeowners and bring the family. It is also the night we open My Mitchell Story, a short video about what you love about your home. Tap Sign up to RSVP.</pre><p class="pn">Image: a real Mitchell home exterior, no people. A public post that shows buyers how Mitchell treats its homeowners.</p></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Monday, November 16, 2026. Builder Studio workflow on the RSVP form, to RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: See you tomorrow, Tue Nov 17, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Tuesday, November 17, 2026, by 9pm. The consultant who invited each guest.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for coming tonight, [first name]. It was so good to see you. Your My Mitchell Story link comes by email in the morning. Text me any time.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Wednesday, November 18, 2026, morning. The consultant, to every homeowner who came. Attendees get this in place of ho3, the launch email, so nobody gets two that day. · Subject: Thank you for last night</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for coming to Homeowner Appreciation Night. It was good to see you, and to hear about [one thing they shared about their home].
+
+Here is everything for My Mitchell Story in one place.
+
+Film a short video on your phone, about 30 to 90 seconds, at home, answering one or more of these: What do you love most about your home? How do you use it, day to day? How does your home make you feel? Where is your favorite place to hang out?
+
+Send it here: [entry form link]?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e7 . Upload the video or paste a link. Entries close Sunday, December 13, at 11:59pm Eastern.
+
+Send it in by Sunday, November 29, and your photo session can be any day through Saturday, December 5, Thanksgiving weekend included, with your edited photos back within five business days, in time for holiday cards.
+
+[If they booked: Your photo session is set for [date and time]. If not: Once your entry is in, you will get a link to book your photo session.]
+
+If you filmed a first take in the story corner, it is on your phone. Add a minute at home, the porch, the kitchen, your favorite spot, and send it in.
+
+Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. Official Rules: [official rules link]
+
+I cannot wait to see your story.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Wednesday, November 4</b> · Email · ho2, the invitation, to past homeowners · Marketing</li><li><b>Wednesday, November 4</b> · Social · Post 1 (Facebook, Instagram feed). Publish the five Facebook events. · Marketing</li><li><b>Wednesday, November 4</b> · Google · Event post on all five Design Center profiles · Marketing</li><li><b>Thursday, November 5</b> · Sales team · Personal invites to the homeowners each consultant built with, through Tuesday, November 10 · New Home Consultants</li><li><b>Monday, November 16</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Tuesday, November 17</b> · Social · Post 2 (Facebook, Instagram Stories) · Marketing</li><li><b>Tuesday, November 17</b> · Event · Homeowner Appreciation Night, 5:30pm to 7:30pm; My Mitchell Story entries open; thank-you text by 9pm · New Home Consultants, Design Consultants, photo session booker</li><li><b>Wednesday, November 18</b> · Sales team · Follow-up email to every homeowner who came (in place of ho3) · New Home Consultants</li><li><b>Wednesday, November 18</b> · Email · ho3, the My Mitchell Story launch, to past homeowners who did not come · Marketing</li></ul></details></section><section class="event home" id="story"><header class="eh"><span class="tag h">Brittany's idea · Homeowners</span><h2>My Mitchell Story</h2><p class="line">Every home is a portrait. Show us yours. #MyMitchellStory</p><p>My Mitchell Story invites Mitchell homeowners to show us, in a short phone video, what they love about their home, how they live in it and where they like to spend their time. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last, with the photos theirs to keep and, for entries by Sunday, November 29, ready in time for holiday cards; five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. It opens at Homeowner Appreciation Night at all five Design Centers on Tuesday, November 17, 2026, and closes Sunday, December 13, 2026; every date and amount is a proposal for Mitchell to confirm.</p></header><div class="write"><div><h3>How it works</h3><ol><li>Film a short video at home on your phone, about 30 to 90 seconds.</li><li>Answer one or more of the four questions, in your own words and your own voice.</li><li>Send it through the entry form: upload the video or paste a link.</li><li>We confirm your entry and send a link to book your photo session at home, paid for by Mitchell, while sessions last. Enter by Sunday, November 29, and you can book a session by Saturday, December 5, with your edited photos back within five business days, in time for holiday cards.</li><li>After entries close, a panel from Mitchell and CEA Marketing chooses five finalists, one from each Design Center region, and one grand prize winner.</li><li>Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag Mitchell Homes. Welcome, never required.</li></ol></div><div><h3>The four questions homeowners answer</h3><ul><li>What do you love most about your home?</li><li>How do you use it, day to day?</li><li>How does your home make you feel?</li><li>Where is your favorite place to hang out?</li></ul></div><div><h3>What homeowners receive (proposal)</h3><ul><li><b>Every eligible entrant:</b> A professional photo session at their Mitchell home, about 45 to 60 minutes, paid for by Mitchell: family photos in front of the home they built, plus the rooms and spots they love, including the favorite spot from their video. The edited photos are theirs to keep.</li><li><b>Five finalists, one from each Design Center region:</b> Their own Home Portrait: a framed painting of their Mitchell home.</li><li><b>Grand prize, one winner chosen from the five finalists:</b> $2,500, plus their Home Portrait.</li></ul></div><div><h3>Judging</h3><ul><li><b>The story (40 percent):</b> How clearly and personally the entry tells what the homeowner loves about the home, and why.</li><li><b>The home in everyday life (30 percent):</b> How the home shows up in the way they live: the rooms they use, the routines, the favorite places.</li><li><b>How it feels to watch (30 percent):</b> The warmth, honesty and feeling of home that come through.</li><li><b>Never judged ():</b> Who appears in the video, how many people appear, or whether anyone appears at all; the size, price, plan or location of the home; video production quality; likes, views, comments or followers.</li><li><b>How it works ():</b> A panel of [three to five] judges from Mitchell and CEA Marketing scores every eligible entry. The top entry in each of the five Design Center regions is a finalist; the top finalist wins the grand prize. Ties go to the higher score for the story. A judged contest, not a random drawing.</li></ul></div><div><h3>Filming tips we give homeowners</h3><ul><li>Film in daylight, with the light in front of you, not behind you.</li><li>Start in your favorite spot, then tell us why it matters.</li><li>Use your own voice. No popular songs: Mitchell cannot share a video that carries one.</li><li>Hold the phone steady, or prop it on a shelf. Slow moves beat fast ones.</li><li>Get close when you talk, and turn off the TV and the dishwasher.</li><li>Keep house numbers, street signs and license plates out of the frame.</li><li>Ask before you film anyone, and keep children&#x27;s full names out of it.</li><li>One take is fine. Real beats perfect.</li></ul></div><div><h3>Questions for Mitchell</h3><ul><li><b>The $2,500:</b> In what form does the grand prize winner receive $2,500: a check, a prepaid card, a gift card, or something else? <i>Our recommendation: A check is the simplest to deliver and report.</i></li><li><b>Photo sessions:</b> How many sessions, or what budget, and which photographers? One photographer per Design Center region, or one who travels? How far from a Design Center will they travel? <i>Our recommendation: Set a number per region, so no region runs out first. CEA can shortlist photographers in each region. Sessions through January 31, 2027.</i></li><li><b>Holiday card window:</b> How many photo sessions will Mitchell fund in the holiday card window (Wednesday, November 18 to Saturday, December 5, Thanksgiving weekend included, for entries by Sunday, November 29), and can the photographers deliver edited photos within five business days? <i>Our recommendation: Hold a set number of window sessions per region and confirm the five-business-day delivery in each photographer&#x27;s agreement before ho2 names it on November 4. If either falls short, ho2, ho3, the launch text and the launch posts drop the holiday card line.</i></li><li><b>Home Portraits:</b> Who paints the five Home Portraits, at what size, in what frame, by when, and at what value (for the rules)? <i>Our recommendation: An artist working from each finalist&#x27;s session photos, delivered privately in January.</i></li><li><b>Showing the paintings:</b> May a finalist&#x27;s or the winner&#x27;s painting ever be shown publicly? <i>Our recommendation: Keep them private. The painting is the reward, the same promise the Home Portrait quiz makes, and showing one would break the rule that no painted portrait appears before someone takes the quiz.</i></li><li><b>Judges:</b> Who sits on the panel from Mitchell (for example Scott Sleeme, Deven Sellers, Brittany Horner) and from CEA Marketing, and how many judges in all? <i>Our recommendation: Three to five judges, with no one judging an entry from a homeowner they personally sold to.</i></li><li><b>Homeowner Appreciation Night:</b> Approve Tuesday, November 17, 5:30pm to 7:30pm at all five Design Centers, with staffing, refreshments and a budget per studio. <i>Our recommendation: All five studios, with the photo session booking table and story corner at each. See E7 in events.md.</i></li><li><b>Official Rules:</b> Legal review of the draft rules, including the questions for legal in its last section. <i>Our recommendation: Start the review by October 30 so the rules are final before the November 4 invitation names the contest.</i></li><li><b>Eligibility:</b> Are later owners of a Mitchell-built home (bought from an earlier owner) eligible? Do the exclusions cover CEA Marketing, the photographers and the artist, as drafted? <i>Our recommendation: Yes to later owners, verified by deed or tax record. Keep the wider exclusions.</i></li><li><b>The homeowner list:</b> Where do past homeowners live today (Builder Studio or Lasso), how are they marked, and which have email and text consent? <i>Our recommendation: Build the Past Mitchell homeowners smart list in Builder Studio before November 2, with a view per division.</i></li><li><b>Homeowners with open warranty issues:</b> Should homeowners with an open warranty issue get the invitation and contest emails? <i>Our recommendation: Yes, after a personal call from their consultant or the warranty team first.</i></li><li><b>Contest coordinator:</b> Who at Mitchell checks entries, books sessions and answers questions, and what email address appears in the rules? <i>Our recommendation: One named coordinator and one contest inbox.</i></li><li><b>Usage:</b> How long may Mitchell use entries (the license term), how are homeowners credited, and how fast are takedowns? <i>Our recommendation: First names and state; three years; takedown within five business days.</i></li><li><b>Social handles:</b> Which Mitchell Homes Instagram and TikTok handles do entrants tag?</li><li><b>Entry form:</b> What video file size does the Builder Studio form accept? <i>Our recommendation: If it is small, lead with the paste-a-link field and keep upload as the second option.</i></li></ul></div></div><details><summary>The dates</summary><ul class='sched'><li><b>Wednesday, November 4, 2026</b> · Invitation to Homeowner Appreciation Night (ho2) to past homeowners. Facebook events and Google event posts go up (E7).</li><li><b>Thursday, November 5 to Tuesday, November 10, 2026</b> · New Home Consultants personally invite the homeowners they built with.</li><li><b>Monday, November 16, 2026</b> · RSVP reminder text. Photo session calendars live in Builder Studio, holiday card window first, so homeowners can book at the event.</li><li><b>Tuesday, November 17, 2026, 5:30pm to 7:30pm</b> · Homeowner Appreciation Night at all five Design Centers. Entries open at 5:30pm Eastern.</li><li><b>Wednesday, November 18, 2026</b> · Launch email (ho3) to homeowners who did not come; each consultant&#x27;s follow-up email to those who did. Announcement post and Google post. Photo sessions begin.</li><li><b>Thursday, November 19, 2026</b> · Launch text to homeowners with text consent who did not RSVP.</li><li><b>Wednesday, November 18 to Saturday, December 5, 2026</b> · Holiday card window: homeowners who enter by Sunday, November 29 book their session in these dates, Thanksgiving weekend (Friday, November 27 and Saturday, November 28) included, and get their edited photos within five business days, in time for holiday cards.</li><li><b>Sunday, November 29, 2026</b> · Last day to enter for a holiday card session.</li><li><b>From Wednesday, November 18</b> · Photo sessions roll as entries are confirmed, through [January 31, 2027].</li><li><b>Fridays, November 20, December 4 and December 11, 2026</b> · Entrant spotlights on social, only with the entrant&#x27;s consent.</li><li><b>Wednesday, December 2, 2026</b> · Filming tips email (ho4) to homeowners who have not entered.</li><li><b>Wednesday, December 9, 2026</b> · Last-week email (ho5) to homeowners who have not entered.</li><li><b>Thursday, December 10, 2026</b> · Last-week text to homeowners with text consent who have not entered.</li><li><b>Sunday, December 13, 2026, 11:59pm Eastern</b> · Entries close.</li><li><b>Monday, December 14 and Tuesday, December 15, 2026</b> · Judging.</li><li><b>Tuesday, December 15, 2026</b> · Finalists and the potential grand prize winner get a phone call, then their note (hw3, hw4). Documents due within five business days.</li><li><b>Thursday, December 17, 2026</b> · Finalists announced on social.</li><li><b>Friday, December 18, 2026</b> · Grand prize winner announced (ho6 and social), once verification is complete.</li><li><b>[Date, with the artist]</b> · Home Portraits delivered to the five finalists, privately.</li></ul></details><div class="shots"><figure class="shot"><img src="img/ho2.jpg" alt="HO2: An evening for the people who built with us (Wednesday, November 4)" loading="lazy"><figcaption>HO2: An evening for the people who built with us (Wednesday, November 4)</figcaption></figure><figure class="shot"><img src="img/ho3.jpg" alt="HO3: What do you love most about your home? (Wednesday, November 18)" loading="lazy"><figcaption>HO3: What do you love most about your home? (Wednesday, November 18)</figcaption></figure><figure class="shot"><img src="img/ho4.jpg" alt="HO4: Your phone is all you need (Wednesday, December 2)" loading="lazy"><figcaption>HO4: Your phone is all you need (Wednesday, December 2)</figcaption></figure><figure class="shot"><img src="img/ho5.jpg" alt="HO5: Your story, by Sunday (Wednesday, December 9)" loading="lazy"><figcaption>HO5: Your story, by Sunday (Wednesday, December 9)</figcaption></figure><figure class="shot"><img src="img/ho6.jpg" alt="HO6: Meet the My Mitchell Story winner (Friday, December 18)" loading="lazy"><figcaption>HO6: Meet the My Mitchell Story winner (Friday, December 18)</figcaption></figure></div><details class="copy" open><summary>The copy (29 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Email HO2</b><span>Wednesday, November 4 · Subject: An evening for the people who built with us</span></div><button type="button" class="cp">Copy</button></div><pre>THANK YOU FOR BUILDING WITH US
+
+Every Mitchell home started with someone who could already picture it: the porch, the kitchen, the room where everyone ends up. You brought that picture to us, and then you made the home your own.
+
+So we would like to say thank you, in person. On Tuesday, November 17, from 5:30pm to 7:30pm, every Mitchell Design Center is hosting Homeowner Appreciation Night. Catch up with the New Home Consultants and Design Consultants who helped build your home, meet other Mitchell homeowners, and bring the family. [Refreshments: Mitchell to confirm.]
+
+It is also the night we open My Mitchell Story, a chance to show us, in a short phone video, what you love about your home. Everyone who enters gets a professional photo session at home, paid for by Mitchell, while sessions last. Book yours that night, and if your entry is in by Sunday, November 29, your family photos in front of your home will be ready in time for holiday cards.
+
+RSVP: {{trigger_link.ukeqlhc7kCBoenFieOsI}}
+
+Fredericksburg, Richmond (Midlothian), Newport News, Raleigh (Garner) and Wilmington (Belville), 5:30pm to 7:30pm local time. Please RSVP so each studio can plan.
+
+Questions? Call a New Home Consultant.
+Virginia and Maryland (540) 701-2759
+North and South Carolina (984) 331-5468
+
+The Mitchell Homes team
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Email HO3</b><span>Wednesday, November 18 · Subject: What do you love most about your home?</span></div><button type="button" class="cp">Copy</button></div><pre>EVERY HOME IS A PORTRAIT. SHOW US YOURS.
+
+You know your home in a way no floor plan ever could. The chair by the window that gets the morning light. The counter where homework happens. The porch at the end of a long day.
+
+Tell us about it. My Mitchell Story is open to Mitchell homeowners through Sunday, December 13. Film a short video on your phone, about 30 to 90 seconds, and answer one or more of these:
+
+* What do you love most about your home?
+* How do you use it, day to day?
+* How does your home make you feel?
+* Where is your favorite place to hang out?
+
+Film it at home: On your phone, in your own voice. No music needed, and no need to be perfect.
+Send it in: Upload your video or paste a link on the entry form.
+Book your photo session: We send you a link to schedule a professional photo session at your home, paid for by Mitchell, while sessions last. The photos are yours to keep.
+
+Enter by Sunday, November 29, and you can book your session any day through Saturday, December 5, including Thanksgiving weekend, when the whole family is home. Your edited photos arrive within five business days, in time for holiday cards: your family in front of the home you built, and the rooms you love.
+
+After entries close, a panel from Mitchell and CEA Marketing chooses five finalists, one from each Design Center region. Each finalist receives their own Home Portrait, a framed painting of their Mitchell home. One grand prize winner also receives $2,500.
+
+Homeowner story: The Downey family, Henrico, Virginia. Need an idea? This is how the Downey family told theirs.
+Watch: https://www.youtube.com/watch?v=9vmi-miQzKU
+
+Tell Your Story: [entry form link]
+
+Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag Mitchell Homes. Never required: entries count only through the form. Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]
+
+Questions? Call a New Home Consultant.
+Virginia and Maryland (540) 701-2759
+North and South Carolina (984) 331-5468
+
+The Mitchell Homes team
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Email HO4</b><span>Wednesday, December 2 · Subject: Your phone is all you need</span></div><button type="button" class="cp">Copy</button></div><pre>START WITH YOUR FAVORITE SPOT
+
+Most good home stories start in one place: the chair by the fireplace, the kitchen island, the back porch. Start there, and tell us why it matters to you.
+
+Find the light: Film in daylight, with the window in front of you, not behind you.
+Show it, then say why: Show us the place first. Then tell us what happens there and why you love it.
+Use your own voice: No popular songs. We cannot share a video that carries one, so your voice or the sounds of home are best.
+Hold steady: Prop the phone on a shelf or hold it with both hands. Slow moves beat fast ones.
+Keep it yours: Keep house numbers, street signs and license plates out of the frame, and ask before you film anyone.
+
+Once your entry is in, we send a link to book your photo session: about an hour at your home with a professional photographer, paid for by Mitchell, while sessions last. The photos are yours to keep, and sessions run into January, so they are ready for the new year. [If any holiday card sessions remain, the team adds one line about them here before sending.]
+
+Tell Your Story: [entry form link]
+
+Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]
+
+Questions? Call a New Home Consultant.
+Virginia and Maryland (540) 701-2759
+North and South Carolina (984) 331-5468
+
+The Mitchell Homes team
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Email HO5</b><span>Wednesday, December 9 · Subject: Your story, by Sunday</span></div><button type="button" class="cp">Copy</button></div><pre>THERE IS STILL TIME TO TELL IT
+
+Somewhere in your home is the spot where the day slows down. Maybe it is the kitchen everyone ends up in, or the porch after dinner. That is the story we would love to see.
+
+My Mitchell Story closes this Sunday, December 13, at 11:59pm Eastern. A minute on your phone is enough. Show us the place, and tell us why you love it.
+
+* What do you love most about your home?
+* How do you use it, day to day?
+* How does your home make you feel?
+* Where is your favorite place to hang out?
+
+Every entrant gets a professional photo session at home, paid for by Mitchell, while sessions last, and sessions run into January, so your photos are ready for the new year. [If any holiday card sessions remain, the team adds one line about them here before sending.] Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500.
+
+Send My Story: [entry form link]
+
+Open to Mitchell homeowners 18 or older in Virginia, North Carolina, South Carolina and Maryland; one entry per household. Entries close Sunday, December 13, 2026, at 11:59pm Eastern. No purchase necessary. Official Rules: [official rules link]
+
+Questions? Call a New Home Consultant.
+Virginia and Maryland (540) 701-2759
+North and South Carolina (984) 331-5468
+
+The Mitchell Homes team
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Email HO6</b><span>Friday, December 18 · Subject: Meet the My Mitchell Story winner</span></div><button type="button" class="cp">Copy</button></div><pre>THANK YOU FOR SHOWING US YOUR HOMES
+
+This fall, [number] Mitchell homeowners showed us the places they love most: [two or three real examples from entries, in their words, with permission]. Every one of them reminded us why we build.
+
+[First names], Mitchell homeowners in [state], told us [one line about their story, in their words]. Their story is the My Mitchell Story grand prize winner. They receive $2,500 and their own Home Portrait, a framed painting of their Mitchell home.
+
+&quot;[A line from the winner&#x27;s video, word for word]&quot;
+[First names], Mitchell homeowners, [state]. Watch their story: [winner video link]
+
+Our finalists, one from each Design Center region: [first names and state for each of the five]. Each receives their own Home Portrait.
+
+If you entered, thank you. Your session photos are yours to keep, and if your session is still on the calendar, we will see you soon.
+
+Watch the Winning Story: [winner video link]
+
+Shared with the permission of every homeowner named.
+
+Questions? Call a New Home Consultant.
+Virginia and Maryland (540) 701-2759
+North and South Carolina (984) 331-5468
+
+The Mitchell Homes team
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Automatic note HW1</b><span>Immediately after an entry form is submitted (workflow My Mitchell Story | 01 Entry received), from the homeowner&#x27;s assigned New Home Consultant</span></div><button type="button" class="cp">Copy</button></div><pre>Hi {{contact.first_name}},
+
+Thank you for sending in your My Mitchell Story. Your home is one we are proud to have built, and I cannot wait to watch it.
+
+Here is what happens next:
+
+* We confirm your entry within two business days.
+* Then we send a link to book your photo session at home, paid for by Mitchell, while sessions last.
+* Entries close Sunday, December 13, at 11:59pm Eastern, and we plan to announce the finalists about December 17.
+
+If you need to change anything, just reply to this email.
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Automatic note HW2</b><span>When the contest coordinator adds the tag my mitchell story verified (workflow My Mitchell Story | 02 Photo session)</span></div><button type="button" class="cp">Copy</button></div><pre>Hi {{contact.first_name}},
+
+Your My Mitchell Story entry is confirmed. Thank you.
+
+Next is your photo session. A professional photographer will spend about 45 to 60 minutes at your home, paid for by Mitchell. Here is what to expect:
+
+* We like to finish outside in the hour before sunset, when the front of the home looks its best.
+* Inside, we photograph the kitchen, the porch and the favorite spot from your video, plus a few details.
+* Family photos in front of your home, if you want them. Everyone pictured signs a short release, and a parent signs for any child.
+* You receive [number] edited photos, yours to keep: within five business days for sessions through Saturday, December 5, and within [two weeks] after that.
+
+Thinking of holiday cards? Book any day through Saturday, December 5, and your photos arrive in time. Friday, November 27 and Saturday, November 28 are open too, while the whole family is home for Thanksgiving.
+
+Book your photo session: [photo session booking link]
+
+If none of the times work, reply and we will find one. Sessions run through [January 31, 2027].
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Automatic note HW3</b><span>About Tuesday, December 15, after the phone call, when the coordinator adds the tag my mitchell story finalist (workflow My Mitchell Story | 03 Finalists)</span></div><button type="button" class="cp">Copy</button></div><pre>Hi {{contact.first_name}},
+
+Congratulations again. As I said on the phone, your story is one of five My Mitchell Story finalists, one from each Design Center region.
+
+As a finalist, you receive your own Home Portrait, a framed painting of your Mitchell home. [Artist and delivery date, once Mitchell confirms.]
+
+To confirm your prize, please return these within five business days:
+
+* The signed affidavit of eligibility and release (attached).
+* A completed W-9, if your prizes total $600 or more in the year. [Tax advisor to confirm.]
+* A good time for a short call about your Home Portrait.
+
+We announce the finalists on Thursday, December 17, so please keep the news in the family until then. Thank you for showing us your home.
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Automatic note HW4</b><span>About Tuesday, December 15, after the phone call; sent by hand from the template, not by workflow</span></div><button type="button" class="cp">Copy</button></div><pre>Hi {{contact.first_name}},
+
+Congratulations again. Of every story we received, the judges chose yours as the My Mitchell Story grand prize winner.
+
+You receive $2,500 [as a check, prepaid card or gift card, once Mitchell confirms] and your own Home Portrait, a framed painting of your Mitchell home.
+
+To confirm your prize, please return these within five business days:
+
+* The signed affidavit of eligibility, release and publicity release (attached).
+* A completed W-9. Prizes of $600 or more are reported on IRS Form 1099.
+* A good time for a short call to plan the announcement and your Home Portrait.
+
+We announce the winner on Friday, December 18, so please keep it in the family until then. Thank you for letting us share your story.
+
+{{user.name}}
+New Home Consultant, Mitchell Homes
+{{user.phone}}
+
+Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.
+Unsubscribe: {{unsubscribe}}</pre></div><div class="piece"><div class="ph"><div><b>Text: Consultant invite to Homeowner Appreciation Night</b><span>Thursday, November 5 to Tuesday, November 10, 2026</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] from Mitchell. Join us for Homeowner Appreciation Night, Tue Nov 17, 5:30 to 7:30pm, at our [city] Design Center. Can you come?</pre><p class="pn">To: Homeowners each New Home Consultant built with, 1-to-1, only where the consultant already texts that homeowner. A personal text, so no STOP line.</p></div><div class="piece"><div class="ph"><div><b>Text: RSVP reminder</b><span>Monday, November 16, 2026</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: See you tomorrow, Tue Nov 17, 5:30 to 7:30pm, for Homeowner Appreciation Night at our [city] Design Center. Reply STOP to opt out</pre><p class="pn">To: Homeowners tagged homeowner appreciation rsvp who gave text consent.</p></div><div class="piece"><div class="ph"><div><b>Text: Thank-you after the event</b><span>Tuesday, November 17, 2026, by 9pm</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for coming tonight, [first name]. It was so good to see you. Your My Mitchell Story link comes by email in the morning. Text me any time.</pre><p class="pn">To: Each homeowner who came, 1-to-1 from the consultant who invited them. A personal text, so no STOP line.</p></div><div class="piece"><div class="ph"><div><b>Text: Contest launch</b><span>Thursday, November 19, 2026, between 10am and 7pm</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: My Mitchell Story is open. Film what you love about your home by Nov 29 for holiday card photos on us: [trigger link] Reply STOP to opt out</pre><p class="pn">To: Past homeowners with text consent who did not RSVP to Homeowner Appreciation Night and have not entered. Their only text that week. If the holiday card window is not confirmed, use: Mitchell Homes: My Mitchell Story is open. Show us what you love about your home in a short video by Dec 13: [trigger link] Reply STOP to opt out</p></div><div class="piece"><div class="ph"><div><b>Text: Photo session reminder</b><span>The day before each session</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: Your My Mitchell Story photo session is tomorrow at [time]. Need a different time? Just reply. Reply STOP to opt out</pre><p class="pn">To: Entrants with a booked session who gave text consent.</p></div><div class="piece"><div class="ph"><div><b>Text: Last-week contest reminder</b><span>Thursday, December 10, 2026, between 10am and 7pm</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: What do you love most about your home? Show us in a short video by Sun, Dec 13. Photo sessions on us: [trigger link] Reply STOP to opt out</pre><p class="pn">To: Past homeowners with text consent who have not entered (no tag my mitchell story entry). Their only text that week. If sessions have run out, drop the words Photo sessions on us.</p></div><div class="piece"><div class="ph"><div><b>Script: Text to a homeowner you built with</b><span>Wednesday, November 18 to Friday, December 11, to homeowners who have not entered (no tag my mitchell story entry)</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], it is [your name] from Mitchell. My Mitchell Story is open: a short phone video about what you love about your home. Entrants get a photo session at home, on us, while they last. Want the link?</pre></div><div class="piece"><div class="ph"><div><b>Script: Short email to a homeowner you built with</b><span>Any time from Wednesday, November 18 to Wednesday, December 9, to homeowners who have not entered</span></div><button type="button" class="cp">Copy</button></div><pre>Subject: I would love to see your home again
+
+Hi [first name],
+
+I still think about [one thing about their home or their build], and I would love to see how the home has turned out with you in it.
+
+We just opened My Mitchell Story for Mitchell homeowners. Film a short video on your phone, about 30 to 90 seconds, and tell us what you love most about your home, how you use it, or where you like to hang out. Everyone who enters gets a professional photo session at home, paid for by Mitchell, while sessions last, and the photos are yours to keep.
+
+Here is the link: [entry form link]?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_homeowners&amp;utm_content=nhc_email
+
+Entries close Sunday, December 13. If you have any questions, just reply.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]</pre></div><div class="piece"><div class="ph"><div><b>Script: 20-second phone script</b><span>At the end of any call with a past homeowner, November 18 to December 11</span></div><button type="button" class="cp">Copy</button></div><pre>Before I let you go: we just opened something for Mitchell homeowners called My Mitchell Story. You film a short video on your phone about what you love about your home, and everyone who enters gets a professional photo session at the house, on us, while sessions last. Can I text you the link?</pre></div><div class="piece"><div class="ph"><div><b>Script: 20-second script for the warranty team</b><span>November 18 to December 11, only when the service item is resolved and the homeowner is happy</span></div><button type="button" class="cp">Copy</button></div><pre>Glad we got that taken care of. One more thing, if you have a minute: Mitchell just opened My Mitchell Story for homeowners. It is a short phone video about what you love about your home, and everyone who enters gets a professional photo session at home, on us, while sessions last. Would you like someone to send you the link?</pre></div><div class="piece"><div class="ph"><div><b>Post: Announcement</b><span>Wednesday, November 18, 2026 · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>Every home is a portrait. Show us yours.
+
+Mitchell homeowners, My Mitchell Story is open. Film a short video on your phone, about 30 to 90 seconds, and tell us what you love most about your home, how you use it, how it makes you feel, or where you like to hang out.
+
+Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. The photos are yours to keep. Want family photos in front of your home for holiday cards? Enter by Sunday, November 29, and book your session as soon as this week, Thanksgiving weekend included.
+
+Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500.
+
+Enter by Sunday, December 13: [entry form link]
+Open to Mitchell homeowners 18 or older. No purchase necessary. Official Rules: [official rules link]
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">Single image of a real Mitchell home exterior with no people, or a 15-second Reel of home-only footage Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg . Pin to the top of the Facebook page through December 13; on Monday, November 30, edit the caption to drop the holiday card sentences. Organic only. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_homeowners&amp;utm_content=mms_announce.</p></div><div class="piece"><div class="ph"><div><b>Post: How to enter</b><span>Wednesday, November 25, 2026 · Instagram carousel, Facebook</span></div><button type="button" class="cp">Copy</button></div><pre>How to tell your Mitchell story, in four steps:
+
+1. Film a short video at home on your phone, about 30 to 90 seconds.
+2. Answer one or more: What do you love most about your home? How do you use it, day to day? How does your home make you feel? Where is your favorite place to hang out?
+3. Send it through the entry form: upload it or paste a link.
+4. Book your photo session at home, on us, while sessions last. Enter by this Sunday, November 29, and your photos are ready in time for holiday cards.
+
+Want to share it too? Post it on your own Instagram or TikTok with #MyMitchellStory and tag us. Never required.
+
+Enter by Sunday, December 13: [entry form link]
+Official Rules: [official rules link]
+
+#MyMitchellStory</pre><p class="pn">Carousel, five slides of text on real Mitchell home photos with no people: 1 Every home is a portrait. Show us yours. 2 Film it at home. 3 Answer one question. 4 Send it in. 5 Your photo session is on us. Posted the day before Thanksgiving, so families home for the weekend can film and enter by Sunday. Organic only. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_homeowners&amp;utm_content=mms_howto.</p></div><div class="piece"><div class="ph"><div><b>Post: Filming tips</b><span>Tuesday, December 1, 2026 · Instagram Reels, Facebook Reels</span></div><button type="button" class="cp">Copy</button></div><pre>Your phone is all you need. Five tips for your My Mitchell Story video:
+
+Film in daylight, with the light in front of you.
+Start in your favorite spot, then tell us why.
+Use your own voice. No popular songs, so we can share it.
+Hold steady, or prop the phone on a shelf.
+Keep house numbers and license plates out of the frame.
+
+One take is fine. Real beats perfect. Enter by Sunday, December 13: [entry form link]
+
+#MyMitchellStory</pre><p class="pn">30-second Reel: a team member&#x27;s hands filming a Mitchell home on a phone, tips on screen. Home-only footage, no faces, no popular music. If filmed in the Mitchell model home, do not name the plan until Brittany confirms its spelling. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_homeowners&amp;utm_content=mms_tips.</p></div><div class="piece"><div class="ph"><div><b>Post: Entrant spotlight 1: a favorite place</b><span>Friday, November 20, 2026 · Facebook, Instagram Reels</span></div><button type="button" class="cp">Copy</button></div><pre>[First names] have lived in their Mitchell home in [state] since [year]. Their favorite place to hang out? [Their answer, in their words.]
+
+This is My Mitchell Story. Mitchell homeowners, show us yours by Sunday, December 13: [entry form link]
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">The entrant&#x27;s video as submitted, trimmed for length only Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child&#x27;s name. Captions describe the home and the homeowner&#x27;s words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging. Three days after entries open: if no entry with the spotlight box checked is ready, skip this one.</p></div><div class="piece"><div class="ph"><div><b>Post: Entrant spotlight 2: how it feels</b><span>Friday, December 4, 2026 · Facebook, Instagram Reels</span></div><button type="button" class="cp">Copy</button></div><pre>&quot;[How their home makes them feel, in their words.]&quot;
+
+[First names], Mitchell homeowners in [state], told us what coming home feels like. This is My Mitchell Story. Show us yours by Sunday, December 13: [entry form link]
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">The entrant&#x27;s video as submitted, trimmed for length only Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child&#x27;s name. Captions describe the home and the homeowner&#x27;s words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging.</p></div><div class="piece"><div class="ph"><div><b>Post: Entrant spotlight 3: a day at home</b><span>Friday, December 11, 2026 · Facebook, Instagram Reels</span></div><button type="button" class="cp">Copy</button></div><pre>A day in [first names]&#x27; Mitchell home in [state] starts [where their day starts, in their words].
+
+This is My Mitchell Story, and there are two days left to tell yours. Entries close Sunday, December 13, at 11:59pm Eastern: [entry form link]
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">The entrant&#x27;s video as submitted, trimmed for length only Only entries with the spotlight box checked, after the coordinator confirms consent and the music rule. Credit first names and state; the town only if they agree; never a street, house number or child&#x27;s name. Captions describe the home and the homeowner&#x27;s words, never the town or neighborhood (fair housing). Quote word for word; trim any line Mitchell cannot claim (a build time, a price promise, financing terms). Organic only: never boost a video with people in it. Spotlights show variety, not a preview of the winners, and likes and views never count toward judging.</p></div><div class="piece"><div class="ph"><div><b>Post: Last call</b><span>Thursday, December 10, 2026 (Story again on Sunday, December 13) · Facebook, Instagram feed and Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell homeowners, there is still time. My Mitchell Story closes Sunday, December 13, at 11:59pm Eastern.
+
+A minute on your phone is enough. Show us the place you love most at home, and tell us why. Every eligible entrant gets a professional photo session at home, on us, while sessions last.
+
+Enter here: [entry form link]
+Official Rules: [official rules link]
+
+#MyMitchellStory</pre><p class="pn">Single image of a real Mitchell home at dusk with no people; the Sunday Story uses the same image with the link sticker Image: e.g. https://media.mitchellhomesinc.com/276/2026/3/3/ava_farmhouse-extended_sky.jpg . If sessions have run out, drop the photo session sentence. Never ask people to share, like or tag friends to enter (Meta promotion rules). Instagram: replace the link with Link in bio and set the bio link to [entry form link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_homeowners&amp;utm_content=mms_last.</p></div><div class="piece"><div class="ph"><div><b>Post: Finalists</b><span>Thursday, December 17, 2026 · Facebook, Instagram carousel</span></div><button type="button" class="cp">Copy</button></div><pre>Meet the five My Mitchell Story finalists, one from each Design Center region.
+
+[First names, state: one line from their video, in their words.]
+[First names, state: one line.]
+[First names, state: one line.]
+[First names, state: one line.]
+[First names, state: one line.]
+
+Thank you to every homeowner who showed us their home. The grand prize winner is announced Friday, December 18.
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">Carousel: one home-only exterior photo from each finalist&#x27;s session, with their release, first names and state on each slide Only finalists who returned their documents and agreed to publicity. Never show the Home Portrait paintings. Organic only.</p></div><div class="piece"><div class="ph"><div><b>Post: Grand prize winner</b><span>Friday, December 18, 2026 · Facebook, Instagram Reels, YouTube Shorts</span></div><button type="button" class="cp">Copy</button></div><pre>[First names] love [what they love most about their home, in their words]. Their story, from their Mitchell home in [state], is the My Mitchell Story grand prize winner.
+
+&quot;[One line from their video, word for word.]&quot;
+
+They receive $2,500 and their own Home Portrait, a framed painting of their Mitchell home. Thank you to every homeowner who told us their story. Every home is a portrait, and yours showed us why we build.
+
+#MyMitchellStory #MitchellHomes</pre><p class="pn">The winner&#x27;s video as submitted, with their release Only after verification is complete. Never show the painting, not even at the hand-off: if Mitchell wants a moment on camera, film the winner&#x27;s reaction with the frame turned away. Organic only.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile post: My Mitchell Story: tell us about your home</b><span>All five Design Center profiles, Wednesday, November 18, after the E7 event post ends. Event-type post, start November 18, end December 13, 11:59pm.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell homeowners, what do you love most about your home? Show us in a short phone video, about 30 to 90 seconds, through Sunday, December 13, 2026. Every eligible entrant gets a professional photo session at home, paid for by Mitchell, while sessions last. Enter by Sunday, November 29, and your family photos in front of your home will be ready in time for holiday cards. Five finalists, one from each Design Center region, receive their own Home Portrait, a framed painting of their Mitchell home, and one grand prize winner also receives $2,500. Open to Mitchell homeowners 18 or older. No purchase necessary. Official Rules at the link.</pre><p class="pn">Image: a real Mitchell home exterior, no people. If Google rejects the event post, post it as an Update. On Monday, November 30, edit the post to drop the holiday card sentence.</p></div></div></details></section><section class="event" id="e6"><header class="eh"><span class="tag f">This fall</span><h2>Realtor Lunch and Learn</h2><dl class="facts"><div><dt>When</dt><dd>Wednesday, November 18, 2026, 11:30am to 1pm</dd></div><div><dt>Where</dt><dd>All five Mitchell Design Centers: Fredericksburg VA, Richmond VA (Midlothian), Newport News VA, Raleigh NC (studio in Garner) and Wilmington NC (studio in Belville). Addresses in the studio table, as listed on the live Design Dollars page.</dd></div><div><dt>Who it is for</dt><dd>Real estate agents and brokers in each Design Center&#x27;s market: land listing agents first, then agents who have already sent Mitchell a buyer.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>How building on a client&#x27;s land works with Mitchell: SimplyMitchell (zero down, zero closing costs, no construction loan) and one closing.</li><li>Mitchell Design Dollars ($5,000 on every home, up to $25,000) and the Home Portrait quiz agents can send to clients, plus how to refer.</li><li>Mitchell&#x27;s realtor incentive program, on terms Mitchell confirms, then open questions and a walk through the Design Center.</li></ul></div><div><h3>Why we are doing it</h3><p>Turns agents who meet landowners every week into a referral source for all three campaigns, at the cost of a room and a presenter at each studio.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Realtor incentive terms, in writing, before any invitation goes out (the same open question as the October realtor email, re1).</li><li>Lunch: the event name promises it. Confirm lunch and a budget at each studio, or rename the event Realtor Learn and Tour everywhere. Copy marks it [Lunch provided: Mitchell to confirm.]</li><li>Continuing education credit: not offered and not mentioned anywhere. Offering it would need course approval first.</li><li>Presenter at each studio (a New Home Consultant; Scott or Deven at one studio if possible) and room capacity.</li><li>The agent list: the realtor segment in Builder Studio by division, land listing agents first.</li><li>Design Dollars after October 31: these pieces name the offer without a reserve-by date. Confirm the program continues in November and approve the November date.</li><li>RSVP form (Kelly): name, brokerage, email, phone, studio, text consent.</li></ul></div><div><h3>Good to know</h3><ul><li>Every E6 piece waits on the realtor incentive terms; the lunch bracket comes out or becomes Lunch is on us once Mitchell decides.</li><li>Never promise continuing education credit, in copy or in conversation.</li></ul></div></div><div class="shots"><figure class="shot"><img src="img/rb2.jpg" alt="RB2: When your land listing needs a picture (Wednesday, November 11, 2026)" loading="lazy"><figcaption>RB2: When your land listing needs a picture (Wednesday, November 11, 2026)</figcaption></figure></div><details class="copy" open><summary>The copy (10 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Invitation inside the RB2 email</b><span>Wednesday, November 11, 2026 · When your land listing needs a picture</span></div><button type="button" class="cp">Copy</button></div><pre>Lunch and Learn at your nearest Mitchell Design Center
+
+On Wednesday, November 18, from 11:30am to 1pm, each Mitchell Design Center is hosting agents for a short session on how building on a client&#x27;s land works: SimplyMitchell, Design Dollars ($5,000 on every home, up to $25,000), the Home Portrait quiz, and how to refer. You will also hear the terms of Mitchell&#x27;s realtor incentive program, and lunch is on us. [Lunch: Mitchell to confirm.]
+
+Button: Save Your Seat ([RSVP link]?utm_source=email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e6)
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Event block near the end of rb2 (When your land listing needs a picture), after the Send Your Buyer the Home Portrait button and before the incentive line. rb2 has no Design Dollars footer, so the short fine print sits right under this block.</p></div><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>From Wednesday, November 11, 2026. New Home Consultants to agents they already know.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] with Mitchell Homes. Next Wednesday, Nov 18, 11:30 to 1, we are hosting agents at our [city] Design Center: how building on a client&#x27;s land works, how to refer, and our realtor incentive. Can I save you a seat?</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: Next Wednesday at our [city] Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+You talk with people who own land, or are about to buy it, every week, so I wanted to invite you personally.
+
+On Wednesday, November 18, from 11:30am to 1pm, we are hosting a Lunch and Learn for agents at our [city] Design Center. [Lunch provided: Mitchell to confirm.] In 90 minutes we will cover how building on a client&#x27;s land works with Mitchell, why there is zero down, zero closing costs and no construction loan (Mitchell self-funds every build), what Mitchell Design Dollars and the Home Portrait quiz mean for your clients, and how referrals and our realtor incentive program work.
+
+Can I save you a seat? Just reply, and tell me if a colleague would like to come.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Wednesday, November 11, 2026 · Facebook, Instagram feed, LinkedIn</span></div><button type="button" class="cp">Copy</button></div><pre>Your client owns land. We build the home on it.
+
+On Wednesday, November 18, from 11:30am to 1pm, every Mitchell Homes Design Center is hosting a Realtor Lunch and Learn. [Lunch provided: Mitchell to confirm.] In 90 minutes: how building on a client&#x27;s land works with Mitchell, from SimplyMitchell (zero down, zero closing costs, no construction loan) to Mitchell Design Dollars and the Home Portrait quiz, how to refer, and the terms of our realtor incentive program.
+
+Fredericksburg, Richmond, Newport News, Raleigh and Wilmington. Save your seat: [RSVP link]
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">Image: a Design Center interior, e.g. https://media.mitchellhomesinc.com/276/2023/3/24/Richmond_Design_Studio.jpg , no people. Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category. LinkedIn: same caption with [RSVP link]?utm_source=linkedin&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e6 . Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e6 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Monday, November 16, 2026 · Facebook, Instagram Stories, LinkedIn</span></div><button type="button" class="cp">Copy</button></div><pre>This Wednesday, 11:30am to 1pm: Realtor Lunch and Learn at every Mitchell Homes Design Center. [Lunch provided: Mitchell to confirm.] Bring your questions about clients who own land, or are about to buy it. Save your seat: [RSVP link]</pre><p class="pn">Stories: link sticker with [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e6 . LinkedIn: [RSVP link]?utm_source=linkedin&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e6</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Realtor Lunch and Learn at the Mitchell Homes [city] Design Center
+Wednesday, November 18, 2026, 11:30am to 1pm
+[studio address]
+
+For real estate agents and brokers. [Lunch provided: Mitchell to confirm.]
+
+Your clients who own land, or are about to buy it, usually hit the same wall: how do we build on it without a construction loan and a second closing? Mitchell answers that question every day. Spend 90 minutes with us and leave ready to answer it too.
+
+What we cover:
+How building on a client&#x27;s land works with Mitchell, and why there is zero down, zero closing costs and no construction loan: Mitchell self-funds every build.
+Mitchell Design Dollars. Every Mitchell home comes with $5,000 in Design Dollars to spend on design selections. The more selections the customer buys, the more Mitchell adds, up to $25,000.
+The Home Portrait: a quiz of eight questions, about 90 seconds, you can send to any client.
+How to refer a client, and the terms of Mitchell&#x27;s realtor incentive program.
+A walk through the Design Center.
+
+RSVP: [RSVP link]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre><p class="pn">One Facebook event per Design Center; only [city] and [studio address] change. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e6 . Publish Wednesday, November 11.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>Realtor Lunch and Learn</span></div><button type="button" class="cp">Copy</button></div><pre>Real estate agents and brokers: join us at our [city] Design Center on Wednesday, November 18, from 11:30am to 1pm. Learn how building on a client&#x27;s land works with Mitchell, from SimplyMitchell (zero down, zero closing costs, no construction loan) to Mitchell Design Dollars and the Home Portrait quiz, how to refer, and the terms of our realtor incentive program. Tap Sign up to save a seat.
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. Design Dollars apply to Design Center selections only. Not applied to base price. No cash value.</pre><p class="pn">If lunch is confirmed, add: Lunch is on us.</p></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Tuesday, November 17, 2026. Builder Studio workflow, RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: See you tomorrow, Wed Nov 18, 11:30am to 1pm, for the Realtor Lunch and Learn at our [city] Design Center, [studio address]. Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Wednesday, November 18, 2026, that afternoon. The New Home Consultant who hosted.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for coming in today, [first name]. Next time a client mentions land, text me their name and I will take it from there. The slides and referral details are coming tomorrow.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Thursday, November 19, 2026. The New Home Consultant who hosted. ra2 goes to the realtor list the same day, so this personal note stays separate and short. · Subject: For your next client with land</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for joining us at the Design Center yesterday. Here is everything in one place for the next client who mentions land.
+
+The short version for your client: Mitchell has built custom homes on land the buyer owns since 1992. Mitchell self-funds every build, so there is zero down, zero closing costs and no construction loan. More than 40 floor plans from 1,000 to 3,000 square feet, and more than 40,000 selections.
+
+Design Dollars: every Mitchell home comes with $5,000 in Mitchell Design Dollars, and it goes up to $25,000 the more your client personalizes.
+
+The Home Portrait quiz to send a client: https://mitchellhomesliving.com/portrait?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e6
+
+How to refer: [referral steps, once Mitchell confirms]
+Realtor incentive: [terms, once Mitchell confirms]
+
+When you have a client ready to talk, text or call me directly.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Wednesday, November 11</b> · Email · Event block in the realtor email rb2 · Marketing</li><li><b>Wednesday, November 11</b> · Social · Post 1 (Facebook, Instagram feed, LinkedIn). Publish the five Facebook events. · Marketing</li><li><b>Wednesday, November 11</b> · Google · Event post on all five profiles · Marketing</li><li><b>Wednesday, November 11</b> · Sales team · Personal invite text and email to agents they know, from this day · New Home Consultants</li><li><b>Monday, November 16</b> · Social · Post 2 (Facebook, Instagram Stories, LinkedIn) · Marketing</li><li><b>Tuesday, November 17</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Wednesday, November 18</b> · Event · Lunch and Learn, 11:30am to 1pm; thank-you text · New Home Consultants</li><li><b>Thursday, November 19</b> · Sales team · Follow-up email with the referral kit (separate from ra2, which goes the same day) · New Home Consultants</li></ul></details></section><h2 class="divider" id="winter">Saved for winter</h2><p class="lede">Finished and ready, with dates set when Mitchell schedules them.</p><section class="event" id="e3"><header class="eh"><span class="tag w">Saved for winter</span><h2>Building on Your Land 101</h2><dl class="facts"><div><dt>When</dt><dd>Winter, date to be set, 10am to 11:30am</dd></div><div><dt>Where</dt><dd>All five Mitchell Design Centers: Fredericksburg VA, Richmond VA (Midlothian), Newport News VA, Raleigh NC (studio in Garner) and Wilmington NC (studio in Belville). Addresses in the studio table, as listed on the live Design Dollars page. A free fall edition of the Homebuyer Roadmap to Success class.</dd></div><div><dt>Who it is for</dt><dd>People who own land, have family land, or are shopping for land to build on: the landowner and looking for land segments, quiz takers who answered either way, and anyone who clicked a Four Buyers email or page.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>A one-hour class on what to know before you build: perc tests and soil, wells and septic, road access and utilities.</li><li>How the money works: SimplyMitchell on land you own (zero down, zero closing costs, no construction loan), and what to plan for if you are still buying.</li><li>Thirty minutes of open questions, then time with a New Home Consultant for anyone who brings a parcel address, survey or plat.</li></ul></div><div><h3>Why we are doing it</h3><p>Puts the Four Buyers argument (your land is worth more than you think) in a room with a New Home Consultant the week fb1 and fb5 land, using a class format Mitchell already runs.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Approve the date and which studios host; seats per studio (room, chairs, a screen).</li><li>Presenter at each studio: a New Home Consultant, plus someone who can speak to perc tests, wells, septic and site work.</li><li>The class deck: CEA can draft it from the Homebuyer Roadmap to Success, Well and Septic and Purchasing Land 101 episodes for Mitchell to approve.</li><li>SimplyMitchell for buyers still purchasing land: confirm whether the terms are the same before the class answers that question (open flag on the No Land page).</li><li>Food: none promised. If Mitchell wants coffee, add one line to the Facebook event and the invite email.</li><li>RSVP form (Kelly): name, phone, email, studio, own land or still looking, county (optional), text consent.</li></ul></div><div><h3>Good to know</h3><ul><li>[date] already has a consultant text to landowner leads in the cadence. For those leads, this invite text replaces it, so nobody gets two texts that day.</li><li>/land covers Virginia and Southern Maryland only; Carolinas attendees get /onyourland. Use /no-land only once its plan guide email is fixed.</li><li>Fair housing: presenters and posts never recommend a county or describe an area as desirable.</li></ul></div></div><details class="copy"><summary>The copy (10 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>Winter, date to be set (2 days before). Every New Home Consultant to their own active leads who own land or are looking for it.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] with Mitchell Homes. This Saturday, [date], 10 to 11:30, we are holding a free class at our [city] Design Center on building on your land: perc, well and septic, access and the money. Bring your parcel address. Can I save you a seat?</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: Saturday morning: Building on Your Land 101</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+When we talk about your land, the same questions come up every time. Will it perc? Where does the well go? Can we get a driveway and power to the homesite? How does the money work?
+
+This Saturday, [date], from 10am to 11:30am, we are answering all of them in one free class at our [city] Design Center: Building on Your Land 101. Bring your parcel address, and a survey or plat if you have one, and stay after so we can look at your land together.
+
+If you are still looking for land, come anyway. It is the class I wish every buyer took before they bought.
+
+Reply and I will save you a seat.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Winter, date to be set (5 days before) · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>Land is silent until you give it a voice. Before it can carry a home, a few questions need answers.
+
+Will the soil perc? Where does the well go? Can a driveway and power reach the homesite? How does the money work when the land is already yours?
+
+Building on Your Land 101 is a free class at every Mitchell Design Center on Saturday, [date], from 10am to 11:30am. Bring your parcel address and your questions. Still looking for land? Come anyway. This is the class to take before you buy.
+
+Save a seat: [RSVP link]
+
+#BuildOnYourLand #MitchellHomes</pre><p class="pn">Image: a Mitchell home alone on open land, e.g. https://media.mitchellhomesinc.com/276/2024/7/5/1_GuQrrFW.jpg . Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category. Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e3 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Winter, date to be set (the day before) · Facebook, Instagram Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Tomorrow morning, 10am to 11:30am: Building on Your Land 101 at every Mitchell Design Center. Perc tests and soil, wells and septic, access and utilities, and how the money works with SimplyMitchell. Free. RSVP so we have a seat ready for you: [RSVP link]</pre><p class="pn">Stories: link sticker with [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e3 . Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category.</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Building on Your Land 101 at the Mitchell Homes [city] Design Center
+Saturday, [date], 10am to 11:30am
+[studio address]
+
+Owning land is the hardest part of building a custom home, and the most misunderstood. This free 90-minute class is the fall edition of Mitchell&#x27;s Homebuyer Roadmap to Success, built around the questions landowners ask us first:
+
+Perc tests and soil: what they tell you about your homesite.
+Wells and septic: what your land needs, and how it shapes the plan.
+Access and utilities: driveways, power and water, and where the home can sit.
+The money: how SimplyMitchell works on land you own, with zero down, zero closing costs and no construction loan, because Mitchell self-funds every build, and what to plan for if you are still buying.
+
+Bring your parcel address, a survey or plat if you have one, and your questions. Stay after for time with a New Home Consultant.
+
+Still looking for land? You are welcome too. This is the class to take before you buy.
+
+RSVP: [RSVP link]
+
+Cannot make it? Watch Behind the Build: Well and Septic https://www.youtube.com/watch?v=zWwtw8qgp4w and Purchasing Land 101 https://www.youtube.com/watch?v=trgJ8maymOA
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre><p class="pn">One Facebook event per Design Center; only [city] and [studio address] change. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e3 . Cover image: land or a finished home, no people.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>Building on Your Land 101: Free Class</span></div><button type="button" class="cp">Copy</button></div><pre>Own land, or shopping for it? Join us at our [city] Design Center on Saturday, [date], from 10am to 11:30am for Building on Your Land 101, a free class on what to know before you build: perc tests and soil, wells and septic, access and utilities, and how the money works with SimplyMitchell. Bring your parcel address and your questions. Tap Sign up to save a seat.</pre><p class="pn">Image: land or a finished Mitchell home, no people.</p></div><div class="piece"><div class="ph"><div><b>Nextdoor</b><span>Winter, date to be set (4 days before), from each Design Center&#x27;s Nextdoor business page. Fair housing: never name a county or call an area a good place to live.</span></div><button type="button" class="cp">Copy</button></div><pre>Own land, or thinking about buying some to build on?
+
+Mitchell Homes is hosting a free class, Building on Your Land 101, at our [city] Design Center ([studio address]) on Saturday, [date], from 10am to 11:30am. We will cover perc tests and soil, wells and septic, access and utilities, and how the money works.
+
+Bring your parcel address and your questions. RSVP: [RSVP link]?utm_source=nextdoor&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e3
+
+Mitchell Homes, building on your land since 1992.</pre></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Winter, date to be set (the day before). Builder Studio workflow, RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: See you tomorrow, Sat [date], 10 to 11:30am, for Building on Your Land 101 at our [city] Design Center, [studio address]. Bring your parcel address. Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Winter, date to be set (class day), by early afternoon. The New Home Consultant who met each attendee.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for coming this morning, [first name]. If a question about your land comes up this weekend, text me. I will send the class notes tomorrow with the next step for your land.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Winter, date to be set (the day after; schedule it Saturday). The New Home Consultant. · Subject: Your land, next steps</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for joining Building on Your Land 101 yesterday. Here is a short recap, and the next step for you.
+
+What to gather: your parcel address, any survey or plat, and anything you have on the soil, perc or well.
+What to check: soil and perc, well and septic, road access and utilities.
+How the money works: on land you own, SimplyMitchell means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
+
+Your next step: [a land walk at your property, or a Design Center visit to walk the plans]. Reply with two times that work and I will set it up.
+
+Two Behind the Build episodes worth watching this week:
+Well and Septic: https://www.youtube.com/watch?v=zWwtw8qgp4w
+Purchasing Land 101: https://www.youtube.com/watch?v=trgJ8maymOA
+
+See what your land can build: https://simplymitchellhomes.com/land?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e3
+[Carolinas: https://simplymitchellhomes.com/onyourland?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e3 . Still looking for land: https://simplymitchellhomes.com/no-land?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e3 , or /no-land-carolinas.]
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Date to be set (5 days before)</b> · Social · Post 1 (Facebook, Instagram feed). Publish the five Facebook events. · Marketing</li><li><b>Date to be set (5 days before)</b> · Google · Event post on all five profiles · Marketing</li><li><b>Date to be set (4 days before)</b> · Nextdoor · Post from each Design Center page · Marketing</li><li><b>Date to be set (2 days before)</b> · Sales team · Personal invite text and email (the text replaces that day&#x27;s landowner text) · New Home Consultants</li><li><b>Date to be set (the day before)</b> · Social · Post 2 (Facebook, Instagram Stories) · Marketing</li><li><b>Date to be set (the day before)</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Date to be set (class day)</b> · Event · Class, 10am to 11:30am; thank-you text · Presenters, New Home Consultants</li><li><b>Date to be set (the day after)</b> · Sales team · Follow-up email with recap and next step · New Home Consultants</li></ul></details></section><section class="event" id="e4"><header class="eh"><span class="tag w">Saved for winter</span><h2>Wilmington Design Center Open House</h2><dl class="facts"><div><dt>When</dt><dd>Winter, date to be set, 10am to 3pm</dd></div><div><dt>Where</dt><dd>Mitchell Homes Wilmington Design Center, 42 Waterford Business Center Way, Suite A, Belville, NC 28451 (address as listed on the live Design Dollars page).</dd></div><div><dt>Who it is for</dt><dd>North and South Carolina contacts, led by the Wilmington division: coastal North Carolina and Dillon, Horry, Marion and Marlboro counties in South Carolina. Landowners, buyers still looking for land, Carolinas quiz takers and active leads.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>Walk the Wilmington Design Center: cabinets, countertops, flooring, tile, lighting and hardware in person.</li><li>Sit with a New Home Consultant about your land, more than 40 floor plans, and how SimplyMitchell works: zero down, zero closing costs, no construction loan.</li><li>See the Design Dollars ladder with a Design Consultant: $5,000 on every home, up to $25,000 the more you personalize.</li></ul></div><div><h3>Why we are doing it</h3><p>Gives the Carolinas launch of the Four Buyers campaign a physical place to land, and introduces the coast and the four South Carolina counties to the studio that opened September 11.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Approve the date and 10am to 3pm hours. Wilmington has one New Home Consultant; name who joins (a Design Consultant, the New Home Sales Associate, or a Raleigh consultant).</li><li>Design Dollars: the Facebook event and follow-up name the offer without a reserve-by date. Approve the reserve-by date for that month by [date], or CEA removes the Design Dollars lines from every E4 piece.</li><li>The one text on [date]: confirm the audience. The brief says all Carolinas contacts with text consent; Mitchell may prefer to limit it to the Wilmington division, since Belville is a long drive from the Triangle.</li><li>Refreshments or a giveaway: none promised. If Mitchell wants either, add one line to the Facebook event and the Nextdoor post.</li><li>Parking and door signage for Suite A.</li><li>RSVP form (Kelly), optional for a drop-in event: name, phone, email, own land or still looking, county, text consent.</li></ul></div><div><h3>Good to know</h3><ul><li>South Carolina is served from the Wilmington Design Center; keep the two geography claims separate in any added copy.</li><li>The Cuomo video is cleared for organic and email; quote them only word for word from the live pages.</li></ul></div></div><details class="copy"><summary>The copy (10 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>Winter, date to be set (5 days before). Raleigh and Wilmington New Home Consultants to their own active leads.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] with Mitchell Homes. We are hosting an open house at our Wilmington Design Center in Belville this Saturday, [date], 10 to 3. Come walk the finishes and bring your land questions. Want me to set aside a time for you?</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: Open house Saturday in Belville</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+If you have been thinking about the home you want to build, this Saturday is an easy way to take the next step.
+
+On Saturday, [date], from 10am to 3pm, we are hosting an open house at our Wilmington Design Center, 42 Waterford Business Center Way, Suite A, in Belville. You can walk the cabinets, counters, tile and lighting in person, look through more than 40 floor plans, and bring your land questions to a New Home Consultant.
+
+If you own land, ask about SimplyMitchell: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. If you are still looking, you can start designing now and bring us the lot when you find it.
+
+Drop in any time, or reply and I will set aside a time for you.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Winter, date to be set (5 days before) · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>Building on your land near the coast? Come see where it starts.
+
+Our Wilmington Design Center in Belville is hosting an open house on Saturday, [date], from 10am to 3pm. Walk the cabinets, counters, tile and lighting in person, look through more than 40 floor plans, and sit down with a New Home Consultant about your land.
+
+Own land in coastal North Carolina or in Dillon, Horry, Marion or Marlboro County, South Carolina? Ask how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
+
+Drop in any time, or RSVP and we will have a time ready for you: [RSVP link]
+
+#BuildOnYourLand #MitchellHomes #WilmingtonNC</pre><p class="pn">Image: the Wilmington Design Center interior (Brittany&#x27;s photos), no people. Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category. Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e4 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Winter, date to be set (the day before) · Facebook, Instagram Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Tomorrow, 10am to 3pm: open house at the Mitchell Homes Wilmington Design Center, 42 Waterford Business Center Way, Suite A, Belville, NC 28451. Bring your land questions, your saved photos and your plans. Drop in any time: [RSVP link]</pre><p class="pn">Stories: link sticker with [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e4 , plus a map sticker on the studio. Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category.</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Open House at the Mitchell Homes Wilmington Design Center
+Saturday, [date], 10am to 3pm
+42 Waterford Business Center Way, Suite A, Belville, NC 28451
+
+If you have been picturing a home on land you own, or land you are still looking for, this is the place to start.
+
+Drop in any time between 10 and 3 to:
+Walk the Design Center and see cabinets, countertops, flooring, tile, lighting and hardware in person.
+Look through more than 40 floor plans, from 1,000 to 3,000 square feet.
+Sit down with a New Home Consultant about your land and how SimplyMitchell works: zero down, zero closing costs and no construction loan, because Mitchell self-funds every build.
+See the Mitchell Design Dollars ladder with a Design Consultant. Every Mitchell home comes with $5,000 in Mitchell Design Dollars to spend on design selections. The more selections you buy, the more Mitchell adds, up to $25,000. [Reserve by date, once Mitchell approves it for that month.]
+
+The Wilmington Design Center serves coastal North Carolina and Dillon, Horry, Marion and Marlboro counties in South Carolina.
+
+RSVP (optional): [RSVP link] . Questions? Call a New Home Consultant at (984) 331-5468.
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. One offer per contract. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre><p class="pn">One event, Wilmington address. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e4 . Publish 9 days before. If the Design Dollars date for that month is not approved by [date], delete the Design Dollars sentence, the bracket and the Design Dollars fine print.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>Open House at our Wilmington Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Join us Saturday, [date], from 10am to 3pm, for an open house at our Wilmington Design Center in Belville. Walk the finishes in person, look through more than 40 floor plans, and sit down with a New Home Consultant about building on your land. Ask how SimplyMitchell works: zero down, zero closing costs and no construction loan. Drop in any time, or tap Sign up to RSVP.</pre><p class="pn">Image: the studio interior, no people.</p></div><div class="piece"><div class="ph"><div><b>Nextdoor</b><span>Winter, date to be set (4 days before), from the Wilmington Design Center&#x27;s Nextdoor business page.</span></div><button type="button" class="cp">Copy</button></div><pre>Thinking about building a home on land you own, or land you are still looking for?
+
+Mitchell Homes is hosting an open house at our Wilmington Design Center, 42 Waterford Business Center Way, Suite A, in Belville, on Saturday, [date], from 10am to 3pm. Walk the finishes in person, look through more than 40 floor plans, and bring your land questions to a New Home Consultant.
+
+Drop in any time. RSVP if you would like a time set aside: [RSVP link]?utm_source=nextdoor&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e4
+
+Mitchell Homes, building on your land since 1992.</pre></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Winter, date to be set (the day before). Builder Studio workflow, RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: See you tomorrow, Sat [date], 10am to 3pm, at our Wilmington Design Center, 42 Waterford Business Center Way, Suite A, Belville. Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Winter, date to be set (open house day), by 6pm. Whoever each guest met.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for coming by the Wilmington Design Center today, [first name]. I enjoyed hearing about [their land or plan]. I will follow up tomorrow with the plans and numbers we talked about. Text me any time.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Winter, date to be set (the day after; schedule it Saturday). The New Home Consultant. · Subject: From Saturday at the Wilmington Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for coming to the open house yesterday. It was good to talk about [their land, plan or favorite finish].
+
+As promised, here is what we talked about:
+[plans that fit, with links]
+[selections they liked, priced if they asked]
+
+A few things worth having in one place. With SimplyMitchell, building on land you own means zero down, zero closing costs and no construction loan, because Mitchell self-funds every build. See how it works: https://simplymitchellhomes.com/onyourland?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e4
+
+Every Mitchell home comes with $5,000 in Design Dollars, up to $25,000 the more you personalize. [Reserve by date, once Mitchell approves it for that month.]
+
+If you would like to see a Mitchell home on the coast first, Rob and Kat Cuomo built theirs in Wilmington: https://www.youtube.com/watch?v=jMSBzlcQ4uU
+
+Ready for the next step? Reply with a time for a land walk or a second visit.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Design Dollars apply to Design Center selections only. Not applied to base price. No cash value. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Date to be set (9 days before)</b> · Google · Event post on the Wilmington profile. Publish the Facebook event. · Marketing</li><li><b>Date to be set (5 days before)</b> · Social · Post 1 (Facebook, Instagram feed) · Marketing</li><li><b>Date to be set (5 days before)</b> · Sales team · Personal invite text and email · Raleigh and Wilmington New Home Consultants</li><li><b>Date to be set (4 days before)</b> · Nextdoor · Post from the Wilmington page · Marketing</li><li><b>Date to be set (3 days before)</b> · Text · The one bulk text to Carolinas contacts with text consent · Marketing</li><li><b>Date to be set (the day before)</b> · Social · Post 2 (Facebook, Instagram Stories) · Marketing</li><li><b>Date to be set (the day before)</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Date to be set (open house day)</b> · Event · Open house, 10am to 3pm; thank-you text · Wilmington team</li><li><b>Date to be set (the day after)</b> · Sales team · Follow-up email · New Home Consultants</li></ul></details></section><section class="event" id="e5"><header class="eh"><span class="tag w">Saved for winter</span><h2>The Gathering Place Live: Building Your Getaway</h2><dl class="facts"><div><dt>When</dt><dd>Winter, date to be set, 7pm Eastern, 30 minutes</dd></div><div><dt>Where</dt><dd>Online: live on the Mitchell Homes Facebook page and YouTube channel, the same setup as Behind the Build Live.</dd></div><div><dt>Who it is for</dt><dd>People planning a getaway, a family retreat, a second home or the place they will retire, at the lake, on the coast or in the mountains: quiz takers who chose Smith Mountain Lake, Lake Gaston, the Shenandoah Valley or the Eastern Shore and Outer Banks, contacts interested in those areas, and past homeowners thinking about a second place.</dd></div></dl></header><div class="write"><div><h3>What happens</h3><ul><li>A 30-minute live conversation about building a getaway, second home or retirement home at the lake, on the coast or in the mountains.</li><li>What to look at first on a lake, coastal or mountain lot, and how building works when you live hours away, with weekly communication from groundbreaking to move-in.</li><li>Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan, because Mitchell self-funds every build. Live questions throughout.</li></ul></div><div><h3>Why we are doing it</h3><p>Gives retreat and retirement buyers, the audience for The Gathering Place Portrait, a reason to talk to Mitchell the same night hp4 lands, and answers their biggest objection, second-home financing, out loud.</p></div><div><h3>What Mitchell needs to confirm</h3><ul><li>Host: Scott and Deven, or a New Home Consultant who builds at the lake and on the coast. [date], about 6:30pm to 7:45pm Eastern.</li><li>Second homes: confirm the SimplyMitchell terms for a second home or retirement home before the show, so live answers match.</li><li>Which areas to name on air (the quiz uses Smith Mountain Lake, Lake Gaston, the Shenandoah Valley and the Eastern Shore and Outer Banks).</li><li>Streaming setup and who runs it (same as E2), with the financing line on screen.</li><li>RSVP form (Kelly): name, email, phone, text consent, where you are thinking of building, your question.</li></ul></div><div><h3>Good to know</h3><ul><li>The invitation never shows or describes the painted Home Portrait; the follow-up names the quiz only.</li><li>Hosts describe what to check on a lot, never which areas are better places to live (fair housing).</li><li>hp4 goes the morning of the show, so most RSVPs come from the Tuesday post, the Facebook event and the consultant invites; the day-before reminder only reaches those.</li></ul></div></div><details class="copy"><summary>The copy (9 pieces)</summary><div class="pieces"><div class="piece"><div class="ph"><div><b>Consultant invitation text</b><span>Winter, date to be set (2 days before). New Home Consultants to their own active leads who mentioned a lake, the coast or the mountains, or whose quiz answer was a getaway, retreat or retirement.</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name], [your name] with Mitchell Homes. You mentioned [the lake / the coast / the mountains]. Thursday at 7pm Eastern we are live on Facebook and YouTube for 30 minutes on building a getaway or retirement home. Want me to send you the link?</pre></div><div class="piece"><div class="ph"><div><b>Consultant invitation email</b><span>Subject: Thursday at 7: building the getaway</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+You mentioned [the lake, the coast or the mountains] when we talked, so I wanted you to hear about this first.
+
+On Thursday, [date], at 7pm Eastern, we are going live on Facebook and YouTube for 30 minutes on building a getaway, a second home or the place you plan to retire. We will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why second homes are where banks get strict.
+
+That last one matters. Mitchell self-funds every build, so there is no construction loan to qualify for. The second home banks make hard, Mitchell makes simple.
+
+Watch here: [Facebook Live link] or [YouTube Live link]. If you have a question you want answered on air, reply and I will pass it along.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre></div><div class="piece"><div class="ph"><div><b>Social post 1</b><span>Winter, date to be set (2 days before) · Facebook, Instagram feed</span></div><button type="button" class="cp">Copy</button></div><pre>Some homes are built for every day. Some are built for the long table, the full-house weekend and the years after work.
+
+If you are planning a getaway, a second home or the place you will retire, at the lake, on the coast or in the mountains, join us live on Thursday, [date], at 7pm Eastern. In 30 minutes we will cover what to look at first on a lake, coastal or mountain lot, how building works when you live hours away, and why the second home banks make hard, Mitchell makes simple.
+
+Watch on Facebook or YouTube. RSVP for a reminder: [RSVP link]
+
+#BuildOnYourLand #MitchellHomes</pre><p class="pn">Image: a real Mitchell home by the water, e.g. the hp4 hero https://media.mitchellhomesinc.com/276/2026/3/24/10_mwFjkrl.jpg . Never the painted portrait. Could be boosted, so no people in the image (Meta Housing category); if boosted, run it under the Housing special ad category. Instagram: replace the RSVP line with RSVP at the link in bio, and set the bio link to [RSVP link]?utm_source=instagram&amp;utm_medium=organic_social&amp;utm_campaign=fall26_events&amp;utm_content=e5 that morning.</p></div><div class="piece"><div class="ph"><div><b>Social post 2</b><span>Winter, date to be set (the day of the show) · Facebook, Instagram Stories</span></div><button type="button" class="cp">Copy</button></div><pre>Tonight at 7pm Eastern: The Gathering Place, live. Thirty minutes on building a getaway, second home or retirement home at the lake, on the coast or in the mountains. Watch here on Facebook or on our YouTube channel, and ask your questions live.</pre><p class="pn">Stories: link sticker to the YouTube Live link. Post the morning of the show.</p></div><div class="piece"><div class="ph"><div><b>Facebook event</b><span>One per Design Center</span></div><button type="button" class="cp">Copy</button></div><pre>The Gathering Place Live: Building Your Getaway
+Thursday, [date], 7pm Eastern, 30 minutes
+Online: live here on Facebook and on the Mitchell Homes YouTube channel
+
+Some homes are built for every day. Some are built for the long table, the full-house weekend and the place you plan to retire.
+
+If you are planning a getaway, a family retreat, a second home or a home for retirement, at the lake, on the coast or in the mountains, spend 30 minutes with us. We will talk through:
+
+What to look at first on a lake, coastal or mountain lot.
+How building works when you live hours away, with weekly communication from groundbreaking to move-in.
+Why second homes are where banks get strict, and how SimplyMitchell answers it: no construction loan to qualify for, because Mitchell self-funds every build.
+
+Ask your questions live in the comments, or send them ahead: [RSVP link]
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.</pre><p class="pn">One online Facebook event with Facebook Live as the location. Link: [RSVP link]?utm_source=facebook&amp;utm_medium=facebook_event&amp;utm_campaign=fall26_events&amp;utm_content=e5 . Publish 2 days before.</p></div><div class="piece"><div class="ph"><div><b>Google Business Profile event post</b><span>The Gathering Place: Build Your Getaway</span></div><button type="button" class="cp">Copy</button></div><pre>Planning a getaway, a second home or the place you will retire, at the lake, on the coast or in the mountains? Join Mitchell Homes live on Thursday, [date], at 7pm Eastern, on our Facebook page and YouTube channel. In 30 minutes we cover what to look at first on a lake, coastal or mountain lot, building from hours away, and how SimplyMitchell removes the construction loan. Tap Sign up for a reminder.</pre><p class="pn">Online event. If Google rejects it on a studio profile, post as an Update or skip.</p></div><div class="piece"><div class="ph"><div><b>RSVP reminder text</b><span>Winter, date to be set (the day before). Builder Studio workflow, RSVPs with text consent only.</span></div><button type="button" class="cp">Copy</button></div><pre>Mitchell Homes: Tomorrow at 7pm Eastern, The Gathering Place, live: 30 minutes on building your getaway. Watch: [YouTube Live link] Reply STOP to opt out</pre></div><div class="piece"><div class="ph"><div><b>Same-day thank-you text</b><span>Winter, date to be set, right after the show. Each consultant to their own leads who RSVPed; online sales counselors to the rest.</span></div><button type="button" class="cp">Copy</button></div><pre>Thank you for joining us tonight, [first name]. The replay is here if you want to share it with whoever you are building the getaway with: [replay link]. Any question we did not get to, text me.</pre></div><div class="piece"><div class="ph"><div><b>Next-day follow-up email</b><span>Winter, date to be set (the day after). The consultant (or an online sales counselor), to every RSVP. · Subject: The getaway, one step closer</span></div><button type="button" class="cp">Copy</button></div><pre>Hi [first name],
+
+Thank you for joining The Gathering Place live last night. The full replay is here: [YouTube replay link]
+
+The short version: start with the lot itself, from soil and septic to access and utilities. Building from hours away works because you hear from us every week from groundbreaking to move-in. And with Mitchell there is no construction loan to qualify for, because Mitchell self-funds every build.
+
+If you have not taken the Home Portrait quiz yet, choose your lake, coast or mountain region and tell us what the home is for. Eight questions, about 90 seconds: https://mitchellhomesliving.com/portrait?utm_source=sales_email&amp;utm_medium=email&amp;utm_campaign=fall26_events&amp;utm_content=e5
+
+[Carolinas contacts only: We are also hosting an open house at our Wilmington Design Center in Belville tomorrow, Saturday, [date], from 10am to 3pm. Come by any time.]
+
+Or reply with a time, and we can talk about your land, or the land you are still looking for.
+
+Financing terms are illustrative only and subject to credit approval. Not a commitment to lend.
+
+[your name]
+New Home Consultant, Mitchell Homes
+[your phone]</pre></div></div></details><details><summary>Every touch, by date</summary><ul class='sched'><li><b>Date to be set (2 days before)</b> · Social · Post 1 (Facebook, Instagram feed). Publish the online Facebook event. · Marketing</li><li><b>Date to be set (2 days before)</b> · Google · Event post on all five profiles (or Update) · Marketing</li><li><b>Date to be set (2 days before)</b> · Sales team · Personal invite text and email to lake, coast and mountain leads · New Home Consultants</li><li><b>Date to be set (the day before)</b> · Text · Reminder to RSVPs only · Builder Studio workflow</li><li><b>Date to be set (the day of the show)</b> · Social · Post 2, tonight at 7 (Facebook, Instagram Stories) · Marketing</li><li><b>Date to be set (the day of the show)</b> · Event · Live at 7pm Eastern; thank-you text after the show · Host; consultants</li><li><b>Date to be set (the day after)</b> · Sales team · Follow-up email with the replay (and Saturday&#x27;s open house for Carolinas contacts) · New Home Consultants, online sales counselors</li></ul></details></section>
+  <p class="foot">Prepared by CEA Marketing for Mitchell Homes. Placeholders in brackets, like [city] or [RSVP link], are filled per Design Center before anything goes out.</p>
+</main>
+
+<script>
+document.addEventListener('click', function(ev){
+  var b = ev.target.closest('.cp'); if(!b) return;
+  var pre = b.closest('.piece').querySelector('pre'); var text = pre.innerText;
+  function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1600); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(pre); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, press Ctrl+C'; setTimeout(function(){ b.textContent = 'Copy'; }, 2600); }
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>

@@ -1,0 +1,32 @@
+{
+ "folder": {
+  "id": "6acff5e79133ac5a563e9e2c",
+  "name": "Fall 2026 | CEA emails (drafts, do not send until approved)"
+ },
+ "templates": {
+  "NEWS": {
+   "id": "6acff5e73fd5a521a2d85486",
+   "name": "CEA26 · NEWS · Seven new guides for builders who want buyers"
+  },
+  "AUDIT1": {
+   "id": "6acff5e9a0fb95b190378808",
+   "name": "CEA26 · AUDIT1 · Your AI Visibility Audit is underway"
+  },
+  "AUDIT2": {
+   "id": "6acff5ebbbeff3a84e95886a",
+   "name": "CEA26 · AUDIT2 · AI local search jumped from 6% to 45%"
+  },
+  "AUDIT3": {
+   "id": "6acff5ecd638272819e95835",
+   "name": "CEA26 · AUDIT3 · Traffic is an expense. Appointments pay."
+  },
+  "AUDIT4": {
+   "id": "6acff5eeb4084661e66d391a",
+   "name": "CEA26 · AUDIT4 · Who answers your leads at 11pm?"
+  },
+  "AUDIT5": {
+   "id": "6acff5ef9133ac5a563e9ebd",
+   "name": "CEA26 · AUDIT5 · Seven questions to ask any agency"
+  }
+ }
+}

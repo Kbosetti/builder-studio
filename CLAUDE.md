@@ -23,6 +23,21 @@ Never commit tokens. Look for them in this order:
 2. `/root/.config/cea/credentials.env` (local only, gitignored, disappears when the sandbox is reclaimed).
 3. Ask the user. The GHL private integration token also lives in the Vercel project env var `HBS_PIT`.
 
+**Builder Studio sub-accounts (Kelly sent the keys October 13, 2026).** Each PIT is read from `GHL_PIT_<KEY>` and its location from `GHL_LOCATION_<KEY>`, set in the Claude Code environment settings (and in `/root/.config/cea/credentials.env` for the session that received them). The keys themselves never go in this repo.
+
+| Account | KEY | Location ID |
+|---|---|---|
+| CEA Marketing | `CEA` | `m5oY7H8NWJiPv2YEL5Aj` |
+| Homebuilder Studio | `HBS` | `xv1KhcvWVceEaYkTwEVS` |
+| Vitale Homes | `VITALE` | `YuP3eTRFrZacBUiB8vIw` |
+| Sunlife Homes | `SUNLIFE` | `DrqiyXxYx8vvRF6A23dt` |
+| Cornerstone Homes | `CORNERSTONE` | `IXl5RZsJfouKBtQp54a6` |
+| Domain Homes | `DOMAIN` | `iuSAXTHiaLcZQWiBBdgi` |
+| Mitchell Homes | `MITCHELL` | `5o5zLlUPPizy6Ajp61oF` |
+| Justin and Stephanie | `JUSTIN_STEPHANIE` | `pfMSpx3QAIfHjjCuJSwc` |
+
+For Mitchell, scripts that read `GHL_PIT` accept `GHL_PIT_MITCHELL` (export one as the other).
+
 ## Common tasks
 
 - **Deploy the Home Portrait site:** `cd home-portrait && vercel deploy --prod --yes --no-wait --scope team_ruPVbZ5by79KqyoOnsn9JUZ8 --token $VERCEL_TOKEN`. Use `--no-wait`; the sandbox proxy drops connections held open longer than about nine seconds, which also breaks `vercel login` (use a token instead). Verify by comparing MD5 of each served page with the source.
@@ -41,6 +56,7 @@ Never commit tokens. Look for them in this order:
 - **Guide reels:** the four Home Portrait reels live only inside the ad kit artifact, which this environment cannot download from. Once the .mp4 files are in the Builder Studio media library, `python3 campaign-guide/fetch_reels.py` pulls them into `campaign-guide/reels/`, `build.py` shows them in the Home Portrait section, publish with every `reels/*.mp4` in `files`, and `deploy.py` ships them to the public copy.
 - **Builder Studio setup** (drafts only, nothing sends): `GHL_PIT=... python3 campaigns/builder_studio/upload.py` loads every email, the sales follow up emails and the event invites into the folder "Fall 2026 | Campaign drafts from CEA (do not send until approved)" as `Fall26 · ID · subject`; it is idempotent and updates in place, so rerun it after any email change. IDs of the folder, templates, tags and trigger links (including the six event RSVP links) are in `campaigns/builder_studio/created.json`. `python3 campaigns/builder_studio/setup.py` writes `setup.json`, the build sheet the kit's "Builder Studio setup" tab shows: workflows, smart lists, scheduled sends and the go-live checklist. The API can make templates, tags and trigger links but not workflows, smart lists, campaigns or forms, so those are built by hand from that sheet. The PIT is the `HBS_PIT` env var on the quiz Vercel project; read it with the single env endpoint `/v1/projects/{id}/env/{envId}` (the list endpoint returns it encrypted). Template API: create with `POST /emails/builder` (`type: html`, `title`, `parentId`), body with `POST /emails/builder/data` (needs `updatedBy`, a user id), name, subject and from name with `PATCH /emails/builder/{id}`. Open flag: the account's older trigger links "Home Portrait Quiz" / "Home Portrait Presentation" and the custom value "Home Portrait Quiz URL" point at mitchellhomeportrait.vercel.app, an older quiz outside CEA's Vercel team; new templates link to mitchellhomesliving.com.
 
+- **Fall events page:** `python3 campaigns/events/build_events_page.py && python3 campaigns/events/deploy_events_page.py` (needs `VERCEL_TOKEN`) builds every event's write-up and copy, plus My Mitchell Story credited to Brittany, into https://mitchell-fall-events.vercel.app (noindex, public, the link Kelly shares). Rebuild after `make_events.py`, `make_contest.py` or the email build.
 - **Builder Studio inventory (for Trevor):** `python3 campaigns/builder_studio/build_inventory.py` writes `campaigns/builder_studio/out/inventory.html`, one page listing every template, tag, trigger link, custom field and media file CEA added, what already runs live (quiz and landing page intake), the day's changes, and what is still to build after approval. Publish it to https://claude.ai/artifact/2J3LaNWQpWc7LmdiikGvYq. Rerun after `upload.py`, `setup.py` or any media upload; refresh `media_snapshot.json` from the library listing when files change, and update the "Changes made today" list in `inventory.html`. Kelly's call on October 9: hold the remaining Builder Studio build (workflows, lists, scheduled sends, forms, calendars) until Mitchell approves each batch.
 
 ## Home Portrait wiring (see home-portrait/SETUP-NOTES.md for field IDs and calendars)
