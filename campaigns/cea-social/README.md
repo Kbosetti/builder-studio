@@ -10,7 +10,7 @@ Post and schedule through the **CEA sub-account in Home Builder Studio**, with e
 
 - CEA sub-account Location ID (env var `CEA_GHL_LOCATION_ID`)
 - CEA Private Integration Token with Social Planner and Media scopes (env var `CEA_GHL_PIT`), set in the Claude environment settings
-- Instagram @ceamarketing, the CEA Facebook page and LinkedIn (Kelly plus the CEA page) connected in that sub-account's Social Planner
+- Instagram @ceamarketing, the CEA Facebook page, LinkedIn (Kelly plus the CEA page) and the CEA Google Business Profile connected in that sub-account's Social Planner
 
 ## Then
 
@@ -22,3 +22,7 @@ Post and schedule through the **CEA sub-account in Home Builder Studio**, with e
 ## Already posted (via Postiz, October 12)
 
 Blog post 1 (How to Choose a Homebuilder Marketing Agency With Real AI Services) to the CEA Marketing Facebook page, Kelly's LinkedIn and Kelly's Instagram (Kelly Bosetti Primeau All About Marketing). It is not in `schedule.json`. Two files were test uploaded to the ceamarketing.com Webflow asset library (`cea-social-promo1.jpg`, `cea-social-reel1-bold-ideas.mp4`); they are not on any page.
+
+## Content kit and Google posts (October 16)
+
+The working library is the public content kit https://claude.ai/artifact/Ngw9yyaJKjBfSYaDSoNSNo: posts, 20 reels (8 to 20 cut from Kelly's Drive video library), 12 scripts, 6 emails and 8 Google Business Profile posts (one per article plus the free audit offer; 4:3 images, Learn more button, no hashtags). `schedule.json` now carries the Google posts twice a week at 11am Eastern. Only reels about being found online end with Comment AUDIT; the rest use the brand end card and a topic call to action.
