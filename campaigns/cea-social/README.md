@@ -42,3 +42,9 @@ The working library is the public content kit https://claude.ai/artifact/Ngw9yya
 ## VA posting schedule (October 23)
 
 `schedule.json` was replaced with the five week plan in the content kit's Posting schedule section (October 26 to November 27, 41 posts): one post a weekday on Instagram @ceamarketing and Facebook at 10am, Kelly's LinkedIn on article days, two reels on @kellyprimeauconsulting, Google twice a week at 11am, nothing on Thanksgiving. Kelly's VA posts it by hand from the CEA Social Planner using the kit's captions and files. Article 1 skips Kelly's LinkedIn because it went out there on October 12.
+
+## Eight new articles (October 23)
+
+Written and loaded as **drafts** (not published, no hero image yet) in the ceamarketing.com Webflow Blogs collection, author Kelly, category matching the other builder articles. Source text in `articles/articles_src.py`. Slugs: nurturing-homebuyer-leads-that-go-quiet, what-to-say-when-a-buyer-says-builder-x-is-cheaper, how-to-run-a-realtor-event-that-brings-buyers-back, stop-the-fire-sale-why-incentives-alone-dont-sell-homes, google-yourself-then-ask-chatgpt-15-minute-visibility-check (the only one with the free audit call to action), training-your-new-home-sales-team-for-todays-market, branding-a-new-community-before-the-first-shovel, secret-shop-your-own-sales-process. Several link to each other, so publish them together.
+
+Builder Studio Social Planner had no drafts on October 23 on purpose: the old ones were deleted October 14 and the VA posts by hand from the kit. Loading drafts or scheduled posts needs a session with `GHL_PIT_CEA`.
