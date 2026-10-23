@@ -59,6 +59,11 @@ For Mitchell, scripts that read `GHL_PIT` accept `GHL_PIT_MITCHELL` (export one 
 - **Fall events page:** `python3 campaigns/events/build_events_page.py && python3 campaigns/events/deploy_events_page.py` (needs `VERCEL_TOKEN`) builds every event's write-up and copy, plus My Mitchell Story credited to Brittany, into https://mitchell-fall-events.vercel.app (noindex, public, the link Kelly shares). Rebuild after `make_events.py`, `make_contest.py` or the email build.
 - **Builder Studio inventory (for Trevor):** `python3 campaigns/builder_studio/build_inventory.py` writes `campaigns/builder_studio/out/inventory.html`, one page listing every template, tag, trigger link, custom field and media file CEA added, what already runs live (quiz and landing page intake), the day's changes, and what is still to build after approval. Publish it to https://claude.ai/artifact/2J3LaNWQpWc7LmdiikGvYq. Rerun after `upload.py`, `setup.py` or any media upload; refresh `media_snapshot.json` from the library listing when files change, and update the "Changes made today" list in `inventory.html`. Kelly's call on October 9: hold the remaining Builder Studio build (workflows, lists, scheduled sends, forms, calendars) until Mitchell approves each batch.
 
+## Writing rules (Kelly)
+
+- No dashes in any copy.
+- Every article is written for Google AI Overviews and SEO, and ships with a meta description and schema (BlogPosting plus FAQPage). Load articles as drafts; Kelly approves before anything is published.
+
 ## Home Portrait wiring (see home-portrait/SETUP-NOTES.md for field IDs and calendars)
 
 - Quiz `portrait.html` posts to `api/lead.js`, which upserts the contact, writes 17 custom fields and tags, adds a note, sends the portrait email with the persona PDF from `home-portrait/pdf/`, and creates or updates the opportunity in the division pipeline (pipelines are named exactly like the divisions).
