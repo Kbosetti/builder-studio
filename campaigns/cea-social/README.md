@@ -38,3 +38,7 @@ Kelly will share talking head videos she has already made, to sprinkle into the 
 ## Content kit and Google posts (October 16)
 
 The working library is the public content kit https://claude.ai/artifact/Ngw9yyaJKjBfSYaDSoNSNo: posts, 20 reels (8 to 20 cut from Kelly's Drive video library), 12 scripts, 6 emails and 8 Google Business Profile posts (one per article plus the free audit offer; 4:3 images, Learn more button, no hashtags). `schedule.json` now carries the Google posts twice a week at 11am Eastern. Only reels about being found online end with Comment AUDIT; the rest use the brand end card and a topic call to action.
+
+## VA posting schedule (October 23)
+
+`schedule.json` was replaced with the five week plan in the content kit's Posting schedule section (October 26 to November 27, 41 posts): one post a weekday on Instagram @ceamarketing and Facebook at 10am, Kelly's LinkedIn on article days, two reels on @kellyprimeauconsulting, Google twice a week at 11am, nothing on Thanksgiving. Kelly's VA posts it by hand from the CEA Social Planner using the kit's captions and files. Article 1 skips Kelly's LinkedIn because it went out there on October 12.
