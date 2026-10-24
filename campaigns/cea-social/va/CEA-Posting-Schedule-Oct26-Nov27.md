@@ -49,7 +49,7 @@ AI recommends only 1.2% of local businesses. Find out if you are one of them. Re
 
 Button: Learn more https://www.ceamarketing.com/contact
 
-Media: file in the content kit: gbp8.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72f29839ac57227604e_cea-social-gbp8.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-10-27 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
@@ -63,7 +63,7 @@ Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs2_meet_builder_studio.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72f0fcc713db92cd2bd_cea-social-bs2-meet-builder-studio.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-10-28 10:00 AM | Instagram @ceamarketing | To post
@@ -156,7 +156,7 @@ AI use for local search jumped from 6% in 2025 to 45% in 2026, according to Prev
 
 Button: Learn more https://www.ceamarketing.com/blogs/ai-marketing-agency-vs-traditional-agency-homebuilders
 
-Media: file in the content kit: gbp2.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72e35d6534b36f28495_cea-social-gbp2.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-10-30 10:00 AM | Instagram @ceamarketing | To post
@@ -186,7 +186,7 @@ Builder Studio answers day or night. Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs6_leads_at_10pm.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf7309138065b4ae8584b_cea-social-bs6-leads-at-10pm.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-02 10:00 AM | Instagram @ceamarketing | To post
@@ -260,7 +260,7 @@ Our article walks through the steps, plus five ways to raise your score.
 
 Button: Learn more https://www.ceamarketing.com/blogs/what-is-ai-visibility-for-homebuilders
 
-Media: file in the content kit: gbp3.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72e3d71a3466dec884f_cea-social-gbp3.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-11-03 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
@@ -274,7 +274,7 @@ Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs1_follow_up_agent.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72f1f1a94653c687ca3_cea-social-bs1-follow-up-agent.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-04 10:00 AM | Instagram @ceamarketing | To post
@@ -373,7 +373,7 @@ Read the eight steps in our latest article.
 
 Button: Learn more https://www.ceamarketing.com/blogs/how-to-get-chatgpt-to-recommend-your-homebuilder-brand
 
-Media: file in the content kit: gbp4.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72ec52f5ea2d2a43a83_cea-social-gbp4.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-11-06 10:00 AM | Instagram @ceamarketing | To post
@@ -403,7 +403,7 @@ Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs3_builder_x_is_cheaper.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72fcd3619e907559b2c_cea-social-bs3-builder-x-is-cheaper.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-09 10:00 AM | Instagram @ceamarketing | To post
@@ -483,7 +483,7 @@ Read how to turn clicks into appointments.
 
 Button: Learn more https://www.ceamarketing.com/blogs/traffic-is-an-expense-builder-ads-clicks-no-appointments
 
-Media: file in the content kit: gbp5.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72e35d6534b36f28510_cea-social-gbp5.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-11-10 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
@@ -497,7 +497,7 @@ This is Builder Studio. Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs4_seven_agents_24_7.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72fc7ab1818ff882d65_cea-social-bs4-seven-agents.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-11 10:00 AM | Instagram @ceamarketing | To post
@@ -590,7 +590,7 @@ Our article covers what a strong partnership looks like and how to switch withou
 
 Button: Learn more https://www.ceamarketing.com/blogs/seven-signs-your-homebuilder-marketing-agency-is-coasting
 
-Media: file in the content kit: gbp6.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72edc772cc6233def05_cea-social-gbp6.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-11-13 10:00 AM | Instagram @ceamarketing | To post
@@ -620,7 +620,7 @@ Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs8_realtors_need_answers.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf730dc772cc6233def7f_cea-social-bs8-realtors-need-answers.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-16 10:00 AM | Instagram @ceamarketing | To post
@@ -699,7 +699,7 @@ Builder Studio, our CRM and marketing platform for builders, includes AI lead re
 
 Button: Learn more https://www.ceamarketing.com/blogs/ai-lead-response-for-homebuilders
 
-Media: file in the content kit: gbp7.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72e35d6534b36f28564_cea-social-gbp7.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-11-17 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
@@ -713,7 +713,7 @@ Train them to sell in this market, not the market from three years ago. Schedule
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs9_train_for_this_market.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf7303d71a3466dec8982_cea-social-bs9-train-for-this-market.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-18 10:00 AM | Instagram @ceamarketing | To post
@@ -760,7 +760,7 @@ CEA Marketing has helped homebuilders grow for nearly 30 years.
 
 Button: Learn more https://www.ceamarketing.com/blogs/how-to-choose-a-homebuilder-marketing-agency-with-ai-services
 
-Media: file in the content kit: gbp1.jpg
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf72e1f1a94653c687c30_cea-social-gbp1.jpg
 Note: Add the Learn more button with the link shown on the card.
 
 ## 2026-11-20 10:00 AM | Instagram @ceamarketing | To post
@@ -790,7 +790,7 @@ Want to see where you stand? Comment AUDIT for a free AI Visibility Audit.
 
 #AIVisibility #BuilderStudio #HomebuilderMarketing #AISearch
 
-Media: file in the content kit: bs7_if_ai_doesnt_know_you.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf73035d6534b36f285f1_cea-social-bs7-if-ai-doesnt-know-you.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-23 10:00 AM | Instagram @ceamarketing | To post
@@ -836,7 +836,7 @@ Schedule your demo at homebuilderstudio.ai.
 
 #BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
 
-Media: file in the content kit: bs5_your_new_sales_team.mp4
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adcf7309138065b4ae85831_cea-social-bs5-your-new-sales-team.mp4
 Note: On hold until the music is fixed. Do not post yet.
 
 ## 2026-11-25 10:00 AM | Instagram @ceamarketing | To post
