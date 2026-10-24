@@ -1,0 +1,872 @@
+# CEA posting schedule, October 26 to November 27, 2026
+
+Times are Eastern. Status "To post" is what still needs posting. "Already scheduled" runs on its own through Postiz. "On hold" waits for the music fix.
+
+## 2026-10-26 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Stop the fire sale
+
+Fire sales. Rate buydowns. $50,000 off.
+
+Every builder is shouting the same incentive, and buyers are tuning it out.
+The builders who win teach first: what is happening in the market, which mortgages fit, what the area is really like.
+Hard selling belongs at the purchase stage. Everything before it is about being helpful.
+
+Want a buyer journey that sells without the fire sale? Send us a message.
+
+#HomebuilderMarketing #NewHomeSales #BuyerJourney #BuilderMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec13510bf31f813adaa_cea-social-reel8-stop-the-fire-sale.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-10-27 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** How to Choose a Homebuilder Marketing Agency With Real AI Services
+
+Most agencies use AI. Few actually offer AI services.
+
+Real AI services do three things for builders.
+They get your communities recommended by ChatGPT, Google AI Overviews, and Perplexity.
+They make sure every lead hears back in minutes, day or night.
+They show you which dollars turn into appointments.
+Writing captions faster is a tool, not a service.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#HomebuilderMarketing #AIMarketing #NewHomeSales #AIVisibility
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/f055b466-d9f6-4263-8021-229870c5b803.jpg
+Note: Facebook already went out Oct 12. Post on @ceamarketing only.
+
+## 2026-10-27 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** Free AI Visibility Audit (offer post)
+
+Free AI Visibility Audit for homebuilders.
+
+Find out whether ChatGPT, Gemini, Perplexity and Google recommend your communities. Your audit shows your AI visibility score, the competitors AI names instead of you and the first three fixes we would make.
+
+AI recommends only 1.2% of local businesses. Find out if you are one of them. Request your free audit today.
+
+Button: Learn more https://www.ceamarketing.com/contact
+
+Media: file in the content kit: gbp8.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-10-27 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Meet Builder Studio
+
+What if you could add a whole team that works around the clock?
+
+Meet Builder Studio: seven AI agents built specifically for homebuilders.
+
+Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs2_meet_builder_studio.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-10-28 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Google yourself
+
+When is the last time you searched for your own business?
+
+Type in the words your buyers use and see who shows up first.
+Then ask ChatGPT the same question. Buyers are doing both.
+If you are not there, someone else is.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+#AIVisibility #LocalSEO #HomebuilderMarketing #AISearch
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbee973510bf31f8139df8_cea-social-reel13-google-yourself.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-10-28 12:00 PM | Instagram @kellyprimeauconsulting | To post
+**Reel:** Just get started
+
+Nobody picks up the phone anymore.
+
+So how do you get your message out? You make content, just like this.
+Yes, it can feel awkward at first. Do it anyway. People notice, and business follows.
+The best advice I can give you: just get started.
+
+Save this for the day you finally hit record.
+
+#ContentCreation #SmallBusinessMarketing #PersonalBrand #KellyPrimeauConsulting
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec1ad0892e3d565ac6c_cea-social-reel10-just-get-started.mp4
+Note: Kelly Primeau Consulting page only. Already scheduled on Kelly's All About Marketing Instagram.
+
+## 2026-10-29 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** AI Marketing Agency vs Traditional Agency for Homebuilders
+
+AI first or traditional agency? Here is the real difference.
+
+Traditional agencies chase Google rankings. AI first agencies also get you named in ChatGPT and Gemini.
+Traditional agencies reply during business hours. AI first agencies answer leads on nights and weekends.
+Traditional reports show clicks. AI first reports show booked appointments.
+Both models still need people who know the new home sales cycle.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#HomebuilderMarketing #AIMarketing #BuilderMarketing #NewHomeSales
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/9d206853-b50f-4ad8-9fea-9bb0ef3434ae.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-10-29 10:00 AM | LinkedIn (Kelly) | Already scheduled
+**Article post:** AI Marketing Agency vs Traditional Agency for Homebuilders
+
+CEA has served homebuilders for nearly 30 years.
+
+The agency question has never mattered more than it does now.
+
+AI use for local search jumped from 6% in 2025 to 45% in 2026. Yet AI recommends only 1.2% of local businesses.
+
+A traditional agency can still build you a beautiful website. If AI never mentions your communities, many buyers will never see it.
+
+To be fair, traditional agencies still fit some jobs, like a logo or a print brochure.
+
+But here is what I hear from builders every week. Their ads bring traffic, and appointments stay flat. Leads come in after hours and wait until Monday for a reply.
+
+That gap is where an AI first partner earns its keep.
+
+Where does your current agency land: AI first, traditional, or somewhere in between?
+
+https://www.ceamarketing.com/blogs/ai-marketing-agency-vs-traditional-agency-homebuilders
+
+#HomebuilderMarketing #AIMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/9d206853-b50f-4ad8-9fea-9bb0ef3434ae.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-10-29 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** AI Marketing Agency vs Traditional Agency for Homebuilders
+
+AI first or traditional agency? Here is where the difference shows up for builders.
+
+Getting found: an AI first agency works to get you named in ChatGPT, Gemini and Google AI Overviews, not only in Google rankings.
+Lead response: instant replies on nights and weekends.
+Reporting: booked appointments, not just clicks.
+
+AI use for local search jumped from 6% in 2025 to 45% in 2026, according to Previsible's 2026 State of AI Discovery Report. Read the full comparison on our site.
+
+Button: Learn more https://www.ceamarketing.com/blogs/ai-marketing-agency-vs-traditional-agency-homebuilders
+
+Media: file in the content kit: gbp2.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-10-30 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Secret shop your business
+
+Want to see your business the way a buyer does? Secret shop it.
+
+Ask someone in your ideal audience to call you, message you and visit your website.
+How long did it take to hear back? How did you sell? Could they tell what you do in a few minutes?
+The answers show you exactly where buyers drop off.
+
+Want us to look at yours? Comment AUDIT for a free AI Visibility Audit.
+
+#CustomerExperience #LeadResponse #HomebuilderMarketing #MarketingAudit
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec3a0d1a2a8e30435b7_cea-social-reel19-secret-shop-your-business.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-10-30 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Leads at 10pm
+
+Your website is losing leads right now.
+
+Buyers want answers at 10pm on a Tuesday, and nobody is there to give them. With traffic slower and buyers cautious, every lead matters more than ever.
+
+Builder Studio answers day or night. Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs6_leads_at_10pm.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-02 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Realtors are your influencers
+
+Builders: your best influencers already have buyers.
+
+Realtors sell more of your homes than anyone else, and they have active buyers right now.
+So treat them like influencers. Invite them in, show them the product, and give them something to share.
+
+Planning your next realtor push? Send us a message.
+
+#HomebuilderMarketing #RealtorPartners #NewHomeSales #BuilderMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec2787e65d6addd7ef2_cea-social-reel14-realtors-are-your-influencers.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-03 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** What Is AI Visibility for Homebuilders, and How Do You Measure It?
+
+When buyers ask AI for builders, are you named?
+
+AI visibility is how often AI tools name you when buyers ask for recommendations.
+AI use for local search jumped from 6% to 45% in one year.
+AI recommends only 1.2% of local businesses.
+Clear pages, fresh reviews, and accurate listings help AI trust you.
+One CEA client went from 5% to 42%.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#AIVisibility #HomebuilderMarketing #AISearch #NewConstruction
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/67607ea4-b6e2-41c7-8bbd-a10c9813b2a1.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-03 10:00 AM | LinkedIn (Kelly) | Already scheduled
+**Article post:** What Is AI Visibility for Homebuilders, and How Do You Measure It?
+
+AI visibility sounds technical. It is simple.
+
+It is how often AI tools name your company when buyers ask for recommendations.
+
+You can check yours this week.
+List 20 to 50 questions your buyers ask.
+Ask each one in ChatGPT, Gemini, Perplexity, and Google.
+Count the answers that name you, then divide by the total.
+
+A score of 5% means AI named you in five of every 100 answers. One CEA client started there and reached 42%.
+
+Many builders I talk with assume the national brands own these answers. They do not. We have seen a small builder outrank five national builders.
+
+Have you asked ChatGPT to recommend builders in your market yet? Who did it name?
+
+https://www.ceamarketing.com/blogs/what-is-ai-visibility-for-homebuilders
+
+#AIVisibility #HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/67607ea4-b6e2-41c7-8bbd-a10c9813b2a1.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-11-03 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** What Is AI Visibility for Homebuilders, and How Do You Measure It?
+
+What is AI visibility? It is how often AI tools name your company when buyers ask for recommendations.
+
+You can measure it. List 20 to 50 buyer questions, ask them in ChatGPT, Gemini, Perplexity and Google, and count how often you are named. One CEA client started at 5% and reached 42%.
+
+Our article walks through the steps, plus five ways to raise your score.
+
+Button: Learn more https://www.ceamarketing.com/blogs/what-is-ai-visibility-for-homebuilders
+
+Media: file in the content kit: gbp3.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-11-03 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** The follow up agent
+
+That lead your sales team gave up on? They're not dead. They're just not ready.
+
+Builder Studio's follow up agent never quits. It nurtures cold leads for weeks or months with helpful texts and emails, then hands them back to your team when they're ready to buy.
+
+Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs1_follow_up_agent.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-04 10:00 AM | Instagram @ceamarketing | To post
+**Carousel:** AI only recommends 1.2% of local businesses
+
+AI only recommends 1.2% of local businesses. Is yours one of them?
+
+When buyers ask AI, it does not show 10 links. It names a few businesses.
+Swipe for the three signals AI trusts most, and a real client result: 5% to 42%.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+#AIVisibility #AISearch #LocalMarketing #HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/1805a35c-c354-48f1-829e-76b7256edbb0.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/71b9f818-fced-48b3-938a-1326aa879b21.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/8daab5d7-4807-4415-9342-d344815e5d80.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ac3702e2-57ae-4892-8e78-01302bed275e.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ad4e74ff-2e5b-48ce-9e4c-d8e8d2352960.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-04 10:00 AM | LinkedIn (CEA page and Kelly) | Already scheduled
+**Carousel:** AI only recommends 1.2% of local businesses
+
+AI only recommends 1.2% of local businesses.
+
+When a buyer asks ChatGPT for a recommendation, it does not hand back 10 links. It names a few businesses and moves on.
+
+So what earns a spot on that short list? Three signals come up again and again.
+Fresh, consistent reviews.
+A clear, well structured website.
+Mentions across the web.
+
+One of our clients started at 5% AI visibility. Today they show up in 42% of the buyer questions we track.
+
+Have you checked what AI says about your business yet?
+
+Comment AUDIT and we will send you a free AI Visibility Audit.
+
+#AIVisibility #HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/1805a35c-c354-48f1-829e-76b7256edbb0.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/71b9f818-fced-48b3-938a-1326aa879b21.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/8daab5d7-4807-4415-9342-d344815e5d80.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ac3702e2-57ae-4892-8e78-01302bed275e.jpg | https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ad4e74ff-2e5b-48ce-9e4c-d8e8d2352960.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-11-05 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** How to Get ChatGPT to Recommend Your Homebuilder Brand
+
+You cannot buy a spot in a ChatGPT answer.
+
+You earn it with clear proof of who you are and where you build.
+Answer a real buyer question in the first two sentences of each page.
+Match your name, address, and phone number everywhere.
+Ask for reviews at closing and again after move in.
+Add schema markup, then track the same questions every month.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#ChatGPT #AIVisibility #HomebuilderMarketing #AISearch
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/567a88df-066f-4542-9961-abd284dad828.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-05 10:00 AM | LinkedIn (Kelly) | Already scheduled
+**Article post:** How to Get ChatGPT to Recommend Your Homebuilder Brand
+
+Size does not win in AI search. Clarity does.
+
+One assumption comes up with builders again and again. The national brands must own the ChatGPT answers.
+
+They do not own them by default.
+
+ChatGPT looks for consistent, trustworthy signals across the web. When many sources agree on who you are, AI feels confident naming you.
+
+That means plain answers on your website.
+Matching listings everywhere.
+A steady flow of fresh reviews.
+Mentions on trusted local sites.
+
+A focused local builder with strong signals can beat a bigger name with scattered ones. We have watched it happen.
+
+What do you think holds builders back most in AI search: content, listings, or reviews?
+
+https://www.ceamarketing.com/blogs/how-to-get-chatgpt-to-recommend-your-homebuilder-brand
+
+#AIVisibility #HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/567a88df-066f-4542-9961-abd284dad828.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-11-05 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** How to Get ChatGPT to Recommend Your Homebuilder Brand
+
+You cannot pay ChatGPT to recommend your brand. You earn it.
+
+AI looks for consistent, trustworthy signals: pages that answer real buyer questions, matching listings everywhere, fresh reviews, mentions on trusted local sites and schema markup. A focused local builder with strong signals can outrank a bigger name.
+
+Read the eight steps in our latest article.
+
+Button: Learn more https://www.ceamarketing.com/blogs/how-to-get-chatgpt-to-recommend-your-homebuilder-brand
+
+Media: file in the content kit: gbp4.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-11-06 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Don't drop the ball
+
+If you got the meeting, do not drop the ball.
+
+So many businesses go quiet after the first conversation.
+A quick email, a text or a helpful tip is all it takes to stay top of mind.
+For builders, the same goes for every lead that comes in at 11pm.
+
+Want every lead followed up, even at 11pm? Ask us about Builder Studio.
+
+#FollowUp #SalesTips #NewHomeSales #HomebuilderMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec311d745c42c6b6f9f_cea-social-reel18-dont-drop-the-ball.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-06 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Builder X is cheaper
+
+"Builder X is cheaper." Does your salesperson know what to say?
+
+Builder Studio's research agent gives your team a side by side comparison in the moment. No freezing. No guessing. No unnecessary discounts.
+
+Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs3_builder_x_is_cheaper.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-09 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Be the helpful builder
+
+As a builder, your job is to be the most helpful voice in the room.
+
+Tell buyers what is really happening in the market.
+Offer guides they can download, the mortgage options that fit them, and real information about the area.
+When every other builder is shouting incentives, clarity wins.
+
+Want to be the most helpful builder in your market? Send us a message.
+
+#HomebuilderMarketing #NewHomeSales #ContentMarketing #BuilderMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec1787e65d6addd7ec9_cea-social-reel11-be-the-helpful-builder.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-10 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** Traffic Is an Expense: Why Your Builder Ads Get Clicks but No Appointments
+
+Traffic is an expense. Appointments are the asset.
+
+Busy ads and an empty sales calendar usually point back to the ad account.
+Traffic goals hunt for cheap clicks, not home buyers.
+Counting form starts as leads teaches the platform to find people who quit.
+Verify phone numbers, track completed forms, and review search terms weekly.
+Send appointment data back so the platform learns who your buyers are.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#BuilderMarketing #PaidAds #NewHomeSales #HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/554ed477-ade5-413f-8cf5-d349978e1b59.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-10 10:00 AM | LinkedIn (Kelly) | Already scheduled
+**Article post:** Traffic Is an Expense: Why Your Builder Ads Get Clicks but No Appointments
+
+Traffic is an expense. Appointments are the asset.
+
+We hear the same frustration on almost every builder call.
+
+The ads look busy. The reports look healthy. The sales calendar is still empty.
+
+Marketing points to clicks. Sales says the leads never answer.
+
+In most accounts we review, the problem starts in the ad setup. Campaigns built to win traffic deliver traffic.
+
+The fixes are not glamorous.
+Change the goal to leads.
+Count only completed forms.
+Verify phone numbers.
+Review search terms every week.
+
+Some of these improve lead quality within weeks. A full relearn takes about 90 days.
+
+Does your monthly report show appointments, or only clicks?
+
+https://www.ceamarketing.com/blogs/traffic-is-an-expense-builder-ads-clicks-no-appointments
+
+#HomebuilderMarketing #PaidMedia
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/554ed477-ade5-413f-8cf5-d349978e1b59.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-11-10 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** Traffic Is an Expense: Why Your Builder Ads Get Clicks but No Appointments
+
+Busy ads and an empty sales calendar? Traffic is an expense. Appointments are the asset.
+
+When campaigns are told to buy traffic, they find cheap clicks. Count only completed forms, verify phone numbers, review search terms every week and send appointment data back to the ad platforms. Some of these fixes improve lead quality within weeks.
+
+Read how to turn clicks into appointments.
+
+Button: Learn more https://www.ceamarketing.com/blogs/traffic-is-an-expense-builder-ads-clicks-no-appointments
+
+Media: file in the content kit: gbp5.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-11-10 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Seven agents, 24/7
+
+Seven AI agents working 24/7.
+
+Qualifying leads, booking appointments, nurturing prospects and training your sales team, all built for homebuilders.
+
+This is Builder Studio. Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs4_seven_agents_24_7.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-11 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** AI visibility: 5% to 42%
+
+Is AI recommending your business?
+
+For most local businesses, the answer is not yet.
+One CEA client started at 5% AI visibility. Today AI names them in 42% of buyer questions.
+Clear pages, consistent listings, and fresh reviews made the difference.
+
+Comment AUDIT and we'll send you your score.
+
+#AIVisibility #CaseStudy #AISearch #HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ef8ddf6e-5fc7-4381-9c1e-de206971ffdd.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-11 12:00 PM | Instagram @kellyprimeauconsulting | To post
+**Reel:** Meet Kelly
+
+Grateful for kind words from a dear friend at St. Pete Girl Boss.
+
+Marketing has been my life's work, from the agency to Second Sol Studios to helping small business owners grow.
+Giving back to this community is what I love most.
+
+Want to work together? Send me a message.
+
+#WomenInBusiness #StPeteBusiness #MarketingStrategist #KellyPrimeauConsulting
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbef31f834ef906c7b0c71_cea-social-reel12-meet-kelly.mp4
+Note: Kelly Primeau Consulting page only. Already scheduled on Kelly's All About Marketing Instagram.
+
+## 2026-11-12 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** Seven Signs Your Homebuilder Marketing Agency Is Coasting
+
+Is your agency steering your account, or coasting?
+
+Some builder accounts get about one hour a month.
+Reports show clicks and impressions, never appointments.
+The same ads have run since spring.
+Your video requests sit for months.
+Nobody can explain how AI search sees your brand.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#HomebuilderMarketing #MarketingAgency #BuilderMarketing #NewHomeSales
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/2c8a4852-9e59-4eb0-a67c-0b35ec974864.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-12 10:00 AM | LinkedIn (Kelly) | Already scheduled
+**Article post:** Seven Signs Your Homebuilder Marketing Agency Is Coasting
+
+Most builders who call us are not angry with their agency.
+
+They just sense that nobody is steering the account anymore.
+
+I hear it every week. The report shows clicks but no appointments. The same ads have run for months. Video requests go nowhere.
+
+Many stay because switching feels risky. It does not have to be.
+
+Start with an audit so you have a clear baseline.
+Make the quick fixes, like broken tracking and wasted spend.
+Then move to bigger projects.
+
+Keep ownership of your ad accounts, analytics, and CRM data the whole way through.
+
+A good partner feels like part of your team. You should never wonder what they did last week.
+
+What is one thing you wish your agency did every week?
+
+https://www.ceamarketing.com/blogs/seven-signs-your-homebuilder-marketing-agency-is-coasting
+
+#HomebuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/2c8a4852-9e59-4eb0-a67c-0b35ec974864.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-11-12 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** Seven Signs Your Homebuilder Marketing Agency Is Coasting
+
+Is your marketing agency coasting? Watch for these signs.
+
+About one hour a month on your account. Reports full of clicks but no appointments. The same ads since spring. Budget spread across too many small campaigns. No video ads. And no clear answer about how AI search sees your brand.
+
+Our article covers what a strong partnership looks like and how to switch without losing momentum.
+
+Button: Learn more https://www.ceamarketing.com/blogs/seven-signs-your-homebuilder-marketing-agency-is-coasting
+
+Media: file in the content kit: gbp6.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-11-13 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** We start at the land
+
+For a new community, our work starts before the first shovel.
+
+Builders and developers bring us in when it is still a piece of land, sometimes before city approval.
+Naming, logo, site plan, renderings and the story buyers fall in love with.
+We help build the dream of what is to come.
+
+Have a new community on the horizon? Send us a message.
+
+#CommunityBranding #MasterPlannedCommunity #HomebuilderMarketing #CEAMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec3d6d06ac759d6a862_cea-social-reel20-we-start-at-the-land.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-13 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Realtors need answers
+
+Your realtors bring you buyers. But when they call the sales office and nobody picks up, they move on to the builder who makes it easy.
+
+Builder Studio's realtor support agent gives them instant answers on specs, pricing, availability, incentives and co op info.
+
+Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs8_realtors_need_answers.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-16 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** The realtor event
+
+One event every new community needs: the realtor event.
+
+Let agents tour the models and learn the community.
+Send them home with collateral they can use, and arm your sales team with everything they need.
+Then watch agents bring their buyers back to you.
+
+Planning a realtor event for your community? Send us a message.
+
+#MasterPlannedCommunity #HomebuilderMarketing #RealtorEvents #NewHomeSales
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec21ae9f18200d1ad7d_cea-social-reel15-the-realtor-event.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-17 10:00 AM | Instagram @ceamarketing | To post
+**Article post:** AI Lead Response for Homebuilders: How to Answer Every Lead, Even at 11pm
+
+A buyer fills out your form at 11pm. Then what?
+
+Excitement fades if no one answers until Monday.
+AI lead response replies within moments, day or night.
+It asks qualifying questions and books the tour.
+It hands the buyer to your team with a short summary.
+Pricing, contracts, and sensitive moments stay with your people.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+Read the full post: link in bio
+
+#AILeadResponse #HomebuilderMarketing #NewHomeSales #BuilderStudio
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ff1a402f-8552-48b7-b345-66515abc5999.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-17 10:00 AM | LinkedIn (Kelly) | Already scheduled
+**Article post:** AI Lead Response for Homebuilders: How to Answer Every Lead, Even at 11pm
+
+Builders keep asking me for the same thing.
+
+Coverage after hours, without hiring a night shift.
+
+Builder Studio includes AI lead response for exactly this need.
+
+Some builders push back, and I get it. They tried a virtual assistant before, and it gave robotic answers.
+
+Here is what is different now.
+The AI lives inside your CRM, so no lead gets stranded.
+A person reviews its replies early on.
+You start with nights and weekends only.
+
+Pricing, contracts, and sensitive conversations always go to your team.
+
+AI does not replace your sales team. It keeps the door open until your team walks in.
+
+What happens to a lead that reaches your company on a Sunday night?
+
+https://www.ceamarketing.com/blogs/ai-lead-response-for-homebuilders
+
+#HomebuilderMarketing #AILeadResponse
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ff1a402f-8552-48b7-b345-66515abc5999.jpg
+Note: Already scheduled. Nothing to do.
+
+## 2026-11-17 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** AI Lead Response for Homebuilders: How to Answer Every Lead, Even at 11pm
+
+A buyer fills out your form at 11pm. Who answers?
+
+AI lead response replies in moments, asks qualifying questions, books the tour and hands the buyer to your team with a short summary. Pricing, contracts and sensitive conversations always stay with your people.
+
+Builder Studio, our CRM and marketing platform for builders, includes AI lead response. Read how builders roll it out.
+
+Button: Learn more https://www.ceamarketing.com/blogs/ai-lead-response-for-homebuilders
+
+Media: file in the content kit: gbp7.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-11-17 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Train for this market
+
+Many sales teams learned to sell when buyers were lining up at the door.
+
+Builder Studio gives your team an AI training partner: role play practice, objection handling for today's buyers and product knowledge quizzes, on demand.
+
+Train them to sell in this market, not the market from three years ago. Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs9_train_for_this_market.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-18 10:00 AM | Instagram @ceamarketing | To post
+**Graphic:** 1.2% stat
+
+1.2% of local businesses get recommended by AI.
+
+AI names a short list and moves on.
+The good news: clarity and trust win, not budget.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+#AIVisibility #AISearch #LocalMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/d00808a4-dcbb-4217-9d19-662ed8fe6c5a.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-19 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Builders: your buyers are searching
+
+Builders: your buyers are searching right now.
+
+They ask Google. They ask ChatGPT. They ask before they ever call.
+If your communities are not on the map, they are not on the list.
+We put your homes in front of buyers in Google and AI search, then turn that attention into closings.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+#HomebuilderMarketing #NewHomeSales #AIVisibility #BuilderMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/c464ea9d-b4d7-4503-ad1e-b4520b0873f6.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-19 11:00 AM | Google Business Profile (CEA) | To post
+**Google post:** How to Choose a Homebuilder Marketing Agency With Real AI Services
+
+How do you choose a homebuilder marketing agency with real AI services?
+
+Many agencies use AI to write faster. Real AI services do three things for builders. They get your communities named when buyers ask ChatGPT and Google for recommendations. They answer every lead within minutes, day or night. And they show which dollars turn into booked appointments.
+
+Our new article lays out the six areas to compare and seven questions to ask before you sign.
+
+CEA Marketing has helped homebuilders grow for nearly 30 years.
+
+Button: Learn more https://www.ceamarketing.com/blogs/how-to-choose-a-homebuilder-marketing-agency-with-ai-services
+
+Media: file in the content kit: gbp1.jpg
+Note: Add the Learn more button with the link shown on the card.
+
+## 2026-11-20 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Don't skip the journey
+
+Most businesses skip straight to the sale.
+
+They map the buyer's journey, then jump right to the decision stage.
+The work that wins happens earlier: knowing your buyer, building a plan, and making content that speaks to them.
+That is where a lot of us get it wrong.
+
+Want help mapping your buyer's journey? Send us a message.
+
+#MarketingStrategy #BuyerJourney #BuyerPersona #CEAMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec1ad0892e3d565ac52_cea-social-reel9-dont-skip-the-journey.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-20 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** If AI doesn't know you
+
+If AI doesn't know about you, it won't recommend you.
+
+Leads sit untouched. Calls go unreturned. And when buyers ask AI for a builder, most builders are already invisible without realizing it.
+
+Want to see where you stand? Comment AUDIT for a free AI Visibility Audit.
+
+#AIVisibility #BuilderStudio #HomebuilderMarketing #AISearch
+
+Media: file in the content kit: bs7_if_ai_doesnt_know_you.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-23 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Stop being wishy washy
+
+Stop being wishy washy with your marketing.
+
+Give a strategy at least three months.
+Then look at the data: leads, clicks and engagement, matched to your goals.
+Keep what works. Swap out the one piece that does not. Move forward.
+
+Want a 90 day plan you can actually measure? Send us a message.
+
+#MarketingStrategy #MarketingData #CEAMarketing #GrowthMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec2258311f4db047e9b_cea-social-reel17-stop-being-wishy-washy.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-24 10:00 AM | Instagram @ceamarketing | To post
+**Graphic:** Your next buyer is asking AI
+
+Your next buyer is asking AI where to build.
+
+"Best builders near me?" now gets an answer from ChatGPT, not just a list of links.
+If AI does not know your communities, it cannot recommend them.
+Get found in Google and AI search.
+
+Comment AUDIT for a free AI Visibility Audit.
+
+#HomebuilderMarketing #AIVisibility #NewHomeSales #AISearch
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/ab631829-0eb1-4783-bcfd-7f7000f0986e.jpg
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-24 2:00 PM | Instagram @ceamarketing + Facebook CEA Marketing + LinkedIn (Kelly) | On hold
+**Reel:** Your new sales team
+
+Your website is losing leads right now. Not because of your homes, but because buyers want answers at 10pm and nobody is there.
+
+Meet your new sales team: a lead qualifier, an appointment setter, a follow up expert, a content creator, a competitive researcher, a sales coach and a realtor support rep. All seven work 24/7, and all are built for homebuilders.
+
+Schedule your demo at homebuilderstudio.ai.
+
+#BuilderStudio #AIForBuilders #HomebuilderMarketing #NewHomeSales
+
+Media: file in the content kit: bs5_your_new_sales_team.mp4
+Note: On hold until the music is fixed. Do not post yet.
+
+## 2026-11-25 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** Eggs in one basket
+
+Stop putting all your eggs in one basket.
+
+Social media is not your golden egg on its own.
+Run paid ads alongside organic. Add an email campaign at the same time.
+At least three channels working together is how you hit your goals.
+
+Want a plan where every channel works together? Send us a message.
+
+#MarketingStrategy #IntegratedMarketing #SmallBusinessMarketing #CEAMarketing
+
+Media: https://cdn.prod.website-files.com/66aa6509b28e5632bf6c1ad6/6adbeec213074f8586786420_cea-social-reel16-eggs-in-one-basket.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
+
+## 2026-11-27 10:00 AM | Instagram @ceamarketing | To post
+**Reel:** 22% year over year sales growth
+
+22% year over year sales growth for our long term clients.
+
+That growth comes from steady strategy, not one lucky campaign.
+Strategically bold. Measurably brilliant.
+Ready to grow?
+
+Comment AUDIT for a free AI Visibility Audit.
+
+#MarketingResults #HomebuilderMarketing #GrowthMarketing #CEAMarketing
+
+Media: https://assets.cdn.filesafe.space/m5oY7H8NWJiPv2YEL5Aj/media/2b1de46b-94f0-4349-8650-3d2b65c77620.mp4
+Note: Facebook is already scheduled. Post on @ceamarketing only.
