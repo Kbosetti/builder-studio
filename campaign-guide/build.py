@@ -23,7 +23,7 @@ src = src.replace("%%ext%%", EXT)
 src = src.replace("%%charlotte%%", uri(f"{HERE}/../home-portrait/fonts/charlotte.woff2"))
 src = re.sub(r"%%img:([\w.-]+)%%", lambda m: uri(f"{HERE}/img/{m.group(1)}"), src)
 # decks: cover thumbnails inline, notes and links as data; the slide images publish as separate files
-DECKS = ("hp", "fb", "dd")
+DECKS = ("hp", "fb")
 src = re.sub(r"%%thumb:(\w+)%%", lambda m: uri(f"{HERE}/decks/{m.group(1)}/t01.jpg"), src)
 decks = {k: json.load(open(f"{HERE}/decks/{k}.json")) for k in DECKS}
 src = re.sub(r"%%count:(\w+)%%", lambda m: str(decks[m.group(1)]["count"]), src)
