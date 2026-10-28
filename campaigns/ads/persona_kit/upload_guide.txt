@@ -1,0 +1,91 @@
+MITCHELL HOMES PERSONA CAMPAIGN: ALL AD SIZES (no incentive)
+Prepared by CEA Marketing, October 28, 2026. Approved by Mitchell Homes.
+Review page with every ad and its copy: https://mitchell-persona-ads-approval.vercel.app
+
+WHAT IS IN THIS FOLDER
+One folder per persona. Each persona is its own ad set.
+  Meta carousel: cards 1 to 5, 1080x1080. Run them in this order. Card 5 is the new SimplyMitchell card, the same in all four carousels.
+  Meta story: a 1080x1920 static for Stories and Reels placements (Value Unlocker, Planner, Transitioner).
+  Meta single image: 1080x1080 (Value Unlocker).
+  Reel: 1080x1920 video with captions and voiceover, for Reels, Stories and Feed.
+  Google display: 1200x628, 300x250 and 160x600, each under 150 KB (Value Unlocker, Planner, Transitioner). Use these only if the persona campaign is added to Google Ads; today it runs on Meta only.
+Grounded Dreamer runs as a carousel and a reel; it has no story or display version.
+"Preview of every ad.jpg" shows the whole set on one page.
+
+REEL DOWNLOAD LINKS (Builder Studio media library, the same files as the Reel folders)
+1 Value Unlocker: https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/22810412-bb99-4059-a322-1c42e6e0c50e.mp4
+2 Planner: https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/c09d779d-c541-4ed8-b713-46c917722945.mp4
+3 Transitioner: https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/a19a3a8f-8d1c-4c29-9127-dc3eed3adbc3.mp4
+4 Grounded Dreamer: https://assets.cdn.filesafe.space/5o5zLlUPPizy6Ajp61oF/media/e9548a4b-7493-40af-8b94-21ed23f6057a.mp4
+
+WHAT CHANGED SINCE THE FIRST PERSONA KIT
+1. No incentive anywhere in the ads. The current offer lives on the landing pages (simplymitchellhomes.com/land and simplymitchellhomes.com/math), so these ads do not need to change when the offer does.
+2. Card 5 in every carousel is the new SimplyMitchell card. Cards 1 to 4 are unchanged.
+3. Reels: a new end card (SimplyMitchell: zero down, closing costs paid, no construction loan) and the new landing page links. Value Unlocker's voiceover no longer mentions the earlier incentive.
+4. Meta copy: the See more text below replaces the earlier version in every persona ad.
+
+SETUP
+Ad category: Housing (Special Ad Category). Button: Learn More.
+One ad set per persona, with the carousel, the reel and the static story as separate ads.
+Transitioner: hold until legal approves the line "Mitchell funds your build, not a bank." It appears on carousel card 2, the story, the display banners and the reel.
+Conversion tracking: please confirm it fires on simplymitchellhomes.com/land and simplymitchellhomes.com/math before launch.
+
+============================================================
+1. VALUE UNLOCKER
+Website URL: https://simplymitchellhomes.com/land
+
+Primary text:
+You already own the hardest part of building a custom home. Your land can be your down payment. Here is the math.
+
+See more (rest of primary text):
+Zero down, closing costs paid and no construction loan with SimplyMitchell, because Mitchell self-funds every build on land you own or are buying across Virginia, Southern Maryland, North Carolina, and South Carolina. More than 40 floor plans, more than 40,000 selections, and Design Centers across Virginia and North Carolina.
+
+SimplyMitchell includes seller paid closing costs, zero down payment and no construction loan. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend. See a New Home Consultant for details.
+
+Headline: Your land is worth more than you think
+Description: See the math
+
+============================================================
+2. PLANNER
+Website URL: https://simplymitchellhomes.com/math
+
+Primary text:
+Custom does not have to mean unpredictable. Every selection is priced before we build, and you hear from us every week.
+
+See more (rest of primary text):
+Zero down, closing costs paid and no construction loan with SimplyMitchell, because Mitchell self-funds every build on land you own or are buying across Virginia, Southern Maryland, North Carolina, and South Carolina. More than 40 floor plans, more than 40,000 selections, and Design Centers across Virginia and North Carolina.
+
+SimplyMitchell includes seller paid closing costs, zero down payment and no construction loan. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend. See a New Home Consultant for details.
+
+Headline: A custom home on your land, without the unknowns
+Description: See the plans
+
+============================================================
+3. TRANSITIONER (hold until legal approves)
+Website URL: https://simplymitchellhomes.com/math
+
+Primary text:
+If a construction loan is why you stopped building on your land, there is no bank here. Mitchell funds the build.
+
+See more (rest of primary text):
+Zero down, closing costs paid and no construction loan with SimplyMitchell, because Mitchell self-funds every build on land you own or are buying across Virginia, Southern Maryland, North Carolina, and South Carolina. More than 40 floor plans, more than 40,000 selections, and Design Centers across Virginia and North Carolina.
+
+SimplyMitchell includes seller paid closing costs, zero down payment and no construction loan. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend. See a New Home Consultant for details.
+
+Headline: No construction loan to build on your land
+Description: See the math
+
+============================================================
+4. GROUNDED DREAMER
+Website URL: https://simplymitchellhomes.com/math
+
+Primary text:
+You have been saving photos of this house for years. One appointment. Bring the photos, we will bring the plans.
+
+See more (rest of primary text):
+Zero down, closing costs paid and no construction loan with SimplyMitchell, because Mitchell self-funds every build on land you own or are buying across Virginia, Southern Maryland, North Carolina, and South Carolina. More than 40 floor plans, more than 40,000 selections, and Design Centers across Virginia and North Carolina.
+
+SimplyMitchell includes seller paid closing costs, zero down payment and no construction loan. Financing terms are illustrative only and subject to credit approval. Not a commitment to lend. See a New Home Consultant for details.
+
+Headline: Your dream home has a folder, not a date
+Description: Get your plan guide
