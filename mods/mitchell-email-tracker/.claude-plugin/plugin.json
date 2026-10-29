@@ -1,0 +1,1 @@
+{ "name": "mitchell-email-tracker", "version": "0.1.0", "description": "A pane listing every Mitchell fall email with its status, the review pages that are behind, and buttons to upload, rebuild and record approvals", "types": "./types/index.d.ts" }
