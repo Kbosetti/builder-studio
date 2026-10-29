@@ -8,7 +8,7 @@ subject line, preview text and from name set. Safe to run again: existing templa
 Records everything in created.json. Designed emails send from Mitchell Homes; personal ones leave the from
 name blank so the workflow sends them from the assigned user.
 """
-import html, json, os, re, subprocess, time
+import hashlib, html, json, os, re, subprocess, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 C = os.path.dirname(HERE)
@@ -36,6 +36,33 @@ def call(method, path, body=None):
     raise SystemExit(f"{method} {path} kept failing")
 
 
+def list_all(query):
+    """Every builder item a listing returns, page by page (the API stops at 100 a page)."""
+    items, offset = [], 0
+    while True:
+        page = call("GET", f"emails/builder?locationId={L}&limit=100&offset={offset}{query}")["builders"]
+        items += page
+        if len(page) < 100:
+            return items
+        offset += 100
+
+
+def find_folder(rec):
+    """The one drafts folder. Never makes a second: a missed lookup once made seven copies of every email."""
+    known = rec.get("folder", {}).get("id")
+    named = [b for b in list_all("") if b.get("name") == FOLDER_NAME]
+    if known and any(b["id"] == known for b in named):
+        return known
+    if len(named) == 1:
+        return named[0]["id"]
+    if named:
+        raise SystemExit(f"{len(named)} folders are named {FOLDER_NAME!r} and none is the one in created.json. "
+                         "Keep one in Builder Studio (or set its id in created.json) and run again.")
+    if known:
+        raise SystemExit(f"The folder in created.json ({known}) was not found. Check Builder Studio before making a new one.")
+    return call("POST", "emails/builder", {"locationId": L, "type": "folder", "name": FOLDER_NAME, "builderVersion": "2"})["id"]
+
+
 def plain_html(subject, preview, text):
     """A sales team follow up email as a personal, plain message."""
     text = (text.replace("[first name]", "{{contact.first_name}}").replace("[portrait name]", "{{contact.portrait_name}}")
@@ -53,11 +80,9 @@ def plain_html(subject, preview, text):
 
 def main():
     rec = json.load(open(f"{HERE}/created.json")) if os.path.exists(f"{HERE}/created.json") else {}
-    top = call("GET", f"emails/builder?locationId={L}&limit=100")["builders"]
-    folder = next((b for b in top if b.get("name") == FOLDER_NAME), None)
-    fid = folder["id"] if folder else call("POST", "emails/builder", {"locationId": L, "type": "folder", "name": FOLDER_NAME, "builderVersion": "2"})["id"]
+    fid = find_folder(rec)
     rec["folder"] = {"id": fid, "name": FOLDER_NAME}
-    existing = {b["name"].split(" · ")[1]: b["id"] for b in call("GET", f"emails/builder?locationId={L}&parentId={fid}&limit=200")["builders"] if (b.get("name") or "").startswith("Fall26 · ")}
+    existing = {b["name"].split(" · ")[1]: b["id"] for b in list_all(f"&parentId={fid}") if (b.get("name") or "").startswith("Fall26 · ")}
 
     items = []
     for e in json.load(open(f"{C}/email/out/emails.json"))["emails"]:
@@ -93,7 +118,8 @@ def main():
         tid = existing.get(it["key"]) or call("POST", "emails/builder", {"locationId": L, "type": "html", "title": name, "parentId": fid, "builderVersion": "2"})["id"]
         call("POST", "emails/builder/data", {"locationId": L, "templateId": tid, "editorType": "html", "html": it["html"], "updatedBy": EDITOR, "previewText": it["preview"]})
         call("PATCH", f"emails/builder/{tid}", {"locationId": L, "name": name, "subjectLine": it["subject"], "fromName": it["from"]})
-        rec["templates"][it["key"]] = {"id": tid, "name": name}
+        rec["templates"][it["key"]] = {"id": tid, "name": name, "sha": hashlib.sha256(it["html"].encode()).hexdigest()[:16],
+                                       "uploaded": time.strftime("%Y-%m-%d %H:%M")}
         print("loaded", name)
     json.dump(rec, open(f"{HERE}/created.json", "w"), indent=1, ensure_ascii=False)
     print(len(rec["templates"]), "templates in", FOLDER_NAME)
