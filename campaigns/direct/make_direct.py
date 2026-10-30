@@ -5,13 +5,14 @@ import json, os, re, sys
 from urllib.parse import urlencode
 HERE = os.path.dirname(os.path.abspath(__file__))
 QUIZ, DD, SMH = "https://mitchellhomesliving.com/portrait", "https://simplymitchellhomes.com/design-dollars", "https://simplymitchellhomes.com"
+NOV = SMH + "/november-offer-page"  # the November offer replaced Design Dollars; contracts by November 30, 2026
 def u(url, src, med, camp, cont):
     return url + "?" + urlencode({"utm_source": src, "utm_medium": med, "utm_campaign": camp, "utm_content": cont})
 
 sms = [
- ("SMS 1 · Design Dollars", "Wednesday, October 21", "Mitchell Homes: Every home now starts with $5,000 in Design Dollars, up to $25,000 as you personalize. Terms apply. {link} Reply STOP to opt out", DD, "fall26_designdollars", "sms1"),
- ("SMS 2 · Home Portrait", "Wednesday, November 11", "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: {link} Reply STOP to opt out", QUIZ, "fall26_portrait", "sms2"),
- ("SMS 3 · Design Dollars reserve by", "Wednesday, October 28", "Mitchell Homes: Reserve by Oct 31 and your Design Dollars are locked. Choose finishes later. Terms apply. Questions? Just reply. STOP to opt out", None, "fall26_designdollars", "sms3"),
+ ("SMS 1 · November offer", "Thursday, November 5", "Mitchell Homes: Build on your land with 4% off the base price, up to $40,000, and closing costs paid. Contracts by Nov 30. {link} STOP to opt out", NOV, "fall26_november", "sms1"),
+ ("SMS 2 · Home Portrait", "Friday, November 13", "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: {link} Reply STOP to opt out", QUIZ, "fall26_portrait", "sms2"),
+ ("SMS 3 · November offer last call", "Monday, November 23", "Mitchell Homes: One week left for 4% off the base price, up to $40,000, plus closing costs paid. Contracts by Nov 30. Questions? Just reply. STOP to opt out", None, "fall26_november", "sms3"),
  ("SMS 4 · Landowners", "Friday, November 6", "Mitchell Homes: Your land can be your down payment. Zero down, zero closing costs, no construction loan. Terms apply. {link} STOP to opt out", SMH + "/land", "fall26_fourbuyers", "sms4"),
 ]
 items = []
@@ -104,10 +105,10 @@ sections.append({"id": "nurture", "title": "Quiet-lead nurture texts", "why": "S
 sections.append({"id": "followups", "title": "Sales team follow-ups", "why": "Marketing starts the conversation; a person finishes it. Each follow-up fires on what the buyer just did, in the consultant's own voice.", "items": followups})
 
 web = [
- {"title": "Website announcement bar, Design Dollars", "meta": "mitchellhomesinc.com, top of every page, through October 31",
-  "body": "Every Mitchell home now starts with $5,000 in Design Dollars, up to $25,000. See how it works", "link": u(DD, "mitchellhomesinc", "announcement_bar", "fall26_designdollars", "bar"),
-  "notes": "The words See how it works are the link. The Design Dollars page carries the fine print."},
- {"title": "Website announcement bar, Home Portrait", "meta": "mitchellhomesinc.com, alternate weeks or after October 31",
+ {"title": "Website announcement bar, November offer", "meta": "mitchellhomesinc.com, top of every page, through November 30",
+  "body": "Build on your land with 4% off the base price, up to $40,000, and closing costs paid. Contracts by November 30. See the November offer", "link": u(NOV, "mitchellhomesinc", "announcement_bar", "fall26_november", "bar"),
+  "notes": "The words See the November offer are the link. The November offer page carries the disclaimer. Comes down at the end of November 30."},
+ {"title": "Website announcement bar, Home Portrait", "meta": "mitchellhomesinc.com, from December 1, after the November offer ends",
   "body": "Every home is a portrait. Discover yours in about 90 seconds. Take the quiz", "link": u(QUIZ, "mitchellhomesinc", "announcement_bar", "fall26_portrait", "bar"), "notes": "Pair with the website pop-up, which never shows on pages that already link the quiz."},
  {"title": "Missed-call text-back", "meta": "Builder Studio automation, every division number",
   "body": "Sorry we missed you. This is Mitchell Homes. A New Home Consultant will call you back shortly. While you wait, see what your home could look like: mitchellhomesliving.com/portrait",

@@ -1,4 +1,5 @@
-"""Fall 2026 email series for Mitchell Homes: Design Dollars, Home Portrait, Four Buyers, plus realtor and homeowner emails.
+"""Fall 2026 email series for Mitchell Homes: the November offer, Home Portrait, Four Buyers, plus realtor and homeowner emails.
+Design Dollars ended October 31 and is kept below as a retired series (build.py skips it).
 
 Every line follows campaigns/FACTS.md. Block types: p, list, steps, ladder, covers, quote, grid, offer, cta, small, video (a thumbnail that opens the video; see videos/).
 Rendered by build.py into out/<id>.html (paste into Builder Studio or Lasso) and out/<id>.txt.
@@ -22,6 +23,11 @@ PAINT = {  # regional watercolors used on the quiz, 560 x 315
     "Lake": GHL + "666b6807-d99e-4cf5-9b4d-70d76e36e4fa.jpg",
 }
 
+NOV = SMH + "/november-offer-page"  # the November offer replaced Design Dollars on November 1, 2026
+NOV_BAND = {"t": "offer",
+            "head": "4% off the base home price, up to $40,000*",
+            "text": "Mitchell pays your closing costs. Zero down and no construction loan with SimplyMitchell. For contracts signed by November 30, 2026."}
+
 DD_BAND = {"t": "offer",
            "head": "Up to $25,000 in Mitchell Design Dollars*",
            "text": "Every Mitchell home starts with $5,000, and the credit grows the more you personalize. Sign now and your incentive is locked. Your tier is set later, when you choose what goes in the home."}
@@ -36,7 +42,7 @@ SERIES = [
      "audience": "Full marketing list, minus contacts already tagged home portrait quiz (they have their portrait) and anyone under contract.",
      "goal": "Quiz starts. Every email has one job: send the reader to the quiz.",
      "emails": [
-        {"id": "hp1", "send": "Thursday, October 22", "segment": "Engaged contacts (opened or clicked in the last 90 days) and every lead since September 1",
+        {"id": "hp1", "send": "Thursday, November 12", "segment": "Engaged contacts (opened or clicked in the last 90 days) and every lead since September 1",
          "subject": "What would your home look like?",
          "preview": "Answer eight questions. We paint your Home Portrait.",
          "hero": hero("2024/7/24/1.jpg", "A white Mitchell farmhouse with a wraparound porch, set back in the pines at the end of a long drive"),
@@ -48,7 +54,7 @@ SERIES = [
             {"t": "video", "v": "reel_land", "text": "Our 27-second reel: the land you already own, and the home only you would build."},
             {"t": "cta", "text": "Take the Quiz", "href": QUIZ},
             {"t": "small", "text": "Eight questions. About 90 seconds. Your portrait appears the moment you finish."}]},
-        {"id": "hp2", "send": "Thursday, November 5", "segment": "Engaged contacts (written for landowners, welcoming to everyone)",
+        {"id": "hp2", "send": "Thursday, November 19", "segment": "Engaged contacts (written for landowners, welcoming to everyone)",
          "subject": "Your land is part of the portrait",
          "preview": "The question we ask fifth changes everything we paint.",
          "hero": hero("2024/8/14/10_iWQs7EE.jpg", "Aerial view of a Mitchell home in a green clearing surrounded by forest"),
@@ -64,7 +70,7 @@ SERIES = [
             {"t": "cta", "text": "Take the Quiz", "href": QUIZ},
             {"t": "small", "text": "Eight questions. About 90 seconds."}],
          "financing": True},
-        {"id": "hp3", "send": "Thursday, November 12", "segment": "Engaged contacts who have not taken the quiz yet",
+        {"id": "hp3", "send": "Thursday, December 3", "segment": "Engaged contacts who have not taken the quiz yet",
          "subject": "Nine portraits. Which one is yours?",
          "preview": "The Landowner's, the Dreamer's, the Family, the Planner's, and one for the getaway.",
          "hero": hero("2024/6/24/Mathews_1_Aerial.jpg", "Aerial view of a Mitchell home on a wooded homesite"),
@@ -80,7 +86,7 @@ SERIES = [
             {"t": "p", "text": "The first four each come in two versions, one for buyers who own land and one for buyers who are still looking. That makes nine."},
             {"t": "video", "v": "reel_which", "text": "Our 25-second reel: planner, dreamer, or the one already doing the math?"},
             {"t": "cta", "text": "Find Yours", "href": QUIZ}]},
-        {"id": "hp4", "send": "Thursday, November 19", "segment": "Engaged contacts, or contacts interested in lake, coastal or mountain areas if that field exists",
+        {"id": "hp4", "send": "Thursday, December 10", "segment": "Engaged contacts, or contacts interested in lake, coastal or mountain areas if that field exists",
          "subject": "The getaway you keep promising yourselves",
          "preview": "Lake, coast or mountains. Your portrait paints it.",
          "hero": hero("2026/3/24/10_mwFjkrl.jpg", "Aerial view of a Mitchell home among the trees beside the water"),
@@ -95,7 +101,40 @@ SERIES = [
          "financing": True},
      ]},
 
-    {"key": "designdollars", "name": "Mitchell Design Dollars", "stage": "Decide", "campaign": "fall26_designdollars",
+    {"key": "november", "name": "The November Offer", "stage": "Decide", "campaign": "fall26_november",
+     "audience": "Full marketing list, minus anyone already under contract. Replaces the Design Dollars emails.",
+     "goal": "Conversations with a New Home Consultant and contracts signed by November 30, 2026. The home leads; the offer is the reason to start now.",
+     "emails": [
+        {"id": "no1", "send": "Wednesday, November 4", "segment": "Full list, minus anyone under contract",
+         "subject": "Your land, your home, and 4% off in November",
+         "preview": "Mitchell pays your closing costs, too. For contracts signed by November 30.",
+         "hero": hero("2026/3/24/07-DJI_20260224134444_0238_D_copy.jpg", "A finished Mitchell home with a covered front porch, wood posts and a curved walk"),
+         "eyebrow": "The November Offer", "headline": "The home you keep picturing is closer than you think",
+         "blocks": [
+            {"t": "p", "text": "You already know the porch you want and the view it should face. You may already own the land it belongs on. This month, Mitchell makes it easier to start."},
+            NOV_BAND,
+            {"t": "p", "text": "Use the 4% three ways: lower your price, buy down your rate through CrossCountry Mortgage, or put it toward options and upgrades. On a $500,000 home, that is about $20,000 toward your price, your rate or your finishes. And your closing costs are on us."},
+            {"t": "p", "text": "It comes with everything that already sets Mitchell apart: more than 40 floor plans, more than 40,000 selections, and a build Mitchell funds itself, so there is no construction loan to chase."},
+            {"t": "cta", "text": "See the November Offer", "href": NOV},
+            DOWNEY,
+            {"t": "small", "text": "Start with a conversation, not a commitment. A New Home Consultant can show you what 4% means on the home you have in mind."}],
+         "nov": True, "financing": True},
+        {"id": "no2", "send": "Tuesday, November 24", "segment": "Full list, minus anyone under contract or already talking with a consultant",
+         "subject": "One week left for 4% off your Mitchell home",
+         "preview": "Contracts signed by Monday, November 30 keep the November offer.",
+         "hero": hero("2026/3/24/59-DSC06144.jpg", "A finished Mitchell kitchen with wood cabinets, a white island and a farmhouse sink"),
+         "eyebrow": "The November Offer", "headline": "Last call for November",
+         "blocks": [
+            {"t": "p", "text": "If you have been waiting for the right moment to start your home, this is the week to talk with us."},
+            NOV_BAND,
+            {"t": "p", "text": "That is about $20,000 on a $500,000 home, toward your price, your rate or your finishes, with your closing costs paid. Your reservation deposit is $150, and that is all Mitchell receives until closing."},
+            {"t": "deadline", "text": "Contracts signed by Monday, November 30, 2026 keep the November offer."},
+            {"t": "cta", "text": "Talk With a New Home Consultant", "href": NOV},
+            {"t": "small", "text": "Questions about your land or your budget? Reply to this email and a New Home Consultant will call you."}],
+         "nov": True, "financing": True},
+     ]},
+
+    {"key": "designdollars", "name": "Mitchell Design Dollars", "stage": "Decide", "campaign": "fall26_designdollars", "retired": "Design Dollars ended October 31, 2026; the November offer replaced it.",
      "audience": "Warm audiences and the database only, per the approved rollout. Full marketing list, minus anyone already under contract.",
      "goal": "Design Center conversations and reservations before the monthly reserve-by date: October 31, then November 30 once Mitchell confirms it.",
      "emails": [
@@ -159,7 +198,7 @@ SERIES = [
      "audience": "Landowner segment (registered as owns land, or quiz contacts tagged with land) for the first four; the looking-for-land segment gets the fifth. Send to Virginia and Maryland contacts first; the Dreamer and No Land emails have Carolinas versions.",
      "goal": "Visits to the matching page and calls to a New Home Consultant. Each email carries one argument and one page.",
      "emails": [
-        {"id": "fb1", "send": "Wednesday, November 4", "segment": "Owns land or family land, Virginia and Maryland",
+        {"id": "fb1", "send": "Tuesday, November 10", "segment": "Owns land or family land, Virginia and Maryland",
          "subject": "Your land is worth more than you think",
          "preview": "You already own the hardest part of building. Here is the math.",
          "hero": hero("2024/7/5/1_GuQrrFW.jpg", "Aerial view of a Mitchell home standing alone on wide green farmland"),
@@ -169,9 +208,8 @@ SERIES = [
             {"t": "p", "text": "Most builders send you to a bank for a construction loan before anyone turns a shovel. We do not. Mitchell self-funds every build, so the land you hold counts toward the home, with zero down, zero closing costs and no construction loan."},
             {"t": "p", "text": "That means one closing instead of two, no draw period interest while the house goes up, and no bank deciding whether your land counts."},
             {"t": "cta", "text": "See What Your Land Can Build", "href": SMH + "/land"},
-            DOWNEY,
-            DD_BAND],
-         "dd": True, "financing": True},
+            DOWNEY],
+         "financing": True},
         {"id": "fb2", "send": "Tuesday, November 17", "segment": "Owns land or family land, Virginia and Maryland",
          "subject": "A custom home on your land, without the unknowns",
          "preview": "Start with a plan that already works. Every choice priced before we build.",
@@ -184,9 +222,8 @@ SERIES = [
                 ["Every choice priced before we build", "You choose in daylight, with the number in front of you, before construction begins. Your selections are reviewed and signed off at the pre-construction meeting, and then ground breaks."],
                 ["You hear from us every week", "From groundbreaking to move-in, so you never have to wonder where things stand."]]},
             {"t": "video", "v": "keys", "text": "What happens between signing and the day you get your keys."},
-            {"t": "cta", "text": "See How We Build", "href": SMH + "/land"},
-            DD_BAND],
-         "dd": True},
+            {"t": "cta", "text": "See How We Build", "href": SMH + "/land"}],
+         },
         {"id": "fb3", "send": "Later, when legal clears the wording (question 7)", "segment": "Owns land or family land, Virginia and Maryland",
          "hold": "Hold until legal approves the financing wording (to match the Transitioner ad and reel) and the comparison figures on the /calculator page are confirmed.",
          "subject": "No construction loan to build on your land",
@@ -199,9 +236,8 @@ SERIES = [
             {"t": "p", "text": "With Mitchell there is no construction loan. Mitchell self-funds every build, so there is zero down, zero closing costs and one closing. The land you already own counts toward the home."},
             {"t": "p", "text": "Then comes the part you wanted all along: a finished home on the land you already own."},
             {"t": "video", "v": "downey", "text": "Hear what building with no construction loan meant to them."},
-            {"t": "cta", "text": "See the Math", "href": SMH + "/calculator"},
-            DD_BAND],
-         "dd": True, "financing": True},
+            {"t": "cta", "text": "See the Math", "href": SMH + "/calculator"}],
+         "financing": True},
         {"id": "fb4", "send": "Later, when the Dreamer page is fixed (question 5)", "segment": "Owns land or family land, Virginia and Maryland (fb4c for the Carolinas)",
          "hold": "Hold until the Dreamer pages drop the line A price locked from day one, which conflicts with the approved pricing claim.",
          "subject": "Your dream home has a folder, not a date",
@@ -213,9 +249,7 @@ SERIES = [
             {"t": "p", "text": "What is missing is not inspiration. It is a start."},
             {"t": "p", "text": "So here is the smallest possible next step: one appointment at a Mitchell Design Center. Bring the photos you have been saving. We will bring the plans and price what is in them. With more than 40 floor plans and more than 40,000 selections, most of what is in your folder is something we already carry."},
             {"t": "p", "text": "Design Centers in Fredericksburg, Richmond and Newport News."},
-            {"t": "cta", "text": "Bring Your Photos", "href": SMH + "/dreamer"},
-            DD_BAND],
-         "dd": True,
+            {"t": "cta", "text": "Bring Your Photos", "href": SMH + "/dreamer"}],
          "variant": {"id": "fb4c", "segment": "Owns land or family land, North and South Carolina",
                      "replace": [["Design Centers in Fredericksburg, Richmond and Newport News.", "Design Centers in Raleigh and Wilmington."], [SMH + "/dreamer", SMH + "/dreamer-carolinas"]]}},
         {"id": "fb5", "send": "Wednesday, November 4", "segment": "Looking for land, Virginia and Maryland (fb5c for the Carolinas)",
@@ -232,9 +266,7 @@ SERIES = [
             {"t": "p", "text": "You do not have to wait for a deed to begin. Come into a Design Center, walk the plan library, and see what your budget actually buys."},
             {"t": "video", "v": "land101", "text": "What to look for before you buy land to build on."},
             {"t": "cta", "text": "See How It Works", "href": SMH + "/no-land"},
-            {"t": "small", "text": "Want to look around first? Browse more than 40 floor plans at mitchellhomesinc.com.", "href": "https://www.mitchellhomesinc.com/new-homes/floorplans/"},
-            DD_BAND],
-         "dd": True,
+            {"t": "small", "text": "Want to look around first? Browse more than 40 floor plans at mitchellhomesinc.com.", "href": "https://www.mitchellhomesinc.com/new-homes/floorplans/"}],
          "variant": {"id": "fb5c", "segment": "Looking for land, North and South Carolina",
                      "replace": [[SMH + "/no-land", SMH + "/no-land-carolinas"]]}},
      ]},
@@ -472,12 +504,22 @@ def _add_event_blocks():
     rec_path = os.path.join(here, "..", "builder_studio", "created.json")
     if not (os.path.exists(ev_path) and os.path.exists(rec_path)):
         return
+    import re
+    months = {"October": 10, "November": 11, "December": 12}
+
+    def day(text):  # (month, day) of the first fall date in a send or event date, or None
+        m = re.search(r"(October|November|December) (\d{1,2})", text or "")
+        return (months[m.group(1)], int(m.group(2))) if m else None
+
     links = {v.get("event"): v["field"] for v in json.load(open(rec_path)).get("links", {}).values() if v.get("event")}
     by_id = {e["id"]: e for s in SERIES for e in s["emails"]}
     for ev in json.load(open(ev_path))["events"]:
         for r in ev.get("rides_in", []):
             em = by_id.get(r["email"])
             if em is None or any(b.get("event") == ev["id"] for b in em["blocks"]):
+                continue
+            sent, held = day(em["send"]), day(ev["date"])
+            if sent and held and sent > held:  # the email now goes out after the event, so the invitation stays out
                 continue
             b = r["block"]
             em["blocks"].append({"t": "event", "event": ev["id"], "eyebrow": "You are invited", "head": b["head"], "text": b["text"],

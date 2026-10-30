@@ -6,23 +6,23 @@
    "why": "Texts get read within minutes, and every contact who opted in to texts already raised a hand.",
    "items": [
     {
-     "title": "SMS 1 · Design Dollars",
-     "meta": "Wednesday, October 21 · Builder Studio bulk SMS · 155 of 160 characters with a short trigger link",
-     "body": "Mitchell Homes: Every home now starts with $5,000 in Design Dollars, up to $25,000 as you personalize. Terms apply. [trigger link] Reply STOP to opt out",
-     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=sms&utm_medium=sms&utm_campaign=fall26_designdollars&utm_content=sms1",
+     "title": "SMS 1 · November offer",
+     "meta": "Thursday, November 5 · Builder Studio bulk SMS · 156 of 160 characters with a short trigger link",
+     "body": "Mitchell Homes: Build on your land with 4% off the base price, up to $40,000, and closing costs paid. Contracts by Nov 30. [trigger link] STOP to opt out",
+     "link": "https://simplymitchellhomes.com/november-offer-page?utm_source=sms&utm_medium=sms&utm_campaign=fall26_november&utm_content=sms1",
      "notes": "Only contacts with SMS consent on file, minus anyone who opened the Tuesday email, took the quiz, or is talking with a consultant. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
     },
     {
      "title": "SMS 2 · Home Portrait",
-     "meta": "Wednesday, November 11 · Builder Studio bulk SMS · 148 of 160 characters with a short trigger link",
+     "meta": "Friday, November 13 · Builder Studio bulk SMS · 148 of 160 characters with a short trigger link",
      "body": "Mitchell Homes: What would your home look like? Answer 8 questions, we paint your Home Portrait. 90 seconds: [trigger link] Reply STOP to opt out",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=sms&utm_medium=sms&utm_campaign=fall26_portrait&utm_content=sms2",
      "notes": "Only contacts with SMS consent on file, minus anyone who opened the Tuesday email, took the quiz, or is talking with a consultant. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
     },
     {
-     "title": "SMS 3 · Design Dollars reserve by",
-     "meta": "Wednesday, October 28 · Builder Studio bulk SMS · 144 of 160 characters with a short trigger link",
-     "body": "Mitchell Homes: Reserve by Oct 31 and your Design Dollars are locked. Choose finishes later. Terms apply. Questions? Just reply. STOP to opt out",
+     "title": "SMS 3 · November offer last call",
+     "meta": "Monday, November 23 · Builder Studio bulk SMS · 156 of 160 characters with a short trigger link",
+     "body": "Mitchell Homes: One week left for 4% off the base price, up to $40,000, plus closing costs paid. Contracts by Nov 30. Questions? Just reply. STOP to opt out",
      "link": "",
      "notes": "Only contacts with SMS consent on file, minus anyone who opened the Tuesday email, took the quiz, or is talking with a consultant. Make the link a Builder Studio trigger link pointing at the URL here, so it stays short and clicks are tracked. Send between 10am and 7pm local time."
     },
@@ -210,15 +210,15 @@
    "why": "People already on the site or already in the CRM are the cheapest clicks there are.",
    "items": [
     {
-     "title": "Website announcement bar, Design Dollars",
-     "meta": "mitchellhomesinc.com, top of every page, through October 31",
-     "body": "Every Mitchell home now starts with $5,000 in Design Dollars, up to $25,000. See how it works",
-     "link": "https://simplymitchellhomes.com/design-dollars?utm_source=mitchellhomesinc&utm_medium=announcement_bar&utm_campaign=fall26_designdollars&utm_content=bar",
-     "notes": "The words See how it works are the link. The Design Dollars page carries the fine print."
+     "title": "Website announcement bar, November offer",
+     "meta": "mitchellhomesinc.com, top of every page, through November 30",
+     "body": "Build on your land with 4% off the base price, up to $40,000, and closing costs paid. Contracts by November 30. See the November offer",
+     "link": "https://simplymitchellhomes.com/november-offer-page?utm_source=mitchellhomesinc&utm_medium=announcement_bar&utm_campaign=fall26_november&utm_content=bar",
+     "notes": "The words See the November offer are the link. The November offer page carries the disclaimer. Comes down at the end of November 30."
     },
     {
      "title": "Website announcement bar, Home Portrait",
-     "meta": "mitchellhomesinc.com, alternate weeks or after October 31",
+     "meta": "mitchellhomesinc.com, from December 1, after the November offer ends",
      "body": "Every home is a portrait. Discover yours in about 90 seconds. Take the quiz",
      "link": "https://mitchellhomesliving.com/portrait?utm_source=mitchellhomesinc&utm_medium=announcement_bar&utm_campaign=fall26_portrait&utm_content=bar",
      "notes": "Pair with the website pop-up, which never shows on pages that already link the quiz."

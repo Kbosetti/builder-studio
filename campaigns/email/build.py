@@ -28,7 +28,7 @@ VIDEOS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 _TAG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "taglines", "taglines.json")
 TAGLINES = json.load(open(_TAG)) if os.path.exists(_TAG) else {}  # taglines/make_taglines.py --upload
 # the brand line's modifier word, set in Charlotte: Yours for awareness, Dreams and Trust for in market
-TAG_WORD = {"portrait": "Yours", "homeowners": "Yours", "designdollars": "Dreams", "fourbuyers": "Trust", "partners": "Trust", "nurture": "Trust"}
+TAG_WORD = {"portrait": "Yours", "homeowners": "Yours", "november": "Dreams", "designdollars": "Dreams", "fourbuyers": "Trust", "partners": "Trust", "nurture": "Trust"}
 
 
 def tagline_row(series, em):
@@ -42,6 +42,9 @@ def tagline_row(series, em):
 
 
 FINE_FIN = "Financing terms are illustrative only and subject to credit approval. Not a commitment to lend."
+FINE_NOV = ("*4% off the base home price, up to $40,000, on contracts signed by November 30, 2026. The total home price excludes site work, "
+            "utilities, contract category, and additional foundation costs. Mitchell pays all allowable closing costs; prepaids, such as taxes "
+            "and insurance, are not included. See a New Home Consultant for details.")
 E = html.escape
 
 
@@ -163,6 +166,8 @@ def render_plain(series, em):
     fine = []
     if em.get("dd"):
         fine.append(FINE_DD)
+    if em.get("nov"):
+        fine.append(FINE_NOV)
     if em.get("financing"):
         fine.append(FINE_FIN)
     fine_html = "".join(f'<p style="margin:0 0 6px">{E(f)}</p>' for f in fine)
@@ -195,6 +200,8 @@ def render(series, em):
     fine = []
     if em.get("dd"):
         fine.append(FINE_DD)
+    if em.get("nov"):
+        fine.append(FINE_NOV)
     if em.get("financing"):
         fine.append(FINE_FIN)
     fine_html = "".join(f'<p style="margin:0 0 8px">{E(f)}</p>' for f in fine)
@@ -284,6 +291,8 @@ def text_version(series, em):
         out += ["Questions? Call a New Home Consultant.", "Virginia and Maryland (540) 701-2759", "North and South Carolina (984) 331-5468", "", "The Mitchell Homes team", ""]
     if em.get("dd"):
         out.append(FINE_DD)
+    if em.get("nov"):
+        out.append(FINE_NOV)
     if em.get("financing"):
         out.append(FINE_FIN)
     out += ["Mitchell Homes, Inc., 14300 Sommerville Court, Midlothian, VA 23113.", "Unsubscribe: {{unsubscribe}}"]
@@ -309,6 +318,8 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     index = []
     for s in SERIES:
+        if s.get("retired"):  # kept in series.py for the record, never built or uploaded
+            continue
         for base in s["emails"]:
             for em in expand(base):
                 h = render(s, em)
@@ -321,7 +332,7 @@ def main():
                 index.append({"series": s["key"], "series_name": s["name"], "stage": s["stage"], "id": em["id"], "send": em["send"],
                               "segment": em["segment"], "subject": em["subject"], "preview": em["preview"], "hold": em.get("hold", ""),
                               "subject_len": len(em["subject"])})
-    json.dump({"series": [{k: s[k] for k in ("key", "name", "stage", "campaign", "audience", "goal")} for s in SERIES], "emails": index},
+    json.dump({"series": [{k: s[k] for k in ("key", "name", "stage", "campaign", "audience", "goal")} for s in SERIES if not s.get("retired")], "emails": index},
               open(f"{OUT}/emails.json", "w"), indent=1)
     for e in index:
         print(f'{e["id"]:5} {e["send"]:22} {e["subject_len"]:3}  {e["subject"]}')
