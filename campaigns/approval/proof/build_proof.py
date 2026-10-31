@@ -7,7 +7,8 @@ The order of approval: Kelly reviews the batch page first, CEA loads the approve
 and sends a proof email and text to Kelly and Tom, then Kelly sends Brittany the same page. Each batch lives at
 https://mitchell-content-approval.vercel.app/batch-N/ (noindex). Emails show exactly as they arrive (the built HTML
 in an iframe), texts as phone messages, website pieces as screenshots or a mock bar. Approvals stay in each
-reviewer's browser and come back through the Copy my answers button.
+reviewer's browser until they press Send: api/submit.js then saves the answers as a note on Kelly's contact in
+Builder Studio and emails them to her (Vercel env HBS_PIT and NOTIFY_CONTACT_IDS). Copy my answers stays as the fallback.
 """
 import html, json, os, re, shutil, subprocess, sys
 
@@ -149,6 +150,13 @@ button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{
 .done h2{color:var(--white)}
 .done input{font:inherit;padding:8px 10px;border-radius:8px;border:0;max-width:340px;width:100%}
 .done button{justify-self:start;font:inherit;font-weight:800;background:var(--yellow);color:var(--deep);border:0;border-radius:999px;padding:10px 20px;cursor:pointer}
+.done .lab{font-weight:700;font-size:14px;margin-bottom:-6px}
+.done .btns{display:flex;flex-wrap:wrap;gap:10px}
+.done button.ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.55)}
+.done button[disabled]{opacity:.6;cursor:wait}
+#status{margin:0;font-weight:700;color:var(--yellow)}
+#status:empty{display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .done pre{white-space:pre-wrap;background:rgba(255,255,255,.08);border-radius:10px;padding:12px;font-size:13px;margin:0;overflow-wrap:anywhere}
 footer{color:var(--muted);font-size:13px;padding-bottom:40px}
 @media (max-width:860px){.how{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}.field{grid-template-columns:1fr;gap:2px}.shots{grid-template-columns:1fr}.shots .ph{max-width:260px}.ver{padding:20px}}
@@ -171,11 +179,30 @@ JS = """
     no.onclick=function(){S[id].v='Changes needed';save();paint();};
     ta.oninput=function(){S[id].n=ta.value;save();};
   });
-  document.getElementById('copy').onclick=function(){
-    var lines=['Batch %N% approval, from '+(document.getElementById('who').value||'(name)')+':'];
-    document.querySelectorAll('section.ver').forEach(function(sec){var s=S[sec.id]||{};lines.push(sec.dataset.item+': '+(s.v||'Not marked')+(s.n?' ('+s.n+')':''));});
+  var who=document.getElementById('who'),mail=document.getElementById('mail'),st=document.getElementById('status'),send=document.getElementById('send');
+  try{who.value=localStorage.getItem('mitchell-reviewer-name')||'';mail.value=localStorage.getItem('mitchell-reviewer-email')||'';}catch(e){}
+  function answers(){var a=[];document.querySelectorAll('section.ver').forEach(function(sec){var s=S[sec.id]||{};a.push({item:sec.dataset.item,v:s.v||'Not marked',n:s.n||''});});return a;}
+  function copyText(){
+    var lines=['Batch %N% approval, from '+(who.value||'(name)')+':'];
+    answers().forEach(function(x){lines.push(x.item+': '+x.v+(x.n?' ('+x.n+')':''));});
     var t=lines.join('\\n'),o=document.getElementById('out');o.textContent=t;o.hidden=false;
     try{navigator.clipboard.writeText(t).then(function(){document.getElementById('copy').textContent='Copied';},function(){});}catch(e){}
+  }
+  document.getElementById('copy').onclick=copyText;
+  send.onclick=function(){
+    if(who.value.trim().length<2){st.textContent='Please add your name first.';who.focus();return;}
+    try{localStorage.setItem('mitchell-reviewer-name',who.value.trim());localStorage.setItem('mitchell-reviewer-email',mail.value.trim());}catch(e){}
+    send.disabled=true;send.textContent='Sending';st.textContent='';
+    var body=JSON.stringify({batch:%N%,name:who.value.trim(),email:mail.value.trim(),website:document.getElementById('website').value,items:answers(),dry:/[?&]dry=1/.test(location.search)});
+    function post(){return fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:body});}
+    post().catch(function(){return new Promise(function(r){setTimeout(r,1500);}).then(post);})
+      .then(function(r){return r.json().catch(function(){return {ok:false};});})
+      .then(function(d){
+        if(d&&d.ok){send.textContent='Sent';st.textContent=(d.dry?'Test mode, nothing sent. ':'Sent to Kelly'+(d.at?' on '+d.at:'')+'. Thank you. ')+'If you change a mark, press Send again.';}
+        else{send.textContent='Send my answers to Kelly';st.textContent=((d&&d.error)||'That did not go through.')+' Your answers are copied below; please email them to Kelly.';copyText();}
+        send.disabled=false;
+      })
+      .catch(function(){send.disabled=false;send.textContent='Send my answers to Kelly';st.textContent='That did not go through. Your answers are copied below; please email them to Kelly.';copyText();});
   };
 })();
 """
@@ -205,15 +232,18 @@ def build(B):
   <div class="how">
     <div><b>Kelly approves</b><span>CEA's own review comes first, so only finished pieces reach you.</span></div>
     <div><b>Loaded and tested</b><span>Each piece goes into Builder Studio as a draft, and a test email and text go to Kelly and Tom.</span></div>
-    <div><b>You approve</b><span>Mark each piece below. Notes are welcome on anything.</span></div>
+    <div><b>You approve</b><span>Mark each piece below, then press Send at the bottom. Your answers go straight to Kelly.</span></div>
     <div><b>Scheduled</b><span>Approved pieces are scheduled for the dates shown. Nothing sends before your OK.</span></div>
   </div>
   {"".join(secs)}
   <section class="done" id="done">
     <h2>Send your answers</h2>
-    <p style="margin:0;color:#d5e3d9">Mark each piece above, then copy your answers and send them to Kelly. Your marks stay in this browser, so you can come back and finish later.</p>
-    <input id="who" type="text" placeholder="Your name" aria-label="Your name">
-    <button type="button" id="copy">Copy my answers</button>
+    <p style="margin:0;color:#d5e3d9">Mark each piece above, then press Send. Your answers go straight to Kelly. Your marks stay in this browser, so you can come back, change a mark and send again.</p>
+    <label class="lab" for="who">Your name</label><input id="who" type="text" autocomplete="name" required>
+    <label class="lab" for="mail">Your email (optional)</label><input id="mail" type="email" autocomplete="email">
+    <input id="website" type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="btns"><button type="button" id="send">Send my answers to Kelly</button><button type="button" id="copy" class="ghost">Copy my answers instead</button></div>
+    <p id="status" role="status" aria-live="polite"></p>
     <pre id="out" hidden></pre>
   </section>
   <footer>Prepared by CEA Marketing for Mitchell Homes. Dates are proposals and move with approval. The November offer pieces carry Mitchell's approved wording and disclaimer.</footer>
@@ -231,6 +261,7 @@ def build(B):
 shutil.rmtree(OUT, ignore_errors=True)
 for B in BATCHES:
     build(B)
+shutil.copytree(f"{HERE}/api", f"{OUT}/api")  # the Send button's function
 open(f"{OUT}/index.html", "w").write('<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Mitchell Content Batches</title>'
                                      '<meta http-equiv="refresh" content="0; url=batch-1/"><a href="batch-1/">Batch 1</a>')
 open(f"{OUT}/vercel.json", "w").write('{"headers":[{"source":"/(.*)","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]}]}\n')
