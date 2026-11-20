@@ -66,7 +66,7 @@ For Mitchell, scripts that read `GHL_PIT` accept `GHL_PIT_MITCHELL` (export one 
 
 ## Writing rules (Kelly)
 
-- No dashes in any copy.
+- No em dashes or en dashes in copy, and no hyphen used as a dash (" - "). Hyphens that are grammatically correct stay: compound words like follow-up, first-time, side-by-side, 15-minute (Kelly, November 20).
 - Every article is written for Google AI Overviews and SEO, and ships with a meta description and schema (BlogPosting plus FAQPage). Load articles as drafts; Kelly approves before anything is published.
 
 ## Home Portrait wiring (see home-portrait/SETUP-NOTES.md for field IDs and calendars)
