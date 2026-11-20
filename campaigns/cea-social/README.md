@@ -54,3 +54,7 @@ Builder Studio Social Planner had no drafts on October 23 on purpose: the old on
 ## Scheduled in Postiz (October 23, Kelly's call)
 
 Kelly chose Postiz for now. 55 posts from the kit calendar are queued, October 26 to November 27, 10am Eastern weekdays: 23 on the CEA Marketing Facebook page (article link in place of "link in bio"), 25 on Kelly's Instagram (Kelly Bosetti Primeau All About Marketing, including the two Kelly Primeau Consulting reels at noon), 7 on Kelly's LinkedIn (article days plus the carousel). Article 1 is skipped because it went out October 12. Not scheduled: the @ceamarketing Instagram and the Google posts (not in Postiz, so the VA posts those from the kit), and the nine Builder Studio reels (held until the music is fixed). Reels 8 to 20 are hosted in the ceamarketing.com Webflow asset library as `cea-social-reel*.mp4` so Postiz could fetch them; they are not on any page. Comment AUDIT replies on these accounts are answered by hand.
+
+## Site SEO publish (November 20)
+
+With Kelly's OK: homepage Organization schema url set to https://www.ceamarketing.com, the Training article got a header image (`blog-training-sales-team-hero.jpg`, Webflow assets) and was published, and the site was published so the staged homepage title, homepage description and blog page description went live (all checked on the live site). Mike has the rest: the footer email link reads "mailto:mailto:" (Designer fix) and the Search Console refresh in HYPD. The Realtor event article stays a draft.
