@@ -64,6 +64,10 @@ For Mitchell, scripts that read `GHL_PIT` accept `GHL_PIT_MITCHELL` (export one 
 - **Persona ads approval page:** `python3 campaigns/ads/persona_approval/build.py --deploy` (needs `VERCEL_TOKEN`) builds https://mitchell-persona-ads-approval.vercel.app (noindex), in the November offer approval page's style: each persona's reel, carousel (card 5 new) and Meta copy with Approved / Changes needed buttons and a copied summary. It reads the copy from the persona kit and the reels from the media library, so rebuild after any kit change.
 - **Builder Studio inventory (for Trevor):** `python3 campaigns/builder_studio/build_inventory.py` writes `campaigns/builder_studio/out/inventory.html`, one page listing every template, tag, trigger link, custom field and media file CEA added, what already runs live (quiz and landing page intake), the day's changes, and what is still to build after approval. Publish it to https://claude.ai/artifact/2J3LaNWQpWc7LmdiikGvYq. Rerun after `upload.py`, `setup.py` or any media upload; refresh `media_snapshot.json` from the library listing when files change, and update the "Changes made today" list in `inventory.html`. Kelly's call on October 9: hold the remaining Builder Studio build (workflows, lists, scheduled sends, forms, calendars) until Mitchell approves each batch.
 
+## People
+
+- Mike Pilar (CEA executive assistant): **mike.pilar@ceamarketing.com**. The address without the dot (mikepilar@) does not exist and bounces.
+
 ## Writing rules (Kelly)
 
 - No em dashes or en dashes in copy, and no hyphen used as a dash (" - "). Hyphens that are grammatically correct stay: compound words like follow-up, first-time, side-by-side, 15-minute (Kelly, November 20).
